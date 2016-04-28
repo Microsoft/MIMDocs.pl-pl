@@ -1143,8 +1143,8 @@
 * Handoff File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1155,8 +1155,8 @@
 * Handoff File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1167,8 +1167,8 @@
 * Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1179,8 +1179,8 @@
 * Handoff File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1191,8 +1191,8 @@
 * Handoff File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1203,8 +1203,8 @@
 * Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1215,8 +1215,8 @@
 * Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1227,8 +1227,8 @@
 * Handoff File: [TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5965ab1a24229c94bcf45a76ac5a2fa89442c30e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 22:22:04
 * Handoff Reason: Include
-* Archive File: [TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1239,8 +1239,8 @@
 * Handoff File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1251,8 +1251,8 @@
 * Handoff File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1263,8 +1263,8 @@
 * Handoff File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1323,8 +1323,8 @@
 * Handoff File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1335,8 +1335,8 @@
 * Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5965ab1a24229c94bcf45a76ac5a2fa89442c30e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 22:22:04
 * Handoff Reason: Include
-* Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3049,8 +3049,8 @@
 * Handoff File: [microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-release-notes.bb80432114b9927d6f332b2605274e3406715709.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3061,8 +3061,8 @@
 * Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3135,8 +3135,8 @@
 * Handoff File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016-supported-platforms.4b048f6545582058fc7c39478e8dcee91c096f40.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3147,8 +3147,8 @@
 * Handoff File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5965ab1a24229c94bcf45a76ac5a2fa89442c30e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 22:22:04
 * Handoff Reason: Include
-* Archive File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3159,8 +3159,8 @@
 * Handoff File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3627,8 +3627,8 @@
 * Handoff File: [toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5965ab1a24229c94bcf45a76ac5a2fa89442c30e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 22:22:04
 * Handoff Reason: Include
-* Archive File: [toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3675,8 +3675,8 @@
 * Handoff File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.402c587164e5dc6d994d6d89f44517503a7bfa2b.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3699,8 +3699,8 @@
 * Handoff File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3772,8 +3772,8 @@
 * Handoff File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9eedc9e1cecea58a7eec9064206c4a82f8f2b434/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 19:54:45
 * Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3784,8 +3784,8 @@
 * Handoff File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5965ab1a24229c94bcf45a76ac5a2fa89442c30e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf)
 * Handoff Datetime: 2016-04-27 22:22:04
 * Handoff Reason: Include
-* Archive File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/7de193e172c835909645634bcdb69fc1dc475c36/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf)
-* Archive Datetime: 2016-04-28 11:51:35
+* Archive File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/df866b9b87ed439bc8c065bdefe71d13368bdbc4/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.pl-pl.xlf)
+* Archive Datetime: 2016-04-28 12:34:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
