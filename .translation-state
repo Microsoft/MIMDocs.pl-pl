@@ -2374,9 +2374,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.pl-pl.xlf",
+      "ArchiveFileCommit": "242227bff27f55cf58c2cd573e3d613184f3ca01",
+      "ArchiveFileDateTime": "2016-06-02T00:41:38.1215796Z",
       "ArchiveException": null
     },
     "323a875aba14a238aa7cb3a0e6df192729ce53d6": {
@@ -2404,9 +2404,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.pl-pl.xlf",
+      "ArchiveFileCommit": "242227bff27f55cf58c2cd573e3d613184f3ca01",
+      "ArchiveFileDateTime": "2016-06-02T00:41:38.1215796Z",
       "ArchiveException": null
     },
     "b3f3982ade46932b18fb730fe5c16d52cde188a1": {
@@ -2434,9 +2434,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.pl-pl.xlf",
+      "ArchiveFileCommit": "242227bff27f55cf58c2cd573e3d613184f3ca01",
+      "ArchiveFileDateTime": "2016-06-02T00:41:38.1215796Z",
       "ArchiveException": null
     },
     "49841c26e9ecf9d5ea3642e5d9a80883a50eaa18": {
@@ -2464,9 +2464,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\index.a54b2324d63a6d513b6900195023b9a8089553b4.pl-pl.xlf",
+      "ArchiveFileCommit": "242227bff27f55cf58c2cd573e3d613184f3ca01",
+      "ArchiveFileDateTime": "2016-06-02T00:41:38.1215796Z",
       "ArchiveException": null
     },
     "b84a6c7c7b53a122eefc3846ba93b92b34edb6ce": {
@@ -2494,9 +2494,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.pl-pl.xlf",
+      "ArchiveFileCommit": "242227bff27f55cf58c2cd573e3d613184f3ca01",
+      "ArchiveFileDateTime": "2016-06-02T00:41:38.1215796Z",
       "ArchiveException": null
     }
   }
