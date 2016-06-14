@@ -6,7 +6,7 @@ description: Ten przewodnik ułatwia zrozumienie zmiennych, które należy wzią
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Przewodnik planowania pojemności
 
-Po przygotowaniu do wdrożenia programu Microsoft Identity Manager (MIM) użyj tego przewodnika oraz środowisk testowych do zaprojektowania wdrożenia. W tym artykule przedstawiono wiele typowych czynników, które należy wziąć pod uwagę. Każde wdrożenie jest wyjątkowe, w związku z czym przetestowanie scenariuszy w laboratorium to nadal najlepsza metoda dopasowania serwerów, urządzeń i topologii do potrzeb.
+Program Microsoft Identity Manager (MIM) umożliwia tworzenie, aktualizowanie i usuwanie kont użytkowników w całej organizacji. Daje również użytkownikom możliwość zarządzania funkcjami samoobsługi własnych kont. Nawet w niewielkim środowisku wszystkie te działania mogą się szybko skumulować.
+
+Przed rozpoczęciem pracy z programem MIM skorzystaj z tego przewodnika wraz ze środowiskami testowymi, aby zrozumieć odpowiedni zakres wdrożenia. W tym artykule przedstawiono wiele typowych czynników, które należy wziąć pod uwagę. Każde wdrożenie jest wyjątkowe, w związku z czym przetestowanie scenariuszy w laboratorium to nadal najlepsza metoda dopasowania serwerów, urządzeń i topologii do potrzeb.
 
 Jeśli nie znasz jeszcze programu MIM 2016 i jego składników, przed kontynuowaniem zapoznaj się z dodatkowymi informacjami na temat programu [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016).
 
@@ -98,6 +100,6 @@ Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania o
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

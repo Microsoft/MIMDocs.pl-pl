@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Raportowanie hybrydowe programu Identity Manager na platformie Azure | Microsoft Identity Manager
+title: Raporty hybrydowego zarządzania tożsamościami | Microsoft Identity Manager
 description: Raportowanie hybrydowe usługi Active Directory na platformie Azure umożliwia tworzenie niestandardowych raportów, które obejmują zarówno zdarzenia w chmurze, jak i zdarzenia lokalne.
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# Raportowanie hybrydowe programu Identity Manager na platformie Azure
-Za pomocą usługi Azure Active Directory (AD) można utworzyć jeden raport zawierający informacje dotyczące działań związanych z zarządzaniem tożsamościami, podejmowanych lokalnie lub w chmurze. Ta funkcja raportowania jest skonsolidowanym miejscem, w którym można zarządzać danymi tożsamości i dostępu, ograniczając jednocześnie koszty ogólne.
+# Raporty hybrydowego zarządzania tożsamościami na platformie Azure
+Za pomocą usługi Azure Active Directory (AD) można utworzyć jeden raport umożliwiający monitorowanie działań związanych z zarządzaniem tożsamościami, podejmowanych lokalnie lub w chmurze. Ta funkcja umożliwia zarządzanie wszystkimi tożsamościami i danymi dostępu w jednym miejscu, oszczędzając czas i obniżając ogólne koszty.
 
 ## Co to jest raportowanie hybrydowe usługi Azure AD?
 Raportowanie hybrydowe ułatwia specjalistom IT rozwiązywanie typowych problemów z raportami związanymi z zarządzaniem tożsamościami.
@@ -39,7 +39,7 @@ Raportowanie hybrydowe ułatwia specjalistom IT rozwiązywanie typowych problem�
 
 ## Jak to działa?
 
-Aby zbierać dane lokalne, należy najpierw zainstalować agenta raportowania na serwerze programu Identity Manager. Agent raportowania jest pobierany ze strony konfiguracji katalogu w [klasycznym portalu platformy Azure](https://manage.windowsazure.com/)..
+Aby zbierać dane lokalne, należy najpierw zainstalować agenta raportowania na serwerze programu Identity Manager. Agent raportowania jest pobierany ze strony konfiguracji katalogu w [klasycznym portalu platformy Azure](https://manage.windowsazure.com/).
 
 Proces raportowania hybrydowego obejmuje następujące kroki:
 1. Po zainstalowaniu agenta raportowania dane o aktywności są przesyłane z programu Identity Manager do dziennika zdarzeń systemu Windows.
@@ -52,6 +52,6 @@ Proces raportowania hybrydowego obejmuje następujące kroki:
 - Dodatkowe informacje na temat [Pracy z raportowaniem hybrydowym programu Identity Manager](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

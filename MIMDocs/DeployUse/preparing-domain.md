@@ -30,9 +30,13 @@ ms.suite: ems
 >[!div class="step-by-step"]  
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
+Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi Active Directory (AD). Usługa AD powinna już być zainstalowana, a w środowisku musi istnieć kontroler dla domeny, którą możesz administrować.
+
+Ten artykuł zawiera szczegółowy opis czynności, które należy wykonać w celu przygotowania domeny do pracy obok programu MIM.
+
 ## Tworzenie grup i kont użytkowników
 
-Program MIM wymaga, aby usługa Active Directory była już zainstalowana. W środowisku musi istnieć kontroler dla domeny, którą możesz administrować.
+Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość w domenie. Dotyczy to między innymi składników programu MIM, takich jak Service i Sync, a także SharePoint i SQL.
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -40,7 +44,7 @@ Program MIM wymaga, aby usługa Active Directory była już zainstalowana. W śr
 > - Nazwa domeny — **contoso**
 > - Hasło — **Has@lo1**
 
-1. Zaloguj się do kontrolera domeny jako administrator domeny (*np. Contoso\Administrator*).).
+1. Zaloguj się do kontrolera domeny jako administrator domeny (*np. Contoso\Administrator*).
 
 2. Utwórz następujące konta użytkowników dla usług programu MIM. Uruchom program PowerShell i wpisz poniższy skrypt PowerShell w celu zaktualizowania domeny.
 
@@ -95,6 +99,6 @@ Program MIM wymaga, aby usługa Active Directory była już zainstalowana. W śr
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 
