@@ -6,7 +6,7 @@ description: Informacje o sposobie uaktualniania składników programu FIM 2010 
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,22 +25,28 @@ ms.suite: ems
 
 ---
 
-# Uaktualnianie z programu Forefront Identity Manager 2010 R2 do programu Microsoft Identity Manager 2016
-W tej sekcji omówiono uaktualnianie istniejącego testowego systemu FIM 2010 R2 do programu MIM 2016. Do uaktualniania są używane te same instalatory co w przypadku nowego wdrożenia.
+# Uaktualnienie z programu Forefront Identity Manager 2010 R2
 
-W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środowisku testowym, serwery działają pod kontrolą systemu Windows Server 2012, Windows Server 2012 R2 lub Windows Server 2008 R2, które są typowymi systemami operacyjnymi używanymi na potrzeby serwerów FIM 2010 R2, a wszystkie lokalne i środowiskowe wymagania wstępne (SQL Server, Exchange Server, SharePoint Services itp.) są skonfigurowane pod kątem programu FIM 2010 R2.
+Jeśli masz środowisko Forefront Identity Manager (FIM) 2010 R2, a chcesz wypróbować program Microsoft Identity Manager (MIM) 2016, skorzystaj z tego artykułu jako przewodnika. To uaktualnienie składa się z trzech etapów:
 
-1.  Najpierw na serwerze dołączonym do domeny AD zostanie zainstalowana i uruchomiona usługa synchronizacji programu MIM, która zastąpi wystąpienie usługi synchronizacji pochodzące z programu FIM 2010 R2.
+1.  Zainstaluj usługę synchronizacji programu MIM (Sync) na serwerze przyłączonym do Twojej domeny usługi Active Directory (AD). Spowoduje to zastąpienie wystąpienia składnika Sync środowiska FIM 2010 R2.
 
-2.  Następnie zostanie zainstalowany portal i usługa programu MIM, opcjonalnie wraz z portalem rejestracji SSPR i portalem usługi SSPR, ale bez zestawu funkcji Privileged Access Management.
+2.  Zainstaluj portal i usługę programu MIM. W tym momencie możesz również zainstalować portal rejestracji samoobsługowego resetowania haseł (SSPR) i portal usługi. Zostaną one zainstalowane z wyłączeniem zestawu funkcji zarządzania dostępem uprzywilejowanym.
 
-3.  Na oddzielnym komputerze klienckim będzie można wtedy wdrożyć dodatki i rozszerzenia programu MIM, w tym zintegrowanego klienta logowania systemu Windows dla usługi SSPR.
+3.  Wdróż dodatki i rozszerzenia programu MIM na każdym komputerze klienckim oddzielnie. Należy do nich między innymi zintegrowany klient logowania systemu Windows SSPR.
+
+
+W tym przewodniku założono, że masz już skonfigurowane następujące elementy:
+- Program FIM 2010 R2 wdrożony w środowisku testowym
+- Serwery z systemem Windows Server 2012, Windows Server 2012 R2 lub Windows Server 2008 R2
+- Lokalne i środowiskowe wymagania wstępne (SQL Server, Exchange Server, SharePoint Services itp.) skonfigurowane na potrzeby programu FIM 2010 R2.
+
 
 ## Przygotowanie
 
 1.  Utwórz kopię zapasową bazy danych usługi programu FIM, bazy danych usługi synchronizacji programu FIM oraz oprogramowania i konfiguracji usługi synchronizacji programu FIM i usługi programu FIM.
 
-2.  Na każdym serwerze, na którym są zainstalowane składniki programu FIM 2010 R2 — np. *CORPIDM* — zaloguj się jako użytkownik Contoso\Administrator. W tym przykładzie wdrożenia do uaktualnienia programu FIM 2010 R2 do programu **MIM** niezbędne są prawa administracyjne..
+2.  Na każdym serwerze, na którym są zainstalowane składniki programu FIM 2010 R2 — np. *CORPIDM* — zaloguj się jako użytkownik Contoso\Administrator. W tym przykładzie wdrożenia do uaktualnienia programu FIM 2010 R2 do programu **MIM** niezbędne są prawa administracyjne.
 
 3.  Pobierz i rozpakuj pliki oprogramowania MIM.
 
@@ -58,11 +64,11 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
 5.  Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **Dalej**, aby kontynuować.
 
-6.  Wprowadź hasło dla konta usługi używanego przez usługę synchronizacji i kliknij przycisk **Dalej**..
+6.  Wprowadź hasło dla konta usługi używanego przez usługę synchronizacji i kliknij pozycję **Dalej**.
 
     ![Obraz przedstawiający konfigurowanie konta usługi synchronizacji programu MIM](media/MIM-UpgFIM3.png)
 
-7.  Zweryfikuj nazwy grup zabezpieczeń i kliknij przycisk **Dalej**.
+7.  Zweryfikuj nazwy grup zabezpieczeń i kliknij pozycję **Dalej**.
 
     ![Obraz przedstawiający konfigurowanie grup zabezpieczeń usługi synchronizacji programu MIM](media/MIM-UpgFIM4.png)
 
@@ -76,7 +82,7 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
 11. Podczas uaktualniania jest wyświetlane ostrzeżenie dotyczące uaktualniania bazy danych usługi synchronizacji. Zaleca się utworzenie kopii zapasowej bazy danych przed rozpoczęciem uaktualnienia.
 
-12. Po pomyślnym zakończeniu uaktualniania kliknij przycisk **Zakończ**..
+12. Po pomyślnym zakończeniu uaktualniania kliknij pozycję **Zakończ**.
 
     ![Obraz przedstawiający powodzenie instalacji usługi synchronizacji programu MIM](media/MIM-UpgSP1.png)
 
@@ -122,7 +128,7 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
     ![Obraz przedstawiający konfigurowanie certyfikatu usługi](media/MIM-UpgSP7.png)
 
-    1.  Jeśli wybrano opcję lokalnego magazynu certyfikatów, kliknij przycisk **Wybierz certyfikat** i wybierz certyfikat z listy w oknie podręcznym. Kliknij przycisk **OK**, a następnie przycisk **Dalej**..
+    1.  Jeśli wybrano opcję lokalnego magazynu certyfikatów, kliknij przycisk **Wybierz certyfikat** i wybierz certyfikat z listy w oknie podręcznym. Kliknij pozycję **OK**, a następnie pozycję **Dalej**.
 
         ![Obraz przedstawiający okno podręczne Wybieranie certyfikatu](media/MIM-UpgSP8.PNG)
 
@@ -134,21 +140,21 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
     ![Obraz przedstawiający konfigurowanie portalu i usługi programu MIM](media/MIM-UpgSP10.png)
 
-13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Dalej**..
+13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Next** (Dalej).
 
-14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Dalej**..
+14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Next** (Dalej).
 
 ## Instalowanie portalu rejestracji haseł programu MIM
 
-1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Dalej**..
+1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Next** (Dalej).
 
 2. Skonfiguruj możliwość używania usługi i portalu przez klientów i użytkowników końcowych.
 
-    1.  Za pomocą opcji **Otwórz porty 5725 i 5726 w zaporze** określ, czy te porty mają zostać otworzone..
+    1.  Za pomocą opcji **Otwórz porty 5725 i 5726 w zaporze** określ, czy te porty mają zostać otworzone.
 
-    2.  Za pomocą opcji **Udziel uwierzytelnionym użytkownikom dostępu do witryny portalu programu MIM** określ, czy udzielić dostępu uwierzytelnionym użytkownikom..
+    2.  Za pomocą opcji **Udziel uwierzytelnionym użytkownikom dostępu do witryny portalu programu MIM** określ, czy udzielić dostępu uwierzytelnionym użytkownikom.
 
-    3.  Kliknij przycisk **Dalej**..
+    3.  Kliknij przycisk **Next** (Dalej).
 
 3. Podaj szczegóły dostępu i poświadczenia na potrzeby rejestracji haseł programu MIM.
 
@@ -160,7 +166,7 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Dalej**..
+    4.  Kliknij przycisk **Next** (Dalej).
 
 4. Na następnym ekranie konfiguracji rejestracji haseł programu MIM:
 
@@ -180,7 +186,7 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Dalej**..
+    4.  Kliknij przycisk **Next** (Dalej).
 
 2. Na następnym ekranie konfiguracji resetowania haseł programu MIM:
 
@@ -201,6 +207,6 @@ W tej sekcji założono, że istnieje rozwiązanie FIM 2010 R2 wdrożone w środ
 Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia programu FIM dla usługi SSPR, nie konfiguruj nowych bram telefonicznych usługi MFA na potrzeby resetowania haseł, dopóki wszystkie dodatki i rozszerzenia programu FIM nie zostaną uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 
