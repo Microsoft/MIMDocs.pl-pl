@@ -27,8 +27,7 @@ ms.suite: ems
 
 # Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
->[!div class="step-by-step"]
-[« Usługa i portal MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« Usługa i portal MIM](install-mim-service-portal.md)
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -43,16 +42,15 @@ Agent zarządzania (MA) programu MIM jest łącznikiem usługi synchronizacji pr
 
 Podczas konfigurowania agenta zarządzania programu MIM należy określić konto użytkownika. W niniejszym dokumencie użyto nazwy **MIMMA** dla tego konta.
 
-> [!NOTE]
-> Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
+> [!NOTE] Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
 
 ###Aby utworzyć agenta zarządzania programu MIM
 
 1.  Otwórz menedżera usługi synchronizacji.
 
-2.  Aby otworzyć kreatora tworzenia agenta zarządzania, w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz)..
+2.  Aby otworzyć kreatora tworzenia agenta zarządzania, w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz).
 
-3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej)..
+3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
 
     -   Management agent for (Agent zarządzania dla): MIM Service management agent (agent zarządzania usługi MIM)
 
@@ -86,9 +84,9 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
     -   Grupa
 
-6.  Na stronie **Selected Attributes** (Wybrane atrybuty) sprawdź, czy wybrano wszystkie atrybuty uwzględnione na liście, a następnie kliknij przycisk **Next** (Dalej)..
+6.  Na stronie **Selected Attributes** (Wybrane atrybuty) sprawdź, czy wybrano wszystkie atrybuty uwzględnione na liście, a następnie kliknij przycisk **Next** (Dalej).
 
-7.  Na stronie **Configure Connector Filter** (Konfigurowanie filtru łącznika) kliknij przycisk **Next** (Dalej)..
+7.  Na stronie **Configure Connector Filter** (Konfigurowanie filtru łącznika) kliknij przycisk **Next** (Dalej).
 
 8.  Na stronie **Configure Object Type Mappings** (Konfigurowanie mapowań typów obiektów) dodaj następujące mapowanie, a następnie kliknij przycisk **Next** (Dalej).
 
@@ -99,78 +97,78 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 9.  Na stronie **Configure Attribute Flow** (Konfigurowanie przepływu atrybutów) zastosuj następujące mapowanie przepływu atrybutów, a następnie kliknij przycisk **Next** (Dalej).
 
-    | **Kierunek przepływu** | **Atrybut źródła danych** | **Atrybut Metaverse** |
+    | **Atrybut źródła danych** | **Kierunek przepływu** | **Atrybut Metaverse** |
     |-|-|-|
-    |Importowanie|Importowanie|accountName|
-    |Importowanie|Importowanie|company|
-    |Importowanie|Importowanie|displayName|
-    |Importowanie|Importowanie|employeeID|
-    |Importowanie|Importowanie|employeeType|
-    |Importowanie|Importowanie|firstName|
-    |Importowanie|Importowanie|lastName|
-    |Importowanie|Importowanie|Manager|
-    |Importowanie|Importowanie|objectSid|
-    |Eksportowanie|Eksportowanie|accountName|
-    |Eksportowanie|Eksportowanie|company|
-    |Eksportowanie|Eksportowanie|displayName|
-    |Eksportowanie|Eksportowanie|domain|
-    |Eksportowanie|Eksportowanie|employeeID|
-    |Eksportowanie|Eksportowanie|employeeType|
-    |Eksportowanie|Eksportowanie|firstName|
-    |Eksportowanie|Eksportowanie|lastName|
-    |Eksportowanie|Eksportowanie|manager|
-    |Eksportowanie|Eksportowanie|objectSid|
+    | AccountName | Eksportowanie | accountName |
+    | Nazwa wyświetlana | Eksportowanie | displayName |
+    | Domain | Eksportowanie | domain |
+    | Identyfikator pracownika | Eksportowanie | employeeID |
+    | EmployeeType | Eksportowanie | employeeType |
+    | Poczta e-mail | Eksportowanie | Poczta |
+    | FirstName | Eksportowanie | firstName |
+    | LastName | Eksportowanie | lastName |
+    | ObjectSID | Eksportowanie | objectSid |
 
 10.  Wybierz pozycję **Person** (Osoba) jako typ obiektu źródła danych.
 
-    -   Select **Person** as the Metaverse object type.
+    -   Wybierz pozycję **Person** (Osoba) z listy Metaverse object type (Typ obiektu Metaverse).
 
-    -   Select **Direct** as the Mapping Type.
+    -   Wybierz pozycję **Direct** (Bezpośredni) jako typ mapowania.
 
-    -   For each row in the previous table, complete the following steps:
+    -   Dla każdego wiersza w powyższej w tabeli wykonaj następujące czynności:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Flow direction** (Kierunek przepływu) wyświetlanego dla tego wiersza w tabeli.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Data source attribute** (Atrybut źródła danych) wyświetlanego dla tego wiersza w tabeli.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Metaverse attribute** (Atrybut Metaverse) wyświetlanego dla tego wiersza w tabeli.
 
-        -   To apply the flow mapping, click **New**.
+        -   Aby zastosować mapowanie przepływu, kliknij pozycję **New** (Nowy).
 
-    -   Select **Group** as the data source type and as the metaverse object type.
+    -   Wybierz pozycję **Group** (Grupa) jako typ źródła danych i typ obiektu Metaverse.
 
-    -   Select **Direct** as the Mapping Type.
+    -   Wybierz pozycję **Direct** (Bezpośredni) jako typ mapowania.
 
-    -   For each row in the following table, complete these steps:
+    -   Dla każdego wiersza w poniższej w tabeli wykonaj następujące czynności:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Flow direction** (Kierunek przepływu) wyświetlanego dla tego wiersza w tabeli.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Data source attribute** (Atrybut źródła danych) wyświetlanego dla tego wiersza w tabeli.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Wybierz wartość ustawienia **Metaverse attribute** (Atrybut Metaverse) wyświetlanego dla tego wiersza w tabeli.
 
-        -   To apply the flow mapping, click **New**.
+        -   Aby zastosować mapowanie przepływu, kliknij pozycję **New** (Nowy).
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute |
+    | **Atrybut źródła danych** | **Kierunek przepływu** | **Atrybut Metaverse** |
     |-|-|-|
-    | Export | AccountName | accountName |
-    | Export | DisplayName | displayName |
-    | Export | Domain | domain |
-    | Export | Scope | scope |
-    | Export | Type | type |
-    | Export | Member | member |
-    | Export | MembershipLocked | membershipLocked |
-    | Export | MembershipAddWorkflow | membershipAddWorkflow |
-    | Export | Manager | manager |
+    | AccountName | Eksportowanie | accountName |
+    | Nazwa wyświetlana | Eksportowanie | displayName |
+    | Domain | Eksportowanie | domain |
+    | Poczta e-mail | Eksportowanie | Poczta |
+    | MailNickName | Eksportowanie | mailNickName |
+    | Element członkowski | Eksportowanie | element członkowski |
+    | ObjectSID | Eksportowanie | objectSid |
+    | Zakres | Eksportowanie | zakres |
+    | Typ | Eksportowanie | typ |
+    | MembershipAddWorkflow | Eksportowanie | membershipAddWorkflow |
+    | MembershipLocked | Eksportowanie | membershipLocked |
+    | Nazwa wyświetlana | Importuj | displayName |
+    | Zakres | Importuj | zakres |
+    | Typ | Importuj | typ |
+    | Element członkowski | Importuj | element członkowski |
+    | AccountName | Importuj | accountName |
+    | DisplayedOwner | Importuj | displayedOwner |
+    | MailNickName | Importuj | mailNickName |
+
 
 11.  Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
 
-12.  Aby utworzyć agenta zarządzania, na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ)..
+12.  Aby utworzyć agenta zarządzania, na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ).
 
 ## Tworzenie agenta zarządzania usługi AD
 Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenowych w usłudze AD. Ten łącznik można utworzyć przy użyciu kreatora tworzenia agenta zarządzania.
 
-1. Aby otworzyć kreatora tworzenia agenta zarządzania, w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz)..
+1. Aby otworzyć kreatora tworzenia agenta zarządzania, w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz).
 
 2. Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
@@ -186,23 +184,23 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 4. Na stronie **Configure Directory Partitions** (Konfigurowanie partycji katalogu) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
-    - Na liście **Select directory partitions** (Wybieranie partycji katalogu) wybierz pozycję **DC=CONTOSO, DC=local**..
+    - Z listy **Select directory partitions** (Wybieranie partycji katalogu) wybierz pozycję **DC=CONTOSO, DC=local**.
 
-    - Aby otworzyć okno dialogowe Select Containers (Wybieranie kontenerów), kliknij pozycję **Containers** (Kontenery)..
+    - Aby otworzyć okno dialogowe Select Containers (Wybieranie kontenerów), kliknij pozycję **Containers** (Kontenery).
 
     - Jeśli chcesz zmienić kontener, aby umieścić tylko obiekty zarządzane przez program MIM w określonym kontenerze, kliknij węzeł **DC = CONTOSO, DC = local**, a następnie kliknij węzeł odpowiedniego kontenera.
 
-    - Aby zamknąć okno dialogowe Select Containers (Wybieranie kontenerów), kliknij przycisk **OK**..
+    - Aby zamknąć okno dialogowe Select Containers (Wybieranie kontenerów), kliknij przycisk **OK**.
 
-5. Na stronie **Configure Provisioning Hierarchy** (Konfigurowanie hierarchii zastrzegania) kliknij przycisk **Next** (Dalej)..
+5. Na stronie **Configure Provisioning Hierarchy** (Konfigurowanie hierarchii aprowizacji) kliknij przycisk **Next** (Dalej).
 
 6. Na stronie **Select Object Types** (Wybieranie typów obiektów) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
-    - Na liście **Object types** (Typy obiektów) wybierz pozycje **user** (użytkownik) i **group** (grupa)..
+    - Z listy **Object types** (Typy obiektów) wybierz pozycje **user** (użytkownik) i **group** (grupa).
 
 7. Na stronie **Select Attributes** (Wybieranie atrybutów) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
-    - Wybierz pozycję **Show All** (Pokaż wszystko)..
+    - Wybierz pozycję **Show All** (Pokaż wszystko).
 
 8. Na liście **Attributes** (Atrybuty) wybierz następujące atrybuty:
 
@@ -222,15 +220,15 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
     -   unicodePwd
     -   userAccountControl
 
-9. Na stronie **Configure Connector Filter** (Konfigurowanie filtru łącznika) kliknij przycisk **Next** (Dalej)..
+9. Na stronie **Configure Connector Filter** (Konfigurowanie filtru łącznika) kliknij przycisk **Next** (Dalej).
 
-10. Na stronie **Configure Join and Projection Rules** (Konfigurowanie reguł dołączania i projekcji) kliknij przycisk **Next** (Dalej)..
+10. Na stronie **Configure Join and Projection Rules** (Konfigurowanie reguł dołączania i projekcji) kliknij przycisk **Next** (Dalej).
 
-11. Na stronie **Configure Attribute Flow** (Konfigurowanie przepływu atrybutów) kliknij przycisk **Next** (Dalej)..
+11. Na stronie **Configure Attribute Flow** (Konfigurowanie przepływu atrybutów) kliknij przycisk **Next** (Dalej).
 
-12. Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej)..
+12. Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
 
-13. Na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ)..
+13. Na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ).
 
 
 ## Tworzenie profilów uruchamiania
@@ -251,23 +249,23 @@ W poniższej tabeli zamieszczono pięć profilów uruchamiania tworzonych dla ł
 
 Aby utworzyć profile uruchamiania dla łącznika menedżera ADMA:
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania)..
+1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
 
-2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **ADMA**..
+2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **ADMA**.
 
-3. Aby otworzyć okno dialogowe Configure Run Profiles for (Konfigurowanie profilów uruchamiania dla), w menu **Actions** (Akcje) kliknij pozycję **Configure Run Profiles** (Konfiguruj profile uruchamiania)..
+3. Aby otworzyć okno dialogowe Configure Run Profiles for (Konfigurowanie profilów uruchamiania dla), w menu **Actions** (Akcje) kliknij pozycję **Configure Run Profiles** (Konfiguruj profile uruchamiania).
 
 4. Dla każdego profilu uruchamiania w tabeli wykonaj następujące czynności:
 
-    - Aby otworzyć kreatora konfigurowania profilu uruchamiania, kliknij przycisk **New Profile** (Nowy profil)..
+    - Aby otworzyć kreatora konfigurowania profilu uruchamiania, kliknij przycisk **New Profile** (Nowy profil).
 
-    - W polu **Name** (Nazwa) wpisz nazwę profilu z tabeli, a następnie kliknij przycisk **Next** (Dalej)..
+    - W polu **Name** (Nazwa) wpisz nazwę profilu z tabeli, a następnie kliknij przycisk **Next** (Dalej).
 
-    - Na liście **Type** (Typ) wybierz typ kroku z tabeli, a następnie kliknij przycisk **Next** (Dalej)..
+    - Na liście **Type** (Typ) wybierz typ kroku z tabeli, a następnie kliknij przycisk **Next** (Dalej).
 
     - Kliknij przycisk **Finish** (Zakończ), aby utworzyć profil uruchamiania.
 
-5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**..
+5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**.
 
 ### Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi MIM (MIMMA)
 
@@ -283,23 +281,23 @@ W poniższej tabeli zamieszczono pięć pasujących profilów uruchamiania dla �
 
 Aby utworzyć profile uruchamiania dla łącznika menedżera MIMMA:
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania)..
+1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
 
-2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **MIMMA**..
+2. Z listy **Management Agents** (Agenci zarządzania) wybierz pozycję **MIMMA**.
 
-3. Aby otworzyć okno dialogowe Configure Run Profiles for (Konfigurowanie profilów uruchamiania dla), w menu **Actions** (Akcje) kliknij pozycję **Configure Run Profiles** (Konfiguruj profile uruchamiania)..
+3. Aby otworzyć okno dialogowe Configure Run Profiles for (Konfigurowanie profilów uruchamiania dla), w menu **Actions** (Akcje) kliknij pozycję **Configure Run Profiles** (Konfiguruj profile uruchamiania).
 
 4. Dla każdego profilu uruchamiania w tabeli wykonaj następujące czynności:
 
-    - Aby otworzyć kreatora konfigurowania profilu uruchamiania, kliknij przycisk **New Profile** (Nowy profil)..
+    - Aby otworzyć kreatora konfigurowania profilu uruchamiania, kliknij przycisk **New Profile** (Nowy profil).
 
-    - W polu **Name** (Nazwa) wpisz nazwę profilu z tabeli, a następnie kliknij przycisk **Next** (Dalej)..
+    - W polu **Name** (Nazwa) wpisz nazwę profilu z tabeli, a następnie kliknij przycisk **Next** (Dalej).
 
-    - Na liście **Type** (Typ) wybierz typ kroku z tabeli, a następnie kliknij przycisk **Next** (Dalej)..
+    - Na liście **Type** (Typ) wybierz typ kroku z tabeli, a następnie kliknij przycisk **Next** (Dalej).
 
     - Kliknij przycisk **Finish** (Zakończ), aby utworzyć profil uruchamiania.
 
-5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**..
+5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**.
 
 ## Konfigurowanie usługi MIM
 
@@ -307,11 +305,11 @@ W portalu MIM zostanie utworzona reguła synchronizacji ruchu przychodzącego u�
 
 Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usługi AD:
 
-1. Na stronie głównej portalu MIM na pasku nawigacyjnym kliknij pozycję **Administration** (Administracja)..
+1. Na stronie głównej portalu MIM na pasku nawigacyjnym kliknij pozycję **Administration** (Administracja).
 
-2. Aby otworzyć stronę Synchronization Rules (Reguły synchronizacji), kliknij pozycję **Synchronization Rules** (Reguły synchronizacji)..
+2. Aby otworzyć stronę Synchronization Rules (Reguły synchronizacji), kliknij pozycję **Synchronization Rules** (Reguły synchronizacji).
 
-3. Aby otworzyć kreatora tworzenia reguły synchronizacji, kliknij przycisk **New** (Nowy) na pasku narzędzi..
+3. Aby otworzyć kreatora tworzenia reguły synchronizacji, kliknij przycisk **New** (Nowy) na pasku narzędzi.
 
 4. Na karcie **General** (Ogólne) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
@@ -328,7 +326,7 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
     -   Aby skonfigurować kryteria relacji, wybierz pozycję **ObjectSID** (Identyfikator SID obiektu) z list MetaverseObject:person(Attribute) i ConnectedSystemObject:person(Attribute).
 
-    -   Wybierz pozycję **Create Resource in MIM** (Tworzenie zasobu w usłudze MIM)..
+    -   Wybierz pozycję **Create Resource in MIM** (Tworzenie zasobu w usłudze MIM).
 
 7. Na stronie **Inbound Attribute Flow** (Przepływ atrybutów ruchu przychodzącego) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
@@ -345,15 +343,15 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
     Dla każdego wiersza w tej tabeli wykonaj następujące czynności:
 
-    - Aby otworzyć okno dialogowe Flow Definition (Definicja przepływu), kliknij pozycję **New Attribute Flow** (Nowy przepływ atrybutów)..
+    - Aby otworzyć okno dialogowe Flow Definition (Definicja przepływu), kliknij pozycję **New Attribute Flow** (Nowy przepływ atrybutów).
 
     - Na karcie **Source** (Źródło) wybierz atrybut wyświetlany dla danego wiersza w tabeli.
 
     - Na karcie **Destination** (Lokalizacja docelowa) wybierz atrybut wyświetlany dla danego wiersza w tabeli.
 
-    - Aby zastosować konfigurację przepływu atrybutów, kliknij przycisk **OK**..
+    - Aby zastosować konfigurację przepływu atrybutów, kliknij przycisk **OK**.
 
-8. Na karcie **Summary** (Podsumowanie) kliknij przycisk **Submit** (Prześlij)..
+8. Na karcie **Summary** (Podsumowanie) kliknij przycisk **Submit** (Prześlij).
 
 ## Inicjowanie środowiska testowego
 Aby przetestować konfigurację programu MIM z danymi usługi AD, należy wcześniej wykonać cztery kroki:
@@ -364,9 +362,9 @@ Aby przetestować konfigurację programu MIM z danymi usługi AD, należy wcześ
 
 2. Aby otworzyć okno dialogowe Options (Opcje), w menu **Tools** (Narzędzia) kliknij polecenie **Options** (Opcje).
 
-3. Zaznacz pole wyboru **Enable Synchronization Rule Provisioning** (Włącz zastrzeganie reguły synchronizacji)..
+3. Zaznacz pole wyboru **Enable Synchronization Rule Provisioning** (Włącz aprowizację reguły synchronizacji).
 
-4. Aby zamknąć okno dialogowe Options (Opcje), kliknij przycisk **OK**..
+4. Aby zamknąć okno dialogowe Options (Opcje), kliknij przycisk **OK**.
 
 ### Inicjowanie menedżera MIMMA
 
@@ -379,19 +377,19 @@ Wykonaj pełny cykl synchronizacji dla tego łącznika. Kompletny cykl składa s
 
 Wykonaj następujące czynności, aby uruchomić wymienione cztery profile uruchamiania.
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania)..
+1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
 
-2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **MIMMA**..
+2. Z listy **Management Agents** (Agenci zarządzania) wybierz pozycję **MIMMA**.
 
-3. Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom)..
+3. Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom).
 
 4. Dla każdego wymienionego powyżej profilu uruchamiania wykonaj następujące czynności:
 
-    - Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom)..
+    - Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom).
 
     - Na liście **Run profiles** (Profile uruchamiania) wybierz profil, który chcesz uruchomić.
 
-    - Aby uruchomić profil, kliknij przycisk **OK**..
+    - Aby uruchomić profil, kliknij przycisk **OK**.
 
 #### Konfigurowanie pierwszeństwa przepływu atrybutów
 
@@ -403,19 +401,19 @@ Dostosuj pierwszeństwo przepływu atrybutów dla atrybutów wprowadzanych przez
 
 Aby zainicjować łącznik usługi Active Directory, należy wykonać na nim pełny import i pełną synchronizację. Pełny import powoduje przeniesienie istniejących obiektów z usługi AD do przestrzeni łącznika. Pełna synchronizacja powoduje zaktualizowanie reguł synchronizacji zgodnie z regułami łącznika usługi MIM.
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania)..
+1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
 
-2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **ADMA**..
+2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **ADMA**.
 
-3. Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom)..
+3. Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom).
 
 4. Dla każdego wymienionego powyżej profilu uruchamiania wykonaj następujące czynności:
 
-    - Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom)..
+    - Aby otworzyć okno dialogowe Run Management Agent (Uruchamianie agenta zarządzania), w menu **Actions** (Akcje) kliknij polecenie **Run** (Uruchom).
 
     - Na liście **Run profiles** (Profile uruchamiania) wybierz profil, który chcesz uruchomić.
 
-    - Aby uruchomić profil, kliknij przycisk **OK**..
+    - Aby uruchomić profil, kliknij przycisk **OK**.
 
 ### Wypełnianie bazy danych usługi MIM
 
@@ -439,10 +437,9 @@ Wykonaj następujące czynności, aby uruchomić wymienione trzy profile urucham
     - Wybierz profil, który chcesz uruchomić, z listy **Run profiles** (Profile uruchamiania).
     - Kliknij przycisk **OK**, aby uruchomić profil.
 
->[!div class="step-by-step"]
-[« Usługa i portal MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« Usługa i portal MIM](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
