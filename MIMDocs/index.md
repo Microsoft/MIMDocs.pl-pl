@@ -21,7 +21,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <section id="hero-content">
       <h1>Dokumentacja programu Microsoft Identity Manager</h1>
       <h2>Program Microsoft Identity Manager (MIM) zapewnia funkcje lokalnego zarządzania tożsamościami i dostępem, łącznie z synchronizacją tożsamości, zapobieganiem kradzieży·tożsamości i innymi funkcjami.</h2>
-      <h3>Jesteś nowym użytkownikiem programu MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Odwiedź stronę produktu &rarr;</a></h3>     
+      <h3>Jesteś nowym użytkownikiem programu MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Odwiedź stronę produktu &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
       <p>Możemy zaczynać?</p>
@@ -140,6 +140,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 
