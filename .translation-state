@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "05fd3b508874f87d4407f21f0739974327505e72",
-  "LastTranslatedCommit": "93c5c82b36c3e39e14889a41cf68f0d86e40a327",
+  "LastTranslatedCommit": "8b07feeb0a97bc71593818b86e3c3682edf008e5",
   "Items": {
     "50c0edd60abfa6550cb5a873d32a842e8c099811": {
       "FileHash": "50c0edd60abfa6550cb5a873d32a842e8c099811",
@@ -1757,14 +1757,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "876bd17d22fa705fc82b4f92e5bd9bdd8df66c2b",
+      "TargetFileCommit": "8b07feeb0a97bc71593818b86e3c3682edf008e5",
       "TargetFilePath": "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.pl-pl\\master\\microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf",
-      "HandbackFileCommit": "ef4c2e4348cc313486d2a17d70d8f9b30b5c12eb",
-      "HandbackDateTime": "2016-05-25T11:27:09.3187799Z",
+      "HandbackFileCommit": "9e8bfa2901af2a7c7efbc1b79c7113b63186cf0c",
+      "HandbackDateTime": "2016-07-02T23:32:54.0734217Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-25T11:27:09.3187799Z",
+      "UpdatedDateTime": "2016-07-02T23:32:54.0734217Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.pl-pl\\master\\archive\\microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf",
       "ArchiveFileCommit": "ac5a245f4d0dd016e889a22434e04d4da0ebb3f0",
       "ArchiveFileDateTime": "2016-07-01T23:32:25.6034223Z",
