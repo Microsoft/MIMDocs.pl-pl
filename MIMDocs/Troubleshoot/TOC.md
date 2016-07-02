@@ -1,6 +1,6 @@
 #Przykład
-## [Przykład](Sample.md)
+## Przykład
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

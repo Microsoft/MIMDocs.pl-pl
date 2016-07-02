@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Uaktualnianie z programu Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
-description: Informacje o sposobie uaktualniania składników programu FIM 2010 R2, a następnie instalowania składników, które są nowe w programie MIM 2016.
-keywords:
+description: "Informacje o sposobie uaktualniania składników programu FIM 2010 R2, a następnie instalowania składników, które są nowe w programie MIM 2016."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+
 
 ---
 
@@ -207,6 +201,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia programu FIM dla usługi SSPR, nie konfiguruj nowych bram telefonicznych usługi MFA na potrzeby resetowania haseł, dopóki wszystkie dodatki i rozszerzenia programu FIM nie zostaną uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

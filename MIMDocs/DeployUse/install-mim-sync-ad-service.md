@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalacja programu MIM 2016&#58; synchronizowanie usług Active Directory i MIM | Program Microsoft Identity Manager
-description: Korzystając z agentów zarządzania i usługi synchronizacji programu MIM, można synchronizować bazy danych usług Active Directory i MIM.
-keywords:
+title: "Instalacja programu MIM 2016&#58; synchronizowanie usług Active Directory i MIM | Program Microsoft Identity Manager"
+description: "Korzystając z agentów zarządzania i usługi synchronizacji programu MIM, można synchronizować bazy danych usług Active Directory i MIM."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
+ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+
 
 ---
 
 # Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
->[!div class="step-by-step"] [« Usługa i portal MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[« Usługa i portal MIM](install-mim-service-portal.md)
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -42,7 +37,8 @@ Agent zarządzania (MA) programu MIM jest łącznikiem usługi synchronizacji pr
 
 Podczas konfigurowania agenta zarządzania programu MIM należy określić konto użytkownika. W niniejszym dokumencie użyto nazwy **MIMMA** dla tego konta.
 
-> [!NOTE] Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
+> [!NOTE]
+> Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
 
 ###Aby utworzyć agenta zarządzania programu MIM
 
@@ -437,9 +433,11 @@ Wykonaj następujące czynności, aby uruchomić wymienione trzy profile urucham
     - Wybierz profil, który chcesz uruchomić, z listy **Run profiles** (Profile uruchamiania).
     - Kliknij przycisk **OK**, aby uruchomić profil.
 
->[!div class="step-by-step"] [« Usługa i portal MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[« Usługa i portal MIM](install-mim-service-portal.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
