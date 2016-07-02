@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | InSyncHandedBackSuccess | [Details](#a56ead9777f1dad1aa0d214a506cf1242f51e16766)
 
 ## Item Details
-##### <a name='a56ead9777f1dad1aa0d214a506cf1242f51e16766'></a> Source: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/8b07feeb0a97bc71593818b86e3c3682edf008e5/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
-* Handoff File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/13801e1f1c8a0f67fd6e9ca6941765138c199d57/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
-* Handoff Datetime: 2016-06-27 09:21:55
-* Handoff Reason: Include
-* Archive File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ac5a245f4d0dd016e889a22434e04d4da0ebb3f0/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
-* Archive Datetime: 2016-07-01 23:32:25
-* Handback File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/9e8bfa2901af2a7c7efbc1b79c7113b63186cf0c/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.pl-pl.xlf)
-* Handback Datetime: 2016-07-02 23:32:54
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
