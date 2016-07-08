@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 305
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 100
+[ Handoff Success Files ](#handoff-success-list)| 99
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 18
+[ Archive Success Files ](#archive-success-list)| 19
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 17
 [ In Sync Handback Files ](#insync-handback-success-list)| 12
@@ -116,7 +116,6 @@
  [MIMDocs\media\MIM_UpgSP9.png](https://github.com/Microsoft/MIMDocs-pr/blob/93600a1cd5652d947bfaae4d4cfecfe074fb016f/MIMDocs/media/MIM_UpgSP9.png) | HandedOffSuccess | [Details](#86552c75a719abf0e4adbe967a98d3a5cf3167c1187)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier.png) | HandedOffSuccess | [Details](#ff89d0e903b04df6182700b474bc3aef1b0ba24d246)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier-multiservice.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier-multiservice.png) | HandedOffSuccess | [Details](#c465fc00bd089b73b86daa72968dd67dab832aee245)
- [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | HandedOffSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265248)
  [MIMDocs\Understand\media\MIM-Hybrid-passwordreset.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/93600a1cd5652d947bfaae4d4cfecfe074fb016f/MIMDocs/Understand/media/MIM-Hybrid-passwordreset.jpg) | HandedOffSuccess | [Details](#f21f8cd1fd0c882b8768f543e10487140c67dc1c300)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
@@ -142,6 +141,7 @@
  [MIMDocs\pam\tier-model-for-partitioning-administrative-privileges.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/tier-model-for-partitioning-administrative-privileges.md) | ArchivedSuccess | [Details](#509c05bbda5f0a0b936518fb023000771c45d4f7238)
  [MIMDocs\pam\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9cf126d898c93faf89d7119136cce4e4963bb63d/MIMDocs/pam/TOC.md) | ArchivedSuccess | [Details](#6c59c7c73fd09a041b2fb130b533c516c036d540239)
  [MIMDocs\pam\use-azure-mfa-for-activation.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/use-azure-mfa-for-activation.md) | ArchivedSuccess | [Details](#d6f6927eec479c705fd9ef7f33fafdeec05857e0240)
+ [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | ArchivedSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265248)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -3426,13 +3426,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='e1f18ad9bfc7946a751af0b73bba4faf0689c265248'></a> Source: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/3e86865b52f40d7b15fe01621df5ef4f71a0f490/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
 * Handoff Datetime: 2016-07-06 22:25:18
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/327ee7e6a789a0794331ba6a53b3fba66ad87f2d/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
+* Archive Datetime: 2016-07-08 23:19:43
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3443,8 +3443,8 @@
 * Handoff File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/3e86865b52f40d7b15fe01621df5ef4f71a0f490/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf)
 * Handoff Datetime: 2016-07-06 22:25:18
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/327ee7e6a789a0794331ba6a53b3fba66ad87f2d/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.pl-pl.xlf)
+* Archive Datetime: 2016-07-08 23:19:43
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/876bd17d22fa705fc82b4f92e5bd9bdd8df66c2b/MIMDocs/PlanDesign/TOC.md)
