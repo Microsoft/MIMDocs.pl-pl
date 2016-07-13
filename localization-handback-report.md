@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | InSyncHandedBackSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265247)
 
 ## Item Details
+##### <a name='e1f18ad9bfc7946a751af0b73bba4faf0689c265247'></a> Source: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/2179908801bfc3111a255b5e8dcb6f81ea712764/MIMDocs/PlanDesign/supported-management-agents.md)
+* Handoff File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/3e86865b52f40d7b15fe01621df5ef4f71a0f490/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
+* Handoff Datetime: 2016-07-06 22:25:18
+* Handoff Reason: Include
+* Archive File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/327ee7e6a789a0794331ba6a53b3fba66ad87f2d/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
+* Archive Datetime: 2016-07-08 23:19:43
+* Handback File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/002e089b6dabc5c0943bd35ea3fbd83c69f9f11d/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
+* Handback Datetime: 2016-07-13 21:05:02
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

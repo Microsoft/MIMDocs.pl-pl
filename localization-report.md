@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 99
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 19
+[ Archive Success Files ](#archive-success-list)| 18
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 18
-[ In Sync Handback Files ](#insync-handback-success-list)| 11
+[ In Sync Handback Files ](#insync-handback-success-list)| 12
 [ Ignored Files ](#ignored-list)| 157
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -141,7 +141,6 @@
  [MIMDocs\pam\tier-model-for-partitioning-administrative-privileges.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/tier-model-for-partitioning-administrative-privileges.md) | ArchivedSuccess | [Details](#509c05bbda5f0a0b936518fb023000771c45d4f7237)
  [MIMDocs\pam\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9cf126d898c93faf89d7119136cce4e4963bb63d/MIMDocs/pam/TOC.md) | ArchivedSuccess | [Details](#6c59c7c73fd09a041b2fb130b533c516c036d540238)
  [MIMDocs\pam\use-azure-mfa-for-activation.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/use-azure-mfa-for-activation.md) | ArchivedSuccess | [Details](#d6f6927eec479c705fd9ef7f33fafdeec05857e0239)
- [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | ArchivedSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265247)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -178,6 +177,7 @@
  [MIMDocs\microsoft-identity-manager-2016-release-notes.md](https://github.com/Microsoft/MIMDocs-pr/blob/62108908497d1dcf69579ba144545346b6a42266/MIMDocs/microsoft-identity-manager-2016-release-notes.md) | InSyncHandedBackSuccess | [Details](#12f245624e644b12825239e378a26752f7a86846196)
  [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6240)
  [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd246)
+ [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | InSyncHandedBackSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265247)
  [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | InSyncHandedBackSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6249)
  [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/e0261b00d5df35458d2b1bfc54e9481c5778bfdd/MIMDocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa8292)
  [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md) | InSyncHandedBackSuccess | [Details](#b3f3982ade46932b18fb730fe5c16d52cde188a1294)
@@ -3416,15 +3416,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='e1f18ad9bfc7946a751af0b73bba4faf0689c265247'></a> Source: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/2179908801bfc3111a255b5e8dcb6f81ea712764/MIMDocs/PlanDesign/supported-management-agents.md)
 * Handoff File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/3e86865b52f40d7b15fe01621df5ef4f71a0f490/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
 * Handoff Datetime: 2016-07-06 22:25:18
 * Handoff Reason: Include
 * Archive File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/327ee7e6a789a0794331ba6a53b3fba66ad87f2d/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
 * Archive Datetime: 2016-07-08 23:19:43
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/002e089b6dabc5c0943bd35ea3fbd83c69f9f11d/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.pl-pl.xlf)
+* Handback Datetime: 2016-07-13 21:05:02
 * [Back to Top](#report-top)
 
 ##### <a name='4cb419fa58037307e1352dd813e5f9b1767cfac5248'></a> Source: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md)
