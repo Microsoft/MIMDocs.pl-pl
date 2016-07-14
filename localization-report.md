@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 99
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 1
+[ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 5
-[ In Sync Handback Files ](#insync-handback-success-list)| 42
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 4
+[ In Sync Handback Files ](#insync-handback-success-list)| 44
 [ Ignored Files ](#ignored-list)| 157
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -121,9 +121,6 @@
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/planning-bastion-environment.md) | ArchivedSuccess | [Details](#0ed48d43825e1a876c4d96cafcb6c17cac26610f227)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -131,7 +128,6 @@
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/a63ee7c239fd47bf78f6ff60ca516a612753539d/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#a095f58b7f95000db9fe385e53d09c62fb109dc010)
- [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | OutofSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f74)
  [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#e3e755779dfa60f0f5b2af0d4aae25de6b07afa680)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4cb419fa58037307e1352dd813e5f9b1767cfac5248)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/3b6b7df0a2836f23795c5bc6d5af6c561d361331/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#84a2f5e4796c1d7e0a407cfc4a336de1bf65c5f3288)
@@ -154,6 +150,7 @@
  [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/DeployUse/TOC.md) | InSyncHandedBackSuccess | [Details](#15f742d950ce73c665c5c7c1644a23153d6aa36371)
  [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | InSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778572)
  [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md) | InSyncHandedBackSuccess | [Details](#3e0e6cea0b268836bb6347e81694deec93320ce373)
+ [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | InSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f74)
  [MIMDocs\GetStarted\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9c9ada27ad1efe6b4b5154677de163afcbd1c850/MIMDocs/GetStarted/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa879)
  [MIMDocs\microsoft-identity-manager-2016-release-notes.md](https://github.com/Microsoft/MIMDocs-pr/blob/62108908497d1dcf69579ba144545346b6a42266/MIMDocs/microsoft-identity-manager-2016-release-notes.md) | InSyncHandedBackSuccess | [Details](#12f245624e644b12825239e378a26752f7a86846196)
  [MIMDocs\pam\configuring-mim-environment-for-pam.md](https://github.com/Microsoft/MIMDocs-pr/blob/9cf126d898c93faf89d7119136cce4e4963bb63d/MIMDocs/pam/configuring-mim-environment-for-pam.md) | InSyncHandedBackSuccess | [Details](#c9f2cf2ba1f42ea1513ae38d8089839d85ae5553197)
@@ -161,6 +158,7 @@
  [MIMDocs\pam\environment-overview.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/environment-overview.md) | InSyncHandedBackSuccess | [Details](#a01cb2e1df52f3157b3d84a4eab837cececfbe1b200)
  [MIMDocs\pam\hardware-software-requirements.md](https://github.com/Microsoft/MIMDocs-pr/blob/a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60/MIMDocs/pam/hardware-software-requirements.md) | InSyncHandedBackSuccess | [Details](#77e7174e94ea8032c4e57155db489f493ce18177201)
  [MIMDocs\pam\high-availability-disaster-recovery-considerations-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/high-availability-disaster-recovery-considerations-bastion-environment.md) | InSyncHandedBackSuccess | [Details](#1d9e005bfb3e26f9a2b818667f14acd3e5239523202)
+ [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/planning-bastion-environment.md) | InSyncHandedBackSuccess | [Details](#0ed48d43825e1a876c4d96cafcb6c17cac26610f227)
  [MIMDocs\pam\principles-of-operation.md](https://github.com/Microsoft/MIMDocs-pr/blob/a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60/MIMDocs/pam/principles-of-operation.md) | InSyncHandedBackSuccess | [Details](#49f47050703095d402a1514342baf4e928f66c70228)
  [MIMDocs\pam\privileged-identity-management-for-active-directory-domain-services.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/privileged-identity-management-for-active-directory-domain-services.md) | InSyncHandedBackSuccess | [Details](#959c92f2e98fe712703ca23d3e38cdec6a8b85dc229)
  [MIMDocs\pam\step-1-prepare-corp-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-1-prepare-corp-domain.md) | InSyncHandedBackSuccess | [Details](#7d6888ad4d694ad0ed746598563de32d7c363936230)
@@ -1286,15 +1284,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='3a4350e54383dc1098c778090bb29b435082045f74'></a> Source: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/b1c19c292e18f9787d56910b4abe724a5e462298/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/6efa186ec7bd412cdaebe67fcd431daa00b92068/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
 * Handoff File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/13801e1f1c8a0f67fd6e9ca6941765138c199d57/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
 * Handoff Datetime: 2016-06-27 09:21:55
 * Handoff Reason: Include
 * Archive File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ac5a245f4d0dd016e889a22434e04d4da0ebb3f0/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
 * Archive Datetime: 2016-07-01 23:32:25
-* Handback File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/62c685f835110dfbcd2b83f54983851112ca6992/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
-* Handback Datetime: 2016-05-31 14:15:51
+* Handback File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f20e5f0d6080cae3ba6982a7088a89ac3442cb26/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
+* Handback Datetime: 2016-07-14 20:09:31
 * [Back to Top](#report-top)
 
 ##### <a name='7b88b366e20b6808cf325aac8aa874ee408c020975'></a> Source: [MIMDocs\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/7bde0a52219370e47852ca7551a93544777d957e/MIMDocs/docfx.json)
@@ -3171,15 +3169,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='0ed48d43825e1a876c4d96cafcb6c17cac26610f227'></a> Source: [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/planning-bastion-environment.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/6efa186ec7bd412cdaebe67fcd431daa00b92068/MIMDocs/pam/planning-bastion-environment.md)
 * Handoff File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/c0e6c6deb627196d7767d978baa0302ff95c950e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
 * Handoff Datetime: 2016-06-21 23:03:08
 * Handoff Reason: Include
 * Archive File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ac5a245f4d0dd016e889a22434e04d4da0ebb3f0/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
 * Archive Datetime: 2016-07-01 23:32:25
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f20e5f0d6080cae3ba6982a7088a89ac3442cb26/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
+* Handback Datetime: 2016-07-14 20:09:31
 * [Back to Top](#report-top)
 
 ##### <a name='49f47050703095d402a1514342baf4e928f66c70228'></a> Source: [MIMDocs\pam\principles-of-operation.md](https://github.com/Microsoft/MIMDocs-pr/blob/a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60/MIMDocs/pam/principles-of-operation.md)
