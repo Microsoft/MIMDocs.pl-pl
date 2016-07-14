@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | InSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f74)
- [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/planning-bastion-environment.md) | InSyncHandedBackSuccess | [Details](#0ed48d43825e1a876c4d96cafcb6c17cac26610f227)
 
 ## Item Details
-##### <a name='3a4350e54383dc1098c778090bb29b435082045f74'></a> Source: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/6efa186ec7bd412cdaebe67fcd431daa00b92068/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
-* Handoff File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/13801e1f1c8a0f67fd6e9ca6941765138c199d57/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
-* Handoff Datetime: 2016-06-27 09:21:55
-* Handoff Reason: Include
-* Archive File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ac5a245f4d0dd016e889a22434e04d4da0ebb3f0/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
-* Archive Datetime: 2016-07-01 23:32:25
-* Handback File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f20e5f0d6080cae3ba6982a7088a89ac3442cb26/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.pl-pl.xlf)
-* Handback Datetime: 2016-07-14 20:09:31
-* [Back to Top](#report-top)
-
-##### <a name='0ed48d43825e1a876c4d96cafcb6c17cac26610f227'></a> Source: [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/b8af77d2354428da19d91d5f02b490012835f544/MIMDocs/pam/planning-bastion-environment.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\pam\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr.pl-pl/blob/6efa186ec7bd412cdaebe67fcd431daa00b92068/MIMDocs/pam/planning-bastion-environment.md)
-* Handoff File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/c0e6c6deb627196d7767d978baa0302ff95c950e/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
-* Handoff Datetime: 2016-06-21 23:03:08
-* Handoff Reason: Include
-* Archive File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ac5a245f4d0dd016e889a22434e04d4da0ebb3f0/ol-handoff/Microsoft/MIMDocs-pr.pl-pl/master/archive/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
-* Archive Datetime: 2016-07-01 23:32:25
-* Handback File: [planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f20e5f0d6080cae3ba6982a7088a89ac3442cb26/ol-handback/Microsoft/MIMDocs-pr.pl-pl/master/planning-bastion-environment.e20595ec88b31a646dc2435e8927f0ba5ef223f3.pl-pl.xlf)
-* Handback Datetime: 2016-07-14 20:09:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
