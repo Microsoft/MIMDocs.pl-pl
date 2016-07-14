@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Praca z raportowaniem hybrydowym programu Identity Manager | Microsoft Identity Manager
-description: Dowiedz się, jak połączyć dane przechowywane lokalnie i w chmurze w raporty hybrydowe na platformie Azure oraz jak wyświetlać te raporty i jak nimi zarządzać.
-keywords:
+description: "Dowiedz się, jak połączyć dane przechowywane lokalnie i w chmurze w raporty hybrydowe na platformie Azure oraz jak wyświetlać te raporty i jak nimi zarządzać."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: e2d0bd6120628d4fd2a14718fc205cde976c7785
+
 
 ---
 
@@ -100,7 +94,7 @@ Po zainstalowaniu agenta raportowania dane aktywności programu Microsoft Identi
 Aby zatrzymać przekazywanie danych raportowania z programu Microsoft Identity Manager do usługi Azure Active Directory, odinstaluj agenta raportowania hybrydowego. Użyj narzędzia **Dodaj lub usuń programy** systemu Windows, aby odinstalować funkcję raportowania hybrydowego programu Microsoft Identity Manager.
 
 ## Zdarzenia systemu Windows używane na potrzeby raportowania hybrydowego
-Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w dzienniku zdarzeń systemu Windows i są widoczne w Podglądzie zdarzeń w obszarze Dzienniki aplikacji i usług -&gt;  **Dziennik żądań programu Identity Manager**. Każde żądanie programu MIM jest eksportowane jako zdarzenie w dzienniku zdarzeń systemu Windows w strukturze JSON. Takie zdarzenia można wyeksportować do rozwiązania SIEM.
+Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w dzienniku zdarzeń systemu Windows i są widoczne w Podglądzie zdarzeń w obszarze Dzienniki aplikacji i usług -&gt; **Dziennik żądań programu Identity Manager**. Każde żądanie programu MIM jest eksportowane jako zdarzenie w dzienniku zdarzeń systemu Windows w strukturze JSON. Takie zdarzenia można wyeksportować do rozwiązania SIEM.
 
 |Typ zdarzenia|ID|Szczegóły zdarzenia|
 |--------------|------|-----------------|
@@ -108,6 +102,7 @@ Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w
 |Informacje|4137|Rozszerzenie zdarzenia 4121 programu MIM na wypadek zbyt dużej ilości danych dla jednego zdarzenia. Nagłówek w tym zdarzeniu ma następujący format: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

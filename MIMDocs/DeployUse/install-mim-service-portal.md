@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalacja programu MIM 2016&#58; usługa i portal programu MIM| Microsoft Identity Manager
-description: Pobierz kroki konfigurowania i instalowania usługi i portalu programu MIM dla programu Microsoft Identity Manager 2016
-keywords:
+title: "Instalacja programu MIM 2016&#58; usługa i portal programu MIM| Microsoft Identity Manager"
+description: "Pobierz kroki konfigurowania i instalowania usługi i portalu programu MIM dla programu Microsoft Identity Manager 2016"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
+
 
 ---
 
@@ -45,31 +39,31 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 1. Uruchom **instalatora usługi i portalu programu MIM** z rozpakowanego podfolderu **Service and Portal** (Usługa i portal).
 
-2. Na ekranie powitalnym kliknij przycisk **Dalej**..
+2. Na ekranie powitalnym kliknij przycisk **Dalej**.
 
 3. Przeczytaj Umowę Licencyjną Użytkownika Oprogramowania i kliknij przycisk **Dalej**, jeśli akceptujesz postanowienia licencyjne.
 
-4. Na ekranie **Program poprawy jakości obsługi klienta programu MIM** kliknij przycisk **Dalej**..
+4. Na ekranie **Program poprawy jakości obsługi klienta programu MIM** kliknij przycisk **Dalej**.
 
 5. Podczas wybierania funkcji składników dla tego wdrożenia koniecznie uwzględnij usługę programu MIM (z wyjątkiem raportowania programu MIM) i funkcje portalu programu MIM. Możesz również wybrać portal resetowania haseł programu MIM i usługę powiadamiania o zmianie hasła programu MIM.
 
-6. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**..
+6. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**.
 
     ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/MIM-Install10.png)
 
-7. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**..
+7. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Next** (Dalej).
 
     ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/MIM-Install11.png)
 
 8. Określ, że chcesz generować nowy certyfikat z podpisem własnym, lub wybierz odpowiedni certyfikat.
 
-9. Określ nazwę konta usługi, które ma być używane (np. *usługa_MIM*), hasło konta usługi (np. *Has@lo1*), domenę konta usługi (np. *contoso*) i konto e-mail usługi (np. *contoso*)..
+9. Określ nazwę konta usługi, które ma być używane (np. *usługa_MIM*), hasło konta usługi (np. *Has@lo1*), domenę konta usługi (np. *contoso*) i konto e-mail usługi (np. *contoso*).
 
     ![Obraz przedstawiający konfigurowanie konta usługi programu MIM](media/MIM-Install12.png)
 
 10. Należy pamiętać, że może zostać wyświetlone ostrzeżenie informujące o tym, że konto usługi nie jest zabezpieczone w bieżącej konfiguracji.
 
-11. Zaakceptuj ustawienia domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *contoso\MIMsync*..
+11. Zaakceptuj ustawienia domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *contoso\MIMsync*.
 
     ![Obraz konfigurowania usługi i portalu programu MIM](media/MIM-Install13.png)
 
@@ -85,25 +79,25 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 ## Konfigurowanie portalu rejestracji haseł programu MIM
 
-1.  Ustaw wartość *contoso\MIMSSPR* jako nazwę konta usługi dla rejestracji SSPR i *Has@lo1* jako jego hasło..
+1.  Ustaw wartość *contoso\MIMSSPR* jako nazwę konta usługi dla rejestracji SSPR i *Has@lo1* jako jego hasło.
 
 2.  Podaj wartość *CORPIDM* jako nazwę hosta dla rejestracji haseł programu MIM i ustaw port **8080**. Włącz opcję **Otwórz port w zaporze**.
 
     ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/MIM-Install14.png)
 
-3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**..
+3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
 4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM podaj wartość *http://CorpIDM.contoso.local* jako adres serwera usługi programu MIM dla portalu rejestracji haseł.
 
 ## Konfigurowanie portalu resetowania haseł programu MIM
 
-1.  Ustaw wartość *Contoso\MIMSSPRService* jako nazwę konta usługi dla rejestracji SSPR i *Has@lo1* jako jego hasło..
+1.  Ustaw wartość *Contoso\MIMSSPRService* jako nazwę konta usługi dla rejestracji SSPR i *Has@lo1* jako jego hasło.
 
 2.  Podaj wartość *CORPIDM* jako nazwę hosta dla rejestracji haseł programu MIM i ustaw port **8080**. Włącz opcję **Otwórz port w zaporze**.
 
     ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/MIM-Install15.png)
 
-3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**..
+3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
 4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM podaj wartość *CorpIDname  http://CorpIDname.domain.local* jako adres serwera usługi programu MIM dla portalu resetowania haseł.
 
@@ -121,19 +115,19 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
 3. Zezwól użytkownikom na wyświetlanie własnych wpisów w programie MIM.
 
-    1.  Korzystając z programu Internet Explorer, w **portalu programu MIM** kliknij pozycję **Reguły zasad zarządzania**..
+    1.  Korzystając z programu Internet Explorer, w **portalu programu MIM** kliknij pozycję **Reguły zasad zarządzania**.
 
-    2.  Wyszukaj regułę zasad zarządzania **Zarządzanie użytkownikami: użytkownicy mogą odczytywać atrybuty we własnym zakresie**..
+    2.  Wyszukaj regułę zasad zarządzania **Zarządzanie użytkownikami: użytkownicy mogą odczytywać atrybuty we własnym zakresie**.
 
-    3.  Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pozycji **Zasady są wyłączone**..
+    3.  Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pozycji **Zasady są wyłączone**.
 
-    4.  Kliknij przycisk **OK**, a następnie kliknij przycisk **Prześlij**..
+    4.  Kliknij przycisk **OK**, a następnie kliknij przycisk **Prześlij**.
 
 4.  Sprawdź, czy zapora zezwala na połączenia przychodzące na portach TCP 5725 i 5726.
 
     1.  Uruchom aplet **Narzędzia administracyjne » Zapora systemu Windows** z **zabezpieczeniami zaawansowanymi**.
 
-    2.  Kliknij pozycję **Reguły dla ruchu przychodzącego**..
+    2.  Kliknij pozycję **Reguły dla ruchu przychodzącego**.
 
     3.  Sprawdź, czy pojawiły się dwie następujące reguły:
 
@@ -143,11 +137,11 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
     4.  Ukończ działanie kreatora i zamknij aplikację **Zapora systemu Windows**.
 
-    5.  Uruchom aplet **Panel sterowania » Sieć i Internet » Wyświetl stan sieci i zadania**..
+    5.  Uruchom aplet **Panel sterowania » Sieć i Internet » Wyświetl stan sieci i zadania**.
 
     6.  Sprawdź, czy aktywna sieć jest wyświetlana na liście jako contoso.local i sieć domeny.
 
-    7.  Zamknij **Panel sterowania**..
+    7.  Zamknij **Panel sterowania**.
 
 > [!NOTE]
 > Opcjonalnie: na tym etapie można zainstalować dodatki i rozszerzenia programu MIM.
@@ -157,6 +151,7 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 [Bazy danych synchronizacji »](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurowanie serwera zarządzania tożsamościami&#58; SharePoint | Microsoft Identity Manager
+title: "Konfigurowanie serwera zarządzania tożsamościami&#58; SharePoint | Microsoft Identity Manager"
 description: Instalowanie i konfigurowanie programu SharePoint Foundation w celu hostowania strony portalu programu MIM.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
+
 
 ---
 
@@ -81,16 +75,16 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 6. Uruchom kreatora (w aplikacji sieci Web), aby skonfigurować farmę programu SharePoint.
 
-7. Wybierz opcję wykorzystania istniejącego konta zarządzanego (*Contoso\SharePoint*) i kliknij przycisk **Dalej**..
+7. Wybierz opcję wykorzystania istniejącego konta zarządzanego (*Contoso\SharePoint*) i kliknij przycisk **Dalej**.
 
-8. W oknie **Tworzenie kolekcji witryn** kliknij przycisk **Pomiń**.  Następnie kliknij przycisk **Zakończ**..
+8. W oknie **Tworzenie kolekcji witryn** kliknij przycisk **Pomiń**.  Następnie kliknij przycisk **Zakończ**.
 
 ## Przygotowywanie programu SharePoint do hostowania portalu programu MIM
 
 > [!NOTE]
 > Początkowo protokół SSL nie zostanie skonfigurowany. Należy pamiętać o skonfigurowaniu protokołu SSL lub równoważnego przed włączeniem dostępu do tego portalu.
 
-1. Uruchom **powłokę zarządzania programu SharePoint 2013** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikację sieci Web programu SharePoint Foundation 2013**..
+1. Uruchom **powłokę zarządzania programu SharePoint 2013** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikację sieci Web programu SharePoint Foundation 2013**.
 
     ```
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
@@ -98,7 +92,8 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Nie zamykaj okna **powłoki zarządzania programu SharePoint 2013**, aby móc odnieść się do niego w przyszłości.
+    > [!NOTE] 
+    > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Nie zamykaj okna **powłoki zarządzania programu SharePoint 2013**, aby móc odnieść się do niego w przyszłości.
 
 2. Uruchom powłokę zarządzania programu SharePoint 2013 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
 
@@ -112,7 +107,8 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] Sprawdź, czy wynik zmiennej *CompatibilityLevel* to „14”. Jeśli wynik wynosi „15”, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
+  > [!NOTE] 
+  > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to „14”. Jeśli wynik wynosi „15”, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
 
 3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint „Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)”, uruchamiając następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**:
 
@@ -127,7 +123,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
     ![Obraz portalu MIM po adresem http://localhost:82/](media/MIM-DeploySP1.png)
 
-5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**..
+5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**.
 
     ![Obraz opcji internetowych](media/MIM-DeploySP2.png)
 
@@ -140,6 +136,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 [Exchange Server »](prepare-server-exchange.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

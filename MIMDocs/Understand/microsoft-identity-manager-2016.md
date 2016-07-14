@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
-description: Dowiedz się, jak działa program MIM 2016, aby tworzyć bezpieczniejsze i wygodniejsze systemy zarządzania tożsamościami w chmurze i lokalnie.
-keywords:
+description: "Dowiedz się, jak działa program MIM 2016, aby tworzyć bezpieczniejsze i wygodniejsze systemy zarządzania tożsamościami w chmurze i lokalnie."
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: 5247cce895344ac6148b735fe550eb16c39103c7
+
 
 ---
 
@@ -36,21 +30,10 @@ Program Microsoft Identity Manager 2016 działa równolegle z platformą Azure, 
 ## Zarządzanie tożsamościami uprzywilejowanymi
 Zarządzanie tożsamościami uprzywilejowanymi umożliwia kontrolowanie dostępu administracyjnego i zarządzanie nim dzięki tymczasowemu, opartemu na zadaniach dostępowi do ważnych zasobów. Oznacza to, że można udzielać użytkownikom tylko niezbędnych uprawnień, co ogranicza ryzyko uzyskania pełnego dostępu administracyjnego przez osobę atakującą. Ponadto zarządzanie tożsamościami uprzywilejowanymi umożliwia wyodrębnianie i izolowanie kont administracyjnych z istniejących lasów usługi Active Directory.
 
-## Obsługiwane platformy
-
-Lista produktów i platform obsługiwanych przez program MIM została zaktualizowana i obecnie obejmuje najnowsze platformy firmy Microsoft oraz stosy pakietu Office/serwerów, kliencki system operacyjny Windows, serwerowy system operacyjny Windows oraz programy SharePoint, SQL i Outlook, a w szczególności:
-
--   Windows 8.1 z programem Internet Explorer 8 lub nowszym
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 i 2012 R2
+Program MIM obsługuje lokalne rozwiązanie zarządzania tożsamościami uprzywilejowanymi do zarządzania usługą Active Directory. Aby rozpocząć, [skorzystaj z funkcji zarządzania dostępem uprzywilejowanym](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

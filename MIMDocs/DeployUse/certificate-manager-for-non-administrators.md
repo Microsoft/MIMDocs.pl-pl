@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy | Microsoft Identity Manager
-description: Dowiedz się, jak rejestrować karty inteligentne dla użytkowników bez dostępu administratora do ich maszyn, tak aby mogli korzystać z Menedżera certyfikatów.
-keywords:
+title: "Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy | Microsoft Identity Manager"
+description: "Dowiedz się, jak rejestrować karty inteligentne dla użytkowników bez dostępu administratora do ich maszyn, tak aby mogli korzystać z Menedżera certyfikatów."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -76,15 +70,15 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-    2.  Przejdź do pozycji **Administracja** &gt; **Zarządzaj szablonami profilów** i upewnij się, że zaznaczono pole obok utworzonego szablonu profilu, a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
+    2.  Przejdź do pozycji **Administracja** &gt; **Zarządzaj szablonami profilów** i upewnij się, że zaznaczono pole obok utworzonego szablonu profilu, a następnie kliknij pozycję Kopiuj wybrany szablon profilu.
 
-    3.  Wpisz nazwę szablonu profilu, dodaj tekst „nonAdmin”, a następnie kliknij przycisk **OK**..
+    3.  Wpisz nazwę szablonu profilu, dodaj tekst „nonAdmin”, a następnie kliknij przycisk **OK**.
 
-    4.  Gdy pojawią się ustawienia ogólne szablonu profilu, przewiń w dół do końca i w obszarze **Konfiguracja karty inteligentnej** kliknij przycisk **Zmień ustawienia**..
+    4.  Gdy pojawią się ustawienia ogólne szablonu profilu, przewiń w dół do końca i w obszarze **Konfiguracja karty inteligentnej** kliknij przycisk **Zmień ustawienia**.
 
     5.  W obszarze **Wstępna wartość klucza administratora (szesnastkowo)** wprowadź domyślny klucz administratora: „010203040506070801020304050607080102030405060708”.
 
-    6.  Przewiń w dół i kliknij przycisk **OK**..
+    6.  Przewiń w dół i kliknij przycisk **OK**.
 
 5.  **Tworzenie konta bez uprawnień administratora na maszynie klienckiej**
 
@@ -101,6 +95,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 8.  **Uruchamianie aplikacji CM i rejestrowanie się w celu korzystania z wirtualnej karty inteligentnej**
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

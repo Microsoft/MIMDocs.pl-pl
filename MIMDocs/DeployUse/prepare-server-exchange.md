@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurowanie serwera zarządzania tożsamościami&#58; Exchange | Microsoft Identity Manager
-description: Ten opcjonalny krok polega na wdrożeniu programu Exchange Server w celu umożliwienia programowi MIM 2016 wysyłania wiadomości e-mail i tworzenia skrzynek pocztowych.
-keywords:
+title: "Konfigurowanie serwera zarządzania tożsamościami&#58; Exchange | Microsoft Identity Manager"
+description: "Ten opcjonalny krok polega na wdrożeniu programu Exchange Server w celu umożliwienia programowi MIM 2016 wysyłania wiadomości e-mail i tworzenia skrzynek pocztowych."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: b69ea20f375869d4ad08987a08aba05913fd1db1
+
 
 ---
 
@@ -49,6 +43,7 @@ Jeśli chcesz skonfigurować program MIM do wysyłania i odbierania wiadomości 
 [Usługa synchronizacji programu MIM »](install-mim-sync.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

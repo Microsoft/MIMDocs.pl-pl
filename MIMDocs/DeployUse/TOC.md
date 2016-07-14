@@ -17,9 +17,10 @@
 ## [Menedżer certyfikatów programu MIM](working-with-mim-certificate-manager.md)
 ### [Rejestrowanie kart inteligentnych](certificate-manager-for-non-administrators.md)
 ### [Tworzenie certyfikatów oprogramowania](certificate-manager-for-software-certificates.md)
+# [Korzystanie z funkcji zarządzania dostępem uprzywilejowanym](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

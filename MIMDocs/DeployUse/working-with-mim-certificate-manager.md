@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Praca z Menedżerem certyfikatów programu MIM | Microsoft Identity Manager
-description: Dowiedz się, jak wdrożyć aplikację Menedżer certyfikatów, aby umożliwić użytkownikom zarządzanie swoimi prawami dostępu. 
-keywords:
+title: "Praca z Menedżerem certyfikatów programu MIM | Microsoft Identity Manager"
+description: "Dowiedz się, jak wdrożyć aplikację Menedżer certyfikatów, aby umożliwić użytkownikom zarządzanie swoimi prawami dostępu."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -43,7 +37,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 2.  Otwórz program MMC.
 
-3.  Kliknij pozycję **Plik &gt; Dodaj/Usuń przystawkę**.;
+3.  Kliknij pozycję **Plik &gt; Dodaj/Usuń przystawkę**.
 
 4.  Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
 
@@ -56,7 +50,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 8.  Na karcie **Ogólne** w polu **Nazwa wyświetlana** wpisz nazwę, która ma być wyświetlana w interfejsie użytkownika aplikacji, taką jak **Logowanie wirtualnej karty inteligentnej**.
 
-9. Na karcie **Obsługiwanie żądań** ustaw dla opcji **Przeznaczenie** wartość **Podpis i szyfrowanie**, a następnie w obszarze **Zrób tak…** zaznacz pole wyboru **Monituj użytkownika podczas rejestrowania**..
+9. Na karcie **Obsługiwanie żądań** ustaw dla opcji **Przeznaczenie** wartość **Podpis i szyfrowanie**, a następnie w obszarze **Zrób tak…** zaznacz pole wyboru **Monituj użytkownika podczas rejestrowania**.
 
 10. Na karcie **Kryptografia** w obszarze **Kategoria dostawcy** wybierz pozycje **Dostawca magazynu kluczy i Żądania mogą korzystać z każdego dostawcy dostępnego na komputerze podmiotu**.
 
@@ -67,7 +61,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 12. Kliknij przycisk **OK**, aby zakończyć wprowadzanie zmian i utworzyć nowy szablon. Twój nowy szablon powinien zostać wyświetlony na liście Szablony certyfikatów.
 
-13. Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**..
+13. Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**.
 
 14. W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)**, a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
 
@@ -82,7 +76,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 2.  Przejdź do pozycji Administracja &gt; Zarządzaj szablonami profilów, upewnij się, że zaznaczono pole wyboru Szablon profilu logowania za pomocą karty inteligentnej Menedżera certyfikatów programu MIM, a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
 
-3.  Wpisz nazwę szablonu profilu, a następnie kliknij przycisk **OK**..
+3.  Wpisz nazwę szablonu profilu, a następnie kliknij przycisk **OK**.
 
 4.  Na następnym ekranie kliknij pozycję **Dodaj nowy szablon certyfikatu** i koniecznie zaznacz pole wyboru obok nazwy urzędu certyfikacji.
 
@@ -98,7 +92,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 10. W lewym okienku kliknij pozycje **Odnów zasady &gt; Zmień ustawienia ogólne**. Wybierz pozycję **Użyj karty ponownie przy odnawianiu** i kliknij przycisk **OK**.
 
-11. Musisz wyłączyć elementy kolekcji danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie zaznaczając pole wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**..
+11. Musisz wyłączyć elementy kolekcji danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie zaznaczając pole wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**.
 
 ## Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
 
@@ -261,6 +255,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

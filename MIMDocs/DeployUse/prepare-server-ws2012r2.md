@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurowanie serwera zarządzania tożsamościami&#58; Windows Server 2012 R2 | Microsoft Identity Manager
-description: Zapoznaj się z procedurą przygotowywania systemu Windows Server 2012 R2 do współdziałania z programem MIM 2016 i minimalnymi wymaganiami dotyczącymi tego procesu.
-keywords:
+title: "Konfigurowanie serwera zarządzania tożsamościami&#58; Windows Server 2012 R2 | Microsoft Identity Manager"
+description: "Zapoznaj się z procedurą przygotowywania systemu Windows Server 2012 R2 do współdziałania z programem MIM 2016 i minimalnymi wymaganiami dotyczącymi tego procesu."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: af9f7f75f19bb29f2e29577c787252f6b7fabb7d
+ms.openlocfilehash: cd4ac84af4e5416512cf546a5d23b342ebe13c39
+
 
 ---
 
@@ -61,7 +55,7 @@ Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RA
 
     ![Obraz funkcji programu PowerShell](media/MIM-DeployWS2.png)
 
-7. W programie PowerShell wpisz poniższe polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy **.NET Framework** 3.5. Tte funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. „*d:\Sources\SxS\*”.
+7. W programie PowerShell wpisz poniższe polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy **.NET Framework** 3.5. Te funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. „*d:\Sources\SxS\*”.
 
     ```
     import-module ServerManager
@@ -116,6 +110,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

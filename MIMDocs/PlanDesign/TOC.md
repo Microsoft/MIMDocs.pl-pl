@@ -4,9 +4,10 @@
 ## [Planowanie pojemności](capacity-planning-guide.md)
 ## [Topologia wdrożenia](topology-considerations.md)
 # [Wdrażanie i użytkowanie](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Korzystanie z funkcji zarządzania dostępem uprzywilejowanym](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 
