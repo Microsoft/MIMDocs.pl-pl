@@ -1,100 +1,77 @@
 {
-  "build_entry_point": "",
+  "build_entry_point": "docs.ps1",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "MIMDeployUse",
-      "build_output_subfolder": "/MIMDocs/deploy-use",
-      "locale": "pl-pl",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
-    },
-    {
-      "docset_name": "MIMdevelop",
-      "build_output_subfolder": "/MIMDocs/develop",
-      "locale": "pl-pl",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
-    },
-    {
-      "docset_name": "MIMTroubleshoot",
-      "build_output_subfolder": "/MIMDocs/troubleshoot",
-      "locale": "pl-pl",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
-    },
-    {
-      "docset_name": "MIMGetStarted",
-      "build_output_subfolder": "/MIMDocs/get-started",
-      "locale": "pl-pl",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
-    },
-    {
       "docset_name": "MIMDocs",
-      "build_output_subfolder": "/MIMDocs",
+      "build_output_subfolder": "MIMDocs",
       "locale": "pl-pl",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
-    },
-    {
-      "docset_name": "MIMPlanDesign",
-      "build_output_subfolder": "/MIMDocs/plan-design",
-      "locale": "pl-pl",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
+        "Conceptual": "Content"
+      }
     },
     {
       "docset_name": "MIMUnderstand",
-      "build_output_subfolder": "/MIMDocs/understand-explore",
+      "build_output_subfolder": "MIMDocs/Understand",
       "locale": "pl-pl",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs.ps1"
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "MIMPlanDesign",
+      "build_output_subfolder": "MIMDocs/PlanDesign",
+      "locale": "pl-pl",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "MIMGetStarted",
+      "build_output_subfolder": "MIMDocs/GetStarted",
+      "locale": "pl-pl",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "MIMDeployUse",
+      "build_output_subfolder": "MIMDocs/DeployUse",
+      "locale": "pl-pl",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "MIMTroubleshoot",
+      "build_output_subfolder": "MIMDocs/Troubleshoot",
+      "locale": "pl-pl",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
     }
   ],
+  "notification_subscribers": [
+    ""
+  ],
+  "branches_to_filter": [
+    "master-oldev"
+  ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs.pl-pl",
+  "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "dependent_repositories": [
     {
