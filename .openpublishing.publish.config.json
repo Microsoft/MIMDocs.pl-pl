@@ -5,7 +5,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "MIMDeployUse",
-      "build_output_subfolder": "/microsoft-identity-manager/deploy-use",
+      "build_output_subfolder": "/MIMDocs/deploy-use",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -18,7 +18,7 @@
     },
     {
       "docset_name": "MIMdevelop",
-      "build_output_subfolder": "/microsoft-identity-manager/develop",
+      "build_output_subfolder": "/MIMDocs/develop",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -31,7 +31,7 @@
     },
     {
       "docset_name": "MIMTroubleshoot",
-      "build_output_subfolder": "/microsoft-identity-manager/troubleshoot",
+      "build_output_subfolder": "/MIMDocs/troubleshoot",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -44,7 +44,7 @@
     },
     {
       "docset_name": "MIMGetStarted",
-      "build_output_subfolder": "/microsoft-identity-manager/get-started",
+      "build_output_subfolder": "/MIMDocs/get-started",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -57,7 +57,7 @@
     },
     {
       "docset_name": "MIMDocs",
-      "build_output_subfolder": "/microsoft-identity-manager",
+      "build_output_subfolder": "/MIMDocs",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -70,7 +70,7 @@
     },
     {
       "docset_name": "MIMPlanDesign",
-      "build_output_subfolder": "/microsoft-identity-manager/plan-design",
+      "build_output_subfolder": "/MIMDocs/plan-design",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
@@ -83,7 +83,7 @@
     },
     {
       "docset_name": "MIMUnderstand",
-      "build_output_subfolder": "/microsoft-identity-manager/understand-explore",
+      "build_output_subfolder": "/MIMDocs/understand-explore",
       "locale": "pl-pl",
       "version": 0,
       "open_to_public_contributors": false,
