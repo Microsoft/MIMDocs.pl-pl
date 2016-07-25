@@ -1,10 +1,10 @@
 ---
-title: Uaktualnianie z programu Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
+title: Uaktualnianie z programu FIM 2010 R2 | Microsoft Identity Manager
 description: "Informacje o sposobie uaktualniania składników programu FIM 2010 R2, a następnie instalowania składników, które są nowe w programie MIM 2016."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 05/13/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
-ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 
 ---
@@ -202,6 +202,6 @@ Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

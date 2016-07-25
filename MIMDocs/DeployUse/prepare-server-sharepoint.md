@@ -1,10 +1,10 @@
 ---
-title: "Konfigurowanie serwera zarządzania tożsamościami&#58; SharePoint | Microsoft Identity Manager"
+title: Konfigurowanie programu SharePoint | Microsoft Identity Manager
 description: Instalowanie i konfigurowanie programu SharePoint Foundation w celu hostowania strony portalu programu MIM.
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 
 
 ---
@@ -92,7 +92,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] 
+    > [!NOTE]
     > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Nie zamykaj okna **powłoki zarządzania programu SharePoint 2013**, aby móc odnieść się do niego w przyszłości.
 
 2. Uruchom powłokę zarządzania programu SharePoint 2013 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
@@ -107,7 +107,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] 
+  > [!NOTE]
   > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to „14”. Jeśli wynik wynosi „15”, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
 
 3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint „Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)”, uruchamiając następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**:
@@ -137,6 +137,6 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Kwestie dotyczące topologii wdrożeń programu MIM | Microsoft Identity Manager"
+title: "Przewodnik topologii wdrożenia | Microsoft Identity Manager"
 description: "W tym artykule opisano składniki programu MIM 2016 i przedstawiono sugestie dotyczące wdrażania ich w środowisku docelowym."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
-ms.openlocfilehash: e33a08d77a0b5c422cdbc8c19516b55df980a2c6
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 8efb513bfe7dfb67d240a17b39535270f0c7fab6
 
 
 ---
@@ -66,6 +66,6 @@ Komputery z zainstalowanym programem SQL Server hostujące usługę synchronizac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

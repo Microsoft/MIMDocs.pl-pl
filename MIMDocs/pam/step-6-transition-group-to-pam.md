@@ -1,10 +1,10 @@
 ---
-title: "Krok 6. Przeniesienie grupy do usługi Privileged Access Management | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 6 — przeniesienie grupy | Microsoft Identity Manager"
+description: "Migracja grupy do lasu PRIV, dzięki czemu można będzie nią zarządzać za pomocą usługi Privileged Access Management."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 01470689e862b47625346d5d5bc6bc7def11da9c
-ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
 
 
 ---
 
 # Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 
->[!div class="step-by-step"] [« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Krok 7 »](step-7-elevate-user-access.md)
 
 Tworzenie kont uprzywilejowanych w lesie PRIV odbywa się przy użyciu poleceń cmdlet programu PowerShell. Te polecenia cmdlet umożliwiają wykonanie następujących działań:
@@ -82,11 +84,12 @@ Te polecenia cmdlet należy uruchomić jeden raz dla każdej grupy i dla poszcze
 
 Jeśli chcesz przekonać się, że prawa dostępu między lasami dla konta administratora działają, przejdź do kolejnego kroku.
 
->[!div class="step-by-step"] [« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Krok 7 »](step-7-elevate-user-access.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

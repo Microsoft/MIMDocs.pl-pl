@@ -1,10 +1,10 @@
 ---
-title: "Opis składników funkcji PAM | Microsoft Identity Manager"
-description: 
+title: "Opis składników usługi PAM | Microsoft Identity Manager"
+description: "Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,8 +12,9 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 49f47050703095d402a1514342baf4e928f66c70
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
 
 
 ---
@@ -42,6 +43,6 @@ Ponadto członkostwo takie jest ograniczone czasowo, a zatem po upływie wstępn
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

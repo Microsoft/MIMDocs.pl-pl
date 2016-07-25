@@ -1,10 +1,10 @@
 ---
-title: "Krok 5 — ustanowienie zaufania między lasami PRIV i CORP | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 5 — łącze lasu | Microsoft Identity Manager"
+description: "Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki czemu uprzywilejowani użytkownicy w lesie PRIV będą mieli w dalszym ciągu dostęp do zasobów w lesie CORP."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 06319438d93d8d92edc833e2d0bf6492dd5919a6
-ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 
 ---
 
 # Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
->[!div class="step-by-step"] [« Krok 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[« Krok 4](step-4-install-mim-components-on-pam-server.md)
 [Krok 6 »](step-6-transition-group-to-pam.md)
 
 
@@ -104,11 +106,12 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 
 W następnym kroku przeniesiesz grupę do systemu PAM.
 
->[!div class="step-by-step"] [« Krok 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[« Krok 4](step-4-install-mim-components-on-pam-server.md)
 [Krok 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

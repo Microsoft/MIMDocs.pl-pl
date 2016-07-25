@@ -1,10 +1,10 @@
 ---
-title: "Wymagania sprzętowe i programowe | Microsoft Identity Manager"
-description: 
+title: "Wymagania programowe usługi PAM | Microsoft Identity Manager"
+description: "Określ wymagania sprzętowe i programowe, aby pomyślnie wdrożyć usługę Privileged Access Management"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 77e7174e94ea8032c4e57155db489f493ce18177
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
 
 
 ---
 
-Nie ma żadnych dodatkowych wymagań sprzętowych poza wymaganiami podstawowych platform oprogramowania oraz wymaganiami dotyczącymi wystarczającej ilości pamięci, miejsca na dysku oraz łączności sieciowej. Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Nie ma na celu prezentowania wydajności, skalowalności ani wysokiej dostępności oraz nie przedstawia zalecanej topologii wdrożenia dla dużych firm i środowisk produkcyjnych.
+# Wymagania dotyczące sprzętu i oprogramowania
+
+Usługa Privileged Access Management nie ma wymagań sprzętowych poza wymaganiami jej bazowych platform oprogramowania. Po prostu upewnij się, że masz wystarczającą ilość pamięci lub miejsca na dysku i łączność sieciową.
+
+Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Nie ma na celu prezentowania wydajności, skalowalności ani wysokiej dostępności oraz nie przedstawia zalecanej topologii wdrożenia dla dużych firm i środowisk produkcyjnych.
 
 ## Instalowanie z pakietów oprogramowania
 
@@ -70,6 +75,6 @@ Dla serwera PAMSRV:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

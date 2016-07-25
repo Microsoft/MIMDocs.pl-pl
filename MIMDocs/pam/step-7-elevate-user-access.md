@@ -1,10 +1,10 @@
 ---
-title: "Krok 7 — podniesienie uprawnień dostępu użytkownika | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Microsoft Identity Manager"
+description: "Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
 
 
 ---
@@ -46,7 +46,7 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 2. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno wiersza polecenia.
 3. Gdy pojawi się okno programu PowerShell, wpisz następujące polecenia.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Po uruchomieniu tych poleceń wszystkie następujące czynności są zależne od czasu.
 
     ```
@@ -92,7 +92,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 7. Zamknij okno dialogowe **Opcje internetowe**.
 8. Na karcie po lewej stronie kliknij przycisk **Aktywuj**. Wybierz **rolę PAM**, a następnie kliknij przycisk **Aktywuj**.
 
-> [!Note] 
+> [!Note]
 > W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w temacie [Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
 
 ## Podsumowanie
@@ -103,6 +103,6 @@ Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz za
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

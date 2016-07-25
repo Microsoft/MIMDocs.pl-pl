@@ -12,6 +12,7 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
 ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
 
@@ -198,7 +199,7 @@ Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmo
     gpupdate /force /target:computere
     ```
 
-Po upływie kilku minut powinien zostać wyświetlony komunikat „Aktualizacja zasad komputera została ukończona pomyślnie”. should appear after a few minutes.
+Po upływie kilku minut powinien zostać wyświetlony komunikat „Aktualizacja zasad komputera została ukończona pomyślnie”.
 
 #### 3. Zezwalanie na połączenia z urzędem zabezpieczeń lokalnych
 
@@ -252,6 +253,6 @@ Następnym krokiem jest zdefiniowanie ról PAM, kojarząc użytkowników i grupy
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

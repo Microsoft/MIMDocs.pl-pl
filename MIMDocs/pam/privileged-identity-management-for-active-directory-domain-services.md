@@ -1,10 +1,10 @@
 ---
-title: "Usługa Privileged Access Management dla usług domenowych Active Directory | Microsoft Identity Manager"
-description: 
+title: "Co to jest usługa PAM dla usług ADDS? | Microsoft Identity Manager"
+description: "Poznaj usługę Privileged Access Management i dowiedz się, jak możesz zarządzać środowiskiem usługi Active Directory i chronić je."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,16 +13,16 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 959c92f2e98fe712703ca23d3e38cdec6a8b85dc
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: bbc5c6760bc035d57f9d76d102246abbfe298e8b
 
 
 ---
 
 # Usługa Privileged Access Management dla usług domenowych Active Directory
-Rozwiązanie Privileged Access Management (PAM), które korzysta z programu Microsoft Identity Manager (MIM) oraz systemów Windows Server 2012 R2 i Windows Server Technical Preview, ułatwia organizacjom ograniczenie uprzywilejowanego dostępu w istniejącym środowisku usługi Active Directory.
+Usługa Privileged Access Management (PAM) to rozwiązanie, które korzysta z programu Microsoft Identity Manager (MIM) oraz systemów Windows Server 2012 R2 i Windows Server Technical Preview. Ułatwia ona organizacjom ograniczenie uprzywilejowanego dostępu w istniejącym środowisku usługi Active Directory.
 
-> [!NOTE] 
+> [!NOTE]
 > Usługa PAM jest wystąpieniem usługi [Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM) zaimplementowanym przy użyciu programu Microsoft Identity Manager (MIM).
 
 Usługa Privileged Access Management umożliwia zrealizowanie dwóch celów:
@@ -67,7 +67,7 @@ Typowych kont użytkowników nie trzeba przenosić do nowego lasu. To samo dotyc
 
 Użycie usługi PAM zapewnia następujące korzyści:
 
--   **Izolacja/określanie zakresu uprawnień**: uprawnienia nie są przechowywane na kontach, które są używane również do wykonywania zadań niewymagających uprzywilejowanego dostępu, takich jak sprawdzanie poczty e-mail czy przeglądanie Internetu. Użytkownicy muszą zażądać uprawnień, które są zatwierdzane lub odmawiane na podstawie zasad programu MIM zdefiniowanych przez administratora usługi PAM. Dopóki żądanie nie zostanie zatwierdzone, uprzywilejowany dostęp nie jest możliwy.
+-   **Izolacja/określanie zakresu uprawnień**: uprawnienia nie są przechowywane na kontach, które są używane również do wykonywania zadań niewymagających uprzywilejowanego dostępu, takich jak sprawdzanie poczty e-mail czy przeglądanie Internetu. Użytkownicy muszą zażądać uprawnień. Żądania są zatwierdzane lub odrzucane na podstawie zasad programu MIM zdefiniowanych przez administratora usługi PAM. Dopóki żądanie nie zostanie zatwierdzone, uprzywilejowany dostęp nie jest możliwy.
 
 -   **Podniesienie i weryfikacja uprawnień**: nowe funkcje uwierzytelniania i autoryzacji ułatwiają zarządzanie cyklem życia oddzielnych kont administracyjnych. Żądanie użytkownika, który chce podnieść uprawnienia dla konta administracyjnego, przechodzi przez przepływy pracy programu MIM.
 
@@ -82,7 +82,7 @@ Poniżej podano kilka sposobów umożliwiających wysłanie takiego żądania pr
 - Program Windows PowerShell (`New-PAMRequest`)
 
 ## Jakie przepływy pracy i opcje monitorowania są dostępne?
-Załóżmy na przykład, że przed skonfigurowaniem usługi PIM dany użytkownik był członkiem grupy administratorów. W ramach konfiguracji usługi PIM ten użytkownik zostaje usunięty z grupy administratorów. W programie MIM zostają utworzone zasady, które określają, że jeśli ten użytkownik zażąda uprawnień administracyjnych i zostanie uwierzytelniony przez usługę MFA, żądanie zostanie zatwierdzone i do uprzywilejowanej grupy w lesie bastionu zostanie dodane oddzielne konto tego użytkownika.
+Załóżmy na przykład, że przed skonfigurowaniem usługi PIM dany użytkownik był członkiem grupy administratorów. W ramach konfiguracji usługi PIM ten użytkownik zostaje usunięty z grupy administratorów, a w programie MIM zostają utworzone zasady. Zasady określają, że jeśli ten użytkownik zażąda uprawnień administracyjnych i zostanie uwierzytelniony przez usługę MFA, żądanie zostanie zatwierdzone i do uprzywilejowanej grupy w lesie bastionu zostanie dodane oddzielne konto tego użytkownika.
 
 Po zatwierdzeniu żądania przepływ pracy akcji komunikuje się bezpośrednio z usługą Active Directory w lesie bastionu w celu dodania użytkownika do grupy. Na przykład gdy użytkownik Jen wyśle żądanie dotyczące administrowania bazy danych działu HR, w ciągu kilku sekund zostanie dodane konto administracyjne dla tego użytkownika do uprzywilejowanej grupy w lesie bastionu. Członkostwo tego konta w grupie wygaśnie po określonym czasie. W systemie Windows Server Technical Preview członkostwo to jest skojarzone z limitem czasu w usłudze Active Directory. W systemie Windows Server 2012 R2 jest ono powiązane z lasem bastionu, a limit czasu jest wymuszany przez program MIM.
 
@@ -95,6 +95,6 @@ Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Ad
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

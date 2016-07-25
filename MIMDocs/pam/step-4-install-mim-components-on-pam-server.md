@@ -1,10 +1,10 @@
 ---
-title: "Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 4 — instalacja programu MIM | Microsoft Identity Manager"
+description: "Instalowanie i konfigurowanie usługi i portalu programu MIM na serwerze usługi Privileged Access Management i stacjach roboczych."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
 
 Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainstalować portal i usługę programu MIM oraz przykładową aplikację sieci Web portalu.
 
-  > [!NOTE] 
+  > [!NOTE]
   > Musisz być administratorem domeny — jeśli uruchomisz następujące polecenia z innymi uprawnieniami, testy walidacji zaufania w następnym kroku nie zostaną ukończone.
 
 Jeśli pobrano program MIM, rozpakuj archiwum instalacji programu MIM do nowego folderu.
@@ -44,7 +44,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
 2.  Podczas konfigurowania wspólnych usług i połączenia z bazą danych programu MIM, wybierz opcję **Create a new database** (Utwórz nową bazę danych).
 
-    > [!NOTE] 
+    > [!NOTE]
     > W przypadku wielokrotnego instalowania usługi programu MIM w środowisku o wysokiej dostępności, wybierz opcję **Use an existing database** (Użyj istniejącej bazy danych) we wszystkich kolejnych instalacjach.
 
 3.  Podczas konfigurowania połączenia z serwerem poczty na serwerze poczty ustaw nazwę hosta serwera programu Exchange lub serwera SMTP w środowisku CORP (jeśli nie masz serwera poczty, użyj adresu corpdc.contoso.local) i usuń zaznaczenie pól wyboru **Use SSL** (Użyj protokołu SSL) i **Mail Server is Exchange Server 2007 or Exchange Server 2010** (Serwer poczty to program Exchange Server 2007 lub Exchange Server 2010).
@@ -193,6 +193,6 @@ W następnym kroku zostanie ustanowiona relacja zaufania między lasami PRIV i C
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Instalacja programu MIM 2016&#58; synchronizowanie usług Active Directory i MIM | Program Microsoft Identity Manager"
+title: "Synchronizowanie usługi AD i usługi programu MIM | Microsoft Identity Manager"
 description: "Korzystając z agentów zarządzania i usługi synchronizacji programu MIM, można synchronizować bazy danych usług Active Directory i MIM."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
-ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 
 
 ---
@@ -316,7 +316,7 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
     -   Metaverse Resource Type (Typ zasobu Metaverse): person (osoba)
     -   External System (System zewnętrzny): ADMA
-    -   External System Resource Type (Typ zasobu systemu zewnętrznego): person (osoba)
+    -   External System Resource Type (Typ zasobu systemu zewnętrznego): user (użytkownik)
 
 6. Na karcie **Relationship** (Relacja) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
@@ -328,10 +328,10 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
     | Reguła przepływu | Źródło | Lokalizacja docelowa |
     |-|-|-|
-    |Reguła 1|samAccountName|f|
+    |Reguła 1|samAccountName|accountName|
     |Reguła 2|displayName|displayName|
-    |Reguła 3|EmployeeType|EmployeeType|
-    |Reguła 4|givenName|givenName|
+    |Reguła 3|EmployeeType|employeeType|
+    |Reguła 4|givenName|firstName|
     |Reguła 5|sn|lastName|
     |Reguła 6|Manager|manager|
     |Reguła 7|objectSid|ObjectSID|
@@ -438,6 +438,6 @@ Wykonaj następujące czynności, aby uruchomić wymienione trzy profile urucham
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
