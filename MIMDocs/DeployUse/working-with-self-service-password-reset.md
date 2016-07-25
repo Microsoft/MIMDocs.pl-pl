@@ -1,10 +1,10 @@
 ---
-title: "Praca z funkcją samoobsługowego resetowania hasła | Program Microsoft Identity Manager"
+title: "Samoobsługowe resetowanie hasła | Microsoft Identity Manager"
 description: "Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
-ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: fdbd2919cc3791a5038982f2c2a03b22cac40ee9
 
 
 ---
@@ -206,6 +206,6 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
