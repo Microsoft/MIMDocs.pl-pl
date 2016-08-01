@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: e695dd47e4bd31c4004c7d0d9ec76498d52fb56a
-ms.openlocfilehash: b46c2b50873023d504fb7b440a1d4e40e8fa3ac7
+ms.openlocfilehash: 82c97351f66558c3270821f786560ef4b3e0c473
 
 ---
 
 # Usługa Privileged Access Management dla usług domenowych Active Directory
-Usługa Privileged Access Management (PAM) to rozwiązanie ułatwiające organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
+Usługa Privileged Access Management (PAM) ułatwia organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
 
-Usługa Privileged Access Management umożliwia zrealizowanie dwóch celów:
+![Diagram przedstawiający funkcjonowanie usługi PAM: przygotowywanie, ochrona, działanie, monitorowanie](media/MIM_PIM_SetupProcess.png)
+
+W usłudze Privileged Access Management skoncentrowano się na cyklu przygotowywania, ochrony i monitorowania środowiska, dzięki czemu umożliwia ona zrealizowanie dwóch celów:
 
 - Odzyskanie kontroli nad środowiskiem usługi Active Directory z naruszonymi zabezpieczeniami dzięki utrzymywaniu oddzielnego środowiska bastionu, o którym wiadomo, że jest poza zasięgiem złośliwych ataków.  
 - Odizolowanie uprzywilejowanych kont w celu ograniczenia ryzyka kradzieży poświadczeń.
@@ -43,7 +44,6 @@ Usługa PAM korzysta z zasady administrowania w miarę potrzeb, która jest powi
 
 Konfiguracja i działanie usługi PAM obejmuje cztery kroki.
 
-![Diagram przedstawiający funkcjonowanie usługi PAM: przygotowywanie, ochrona, działanie, monitorowanie](media/MIM_PIM_SetupProcess.png)
 
 1.  **Przygotowywanie**: określenie, które grupy w istniejącym lesie mają znaczące uprawnienia. Grupy te są ponownie tworzone w lesie bastionu, ale bez członków.
 

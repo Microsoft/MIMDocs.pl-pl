@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -93,7 +93,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 8. Na karcie po lewej stronie kliknij przycisk **Aktywuj**. Wybierz **rolę PAM**, a następnie kliknij przycisk **Aktywuj**.
 
 > [!Note]
-> W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w temacie [Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
+> W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w [dokumentacji interfejsu API REST usługi Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## Podsumowanie
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
@@ -103,6 +103,6 @@ Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz za
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
