@@ -1,10 +1,10 @@
 ---
-title: "Krok 3 — Przygotowanie serwera PAM | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 3 — serwer usługi PAM | Microsoft Identity Manager"
+description: "Przygotowanie serwera usługi PAM, który będzie hostować programy SQL i SharePoint na potrzeby wdrożenia usługi Privileged Access Management."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 
 ---
@@ -118,7 +118,7 @@ Jeśli program SQL Server nie znajduje się jeszcze w środowisku bastionu, zain
 
 Za pomocą programu SharePoint Foundation 2013 z Instalatorem z dodatkiem SP1 zainstaluj wymagania wstępne dotyczące oprogramowania SharePoint na serwerze PAMSRV.
 
-> [!NOTE] 
+> [!NOTE]
 > Ten Instalator wymaga połączenia internetowego w celu pobrania jego wymagań wstępnych. Po ich zainstalowaniu serwer zostanie ponownie uruchomiony.
 
 1. Kliknij prawym przyciskiem myszy program PowerShell i wybierz opcję **Uruchom jako administrator**.  
@@ -158,7 +158,7 @@ Po zakończeniu pracy kreatora użyj programu PowerShell, aby utworzyć aplikacj
 
 2. Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut.  Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu.
 
-> [!NOTE] 
+> [!NOTE]
 > Nie zamykaj okna powłoki zarządzania programu SharePoint 2013, aby użyć go w kolejnym kroku.
 
 ## Tworzenie kolekcji witryn programu SharePoint
@@ -212,6 +212,6 @@ W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

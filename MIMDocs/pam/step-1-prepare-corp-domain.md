@@ -1,10 +1,10 @@
 ---
-title: "Krok 1 — Przygotowanie hosta i domeny CORP | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 1 — domena CORP | Microsoft Identity Manager"
+description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/10/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
 
 
 ---
@@ -94,7 +94,7 @@ W niektórych przypadkach grupa może już istnieć — jest to normalne, jeśli
 
 Jeśli utworzono nową domenę CORP, należy utworzyć dodatkowych użytkowników i grupy na potrzeby demonstrowania scenariusza PAM. Użytkownicy i grupy demonstracyjne nie powinny być administratorami domeny lub użytkownikami i grupami kontrolowanymi przez ustawienia adminSDHolder w usłudze AD.
 
-> [!NOTE] 
+> [!NOTE]
 > Jeśli masz już domenę do użycia w formie domeny CORP, a domena zawiera użytkownika i grupę, których można użyć w celach demonstracyjnych, możesz przejść do sekcji [Konfiguracja inspekcji](#configure-auditing).
 
 Zamierzamy utworzyć grupę zabezpieczeń o nazwie *CorpAdmins* i użytkownika o nazwie *Jen*. W razie potrzeby możesz użyć innych nazw.
@@ -167,7 +167,7 @@ Operacja spowoduje ponowne uruchomienie kontrolera domeny, CORPDC. Aby uzyskać 
 
 Jeśli nie masz jeszcze komputera stacji roboczej podłączonego do domeny, wykonaj poniższe instrukcje, aby przygotować komputer.  
 
-> [!NOTE] 
+> [!NOTE]
 > Jeśli masz już stację roboczą dołączoną do domeny, przejdź do kroku [Tworzenie zasobu demonstracyjnego](#create-a-resource-for-demonstration-purposes).
 
 ### Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise jako maszyny wirtualnej
@@ -215,6 +215,6 @@ W następnym kroku należy przygotować kontroler domeny PRIV.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

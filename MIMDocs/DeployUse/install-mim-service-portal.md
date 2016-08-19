@@ -1,10 +1,10 @@
 ---
-title: "Instalacja programu MIM 2016&#58; usługa i portal programu MIM| Microsoft Identity Manager"
+title: "Instalowanie usługi i portalu programu MIM | Microsoft Identity Manager"
 description: "Pobierz kroki konfigurowania i instalowania usługi i portalu programu MIM dla programu Microsoft Identity Manager 2016"
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
-ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
 [Bazy danych synchronizacji »](install-mim-sync-ad-service.md)
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — **Has@lo1**
@@ -51,7 +51,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
     ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/MIM-Install10.png)
 
-7. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Next** (Dalej).
+7. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
 
     ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/MIM-Install11.png)
 
@@ -93,7 +93,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 1.  Ustaw wartość *Contoso\MIMSSPRService* jako nazwę konta usługi dla rejestracji SSPR i *Has@lo1* jako jego hasło.
 
-2.  Podaj wartość *CORPIDM* jako nazwę hosta dla rejestracji haseł programu MIM i ustaw port **8080**. Włącz opcję **Otwórz port w zaporze**.
+2.  Podaj wartość *CORPIDM* jako nazwę hosta dla portalu resetowania haseł programu MIM i ustaw port **8088**. Włącz opcję **Otwórz port w zaporze**.
 
     ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Krok 7 — podniesienie uprawnień dostępu użytkownika | Microsoft Identity Manager"
-description: 
+title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Microsoft Identity Manager"
+description: "Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -46,7 +46,7 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 2. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno wiersza polecenia.
 3. Gdy pojawi się okno programu PowerShell, wpisz następujące polecenia.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Po uruchomieniu tych poleceń wszystkie następujące czynności są zależne od czasu.
 
     ```
@@ -92,8 +92,8 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 7. Zamknij okno dialogowe **Opcje internetowe**.
 8. Na karcie po lewej stronie kliknij przycisk **Aktywuj**. Wybierz **rolę PAM**, a następnie kliknij przycisk **Aktywuj**.
 
-> [!Note] 
-> W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w temacie [Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
+> [!Note]
+> W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w [dokumentacji interfejsu API REST usługi Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## Podsumowanie
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
@@ -103,6 +103,6 @@ Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz za
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

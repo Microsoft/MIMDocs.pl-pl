@@ -1,10 +1,10 @@
 ---
-title: "Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu | Microsoft Identity Manager"
-description: 
+title: "Odzyskiwanie awaryjne usługi PAM | Microsoft Identity Manager"
+description: "Dowiedz się, jak skonfigurować usługę Privileged Access Management pod kątem wysokiej dostępności i odzyskiwania po awarii."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 1d9e005bfb3e26f9a2b818667f14acd3e5239523
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
 
 
 ---
@@ -161,7 +161,7 @@ Typowe wdrożenie produkcyjne zarządzania dostępem uprzywilejowanym obejmuje c
 
 Procedurę dodawania kolejnego kontrolera domeny zawiera artykuł [Instalowanie repliki kontrolera domeny systemu Windows Server 2012 w istniejącej domenie (poziom 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
->[!NOTE] 
+>[!NOTE]
 > Jeśli kontroler domeny ma być hostowany na platformie wirtualizacji, takiej jak Hyper-V, zapoznaj się z ostrzeżeniami w artykule [Wdrażanie i konfigurowanie zwirtualizowanego kontrolera domeny](https://technet.microsoft.com/library/jj574223.aspx).
 
 #### Odzyskiwanie
@@ -199,7 +199,7 @@ Planując wdrożenie wysokiej dostępności, zobacz następującą dokumentację
 
 W przypadku wdrożenia produkcyjnego na wielu serwerach możesz użyć funkcji równoważenia obciążenia sieciowego (NLB, Network Load Balancing) w celu rozłożenia obciążenia związanego z przetwarzaniem.  Zalecane jest także utworzenie jednego aliasu (na przykład rekordów A lub CNAME) w celu przedstawienia użytkownikowi jednej, wspólnej nazwy.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > W przypadku korzystania z technologii równoważenia obciążenia sieciowego innej niż funkcja NLB w systemie Windows Server 2012 R2 upewnij się, że używane rozwiązanie będzie przekierowywało jedną sesję na ten sam serwer, a nie na losowy serwer.
 
 W przypadku wdrożenia programu MIM na wielu serwerach każda usługa MIM ma zewnętrzną nazwę hosta, nazwę usługi i nazwę partycji usługi.  Domyślna wartość nazwy usługi to nazwa komputera, a domyślne wartości zewnętrznej nazwy hosta i nazwy partycji usługi są konfigurowane podczas instalacji usługi MIM na ekranie, na którym wprowadza się adres serwera usługi MIM. Te trzy nazwy są przechowywane w pliku %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config jako atrybuty `externalHostName`, `serviceName` i `servicePartitionName` węzła konfiguracji `resourceManagementService`.  
@@ -224,6 +224,6 @@ Jeśli poziomem funkcjonalnym lasu środowiska bastionu jest system Windows Serv
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

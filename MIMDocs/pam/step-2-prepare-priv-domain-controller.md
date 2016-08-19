@@ -1,10 +1,10 @@
 ---
-title: Krok 2. Przygotowywanie kontrolera domeny PRIV | Microsoft Identity Manager
-description: 
+title: "Wdrożenie usługi PAM — krok 2 — kontroler domeny PRIV | Microsoft Identity Manager"
+description: "Przygotowanie kontrolera domeny PRIV, który udostępnia środowisko bastionu, w którym usługa Privileged Access Management jest izolowana."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 62d80222ea85fe5066cfa396b5e5a10bced4d3cd
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
 
 
 ---
@@ -221,7 +221,7 @@ Przy użyciu programu PowerShell skonfiguruj przekierowywanie nazw DNS na komput
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > Inne lasy również muszą mieć możliwość przesyłania zapytań DNS dotyczących lasu PRIV do tego kontrolera domeny.  Jeśli istnieje wiele lasów usługi Active Directory, musisz dodać usługę DNS warunkowego przesyłania dalej do każdego z tych lasów.
 
 ### Konfigurowanie protokołu Kerberos
@@ -235,7 +235,7 @@ Przy użyciu programu PowerShell skonfiguruj przekierowywanie nazw DNS na komput
   setspn -S FIMService/pamsrv PRIV\MIMService
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > W następnych krokach opisano instalację składników serwera programu MIM 2016 na pojedynczym komputerze. Jeśli planujesz dodanie kolejnego serwera w celu zwiększenia dostępności, musisz wykonać dodatkowe czynności w ramach konfigurowania protokołu Kerberos. Zostało to opisane w artykule [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (Program FIM 2010: konfigurowanie uwierzytelniania za pośrednictwem protokołu Kerberos).
 
 ### Konfigurowanie delegowania w celu przyznania dostępu kontom usługi MIM
@@ -307,6 +307,6 @@ W następnym kroku zostanie przygotowany serwer usługi PAM.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Platformy obsługiwane przez program MIM 2016 | Microsoft Identity Manager"
+title: "Obsługiwane platformy oprogramowania | Microsoft Identity Manager"
 description: "Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016"
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a59e7471a8aaafc6752c9be34d52fd3509104dec
-ms.openlocfilehash: bb3e3abfdc12d78108676d4a9f029531d9df17fd
+ms.sourcegitcommit: b4527c61dcdbef21c46414e190e0f0d0852e3aa3
+ms.openlocfilehash: d3995474ac91f109052c004ec9b84ac66efafbc7
 
 
 ---
@@ -49,7 +49,7 @@ ms.openlocfilehash: bb3e3abfdc12d78108676d4a9f029531d9df17fd
 || Polecenia cmdlet obiektu żądającego programu PowerShell PAM (opcjonalnie) | Windows 8.1<br/>Windows 10 |
 | **Zarządzanie certyfikatami programu MIM** (integracja serwera i urzędu certyfikacji) | Serwer systemu Windows | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012 R2 |
 || Urząd certyfikacji | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| Baza danych zarządzania certyfikatami programu MIM | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
+|| Baza danych zarządzania certyfikatami programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
 | **Zarządzanie certyfikatami programu MIM** (aplikacja) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **Zarządzanie certyfikatami programu MIM** (klient i klient zbiorczy) | Windows | Windows 7 |
 | **Pakiet BHOLD MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012 R2 |
@@ -59,6 +59,6 @@ ms.openlocfilehash: bb3e3abfdc12d78108676d4a9f029531d9df17fd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
