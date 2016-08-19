@@ -4,7 +4,7 @@ description: "Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instala
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 [Portal i usługa programu MIM »](install-mim-service-portal.md)
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — **Has@lo1**
@@ -53,7 +53,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     ![Obraz z instalacją niestandardową](media/MIM-Install2.png)
 
-6.  Na ekranie konfiguracji bazy danych synchronizacji wybierz:
+6.  Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
     1.  Program SQL Server znajduje się na: **Ten komputer**.
 
@@ -71,7 +71,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     ![Obraz konta usługi](media/MIM-Install4.png)
 
-8.  W instalatorze synchronizacji programu MIM określ następujące grupy zabezpieczeń:
+8.  W instalatorze usługi synchronizacji programu MIM określ następujące grupy zabezpieczeń:
 
     1. Administrator = *contoso\MIMSyncAdmins*
 
@@ -91,7 +91,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     1. Może zostać wyświetlone ostrzeżenie dotyczące konta usługi synchronizacji programu MIM — kliknij przycisk **OK**.
 
-    2. Zostanie zainstalowana usługa synchronizacji programu MIM.
+    2. Usługa synchronizacji programu MIM zostanie zainstalowana.
 
     3. Zostanie wyświetlone powiadomienie dotyczące tworzenia kopii zapasowej klucza szyfrowania — kliknij przycisk **OK** i wybierz folder, w którym zostanie zapisana kopia zapasowa klucza szyfrowania.
 
@@ -107,6 +107,6 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
