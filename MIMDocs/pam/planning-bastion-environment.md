@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ Zgodnie z [modelem warstwy](tier-model-for-partitioning-administrative-privilege
 
 Produkcyjny las *CORP* powinien ufać administracyjnemu lasowi *PRIV*, ale nie odwrotnie. Może to być zaufanie domeny lub zaufanie lasu. Domena lasu administracyjnego nie musi ufać zarządzanym domenom i lasom w celu zarządzania usługą Active Directory, ale dodatkowe aplikacje mogą wymagać dwukierunkowej relacji zaufania, walidacji zabezpieczeń i testowania.
 
-Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Aby uzyskać więcej informacji, zobacz [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844.aspx) (Konfigurowanie selektywnych ustawień uwierzytelniania).
+Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Aby uzyskać więcej informacji, zobacz [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Konfigurowanie selektywnych ustawień uwierzytelniania).
 
 ## Zachowanie separacji logicznej
 
@@ -149,7 +149,7 @@ Program MIM używa poleceń cmdlet programu PowerShell, aby ustanowić zaufanie 
 
 Po zmianie istniejącej topologii usługi Active Directory polecenia cmdlet `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` i `Remove-PAMDomainConfiguration` mogą zostać użyte do zaktualizowania relacji zaufania.
 
-### Ustanawiania relacji zaufania dla każdego lasu
+## Ustanawiania relacji zaufania dla każdego lasu
 
 Polecenie cmdlet `New-PAMTrust` należy uruchomić jeden raz dla każdego istniejącego lasu. Jest ono wywoływane na komputerze usługi MIM w domenie administracyjnej. Parametrami tego polecenia jest nazwa domeny najwyższego poziomu istniejącego lasu i poświadczenia administratora tej domeny.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Po ustanowieniu relacji zaufania skonfiguruj każdą domenę, aby umożliwić zarządzanie z poziomu środowiska bastionu w sposób opisany w następnej sekcji.
 
-### Włączanie funkcji zarządzania każdej domeny
+## Włączanie funkcji zarządzania każdej domeny
 
 Istnieje siedem wymagań dotyczących włączania zarządzania dla istniejącej domeny.
 
-#### 1. Grupa zabezpieczeń w domenie lokalnej
+### 1. Grupa zabezpieczeń w domenie lokalnej
 
 W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$*. Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
 
@@ -171,7 +171,7 @@ W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą dom
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Inspekcja sukcesów i niepowodzeń
+### 2. Inspekcja sukcesów i niepowodzeń
 
 Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmować inspekcję sukcesów i niepowodzeń dla zarządzania kontem inspekcji i dostępu do usługi katalogowej inspekcji. Może to zostać przeprowadzone za pomocą konsoli zarządzania zasadami grupy przez administratora istniejącej domeny i uruchomione na stacji roboczej przyłączonej do istniejącej domeny:
 
@@ -199,9 +199,9 @@ Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmo
     gpupdate /force /target:computere
     ```
 
-Po upływie kilku minut powinien zostać wyświetlony komunikat „Aktualizacja zasad komputera została ukończona pomyślnie”.
+Komunikat „Pomyślnie ukończono aktualizowanie zasad komputera” powinien zostać wyświetlony po kilku minutach.
 
-#### 3. Zezwalanie na połączenia z urzędem zabezpieczeń lokalnych
+### 3. Zezwalanie na połączenia z urzędem zabezpieczeń lokalnych
 
 Kontrolery domeny muszą zezwalać na połączenia RCP przez protokół TCP/IP dla urzędu zabezpieczeń lokalnych (LSA, Local Security Authority) ze środowiska bastionu. W starszych wersjach systemu Windows Server obsługa protokołu TCP/IP w urzędzie LSA musi zostać włączona w rejestrze:
 
@@ -209,7 +209,7 @@ Kontrolery domeny muszą zezwalać na połączenia RCP przez protokół TCP/IP d
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. Tworzenie konfiguracji domeny PAM
+### 4. Tworzenie konfiguracji domeny PAM
 
 Polecenie cmdlet `New-PAMDomainConfiguration` musi zostać wywołane na komputerze usługi MIM w domenie administracyjnej. Parametrami tego polecenia jest nazwa istniejącej domeny i poświadczenia administratora tej domeny.
 
@@ -217,7 +217,7 @@ Polecenie cmdlet `New-PAMDomainConfiguration` musi zostać wywołane na komputer
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Nadawanie kontom uprawnień do odczytu
+### 5. Nadawanie kontom uprawnień do odczytu
 
 Konta w lesie bastionu używane do ustanawiania ról (administratorzy korzystający z poleceń cmdlet `New-PAMUser` i `New-PAMGroup`) oraz konto używane przez usługę monitorowania MIM potrzebują uprawnień do odczytu w tej domenie.
 
@@ -239,11 +239,11 @@ Wykonanie poniższych kroków spowoduje włączenie dostępu do odczytu dla uży
 
 18. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
-#### 6. Konto awaryjne
+### 6. Konto awaryjne
 
 Jeśli celem projektu zarządzania dostępem uprzywilejowanym jest ograniczenie liczby kont z uprawnieniami administratora domeny trwale przypisanymi do domeny, w domenie musi istnieć konto *awaryjne* w przypadku wystąpienia w przyszłości problemów z relacją zaufania. Konta służące do awaryjnego dostępu do lasu produkcyjnego powinny istnieć w każdej domenie i z ich poziomu powinno być możliwe zalogowanie się tylko do kontrolerów domeny. W przypadku organizacji z wieloma lokacjami na potrzeby nadmiarowości mogą być wymagane dodatkowe konta.
 
-#### 7. Aktualizowanie uprawnień w środowisku bastionu
+### 7. Aktualizowanie uprawnień w środowisku bastionu
 
 Przejrzyj uprawnienia obiektu *AdminSDHolder* w kontenerze systemu w tej domenie. Obiekt *AdminSDHolder* zawiera unikatową listę kontroli dostępu służącą do kontrolowania uprawnień podmiotów zabezpieczeń, które są członkami wbudowanych uprzywilejowanych grup usługi Active Directory. Sprawdź, czy wprowadzono jakiekolwiek zmiany mogące mieć wpływ na użytkowników z uprawnieniami administracyjnymi w domenie, ponieważ te uprawnienia nie będą miały zastosowania względem użytkowników, których konto znajduje się w środowisku bastionu.
 
@@ -253,6 +253,6 @@ Następnym krokiem jest zdefiniowanie ról PAM, kojarząc użytkowników i grupy
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
