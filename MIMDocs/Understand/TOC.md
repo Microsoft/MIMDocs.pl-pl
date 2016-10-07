@@ -1,5 +1,7 @@
 # [Poznawanie i eksplorowanie](microsoft-identity-manager-2016.md)
 ## [Co to jest program MIM 2016?](microsoft-identity-manager-2016.md)
+## [Co nowego w dodatku Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
+### [Skrypty wdrażania usługi PAM w programie MIM2016 SP1](sp1-deployment-scripts.md)
 ## [Raportowanie hybrydowe na platformie Azure](identity-manager-hybrid-reporting-azure.md)
 # [Planowanie i projektowanie](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Wdrażanie i użytkowanie](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
@@ -7,6 +9,6 @@
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
