@@ -51,7 +51,7 @@ Dodaj role Serwer sieci Web (IIS) i Serwer aplikacji, funkcje platformy .NET Fra
 
 1.  Zaloguj się jako administrator domeny PRIV (PRIV\Administrator) i uruchom program PowerShell.
 
-2.  Wpisz następujące polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy .NET Framework 3.5. Te funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. d:\Sources\SxS\.
+2.  Wpisz następujące polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy .NET Framework 3.5. Te funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. „*d:\Sources\SxS”.
 
     ```
     import-module ServerManager
@@ -212,6 +212,6 @@ W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
