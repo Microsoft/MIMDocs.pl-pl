@@ -69,7 +69,8 @@ Zaktualizowane informacje o obsłudze platform można znaleźć w artykule [Plat
 
 Klienci chcący przeprowadzić uaktualnienie do wersji Microsoft Identity Manager 2016 z dodatkiem Service Pack 1 powinni zastosować się do poniższych wytycznych w zakresie wszystkich usług mających zastosowanie do ich wdrożenia.
 
->[!Note] Klienci korzystający z programu Forefront Identity Manager 2010 R2 z dodatkiem SP1 lub wcześniejszych jego wersji muszą najpierw uaktualnić swoje środowisko do wersji Microsoft Identity Manager 2016 udostępnionej w sierpniu 2015 roku, a następnie wykonać poniższe kroki.
+>[!Note]
+>Klienci korzystający z programu Forefront Identity Manager 2010 R2 z dodatkiem SP1 lub wcześniejszych jego wersji muszą najpierw uaktualnić swoje środowisko do wersji Microsoft Identity Manager 2016 udostępnionej w sierpniu 2015 roku, a następnie wykonać poniższe kroki.
 
 Przed rozpoczęciem
 
