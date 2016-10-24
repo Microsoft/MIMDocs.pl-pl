@@ -13,15 +13,15 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 9c029a9edee015f8843f6001d23c72e3ef98b5af
+ms.sourcegitcommit: 80fde32862a322a7a067982d0b02c99a8b43063e
+ms.openlocfilehash: 4ee1742e388da1ccb973b64316629debe570add0
 
 
 ---
 
 # Konfigurowanie domeny
 
->[!div class="step-by-step"]  
+>[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi Active Directory (AD). Usługa AD powinna już być zainstalowana, a w środowisku musi istnieć kontroler dla domeny, którą możesz administrować.
@@ -33,7 +33,7 @@ Ten artykuł zawiera szczegółowy opis czynności, które należy wykonać w ce
 Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość w domenie. Dotyczy to między innymi składników programu MIM, takich jak Service i Sync, a także SharePoint i SQL.
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — **Has@lo1**
@@ -68,7 +68,7 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
     ```
 
-2.  Utwórz grupy zabezpieczeń dla wszystkich grup.
+3.  Utwórz grupy zabezpieczeń dla wszystkich grup.
 
     ```
     New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncAdmins
@@ -80,20 +80,20 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
 
-3.  Dodaj nazwy SPN, aby włączyć uwierzytelnianie Kerberos dla kont usług.
+4.  Dodaj nazwy SPN, aby włączyć uwierzytelnianie Kerberos dla kont usług.
 
     ```
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
     setspn -S http/mimservername Contoso\SharePoint
-    setspn -S MIMService/mimservername.contoso.local Contoso\MIMService
-    setspn -S MIMSync/mimservername.contoso.local Contoso\MIMSync
+    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService
+    setspn -S FIMSynchronizationService/mimservername.contoso.local Contoso\MIMSync
     ```
 
->[!div class="step-by-step"]  
+>[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 
