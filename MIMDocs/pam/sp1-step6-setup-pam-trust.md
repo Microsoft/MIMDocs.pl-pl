@@ -3,23 +3,27 @@ title: "Krok 6 — Konfigurowanie zaufania usługi PAM"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 5bcf4f4ef201236746ec1bf75c1c8900841a6c79
 
 
 ---
 
-# Konfigurowanie zaufania usługi PAM
+# <a name="step-6-set-up-the-pam-trust"></a>Krok 6 — Konfigurowanie zaufania usługi PAM
+
+>[!div class="step-by-step"]
+[« Krok 5](sp1-step5-configuring-pam.md)
+[Krok 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **Ten krok nie jest wymagany dla środowiska PRIVOnly**. Zaloguj się na serwerze PAMServer przy użyciu konta MIMAdmin.
 
@@ -31,8 +35,12 @@ ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
 
   Po wyświetleniu monitu wprowadź poświadczenia dla konta administratora domeny CORP. Po wprowadzeniu poświadczeń nastąpi ustanowienie zaufania, a konfiguracja zostanie ukończona.
 
+>[!div class="step-by-step"]
+[« Krok 5](sp1-step5-configuring-pam.md)
+[Krok 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 

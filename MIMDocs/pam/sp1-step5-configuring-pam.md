@@ -3,22 +3,26 @@ title: "Krok 5 — Instalowanie/konfigurowanie usługi PAM"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: a5d86991f1579f292d7d303148422cef746d008a
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: c641865548f753a609ccee8dbf12c329bb6a1c9f
 
 
 ---
-# Krok 5 — Instalowanie/konfigurowanie usługi PAM
+# <a name="step-5-installingconfiguring-pam"></a>Krok 5 — Instalowanie/konfigurowanie usługi PAM
+
+>[!div class="step-by-step"]
+[« Krok 4](sp1-step4-configuring-sharepoint.md)
+[Krok 6 »](sp1-step6-setup-pam-trust.md)
 
 W przypadku serwera PAMServer przyłączonego do domeny należy zalogować się jako MIMAdmin; w przypadku innego serwera należy zalogować się jako administrator lokalny.
 1. Uruchom program PowerShell jako administrator.
@@ -26,7 +30,8 @@ W przypadku serwera PAMServer przyłączonego do domeny należy zalogować się 
 3. .\PAMDeployment.ps1
 4. Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).
 
->[!NOTE] Jeśli komputer nie jest już przyłączony do domeny PRIV, zostanie wyświetlony monit o poświadczenia. Po przyłączeniu do domeny nastąpi ponowne uruchomienie komputera.
+>[!NOTE]
+>Jeśli komputer nie jest już przyłączony do domeny PRIV, zostanie wyświetlony monit o poświadczenia. Po przyłączeniu do domeny nastąpi ponowne uruchomienie komputera.
 
 Po ponownym uruchomieniu serwera PAMServer ponownie zaloguj się do komputera przy użyciu konta MIMAdmin.
 
@@ -38,8 +43,12 @@ Po ponownym uruchomieniu serwera PAMServer ponownie zaloguj się do komputera pr
   Po wyświetleniu monitu wprowadź hasło do konta monitora programu MIM, konta składnika MIM, konta agenta zarządzania (MA) programu MIM, konta usługi MIM, konta administratora MIM i programu SharePoint.
   Po zakończeniu instalacji nastąpi ponowne uruchomienie komputera.
 
+>[!div class="step-by-step"]
+[« Krok 4](sp1-step4-configuring-sharepoint.md)
+[Krok 6 »](sp1-step6-setup-pam-trust.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 
