@@ -1,12 +1,12 @@
 ---
-title: "Wdrożenie usługi PAM — krok 4 — instalacja programu MIM | Microsoft Identity Manager"
+title: "Wdrożenie usługi PAM — krok 4 — instalacja programu MIM | Dokumentacja firmy Microsoft"
 description: "Instalowanie i konfigurowanie usługi i portalu programu MIM na serwerze usługi Privileged Access Management i stacjach roboczych."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
@@ -14,13 +14,13 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5b9653cb8de9e9fc788685ba027f84a795467cf6
 
 
 ---
 
-# Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
+# <a name="step-4-install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
 >[!div class="step-by-step"]
 [« Krok 3](step-3-prepare-pam-server.md)
@@ -34,7 +34,7 @@ Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainsta
 
 Jeśli pobrano program MIM, rozpakuj archiwum instalacji programu MIM do nowego folderu.
 
-##  Uruchom instalatora portalu i usługi.  
+##  <a name="run-the-service-and-portal-install-program"></a>Uruchom instalatora portalu i usługi.  
 
 Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
@@ -98,7 +98,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
 Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawdzenie, czy portal programu MIM jest aktywny i zezwolenie użytkownikom na wyświetlanie własnych zasobów obiektów w programie MIM.
 
-## Konfigurowanie reguł zasad zarządzania portalem programu MIM
+## <a name="set-up-mim-portal-management-policy-rules"></a>Konfigurowanie reguł zasad zarządzania portalem programu MIM
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
@@ -114,7 +114,7 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 7. Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pola **Zasady są wyłączone**, kliknij przycisk **OK**, a następnie kliknij przycisk **Prześlij**.
 
-## Weryfikacja połączeń zapory
+## <a name="verify-the-firewall-connections"></a>Weryfikacja połączeń zapory
 
 Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726, 8086 i 8090.
 
@@ -131,7 +131,7 @@ Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726
 8.  Sprawdź, czy jest wyświetlana aktywna sieć priv.contoso.local i sieć domeny.  
 9. Zamknij **Panel sterowania**.
 
-## Konfigurowanie przykładowej aplikacji sieci Web
+## <a name="set-up-the-sample-web-application"></a>Konfigurowanie przykładowej aplikacji sieci Web
 
 W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja sieci Web dla interfejsu API REST usługi PAM programu MIM.
 
@@ -167,7 +167,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja siec
 
 7.  (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do witryny sieci Web pod adresem http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, uwierzytelnij się w razie potrzeby i upewnij się, że można pobrać plik.
 
-## Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
 
 Zainstaluj polecenia cmdlet obiektu żądającego usługi PAM programu MIM na stacji roboczej skonfigurowanej w kroku 1.
 
@@ -193,6 +193,6 @@ W następnym kroku zostanie ustanowiona relacja zaufania między lasami PRIV i C
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
