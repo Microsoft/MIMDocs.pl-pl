@@ -1,25 +1,25 @@
 ---
-title: Konfigurowanie systemu Windows Server | Microsoft Identity Manager
+title: Konfigurowanie systemu Windows Server | Dokumentacja firmy Microsoft
 description: "Zapoznaj się z procedurą przygotowywania systemu Windows Server 2012 R2 do współdziałania z programem MIM 2016 i minimalnymi wymaganiami dotyczącymi tego procesu."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Przygotowywanie domeny](preparing-domain.md)
@@ -29,9 +29,9 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
-> - Hasło — **Has@lo1**
+> - Hasło — **Pass@word1**
 
-## Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
 
 Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RAM. Podczas instalacji określ wersję „Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64”.
 
@@ -62,7 +62,7 @@ Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RA
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Konfigurowanie zasad zabezpieczeń serwera
+## <a name="configure-the-server-security-policy"></a>Konfigurowanie zasad zabezpieczeń serwera
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 
@@ -93,7 +93,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
 
-## Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
+## <a name="change-the-iis-windows-authentication-mode"></a>Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
 
 1.  Otwórz okno programu PowerShell.
 
@@ -111,6 +111,6 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

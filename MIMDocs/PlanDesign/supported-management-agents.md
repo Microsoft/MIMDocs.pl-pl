@@ -1,25 +1,25 @@
 ---
-title: "Obsługiwane łączniki | Microsoft Identity Manager"
+title: "Obsługiwane łączniki | Dokumentacja firmy Microsoft"
 description: "Łączniki umożliwiają zarządzanie przesyłaniem danych między usługą MIM i katalogami."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Łączenie z katalogami
+# <a name="connect-to-your-directories"></a>Łączenie z katalogami
 
 Łączniki łączą określone połączone źródła danych z usługą Microsoft Identity Manager (MIM). Łącznik przenosi dane z połączonego źródła danych do usługi MIM. Jeśli dane w usłudze MIM zostaną zmodyfikowane, łącznik może także wyeksportować dane do połączonego źródła danych, aby zapewnić jego synchronizację z usługą MIM. Ogólnie dla każdego połączonego katalogu istnieje co najmniej jeden łącznik.
 
@@ -27,7 +27,7 @@ W programie Forefront Identity Manager łączniki były znane jako agenci zarzą
 
 W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik Extensible Connectivity 2.0 umożliwia łączenie z jeszcze większą liczbą źródeł danych. Niektórzy partnerzy utworzyli własne łączniki w ten sposób. Pełna lista jest dostępna w wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (Program FIM 2010: agenci zarządzania parterów).
 
-## Łączniki obsługiwane przez usługę MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Łączniki obsługiwane przez usługę MIM 2016
 
 | Nazwa | Obsługiwane wersje połączonego źródła danych |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik E
 | Usługi LDS Active Directory (ADLDS) | Usługi LDS Active Directory (ADLDS) |
 | Globalna lista adresów usługi Active Directory | Globalna lista adresów usługi Active Directory — programy Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Wszystkie źródła danych oparte na wywołaniu lub pliku |
-| Usługa MIM | Microsoft Identity Manager 2016 |
+| Usługa MIM | Dokumentacja firmy Microsoft 2016 |
 | IBM DB2 Universal Database | Program IBM DB2 wersja 9.1, 9.5 lub 9.7, program IBM DB2 OLEDB 9.5 FP5 lub 9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Program Novell eDirectory wersje 8.7.3, 8.8.5 i 8.8.6 |
@@ -54,12 +54,12 @@ W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik E
 | Plik tekstowy stałej szerokości | Pliki tekstowe stałej szerokości |
 | Format wymiany danych LDAP (LDIF) | Format wymiany danych LDAP (LDIF) |
 
-## Tematy pokrewne
+## <a name="related-topics"></a>Tematy pokrewne
 
 [Agenci zarządzania w programie FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

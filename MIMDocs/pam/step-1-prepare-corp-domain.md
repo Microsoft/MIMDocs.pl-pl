@@ -1,25 +1,25 @@
 ---
-title: "Wdrożenie usługi PAM — krok 1 — domena CORP | Microsoft Identity Manager"
+title: "Wdrożenie usługi PAM — krok 1 — domena CORP | Dokumentacja firmy Microsoft"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
 
 
 ---
 
-# Krok 1 — Przygotowanie hosta i domeny CORP
+# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
 >[!div class="step-by-step"]
 [Krok 2 »](step-2-prepare-priv-domain-controller.md)
@@ -29,11 +29,11 @@ W tym kroku przygotujesz się do hostowania środowiska bastionu. Ponadto, jeśl
 
 Jeśli masz już istniejącą domenę usługi Active Directory (AD) z kontrolerem domeny z systemem Windows Server 2012 R2 lub nowszym, w której jesteś administratorem domeny, możesz użyć tej domeny.  
 
-## Przygotowanie kontrolera domeny CORP
+## <a name="prepare-the-corp-domain-controller"></a>Przygotowanie kontrolera domeny CORP
 
 Niniejsza sekcja opisuje sposób skonfigurowania kontrolera domeny dla domeny CORP. W domenie CORP użytkownicy administracyjni są zarządzani przez środowisko bastionu. Nazwa systemu nazw domen (DNS) domeny CORP używana w tym przykładzie to *contoso.local*.
 
-### Instalacja systemu Windows Server
+### <a name="install-windows-server"></a>Instalacja systemu Windows Server
 
 Zainstaluj system Windows Server 2012 R2 lub Windows Server 2016 Technical Preview 4 (lub nowszy) na maszynie wirtualnej, aby utworzyć komputer o nazwie *CORPDC*.
 
@@ -47,7 +47,7 @@ Zainstaluj system Windows Server 2012 R2 lub Windows Server 2016 Technical Previ
 
 5. Po ponownym uruchomieniu serwera zaloguj się jako administrator. Przejdź do Panelu sterowania. Skonfiguruj komputer tak, aby sprawdzał dostępność aktualizacji, a następnie zainstaluj wszystkie wymagane aktualizacje. Uruchom ponownie serwer.
 
-### Dodawanie ról w celu ustanowienia kontrolera domeny
+### <a name="add-roles-to-establish-a-domain-controller"></a>Dodawanie ról w celu ustanowienia kontrolera domeny
 
 W tej sekcji dodasz role usług domenowych Active Directory (AD DS), serwera DNS i serwera plików (część sekcji Usługi plików i magazynu) i podwyższysz poziom tego serwera do kontrolera domeny nowego lasu contoso.local.
 
@@ -72,7 +72,7 @@ W tej sekcji dodasz role usług domenowych Active Directory (AD DS), serwera DNS
 
 4. Po ponownym uruchomieniu serwera zaloguj się do komputera CORPDC jako administrator domeny. Zazwyczaj jest to użytkownik CONTOSO\\Administrator, który korzysta z hasła utworzonego podczas instalacji systemu Windows na komputerze CORPDC.
 
-### Tworzenie grupy
+### <a name="create-a-group"></a>Tworzenie grupy
 
 Utwórz grupę na potrzeby inspekcji przy użyciu usługi Active Directory, jeśli grupa jeszcze nie istnieje. Nazwa grupy musi być nazwą NetBIOS domeny z trzema znakami dolara, np. *CONTOSO$$$*.
 
@@ -90,7 +90,7 @@ Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i
 
 W niektórych przypadkach grupa może już istnieć — jest to normalne, jeśli domena była już używana w scenariuszach związanych z migracją usługi AD.
 
-### Tworzenie dodatkowych użytkowników i grup demonstracyjnych
+### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Tworzenie dodatkowych użytkowników i grup demonstracyjnych
 
 Jeśli utworzono nową domenę CORP, należy utworzyć dodatkowych użytkowników i grupy na potrzeby demonstrowania scenariusza PAM. Użytkownicy i grupy demonstracyjne nie powinny być administratorami domeny lub użytkownikami i grupami kontrolowanymi przez ustawienia adminSDHolder w usłudze AD.
 
@@ -101,7 +101,7 @@ Zamierzamy utworzyć grupę zabezpieczeń o nazwie *CorpAdmins* i użytkownika o
 
 1. Uruchom program PowerShell.
 
-2. Wpisz następujące polecenia. Zamień hasło „Pass@word1” na inne.
+2. Wpisz następujące polecenia. Zamień hasło 'Pass@word1' na inne.
 
   ```
   import-module activedirectory
@@ -119,7 +119,7 @@ Zamierzamy utworzyć grupę zabezpieczeń o nazwie *CorpAdmins* i użytkownika o
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### Konfiguracja inspekcji
+### <a name="configure-auditing"></a>Konfiguracja inspekcji
 
 Musisz włączyć inspekcję w istniejących lasach, aby ustalić konfigurację PAM w tych lasach.  
 
@@ -147,7 +147,7 @@ Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i
 
 Po upływie kilku minut powinien zostać wyświetlony komunikat **Pomyślnie ukończono aktualizowanie zasad komputera**.
 
-### Konfiguracja ustawień rejestru
+### <a name="configure-registry-settings"></a>Konfiguracja ustawień rejestru
 
 W tej sekcji skonfigurujesz ustawienia rejestru wymagane do migracji sIDHistory, co zostanie wykorzystane podczas tworzenia grupy zarządzania dostępem uprzywilejowanym.
 
@@ -163,14 +163,14 @@ W tej sekcji skonfigurujesz ustawienia rejestru wymagane do migracji sIDHistory,
 
 Operacja spowoduje ponowne uruchomienie kontrolera domeny, CORPDC. Aby uzyskać więcej informacji na temat tego ustawienia rejestru, zobacz temat [Sposób rozwiązywania problemów związanych z migracją sIDHistory między lasami przy użyciu narzędzia ADMTv2](http://support.microsoft.com/kb/322970).
 
-## Przygotowanie stacji roboczej CORP i zasobów
+## <a name="prepare-a-corp-workstation-and-resource"></a>Przygotowanie stacji roboczej CORP i zasobów
 
 Jeśli nie masz jeszcze komputera stacji roboczej podłączonego do domeny, wykonaj poniższe instrukcje, aby przygotować komputer.  
 
 > [!NOTE]
 > Jeśli masz już stację roboczą dołączoną do domeny, przejdź do kroku [Tworzenie zasobu demonstracyjnego](#create-a-resource-for-demonstration-purposes).
 
-### Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise jako maszyny wirtualnej
+### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise jako maszyny wirtualnej
 
 Na kolejnej, nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *CORPWKSTN*.
 
@@ -182,7 +182,7 @@ Na kolejnej, nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainst
 
 4. Przy użyciu Panelu sterowania podłącz komputer CORPWKSTN do domeny contoso.local. Należy podać poświadczenia administratora domeny Contoso. Następnie, po zakończeniu tego procesu, uruchom ponownie komputer CORPWKSTN.
 
-### Tworzenie zasobu demonstracyjnego
+### <a name="create-a-resource-for-demonstration-purposes"></a>Tworzenie zasobu demonstracyjnego
 
 Potrzebujesz zasobu w celach demonstracyjnych związanych z kontrolą dostępu opartą na grupach zabezpieczeń przy użyciu programu PAM.  Jeśli nie masz jeszcze zasobu, możesz użyć folderu plików w celach demonstracyjnych.  Spowoduje to użycie obiektów „Jen” i „CorpAdmins” usługi AD utworzonych w domenie contoso.local.
 
@@ -215,6 +215,6 @@ W następnym kroku należy przygotować kontroler domeny PRIV.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

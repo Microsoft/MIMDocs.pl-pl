@@ -1,35 +1,35 @@
 ---
-title: "Model warstwowy środowiska usługi PAM | Microsoft Identity Manager"
+title: "Model warstwowy środowiska usługi PAM | Dokumentacja firmy Microsoft"
 description: "Poznaj model warstwowy, który dzieli system na podstawie podatności na ryzyko."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
 
 
 ---
 
-# Model warstwy partycjonowania uprawnień administracyjnych
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
 W dobie obecnych zagrożeń należy zakładać, że osoba atakująca w końcu uzyska dostęp do systemu organizacji. Oznacza to, że zabezpieczenia wewnętrzne są równie ważne co ochrona zapewniana przez sieć obwodową. W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesieniem uprawnień przez oddzielenie działań wymagających wysokich uprawnień od stref wysokiego ryzyka. Użycie tego modelu pozwala uzyskać komfortowe środowisko użytkownika przy zapewnieniu zgodności z zasadami zabezpieczeń i najlepszymi rozwiązaniami.
 
-## Podniesienie uprawnień w lasach usługi Active Directory
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Podniesienie uprawnień w lasach usługi Active Directory
 
 Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Konta te są często obiektem ataków, ponieważ w przypadku naruszenia ich zabezpieczeń osoba atakująca uzyska uprawnienia umożliwiające nawiązanie połączenia z innymi serwerami lub aplikacjami w domenie.
 
 Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
 
-## Zmniejszanie widoczności poświadczeń za pomocą ograniczeń logowania
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Zmniejszanie widoczności poświadczeń za pomocą ograniczeń logowania
 
 Zmniejszenie ryzyka kradzieży poświadczeń dla kont z uprawnieniami administracyjnymi zwykle wymaga zmodyfikowania praktyk administracyjnych w celu ograniczenia narażenia na ataki. W pierwszej kolejności zalecane jest wykonanie następujących działań w organizacji:
 
@@ -62,6 +62,6 @@ W artykule [Planning a bastion environment](planning-bastion-environment.md) (Pl
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

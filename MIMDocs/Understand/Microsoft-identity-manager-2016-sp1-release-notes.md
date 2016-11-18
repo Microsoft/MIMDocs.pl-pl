@@ -1,8 +1,9 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
+title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
 description: "Dowiedz się, jak działa program MIM 2016, aby tworzyć bezpieczniejsze i wygodniejsze systemy zarządzania tożsamościami w chmurze i lokalnie."
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
@@ -12,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 94813519554652a5554af914611d06b8a4d96ea4
-ms.openlocfilehash: b791b18fa3775295e9c199086aa11a0d6c6a55e7
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
 
 
 ---
@@ -23,7 +24,7 @@ W ramach regularnego cyklu konserwacji i aktualizacji programu Microsoft Identit
 
 W przypadku napotkania problemów podczas wdrażania produkcyjnego programu MIM z dodatkiem SP1 prosimy o kontakt z obsługą klienta firmy Microsoft.
 
-Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwagi przeznaczone dla zespołu ds. produktu można przesyłać na adres e-mail [mim2016@microsoft.com](mailto:mim2016@microsoft.com).
+Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwagi przeznaczone dla zespołu ds. produktu można przesyłać na adres e-mail [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
 
 
 
@@ -84,6 +85,6 @@ Należy utworzyć kopię zapasową baz danych MIMService i MIM Sync.
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

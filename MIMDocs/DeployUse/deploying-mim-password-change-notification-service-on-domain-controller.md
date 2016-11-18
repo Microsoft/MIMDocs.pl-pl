@@ -1,27 +1,27 @@
 ---
-title: "Powiadomienia o zmianie hasła | Microsoft Identity Manager"
+title: "Powiadomienia o zmianie hasła | Dokumentacja firmy Microsoft"
 description: "Pobierz kroki instalowania i konfigurowania usługi powiadamiania o zmianie hasła w programie MIM na własnym kontrolerze domeny."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: e25f4b3a60f2c432cd33c8f84c750110cbe605ee
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 
 ---
 
-# Wdrażanie usługi powiadamiania o zmianie hasła w programie MIM na kontrolerze domeny
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Wdrażanie usługi powiadamiania o zmianie hasła w programie MIM na kontrolerze domeny
 
-## Instalowanie usługi powiadamiania o zmianie hasła
+## <a name="install-the-password-change-notification-service"></a>Instalowanie usługi powiadamiania o zmianie hasła
 Usługa powiadamiania o zmianie hasła (PCNS), instalowana na kontrolerach domeny, umożliwia synchronizowanie haseł przez program MIM z innymi systemami, takimi jak serwer katalogowy innego dostawcy. Aby synchronizować hasła, należy zainstalować usługę PCNS na każdym serwerze kontrolera domeny.
 
 1.  Zaloguj się jako administrator domeny na serwerze z systemem Windows Server i z rolą Usługi domenowe Active Directory.
@@ -56,11 +56,11 @@ Usługa powiadamiania o zmianie hasła (PCNS), instalowana na kontrolerach domen
 
 14. Uruchom komputer ponownie, aby zmiany wprowadzone w usłudze powiadamiania o zmianie hasła w programie MIM zostały uwzględnione. Aby to zrobić, kliknij przycisk **Tak** w wyświetlonym oknie podręcznym. Ponowne uruchamianie możesz też wykonać później.
 
-## Konfigurowanie usługi powiadamiania o zmianie hasła
+## <a name="configuring-the-password-change-notification-service"></a>Konfigurowanie usługi powiadamiania o zmianie hasła
 Po ponownym ustanowieniu połączenia z serwerem kontrolera domeny przejdź jako administrator domeny do folderu *C:\Program Files\Microsoft Password Change Notification.* Uruchom plik *pcnscfg.exe*.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

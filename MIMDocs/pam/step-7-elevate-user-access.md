@@ -1,25 +1,25 @@
 ---
-title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Microsoft Identity Manager"
+title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Dokumentacja firmy Microsoft"
 description: "Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
-ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: e543453946ea70c2c7360363df87946d973322bf
 
 
 ---
 
-# Krok 7 — podniesienie uprawnień dostępu użytkownika
+# <a name="step-7-elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
 >[!div class="step-by-step"]
 [« Krok 6 ](step-6-transition-group-to-pam.md)
@@ -27,7 +27,7 @@ ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 Ten krok pokazuje, że użytkownik może zażądać dostępu do roli przy użyciu programu MIM.
 
-## Sprawdzenie, czy Jen nie może uzyskać dostępu do uprzywilejowanego zasobu
+## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Sprawdzenie, czy Jen nie może uzyskać dostępu do uprzywilejowanego zasobu
 Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzywilejowanego zasobu w lesie CORP.
 
 1. Wyloguj się z CORPWKSTN, aby usunąć wszystkie otwarte połączenia z pamięci podręcznej.
@@ -36,7 +36,7 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 4. Wpisz polecenie `dir \\corpwkstn\corpfs`. Powinien pojawić się komunikat o błędzie **Odmowa dostępu**.
 5. Zostaw okno wiersza polecenia otwarte.
 
-## Zażądaj uprzywilejowanego dostępu z programu MIM.
+## <a name="request-privileged-access-from-mim"></a>Zażądaj uprzywilejowanego dostępu z programu MIM.
 1. W CORPWKSTN, nadal jako CONTOSO\Jen, wpisz następujące polecenie.
 
     ```
@@ -65,7 +65,7 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 
 6. Wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno wiersza polecenia.
 
-## Przeprowadź walidację podwyższonego poziomu dostępu.
+## <a name="validate-the-elevated-access"></a>Przeprowadź walidację podwyższonego poziomu dostępu.
 W nowo otwartym oknie wpisz następujące polecenia.
 
 ```
@@ -75,7 +75,7 @@ dir \\corpwkstn\corpfs
 
 Jeśli polecenie dir zakończy się niepowodzeniem z komunikatem o błędzie **Odmowa dostępu**, ponownie sprawdź relację zaufania.
 
-## Aktywacja roli uprzywilejowanej
+## <a name="activate-the-privileged-role"></a>Aktywacja roli uprzywilejowanej
 Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykładowego portalu PAM.
 
 1. Upewnij się, że użytkownik jest zalogowany w CORPWKSTN jako CORP\Jen.
@@ -95,7 +95,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 > [!Note]
 > W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w [dokumentacji interfejsu API REST usługi Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
-## Podsumowanie
+## <a name="summary"></a>Podsumowanie
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
 
 >[!div class="step-by-step"]
@@ -103,6 +103,6 @@ Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz za
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: "Obsługiwane platformy oprogramowania | Microsoft Identity Manager"
+title: "Obsługiwane platformy oprogramowania | Dokumentacja firmy Microsoft"
 description: "Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/29/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 69e2c327cf897dea450c43618a9b4ce3ab555cc0
-ms.openlocfilehash: 522e9321d7709a7967cfea3eb1cea809dfe8202e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 55b7dc3c76c5e95153b5839ce1eb6bf4a7997889
 
 
 ---
 
-# Platformy obsługiwane przez program MIM 2016
+# <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 
 W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczone gwiazdką * są obsługiwane tylko w wersji programu MIM 2016 z dodatkiem Service Pack 1.
 
@@ -45,7 +45,7 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | **Raportowanie usługi programu MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 || | Magazyn danych | System Center 2012 Service Manager SP1 |
 || | Baza danych magazynu danych | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
-| **Portale resetowanie hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| **Portale resetowania hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 || | Przeglądarka sieci Web | Wszystkie popularne przeglądarki |
 | **Dodatki i rozszerzenia programu MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 || | Integracja z programem Outlook (opcjonalnie) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (w systemie Windows 10) * |
@@ -62,6 +62,6 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 
