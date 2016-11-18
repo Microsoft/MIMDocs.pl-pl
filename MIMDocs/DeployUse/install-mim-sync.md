@@ -1,25 +1,25 @@
 ---
-title: "Instalacja usługi synchronizacji programu MIM | Microsoft Identity Manager"
+title: "Instalacja usługi synchronizacji programu MIM | Dokumentacja firmy Microsoft"
 description: "Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: dc1f7ff40ed5f657c24e7293ff76241c3a7082f1
 
 
 ---
 
-# Instalacja usługi synchronizacji programu MIM 2016
+# <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
 >[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
@@ -29,7 +29,7 @@ ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
-> - Hasło — **Has@lo1**
+> - Hasło — **Pass@word1**
 
 Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy najpierw skonfigurować pakiet instalacyjny.
 
@@ -37,7 +37,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.
 
-## Zainstaluj usługę synchronizacji programu MIM 2016
+## <a name="install-mim-2016-synchronization-service"></a>Zainstaluj usługę synchronizacji programu MIM 2016
 
 1. W rozpakowanym folderze instalacyjnym programu MIM przejdź do folderu **Synchronization Service** (Usługa synchronizacji).
 
@@ -65,7 +65,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     1.  Konto usługi: *MIMSync*
 
-    2.  Hasło: *Has@lo1*
+    2.  Hasło: *Pass@word1*
 
     3.  Domena konta usługi lub nazwa komputera lokalnego: *contoso*
 
@@ -107,6 +107,6 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: "Wdrożenie usługi PAM — krok 2 — kontroler domeny PRIV | Microsoft Identity Manager"
+title: "Wdrożenie usługi PAM — krok 2 — kontroler domeny PRIV | Dokumentacja firmy Microsoft"
 description: "Przygotowanie kontrolera domeny PRIV, który udostępnia środowisko bastionu, w którym usługa Privileged Access Management jest izolowana."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f84229908f31242b6d2f7636a7c67ca669de45b3
 
 
 ---
 
-# Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
+# <a name="step-2-prepare-the-first-priv-domain-controller"></a>Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
 
 >[!div class="step-by-step"]
 [« Krok 1](step-1-prepare-corp-domain.md)
@@ -27,11 +27,11 @@ ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
 
 W tym kroku opisano tworzenie nowej domeny w celu udostępnienia środowiska bastionu na potrzeby uwierzytelniania administratorów.  W tym lesie będzie potrzebny co najmniej jeden kontroler domeny i jeden serwer członkowski. Serwer członkowski zostanie skonfigurowany w następnym kroku.
 
-## Tworzenie nowego kontrolera domeny zarządzania dostępem uprzywilejowanym
+## <a name="create-a-new-privileged-access-management-domain-controller"></a>Tworzenie nowego kontrolera domeny zarządzania dostępem uprzywilejowanym
 
 W tej sekcji zostanie skonfigurowana maszyna wirtualna pełniąca funkcję kontrolera domeny dla nowego lasu.
 
-### Instalowanie systemu Windows Server 2012 R2
+### <a name="install-windows-server-2012-r2"></a>Instalowanie systemu Windows Server 2012 R2
 Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows Server 2012 R2, aby utworzyć komputer o nazwie „PRIVDC”.
 
 1. Wybierz opcję wykonania niestandardowej instalacji (nie uaktualnienia) systemu Windows Server. Podczas instalacji wybierz opcję **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64**. _Nie wybieraj opcji instalacji _**Data Center ani Server Core**.
@@ -44,7 +44,7 @@ Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj
 
 5. Po ponownym uruchomieniu serwera zaloguj się jako administrator. Za pomocą Panelu sterowania skonfiguruj komputer tak, aby sprawdzał dostępność aktualizacji, a następnie zainstaluj wszystkie wymagane aktualizacje. Może to wymagać ponownego uruchomienia serwera.
 
-### Dodawanie ról
+### <a name="add-roles"></a>Dodawanie ról
 Dodaj role Usługi domenowe w usłudze Active Directory (AD DS) i Serwer DNS.
 
 1. Uruchom program PowerShell jako administrator.
@@ -57,7 +57,7 @@ Dodaj role Usługi domenowe w usłudze Active Directory (AD DS) i Serwer DNS.
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-### Konfigurowanie ustawień rejestru dotyczących migracji historii identyfikatora SID
+### <a name="configure-registry-settings-for-sid-history-migration"></a>Konfigurowanie ustawień rejestru dotyczących migracji historii identyfikatora SID
 
 Uruchom program PowerShell i wpisz następujące polecenie, aby skonfigurować domenę źródłową pod kątem dostępu do bazy danych menedżera kont zabezpieczeń (Security Accounts Manager, SAM) za pośrednictwem zdalnego wywoływania procedur (Remote Procedure Call, RPC).
 
@@ -65,13 +65,13 @@ Uruchom program PowerShell i wpisz następujące polecenie, aby skonfigurować d
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-## Tworzenie nowego lasu zarządzania dostępem uprzywilejowanym
+## <a name="create-a-new-privileged-access-management-forest"></a>Tworzenie nowego lasu zarządzania dostępem uprzywilejowanym
 
 Następnym krokiem jest podwyższenie poziomu serwera do poziomu kontrolera domeny nowego lasu.
 
 Jako nazwa domeny nowego lasu w tym dokumencie jest używana nazwa priv.contoso.local.  Nazwa lasu nie ma znaczenia krytycznego i nie musi być podrzędna w stosunku do istniejącej nazwy lasu w organizacji. Jednak zarówno nazwa domeny, jak i nazwa NetBIOS nowego lasu muszą być unikatowe i różne od pozostałych domen w organizacji.  
 
-### Tworzenie domeny i lasu
+### <a name="create-a-domain-and-forest"></a>Tworzenie domeny i lasu
 
 1. Aby utworzyć nową domenę, w oknie programu PowerShell wpisz następujące polecenia.  Spowoduje to również utworzenie delegowania DNS w domenie wyższego poziomu (contoso.local), która została utworzona w poprzednim kroku.  Jeśli zamierzasz później skonfigurować usługę DNS, pomiń parametry `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
@@ -87,12 +87,12 @@ Jako nazwa domeny nowego lasu w tym dokumencie jest używana nazwa priv.contoso.
 
 Po utworzeniu lasu serwer zostanie automatycznie uruchomiony ponownie.
 
-### Tworzenie kont użytkowników i usług
+### <a name="create-user-and-service-accounts"></a>Tworzenie kont użytkowników i usług
 Utwórz konta użytkowników i usługi w ramach konfigurowania usługi i portalu MIM. Te konta zostaną umieszczona w kontenerze Użytkownicy domeny priv.contoso.local.
 
 1. Po ponownym uruchomieniu serwera zaloguj się do komputera PRIVDC jako administrator domeny (PRIV\\Administrator).
 
-2. W programie PowerShell wpisz poniższe polecenia. Hasło „Pass@word1” jest przykładowe. Użyj innego hasła dla kont.
+2. W programie PowerShell wpisz poniższe polecenia. Hasło 'Pass@word1' jest przykładowe. Użyj innego hasła dla kont.
 
   ```
   import-module activedirectory
@@ -158,7 +158,7 @@ Utwórz konta użytkowników i usługi w ramach konfigurowania usługi i portalu
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-### Konfigurowanie praw do inspekcji i logowania
+### <a name="configure-auditing-and-logon-rights"></a>Konfigurowanie praw do inspekcji i logowania
 
 Skonfigurowanie inspekcji pozwoli określić konfigurację usługi PAM między lasami.  
 
@@ -186,13 +186,13 @@ Skonfigurowanie inspekcji pozwoli określić konfigurację usługi PAM między l
 
 12. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmowa logowania w trybie wsadowym** i wybierz polecenie **Właściwości**.
 
-13. Zaznacz pole wyboru **Definiuj następujące ustawienia zasad**, kliknij pozycję **Dodaj użytkownika lub grupę**, w polu 	Nazwy użytkowników i grup wpisz *priv\\mimmonitor; priv\\MIMService; priv\\mimcomponent* i kliknij przycisk **OK**.
+13. Zaznacz pole wyboru **Definiuj następujące ustawienia zasad**, kliknij pozycję **Dodaj użytkownika lub grupę**, w polu Nazwy użytkowników i grup wpisz *priv\\mimmonitor; priv\\MIMService; priv\\mimcomponent* i kliknij przycisk **OK**.
 
 14. Kliknij przycisk **OK**, aby zamknąć okno.
 
 15. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmawiaj logowania za pomocą usług pulpitu zdalnego** i wybierz polecenie **Właściwości**.
 
-16. Kliknij pole wyboru **Definiuj następujące ustawienia zasad**, kliknij pozycję **Dodaj użytkownika lub grupę**, w polu 	Nazwy użytkowników i grup wpisz *priv\\mimmonitor; priv\\MIMService; priv\\mimcomponent* i kliknij przycisk **OK**.
+16. Kliknij pole wyboru **Definiuj następujące ustawienia zasad**, kliknij pozycję **Dodaj użytkownika lub grupę**, w polu Nazwy użytkowników i grup wpisz *priv\\mimmonitor; priv\\MIMService; priv\\mimcomponent* i kliknij przycisk **OK**.
 
 17. Kliknij przycisk **OK**, aby zamknąć okno.
 
@@ -207,7 +207,7 @@ Skonfigurowanie inspekcji pozwoli określić konfigurację usługi PAM między l
   Po upływie około minuty proces zostanie zakończony i zostanie wyświetlony komunikat „Aktualizacja zasad komputera została ukończona pomyślnie”.
 
 
-### Konfigurowanie przekierowywania nazw DNS na komputerze PRIVDC
+### <a name="configure-dns-name-forwarding-on-privdc"></a>Konfigurowanie przekierowywania nazw DNS na komputerze PRIVDC
 
 Przy użyciu programu PowerShell skonfiguruj przekierowywanie nazw DNS na komputerze PRIVDC, aby zapewnić rozpoznawanie innych istniejących lasów przez domenę PRIV.
 
@@ -224,7 +224,7 @@ Przy użyciu programu PowerShell skonfiguruj przekierowywanie nazw DNS na komput
 > [!NOTE]
 > Inne lasy również muszą mieć możliwość przesyłania zapytań DNS dotyczących lasu PRIV do tego kontrolera domeny.  Jeśli istnieje wiele lasów usługi Active Directory, musisz dodać usługę DNS warunkowego przesyłania dalej do każdego z tych lasów.
 
-### Konfigurowanie protokołu Kerberos
+### <a name="configure-kerberos"></a>Konfigurowanie protokołu Kerberos
 
 1. Przy użyciu programu PowerShell dodaj główne nazwy usługi (Service Principal Name, SPN), aby umożliwić programowi SharePoint, interfejsowi API REST usługi PAM i usłudze MIM korzystanie z uwierzytelniania za pośrednictwem protokołu Kerberos.
 
@@ -238,7 +238,7 @@ Przy użyciu programu PowerShell skonfiguruj przekierowywanie nazw DNS na komput
 > [!NOTE]
 > W następnych krokach opisano instalację składników serwera programu MIM 2016 na pojedynczym komputerze. Jeśli planujesz dodanie kolejnego serwera w celu zwiększenia dostępności, musisz wykonać dodatkowe czynności w ramach konfigurowania protokołu Kerberos. Zostało to opisane w artykule [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (Program FIM 2010: konfigurowanie uwierzytelniania za pośrednictwem protokołu Kerberos).
 
-### Konfigurowanie delegowania w celu przyznania dostępu kontom usługi MIM
+### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Konfigurowanie delegowania w celu przyznania dostępu kontom usługi MIM
 
 Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następujące czynności.
 
@@ -271,21 +271,21 @@ Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następuj�
 
 17. Otwórz wiersz polecenia.  
 18. Przejrzyj listę kontroli dostępu w obiekcie przechowującym deskryptor zabezpieczeń administratora w domenach PRIV. Na przykład jeśli nazwa domeny to „priv.contoso.local”, wpisz polecenie  
-  ```  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"  
-  ```  
+  ```
+  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+  ```
 19. Zaktualizuj odpowiednio listę kontroli dostępu, aby mieć pewność, że usługa MIM i usługa składnika MIM mogą aktualizować członkostwa grup chronionych przez tę listę.  Wpisz polecenie:  
-  ```  
+  ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"  
-  ```  
+  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+  ```
 20. Uruchom ponownie serwer PRIVDC, aby zmiany zostały wprowadzone.
 
-## Przygotowywanie stacji roboczej PRIV
+## <a name="prepare-a-priv-workstation"></a>Przygotowywanie stacji roboczej PRIV
 
 Jeśli nie masz jeszcze stacji roboczej służącej do wykonywania konserwacji zasobów PRIV (na przykład usługi MIM), wykonaj te instrukcje, aby przygotować stację roboczą dołączoną do domeny PRIV.  
 
-### Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise
+### <a name="install-windows-81-or-windows-10-enterprise"></a>Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise
 
 Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *„PRIVWKSTN”*.
 
@@ -307,6 +307,6 @@ W następnym kroku zostanie przygotowany serwer usługi PAM.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

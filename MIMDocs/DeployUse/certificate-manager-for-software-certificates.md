@@ -1,28 +1,28 @@
 ---
-title: "Tworzenie certyfikatów oprogramowania | Microsoft Identity Manager"
+title: "Tworzenie certyfikatów oprogramowania | Dokumentacja firmy Microsoft"
 description: "Informacje o sposobie użycia Menedżera certyfikatów do tworzenia i odnawiania certyfikatów oprogramowania za pomocą szablonów profilów."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
+# <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
 
-## Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
@@ -72,7 +72,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     10. Wybierz z listy nowy szablon, który został właśnie utworzony (**Zarchiwizowany szablon certyfikatu**), a następnie kliknij przycisk **OK**.
 
-## Tworzenie szablonu profilu
+## <a name="create-the-profile-template"></a>Tworzenie szablonu profilu
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
@@ -98,6 +98,6 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

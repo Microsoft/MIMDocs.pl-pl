@@ -3,28 +3,33 @@ title: "Krok 8 — Weryfikacja wdrożenia usługi PAM"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 743ba586374ccc04e9ddafff759a00574e13f6ac
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# Krok 8 — Weryfikacja wdrożenia usługi PAM
+# <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
+
+>[!div class="step-by-step"]
+[« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Dodatek »](sp1-pam-deployment-addendum.md)
 
 Pakiet wdrożeniowy zawiera skrypty weryfikacji, które umożliwiają wykonanie scenariusza PAM w celu potwierdzenia prawidłowego działania wdrożenia usługi PAM.
 Aby użyć funkcji weryfikacji wdrożenia, należy zmodyfikować sekcję <PamValidation/> pliku PAMDeploymentConfig.xml.
 
->[!Note] Weryfikacja wymaga komputera klienckiego przyłączonego do domeny CORP z zainstalowanymi składnikami usługi PAM po stronie klienta. Skrypty odnoszące się do instalacji klienta można znaleźć w sekcji Dodatek.
+>[!NOTE]
+>Weryfikacja wymaga komputera klienckiego przyłączonego do domeny CORP z zainstalowanymi składnikami usługi PAM po stronie klienta. Skrypty odnoszące się do instalacji klienta można znaleźć w sekcji Dodatek.
 
 Nazwa komputera klienckiego musi zostać zaktualizowana w tagu <PAMValidationClient/> pliku PAMDeploymentConfig.xml. Pozostałe dane węzła <PAMValidation/> należy edytować tylko wtedy, gdy występują konflikty z istniejącymi użytkownikami/grupami, jako że sprawdzenie poprawności podejmie próbę ich utworzenia.
 Aby przeprowadzić sprawdzenie poprawności, wykonaj następujące kroki:
@@ -72,8 +77,12 @@ W oknie programu PowerShell wpisz polecenie:
   Początkowo użytkownik nie ma dostępu do zasobu. Użytkownik otrzyma dostęp, gdy zostanie dodany do roli w trybie Just-In-Time. Po wygaśnięciu czasu trwania żądania użytkownik ponownie traci dostęp.
   Skrypt wykorzystuje ustawienie domyślne (11 minut) czasu ważności żądania.
 
+>[!div class="step-by-step"]
+[« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Dodatek »](sp1-pam-deployment-addendum.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 

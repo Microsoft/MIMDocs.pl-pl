@@ -1,25 +1,25 @@
 ---
-title: "Opis składników usługi PAM | Microsoft Identity Manager"
+title: "Opis składników funkcji PAM | Dokumentacja firmy Microsoft"
 description: "Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
 
 
 ---
 
-# Opis składników funkcji PAM
+# <a name="understand-the-components-of-pam"></a>Opis składników funkcji PAM
 
 Funkcja zarządzania dostępem uprzywilejowanym (Privileged Access Management, PAM) oddziela dostęp administracyjny od zwykłych kont użytkowników. To rozwiązanie opiera się na równoległych lasach:
 
@@ -43,6 +43,6 @@ Ponadto członkostwo takie jest ograniczone czasowo, a zatem po upływie wstępn
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

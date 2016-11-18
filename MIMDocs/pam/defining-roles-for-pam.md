@@ -1,25 +1,25 @@
 ---
-title: "Definiowanie ról uprzywilejowanych w usłudze PAM | Microsoft Identity Manager"
+title: "Definiowanie ról uprzywilejowanych w usłudze PAM | Dokumentacja firmy Microsoft"
 description: "Istnieje możliwość określenia, które role uprzywilejowane mają być zarządzane, i zdefiniowania zasad zarządzania dla każdej z nich."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 442b596107d9ade0ca466500440a32b2dd26fa14
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
 
 
 ---
 
-# Definiowanie ról na potrzeby funkcji Privileged Access Management
+# <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
 
 Za pomocą funkcji Privileged Access Management (PAM) można przypisać użytkowników do uprzywilejowanych ról, które mogą oni aktywować w razie potrzeby dla dostępu just in time. Te role są definiowane ręcznie i ustanawiane w środowisku bastionu. W tym artykule przedstawiono proces podejmowania decyzji o tym, które role mają być zarządzane za pomocą funkcji Privileged Access Management, oraz sposób definiowania ich przy użyciu odpowiednich uprawnień i ograniczeń.
 
@@ -33,7 +33,7 @@ Uprawnienia roli są zależne od zarządzanych aplikacji. W tym artykule jako pr
 
 - Potrzebne do zarządzania danymi przechowywanymi w usłudze Active Directory (np. do tworzenia użytkowników i grup)
 
-## Identyfikowanie ról
+## <a name="identify-roles"></a>Identyfikowanie ról
 
 Rozpocznij od zidentyfikowania wszystkich ról, które mają być zarządzane za pomocą funkcji PAM. W arkuszu kalkulacyjnym każda potencjalna rola będzie miała swój własny wiersz.
 
@@ -57,7 +57,7 @@ Inne zagadnienia z zakresu uprawnień, które ma zawierać rola, są następują
 
 - Czy jest możliwe oddzielenie administracji i inspekcji, aby użytkownik z rolą administracyjną nie mógł wymazać rekordów inspekcji swoich działań?
 
-## Ustanawianie wymagań roli dotyczących ładu
+## <a name="establish-role-governance-requirements"></a>Ustanawianie wymagań roli dotyczących ładu
 
 Po zidentyfikowaniu ról kandydujących rozpocznij wypełnianie arkusza kalkulacyjnego. Utwórz kolumny dla wymagań istotnych dla Twojej organizacji. Niektóre wymagania, które należy wziąć pod uwagę, to:
 
@@ -79,7 +79,7 @@ Po zidentyfikowaniu ról kandydujących rozpocznij wypełnianie arkusza kalkulac
 
 - Które uprawnienia aplikacji (zobacz przykładową listę dla usługi AD poniżej) są skojarzone z tą rolą?
 
-## Wybieranie metody dostępu
+## <a name="select-an-access-method"></a>Wybieranie metody dostępu
 
 W systemie Privileged Access Management może istnieć wiele ról, którym są przypisane takie same uprawnienia, jeśli różne społeczności użytkowników mają różne wymagania ładu dotyczące dostępu. Na przykład organizacja może zastosować inne zasady dla swoich pełnoetatowych pracowników, a inne dla zewnętrznych pracowników IT z innej organizacji.
 
@@ -95,7 +95,7 @@ W niektórych przypadkach użytkownik może zostać trwale przypisany do roli, w
 
 W przypadku organizacji niepokojących się o potencjalną kradzież poświadczeń lub ich nieuprawnione użycie, przewodnik [Using Azure MFA for activation](use-azure-mfa-for-activation.md) (Używanie usługi Azure MFA do aktywacji) zawiera instrukcje dotyczące sposobu konfigurowania programu MIM w taki sposób, aby wymagane było dodatkowe sprawdzanie poza pasmem w momencie aktywowania roli.
 
-## Delegowanie uprawnień usługi Active Directory
+## <a name="delegate-active-directory-permissions"></a>Delegowanie uprawnień usługi Active Directory
 
 System Windows Server podczas tworzenia nowych domen automatycznie tworzy grupy domyślne, takie jak „Administratorzy domeny”. Te grupy ułatwiają rozpoczęcie pracy i mogą być przydatne dla mniejszych organizacji. Jednak większe organizacje lub organizacje, które wymagają większej izolacji uprawnień administracyjnych, powinny opróżnić grupy, takie jak Administratorzy domeny i zastąpić je grupami, które zapewniają szczegółowe uprawnienia.
 
@@ -106,7 +106,7 @@ Jednym z ograniczeń grupy Administratorzy domeny jest to, że jej członkami ni
 
 Zamiast domyślnych grup, takich jak Administratorzy domeny, należy utworzyć nowe grupy zabezpieczeń, które zapewniają tylko wymagane uprawnienia, i używać programu MIM w celu dynamicznego udostępniania kont administratorów z tym członkostwem w grupach.
 
-### Uprawnienia zarządzania usługami
+### <a name="service-management-permissions"></a>Uprawnienia zarządzania usługami
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania usługą AD.
 
@@ -122,7 +122,7 @@ W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do 
 | Zarządzanie strefami | Tworzenie, usuwanie i modyfikowanie stref DNS oraz obiektów w usłudze Active Directory. |
 | Modyfikowanie jednostek organizacyjnych warstwy 0 | Modyfikowanie jednostek organizacyjnych warstwy 0 i obiektów znajdujących się w usłudze Active Directory. |
 
-### Uprawnienia zarządzania danymi
+### <a name="data-management-permissions"></a>Uprawnienia zarządzania danymi
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do używania danych przechowywanych w usłudze AD lub zarządzania nimi.
 
@@ -138,13 +138,13 @@ W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do 
 | Przyłączony komputer/administrator lokalny                    | Lokalne uprawnienia administracyjne do wszystkich stacji roboczych.                               |
 | Przyłączony serwer/administrator lokalny                   | Lokalne uprawnienia administracyjne do wszystkich serwerów.                                    |
 
-## Przykładowe definicje ról
+## <a name="example-role-definitions"></a>Przykładowe definicje ról
 
 Wybór definicji ról zależy od warstwy serwerów zarządzanych przez uprzywilejowane konta. Zależy on również od wyboru zarządzanych aplikacji, ponieważ aplikacje takie jak program Exchange lub produkty dla przedsiębiorstw innych firm, np. SAP, często będą miały swoje dodatkowe definicje ról na potrzeby administracji delegowanej.
 
 W poniższych sekcjach znajdują się przykłady dla typowych scenariuszy przedsiębiorstwa.
 
-### Warstwa 0 — las administracyjny
+### <a name="tier-0-administrative-forest"></a>Warstwa 0 — las administracyjny
 
 Role odpowiednie dla kont w środowisku bastionu mogą być następujące:
 
@@ -153,7 +153,7 @@ Role odpowiednie dla kont w środowisku bastionu mogą być następujące:
 - Użytkownicy, którzy są administratorami lasu produkcyjnego
 - Użytkownicy, którym zostały delegowane ograniczone prawa administracyjne do aplikacji w lesie produkcyjnym
 
-### Warstwa 0 — las produkcyjny przedsiębiorstwa
+### <a name="tier-0-enterprise-production-forest"></a>Warstwa 0 — las produkcyjny przedsiębiorstwa
 
 Role odpowiednie do zarządzania kontami i zasobami lasu produkcyjnego warstwy 0 mogą być następujące:
 
@@ -170,7 +170,7 @@ Role odpowiednie do zarządzania kontami i zasobami lasu produkcyjnego warstwy 0
 - Administratorzy kopii zapasowych dla warstwy 0
 - Użytkownicy kontrolerów poza pasmem i kontrolerów zarządzania płytą główną (w przypadku maszyny KVM lub zarządzania lights-out) połączonych z hostami warstwy 0
 
-### Warstwa 1
+### <a name="tier-1"></a>Warstwa 1
 
 Role na potrzeby zarządzania serwerami i tworzenia ich kopii zapasowych w warstwie 1 mogą być następujące:
 
@@ -192,7 +192,7 @@ Ponadto role służące do zarządzania aplikacjami przedsiębiorstwa w warstwie
 - Administratorzy usługi w chmurze, np. witryny sieci Web firmy lub publicznego serwera DNS
 - Administratorzy systemów HCM, finansowych lub prawnych
 
-### Warstwa 2
+### <a name="tier-2"></a>Warstwa 2
 
 Role dla użytkowników innych niż użytkownicy administracyjni i role na potrzeby zarządzania komputerami mogą być następujące:
 
@@ -203,6 +203,6 @@ Role dla użytkowników innych niż użytkownicy administracyjni i role na potrz
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

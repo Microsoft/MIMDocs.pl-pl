@@ -3,23 +3,23 @@ title: "Konfiguracja usługi PAM za pomocą skryptów"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# Konfiguracja usługi PAM za pomocą skryptów
+# <a name="configure-pam-using-scripts"></a>Konfiguracja usługi PAM za pomocą skryptów
 
 Jeśli programy SQL i SharePoint zostaną zainstalowane na oddzielnych serwerach, muszą zostać skonfigurowane z użyciem poniższych instrukcji. Jeśli składniki SQL, SharePoint i PAM zostaną zainstalowane na tym samym komputerze, poniższe kroki należy przeprowadzić z poziomu tego komputera.
 
@@ -39,11 +39,11 @@ kroki:
 5. Skopiuj ten sam plik PAMDeploymentConfig.xml do folderu %SYSTEMDRIVE%\PAM na wszystkich maszynach, kontrolerach domeny CORPDC i PRIVDC oraz serwerach składników PAM, SQL Server i SharePoint.
 
 
-## Arkusz wdrażania
+## <a name="deployment-worksheet"></a>Arkusz wdrażania
 
 Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.xml i umieść zaktualizowaną kopię na wszystkich komputerach.
 
-### Setup
+### <a name="setup"></a>Setup
 
 |Maszyna   | Do uruchomienia jako   |Polecenia   |
 |---|---|---|
@@ -55,7 +55,7 @@ Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.x
 | PAMServer  | Administrator lokalny (po przyłączeniu do domeny: administrator MIM)  | .\PAMDeployment.ps1 Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Wybierz opcję menu 6 (PAM Trust Setup (Konfiguracja zaufania usługi PAM)). |
 
-### Sprawdzanie poprawności
+### <a name="validation"></a>Sprawdzanie poprawności
 
 |  Maszyna | Do uruchomienia jako   | Polecenia   |
 |---|---|---|
@@ -63,10 +63,14 @@ Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.x
 | Kontroler domeny CORPDC  | Administrator domeny CORP   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | CORPClient  | Użytkownik domeny CORP (administrator lokalny)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
-|  CORPClient | <PRIV>Użytkownik \PRIV.pamRequestor lub — w przypadku środowiska PRIVOnly — użytkownik <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+|  CORPClient | Użytkownik <PRIV>\PRIV.pamRequestor lub — w przypadku środowiska PRIVOnly — użytkownik <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+
+
+>[!div class="step-by-step"]
+[Początek »](sp1-step1-configuring-priv-domain.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
