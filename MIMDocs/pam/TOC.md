@@ -33,6 +33,6 @@
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
