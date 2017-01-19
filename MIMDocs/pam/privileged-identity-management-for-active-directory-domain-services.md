@@ -1,11 +1,11 @@
 ---
-title: "Co to jest usługa PAM dla usług ADDS? | Dokumentacja firmy Microsoft"
+title: "Usługa Privileged Access Management dla usług domenowych Active Directory | Dokumentacja firmy Microsoft"
 description: "Poznaj usługę Privileged Access Management i dowiedz się, jak możesz zarządzać środowiskiem usługi Active Directory i chronić je."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -15,8 +15,8 @@ ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 4b3779f33a8bbd2ad62c88343ef3611b17fc81a2
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
 
 ---
 
@@ -98,6 +98,6 @@ Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Ad
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -1,11 +1,11 @@
 ---
 title: "Krok 4 — Konfigurowanie programu SharePoint"
-description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
+description: "To jest krok 4 konfigurowania usługi PAM za pomocą skryptów. W tym kroku skonfigurujesz program SharePoint, dzięki czemu będzie można go użyć jako elementu wdrożenia usługi PAM."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 76696f7dce3d79a845c2a8ba9ae8d284012a0df7
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 12eb9a00584f72b9c628e870562a743fb603d4a3
 
 
 ---
@@ -58,6 +58,6 @@ Szczegółowe informacje można znaleźć w sekcji **Konfiguracja programu Share
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
