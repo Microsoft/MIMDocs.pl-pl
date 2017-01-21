@@ -5,7 +5,7 @@ keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
-ms.openlocfilehash: d38a3613b92c0bce0b27a4bd147177a1cccf47d8
+ms.sourcegitcommit: 4f7af7cfc258f95bf1fff77e732e5cf11d0ae239
+ms.openlocfilehash: 9db813d870de433757ff3dac69c82771bb7fbd7b
 
 
 ---
@@ -37,6 +37,6 @@ Program Microsoft Identity Manager jest nadal ściśle związany ze swoim poprze
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 
