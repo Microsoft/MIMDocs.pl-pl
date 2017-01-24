@@ -1,11 +1,11 @@
 ---
 title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
-description: "Dowiedz się, jak działa program MIM 2016, aby tworzyć bezpieczniejsze i wygodniejsze systemy zarządzania tożsamościami w chmurze i lokalnie."
+description: "Program MIM obejmuje funkcje zarządzania dostępem programu FIM 2010 oraz pomaga w zarządzaniu użytkownikami, poświadczeniami, zasadami i dostępem w organizacji."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 74d93047ad30d81546940fc4ece3d892fe6df2f8
+ms.sourcegitcommit: 4f7af7cfc258f95bf1fff77e732e5cf11d0ae239
+ms.openlocfilehash: 9db813d870de433757ff3dac69c82771bb7fbd7b
 
 
 ---
@@ -37,6 +37,6 @@ Program Microsoft Identity Manager jest nadal ściśle związany ze swoim poprze
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 
