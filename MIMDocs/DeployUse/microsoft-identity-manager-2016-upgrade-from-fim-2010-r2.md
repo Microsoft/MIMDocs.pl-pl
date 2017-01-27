@@ -1,11 +1,11 @@
 ---
-title: Uaktualnianie z programu FIM 2010 R2 | Dokumentacja firmy Microsoft
+title: Uaktualnienie z programu FIM 2010 R2 do programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
 description: "Informacje o sposobie uaktualniania składników programu FIM 2010 R2, a następnie instalowania składników, które są nowe w programie MIM 2016."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 16966d970365c13a3530020234208e72c0e8823f
 
 
 ---
@@ -202,6 +202,6 @@ Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
