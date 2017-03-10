@@ -1,11 +1,11 @@
 ---
-title: "Samoobsługowe resetowanie hasła | Dokumentacja firmy Microsoft"
+title: "Praca z portalem samoobsługowego resetowania hasła | Dokumentacja firmy Microsoft"
 description: "Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,13 +13,13 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 7d53579b8f0b069880aac256654506eb38060fe5
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
 
 
 ---
 
-# <a name="working-with-selfservice-password-reset"></a>Praca z funkcją samoobsługowego resetowania hasła
+# <a name="working-with-self-service-password-reset"></a>Praca z funkcją samoobsługowego resetowania hasła
 W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługowego resetowania hasła. Wprowadzono następujące ulepszenia:
 
 -   Portal samoobsługowego resetowania hasła i ekran logowania do systemu Windows umożliwiają teraz użytkownikom odblokowanie ich kont bez konieczności zmiany haseł lub telefonicznego kontaktowania się z administratorami pomocy technicznej. Konta użytkowników mogą być blokowane z wielu uzasadnionych powodów, takich jak wprowadzenie starego hasła, użycie komputerów z obsługą dwóch języków i skonfigurowanie klawiatury dla niewłaściwego języka lub próba zalogowania się do udostępnionej stacji roboczej, która została już otwarta dla konta innej osoby.
@@ -28,14 +28,14 @@ W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługoweg
 
 -   Dodano obsługę dla usługi Microsoft Azure Multi-Factor Authentication (MFA). Ta funkcja może być używana dla istniejącej bramy SMS haseł jednorazowych lub nowej bramy Phone Gate.
 
-## <a name="azure-for-multifactor-authentication"></a>Uwierzytelnianie wieloskładnikowe Azure
+## <a name="azure-for-multi-factor-authentication"></a>Uwierzytelnianie wieloskładnikowe Azure
 Microsoft Azure Multi-Factor Authentication jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw.
 
 Usługa Azure MFA zapewnia dodatkowy mechanizm uwierzytelniania wspierający istniejące procesy uwierzytelniania, takie jak proces używany przez program MIM w przypadku pomocy związanej z logowaniem użytkowników korzystających z samoobsługi.
 
 Usługa Azure MFA umożliwia uwierzytelnianie i weryfikację tożsamości użytkowników, którzy usiłują odzyskać dostęp do swoich kont i zasobów. Uwierzytelnianie jest dokonywane przy użyciu usługi SMS lub połączeń telefonicznych.   Im silniejsze uwierzytelnianie, tym większa pewność, że osoba usiłująca odzyskać dostęp jest rzeczywistym użytkownikiem będącym właścicielem danej tożsamości. Po uwierzytelnieniu użytkownik może wybrać nowe hasło, które zastąpi stare hasło.
 
-## <a name="prerequisites-to-set-up-selfservice-account-unlock-and-password-reset-using-mfa"></a>Wymagania wstępne związane z konfigurowaniem samoobsługowego odblokowywania kont i resetowania haseł przy użyciu usługi MFA
+## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Wymagania wstępne związane z konfigurowaniem samoobsługowego odblokowywania kont i resetowania haseł przy użyciu usługi MFA
 W tej sekcji założono, że użytkownik pobrał niezbędne pliki i ukończył wdrożenie programu Microsoft Identity Manager 2016, w tym następujących składników i usług:
 
 -   System Windows Server 2008 R2 lub nowszy został skonfigurowany jako serwer usługi Active Directory, łącznie z Usługami domenowymi w usłudze Active Directory i kontrolerem domeny z wyznaczoną domeną (domena „firmowa”).
@@ -56,12 +56,12 @@ W tej sekcji założono, że użytkownik pobrał niezbędne pliki i ukończył w
 
 -   Dodatki i rozszerzenia programu MIM 2016, łącznie ze zintegrowanym klientem logowania systemu Windows dla funkcji SSPR, zostały wdrożone na serwerze lub oddzielnym komputerze klienckim.
 
-## <a name="prepare-mim-to-work-with-multifactor-authentication"></a>Przygotowanie programu MIM do pracy z uwierzytelnianiem wieloskładnikowym
+## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Przygotowanie programu MIM do pracy z uwierzytelnianiem wieloskładnikowym
 Skonfiguruj synchronizację programu MIM do obsługi resetowania haseł i odblokowywania kont. Aby uzyskać więcej informacji, zobacz [Instalowanie dodatków i rozszerzeń usługi FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Instalowanie funkcji SSPR usługi FIM](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Bramy uwierzytelniania SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) i [Przewodnik po laboratorium testowym funkcji SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
 W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory. W ramach tego procesu zostanie wygenerowany plik zawierający materiał uwierzytelniania, umożliwiający usłudze MFA kontaktowanie się z usługą Azure MFA.  Aby kontynuować, należy uzyskać subskrypcję Azure.
 
-### <a name="register-your-multifactor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
+### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
 
 1.  Przejdź do [klasycznej wersji portalu Azure](http://manage.windowsazure.com) i zaloguj się jako administrator subskrypcji Azure.
 
@@ -119,7 +119,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 11. Zapisz plik MfaSettings.xml z taką samą nazwą w tej samej lokalizacji.
 
-#### <a name="configure-the-phone-gate-or-the-onetime-password-sms-gate"></a>Konfigurowanie bramy telefonicznej lub bramy SMS haseł jednorazowych
+#### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Konfigurowanie bramy telefonicznej lub bramy SMS haseł jednorazowych
 
 1.  Uruchom program Internet Explorer i przejdź do portalu MIM, uwierzytelniając się jako administrator programu MIM, a następnie kliknij przycisk **Przepływy pracy** na pasku nawigacyjnym po lewej stronie.
 
@@ -179,7 +179,7 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 6.  Następnie użytkownik musi wprowadzić nowe hasło dwa razy, aby zresetować hasło.
 
-#### <a name="access-from-the-selfservice-portal"></a>Dostęp z portalu samoobsługowego
+#### <a name="access-from-the-self-service-portal"></a>Dostęp z portalu samoobsługowego
 
 1.  Użytkownicy mogą otworzyć przeglądarkę sieci Web, przejść do **portalu resetowania haseł** i wprowadzić swoją nazwę użytkownika, a następnie kliknąć przycisk **Dalej**.
 
@@ -206,6 +206,6 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

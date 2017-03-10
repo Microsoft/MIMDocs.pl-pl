@@ -1,11 +1,11 @@
 ---
-title: Raportowanie hybrydowe na platformie Azure | Dokumentacja firmy Microsoft
+title: "Praca z funkcją raportowania hybrydowego na platformie Azure przy użyciu programu MIM 2016 | Dokumentacja firmy Microsoft"
 description: "Dowiedz się, jak połączyć dane przechowywane lokalnie i w chmurze w raporty hybrydowe na platformie Azure oraz jak wyświetlać te raporty i jak nimi zarządzać."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
 
 
 ---
@@ -103,6 +103,6 @@ Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
