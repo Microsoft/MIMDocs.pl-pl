@@ -1,11 +1,11 @@
 ---
-title: Uaktualnianie z programu FIM 2010 R2 | Dokumentacja firmy Microsoft
+title: Uaktualnienie z programu FIM 2010 R2 do programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
 description: "Informacje o sposobie uaktualniania składników programu FIM 2010 R2, a następnie instalowania składników, które są nowe w programie MIM 2016."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia programu FIM dla usługi SSPR, nie konfiguruj nowych bram telefonicznych usługi MFA na potrzeby resetowania haseł, dopóki wszystkie dodatki i rozszerzenia programu FIM nie zostaną uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
 
+Instrukcje dotyczące uaktualniania programu Microsoft Identity Manager 2016 SP1 można znaleźć w artykule [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Pakiet aktualizacji programu Microsoft Identity Manager 2016 Service Pack 1)
 
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Wdrażanie i konfigurowanie usługi PAM | Dokumentacja firmy Microsoft"
+title: "Konfigurowanie programu MIM 2016 pod kątem usługi Privileged Access Management | Dokumentacja firmy Microsoft"
 description: "Przewodnik instalacji programu MIM i konfigurowania go pod kątem usługi Privileged Access Management."
 keywords: 
 author: kgremban
@@ -13,8 +13,8 @@ ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a081b49ca8d0de7ce7d5f7385e5a652b09b722c3
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 32815c4ddc51fb9c9187c9fc9a1710239faf7935
 
 
 ---
@@ -43,6 +43,6 @@ Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć �
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
