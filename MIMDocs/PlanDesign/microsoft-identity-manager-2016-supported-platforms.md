@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2f2ae09ab8bc28b83b66073985b3574517a220b7
 ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -34,13 +35,13 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | | Dodatkowy system połączony (opcjonalnie) | Usługi domenowe Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 lub nowszy<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Inne produkty podmiotów trzecich |
 | **Usługa programu MIM** (za wyjątkiem scenariusza PAM) | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Baza danych usługi programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange na potrzeby wiadomości e-mail zatwierdzania i zarządzania grupami usługi MIM (opcjonalnie) | Exchange Server 2007 SP3 (z zainstalowaną konsolą zarządzania usługi Exchange)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Exchange na potrzeby wiadomości e-mail zatwierdzania i zarządzania grupami usługi MIM (opcjonalnie) | Exchange Server 2007 SP3 (z zainstalowaną konsolą zarządzania usługi Exchange)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | **Portal i usługa programu MIM** (tylko scenariusz PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory dla lasu PAM środowiska bastionu | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory dla istniejących lasów | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Active Directory dla istniejących lasów | Windows Server 2008 <br/> Windows Server 2008 R2 *<br/> Windows Server 2012* <br/> Windows Server 2012 R2 *<br/> Windows Server 2016* |
 | | Baza danych usługi programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Program SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Serwer poczty dla wiadomości e-mail zatwierdzania i zarządzania grupami usługi programu MIM (opcjonalnie) | Exchange Server 2007 SP3 (z zainstalowaną konsolą zarządzania usługi Exchange)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Serwer poczty dla wiadomości e-mail zatwierdzania i zarządzania grupami usługi programu MIM (opcjonalnie) | Exchange Server 2007 SP3 (z zainstalowaną konsolą zarządzania usługi Exchange)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | | Przeglądarka | Wszystkie popularne przeglądarki |
 | **Raportowanie usługi programu MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Magazyn danych | System Center 2012 Service Manager SP1 |
@@ -59,9 +60,4 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | | Baza danych BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * |
 | | Serwer poczty (opcjonalnie) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 | | Przeglądarka sieci Web | Internet Explorer 7, 8, 9, 10 lub 11 z dodatkiem Silverlight |
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
