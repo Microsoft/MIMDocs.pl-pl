@@ -5,14 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 02/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
-ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
+ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
+ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -73,7 +74,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-    Enable-ADOptionalFeature \$of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
     ```
 
   -   Po skonfigurowaniu delegowania i przed ponownym uruchomieniem serwera autoryzuj administratorów programu MIM oraz konto usługi programu MIM do tworzenia i aktualizowania podmiotów zabezpieczeń w tle.
@@ -94,7 +95,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
 
  -   Po skonfigurowaniu delegowania i przed ponownym uruchomieniem serwera autoryzuj administratorów programu MIM do tworzenia i aktualizowania zasad uwierzytelniania.
 
-     a.  Uruchom okno programu Powershell i wpisz następujące polecenia, podstawiając we wszystkich czterech wierszach nazwę konta administratora programu MIM w miejsce elementu „mimadmin”:
+     a.  Uruchom **wiersz polecenia** z podwyższonym poziomem uprawnień i wpisz następujące polecenia, podstawiając we wszystkich czterech wierszach nazwę konta administratora programu MIM w miejsce elementu „mimadmin”:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
@@ -149,9 +150,4 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
 - [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md) (Usługa Privileged Access Management dla usług Active Directory Domain Services)
 - [Configure the MIM environment for Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md) (Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management)
 - [Konfiguracja usługi PAM za pomocą skryptów](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
