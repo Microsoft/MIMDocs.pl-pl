@@ -55,6 +55,25 @@
 ### [Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID](/microsoft-identity-manager/pam/sp1-step7-setup-sidhistory-sidfiltering)
 ### [Krok 8 — Weryfikacja wdrożenia usługi PAM](/microsoft-identity-manager/pam/sp1-step8-pam-deployment-verification)
 ### [Dodatek](/microsoft-identity-manager/pam/sp1-pam-deployment-addendum)
+# Zarządzanie infrastrukturą
+## [Usługa Best Practice Analyzer w programie Identity Manager](https://technet.microsoft.com/library/jj203402)
+## [Usługa powiadamiania o zmianie hasła](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
+## Zarządzanie certyfikatami
+### [Narzędzie wiersza polecenia CLMUtil](https://technet.microsoft.com/library/cc720647)
+### [Szablony profilu konfiguracji](https://technet.microsoft.com/library/cc708656)
+### [Korzystanie z witryny sieci Web zarządzania certyfikatami](https://technet.microsoft.com/library/cc720560)
+### [Zarządzanie aplikacjami karty inteligentnej](https://technet.microsoft.com/library/cc708681)
+### [Tworzenie kopii zapasowej i przywracanie](https://technet.microsoft.com/library/dd883245)
+## Samoobsługowe resetowanie hasła
+### [Programowa rejestracja użytkownika](https://technet.microsoft.com/library/jj134294)
+### [Dostosowania](https://technet.microsoft.com/library/jj134312)
+## Usługa i portal
+### [Protokół Kerberos](https://technet.microsoft.com/library/jj134299)
+### [Rejestrowanie dynamiczne](/microsoft-identity-manager/infrastructure/mim-service-dynamic-logging)
+### [Przewodnik dotyczący wydajności eksportu](https://technet.microsoft.com/library/hh322883)
+## Raportowanie
+### [Raportowanie przy użyciu raportów niestandardowych oraz rozszerzalność](https://technet.microsoft.com/library/jj133861)
+## [Oprogramowanie Microsoft Identity: publiczne wersje kompilacji](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 ## [Microsoft Identity Manager 2016 — dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 ### [Dokumentacja interfejsu API REST zarządzania certyfikatami](/microsoft-identity-manager/reference/certificate-management-rest-api-reference)
