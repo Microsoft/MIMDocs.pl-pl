@@ -16,11 +16,12 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
 ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
+ms.lasthandoff: 11/10/2016
 
 
 ---
 
-# <a name="step-3-prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
+# <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 
 >[!div class="step-by-step"]
 [« Krok 2](step-2-prepare-priv-domain-controller.md)
@@ -51,7 +52,7 @@ Dodaj role Serwer sieci Web (IIS) i Serwer aplikacji, funkcje platformy .NET Fra
 
 1.  Zaloguj się jako administrator domeny PRIV (PRIV\Administrator) i uruchom program PowerShell.
 
-2.  Wpisz następujące polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy .NET Framework 3.5. Te funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. „*d:\Sources\SxS”.
+2.  Wpisz następujące polecenia. Może być konieczne określenie innej lokalizacji plików źródłowych funkcji platformy .NET Framework 3.5. Te funkcje nie są zwykle dostępne w ramach instalacji systemu Windows Server, ale są dostępne w folderze równoległym (SxS) w folderze źródłowym na dysku instalacyjnym systemu operacyjnego, np. „d:\Sources\SxS\”.
 
     ```
     import-module ServerManager
@@ -209,9 +210,4 @@ W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 >[!div class="step-by-step"]
 [« Krok 2](step-2-prepare-priv-domain-controller.md)
 [Krok 4 »](step-4-install-mim-components-on-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
