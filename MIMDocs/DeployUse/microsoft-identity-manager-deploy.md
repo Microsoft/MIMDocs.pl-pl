@@ -2,10 +2,10 @@
 title: "Kroki wdrażania programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft"
 description: "Pobierz pełną listę kroków związanych z wdrażaniem programu Microsoft Identity Manager 2016 od przygotowania środowiska do konfigurowania portali."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/27/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 804f957d5cf9f5fb09efa65944983b1d5013fff3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -45,9 +46,4 @@ Po skonfigurowaniu domeny i serwera można zainstalować składniki programu MIM
 - [Usługa synchronizacji programu MIM](install-mim-sync.md)
 - [Usługa i portal MIM](install-mim-service-portal.md)
 - [Synchronizowanie baz danych usług Active Directory i MIM](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

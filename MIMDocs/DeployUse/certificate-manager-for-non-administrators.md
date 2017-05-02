@@ -2,10 +2,10 @@
 title: "Samodzielne odnowienie karty inteligentnej programu Microsoft Identity Manager bez uprawnień administratora | Dokumentacja firmy Microsoft"
 description: "Dowiedz się, jak rejestrować karty inteligentne dla użytkowników bez dostępu administratora do ich maszyn, tak aby mogli korzystać z Menedżera certyfikatów."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 7.  **Instalowanie aplikacji CM na koncie bez uprawnień administratora**
 
 8.  **Uruchamianie aplikacji CM i rejestrowanie się w celu korzystania z wirtualnej karty inteligentnej**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

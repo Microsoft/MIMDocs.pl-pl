@@ -2,10 +2,10 @@
 title: "Wdrożenie aplikacji systemu Windows Menedżer certyfikatów programu MIM | Dokumentacja firmy Microsoft"
 description: "Dowiedz się, jak wdrożyć aplikację Menedżer certyfikatów, aby umożliwić użytkownikom zarządzanie swoimi prawami dostępu."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -253,9 +254,4 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 ## <a name="deploy-the-app"></a>Wdrażanie aplikacji
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
