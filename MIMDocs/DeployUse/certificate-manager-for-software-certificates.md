@@ -2,10 +2,10 @@
 title: "Żądanie certyfikatów w Menedżerze certyfikatów za pomocą szablonów | Dokumentacja firmy Microsoft"
 description: "Informacje o sposobie użycia Menedżera certyfikatów do tworzenia i odnawiania certyfikatów oprogramowania za pomocą szablonów profilów."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     1.  Na karcie **Ogólne** w polu nazwy wyświetlanej wpisz ciąg **Zarchiwizowany szablon certyfikatu**.
 
-    2.  b.  Na karcie **Obsługiwanie żądań**
+    2.  b.    Na karcie **Obsługiwanie żądań**
 
         1.  Ustaw opcję **Przeznaczenie** na wartość Podpis i szyfrowanie.
 
@@ -95,9 +96,4 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 10. Jeśli chcesz ponownie wystawić zarchiwizowane certyfikaty, zaznacz pola wyboru po lewej stronie obok pozycji **Wystaw ponownie zarchiwizowane certyfikaty** i kliknij przycisk **OK**.
 
 11. Jeśli używasz Menedżera certyfikatów wirtualnych kart inteligentnych, musisz wyłączyć pozycje zbierania danych, ponieważ ta funkcja nie działa po włączeniu funkcji zbierania danych. Wyłącz funkcję zbierania danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie usuwając zaznaczenie pola wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

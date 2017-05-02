@@ -2,10 +2,10 @@
 title: "Konfigurowanie domeny pod kątem instalacji programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft"
 description: "Przed zainstalowaniem programu MIM 2016 należy utworzyć kontroler domeny usługi Active Directory"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: e16bcc36fe4bccb621ba4d649aa0b015f2adbcdd
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -91,9 +92,4 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

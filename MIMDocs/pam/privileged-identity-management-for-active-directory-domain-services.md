@@ -2,10 +2,10 @@
 title: "Usługa Privileged Access Management dla usług domenowych Active Directory | Dokumentacja firmy Microsoft"
 description: "Poznaj usługę Privileged Access Management i dowiedz się, jak możesz zarządzać środowiskiem usługi Active Directory i chronić je."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -17,6 +17,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -95,9 +96,4 @@ Po zatwierdzeniu żądania przepływ pracy akcji komunikuje się bezpośrednio z
 > Z kolei wygasłe łącza są oceniane w czasie rzeczywistym przez Menedżera kont zabezpieczeń (Security Accounts Manager, SAM). Mimo że dodanie członka do grupy musi zostać zreplikowane na kontrolerze domeny, który odebrał żądanie dostępu, usunięcie członka z grupy jest oceniane natychmiast na dowolnym kontrolerze domeny.
 
 Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Administratorzy, którzy rzadko potrzebują dostępu do uprzywilejowanych grup, mogą wysyłać precyzyjne żądania dostępu. To samo dotyczy skryptów. Program MIM rejestruje żądanie i zmiany w usłudze Active Directory. Można je wyświetlić w Podglądzie zdarzeń lub wysłać dane do rozwiązań służących do monitorowania infrastruktury przedsiębiorstwa, na przykład usług Audit Collection Services (ACS) programu System Center 2012 — Operations Manager lub narzędzi innych firm.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

@@ -2,10 +2,10 @@
 title: "Instalowanie usługi synchronizacji programu MIM | Dokumentacja firmy Microsoft"
 description: "Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: c6cf0c93679319716c34904ea6239902010e0860
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -104,9 +105,4 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 >[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [Portal i usługa programu MIM »](install-mim-service-portal.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

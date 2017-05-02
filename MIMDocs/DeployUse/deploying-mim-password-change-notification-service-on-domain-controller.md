@@ -2,10 +2,10 @@
 title: "Wdrażanie usługi powiadamiania o zmianie hasła | Dokumentacja firmy Microsoft"
 description: "Pobierz kroki instalowania i konfigurowania usługi powiadamiania o zmianie hasła w programie MIM na własnym kontrolerze domeny."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -58,9 +59,4 @@ Usługa powiadamiania o zmianie hasła (PCNS), instalowana na kontrolerach domen
 
 ## <a name="configuring-the-password-change-notification-service"></a>Konfigurowanie usługi powiadamiania o zmianie hasła
 Po ponownym ustanowieniu połączenia z serwerem kontrolera domeny przejdź jako administrator domeny do folderu *C:\Program Files\Microsoft Password Change Notification.* Uruchom plik *pcnscfg.exe*.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
