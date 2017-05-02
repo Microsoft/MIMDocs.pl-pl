@@ -112,3 +112,5 @@
 #### [Pobieranie oczekujących żądań PAM](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Zatwierdzanie lub odrzucanie oczekującego żądania PAM](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Pobieranie informacji dotyczących sesji PAM](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Dokumentacja techniczna]
+### [Dokumentacja języka XML na potrzeby konfiguracji ekranu kontroli zasobów](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
