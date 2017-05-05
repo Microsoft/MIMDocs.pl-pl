@@ -2,10 +2,10 @@
 title: "Użycie usługi Azure MFA do aktywacji usługi PAM | Dokumentacja firmy Microsoft"
 description: "Konfigurowanie usługi Azure MFA jako drugiej warstwy zabezpieczeń używanej, gdy użytkownicy aktywują role w ramach usługi Privileged Access Management."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: fa6d69038e5b2f0b933773381661929159198242
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -148,9 +149,4 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 5.  Wybierz przedział czasu i zaznacz pole wyboru obok pola **Nazwa** w dodatkowej kolumnie raportu. Kliknij pozycję **Eksportuj do pliku CSV**.
 
 6.  Po wygenerowaniu raport można wyświetlić w portalu lub, jeśli raport usługi MFA jest rozbudowany, możliwe jest pobranie go do pliku CSV. Wartości **SDK** w kolumnie **AUTH TYPE** wskazują wiersze, które dotyczą żądań aktywacji funkcji PAM: są to zdarzenia pochodzące z usługi MIM lub innego oprogramowania lokalnego. W polu **USERNAME** znajduje się identyfikator GUID obiektu użytkownika w bazie danych usługi MIM. Jeśli połączenie nie powiodło się, wartością w kolumnie **AUTHD** będzie **No**, a w kolumnie **CALL RESULT** będą znajdować się szczegóły przyczyny niepowodzenia.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

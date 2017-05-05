@@ -2,10 +2,10 @@
 title: "Opis składników funkcji PAM | Dokumentacja firmy Microsoft"
 description: "Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -40,9 +41,4 @@ Po zainstalowaniu i skonfigurowaniu każda grupa utworzona w lesie PRIV w proces
 W wyniku tego, gdy użytkownik zażąda podniesienia uprawnień za pomocą poleceń cmdlet programu PowerShell, a żądanie zostanie zatwierdzone, usługa MIM doda jego konto w lesie PRIV do grupy w lesie PRIV. Gdy użytkownik zaloguje się za pomocą konta uprzywilejowanego, jego token protokołu Kerberos będzie zawierał identyfikator zabezpieczeń (SID) identyczny z identyfikatorem SID grupy w lesie CORP. Ponieważ las CORP skonfigurowano tak, aby ufał lasowi PRIV, konto z podniesionymi uprawnieniami używane do uzyskania dostępu do zasobu w lesie CORP będzie traktowane przez zasób sprawdzający członkostwo w grupach protokołu Kerberos jako członek grup zabezpieczeń tego zasobu. Odbywa się to przez uwierzytelnianie między lasami za pośrednictwem protokołu Kerberos.
 
 Ponadto członkostwo takie jest ograniczone czasowo, a zatem po upływie wstępnie skonfigurowanego okresu konto administracyjne danego użytkownika przestanie należeć do grupy w lesie PRIV. W związku z tym nie będzie już można używać tego konta w celu uzyskania dostępu do dodatkowych zasobów.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

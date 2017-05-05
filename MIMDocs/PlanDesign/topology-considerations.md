@@ -2,10 +2,10 @@
 title: "Przewodnik topologii wdrożenia | Dokumentacja firmy Microsoft"
 description: "W tym artykule opisano składniki programu MIM 2016 i przedstawiono sugestie dotyczące wdrażania ich w środowisku docelowym."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,7 +27,7 @@ Składniki programu Microsoft Identity Manager (MIM) można wdrożyć na tym sam
 ## <a name="mim-components"></a>Składniki programu MIM
 Podczas projektowania topologii wdrożenia musisz znać funkcje wszystkich składników i interakcje między nimi.
 
-- <a name="mim-portal-an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal programu MIM** — interfejs umożliwiający resetowanie haseł, zarządzanie grupami i wykonywanie operacji administracyjnych.
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal programu MIM** — interfejs umożliwiający resetowanie haseł, zarządzanie grupami i wykonywanie operacji administracyjnych.
     -
 - **Usługa MIM** — usługa sieci Web, która implementuje funkcje zarządzania tożsamościami programu MIM 2016.
 - **Usługa synchronizacji programu MIM** — synchronizuje dane z innymi systemami zarządzania tożsamościami.
@@ -63,9 +64,4 @@ Komputery z zainstalowanym programem SQL Server hostujące usługę synchronizac
 
 ## <a name="see-also"></a>Zobacz także
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
