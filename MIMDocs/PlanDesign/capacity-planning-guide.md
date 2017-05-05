@@ -2,10 +2,10 @@
 title: "Przewodnik planowania pojemności | Dokumentacja firmy Microsoft"
 description: "Ten przewodnik ułatwia zrozumienie zmiennych, które należy wziąć pod uwagę przed wdrożeniem programu MIM 2016, w tym poziomów obciążeń i decyzji dotyczących zasad."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 33e7d901dcd9d8cf1bcaddcfa521625060bb3dbc
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: e33c5bb284d15a5e94118e621b968fcad5b65e2d
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -92,9 +93,4 @@ Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania o
 ## <a name="see-also"></a>Zobacz także
 - [Zagadnienia dotyczące topologii wdrożeń programu MIM](topology-considerations.md)
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

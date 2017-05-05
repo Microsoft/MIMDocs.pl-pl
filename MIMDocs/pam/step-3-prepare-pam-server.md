@@ -2,10 +2,10 @@
 title: "Wdrożenie usługi PAM — krok 3 — serwer usługi PAM | Dokumentacja firmy Microsoft"
 description: "Przygotowanie serwera usługi PAM, który będzie hostować programy SQL i SharePoint na potrzeby wdrożenia usługi Privileged Access Management."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -14,9 +14,9 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
-ms.lasthandoff: 11/10/2016
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
+ms.lasthandoff: 05/02/2017
 
 
 ---

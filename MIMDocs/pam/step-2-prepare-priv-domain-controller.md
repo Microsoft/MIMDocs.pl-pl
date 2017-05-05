@@ -2,10 +2,10 @@
 title: "Wdrożenie usługi PAM — krok 2 — kontroler domeny PRIV | Dokumentacja firmy Microsoft"
 description: "Przygotowanie kontrolera domeny PRIV, który udostępnia środowisko bastionu, w którym usługa Privileged Access Management jest izolowana."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,13 +13,14 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: f84229908f31242b6d2f7636a7c67ca669de45b3
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-2-prepare-the-first-priv-domain-controller"></a>Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
+# <a name="step-2---prepare-the-first-priv-domain-controller"></a>Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
 
 >[!div class="step-by-step"]
 [« Krok 1](step-1-prepare-corp-domain.md)
@@ -34,7 +35,7 @@ W tej sekcji zostanie skonfigurowana maszyna wirtualna pełniąca funkcję kontr
 ### <a name="install-windows-server-2012-r2"></a>Instalowanie systemu Windows Server 2012 R2
 Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows Server 2012 R2, aby utworzyć komputer o nazwie „PRIVDC”.
 
-1. Wybierz opcję wykonania niestandardowej instalacji (nie uaktualnienia) systemu Windows Server. Podczas instalacji wybierz opcję **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64**. _Nie wybieraj opcji instalacji _**Data Center ani Server Core**.
+1. Wybierz opcję wykonania niestandardowej instalacji (nie uaktualnienia) systemu Windows Server. Podczas instalacji wybierz opcję **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64**. _Nie wybieraj opcji instalacji_ **Data Center ani Server Core**.
 
 2. Przeczytaj i zaakceptuj postanowienia licencyjne.
 
@@ -269,12 +270,12 @@ Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następuj�
 15. Na liście uprawnień wybierz pozycje **Zmienianie hasła** i **Resetowanie hasła**. Kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
 16. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
-17. Otwórz wiersz polecenia.  
-18. Przejrzyj listę kontroli dostępu w obiekcie przechowującym deskryptor zabezpieczeń administratora w domenach PRIV. Na przykład jeśli nazwa domeny to „priv.contoso.local”, wpisz polecenie  
+17.    Otwórz wiersz polecenia.  
+18.    Przejrzyj listę kontroli dostępu w obiekcie przechowującym deskryptor zabezpieczeń administratora w domenach PRIV. Na przykład jeśli nazwa domeny to „priv.contoso.local”, wpisz polecenie  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. Zaktualizuj odpowiednio listę kontroli dostępu, aby mieć pewność, że usługa MIM i usługa składnika MIM mogą aktualizować członkostwa grup chronionych przez tę listę.  Wpisz polecenie:  
+19.    Zaktualizuj odpowiednio listę kontroli dostępu, aby mieć pewność, że usługa MIM i usługa składnika MIM mogą aktualizować członkostwa grup chronionych przez tę listę.  Wpisz polecenie:  
   ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
@@ -304,9 +305,4 @@ W następnym kroku zostanie przygotowany serwer usługi PAM.
 >[!div class="step-by-step"]
 [« Krok 1](step-1-prepare-corp-domain.md)
 [Krok 3 »](step-3-prepare-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
