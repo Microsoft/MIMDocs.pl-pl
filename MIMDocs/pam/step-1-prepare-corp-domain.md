@@ -2,24 +2,26 @@
 title: "Wdrożenie usługi PAM — krok 1 — domena CORP | Dokumentacja firmy Microsoft"
 description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
+# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
 >[!div class="step-by-step"]
 [Krok 2 »](step-2-prepare-priv-domain-controller.md)
@@ -101,7 +103,7 @@ Zamierzamy utworzyć grupę zabezpieczeń o nazwie *CorpAdmins* i użytkownika o
 
 1. Uruchom program PowerShell.
 
-2. Wpisz następujące polecenia. Zamień hasło 'Pass@word1' na inne.
+2. Wpisz następujące polecenia. Zamień hasło „Pass@word1” na inne.
 
   ```
   import-module activedirectory
@@ -212,9 +214,4 @@ W następnym kroku należy przygotować kontroler domeny PRIV.
 
 >[!div class="step-by-step"]
 [Krok 2 »](step-2-prepare-priv-domain-controller.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
