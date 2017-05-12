@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ Dla środowiska laboratorium wymagane są przynajmniej dwie maszyny wirtualne:
 Jeśli nie ma już domeny „CORP” w środowisku laboratorium, dla tej domeny wymagany jest dodatkowy kontroler. Kontroler domeny „CORP” może obsługiwać system Windows Server 2016 lub Windows Server 2012 R2.
 
 
-Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md) **z wyjątkiem sytuacji wskazanych poniżej**:
+Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](privileged-identity-management-for-active-directory-domain-services.md) **z wyjątkiem sytuacji wskazanych poniżej**:
 
--   Podczas tworzenia nowej domeny CORP w trakcie wypełniania instrukcji w sekcji [Krok 1 — Przygotowanie kontrolera domeny CORP](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md) można wybrać opcjonalną konfigurację domeny CORP do działania na poziomie funkcjonalności systemu Windows Server 2016. **Jeśli wybierzesz tę opcję, wprowadź następujące zmiany**:
+-   Podczas tworzenia nowej domeny CORP w trakcie wypełniania instrukcji w sekcji [Krok 1 — Przygotowanie kontrolera domeny CORP](step-1-prepare-corp-domain.md) można wybrać opcjonalną konfigurację domeny CORP do działania na poziomie funkcjonalności systemu Windows Server 2016. **Jeśli wybierzesz tę opcję, wprowadź następujące zmiany**:
 
     -   Jeśli używasz nośników systemu Windows Server 2016, opcja instalacji będzie miała nazwę Windows Server 2016 (serwer ze środowiskiem pulpitu).
 
@@ -56,7 +57,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
 
 -   Jeśli zdecydujesz się używać Windows Server 2012 R2 jako systemu operacyjnego dla kontrolera domeny CORP, musisz zainstalować poprawki 2919442, 2919355 [i zaktualizować poprawkę 3155495](http://support.microsoft.com/kb/3156418) na kontrolerze domeny CORP.
 
--   Wypełnij instrukcje w sekcji [Krok 2 — Przygotowanie kontrolera domeny PRIV](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md) z wyłączeniem następujących zmian:
+-   Wypełnij instrukcje w sekcji [Krok 2 — Przygotowanie kontrolera domeny PRIV](step-2-prepare-priv-domain-controller.md) z wyłączeniem następujących zmian:
 
     -   Zainstaluj przy użyciu nośników systemu Windows Server 2016. Opcja instalacji będzie miała nazwę Windows Server 2016 (serwer ze środowiskiem pulpitu).
 
@@ -115,19 +116,19 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
     ```
 
 
--   Wypełnij instrukcje w sekcji [Krok 3 — Przygotowanie serwera PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md) i wprowadź te zmiany.
+-   Wypełnij instrukcje w sekcji [Krok 3 — Przygotowanie serwera PAM](step-3-prepare-pam-server.md) i wprowadź te zmiany.
 
     -   W przypadku instalacji w systemie Windows Server 2016 należy pamiętać, że rola „ApplicationServer” nie jest dostępna.
 
     -   W przypadku instalowania programu MIM w systemie Windows Server 2016 **instalacja programu SharePoint 2013 nie jest możliwa**.
 
--   Wypełnij instrukcje w sekcji [Krok 4 – Instalowanie składników programu MIM na serwerze i stacji roboczej usługi PAM](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md) i wprowadź te zmiany.
+-   Wypełnij instrukcje w sekcji [Krok 4 – Instalowanie składników programu MIM na serwerze i stacji roboczej usługi PAM](step-4-install-mim-components-on-pam-server.md) i wprowadź te zmiany.
 
     -   Użytkownik instalujący usługę programu MIM i składniki usługi PAM **musi mieć dostęp do zapisu w domenie PRIV w usłudze AD**, gdyż instalacja programu MIM powoduje utworzenie nowej jednostki organizacyjnej usługi AD „Obiekty usługi PAM”.
 
     -   Jeśli nie zainstalowano programu SharePoint, nie instaluj portalu MIM.
 
--   Wypełnij instrukcje w sekcji [Krok 5 — Ustanowienie zaufania](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md) i wprowadź te zmiany:
+-   Wypełnij instrukcje w sekcji [Krok 5 — Ustanowienie zaufania](step-5-establish-trust-between-priv-corp-forests.md) i wprowadź te zmiany:
 
     -   Podczas ustanawiania zaufania jednokierunkowego wykonaj tylko pierwsze dwa polecenia programu PowerShell (get-credential i New-PAMTrust), **nie wykonuj polecenia New-PAMDomainConfiguration**.
 
@@ -147,7 +148,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](/mi
 
 ## <a name="more-information"></a>Więcej informacji
 
-- [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md) (Usługa Privileged Access Management dla usług Active Directory Domain Services)
-- [Configure the MIM environment for Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md) (Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management)
-- [Konfiguracja usługi PAM za pomocą skryptów](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Privileged Access Management for Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) (Usługa Privileged Access Management dla usług Active Directory Domain Services)
+- [Configure the MIM environment for Privileged Access Management](configuring-mim-environment-for-pam.md) (Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management)
+- [Konfiguracja usługi PAM za pomocą skryptów](sp1-pam-configure-using-scripts.md)
 
