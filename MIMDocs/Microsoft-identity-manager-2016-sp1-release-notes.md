@@ -34,7 +34,7 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
 
 ### <a name="mim"></a>Program MIM
 
-- **Możliwość korzystania z portalu MIM w różnych przeglądarkach na potrzeby samoobsługi użytkowników końcowych:** w tym dodatku Service Pack wprowadzamy obsługę większości popularnych przeglądarek. Użytkownicy mogą teraz uzyskać dostęp do portalu MIM i korzystać z niego w celu samoobsługowego zarządzania grupą i profilem, korzystając z przeglądarek Edge, Chrome i Safari.
+- **Możliwość korzystania z portalu MIM w różnych przeglądarkach na potrzeby samoobsługi użytkowników końcowych:** w tym dodatku Service Pack wprowadzamy obsługę większości popularnych przeglądarek. Użytkownicy mogą teraz uzyskać dostęp do portalu MIM i korzystać z niego w celu samoobsługowego zarządzania grupą i profilem, korzystając z przeglądarek Microsoft Edge, Chrome i Safari.
 
 - **Obsługa usługi MIM dla usługi Exchange Online:** usługa MIM przez długi czas obsługiwała wysyłanie i odbieranie wiadomości e-mail z zatwierdzeniami i powiadomieniami. Przed wersją z dodatkiem SP1 program MIM obsługiwał tylko serwer Exchange lub SMTP. Z dodatkiem Service Pack 1 usługa MIM może wysyłać i odbierać żądania oraz powiadomienia e-mail przy użyciu konta usługi Exchange Online w ramach usługi Office 365.
 
