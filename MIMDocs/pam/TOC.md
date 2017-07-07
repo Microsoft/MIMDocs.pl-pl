@@ -32,8 +32,3 @@
 ### [Krok 8 — Weryfikacja wdrożenia usługi PAM](sp1-step8-pam-deployment-verification.md)
 ### [Dodatek](sp1-pam-deployment-addendum.md)
 # [Dokumentacja dla deweloperów](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
-
-
-<!--HONumber=Feb17_HO3-->
-
-

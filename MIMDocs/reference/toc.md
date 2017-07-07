@@ -40,8 +40,3 @@
 #### [Pobieranie oczekujących żądań PAM](privileged-access-management-get-pending-requests.md)
 #### [Zatwierdzanie lub odrzucanie oczekującego żądania PAM](privileged-access-management-approve-reject-pending-request.md)
 #### [Pobieranie informacji dotyczących sesji PAM](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
