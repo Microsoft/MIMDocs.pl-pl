@@ -1,42 +1,84 @@
+
 # [Poznawanie i eksplorowanie](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+
 # [Planowanie i projektowanie](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+
 # [Wdrażanie i użytkowanie](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+
 # [Korzystanie z funkcji zarządzania dostępem uprzywilejowanym](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
+
 # [Dokumentacja dla deweloperów](microsoft-identity-manager-2016-developer-reference.md)
+
 ## [Microsoft Identity Manager 2016 — dokumentacja dla deweloperów](microsoft-identity-manager-2016-developer-reference.md)
+
 ### [Dokumentacja interfejsu API REST zarządzania certyfikatami](certificate-management-rest-api-reference.md)
+
 #### [Szczegóły usługi interfejsu API REST zarządzania certyfikatami](certificate-management-rest-api-service-details.md)
+
 #### [Przewodnik przykładowej rejestracji](sample-enrollment-walkthrough.md)
+
 #### [Pobieranie szablonów profilu](get-profile-templates.md)
+
 #### [Operacje dotyczące zasad](policy-operations.md)
+
 ##### [Pobieranie zasad dotyczących przepływu pracy](get-workflow-policy.md)
+
 ##### [Pobieranie zasad dotyczących karty inteligentnej](get-smartcard-policy.md)
+
 #### [Operacje dotyczące żądań](request-operations.md)
+
 ##### [Tworzenie żądania](create-request.md)
+
 ##### [Pobieranie żądania](get-request.md)
+
 ##### [Anulowanie, porzucenie lub ukończenie żądania](cancel-abandon-complete-request.md)
+
 #### [Operacje dotyczące żądania certyfikatu](certificate-request-operations.md)
+
 ##### [Pobieranie opcji generowania żądania certyfikatu](get-certificate-request-generation-options.md)
+
 ##### [Uzyskanie odpowiedzi na żądania certyfikatu](get-certificate-responses.md)
+
 #### [Operacje dotyczące karty inteligentnej](smartcard-operations.md)
+
 ##### [Przypisanie karty inteligentnej do żądania](assign-smartcard-to-request.md)
+
 ##### [Pobieranie danych karty inteligentnej](get-smartcard-data.md)
+
 ##### [Uzyskanie odpowiedzi na żądanie uwierzytelniania przy użyciu karty inteligentnej](get-smartcard-authentication-response.md)
+
 ##### [Pobieranie zróżnicowanego klucza administratora dla karty inteligentnej](get-smartcard-diversified-admin-key.md)
+
 ##### [Pobieranie proponowanego numeru PIN karty inteligentnej](get-smartcard-proposed-pin.md)
+
 ##### [Aktualizacja stanu karty inteligentnej](update-smartcard-status.md)
+
 #### [Operacje dotyczące profilu](profile-operations.md)
+
 ##### [Pobieranie danych profilów](get-profile-data.md)
+
 ##### [Pobieranie operacji dla stanu profilu](get-profile-state-operations.md)
+
 #### [Operacje dotyczące certyfikatu](certificate-operations.md)
+
 ##### [Pobieranie certyfikatów karty inteligentnej lub profilu](get-smartcard-profile-certificates.md)
+
 ##### [Pobieranie certyfikatów użytkowników](get-user-certificates.md)
+
 ### [Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem](privileged-access-management-rest-api-reference.md)
+
 #### [Szczegóły usługi interfejsu API REST usługi PAM](privileged-access-management-rest-api-service-details.md)
+
 #### [Pobieranie ról PAM](privileged-access-management-get-roles.md)
+
 #### [Tworzenie żądania PAM](privileged-access-management-create-request.md)
+
 #### [Pobieranie żądań PAM](privileged-access-management-get-requests.md)
+
 #### [Zamykanie żądania PAM](privileged-access-management-close-request.md)
+
 #### [Pobieranie oczekujących żądań PAM](privileged-access-management-get-pending-requests.md)
+
 #### [Zatwierdzanie lub odrzucanie oczekującego żądania PAM](privileged-access-management-approve-reject-pending-request.md)
+
 #### [Pobieranie informacji dotyczących sesji PAM](privileged-access-management-get-session-info.md)
