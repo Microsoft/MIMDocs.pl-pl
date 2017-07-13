@@ -2,15 +2,14 @@
 layout: LandingPage
 title: Dokumentacja programu Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: "Dowiedz się, jak korzystać z programu Microsoft Identity Manager."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 # Dokumentacja programu Microsoft Identity Manager
+<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 
 Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania firmy Microsoft do zarządzania tożsamościami i dostępem oraz w bezproblemowy sposób integruje różne lokalne magazyny uwierzytelniania, takie jak Active Directory, LDAP czy Oracle, i inne aplikacje z usługą Azure Active Directory. Zapewnia dzięki temu spójny sposób korzystania z lokalnych aplikacji LOB i rozwiązań SaaS.
 
@@ -147,4 +146,3 @@ Wsparcie podstawowe dla programu Forefront Identity Manager (FIM) kończy się 1
         </div>
     </li>
 </ul>
-
