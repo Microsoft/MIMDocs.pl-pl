@@ -10,7 +10,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: MT
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
 ms.contentlocale: pl-pl
@@ -25,9 +25,9 @@ W wersji 4.4.1436.0 wprowadziliśmy nową możliwość rejestrowania. Dzięki ni
 
 Po zainstalowaniu w pliku Microsoft.ResourceManagement.Service.exe.config zobaczysz nowy wiersz o nazwie:
 
-*   Wiersz 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*   Wiersz 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*   Wiersz 266: ``</system.diagnostics> ``
+*    Wiersz 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*    Wiersz 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*    Wiersz 266: ``</system.diagnostics> ``
 
 ![Wyróżnione sekcje zawierające nowe zapisy rejestrowania dynamicznego](media/mim-service-dynamic-logging/screen01.png)
 
