@@ -11,17 +11,18 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
 
-# <a name="microsoft-identity-manager-2016-password-management"></a>Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
+# Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
 Zarządzanie hasłami dla wielu kont użytkowników jest jedną ze złożonych kwestii związanych z zarządzaniem środowiskiem przedsiębiorstwa z wieloma źródłami danych. Program Microsoft Identity Manager 2016 zapewnia dwa rozwiązania w zakresie zarządzania hasłami:
 
@@ -43,7 +44,8 @@ Za pomocą rozwiązań do synchronizacji haseł i zarządzania zmianą haseł op
 
 -   Wykonywanie operacji zarządzania hasłami w czasie rzeczywistym, niezależnie od operacji wykonywanych przez program MIM.
 
-## <a name="password-extensions"></a>Rozszerzenia haseł
+## Rozszerzenia haseł
+<a id="password-extensions" class="xliff"></a>
 
 Agenci zarządzania dla serwerów katalogowych domyślnie obsługują operacje zmiany i ustawiania hasła. W przypadku agentów opartych na plikach, agentów bazy danych i agentów zarządzania łącznika Extensible Connectivity nieobsługujących domyślnie operacji zmiany i ustawiania hasła można utworzyć bibliotekę dołączaną dynamicznie (DLL) na potrzeby rozszerzenia haseł platformy .NET.
 Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym wywołaniu zmiany lub ustawienia hasła dla dowolnego z tych agentów zarządzania. Ustawienia rozszerzenia haseł zostały skonfigurowane dla tych agentów zarządzania za pomocą narzędzia Synchronization Service Manager. Więcej informacji o konfigurowaniu rozszerzeń haseł zawiera dokumentacja dla deweloperów programu FIM.
@@ -60,7 +62,8 @@ Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym 
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Oracle Database                                                                                    |
 
-## <a name="password-synchronization"></a>Synchronizacja haseł
+## Synchronizacja haseł
+<a id="password-synchronization" class="xliff"></a>
 
 
 Synchronizacja haseł współpracuje z usługą powiadamiania o zmianie hasła (PCNS) w domenie usługi Active Directory i umożliwia automatyczne propagowanie zmian haseł pochodzących z usługi Active Directory do innych połączonych źródeł danych. Program MIM umożliwia wykonanie tej operacji przez uruchomienie serwera zdalnego wywołania procedur (RPC, Remote Procedure Call), który nasłuchuje powiadomień o zmianie hasła z kontrolera domeny usługi Active Directory. Po odebraniu i uwierzytelnieniu żądanie zmiany hasła jest przetwarzane przez program MIM i propagowane do odpowiednich agentów zarządzania.
@@ -86,7 +89,8 @@ Składniki biorące udział w procesie synchronizacji haseł to:
 -   **Biblioteka DLL rozszerzenia haseł** — biblioteka DLL rozszerzenia haseł zapewnia sposób implementacji operacji ustawiania lub zmiany hasła za pomocą rozszerzeń reguł dla dowolnej bazy danych, łącznika Extensible Connectivity lub agenta zarządzania opartego na plikach.
     Jest to realizowane przez utworzenie zaszyfrowanego atrybutu tylko do eksportu o nazwie „export_password”, który w rzeczywistości nie istnieje w połączonym katalogu, ale można do niego uzyskać dostęp i ustawić go w rozszerzeniach zasad aprowizacji lub użyć podczas eksportowania przepływu atrybutu. Więcej informacji o konfigurowaniu rozszerzeń haseł zawiera [dokumentacja dla deweloperów programu FIM](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
-## <a name="preparing-for-password-synchronization"></a>Przygotowywanie synchronizacji haseł
+## Przygotowywanie synchronizacji haseł
+<a id="preparing-for-password-synchronization" class="xliff"></a>
 
 Przed rozpoczęciem konfigurowania synchronizacji haseł dla programu MIM i środowiska usługi Active Directory sprawdź, czy:
 
@@ -110,7 +114,8 @@ Aby skonfigurować synchronizację haseł:
 
 Aby uzyskać więcej informacji na temat konfigurowania synchronizacji haseł, zobacz Using Password Synchronization (Korzystanie z synchronizacji haseł).
 
-## <a name="password-synchronization-process"></a>Proces synchronizacji haseł
+## Proces synchronizacji haseł
+<a id="password-synchronization-process" class="xliff"></a>
 
 Proces synchronizacji żądania zmiany hasła pochodzącego z kontrolera domeny usługi Active Directory z innymi połączonymi źródłami danych przedstawiono na poniższym diagramie:
 
@@ -126,7 +131,8 @@ Proces synchronizacji żądania zmiany hasła pochodzącego z kontrolera domeny 
 
 6.  Za pomocą informacji z tabeli złączeń program MIM określa agentów zarządzania, którzy odbierają zmianę hasła, a następnie wypycha do nich tę zmianę hasła.
 
-## <a name="password-synchronization-security"></a>Zabezpieczenia synchronizacji haseł
+## Zabezpieczenia synchronizacji haseł
+<a id="password-synchronization-security" class="xliff"></a>
 
 Rozwiązano następujące problemy z zabezpieczeniami dotyczące synchronizacji haseł:
 
@@ -140,7 +146,8 @@ Rozwiązano następujące problemy z zabezpieczeniami dotyczące synchronizacji 
 
 -   Zabezpieczenia kolejek haseł — hasła przechowywane w kolejkach haseł usługi PCNS pozostają zaszyfrowane do momentu ich dostarczenia.
 
-## <a name="password-synchronization-error-recovery-scenarios"></a>Scenariusze odzyskiwania po wystąpieniu błędu synchronizacji haseł
+## Scenariusze odzyskiwania po wystąpieniu błędu synchronizacji haseł
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 
 Idealna sytuacja ma miejsce, gdy użytkownik zmieni hasło, a zmiana zostanie zsynchronizowana bez błędów. W poniższych scenariuszach opisano sposób odzyskiwania sprawności programu MIM po wystąpieniu typowych błędów synchronizacji:
 
@@ -162,7 +169,8 @@ Niektóre błędy są na tyle poważne, że żadna liczba ponownych prób nie sp
 | 6927  | Błąd       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ hasło nie spełnia zasad dotyczących haseł systemu docelowego.                                      |
 | 6928  | Błąd       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ rozszerzenie haseł dla docelowego agenta zarządzania nie jest skonfigurowane pod kątem obsługi operacji ustawiania haseł. |
 
-## <a name="user-based-password-change-management"></a>Zarządzanie zmianą haseł oparte na użytkownikach
+## Zarządzanie zmianą haseł oparte na użytkownikach
+<a id="user-based-password-change-management" class="xliff"></a>
 
 Program MIM udostępnia dwie aplikacje sieci Web używające usługi Instrumentacja zarządzania Windows (WMI) do resetowania hasła. Podobnie jak w przypadku synchronizacji haseł zarządzanie hasłami jest aktywowane podczas konfigurowania agenta zarządzania w projektancie agenta zarządzania. Informacje dotyczące zarządzania hasłami i usługi WMI zawiera dokumentacja dla deweloperów programu MIM.
 

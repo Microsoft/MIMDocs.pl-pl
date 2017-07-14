@@ -13,15 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
+# Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Krok 3](step-3-prepare-pam-server.md)
@@ -35,7 +37,8 @@ Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainsta
 
 Jeśli pobrano program MIM, rozpakuj archiwum instalacji programu MIM do nowego folderu.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Uruchom instalatora portalu i usługi.  
+##  Uruchom instalatora portalu i usługi.
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
 
 Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
@@ -99,7 +102,8 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
 Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawdzenie, czy portal programu MIM jest aktywny i zezwolenie użytkownikom na wyświetlanie własnych zasobów obiektów w programie MIM.
 
-## <a name="set-up-mim-portal-management-policy-rules"></a>Konfigurowanie reguł zasad zarządzania portalem programu MIM
+## Konfigurowanie reguł zasad zarządzania portalem programu MIM
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
@@ -115,7 +119,8 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 7. Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pola **Zasady są wyłączone**, kliknij przycisk **OK**, a następnie kliknij przycisk **Prześlij**.
 
-## <a name="verify-the-firewall-connections"></a>Weryfikacja połączeń zapory
+## Weryfikacja połączeń zapory
+<a id="verify-the-firewall-connections" class="xliff"></a>
 
 Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726, 8086 i 8090.
 
@@ -132,7 +137,8 @@ Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726
 8.  Sprawdź, czy jest wyświetlana aktywna sieć priv.contoso.local i sieć domeny.  
 9. Zamknij **Panel sterowania**.
 
-## <a name="set-up-the-sample-web-application"></a>Konfigurowanie przykładowej aplikacji sieci Web
+## Konfigurowanie przykładowej aplikacji sieci Web
+<a id="set-up-the-sample-web-application" class="xliff"></a>
 
 W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja sieci Web dla interfejsu API REST usługi PAM programu MIM.
 
@@ -168,7 +174,8 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja siec
 
 7.  (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do witryny sieci Web pod adresem http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, uwierzytelnij się w razie potrzeby i upewnij się, że można pobrać plik.
 
-## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
+## Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 
 Zainstaluj polecenia cmdlet obiektu żądającego usługi PAM programu MIM na stacji roboczej skonfigurowanej w kroku 1.
 

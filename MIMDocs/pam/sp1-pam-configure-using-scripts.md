@@ -12,14 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="configure-pam-using-scripts"></a>Konfiguracja usługi PAM za pomocą skryptów
+# Konfiguracja usługi PAM za pomocą skryptów
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Jeśli programy SQL i SharePoint zostaną zainstalowane na oddzielnych serwerach, muszą zostać skonfigurowane z użyciem poniższych instrukcji. Jeśli składniki SQL, SharePoint i PAM zostaną zainstalowane na tym samym komputerze, poniższe kroki należy przeprowadzić z poziomu tego komputera.
 
@@ -39,11 +42,13 @@ kroki:
 5. Skopiuj ten sam plik PAMDeploymentConfig.xml do folderu %SYSTEMDRIVE%\PAM na wszystkich maszynach, kontrolerach domeny CORPDC i PRIVDC oraz serwerach składników PAM, SQL Server i SharePoint.
 
 
-## <a name="deployment-worksheet"></a>Arkusz wdrażania
+## Arkusz wdrażania
+<a id="deployment-worksheet" class="xliff"></a>
 
 Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.xml i umieść zaktualizowaną kopię na wszystkich komputerach.
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 
 |Maszyna   | Do uruchomienia jako   |Polecenia   |
 |---|---|---|
@@ -55,7 +60,8 @@ Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.x
 | PAMServer  | Administrator lokalny (po przyłączeniu do domeny: administrator MIM)  | .\PAMDeployment.ps1 Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Wybierz opcję menu 6 (PAM Trust Setup (Konfiguracja zaufania usługi PAM)). |
 
-### <a name="validation"></a>Sprawdzanie poprawności
+### Sprawdzanie poprawności
+<a id="validation" class="xliff"></a>
 
 |  Maszyna | Do uruchomienia jako   | Polecenia   |
 |---|---|---|
@@ -68,9 +74,4 @@ Przed przejściem do kolejnych czynności zaktualizuj plik PAMDeploymentConfig.x
 
 >[!div class="step-by-step"]
 [Początek »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

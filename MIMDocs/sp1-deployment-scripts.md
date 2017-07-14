@@ -12,16 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="mim2016-sp1-pam-deployment-scripts"></a>Skrypty wdrażania usługi PAM w programie MIM2016 SP1
+# Skrypty wdrażania usługi PAM w programie MIM2016 SP1
+<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
 
 W tym dodatku Service Pack wprowadziliśmy szereg skryptów wdrażania w celu ułatwienia wdrażania usługi PAM. Skrypty te są dostępne w centrum pobierania. Przed podjęciem próby użycia tych skryptów należy upewnić się, że poniższe założenia mają zastosowanie do danego środowiska.
 

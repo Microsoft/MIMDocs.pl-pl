@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
+# Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Przygotowywanie domeny](preparing-domain.md)
@@ -32,7 +34,8 @@ ms.lasthandoff: 01/24/2017
 > - Nazwa domeny — **contoso**
 > - Hasło — **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
+## Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RAM. Podczas instalacji określ wersję „Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64”.
 
@@ -63,7 +66,8 @@ Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RA
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>Konfigurowanie zasad zabezpieczeń serwera
+## Konfigurowanie zasad zabezpieczeń serwera
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 
@@ -94,7 +98,8 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
+## Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  Otwórz okno programu PowerShell.
 

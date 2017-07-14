@@ -12,14 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 2f4306dc50ecb869a3c917dfaf320ad80dddedd1
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
+# Krok 8 — Weryfikacja wdrożenia usługi PAM
+<a id="step-8-pam-deployment-verification" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
@@ -80,9 +83,4 @@ W oknie programu PowerShell wpisz polecenie:
 >[!div class="step-by-step"]
 [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
 [Dodatek »](sp1-pam-deployment-addendum.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

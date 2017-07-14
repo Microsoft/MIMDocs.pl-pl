@@ -12,18 +12,21 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
+# Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
+## Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
@@ -39,7 +42,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     1.  Na karcie **Ogólne** w polu nazwy wyświetlanej wpisz ciąg **Zarchiwizowany szablon certyfikatu**.
 
-    2.  b.    Na karcie **Obsługiwanie żądań**
+    2.  b.  Na karcie **Obsługiwanie żądań**
 
         1.  Ustaw opcję **Przeznaczenie** na wartość Podpis i szyfrowanie.
 
@@ -73,7 +76,8 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     10. Wybierz z listy nowy szablon, który został właśnie utworzony (**Zarchiwizowany szablon certyfikatu**), a następnie kliknij przycisk **OK**.
 
-## <a name="create-the-profile-template"></a>Tworzenie szablonu profilu
+## Tworzenie szablonu profilu
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
