@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: e16bcc36fe4bccb621ba4d649aa0b015f2adbcdd
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: bd9c0da17c97cfc15023ad624a249e0f4a2d0825
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="set-up-a-domain"></a>Konfigurowanie domeny
+# Konfigurowanie domeny
+<a id="set-up-a-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -29,7 +31,8 @@ Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi
 
 Ten artykuł zawiera szczegółowy opis czynności, które należy wykonać w celu przygotowania domeny do pracy obok programu MIM.
 
-## <a name="create-user-accounts-and-groups"></a>Tworzenie grup i kont użytkowników
+## Tworzenie grup i kont użytkowników
+<a id="create-user-accounts-and-groups" class="xliff"></a>
 
 Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość w domenie. Dotyczy to między innymi składników programu MIM, takich jak Service i Sync, a także SharePoint i SQL.
 

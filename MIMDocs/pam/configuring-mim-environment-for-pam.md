@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 32815c4ddc51fb9c9187c9fc9a1710239faf7935
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: ce1ce0c67dfd39433ff01dabd542e862c557c787
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="configure-the-mim-environment-for-privileged-access-management"></a>Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management
+# Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management
+<a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
 Proces konfigurowania środowiska pod kątem dostępu między lasami, instalowania i konfigurowania usługi Active Directory i programu Microsoft Identity Manager oraz demonstrowania żądania dostępu just in time obejmuje siedem kroków.
 
 Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć środowisko testowe. W przypadku stosowania funkcji PAM w istniejącym środowisku można użyć własnych kontrolerów domeny lub kont użytkowników zamiast tworzyć nowe zgodne z przykładami.

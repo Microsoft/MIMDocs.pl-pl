@@ -2,25 +2,28 @@
 title: "Obsługiwane platformy oprogramowania | Dokumentacja firmy Microsoft"
 description: "Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016"
 keywords: 
-author: billmath
-ms.author: billmath
+author: fimguy
+ms.author: fimguy
 manager: femila
-ms.date: 03/28/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f1faed3a09023e288a68a8950dae43725f19eb3e
-ms.openlocfilehash: 33c84afa4d6fd2ed7bde33de39dd151f83f07fd4
-ms.lasthandoff: 04/12/2017
+ms.custom: mim
+ms.translationtype: MT
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e8f1d72930cd5998b5d9957e8b8f5dbd958f8342
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
+# Platformy obsługiwane przez program MIM 2016
+<a id="supported-platforms-for-mim-2016" class="xliff"></a>
 
 W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczone gwiazdką * są obsługiwane tylko w wersji programu MIM 2016 z dodatkiem Service Pack 1.
 
@@ -33,18 +36,15 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | | Exchange na potrzeby aprowizacji skrzynek pocztowych i synchronizacji usługi GAL (opcjonalnie)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Środowisko programistyczne (opcjonalnie) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Dodatkowy system połączony (opcjonalnie) | Usługi domenowe Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 lub nowszy<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Inne produkty podmiotów trzecich |
-| **Usługa programu MIM** (za wyjątkiem scenariusza PAM) | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Baza danych usługi programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange na potrzeby wiadomości e-mail zatwierdzania i zarządzania grupami usługi MIM (opcjonalnie) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* <br/> Exchange Online* (tylko powiadomienia) |
-| **Portal i usługa programu MIM** (tylko scenariusz PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| **Usługa i portal MIM** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory dla lasu PAM środowiska bastionu | Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory dla istniejących lasów | Windows Server 2008 <br/> Windows Server 2008 R2* <br/> Windows Server 2012* <br/> Windows Server 2012 R2* <br/> Windows Server 2016 * |
 | | Baza danych usługi programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Program SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Serwer poczty dla wiadomości e-mail zatwierdzania i zarządzania grupami usługi programu MIM (opcjonalnie) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* <br/> Exchange Online* (tylko powiadomienia) |
-| | Przeglądarka | Wszystkie popularne przeglądarki |
+| | Przeglądarka | Wszystkie główne przeglądarki * |
 | **Raportowanie usługi programu MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
-| | Magazyn danych | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager* (z wersją 4.4.1459)<br/> [Zgodność wersji programu SQL Server z programem System Center 2016](https://technet.microsoft.com/en-us/system-center-docs/system-requirements/sql-server-version-compatibility)
+| | Magazyn danych | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager* (z wersją 4.4.1459)<br/> [Zgodność wersji programu SQL Server z programem System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **Portale resetowania hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Przeglądarka sieci Web | Wszystkie popularne przeglądarki |

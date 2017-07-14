@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
+# Krok 7 — podniesienie uprawnień dostępu użytkownika
+<a id="step-7--elevate-a-users-access" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Krok 6 ](step-6-transition-group-to-pam.md)
@@ -28,7 +30,8 @@ ms.lasthandoff: 05/02/2017
 
 Ten krok pokazuje, że użytkownik może zażądać dostępu do roli przy użyciu programu MIM.
 
-## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Sprawdzenie, czy Jen nie może uzyskać dostępu do uprzywilejowanego zasobu
+## Sprawdzenie, czy Jen nie może uzyskać dostępu do uprzywilejowanego zasobu
+<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
 Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzywilejowanego zasobu w lesie CORP.
 
 1. Wyloguj się z CORPWKSTN, aby usunąć wszystkie otwarte połączenia z pamięci podręcznej.
@@ -37,7 +40,8 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 4. Wpisz polecenie `dir \\corpwkstn\corpfs`. Powinien pojawić się komunikat o błędzie **Odmowa dostępu**.
 5. Zostaw okno wiersza polecenia otwarte.
 
-## <a name="request-privileged-access-from-mim"></a>Zażądaj uprzywilejowanego dostępu z programu MIM.
+## Zażądaj uprzywilejowanego dostępu z programu MIM.
+<a id="request-privileged-access-from-mim" class="xliff"></a>
 1. W CORPWKSTN, nadal jako CONTOSO\Jen, wpisz następujące polecenie.
 
     ```
@@ -66,7 +70,8 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 
 6. Wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno wiersza polecenia.
 
-## <a name="validate-the-elevated-access"></a>Przeprowadź walidację podwyższonego poziomu dostępu.
+## Przeprowadź walidację podwyższonego poziomu dostępu.
+<a id="validate-the-elevated-access" class="xliff"></a>
 W nowo otwartym oknie wpisz następujące polecenia.
 
 ```
@@ -76,7 +81,8 @@ dir \\corpwkstn\corpfs
 
 Jeśli polecenie dir zakończy się niepowodzeniem z komunikatem o błędzie **Odmowa dostępu**, ponownie sprawdź relację zaufania.
 
-## <a name="activate-the-privileged-role"></a>Aktywacja roli uprzywilejowanej
+## Aktywacja roli uprzywilejowanej
+<a id="activate-the-privileged-role" class="xliff"></a>
 Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykładowego portalu PAM.
 
 1. Upewnij się, że użytkownik jest zalogowany w CORPWKSTN jako CORP\Jen.
@@ -96,7 +102,8 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 > [!Note]
 > W tym środowisku możesz też dowiedzieć się, jak wdrażać aplikacje, które korzystają z interfejsu API REST PAM, zgodnie z opisem w [dokumentacji interfejsu API REST usługi Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
-## <a name="summary"></a>Podsumowanie
+## Podsumowanie
+<a id="summary" class="xliff"></a>
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
 
 >[!div class="step-by-step"]

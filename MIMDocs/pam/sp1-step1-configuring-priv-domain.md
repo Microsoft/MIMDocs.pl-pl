@@ -12,13 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 24e91ed2f51206b03bec505fc0d28d25128d2c94
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
-# <a name="step-1-configuring-the-priv-domain"></a>Krok 1 — Konfigurowanie domeny PRIV
+# Krok 1 — Konfigurowanie domeny PRIV
+<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [Krok 2 »](sp1-step2-configuring-corp-domain.md)
@@ -43,9 +46,4 @@ Po zakończeniu działania skryptu zostanie wyświetlony monit o ponowne uruchom
 
 >[!div class="step-by-step"]
 [Krok 2 »](sp1-step2-configuring-corp-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

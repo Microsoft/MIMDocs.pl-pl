@@ -12,18 +12,20 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Praca z funkcją raportowania hybrydowego programu Identity Manager — publiczna wersja zapoznawcza (odświeżanie)
+# Praca z funkcją raportowania hybrydowego programu Identity Manager — publiczna wersja zapoznawcza (odświeżanie)
+<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
 
-## <a name="available-hybrid-reports"></a>Dostępne raporty hybrydowe
+## Dostępne raporty hybrydowe
+<a id="available-hybrid-reports" class="xliff"></a>
 Pierwsze trzy raporty programu Microsoft Identity Manager dostępne w usłudze Azure AD to **Aktywność resetowania haseł**, **Rejestracja resetowania haseł** i **Aktywność grup samoobsługi**.
 
 -   Raport aktywności resetowania haseł obejmuje każde wystąpienie resetowania hasła przez użytkownika przy użyciu usługi SSPR oraz bramy lub **metody** używane na potrzeby uwierzytelniania.
@@ -40,7 +42,8 @@ Pierwsze trzy raporty programu Microsoft Identity Manager dostępne w usłudze A
 > Poprzedniego agenta hybrydowego należy odinstalować.</br>
 > Aby odinstalować raporty hybrydowe, odinstaluj agenta MIMreportingAgent.msi.
 
-## <a name="prerequisites"></a>Wymagania wstępne
+## Wymagania wstępne
+<a id="prerequisites" class="xliff"></a>
 
 1.  Zainstaluj program Microsoft Identity Manager 2016 RTM lub SP1 z usługą MIM.
 
@@ -48,7 +51,8 @@ Pierwsze trzy raporty programu Microsoft Identity Manager dostępne w usłudze A
 
 3.  Upewnij się, że masz wychodzące połączenie z Internetem między serwerem programu Microsoft Identity Manager i platformą Azure.
 
-## <a name="requirements"></a>Wymagania
+## Wymagania
+<a id="requirements" class="xliff"></a>
 Poniższa tabela zawiera listę wymagań dotyczących korzystania z funkcji raportowania hybrydowego programu Microsoft Identity Manager.
 
 | Wymaganie | Opis |
@@ -63,7 +67,8 @@ Poniższa tabela zawiera listę wymagań dotyczących korzystania z funkcji rapo
 | Zezwolenie na następujące witryny sieci Web w przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer |W przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer korzystanie z poniższych witryn sieci Web musi być dozwolone na serwerze, na którym będzie instalowany agent.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Serwer federacyjny organizacji traktowany jako zaufany przez usługę Azure Active Directory, na przykład: https://sts.contoso.com</li> |
 </BR>
 
-## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Instalowanie agenta raportowania programu Microsoft Identity Manager w usłudze Azure AD
+## Instalowanie agenta raportowania programu Microsoft Identity Manager w usłudze Azure AD
+<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
 Po zainstalowaniu agenta raportowania dane aktywności programu Microsoft Identity Manager są eksportowane z programu MIM do dziennika zdarzeń systemu Windows. Agent raportowania programu MIM przetwarza zdarzenia i przekazuje je do platformy Azure. Na platformie Azure zdarzenia są analizowane, odszyfrowywane i filtrowane pod kątem wymaganych raportów.
 
 1.  Zainstaluj program Microsoft Identity Manager 2016.
@@ -90,7 +95,8 @@ Po zainstalowaniu agenta raportowania dane aktywności programu Microsoft Identi
 
     Aby utworzyć dane raportu, można zresetować hasło użytkownika za pomocą portalu samoobsługowego resetowania haseł programu Microsoft Identity Manager. Upewnij się, że pomyślnie ukończono resetowanie hasła, a następnie sprawdź, czy dane są wyświetlane w portalu zarządzania usługi Azure AD.
 
-## <a name="view-hybrid-reports-in-the-azure-portal"></a>Wyświetlanie raportów hybrydowych w witrynie Azure Portal
+## Wyświetlanie raportów hybrydowych w witrynie Azure Portal
+<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
 
 1.  Zaloguj się w witrynie [Azure Portal](https://portal.azure.com/) przy użyciu konta administratora globalnego dzierżawy.
 
@@ -105,10 +111,12 @@ Po zainstalowaniu agenta raportowania dane aktywności programu Microsoft Identi
 > [!WARNING]
 > Dane inspekcji programu Microsoft Identity Manager mogą pojawić się w witrynie Azure Portal dopiero po pewnym czasie.
 
-## <a name="stop-creating-hybrid-reports"></a>Zatrzymywanie tworzenia raportów hybrydowych
+## Zatrzymywanie tworzenia raportów hybrydowych
+<a id="stop-creating-hybrid-reports" class="xliff"></a>
 Aby zatrzymać przekazywanie danych raportowania inspekcji z programu Microsoft Identity Manager do usługi Azure Active Directory, odinstaluj agenta raportowania hybrydowego. Użyj narzędzia **Dodaj lub usuń programy** systemu Windows, aby odinstalować funkcję raportowania hybrydowego programu Microsoft Identity Manager.
 
-## <a name="windows-events-used-for-hybrid-reporting"></a>Zdarzenia systemu Windows używane na potrzeby raportowania hybrydowego
+## Zdarzenia systemu Windows używane na potrzeby raportowania hybrydowego
+<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
 Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w dzienniku zdarzeń systemu Windows i są widoczne w Podglądzie zdarzeń w obszarze Dzienniki aplikacji i usług -&gt; **Dziennik żądań programu Identity Manager**. Każde żądanie programu MIM jest eksportowane jako zdarzenie w dzienniku zdarzeń systemu Windows w strukturze JSON. Takie zdarzenia można wyeksportować do rozwiązania SIEM.
 
 |Typ zdarzenia|ID|Szczegóły zdarzenia|

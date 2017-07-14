@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
+# Instalacja programu MIM 2016: usługa i portal programu MIM
+<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Usługa synchronizacji programu MIM](install-mim-sync.md)
@@ -36,7 +38,8 @@ ms.lasthandoff: 01/24/2017
 Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kroku, przed kontynuowaniem cofnij się i zainstaluj składniki programu Microsoft Identity Manager 2016.
 
 
-## <a name="configure-mim-service-and-portal-for-installation"></a>Konfigurowanie usługi i portalu programu MIM pod kątem instalacji
+## Konfigurowanie usługi i portalu programu MIM pod kątem instalacji
+<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
 
 1. Uruchom **instalatora usługi i portalu programu MIM** z rozpakowanego podfolderu **Service and Portal** (Usługa i portal).
 
@@ -78,7 +81,8 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 16. Zaznacz pole wyboru umożliwiające otwarcie portów 5725 i 5726 w zaporze i pole wyboru umożliwiające zezwolenie wszystkim uwierzytelnionym użytkownikom na dostęp do portalu programu MIM.
 
-## <a name="configure-mim-password-registration-portal"></a>Konfigurowanie portalu rejestracji haseł programu MIM
+## Konfigurowanie portalu rejestracji haseł programu MIM
+<a id="configure-mim-password-registration-portal" class="xliff"></a>
 
 1.  Ustaw wartość *contoso\MIMSSPR* jako nazwę konta usługi dla rejestracji SSPR i *Pass@word1* jako jego hasło.
 
@@ -90,7 +94,8 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM podaj wartość *http://CorpIDM.contoso.local* jako adres serwera usługi programu MIM dla portalu rejestracji haseł.
 
-## <a name="configure-mim-password-reset-portal"></a>Konfigurowanie portalu resetowania haseł programu MIM
+## Konfigurowanie portalu resetowania haseł programu MIM
+<a id="configure-mim-password-reset-portal" class="xliff"></a>
 
 1.  Ustaw wartość *Contoso\MIMSSPRService* jako nazwę konta usługi dla rejestracji SSPR i *Pass@word1* jako jego hasło.
 
@@ -102,7 +107,8 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM podaj wartość *CorpIDname  http://CorpIDname.domain.local* jako adres serwera usługi programu MIM dla portalu resetowania haseł.
 
-## <a name="install-mim-service-and-portal"></a>Instalacja portalu i usługi programu MIM
+## Instalacja portalu i usługi programu MIM
+<a id="install-mim-service-and-portal" class="xliff"></a>
 
 Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zainstaluj**, aby rozpocząć instalowanie wybranych składników z grupy **Usługa i portal**.
 

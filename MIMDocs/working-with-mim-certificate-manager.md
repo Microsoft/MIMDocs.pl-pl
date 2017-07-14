@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="working-with-the-mim-certificate-manager"></a>Praca z Menedżerem certyfikatów programu MIM
+# Praca z Menedżerem certyfikatów programu MIM
+<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Po przygotowaniu programu MIM 2016 i Menedżera certyfikatów do pracy można wdrożyć aplikację Menedżer certyfikatów programu MIM ze Sklepu Windows, dzięki której użytkownicy będą mogli łatwo zarządzać fizycznymi kartami inteligentnymi, wirtualnymi kartami inteligentnymi i certyfikatami oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
 
 1.  Utworzenie szablonu certyfikatu.
@@ -31,7 +33,8 @@ Po przygotowaniu programu MIM 2016 i Menedżera certyfikatów do pracy można wd
 
 4.  Wdrożenie aplikacji za pomocą programu SCCM lub usługi Intune.
 
-## <a name="create-a-certificate-template"></a>Tworzenie szablonu certyfikatu
+## Tworzenie szablonu certyfikatu
+<a id="create-a-certificate-template" class="xliff"></a>
 Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w normalny sposób. Jednak w tym przypadku musisz upewnić się, że szablon certyfikatu jest w wersji 3 lub nowszej.
 
 1.  Zaloguj się do serwera z uruchomionymi usługami AD CS (serwera certyfikatów).
@@ -70,7 +73,8 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 16. Wybierz nowo utworzony szablon z listy, a następnie kliknij przycisk **OK**.
 
-## <a name="create-a-profile-template"></a>Tworzenie szablonu profilu
+## Tworzenie szablonu profilu
+<a id="create-a-profile-template" class="xliff"></a>
 Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtualnej karty inteligentnej i usunięcia kolekcji danych. Aplikacja Menedżer certyfikatów nie obsługuje zebranych danych, dlatego należy wyłączyć tę funkcję w opisany poniżej sposób.
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
@@ -95,7 +99,8 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 11. Musisz wyłączyć elementy kolekcji danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie zaznaczając pole wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**.
 
-## <a name="prepare-the-cm-app-for-deployment"></a>Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
+## Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
+<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
 
 1.  W wierszu polecenia uruchom poniższe polecenie, aby rozpakować aplikację, a następnie wyodrębnij zawartość do nowego podfolderu o nazwie appx oraz utwórz kopię, aby nie modyfikować oryginalnego pliku.
 
@@ -252,6 +257,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
     -   Aby uzyskać pomoc dotyczącą skryptu **ConfigureMIimCMClientAndRelyingParty.ps1**, uruchom polecenie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## <a name="deploy-the-app"></a>Wdrażanie aplikacji
+## Wdrażanie aplikacji
+<a id="deploy-the-app" class="xliff"></a>
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
 

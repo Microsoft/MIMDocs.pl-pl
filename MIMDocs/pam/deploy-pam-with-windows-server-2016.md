@@ -10,18 +10,19 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
 
 
-# <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
+# Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
+<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
 
 
 W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”.  Po skonfigurowaniu tego scenariusza bilet protokołu Kerberos użytkownika zostanie ograniczony w czasie do pozostałego czasu aktywacji roli. 
@@ -29,7 +30,8 @@ W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Window
 >[!Note]
 Z tą wersją programu MIM nie można używać wersji przeglądowych systemu Windows Server 2016 wcześniejszych od wersji Technical Preview 5.
 
-## <a name="preparation"></a>Przygotowanie
+## Przygotowanie
+<a id="preparation" class="xliff"></a>
 
 Dla środowiska laboratorium wymagane są przynajmniej dwie maszyny wirtualne:
 
@@ -146,7 +148,8 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
 -   Element nr 5 (weryfikacja zaufania) **nie jest wymagany, gdy domeny CORP i PRIV działają na poziomie funkcjonalności domeny systemu Windows Server 2016**.
 
-## <a name="more-information"></a>Więcej informacji
+## Więcej informacji
+<a id="more-information" class="xliff"></a>
 
 - [Privileged Access Management for Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) (Usługa Privileged Access Management dla usług Active Directory Domain Services)
 - [Configure the MIM environment for Privileged Access Management](configuring-mim-environment-for-pam.md) (Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management)

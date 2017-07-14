@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
+# Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
+<a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Usługa i portal MIM](install-mim-service-portal.md)
@@ -33,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 
 Domyślnie żadne łączniki usługi synchronizacji programu MIM (Sync) nie są skonfigurowane.  Typowym pierwszym krokiem jest użycie usługi synchronizacji programu MIM do wypełniania bazy danych usługi MIM informacjami z istniejących kont usługi Active Directory. W tym celu używana jest aplikacja usługi synchronizacji programu MIM.
 
-## <a name="create-the-mim-management-agent"></a>Tworzenie agenta zarządzania programu MIM
+## Tworzenie agenta zarządzania programu MIM
+<a id="create-the-mim-management-agent" class="xliff"></a>
 Agent zarządzania (MA) programu MIM jest łącznikiem usługi synchronizacji programu MIM z usługą MIM. Ten łącznik można utworzyć przy użyciu kreatora tworzenia agenta zarządzania.
 
 Podczas konfigurowania agenta zarządzania programu MIM należy określić konto użytkownika. W niniejszym dokumencie użyto nazwy **MIMMA** dla tego konta.
@@ -41,7 +44,8 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 > [!NOTE]
 > Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
 
-###<a name="to-create-the-mim-ma"></a>Aby utworzyć agenta zarządzania programu MIM
+###Aby utworzyć agenta zarządzania programu MIM
+<a id="to-create-the-mim-ma" class="xliff"></a>
 
 1.  Otwórz menedżera usługi synchronizacji.
 
@@ -163,7 +167,8 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 11.  Aby utworzyć agenta zarządzania, na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ).
 
-## <a name="create-the-ad-management-agent"></a>Tworzenie agenta zarządzania usługi AD
+## Tworzenie agenta zarządzania usługi AD
+<a id="create-the-ad-management-agent" class="xliff"></a>
 Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenowych w usłudze AD. Ten łącznik można utworzyć przy użyciu kreatora tworzenia agenta zarządzania.
 
 1. Aby otworzyć kreatora tworzenia agenta zarządzania, w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz).
@@ -225,11 +230,13 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 12. Na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ).
 
 
-## <a name="create-run-profiles"></a>Tworzenie profilów uruchamiania
+## Tworzenie profilów uruchamiania
+<a id="create-run-profiles" class="xliff"></a>
 
 Można utworzyć profile uruchamiania dla łączników menedżerów zarządzania usług AD (ADMA) i MIM (MIMMA).
 
-### <a name="create-run-profiles-for-the-adma-connector"></a>Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi AD (ADMA)
+### Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi AD (ADMA)
+<a id="create-run-profiles-for-the-adma-connector" class="xliff"></a>
 
 W poniższej tabeli zamieszczono pięć profilów uruchamiania tworzonych dla łącznika menedżera ADMA:
 
@@ -261,7 +268,8 @@ Aby utworzyć profile uruchamiania dla łącznika menedżera ADMA:
 
 5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**.
 
-### <a name="create-run-profiles-for-the-mimma-connector"></a>Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi MIM (MIMMA)
+### Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi MIM (MIMMA)
+<a id="create-run-profiles-for-the-mimma-connector" class="xliff"></a>
 
 W poniższej tabeli zamieszczono pięć pasujących profilów uruchamiania dla łącznika MIMMA:
 
@@ -293,7 +301,8 @@ Aby utworzyć profile uruchamiania dla łącznika menedżera MIMMA:
 
 5. Aby zamknąć okno dialogowe Configure Run Profiles (Konfigurowanie profilów uruchamiania), kliknij przycisk **OK**.
 
-## <a name="configure-the-mim-service"></a>Konfigurowanie usługi MIM
+## Konfigurowanie usługi MIM
+<a id="configure-the-mim-service" class="xliff"></a>
 
 W portalu MIM zostanie utworzona reguła synchronizacji ruchu przychodzącego użytkowników usługi AD dla usługi MIM.
 
@@ -347,10 +356,12 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
 8. Na karcie **Summary** (Podsumowanie) kliknij przycisk **Submit** (Prześlij).
 
-## <a name="initialize-the-testing-environment"></a>Inicjowanie środowiska testowego
+## Inicjowanie środowiska testowego
+<a id="initialize-the-testing-environment" class="xliff"></a>
 Aby przetestować konfigurację programu MIM z danymi usługi AD, należy wcześniej wykonać cztery kroki:
 
-### <a name="enable-provisioning"></a>Włączanie zastrzegania
+### Włączanie zastrzegania
+<a id="enable-provisioning" class="xliff"></a>
 
 1. Otwórz menedżera usługi synchronizacji.
 
@@ -360,7 +371,8 @@ Aby przetestować konfigurację programu MIM z danymi usługi AD, należy wcześ
 
 4. Aby zamknąć okno dialogowe Options (Opcje), kliknij przycisk **OK**.
 
-### <a name="initialize-the-mimma"></a>Inicjowanie menedżera MIMMA
+### Inicjowanie menedżera MIMMA
+<a id="initialize-the-mimma" class="xliff"></a>
 
 Wykonaj pełny cykl synchronizacji dla tego łącznika. Kompletny cykl składa się z następujących profilów uruchamiania:
 
@@ -385,13 +397,15 @@ Wykonaj następujące czynności, aby uruchomić wymienione cztery profile uruch
 
     - Aby uruchomić profil, kliknij przycisk **OK**.
 
-#### <a name="configure-attribute-flow-precedence"></a>Konfigurowanie pierwszeństwa przepływu atrybutów
+#### Konfigurowanie pierwszeństwa przepływu atrybutów
+<a id="configure-attribute-flow-precedence" class="xliff"></a>
 
 Podczas inicjowania łącznika usługi MIM skonfigurowane reguły synchronizacji zostały przeniesione do środowiska metaverse.
 
 Dostosuj pierwszeństwo przepływu atrybutów dla atrybutów wprowadzanych przez ten łącznik, aby umożliwić przepływ atrybutów znajdujących się już w usłudze AD do środowiska metaverse, a później do bazy danych usługi MIM.
 
-### <a name="initialize-the-adma"></a>Inicjowanie menedżera ADMA
+### Inicjowanie menedżera ADMA
+<a id="initialize-the-adma" class="xliff"></a>
 
 Aby zainicjować łącznik usługi Active Directory, należy wykonać na nim pełny import i pełną synchronizację. Pełny import powoduje przeniesienie istniejących obiektów z usługi AD do przestrzeni łącznika. Pełna synchronizacja powoduje zaktualizowanie reguł synchronizacji zgodnie z regułami łącznika usługi MIM.
 
@@ -409,7 +423,8 @@ Aby zainicjować łącznik usługi Active Directory, należy wykonać na nim pe�
 
     - Aby uruchomić profil, kliknij przycisk **OK**.
 
-### <a name="populate-the-mim-service-database"></a>Wypełnianie bazy danych usługi MIM
+### Wypełnianie bazy danych usługi MIM
+<a id="populate-the-mim-service-database" class="xliff"></a>
 
 Aby wypełnić obiektami bazę danych usługi MIM, należy wykonać cykl synchronizacji na łączniku menedżera MIMMA. Ten cykl składa się z następujących elementów:
 

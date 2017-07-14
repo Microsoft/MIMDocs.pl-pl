@@ -12,15 +12,17 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
-ms.lasthandoff: 01/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
+ms.openlocfilehash: 1114be2ce13ca012582676803eb1dc29cadae596
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
+# Konfigurowanie serwera zarządzania tożsamościami: SharePoint
+<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -33,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 > - Hasło — **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Zainstaluj program **SharePoint Foundation 2013 z dodatkiem SP1**
+## Zainstaluj program **SharePoint Foundation 2013 z dodatkiem SP1**
+<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
 
 > [!NOTE]
 > Instalator wymaga połączenia internetowego w celu pobrania jego wymagań wstępnych. Jeśli komputer znajduje się w sieci wirtualnej, która nie zapewnia łączności z Internetem, dodaj do komputera dodatkowy interfejs sieciowy pozwalający na łączenie się z Internetem. Interfejs ten można wyłączyć po ukończeniu instalacji.
@@ -60,7 +63,8 @@ Wykonaj następujące kroki, aby zainstalować program SharePoint Foundation 201
 
 4.  Po zakończeniu instalacji uruchom kreatora.
 
-## <a name="run-the-wizard-to-configure-sharepoint"></a>Uruchom kreatora, aby skonfigurować program SharePoint
+## Uruchom kreatora, aby skonfigurować program SharePoint
+<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
 
 Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby skonfigurować program SharePoint do pracy z programem MIM.
 
@@ -80,7 +84,8 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 8. W oknie **Tworzenie kolekcji witryn** kliknij przycisk **Pomiń**.  Następnie kliknij przycisk **Zakończ**.
 
-## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Przygotowywanie programu SharePoint do hostowania portalu programu MIM
+## Przygotowywanie programu SharePoint do hostowania portalu programu MIM
+<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
 
 > [!NOTE]
 > Początkowo protokół SSL nie zostanie skonfigurowany. Należy pamiętać o skonfigurowaniu protokołu SSL lub równoważnego przed włączeniem dostępu do tego portalu.

@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: MT
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: pl-pl
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
+# Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
+<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Krok 4](step-4-install-mim-components-on-pam-server.md)
@@ -29,7 +31,8 @@ ms.lasthandoff: 05/02/2017
 
 Dla każdej domeny CORP, np. contoso.local, kontrolery domeny PRIV i CONTOSO muszą być związane relacją zaufania. Dzięki temu użytkownicy w domenie PRIV mogą uzyskać dostęp do zasobów w domenie CORP.
 
-## <a name="connect-each-domain-controller-to-its-counterpart"></a>Łączenie każdego kontrolera domeny z jego odpowiednikiem
+## Łączenie każdego kontrolera domeny z jego odpowiednikiem
+<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
 
 Zanim zostanie nawiązana relacja zaufania, każdy kontroler domeny musi zostać skonfigurowany do rozpoznawania nazwy DNS swojego odpowiednika, w oparciu o kontroler domeny/adres IP serwera DNS innej domeny.
 
@@ -47,7 +50,8 @@ Zanim zostanie nawiązana relacja zaufania, każdy kontroler domeny musi zostać
 
     ![Struktura plików klucza prywatnego — zrzut ekranu](./media/PAM_GS_DNS_Manager.png)
 
-## <a name="establish-trust-on-pamsrv"></a>Ustalenie zaufania na serwerze PAMSRV
+## Ustalenie zaufania na serwerze PAMSRV
+<a id="establish-trust-on-pamsrv" class="xliff"></a>
 
 Na serwerze PAMSRV ustal jednokierunkowe zaufanie z każdą domeną, np. CORPDC, aby kontrolery domeny CORP miały zaufanie do lasu PRIV.
 
@@ -69,7 +73,8 @@ Na serwerze PAMSRV ustal jednokierunkowe zaufanie z każdą domeną, np. CORPDC,
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## <a name="give-forests-read-access-to-active-directory"></a>Zapewnianie dostępu do odczytu do usługi Active Directory w lassach
+## Zapewnianie dostępu do odczytu do usługi Active Directory w lassach
+<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
 
 Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla administratorów PRIV i usługi monitorowania.
 
@@ -92,7 +97,8 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 
     Dane wyjściowe powinny również wskazywać, że **Filtrowanie SID nie jest włączone dla tego zaufania**. Zobacz [Wyłączanie poddawania filtra SID kwarantannie](http://technet.microsoft.com/library/cc772816.aspx), aby uzyskać więcej informacji.
 
-## <a name="start-the-monitoring-and-component-services"></a>Uruchamianie usług monitorowania i składowych
+## Uruchamianie usług monitorowania i składowych
+<a id="start-the-monitoring-and-component-services" class="xliff"></a>
 
 1.  Zaloguj się do serwera PAMSRV jako administrator domeny PRIV (PRIV\Administrator).
 
