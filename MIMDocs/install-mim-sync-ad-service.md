@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 <a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
 
@@ -448,4 +445,3 @@ Wykonaj następujące czynności, aby uruchomić wymienione trzy profile urucham
 
 >[!div class="step-by-step"]
 [« Usługa i portal MIM](install-mim-service-portal.md)
-

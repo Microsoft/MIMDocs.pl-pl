@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Praca z funkcją raportowania hybrydowego programu Identity Manager — publiczna wersja zapoznawcza (odświeżanie)
 <a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
 
@@ -123,4 +120,3 @@ Zdarzenia generowane przez program Microsoft Identity Manager są rejestrowane w
 |--------------|------|-----------------|
 |Informacje|4121|Dane zdarzeń programu MIM obejmujące wszystkie dane żądań.|
 |Informacje|4137|Rozszerzenie zdarzenia 4121 programu MIM na wypadek zbyt dużej ilości danych dla jednego zdarzenia. Nagłówek w tym zdarzeniu ma następujący format: `"Request: <GUID> , message <xxx> out of <xxx>`|
-

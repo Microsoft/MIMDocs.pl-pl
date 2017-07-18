@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Opis składników funkcji PAM
 <a id="understand-the-components-of-pam" class="xliff"></a>
 
@@ -43,4 +40,3 @@ Po zainstalowaniu i skonfigurowaniu każda grupa utworzona w lesie PRIV w proces
 W wyniku tego, gdy użytkownik zażąda podniesienia uprawnień za pomocą poleceń cmdlet programu PowerShell, a żądanie zostanie zatwierdzone, usługa MIM doda jego konto w lesie PRIV do grupy w lesie PRIV. Gdy użytkownik zaloguje się za pomocą konta uprzywilejowanego, jego token protokołu Kerberos będzie zawierał identyfikator zabezpieczeń (SID) identyczny z identyfikatorem SID grupy w lesie CORP. Ponieważ las CORP skonfigurowano tak, aby ufał lasowi PRIV, konto z podniesionymi uprawnieniami używane do uzyskania dostępu do zasobu w lesie CORP będzie traktowane przez zasób sprawdzający członkostwo w grupach protokołu Kerberos jako członek grup zabezpieczeń tego zasobu. Odbywa się to przez uwierzytelnianie między lasami za pośrednictwem protokołu Kerberos.
 
 Ponadto członkostwo takie jest ograniczone czasowo, a zatem po upływie wstępnie skonfigurowanego okresu konto administracyjne danego użytkownika przestanie należeć do grupy w lesie PRIV. W związku z tym nie będzie już można używać tego konta w celu uzyskania dostępu do dodatkowych zasobów.
-

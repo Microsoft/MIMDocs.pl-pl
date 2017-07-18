@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Omówienie środowiska
 <a id="environment-overview" class="xliff"></a>
 
@@ -34,4 +31,3 @@ Na dyskach, na których będą przechowywane obrazy dysków maszyny wirtualnej, 
 
 > [!NOTE]
 > Bieżąca wersja Customer Technical Preview (CTP) programu MIM nie jest zgodna z bazą danych ani zawartością katalogu z poprzedniej wersji CTP. Jeśli wcześniej miała miejsce ocena scenariusza programu MIM dla funkcji PAM lub innych scenariuszy, wykonaj i zarchiwizuj kopię zapasową maszyn wirtualnych używanych na potrzeby tego testu, a następnie rozpocznij wdrażanie przy użyciu nowych obrazów maszyny wirtualnej, które nie były wcześniej używane w scenariuszach dotyczących programu MIM.
-

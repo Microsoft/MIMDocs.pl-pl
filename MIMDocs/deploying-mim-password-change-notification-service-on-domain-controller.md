@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Wdrażanie usługi powiadamiania o zmianie hasła w programie MIM na kontrolerze domeny
 <a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
 
@@ -63,4 +60,3 @@ Usługa powiadamiania o zmianie hasła (PCNS), instalowana na kontrolerach domen
 ## Konfigurowanie usługi powiadamiania o zmianie hasła
 <a id="configuring-the-password-change-notification-service" class="xliff"></a>
 Po ponownym ustanowieniu połączenia z serwerem kontrolera domeny przejdź jako administrator domeny do folderu *C:\Program Files\Microsoft Password Change Notification.* Uruchom plik *pcnscfg.exe*.
-

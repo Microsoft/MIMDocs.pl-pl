@@ -11,16 +11,12 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: MT
-ms.sourcegitcommit: 3bb89e2c86724e6f6d32e4043fa37da74e2b7b24
 ms.openlocfilehash: a0d00c7e5d99e43d3fb0b3011a3851f7194bfdf2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
-
 # Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
 <a id="microsoft-identity-manager-2016-best-practices" class="xliff"></a>
 
@@ -733,4 +729,3 @@ Jako części przepływów pracy w przepływach pracy autoryzacji należy unika�
 <a id="understanding-fim-service-partitions" class="xliff"></a>
 
 Celem programu FIM jest przetwarzanie żądań, które mogą być inicjowane przez różnych klientów programu FIM, takich jak usługa FIM Synchronization Service i składniki samoobsługi, zgodnie ze skonfigurowanymi zasadami biznesowymi. Z założenia każde wystąpienie usługi FIM Service należy do grupy logicznej składającej się z co najmniej jednego wystąpienia usługi FIM Service, która jest także znana jako partycja usługi FIM Service. Jeśli masz tylko jedno wystąpienie usługi FIM Service wdrożone do obsługi wszystkich żądań, może to powodować opóźnienia przetwarzania. Niektóre operacje mogą nawet przekraczać domyślne wartości limitu czasu odpowiednie dla operacji samoobsługi. Partycje usługi FIM Service mogą pomóc rozwiązać ten problem. Aby uzyskać dodatkowe informacje, zobacz informacje o partycjach usługi FIM Service.
-

@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Praca z Menedżerem certyfikatów programu MIM
 <a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Po przygotowaniu programu MIM 2016 i Menedżera certyfikatów do pracy można wdrożyć aplikację Menedżer certyfikatów programu MIM ze Sklepu Windows, dzięki której użytkownicy będą mogli łatwo zarządzać fizycznymi kartami inteligentnymi, wirtualnymi kartami inteligentnymi i certyfikatami oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
@@ -260,4 +257,3 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 ## Wdrażanie aplikacji
 <a id="deploy-the-app" class="xliff"></a>
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
-

@@ -10,14 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
 # Rejestrowanie dynamiczne usługi MIM z dodatkiem SP1 (4.4.1436.0)
 <a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
@@ -25,9 +22,9 @@ W wersji 4.4.1436.0 wprowadziliśmy nową możliwość rejestrowania. Dzięki ni
 
 Po zainstalowaniu w pliku Microsoft.ResourceManagement.Service.exe.config zobaczysz nowy wiersz o nazwie:
 
-*    Wiersz 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    Wiersz 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    Wiersz 266: ``</system.diagnostics> ``
+*   Wiersz 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   Wiersz 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   Wiersz 266: ``</system.diagnostics> ``
 
 ![Wyróżnione sekcje zawierające nowe zapisy rejestrowania dynamicznego](media/mim-service-dynamic-logging/screen01.png)
 
@@ -53,4 +50,3 @@ Domyślnie lokalizacją rejestrowania będzie folder **C:\Program Files\Microsof
 Aby wyświetlić ślad, możesz użyć [narzędzia do przeglądania danych śledzenia usług](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
 
  ![Zrzut ekranu narzędzia do przeglądania danych śledzenia usług](media/mim-service-dynamic-logging/screen04.png)
-

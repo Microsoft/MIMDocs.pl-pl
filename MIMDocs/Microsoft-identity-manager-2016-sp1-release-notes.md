@@ -12,13 +12,11 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 69d44af5eaef3665f3a55ea91f48d3658cd5e65c
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
 # Co nowego w programie Microsoft Manager Identity 2016 z dodatkiem Service Pack 1
 <a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
@@ -92,4 +90,3 @@ Należy utworzyć kopię zapasową baz danych MIMService i MIM Sync.
   3. Wybierz składnik MIM do uaktualnienia.
   4. Kontynuuj instalację, wykonując wyświetlane polecenia.
     * Instalacja usługi i portalu MIM: Jeśli chcesz wybrać Exchange Online jako konto poczty, wpisz adres e-mail i poświadczenia konta usługi Exchange Online na następnym ekranie.
-

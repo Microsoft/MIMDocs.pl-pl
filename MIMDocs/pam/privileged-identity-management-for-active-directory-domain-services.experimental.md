@@ -12,14 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: c227d848506a41fdd3569954961b021ca4e92d40
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Usługa Privileged Access Management dla usług domenowych Active Directory
 <a id="privileged-access-management-for-active-directory-domain-services" class="xliff"></a>
 Usługa Privileged Access Management (PAM) ułatwia organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
@@ -100,4 +98,3 @@ Po zatwierdzeniu żądania przepływ pracy akcji komunikuje się bezpośrednio z
 > Z kolei wygasłe łącza są oceniane w czasie rzeczywistym przez Menedżera kont zabezpieczeń (Security Accounts Manager, SAM). Mimo że dodanie członka do grupy musi zostać zreplikowane na kontrolerze domeny, który odebrał żądanie dostępu, usunięcie członka z grupy jest oceniane natychmiast na dowolnym kontrolerze domeny.
 
 Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Administratorzy, którzy rzadko potrzebują dostępu do uprzywilejowanych grup, mogą wysyłać precyzyjne żądania dostępu. To samo dotyczy skryptów. Program MIM rejestruje żądanie i zmiany w usłudze Active Directory. Można je wyświetlić w Podglądzie zdarzeń lub wysłać dane do rozwiązań służących do monitorowania infrastruktury przedsiębiorstwa, na przykład usług Audit Collection Services (ACS) programu System Center 2012 — Operations Manager lub narzędzi innych firm.
-

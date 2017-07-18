@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: bbcfee70c71bc2f1a637327721d015434600c5e0
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Praca z funkcją samoobsługowego resetowania hasła
 <a id="working-with-self-service-password-reset" class="xliff"></a>
 W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługowego resetowania hasła. Wprowadzono następujące ulepszenia:
@@ -216,4 +213,3 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 6.  Jeśli użytkownik wybierze opcję resetowania hasła, będzie musiał wpisać nowe hasło dwa razy i kliknąć przycisk **Dalej**, aby zmienić hasło.
 
     ![Obraz resetowania hasła (asystent logowania programu MIM)](media/MIM-SSPR-PR1.JPG)
-

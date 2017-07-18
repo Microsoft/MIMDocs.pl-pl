@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Używanie usługi Azure MFA do aktywacji
 <a id="using-azure-mfa-for-activation" class="xliff"></a>
 Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania użytkowników, którzy zażądali aktywowania roli. Możliwości implementowane przez działanie autoryzacji funkcji PAM to:
@@ -158,4 +155,3 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 5.  Wybierz przedział czasu i zaznacz pole wyboru obok pola **Nazwa** w dodatkowej kolumnie raportu. Kliknij pozycję **Eksportuj do pliku CSV**.
 
 6.  Po wygenerowaniu raport można wyświetlić w portalu lub, jeśli raport usługi MFA jest rozbudowany, możliwe jest pobranie go do pliku CSV. Wartości **SDK** w kolumnie **AUTH TYPE** wskazują wiersze, które dotyczą żądań aktywacji funkcji PAM: są to zdarzenia pochodzące z usługi MIM lub innego oprogramowania lokalnego. W polu **USERNAME** znajduje się identyfikator GUID obiektu użytkownika w bazie danych usługi MIM. Jeśli połączenie nie powiodło się, wartością w kolumnie **AUTHD** będzie **No**, a w kolumnie **CALL RESULT** będą znajdować się szczegóły przyczyny niepowodzenia.
-
