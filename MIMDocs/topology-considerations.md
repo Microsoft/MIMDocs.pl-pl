@@ -5,33 +5,31 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/21/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
+ms.openlocfilehash: 1695cc2df766df3c38a0e1393f6f974102f9fd36
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
-ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/14/2017
 ---
-
-
-# Kwestie dotyczące topologii
-<a id="topology-considerations" class="xliff"></a>
+# <a name="topology-considerations"></a>Kwestie dotyczące topologii
 Składniki programu Microsoft Identity Manager (MIM) można wdrożyć na tym samym serwerze lub na wielu serwerach w wielu konfiguracjach. Wybór topologii wdrożenia wpływa na wydajność programu MIM. W tym artykule przedstawiono różne topologie wdrożenia, które można zastosować.
 
-## Składniki programu MIM
-<a id="mim-components" class="xliff"></a>
+
+>[!NOTE]
+Te opcje mają zastosowanie do wdrożeń wyłącznie z zastosowaniem oprogramowania MIM Sync, MIM Service i MIM Portal na potrzeby zarządzania tożsamościami.  Wdrożenia za pomocą oprogramowania MIM CM, MIM BHOLD Suite oraz wdrożenia z użyciem zarządzania podniesionego poziomu uprawnień mają inne opcje wdrażania.
+
+
+## <a name="mim-components"></a>Składniki programu MIM
 Podczas projektowania topologii wdrożenia musisz znać funkcje wszystkich składników i interakcje między nimi.
 
-- **Portal programu MIM** — interfejs umożliwiający resetowanie haseł, zarządzanie grupami i wykonywanie operacji administracyjnych.
-<a id="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations" class="xliff"></a>
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portal programu MIM** — interfejs umożliwiający resetowanie haseł, zarządzanie grupami i wykonywanie operacji administracyjnych.
     -
 - **Usługa MIM** — usługa sieci Web, która implementuje funkcje zarządzania tożsamościami programu MIM 2016.
 - **Usługa synchronizacji programu MIM** — synchronizuje dane z innymi systemami zarządzania tożsamościami.
@@ -47,8 +45,7 @@ W poniższej tabeli przedstawiono opcje hostingu dla poszczególnych składnikó
 | Klaster serwerów | | | | Tak |
 
 
-## Topologia wielowarstwowa
-<a id="multitier-topology" class="xliff"></a>
+## <a name="multitier-topology"></a>Topologia wielowarstwowa
 Topologia wielowarstwowa jest najczęściej używaną topologią. Zapewnia ona największą elastyczność. Portal programu MIM, usługa MIM oraz bazy danych są podzielone na warstwy i wdrażane na wielu komputerach. Ta topologia zwiększa elastyczność skalowania poszczególnych składników programu MIM. Można na przykład skalować portal programu MIM w poziomie przez dodanie serwerów w klastrze równoważenia obciążenia sieciowego. Można też skalować usługę MIM przy użyciu klastra równoważenia obciążenia sieciowego oraz przez odpowiednie zwiększenie liczby komputerów (węzłów) w klastrze.
 
 W przypadku topologii wielowarstwowej jest przydzielany dedykowany komputer hostujący każdą bazę danych SQL (jeden komputer dla usługi MIM i jeden komputer dla usługi synchronizacji programu MIM). Skalowalność wydajności komputerów hostujących bazy danych SQL można zwiększyć przez dodanie lub zmodernizowanie sprzętu, na przykład zmodernizowanie procesorów CPU, dodanie procesorów CPU, zwiększenie ilości pamięci RAM lub zmodernizowanie pamięci RAM albo zmodernizowanie konfiguracji dysków twardych w celu przyspieszenia odczytu i zapisu oraz zmniejszenia opóźnienia.
@@ -58,8 +55,7 @@ W przypadku topologii wielowarstwowej jest przydzielany dedykowany komputer host
 W tej konfiguracji usługa synchronizacji programu MIM i jej baza danych są hostowane na tym samym komputerze. Można jednak uzyskać podobną wydajność, gdy istnieje 1-gigabitowe dedykowane połączenie sieciowe między usługą synchronizacji programu MIM i jej bazą danych oraz jeśli są one hostowane na osobnych komputerach.
 
 
-## Topologia wielowarstwowa z wieloma usługami MIM
-<a id="multitier-topology-with-multiple-mim-services" class="xliff"></a>
+## <a name="multitier-topology-with-multiple-mim-services"></a>Topologia wielowarstwowa z wieloma usługami MIM
 Synchronizowanie danych z systemami zewnętrznymi może być czasochłonne i znacząco zwiększać obciążenie systemu w tym czasie. Jeśli konfiguracja synchronizacji powoduje wyzwalanie zasad z przepływami pracy, te zasady będą konkurować o zasoby z przepływami pracy użytkowników końcowych. Takie problemy mogą występować w przypadku przepływów pracy uwierzytelniania, takich jak resetowanie haseł, które są wykonywane w czasie rzeczywistym, gdy użytkownik końcowy oczekuje na ukończenie procesu. Korzystanie z jednego wystąpienia usługi MIM dla operacji użytkowników końcowych i z osobnego portalu na potrzeby synchronizacji danych administracyjnych zapewnia krótszy czas odpowiedzi dla operacji użytkowników końcowych.
 
 ![Diagram topologii wielowarstwowej z wieloma usługami MIM](media/MIM-topo-multitier-multiservice.png)
@@ -68,7 +64,5 @@ Tak jak w przypadku standardowej topologii wielowarstwowej można zwiększyć wy
 
 Komputery z zainstalowanym programem SQL Server hostujące usługę synchronizacji programu MIM i bazę danych usługi MIM mają znaczący wpływ na ogólną wydajność wdrażania programu MIM. Dlatego należy postępować zgodnie z zaleceniami w dokumentacji programu SQL Server dotyczącymi optymalizacji wydajności bazy danych. Więcej informacji można znaleźć w następujących dokumentach:
 
-## Zobacz także
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Zobacz także
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.
-
