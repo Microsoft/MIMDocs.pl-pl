@@ -12,13 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 93ae9f198d73d21ae966fe3c3b22e47435bd5608
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
 # Krok 3 — Konfigurowanie serwera SQL
 <a id="step-3-configuring-sql" class="xliff"></a>
@@ -46,4 +44,3 @@ Po wyświetleniu monitu podaj hasło dla konta usługi MIMAdmin i zezwól na kon
 >[!div class="step-by-step"]
 [« Krok 2](sp1-step2-configuring-corp-domain.md)
 [Krok 4 »](sp1-step4-configuring-sharepoint.md)
-

@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 1eadf7cff67d65c35f784adad94b5032d2792824
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Przewodnik planowania pojemności
 <a id="capacity-planning-guide" class="xliff"></a>
 
@@ -101,4 +98,3 @@ Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania o
 <a id="see-also" class="xliff"></a>
 - [Zagadnienia dotyczące topologii wdrożeń programu MIM](topology-considerations.md)
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.
-

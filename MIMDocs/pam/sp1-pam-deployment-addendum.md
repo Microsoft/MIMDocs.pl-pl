@@ -12,13 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: f69fe68dc63323c0945a4902e34ea8153f938c02
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
 # Dodatek do skryptów wdrażania usługi PAM:
 <a id="pam-deployment-scripts-addendum" class="xliff"></a>
@@ -78,4 +76,3 @@ Przejdź do kroku 8 opisanego powyżej.
 <a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
 
 Wszystkie dzienniki skryptu są zapisywane w folderze %AppData%\MIMPAMInstall. Skompresuj ten folder do postaci pliku ZIP i wyślij go za pośrednictwem poczty e-mail na adres [mim2016@microsoft.com](mailto:mim2016@microsoft.com) wraz ze szczegółami operacji i błędu.
-

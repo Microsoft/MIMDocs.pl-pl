@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Planowanie środowiska bastionu
 <a id="planning-a-bastion-environment" class="xliff"></a>
 
@@ -273,4 +270,3 @@ Przejrzyj uprawnienia obiektu *AdminSDHolder* w kontenerze systemu w tej domenie
 <a id="select-users-and-groups-for-inclusion" class="xliff"></a>
 
 Następnym krokiem jest zdefiniowanie ról PAM, kojarząc użytkowników i grupy, do których powinny mieć dostęp. Będzie to zazwyczaj podzbiór użytkowników i grup dla warstwy zidentyfikowanej jako zarządzana w środowisku bastionu. Aby uzyskać więcej informacji, zobacz [Defining roles for Privileged Access Management](defining-roles-for-pam.md) (Definiowanie ról na potrzeby funkcji Privileged Access Management).
-

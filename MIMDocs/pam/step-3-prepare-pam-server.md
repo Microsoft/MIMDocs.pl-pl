@@ -13,15 +13,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Krok 3 — Przygotowanie serwera PAM
 <a id="step-3--prepare-a-pam-server" class="xliff"></a>
 
@@ -224,4 +221,3 @@ W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 >[!div class="step-by-step"]
 [« Krok 2](step-2-prepare-priv-domain-controller.md)
 [Krok 4 »](step-4-install-mim-components-on-pam-server.md)
-

@@ -11,16 +11,12 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: MT
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
-
 # Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
 <a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
@@ -179,4 +175,3 @@ Podczas instalacji program MIM tworzy dwie grupy zabezpieczeń, które są przez
 -   FIMSyncBrowse — członkowie tej grupy mają uprawnienia do zbierania informacji o kontach użytkowników podczas wykonywania operacji wyszukiwania za pomocą zapytań usługi WMI.
 
 -   FIMSyncPasswordSet — członkowie tej grupy mają uprawnienia do wykonywania operacji wyszukiwania kont, ustawiania haseł i zmiany haseł za pomocą interfejsów zarządzania hasłami przy użyciu usługi WMI.
-

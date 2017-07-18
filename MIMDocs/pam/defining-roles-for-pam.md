@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Definiowanie ról na potrzeby funkcji Privileged Access Management
 <a id="define-roles-for-privileged-access-management" class="xliff"></a>
 
@@ -214,4 +211,3 @@ Role dla użytkowników innych niż użytkownicy administracyjni i role na potrz
 - Pomoc techniczna
 - Administratorzy grup zabezpieczeń
 - Pomoc techniczna dla stacji roboczych na miejscu
-

@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
 <a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyślnie nie może zarejestrować karty inteligentnej na tym komputerze. Poniższa procedura umożliwia obejście tego ograniczenia.
@@ -97,4 +94,3 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 7.  **Instalowanie aplikacji CM na koncie bez uprawnień administratora**
 
 8.  **Uruchamianie aplikacji CM i rejestrowanie się w celu korzystania z wirtualnej karty inteligentnej**
-

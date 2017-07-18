@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Łączenie z katalogami
 <a id="connect-to-your-directories" class="xliff"></a>
 
@@ -62,4 +59,3 @@ W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik E
 <a id="related-topics" class="xliff"></a>
 
 [Agenci zarządzania w programie FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-

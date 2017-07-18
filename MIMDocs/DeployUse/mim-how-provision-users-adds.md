@@ -10,19 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
+ms.openlocfilehash: 60b28497f6abba14bd186cf2e2f2ce69b08693bc
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
 ms.translationtype: MT
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
-ms.openlocfilehash: 5ab70bac8cbd874153fa56cf7b181144c394ec04
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
-
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
-
-
-
 # Jak aprowizować użytkowników do usług AD DS
 <a id="how-do-i-provision-users-to-ad-ds" class="xliff"></a>
 
@@ -581,4 +574,3 @@ Inne zasoby
 [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów)
 
 [Informacje o operacjach eksportowania](http://go.microsoft.com/FWLink/p/?LinkId=189676)
-

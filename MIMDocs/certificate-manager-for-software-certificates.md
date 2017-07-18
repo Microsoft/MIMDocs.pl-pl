@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 <a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
@@ -100,4 +97,3 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 10. Jeśli chcesz ponownie wystawić zarchiwizowane certyfikaty, zaznacz pola wyboru po lewej stronie obok pozycji **Wystaw ponownie zarchiwizowane certyfikaty** i kliknij przycisk **OK**.
 
 11. Jeśli używasz Menedżera certyfikatów wirtualnych kart inteligentnych, musisz wyłączyć pozycje zbierania danych, ponieważ ta funkcja nie działa po włączeniu funkcji zbierania danych. Wyłącz funkcję zbierania danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie usuwając zaznaczenie pola wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**.
-

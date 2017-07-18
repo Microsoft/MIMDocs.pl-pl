@@ -12,15 +12,12 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fa200bb18871387420743af64ca196565397e5d5
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Wdrażanie programu MIM 2016
 <a id="deploy-mim-2016" class="xliff"></a>
 Artykuły w tej sekcji zawierają instrukcje krok po kroku dotyczące wdrażania programu Microsoft Identity Manager (MIM) 2016 w scenariuszach samoobsługi użytkownika końcowego na serwerze, na którym nie wdrożono jeszcze usługi FIM ani programu MIM.
@@ -51,4 +48,3 @@ Po skonfigurowaniu domeny i serwera można zainstalować składniki programu MIM
 - [Usługa synchronizacji programu MIM](install-mim-sync.md)
 - [Usługa i portal MIM](install-mim-service-portal.md)
 - [Synchronizowanie baz danych usług Active Directory i MIM](install-mim-sync-ad-service.md)
-

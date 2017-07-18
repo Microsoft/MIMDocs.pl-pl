@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: ce1ce0c67dfd39433ff01dabd542e862c557c787
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management
 <a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
 Proces konfigurowania środowiska pod kątem dostępu między lasami, instalowania i konfigurowania usługi Active Directory i programu Microsoft Identity Manager oraz demonstrowania żądania dostępu just in time obejmuje siedem kroków.
@@ -43,4 +40,3 @@ Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć �
 
 >[!div class="step-by-step"]
 [Początek »](step-1-prepare-corp-domain.md)
-

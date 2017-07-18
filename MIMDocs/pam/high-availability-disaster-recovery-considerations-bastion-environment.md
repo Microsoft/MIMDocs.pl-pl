@@ -12,15 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: MT
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 2fab9af837ed11b1f2f7f32c9ced6d79c8cc9d00
-ms.contentlocale: pl-pl
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/13/2017
 ---
-
 # Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu
 <a id="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment" class="xliff"></a>
 W tym artykule omówiono zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w przypadku wdrażania Usług domenowych Active Directory (AD DS) i programu Microsoft Identity Manager 2016 (MIM) na potrzeby funkcji zarządzania dostępem uprzywilejowanym (Privileged Access Management, PAM).
@@ -251,4 +248,3 @@ Składniki PAM należy zainstalować na wszystkich komputerach w środowisku bas
 Po odzyskaniu po awarii należy sprawdzić, czy usługa MIM działa na co najmniej jednym serwerze.  Następnie należy sprawdzić, czy usługa monitorowania PAM programu MIM również działa na tym serwerze, używając polecenia `net start "PAM Monitoring service"`.
 
 Jeśli poziomem funkcjonalnym lasu środowiska bastionu jest system Windows Server 2012 R2, należy sprawdzić, czy usługa składnika PAM programu MIM również działa na tym serwerze, używając polecenia `net start "PAM Component service"`.
-
