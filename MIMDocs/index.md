@@ -8,8 +8,7 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Dokumentacja programu Microsoft Identity Manager
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
+# <a name="microsoft-identity-manager-documentation"></a>Dokumentacja programu Microsoft Identity Manager
 
 Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania firmy Microsoft do zarządzania tożsamościami i dostępem oraz w bezproblemowy sposób integruje różne lokalne magazyny uwierzytelniania, takie jak Active Directory, LDAP czy Oracle, i inne aplikacje z usługą Azure Active Directory. Zapewnia dzięki temu spójny sposób korzystania z lokalnych aplikacji LOB i rozwiązań SaaS.
 
