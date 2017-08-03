@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Omówienie środowiska
-<a id="environment-overview" class="xliff"></a>
+# <a name="environment-overview"></a>Omówienie środowiska
 
 Usługa Privileged Access Management działa na maszynach wirtualnych z oddzielnymi dyskami, które są ze sobą połączone za pomocą współużytkowanej sieci. Na tych maszynach wirtualnych może działać system Windows 8.1, Windows Server 2012 R2 lub inne platformy systemu operacyjnego.
 

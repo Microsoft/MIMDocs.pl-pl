@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Praca z Menedżerem certyfikatów programu MIM
-<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
+# <a name="working-with-the-mim-certificate-manager"></a>Praca z Menedżerem certyfikatów programu MIM
 Po przygotowaniu programu MIM 2016 i Menedżera certyfikatów do pracy można wdrożyć aplikację Menedżer certyfikatów programu MIM ze Sklepu Windows, dzięki której użytkownicy będą mogli łatwo zarządzać fizycznymi kartami inteligentnymi, wirtualnymi kartami inteligentnymi i certyfikatami oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
 
 1.  Utworzenie szablonu certyfikatu.
@@ -30,8 +29,7 @@ Po przygotowaniu programu MIM 2016 i Menedżera certyfikatów do pracy można wd
 
 4.  Wdrożenie aplikacji za pomocą programu SCCM lub usługi Intune.
 
-## Tworzenie szablonu certyfikatu
-<a id="create-a-certificate-template" class="xliff"></a>
+## <a name="create-a-certificate-template"></a>Tworzenie szablonu certyfikatu
 Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w normalny sposób. Jednak w tym przypadku musisz upewnić się, że szablon certyfikatu jest w wersji 3 lub nowszej.
 
 1.  Zaloguj się do serwera z uruchomionymi usługami AD CS (serwera certyfikatów).
@@ -70,8 +68,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 16. Wybierz nowo utworzony szablon z listy, a następnie kliknij przycisk **OK**.
 
-## Tworzenie szablonu profilu
-<a id="create-a-profile-template" class="xliff"></a>
+## <a name="create-a-profile-template"></a>Tworzenie szablonu profilu
 Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtualnej karty inteligentnej i usunięcia kolekcji danych. Aplikacja Menedżer certyfikatów nie obsługuje zebranych danych, dlatego należy wyłączyć tę funkcję w opisany poniżej sposób.
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
@@ -96,8 +93,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 11. Musisz wyłączyć elementy kolekcji danych dla poszczególnych zasad, klikając zasady w okienku po lewej stronie, a następnie zaznaczając pole wyboru obok pozycji **Element danych przykładowych** i klikając pozycję **Usuń elementy kolekcji danych**. Następnie kliknij przycisk **OK**.
 
-## Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
-<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
+## <a name="prepare-the-cm-app-for-deployment"></a>Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
 
 1.  W wierszu polecenia uruchom poniższe polecenie, aby rozpakować aplikację, a następnie wyodrębnij zawartość do nowego podfolderu o nazwie appx oraz utwórz kopię, aby nie modyfikować oryginalnego pliku.
 
@@ -254,6 +250,5 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
     -   Aby uzyskać pomoc dotyczącą skryptu **ConfigureMIimCMClientAndRelyingParty.ps1**, uruchom polecenie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## Wdrażanie aplikacji
-<a id="deploy-the-app" class="xliff"></a>
+## <a name="deploy-the-app"></a>Wdrażanie aplikacji
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.

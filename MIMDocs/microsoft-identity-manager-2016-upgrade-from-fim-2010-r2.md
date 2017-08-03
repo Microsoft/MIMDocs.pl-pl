@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Uaktualnienie z programu Forefront Identity Manager 2010 R2
-<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Uaktualnienie z programu Forefront Identity Manager 2010 R2
 
 Jeśli masz środowisko Forefront Identity Manager (FIM) 2010 R2, a chcesz wypróbować program Microsoft Identity Manager (MIM) 2016, skorzystaj z tego artykułu jako przewodnika. To uaktualnienie składa się z trzech etapów:
 
@@ -36,8 +35,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 - Lokalne i środowiskowe wymagania wstępne (SQL Server, Exchange Server, SharePoint Services itp.) skonfigurowane na potrzeby programu FIM 2010 R2.
 
 
-## Przygotowanie
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Przygotowanie
 
 1.  Utwórz kopię zapasową bazy danych usługi programu FIM, bazy danych usługi synchronizacji programu FIM oraz oprogramowania i konfiguracji usługi synchronizacji programu FIM i usługi programu FIM.
 
@@ -45,8 +43,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 3.  Pobierz i rozpakuj pliki oprogramowania MIM.
 
-## Uaktualnianie usługi synchronizacji
-<a id="upgrade-the-synchronization-service" class="xliff"></a>
+## <a name="upgrade-the-synchronization-service"></a>Uaktualnianie usługi synchronizacji
 
 1.  Zaloguj się jako administrator do serwera, na którym wdrożono usługę synchronizacji programu FIM 2010 R2.
 
@@ -84,8 +81,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 13. Pamiętaj, że **Usługa synchronizacji** została uruchomiona ponownie.
 
-## Uaktualnianie usługi i portalu
-<a id="upgrade-the-service-and-portal" class="xliff"></a>
+## <a name="upgrade-the-service-and-portal"></a>Uaktualnianie usługi i portalu
 
 1.  Zaloguj się jako administrator do serwera, na którym wdrożono portal i usługę programu FIM 2010 R2.
 
@@ -141,8 +137,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Dalej**.
 
-## Instalowanie portalu rejestracji haseł programu MIM
-<a id="install-the-mim-password-registration-portal" class="xliff"></a>
+## <a name="install-the-mim-password-registration-portal"></a>Instalowanie portalu rejestracji haseł programu MIM
 
 1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Dalej**.
 
@@ -172,8 +167,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     2.  Określ, czy dostęp do tego portalu mogą uzyskiwać użytkownicy zarówno ekstranetu, jak i intranetu, czy wyłącznie użytkownicy intranetu (zgodnie z wcześniejszą konfiguracją funkcji resetowania haseł programu FIM).
 
-## Instalowanie portalu resetowania haseł programu MIM
-<a id="install-the-mim-password-reset-portal" class="xliff"></a>
+## <a name="install-the-mim-password-reset-portal"></a>Instalowanie portalu resetowania haseł programu MIM
 
 1. Jeśli instalujesz portal resetowania haseł programu MIM, podaj szczegóły dostępu i poświadczenia na potrzeby resetowania haseł programu MIM.
 
@@ -193,8 +187,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     2.  Określ, czy dostęp do tego portalu mogą uzyskiwać użytkownicy zarówno ekstranetu, jak i intranetu, czy wyłącznie użytkownicy intranetu.
 
-## Zakończenie instalacji i uaktualniania
-<a id="finish-installation-and-upgrade" class="xliff"></a>
+## <a name="finish-installation-and-upgrade"></a>Zakończenie instalacji i uaktualniania
 
 1. Po pomyślnym podaniu wszystkich definicji konfiguracji zostanie wyświetlona strona instalacji. Kliknij polecenie **Zainstaluj**, aby rozpocząć instalowanie oraz uaktualnianie portalu i usługi programu MIM.
 

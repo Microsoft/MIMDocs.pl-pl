@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 8 — Weryfikacja wdrożenia usługi PAM
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
 
 >[!div class="step-by-step"]
 [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)

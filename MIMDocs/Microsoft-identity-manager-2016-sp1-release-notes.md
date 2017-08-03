@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Co nowego w programie Microsoft Manager Identity 2016 z dodatkiem Service Pack 1
-<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
+# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Co nowego w programie Microsoft Manager Identity 2016 z dodatkiem Service Pack 1 #
 
 W ramach regularnego cyklu konserwacji i aktualizacji programu Microsoft Identity Manager mamy przyjemność ogłosić nową wersję programu: [Microsoft Identity Manager (MIM) 2016 z dodatkiem Service Pack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212). Ten dokument zawiera opis aktualizacji, ulepszeń, funkcji i zmian zawartych w tej wersji.
 
@@ -29,11 +28,9 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
 
 
 
-## Aktualizacje w tym dodatku Service Pack
-<a id="updates-in-this-service-pack" class="xliff"></a> #
+## <a name="updates-in-this-service-pack"></a>Aktualizacje w tym dodatku Service Pack #
 
-### Program MIM
-<a id="mim" class="xliff"></a>
+### <a name="mim"></a>Program MIM
 
 - **Możliwość korzystania z portalu MIM w różnych przeglądarkach na potrzeby samoobsługi użytkowników końcowych:** w tym dodatku Service Pack wprowadzamy obsługę większości popularnych przeglądarek. Użytkownicy mogą teraz uzyskać dostęp do portalu MIM i korzystać z niego w celu samoobsługowego zarządzania grupą i profilem, korzystając z przeglądarek Microsoft Edge, Chrome i Safari.
 
@@ -41,8 +38,7 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
 
 - **Sprawdzanie poprawności formatu pliku obrazu podczas przesyłania:** usługa MIM może teraz sprawdzić poprawność formatu plików obrazów podczas ich przesyłania do portalu.
 
-### Usługa Privileged Access Management (PAM)
-<a id="privileged-access-managementpam" class="xliff"></a>
+### <a name="privileged-access-managementpam"></a>Usługa Privileged Access Management (PAM)
 
 - **Obsługa lasu „PRIV” (bastionu) usługi PAM dla poziomu funkcjonalności systemu Windows Server 2016:** usługa PAM programu MIM może zostać skonfigurowana w środowisku z kontrolerami domeny uruchomionymi na poziomie funkcjonalności lasu Usług domenowych Active Directory systemu Windows Server 2016. Jeśli bilet protokołu Kerberos użytkownika zostanie skonfigurowany, będzie on ograniczony w czasie do pozostałego czasu aktywacji roli.
 
@@ -59,21 +55,17 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
     Wspomniane polecenia cmdlet są uruchamiane automatycznie w ramach skryptów wdrażania.
 
 
-## Obsługa platform
-<a id="platform-support" class="xliff"></a>
+## <a name="platform-support"></a>Obsługa platform
 Zaktualizowane informacje o obsłudze platform można znaleźć w artykule [Platformy obsługiwane przez program MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Nowe platformy, których obsługa została dodana w ramach tego dodatku Service Pack, to między innymi SQL Server 2016 i SharePoint 2016.
 
-## Problemy z ogólnodostępnej wersji programu MIM 2016, które zostały rozwiązane w tej wersji
-<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
+## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>Problemy z ogólnodostępnej wersji programu MIM 2016, które zostały rozwiązane w tej wersji
 
-### PAM
-<a id="pam" class="xliff"></a>
+### <a name="pam"></a>PAM
 - Polecenie New-PAMGroup nie utworzyło obiektów MIM dla lokalnych grup domeny w lesie PRIV.
 - Polecenie New-PAMDomainConfiguration kończyło się niepowodzeniem i był wyświetlany komunikat błędu „netdom”.
 - Usługa monitorowania PAM rejestrowała ostrzeżenia dla grup w lesie PRIV.
 
-## Jak przeprowadzić uaktualnienie do wersji z dodatkiem Service Pack 1
-<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
+## <a name="how-to-upgrade-to-service-pack-1"></a>Jak przeprowadzić uaktualnienie do wersji z dodatkiem Service Pack 1
 
 Klienci chcący przeprowadzić uaktualnienie do wersji Microsoft Identity Manager 2016 z dodatkiem Service Pack 1 powinni zastosować się do poniższych wytycznych w zakresie wszystkich usług mających zastosowanie do ich wdrożenia.
 

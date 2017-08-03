@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Łączenie z katalogami
-<a id="connect-to-your-directories" class="xliff"></a>
+# <a name="connect-to-your-directories"></a>Łączenie z katalogami
 
 Łączniki łączą określone połączone źródła danych z usługą Microsoft Identity Manager (MIM). Łącznik przenosi dane z połączonego źródła danych do usługi MIM. Jeśli dane w usłudze MIM zostaną zmodyfikowane, łącznik może także wyeksportować dane do połączonego źródła danych, aby zapewnić jego synchronizację z usługą MIM. Ogólnie dla każdego połączonego katalogu istnieje co najmniej jeden łącznik.
 
@@ -27,8 +26,7 @@ W programie Forefront Identity Manager łączniki były znane jako agenci zarzą
 
 W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik Extensible Connectivity 2.0 umożliwia łączenie z jeszcze większą liczbą źródeł danych. Niektórzy partnerzy utworzyli własne łączniki w ten sposób. Pełna lista jest dostępna w wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (Program FIM 2010: agenci zarządzania parterów).
 
-## Łączniki obsługiwane przez usługę MIM 2016
-<a id="supported-connectors-in-mim-2016" class="xliff"></a>
+## <a name="supported-connectors-in-mim-2016"></a>Łączniki obsługiwane przez usługę MIM 2016
 
 | Nazwa | Obsługiwane wersje połączonego źródła danych |
 | ---- | ----------------------------------------------- |
@@ -55,7 +53,6 @@ W tym artykule omówiono łączniki dołączone do usługi MIM, lecz łącznik E
 | Plik tekstowy stałej szerokości | Pliki tekstowe stałej szerokości |
 | Format wymiany danych LDAP (LDIF) | Format wymiany danych LDAP (LDIF) |
 
-## Tematy pokrewne
-<a id="related-topics" class="xliff"></a>
+## <a name="related-topics"></a>Tematy pokrewne
 
 [Agenci zarządzania w programie FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

@@ -18,11 +18,9 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Dodatek do skryptów wdrażania usługi PAM:
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Dodatek do skryptów wdrażania usługi PAM:
 
-## Dodatek 1 — Konfigurowanie domeny PRIV
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Dodatek 1 — Konfigurowanie domeny PRIV
 
 Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby podać szczegóły lasu PRIV. Zaktualizuj wartości DNSName, NetbiosName, nazwę kontrolera domeny, ścieżkę bazy danych/dziennika i ścieżkę SYSVOL. Zaktualizuj także wartości DomainMode i ForestMode. Jeśli testujesz system Windows Server Technical Preview 5, ustaw dla opcji DomainMode i ForestMode wartość WinThreshold.
 
@@ -40,8 +38,7 @@ Kontroler domeny zostanie automatycznie ponownie uruchomiony po zakończeniu. Ha
   * Hasło zawiera co najmniej jedną WIELKĄ literę.
   * Hasło zawiera co najmniej jedną cyfrę lub znak specjalny.
 
-## Dodatek 2 — Konfigurowanie domeny CORP
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Dodatek 2 — Konfigurowanie domeny CORP
 
 Jeśli dopiero rozpoczynasz korzystanie z programu PAM i chcesz skonfigurować środowisko testowe, korzystając ze skryptu możesz także skonfigurować domenę CORP. Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby dodać szczegóły lasu CORP. Zaktualizuj wartości DNSName, NetbiosName, nazwę kontrolera domeny DC, ścieżkę bazy danych/dziennika i ścieżkę SYSVOL. Wymagany jest co najmniej poziom funkcjonalny systemu Windows Server 2012 R2.
 
@@ -53,8 +50,7 @@ Jeśli dopiero rozpoczynasz korzystanie z programu PAM i chcesz skonfigurować �
 
 Kontroler domeny zostanie automatycznie ponownie uruchomiony po zakończeniu.
 
-## Dodatek 3 — Konfigurowanie klienta CORP pod kątem sprawdzenia poprawności
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Dodatek 3 — Konfigurowanie klienta CORP pod kątem sprawdzenia poprawności
 
 Wartość ClientBinaryLocation w pliku konfiguracyjnym musi wskazywać lokalizację pliku setup.exe.
 Zaloguj się do klienta jako administrator lokalny i uruchom następujące polecenia w oknie programu PowerShell z podwyższonym poziomem uprawnień:
@@ -72,7 +68,6 @@ Jeśli komputer nie jest przyłączony do domeny, wyświetlony zostanie monit o 
 
 Przejdź do kroku 8 opisanego powyżej.
 
-## Dodatek 4 — Postępowanie w razie wystąpienia błędu
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Dodatek 4 — Postępowanie w razie wystąpienia błędu
 
 Wszystkie dzienniki skryptu są zapisywane w folderze %AppData%\MIMPAMInstall. Skompresuj ten folder do postaci pliku ZIP i wyślij go za pośrednictwem poczty e-mail na adres [mim2016@microsoft.com](mailto:mim2016@microsoft.com) wraz ze szczegółami operacji i błędu.

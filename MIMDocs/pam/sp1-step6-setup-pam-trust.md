@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 6 — Konfigurowanie zaufania usługi PAM
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Krok 6 — Konfigurowanie zaufania usługi PAM
 
 >[!div class="step-by-step"]
 [« Krok 5](sp1-step5-configuring-pam.md)

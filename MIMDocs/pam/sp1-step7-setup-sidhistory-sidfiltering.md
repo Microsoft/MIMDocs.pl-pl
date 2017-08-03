@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
-<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
+# <a name="step-7-set-up-sid-historysid-filtering"></a>Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
 
 >[!div class="step-by-step"]
 [« Krok 6](sp1-step6-setup-pam-trust.md)

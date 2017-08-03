@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 6. Przeniesienie grupy do usługi Privileged Access Management
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
+# <a name="step-6--transition-a-group-to-privileged-access-management"></a>Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 
 >[!div class="step-by-step"]
 [« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)

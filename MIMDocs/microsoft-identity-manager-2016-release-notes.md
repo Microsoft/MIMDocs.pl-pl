@@ -19,6 +19,5 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Informacje o wersji programu MIM 2016
-<a id="release-notes-for-mim-2016" class="xliff"></a>
+# <a name="release-notes-for-mim-2016"></a>Informacje o wersji programu MIM 2016
 Brak informacji o tej wersji.

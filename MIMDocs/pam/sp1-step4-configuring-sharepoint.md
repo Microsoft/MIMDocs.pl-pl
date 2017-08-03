@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 4 — Konfigurowanie programu SharePoint
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>Krok 4 — Konfigurowanie programu SharePoint
 
 >[!div class="step-by-step"]
 [« Krok 3](sp1-step3-installing-configuring-sql.md)

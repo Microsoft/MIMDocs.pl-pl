@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Krok 3 — Konfigurowanie serwera SQL
-<a id="step-3-configuring-sql" class="xliff"></a>
+# <a name="step-3-configuring-sql"></a>Krok 3 — Konfigurowanie serwera SQL
 
 >[!div class="step-by-step"]
 [« Krok 2](sp1-step2-configuring-corp-domain.md)
