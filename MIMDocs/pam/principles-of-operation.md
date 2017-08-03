@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Opis składników funkcji PAM
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Opis składników funkcji PAM
 
 Funkcja zarządzania dostępem uprzywilejowanym (Privileged Access Management, PAM) oddziela dostęp administracyjny od zwykłych kont użytkowników. To rozwiązanie opiera się na równoległych lasach:
 

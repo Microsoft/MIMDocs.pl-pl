@@ -18,15 +18,13 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Konfigurowanie serwera zarządzania tożsamościami: Exchange
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>Konfigurowanie serwera zarządzania tożsamościami: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [Usługa synchronizacji programu MIM »](install-mim-sync.md)
 
-## Wdrażanie programu Microsoft Exchange Server
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Wdrażanie programu Microsoft Exchange Server
 Jeśli chcesz skonfigurować program MIM do wysyłania i odbierania wiadomości e-mail lub aprowizowania skrzynek pocztowych, w środowisku musi być zainstalowany program Exchange. Jeśli program Exchange nie jest jeszcze wdrożony, możesz zainstalować wersję próbną w celu przeprowadzenia oceny:
 
 1. Pobierz i zainstaluj pakiety filtrów pakietu Microsoft Office 2010 — wersja 2.0 oraz pakiety filtrów pakietu Microsoft Office 2010 — wersja 2.0 SP1

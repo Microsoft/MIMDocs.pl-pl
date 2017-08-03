@@ -18,8 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
-<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Przygotowywanie domeny](preparing-domain.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Nazwa domeny — **contoso**
 > - Hasło — **Pass@word1**
 
-## Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
-<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Przyłączanie komputera z systemem Windows Server 2012 R2 do domeny
 
 Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RAM. Podczas instalacji określ wersję „Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64”.
 
@@ -63,8 +61,7 @@ Użyj komputera z systemem Windows Server 2012 R2 i co najmniej 8 GB pamięci RA
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Konfigurowanie zasad zabezpieczeń serwera
-<a id="configure-the-server-security-policy" class="xliff"></a>
+## <a name="configure-the-server-security-policy"></a>Konfigurowanie zasad zabezpieczeń serwera
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 
@@ -95,8 +92,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
 
-## Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
-<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
+## <a name="change-the-iis-windows-authentication-mode"></a>Zmienianie trybu uwierzytelniania systemu Windows w usługach IIS
 
 1.  Otwórz okno programu PowerShell.
 

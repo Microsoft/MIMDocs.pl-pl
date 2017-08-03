@@ -18,12 +18,10 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
 
-## Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Tworzenie szablonu profilu certyfikatu oprogramowania w Menedżerze certyfikatów programu MIM 2016
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
@@ -73,8 +71,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     10. Wybierz z listy nowy szablon, który został właśnie utworzony (**Zarchiwizowany szablon certyfikatu**), a następnie kliknij przycisk **OK**.
 
-## Tworzenie szablonu profilu
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Tworzenie szablonu profilu
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
