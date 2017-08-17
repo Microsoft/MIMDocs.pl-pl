@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 03a0e6e90c1d0059872c4d37c88cb6f4f4095bac
+ms.sourcegitcommit: 451c3ddda84758c87b8eb0359dac4043af52865f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
@@ -62,13 +62,13 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 10. Należy pamiętać, że może zostać wyświetlone ostrzeżenie informujące o tym, że konto usługi nie jest zabezpieczone w bieżącej konfiguracji.
 
-11. Zaakceptuj ustawienia domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *contoso\MIMsync*.
+11. Zaakceptuj ustawienia domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania MIM jako *contoso\MIMMA*.
 
     ![Obraz konfigurowania usługi i portalu programu MIM](media/MIM-Install13.png)
 
 12. Podaj wartość *CORPIDM* (nazwa tego komputera) jako adres serwera usługi programu MIM dla portalu programu MIM.
 
-13. Podaj wartość *http://CorpIDM.contoso.local:82* jako adres URL zbioru witryn programu SharePoint.
+13. Określ *http://CorpIDM.contoso.local* programu SharePoint adres URL zbioru witryn.
 
 14. Podaj wartość *http://CorpIDM.contoso.local:8080* jako adres URL rejestracji haseł.
 
@@ -106,7 +106,7 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i ustanów połączenie z portalem programu MIM na stronie *http://corpidm.contoso.local:82/identitymanagement*. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i nawiąż połączenie z portalem programu MIM na *http://corpidm.contoso.local/identitymanagement*. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
 
     - Jeśli jest to konieczne, uwierzytelnij się jako użytkownik *contoso\Administrator* w programie Internet Explorer.
 
