@@ -39,7 +39,7 @@ Identyfikator| Opcjonalny. Identyfikator GUID żądanie pobrania.
 Właściwość| Opis
 ---------|--------
 Użytkownik docelowy| Opcjonalny. Użytkownik docelowy żądania. Jeśli docelowy nie zostanie określony, zostaną zwrócone wszystkie żądania, niezależnie od docelowego użytkownika. <br/> **Uwaga**: tylko "current" jest obecnie obsługiwany.
-Stan| Opcjonalny. Wskazuje stan żądania pobrania. Stan możliwe typy to: *zatwierdzone*, *anulowane*, *Ukończono*, *odmowa*, *Executing*, **, *Brak*, i *oczekujące*. <br/>Jeśli stan nie zostanie określony, zostaną zwrócone wszystkie żądania, niezależnie od stanu.
+Stan| Opcjonalny. Wskazuje stan żądania pobrania. Stan możliwe typy to: *zatwierdzone*, *anulowane*, *Ukończono*, *odmowa*, *Executing*, *Niepowodzenie*, *Brak* , i *oczekujące*. <br/>Jeśli stan nie zostanie określony, zostaną zwrócone wszystkie żądania, niezależnie od stanu.
 
 ###<a name="request-headers"></a>Nagłówki żądania
 Dla typowych nagłówków żądań, zobacz [żądania HTTP i nagłówków odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegóły usługi interfejsu API REST zarządzania certyfikatami w usłudze*.
