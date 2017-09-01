@@ -2,29 +2,29 @@
 title: "Model warstwowy środowiska usługi PAM | Dokumentacja firmy Microsoft"
 description: "Poznaj model warstwowy, który dzieli system na podstawie podatności na ryzyko."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
-W dobie obecnych zagrożeń należy zakładać, że osoba atakująca w końcu uzyska dostęp do systemu organizacji. Oznacza to, że zabezpieczenia wewnętrzne są równie ważne co ochrona zapewniana przez sieć obwodową. W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesieniem uprawnień przez oddzielenie działań wymagających wysokich uprawnień od stref wysokiego ryzyka. Użycie tego modelu pozwala uzyskać komfortowe środowisko użytkownika przy zapewnieniu zgodności z zasadami zabezpieczeń i najlepszymi rozwiązaniami.
+W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesieniem uprawnień przez oddzielenie działań wymagających wysokich uprawnień od stref wysokiego ryzyka. Użycie tego modelu pozwala uzyskać komfortowe środowisko użytkownika przy zapewnieniu zgodności z zasadami zabezpieczeń i najlepszymi rozwiązaniami.
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Podniesienie uprawnień w lasach usługi Active Directory
 
-Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Konta te są często obiektem ataków, ponieważ w przypadku naruszenia ich zabezpieczeń osoba atakująca uzyska uprawnienia umożliwiające nawiązanie połączenia z innymi serwerami lub aplikacjami w domenie.
+Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często obiektem ataków, ponieważ w przypadku naruszenia ich zabezpieczeń, ma uprawnienia do połączenia z innymi serwerami lub aplikacjami w domenie.
 
 Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
 
@@ -48,13 +48,16 @@ Należy wymusić ograniczenia logowania, tak aby konta z wysokim poziomem uprawn
 
 Aby wymusić ograniczenia logowania, można użyć następujących rozwiązań:
 
-- Ograniczenia uprawnień do logowania w ramach zasad grupy, w tym:  
-    - Odmowa dostępu do tego komputera z sieci  
-    - Odmowa logowania w trybie wsadowym  
-    - Odmowa logowania w trybie usługi  
-    - Odmowa logowania lokalnego  
+- Ograniczenia uprawnień do logowania w ramach zasad grupy, w tym:
+    - Odmowa dostępu do tego komputera z sieci
+    - Odmowa logowania w trybie wsadowym
+    - Odmowa logowania w trybie usługi
+    - Odmowa logowania lokalnego
     - Odmowa logowania za pomocą ustawień pulpitu zdalnego  
 - Zasady uwierzytelniania i silosy, jeśli jest używany system Windows Server 2012 lub nowszy
 - Uwierzytelnianie selektywne, jeśli konto należy do dedykowanego lasu administracyjnego
 
-W artykule [Planning a bastion environment](planning-bastion-environment.md) (Planowanie środowiska bastionu) opisano dodawanie dedykowanego lasu administracyjnego dla programu Microsoft Identity Manager w celu ustanowienia kont administracyjnych.
+## <a name="next-steps"></a>Następne kroki
+
+- W artykule [Planning a bastion environment](planning-bastion-environment.md) (Planowanie środowiska bastionu) opisano dodawanie dedykowanego lasu administracyjnego dla programu Microsoft Identity Manager w celu ustanowienia kont administracyjnych.
+- [Stacje robocze z podwyższonymi uprawnieniami dostępu](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) Podaj dedykowanego systemu operacyjnego dla zadań poufnych, które jest chroniony z Internetu ataków i zagrożeń wektory.
