@@ -2,21 +2,21 @@
 title: "Omówienie środowiska usługi PAM | Dokumentacja firmy Microsoft"
 description: "Określenie wymaganej liczby maszyn wirtualnych i ich konfiguracji, dzięki czemu można pomyślnie wdrożyć usługę Privileged Access Management"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="environment-overview"></a>Omówienie środowiska
 
@@ -24,9 +24,14 @@ Usługa Privileged Access Management działa na maszynach wirtualnych z oddzieln
 
 ![Serwery PAM: relacje i obsługiwane platformy — diagram](media/pam-test-lab-architecture.png)
 
-Potrzebne będą co najmniej trzy maszyny wirtualne.  Jeśli nie masz jeszcze domeny usługi AD do zarządzania przez funkcję PAM, wymagana będzie jedna dodatkowa maszyna wirtualna działająca jako kontroler domeny CORP.  Jeśli chcesz skonfigurować oprogramowanie PRIV w celu uzyskania wysokiej dostępności, wymagane będą również dwie dodatkowe maszyny wirtualne.
+Należy co najmniej trzech maszyn wirtualnych.  Jeśli nie masz jeszcze domeny usługi AD dla PAM służący do zarządzania, należy jedna dodatkowa maszyna wirtualna działa jako kontroler domeny CORP.  Jeśli chcesz skonfigurować oprogramowanie PRIV w celu zapewnienia wysokiej dostępności należy dwie dodatkowe maszyny wirtualne.
 
-Na dyskach, na których będą przechowywane obrazy dysków maszyny wirtualnej, musi być co najmniej 120 GB wolnego miejsca do przechowywania wszystkich maszyn wirtualnych.  Jeśli planujesz przeprowadzić wdrożenie w celu uzyskania wysokiej dostępności, upewnij się, że podsystem dysku spełnia wymagania udostępnionego magazynu SQL.  Magazyn udostępniony mogą stanowić dyski klastra trybu failover systemu Windows Server, dyski w sieci SAN lub udziały plików na serwerze SMB. Należy pamiętać, że elementy te muszą być przeznaczone wyłącznie dla środowiska bastionu. Udostępnianie magazynu z innymi obciążeniami poza środowisko bastionu nie jest zalecane, ponieważ może zagrozić integralności środowiska bastionu.
+Dyski, na którym będą przechowywane obrazy dysków maszyny Wirtualnej należy co najmniej 120 GB wolnego miejsca na dysku.  Jeśli planujesz przeprowadzić wdrożenie w celu uzyskania wysokiej dostępności, upewnij się, że podsystem dysku spełnia wymagania udostępnionego magazynu SQL.  Magazyn udostępniony mogą stanowić dyski klastra trybu failover systemu Windows Server, dyski w sieci SAN lub udziały plików na serwerze SMB.
 
-> [!NOTE]
-> Bieżąca wersja Customer Technical Preview (CTP) programu MIM nie jest zgodna z bazą danych ani zawartością katalogu z poprzedniej wersji CTP. Jeśli wcześniej miała miejsce ocena scenariusza programu MIM dla funkcji PAM lub innych scenariuszy, wykonaj i zarchiwizuj kopię zapasową maszyn wirtualnych używanych na potrzeby tego testu, a następnie rozpocznij wdrażanie przy użyciu nowych obrazów maszyny wirtualnej, które nie były wcześniej używane w scenariuszach dotyczących programu MIM.
+>[!IMPORTANT]
+Magazyn musi być dedykowany dla środowiska bastionu. Udostępnianie magazynu z innymi obciążeniami poza środowisko bastionu nie jest zalecane, ponieważ może zagrozić integralności środowiska bastionu.
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Privileged Access Management dla usług domenowych w usłudze Active Directory](privileged-identity-management-for-active-directory-domain-services.md) zawiera omówienie funkcji PAM i jak działa.
+- [Opis składników funkcji PAM](principles-of-operation.md) znajduje się przegląd różnych składników funkcji PAM.
