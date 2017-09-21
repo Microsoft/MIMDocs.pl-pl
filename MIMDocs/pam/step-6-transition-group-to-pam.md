@@ -2,21 +2,21 @@
 title: "Wdrożenie usługi PAM — krok 6 — przeniesienie grupy | Dokumentacja firmy Microsoft"
 description: "Migracja grupy do lasu PRIV, dzięki czemu można będzie nią zarządzać za pomocą usługi Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: aeffca2c4e5467ec039c2077a88f36a652493e90
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 
@@ -37,38 +37,38 @@ Te polecenia cmdlet należy uruchomić jeden raz dla każdej grupy i dla poszcze
 
 2.  W programie PowerShell wpisz poniższe polecenia.
 
-    ```
-    Import-Module MIMPAM
-    Import-Module ActiveDirectory
-    ```
+```PowerShell
+   Import-Module MIMPAM
+   Import-Module ActiveDirectory
+```
 
 3.  Dla celów demonstracyjnych utwórz konto użytkownika w lesie PRIV odpowiadające kontu użytkownika w istniejącym lesie.
 
     W programie PowerShell wpisz poniższe polecenia.  Jeśli do utworzenia użytkownika w domenie contoso.local nie użyto imienia *Jen*, odpowiednio zmień parametry polecenia. Hasło 'Pass@word1' jest tylko przykładowe i należy je zmienić przy użyciu unikatowej wartości.
 
-    ```
-    $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-    $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-    Set-ADUser –identity priv.Jen –Enabled 1
-    ```
+ ```PowerShell
+        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+        Set-ADUser –identity priv.Jen –Enabled 1
+  ```
 
 4. Dla celów demonstracyjnych skopiuj grupę i jej członka, Jen, z domeny CONTOSO do domeny PRIV.
 
     Uruchom następujące polecenia, podając hasło administratora domeny CORP (CONTOSO\Administrator), jeśli zostanie wyświetlony monit:
 
-        ```
+ ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
-        ```
+ ```
 
     Polecenie **New-PAMGroup** przyjmuje następujące parametry:
 
-        -   The CORP forest domain name in NetBIOS form  
-        -   The name of the group to copy from that domain  
-        -   The CORP forest Domain Controller NetBIOS name  
-        -   The credentials of an domain admin user in the CORP forest  
+     -   Nazwa domeny lasu CORP w postaci NetBIOS  
+     -   Nazwa grupy, aby skopiować z tej domeny  
+     -   Nazwa NetBIOS kontrolera domeny lasu CORP  
+     -   Poświadczenia użytkownika administratora domeny w lesie Corp.  
 
 5.  (Opcjonalnie) Na kontrolerze domeny CORPDC usuń konto użytkownika Jen z grupy **CONTOSO CorpAdmins**, jeśli jest ono nadal tam obecne.  To działanie ma na celu jedynie pokazanie, jak można kojarzyć uprawnienia z kontami utworzonymi w lesie PRIV.
 
@@ -76,7 +76,7 @@ Te polecenia cmdlet należy uruchomić jeden raz dla każdej grupy i dla poszcze
 
     2.  Uruchom program PowerShell, uruchom następujące polecenie i potwierdź zmianę.
 
-        ```
+        ```PowerShell
         Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
         ```
 

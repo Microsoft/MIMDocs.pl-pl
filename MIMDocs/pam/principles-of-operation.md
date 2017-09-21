@@ -2,21 +2,21 @@
 title: "Opis składników funkcji PAM | Dokumentacja firmy Microsoft"
 description: "Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Opis składników funkcji PAM
 
@@ -27,7 +27,7 @@ Funkcja zarządzania dostępem uprzywilejowanym (Privileged Access Management, P
 
 Rozwiązanie MIM skonfigurowane na potrzeby funkcji PAM zawiera następujące składniki:  
 
-- **Usługa MIM**: implementuje logikę biznesową wykonywania operacji zarządzania tożsamością i dostępem, w tym zarządzania kontami uprzywilejowanymi i obsługi żądań podniesienia uprawnień.   
+- **Usługa MIM**: implementuje logikę biznesową wykonywania operacji zarządzania tożsamością i dostępem, w tym zarządzania kontami uprzywilejowanymi i obsługi żądań podniesienia uprawnień.
 - **Portal MIM**: portal oparty na programie SharePoint i hostowany w programie SharePoint 2013, zapewniający administratorom interfejs użytkownika do zarządzania i konfiguracji.
 - **Baza danych usługi MIM**: przechowywana w programie SQL Server 2012 lub 2014, zawierająca dane tożsamości i metadane wymagane przez usługę programu MIM.
 - **Usługa monitorowania PAM** oraz **usługa składników PAM**: dwie usługi służące do zarządzania kontami uprzywilejowanymi i wspomagające usługę AD lasu PRIV w cyklu członkostwa w grupach.

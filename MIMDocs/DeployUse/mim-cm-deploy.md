@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 61987d5b259830be0cf0bc12832a853e24e9c282
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
+ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Wdrożenie Menedżera certyfikatów programu Microsoft Identity Manager 2016 (MIM CM)
 
@@ -54,8 +54,7 @@ Dla więcej szczegółów na platformach obsługiwanych przez program MIM 2016 S
 
 ## <a name="pre-deployment-steps"></a>Kroki przed wdrożeniem
 
-Kreator konfiguracji zarządzania Certyfikatami programu MIM wymaga informacji dostarczanych wzdłuż sposobu, w celu pomyślnego wykonania. Kroki przed wdrożeniem będzie (NIEKOMPLETNE TRAKTOWAĆ tutaj)
-
+Kreator konfiguracji zarządzania Certyfikatami programu MIM wymaga informacji dostarczanych wzdłuż sposobu, w celu pomyślnego wykonania. 
 ![](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Rozszerzanie schematu
@@ -222,7 +221,7 @@ Wszystkie trzy powyższe konta będą mieć podwyższonym poziomem uprawnień w 
 
 Na **nazwa podmiotu** kartę, wyczyść **Dołącz nazwę e-mail do nazwy podmiotu** i **nazwa E-mail** pola wyboru.
 
-Na **rozszerzenia** karcie **rozszerzenia zawarte w tym szablonie** listy, upewnij się, że **zasady aplikacji** jest zaznaczone, a następnie kliknij przycisk **edycji** .
+Na **rozszerzenia** karcie **rozszerzenia zawarte w tym szablonie** listy, upewnij się, że **zasady aplikacji** jest zaznaczone, a następnie kliknij przycisk **edycji **.
 
 W **Edytowanie rozszerzenia zasad aplikacji** okno dialogowe, wybierz **systemu szyfrowania plików** i **zabezpieczanie poczty E-mail** zasady aplikacji. Kliknij przycisk **Usuń**, a następnie kliknij przycisk **OK**.
 
@@ -254,7 +253,7 @@ W **właściwości nowego szablonu** na okna dialogowego **ogólne** karcie **Na
 
 Na **obsługiwanie żądań** pozycję Włącz **Zezwalaj na eksportowanie klucza prywatnego**, a następnie kliknij przycisk **dostawców usług kryptograficznych lub Tab kryptografii.**
 
-W **Wybieranie dostawcy CSP** okno dialogowe, wyłącz **Microsoft Base Cryptographic Provider 1.0**, wyłącz **Microsoft Enhanced Cryptographic Provider 1.0**, Włącz  **Microsoft Enhanced RSA and AES Cryptographic Provider**, a następnie kliknij przycisk **OK**.
+W **Wybieranie dostawcy CSP** okno dialogowe, wyłącz **Microsoft Base Cryptographic Provider 1.0**, wyłącz **Microsoft Enhanced Cryptographic Provider 1.0**, Włącz ** Microsoft Enhanced RSA and AES Cryptographic Provider**, a następnie kliknij przycisk **OK**.
 
 Na **zabezpieczeń** kartę, wykonaj następujące czynności:
 
@@ -496,7 +495,7 @@ W tym kroku zainstalujemy i skonfigurowania modułów programu FIM CM urzędu ce
 
 1. Konfigurowanie programu FIM CM tylko sprawdzić uprawnienia użytkownika dla operacji zarządzania
 
-2. W **C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\zarządzania certyfikatami\\web** okna, utworzyć kopię  **plik Web.config** nazewnictwa kopii **web.1.config**.
+2. W **C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\zarządzania certyfikatami\\web** okna, utworzyć kopię ** plik Web.config** nazewnictwa kopii **web.1.config**.
 
 3. W **Web** okna, kliknij prawym przyciskiem myszy **Web.config**, a następnie kliknij przycisk **Otwórz**.
 
@@ -509,7 +508,7 @@ W tym kroku zainstalujemy i skonfigurowania modułów programu FIM CM urzędu ce
 
 6. Zamknij **Znajdź i Zamień** okno dialogowe.
 
-7. Należy w wierszu  **\<dodać key="Clm.RequestSecurity.Flags" wartość = "UseUser UseGroups" /\>**. Zmień wiersz odczytać  **\<dodać key="Clm.RequestSecurity.Flags" wartość = "UseUser" /\>**.
+7. Należy w wierszu ** \<dodać key="Clm.RequestSecurity.Flags" wartość = "UseUser UseGroups" /\>**. Zmień wiersz odczytać ** \<dodać key="Clm.RequestSecurity.Flags" wartość = "UseUser" /\>**.
 
 8. Zamknij plik, zapisywanie wszystkich zmian.
 
@@ -757,7 +756,7 @@ W tym kroku zainstalujemy i skonfigurowania modułów programu FIM CM urzędu ce
      2. W **właściwości OID** na okna dialogowego **zabezpieczeń** , kliknij pozycję **zaawansowane**.
      3. W **Zaawansowane ustawienia zabezpieczeń dla identyfikatora OID** okno dialogowe, kliknij przycisk **Dodaj**.
      4. W **wybierz użytkownika, komputera, konto usługi lub grupy** okna dialogowego, **wprowadź nazwę obiektu do wybrania** wpisz **określa menedżerów**, a następnie kliknij przycisk **OK**.
-     5. W **wpis uprawnienia dla identyfikatora OID** okno dialogowe pola, upewnij się, że uprawnienia dotyczą **ten obiekt i wszystkie obiekty zależne**, kliknij przycisk **Pełna kontrola**, a następnie kliknij przycisk  **OK**.
+     5. W **wpis uprawnienia dla identyfikatora OID** okno dialogowe pola, upewnij się, że uprawnienia dotyczą **ten obiekt i wszystkie obiekty zależne**, kliknij przycisk **Pełna kontrola**, a następnie kliknij przycisk ** OK**.
      6. W **Zaawansowane ustawienia zabezpieczeń dla identyfikatora OID** okno dialogowe, kliknij przycisk **OK**.
      7. W **właściwości OID** okno dialogowe, kliknij przycisk **OK**.
      8. Zamknij **Lokacje i usługi Active Directory**.
