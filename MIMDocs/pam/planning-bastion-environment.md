@@ -2,21 +2,21 @@
 title: "Planowanie środowiska bastionu | Dokumentacja firmy Microsoft"
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 
@@ -166,7 +166,7 @@ Istnieje siedem wymagań dotyczących włączania zarządzania dla istniejącej 
 
 W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$*. Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmo
 
 7. Zamknij okno Edytor zarządzania zasadami grupy i okno Zarządzanie zasadami grupy. Następnie zastosuj ustawienia inspekcji, otwierając okno programu PowerShell i wpisując następujące polecenie:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ Komunikat „Pomyślnie ukończono aktualizowanie zasad komputera” powinien zo
 
 Kontrolery domeny muszą zezwalać na połączenia RCP przez protokół TCP/IP dla urzędu zabezpieczeń lokalnych (LSA, Local Security Authority) ze środowiska bastionu. W starszych wersjach systemu Windows Server obsługa protokołu TCP/IP w urzędzie LSA musi zostać włączona w rejestrze:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 Polecenie cmdlet `New-PAMDomainConfiguration` musi zostać wywołane na komputerze usługi MIM w domenie administracyjnej. Parametrami tego polecenia jest nazwa istniejącej domeny i poświadczenia administratora tej domeny.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

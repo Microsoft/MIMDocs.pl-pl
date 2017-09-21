@@ -2,28 +2,27 @@
 title: "Wdrożenie usługi PAM — krok 5 — połączenie lasów | Dokumentacja firmy Microsoft"
 description: "Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki czemu uprzywilejowani użytkownicy w lesie PRIV będą mieli w dalszym ciągu dostęp do zasobów w lesie CORP."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
 >[!div class="step-by-step"]
 [« Krok 4](step-4-install-mim-components-on-pam-server.md)
 [Krok 6 »](step-6-transition-group-to-pam.md)
-
 
 Dla każdej domeny CORP, np. contoso.local, kontrolery domeny PRIV i CONTOSO muszą być związane relacją zaufania. Dzięki temu użytkownicy w domenie PRIV mogą uzyskać dostęp do zasobów w domenie CORP.
 
@@ -36,7 +35,7 @@ Zanim zostanie nawiązana relacja zaufania, każdy kontroler domeny musi zostać
 
 2.  Sprawdź, czy każdy istniejący kontroler domeny CORP może przekazywać nazwy do lasu PRIV. Na każdym kontrolerze domeny spoza lasu PRIV, np. CORPDC, uruchom program PowerShell i wprowadź następujące polecenie:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Sprawdź, czy dane wyjściowe wskazują rekord serwera nazw dla domeny PRIV z poprawnym adresem IP.
@@ -55,14 +54,14 @@ Na serwerze PAMSRV ustal jednokierunkowe zaufanie z każdą domeną, np. CORPDC,
 
 3.  Wpisz poniższe polecenia programu PowerShell dla każdego istniejącego lasu. Wprowadź poświadczenia administratora domeny CORP (CONTOSO\Administrator) po wyświetleniu monitu.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Wpisz poniższe polecenia programu PowerShell dla każdej domeny w istniejących lasach. Wprowadź poświadczenia administratora domeny CORP (CONTOSO\Administrator) po wyświetleniu monitu.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 7.  Na liście typowych zadań wybierz pozycję **Odczytywanie wszystkich informacji o użytkowniku**, kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
 8.  Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
-9.  Otwórz okno programu PowerShell.  
-10.  Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Typ:  
-    ```
+9.  Otwórz okno programu PowerShell.
+10.  Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Typ:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 
 3.  Wpisz poniższe polecenia programu PowerShell.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

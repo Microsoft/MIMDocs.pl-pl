@@ -2,10 +2,10 @@
 title: "Wdrożenie usługi PAM — krok 4 — instalacja programu MIM | Dokumentacja firmy Microsoft"
 description: "Instalowanie i konfigurowanie usługi i portalu programu MIM na serwerze usługi Privileged Access Management i stacjach roboczych."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: barclayn
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,18 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
 >[!div class="step-by-step"]
 [« Krok 3](step-3-prepare-pam-server.md)
 [Krok 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
 
 Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainstalować portal i usługę programu MIM oraz przykładową aplikację sieci Web portalu.
 
@@ -33,7 +32,7 @@ Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainsta
 
 Jeśli pobrano program MIM, rozpakuj archiwum instalacji programu MIM do nowego folderu.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Uruchom instalatora portalu i usługi.  
+## <a name="run-the-service-and-portal-install-program"></a>Uruchom instalatora portalu i usługi.
 
 Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
@@ -140,13 +139,13 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja siec
 
 3.  W usłudze IIS utwórz nową witrynę sieci Web o nazwie Przykładowy portal usługi Privileged Access Management programu MIM. Wybierz port 8090 i ścieżkę fizyczną C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal.  Można to zrobić za pomocą następującego polecenia programu PowerShell:
 
-  ```
+  ```PowerShell
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
 4.  Skonfiguruj przykładową aplikację sieci Web pod kątem przekierowywania użytkowników do interfejsu API REST usługi PAM programu MIM. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. W sekcji **<system.webServer>** dodaj następujące wiersze:
 
-  ```
+  ```XML
   <httpProtocol>
     <customHeaders>
       <add name="Access-Control-Allow-Credentials" value="true"  />
@@ -160,7 +159,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja siec
 
 6.  Uruchom ponownie usługę IIS przy użyciu następującego polecenia, aby te zmiany zaczęły obowiązywać.
 
-  ```
+  ```cmd
   iisreset
   ```
 
