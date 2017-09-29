@@ -125,6 +125,7 @@
 #### [Zatwierdzanie lub odrzucanie oczekującego żądania PAM](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Pobieranie informacji dotyczących sesji PAM](./reference/privileged-access-management-get-session-info.md)
 ## Dokumentacja techniczna
+### [Terminologia programu Microsoft Identity Manager 2016 SP1](./reference/mim-2016-sp1-terms.md)
 ### [Dokumentacja języka XML na potrzeby konfiguracji ekranu kontroli zasobów](./reference/rcd-configuration-xml-reference.md)
 ### [Kody błędów podczas uruchamiania Agenta zarządzania](./reference/maerrorcodes.md)
 ### [Wykaz funkcji programu Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
