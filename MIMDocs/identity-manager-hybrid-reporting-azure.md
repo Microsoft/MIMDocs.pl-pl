@@ -4,19 +4,19 @@ description: "Raporty hybrydowe działania inspekcji w usłudze Azure Active Dir
 keywords: 
 author: fimguy
 ms.author: fimguy
-manager: femila
-ms.date: 04/28/2017
+manager: bhu
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: mwahl
+ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 678626e7c32659570de88d8178c16821cceaf7ee
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
+ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Raporty hybrydowe inspekcji zarządzania tożsamościami w usłudze Azure Active Directory — publiczna wersja zapoznawcza (odświeżanie)
 Dzięki raportom działania inspekcji usługi Azure Active Directory (AD) można przeglądać jeden raport umożliwiający monitorowanie działań związanych z zarządzaniem tożsamościami, podejmowanych lokalnie lub w chmurze. Ta funkcja umożliwia zarządzanie wszystkimi tożsamościami i danymi dostępu w jednym miejscu, oszczędzając czas i obniżając ogólne koszty.
@@ -41,6 +41,9 @@ Proces raportowania hybrydowego obejmuje następujące kroki:
 4. Dane o aktywności są przechowywane na platformie Azure przez jeden miesiąc.
 5. Witryna Azure Portal pobiera dane raportowania inspekcji i renderuje je jako inspekcję w bloku raportowania inspekcji platformy Azure.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="next-steps"></a>Następne kroki
 - Dodatkowe informacje na temat [Pracy z raportowaniem hybrydowym programu Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 - Uzyskaj więcej szczegółowych informacji na temat [raportów działania inspekcji w portalu usługi Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Dowiedz się więcej [raport zasady przechowywania](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
+- Dowiedz się więcej [integracji dziennika Microsoft Azure (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
+- Dowiedz się więcej [interfejsem API raportowania usługi Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
