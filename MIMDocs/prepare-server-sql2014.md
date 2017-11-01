@@ -3,20 +3,20 @@ title: "Konfigurowanie programu SQL Server pod kątem instalacji programu Micros
 description: "Zainstaluj program SQL Server 2014 w ramach przygotowań do instalacji programu MIM 2016."
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 105d2320ed5a0d610e8e6c5f459366680e3f8a77
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 8a33e09719b8c806de43531d12ea4b65b5cb443a
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2014"></a>Konfigurowanie serwera zarządzania tożsamościami: SQL Server 2014
 

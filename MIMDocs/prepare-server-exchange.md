@@ -3,20 +3,20 @@ title: "Konfigurowanie programu Exchange do wysyłania wiadomości e-mail i twor
 description: "Ten opcjonalny krok polega na wdrożeniu programu Exchange Server w celu umożliwienia programowi MIM 2016 wysyłania wiadomości e-mail i tworzenia skrzynek pocztowych."
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ac787f2ff76b19aab815d55018d1b6f0de1f4adb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 145248962f0977f4aa7bc1edf49f0e88543d5cb8
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Konfigurowanie serwera zarządzania tożsamościami: Exchange
 
