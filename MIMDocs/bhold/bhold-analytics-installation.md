@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 631e08667e5d1535d8f63cc297aad360080f8b20
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-analytics-installation"></a>Instalacja analizy BHOLD
 
@@ -41,7 +41,7 @@ Aby zainstalować moduł analizy BHOLD, zaloguj się jako członek grupy Adminis
 
 - BholdAnalytics*\<wersji\>*\_Release.msi
 
-Zastąp * \<wersji\> * z numerem wersji wersji analizy BHOLD, który jest instalowany.
+Zastąp  *\<wersji\>*  z numerem wersji wersji analizy BHOLD, który jest instalowany.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 

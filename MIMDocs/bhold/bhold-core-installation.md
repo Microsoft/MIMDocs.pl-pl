@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-core-installation"></a>Instalacja BHOLD Core
 
@@ -109,7 +109,7 @@ Przed rozpoczęciem zainstalować moduł BHOLD Core, musisz być przygotowana do
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Użyj zintegrowanych zabezpieczeń**                    | Określa, że dostęp do bazy danych jest używane uwierzytelnianie systemu Windows.                                                                                                                                                                                                     | Zaznacz pole wyboru, jeśli uwierzytelnianie systemu Windows są używane do łączenia się z serwerem SQL. Wyczyść pole wyboru, jeśli jest używane uwierzytelnianie programu SQL Server. Bazy danych muszą być utworzone przed systemem BHOLD podstawowe ustawienia jeśli uwierzytelniania programu SQL Server jest używany. **Uwaga:** Jeśli używane jest uwierzytelnianie systemu Windows, użytkownik musi być zalogowany przy użyciu konta, które ma roli serwera sysadmin na serwerze bazy danych. |
 | **Baza danych użytkownika** i **hasła bazy danych** | Określa nazwę użytkownika i hasło użytkownika z roli serwera sysadmin na serwerze bazy danych. Te wartości są określane tylko wtedy, gdy jest używane uwierzytelnianie programu SQL Server.                                                                                               | Zapisać nazwę użytkownika w tym miejscu programu SQL Server: zapis w tym miejscu hasło użytkownika programu SQL Server: **Uwaga:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                  |
-| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwa bazy danych (domyślne: b1) tworzące BHOLD podstawowych ustawień. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci * \<serwera\>*\\*\<wystąpienia\> *. | Nazwa serwera (lub serwera i wystąpienia) w tym miejscu zapisu: wpisz nazwę bazy danych w tym miejscu:                                                                                                                                                                                                                                                                                                                   |
+| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwa bazy danych (domyślne: b1) tworzące BHOLD podstawowych ustawień. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci  *\<serwera\>*\\*\<wystąpienia\>* . | Nazwa serwera (lub serwera i wystąpienia) w tym miejscu zapisu: wpisz nazwę bazy danych w tym miejscu:                                                                                                                                                                                                                                                                                                                   |
 | **Wprowadzić ograniczenia dotyczące użytkownika bazy danych**    | Przestarzałe.                                                                                                                                                                                                                                                                 | Nie należy zmieniać wartości domyślnej                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -118,9 +118,9 @@ Przed rozpoczęciem zainstalować moduł BHOLD Core, musisz być przygotowana do
 
 Aby zainstalować moduł BHOLD Core, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł BHOLD Core na: 
 
-- BholdCore * \<wersji\>*\_Release.msi
+- BholdCore  *\<wersji\>*\_Release.msi
 
-Zastąp * \<wersji\> * z numerem wersji instalowanej wersji BHOLD Core.
+Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD Core.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
@@ -142,7 +142,7 @@ Aby wykonać tę procedurę, musi być członkiem grupy Administratorzy na kompu
 
 3.  W Kreatorze nowej reguły ruchu przychodzącego kliknij **portu**, a następnie kliknij przycisk **dalej**.
 
-4.  Upewnij się, że **TCP** wybrano w **określone porty lokalne**, wpisz numer portu domyślnego BHOLD Core (5151) lub numer portu, który określony podczas zainstalowany BHOLD Core, a następnie kliknij przycisk ** Następny**.
+4.  Upewnij się, że **TCP** wybrano w **określone porty lokalne**, wpisz numer portu domyślnego BHOLD Core (5151) lub numer portu, który określony podczas zainstalowany BHOLD Core, a następnie kliknij przycisk  **Następny**.
 
 5.  Upewnij się, że **zezwalały na połączenie** jest zaznaczone, a następnie kliknij przycisk **dalej**.
 
@@ -175,13 +175,13 @@ Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minim
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>Aby ustanowić SPN BHOLD witryny sieci Web
 
-1.  Na kontrolerze domeny usług domenowych w usłudze Active Directory, kliknij przycisk **Start**, kliknij przycisk **wszystkie programy**, kliknij przycisk **Akcesoria**, kliknij prawym przyciskiem myszy **wiersza polecenia **, a następnie kliknij przycisk **Uruchom jako administrator**.
+1.  Na kontrolerze domeny usług domenowych w usłudze Active Directory, kliknij przycisk **Start**, kliknij przycisk **wszystkie programy**, kliknij przycisk **Akcesoria**, kliknij prawym przyciskiem myszy **wiersza polecenia** , a następnie kliknij przycisk **Uruchom jako administrator**.
 
-2.  W wierszu polecenia wpisz następujące polecenie i naciśnij klawisz ENTER: setspn – S HTTP / * \<networkalias\> \<domeny\> * \\ * \<accountname\> * gdzie:
+2.  W wierszu polecenia wpisz następujące polecenie i naciśnij klawisz ENTER: setspn – S HTTP /  *\<networkalias\> \<domeny\>*  \\  *\<accountname\>*  gdzie:
 
-    -   *\<networkalias\> * adres używanego przez klientów do kontaktowania się z witryny sieci Web BHOLD
+    -   *\<networkalias\>*  adres używanego przez klientów do kontaktowania się z witryny sieci Web BHOLD
 
-    -   *\<domeny\>*\\*\<accountname\> * jest domena i nazwa użytkownika konta usługi BHOLD Core utworzony podczas instalacji BHOLD Core.
+    -   *\<domeny\>*\\*\<accountname\>*  jest domena i nazwa użytkownika konta usługi BHOLD Core utworzony podczas instalacji BHOLD Core.
 
 3.  Powtórz poprzedni krok dla wszystkich innych nazw używanych przez klientów do kontaktowania się z BHOLD witryny sieci Web, na przykład, CNAME aliasy, nazw, które zawierają w pełni kwalifikowaną nazwą domeny lub nazwy, które zawierają nazwę NetBIOS domeny (short).
 
@@ -205,7 +205,7 @@ Jako członek grupy Administratorzy domeny, aby wykonać tę procedurę, należy
 
 1.  Kliknij przycisk **Start**, kliknij przycisk **wszystkie programy**, a następnie kliknij przycisk **programu Internet Explorer**.
 
-2.  W polu adresu wpisz, gdzie * \<serwera\> * jest nazwą serwera, witryny sieci Web BHOLD i * \<portu\> * jest powiązany numer portu witryny sieci Web.
+2.  W polu adresu wpisz, gdzie  *\<serwera\>*  jest nazwą serwera, witryny sieci Web BHOLD i  *\<portu\>*  jest powiązany numer portu witryny sieci Web.
 
 3.  Kliknij przycisk **Home**, kliknij przycisk **wartości**, a następnie kliknij przycisk **Modyfikuj**.
 

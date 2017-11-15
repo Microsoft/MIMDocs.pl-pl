@@ -12,12 +12,15 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6786ea653f178b25ea3da4fbd3b01d21b79c622
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
+>[!IMPORTANT]
+Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do daty wycofania 01 października 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
+
 # <a name="working-with-self-service-password-reset"></a>Praca z funkcją samoobsługowego resetowania hasła
 W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługowego resetowania hasła. Wprowadzono następujące ulepszenia:
 
@@ -68,7 +71,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 3.  Kliknij pozycje **Usługi aplikacji &gt; Active Directory &gt; Dostawca usługi MFA &gt; Szybkie tworzenie**.
 
-![Obraz szybkiego tworzenia dostawcy usługi MFA w portalu Azure](media/MIM-SSPR-Azureportal.png)
+![Portale Azure szybkie tworzenie obraz usługi MFA](media/MIM-SSPR-Azureportal.png)
 
 4.  W polu **Nazwa** wprowadź **SSPRMFA**, a następnie kliknij przycisk **Utwórz**.
 
@@ -82,7 +85,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 7.  W nowym oknie w lewym panelu w obszarze **Konfiguruj** kliknij pozycję **Ustawienia**.
 
-8.  W obszarze **Alarm oszustwa** usuń zaznaczenie pola wyboru **Blokuj użytkownika, gdy zostaje zgłoszone oszustwo**. W ten sposób można zapobiec zablokowaniu całej usługi.
+8.  W obszarze **alarm oszustwa**, usuń zaznaczenie pola wyboru ** Blokuj użytkownika, gdy zostaje zgłoszone oszustwo. W ten sposób można zapobiec zablokowaniu całej usługi.
 
 9. W otwartym oknie **Azure Multi-Factor Authentication** kliknij pozycję **SDK** w obszarze **Pliki do pobrania** w menu po lewej stronie.
 
@@ -136,7 +139,7 @@ Użytkownicy w organizacji mogą teraz rejestrować się w celu resetowania hase
 
 #### <a name="register-users-for-password-reset"></a>Rejestrowanie użytkowników w celu resetowania haseł
 
-1.  Użytkownicy uruchamiają przeglądarkę sieci Web i przechodzą do portalu rejestracji na potrzeby resetowania haseł programu MIM.  (Zazwyczaj ten portal będzie skonfigurowany z uwierzytelnianiem systemu Windows).  W portalu użytkownicy muszą ponownie podać swoją nazwę użytkownika i hasło w celu potwierdzenia ich tożsamości.
+1.  Użytkownik będzie uruchomić przeglądarki sieci web i przejdź do portalu rejestracji resetowania haseł MIM.  (Zazwyczaj ten portal będzie skonfigurowany z uwierzytelnianiem systemu Windows).  W portalu użytkownicy muszą ponownie podać swoją nazwę użytkownika i hasło w celu potwierdzenia ich tożsamości.
 
     Będą oni monitowani o przejście do portalu rejestracji haseł i uwierzytelnienie się przy użyciu nazwy użytkownika i hasła.
 
@@ -165,7 +168,7 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 2.  Użytkownik zostanie przekierowany do strony uwierzytelniania. Jeśli skonfigurowano usługę MFA, zostanie wykonane połączenie telefoniczne z użytkownikiem.
 
-3.  Działając w tle, usługa Azure MFA nawiązuje następnie połączenie telefoniczne z numerem podanym podczas tworzenia konta usługi.
+3.  W tle co dzieje się to tej usługi Azure MFA, a następnie połączenie telefoniczne z numerem podanym podczas ich konta usługi.
 
 4.  Gdy użytkownik odbierze połączenie, będzie monitowany o naciśnięcie przycisku # na klawiaturze telefonu. Następnie użytkownik klika przycisk **Dalej** w portalu.
 
@@ -182,7 +185,7 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 1.  Użytkownicy mogą otworzyć przeglądarkę sieci Web, przejść do **portalu resetowania haseł** i wprowadzić swoją nazwę użytkownika, a następnie kliknąć przycisk **Dalej**.
 
-    Jeśli skonfigurowano usługę MFA, zostanie wykonane połączenie telefoniczne z użytkownikiem. Działając w tle, usługa Azure MFA nawiązuje następnie połączenie telefoniczne z numerem podanym podczas tworzenia konta usługi.
+    Jeśli skonfigurowano usługę MFA, zostanie wykonane połączenie telefoniczne z użytkownikiem. W tle co dzieje się to tej usługi Azure MFA, a następnie połączenie telefoniczne z numerem podanym podczas ich konta usługi.
 
     Jeśli użytkownik odbierze połączenie, będzie monitowany o naciśnięcie przycisku # na klawiaturze telefonu. Następnie użytkownik klika przycisk **Dalej** w portalu.
 
