@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 96363fb3b0067ff5c8f8c2f32e9a855464038653
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-model-generator-installation"></a>Instalacja Generator modelu BHOLD
 
@@ -39,7 +39,7 @@ Aparat 2010 Redistributable bazy danych programu Microsoft Access
 
  
 
-*Z \< * <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
+*Z \<*  <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
 
  
 
@@ -60,15 +60,15 @@ Aparat 2010 Redistributable bazy danych programu Microsoft Access
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Użyj zintegrowanych zabezpieczeń**                 | Określa, że dostęp do bazy danych jest używane uwierzytelnianie systemu Windows.                                                                                                                                                                                                                                                                                                                                                        | Zaznacz pole wyboru, jeśli uwierzytelnianie systemu Windows są używane do łączenia się z serwerem SQL. Wyczyść pole wyboru, jeśli jest używane uwierzytelnianie programu SQL Server. Bazy danych muszą być utworzone przed systemem BHOLD podstawowe ustawienia jeśli uwierzytelniania programu SQL Server jest używany. **Uwaga:** Jeśli używane jest uwierzytelnianie systemu Windows, użytkownik musi być zalogowany przy użyciu konta, które ma roli serwera sysadmin na serwerze bazy danych. **Ważne:** Użyj uwierzytelniania programu SQL Server tylko w środowiskach testowych. Firma Microsoft zaleca używanie uwierzytelniania systemu Windows w przypadku wdrożeń produkcyjnych. |
 | **Baza danych użytkownika** i **hasła bazy danych** | Określa nazwę użytkownika i hasło użytkownika z roli serwera sysadmin na serwerze bazy danych. Te wartości są określane tylko wtedy, gdy jest używane uwierzytelnianie programu SQL Server.                                                                                                                                                                                                                                                  | Zapis tutaj nazwę użytkownika programu SQL Server: zapis w tym miejscu hasło użytkownika programu SQL Server: </br></br> **Ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwa kopii zapasowej bazy danych, który spowoduje utworzenie konfiguracji Generator modelu BHOLD. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci * \<serwera\>*\\*\<wystąpienia\> *.  Firma Microsoft zaleca się, że nazwa kopii zapasowej bazy danych przy użyciu nazwy bazy danych BHOLD Core następuje \_kopii zapasowej, na przykład B1_BACKUP. | Nazwa serwera (lub serwera i wystąpienia) w tym miejscu zapisu: </br> Wpisz nazwę bazy danych w tym miejscu:
+| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwa kopii zapasowej bazy danych, który spowoduje utworzenie konfiguracji Generator modelu BHOLD. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci  *\<serwera\>*\\*\<wystąpienia\>* .  Firma Microsoft zaleca się, że nazwa kopii zapasowej bazy danych przy użyciu nazwy bazy danych BHOLD Core następuje \_kopii zapasowej, na przykład B1_BACKUP. | Nazwa serwera (lub serwera i wystąpienia) w tym miejscu zapisu: </br> Wpisz nazwę bazy danych w tym miejscu:
 
 ## <a name="bhold-model-generator-setup"></a>Instalator Generator modeli BHOLD
 
 Aby zainstalować moduł Generator modeli BHOLD, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł BHOLD Core na:
 
-- BholdModelGenerator * \<wersji\>*\_Release.msi
+- BholdModelGenerator  *\<wersji\>*\_Release.msi
 
-Zastąp * \<wersji\> * z numerem wersji instalowanej wersji BHOLD Generator modeli.
+Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD Generator modeli.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 

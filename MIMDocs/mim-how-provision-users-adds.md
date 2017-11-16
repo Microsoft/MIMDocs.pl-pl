@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
-ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
+ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
@@ -294,7 +294,7 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 
  >[!NOTE]
-Sprawdź, czy wybrano początkowego przepływu tylko dla przepływu atrybutów, zawierający nazwę Wyświetlaną jako miejsce docelowe.                                                                          
+ Ważne: sprawdź, czy wybrano opcję Tylko przepływ początkowy dla przepływu atrybutu, którego miejscem docelowym jest DN.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Krok 7. Tworzenie przepływu pracy
 
@@ -459,11 +459,7 @@ Aby wykonać te zadania, uruchamia się następujące profile przebiegu.
 | Fabrikam FIMMA   | 1. Eksportowanie <br/> 2. Import zmian       |
 
 
-Po zaimportowaniu z bazy danych usługi FIM Service Britta Simon oraz obiekt ExpectedRuleEntry łączący Brittę z
-
-regułą synchronizacji ruchu wychodzącego użytkownika usług AD są umieszczane w obszarze łącznika Fabrikam FIMMA. Po sprawdzeniu
-
-właściwości Britty w obszarze łącznika obok wartości atrybutów skonfigurowanych w portalu programu FIM znajdziesz prawidłowe odwołanie do obiektu oczekiwanego wpisu reguły. Poniższy zrzut ekranu pokazuje przykład takiej sytuacji.
+Po zaimportowaniu z bazy danych usługi FIM, Simona Britta i obiektu ExpectedRuleEntry prowadzący Britta z wychodzącą regułą synchronizacji użytkowników usługi AD są umieszczane w przestrzeni łącznika FIMMA firmy Fabrikam. Przejrzyj właściwości Britta firmy w obszarze łączników obok wartości atrybutów, które zostały skonfigurowane w portalu programu FIM można również znaleźć prawidłowego odwołania do obiektu oczekiwano wpis reguły. Poniższy zrzut ekranu pokazuje przykład takiej sytuacji.
 
 ![Właściwości obiektu obszaru łącznika](media/how-provision-users-adds/image025.jpg)
 

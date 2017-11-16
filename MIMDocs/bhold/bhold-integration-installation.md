@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-fimmim-integration-installation"></a>BHOLD FIM/MIM integracji instalacji
 
@@ -75,7 +75,7 @@ Aby zainstalować moduł BHOLD FIM integracji, zaloguj się jako członek grupy 
 
 - BholdFIMIntegration*\<wersji\>*\_Release.msi
 
-Zastąp * \<wersji\> * z numerem wersji instalowanej wersji BHOLD FIM integracji.
+Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD FIM integracji.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
@@ -125,17 +125,17 @@ W poniższej tabeli wymieniono pliki i wersji oryginalnej i zmienione ciągów d
 
 Gdzie:
 
--   *\<BHOLD_Server\> * Określa nazwę serwera BHOLD jako znaleziony w oryginalnej wersji pliku
+-   *\<BHOLD_Server\>*  Określa nazwę serwera BHOLD jako znaleziony w oryginalnej wersji pliku
 
--   *\<MIM_Server\> * Określa nazwę serwera FIM jako znaleziony w oryginalnej wersji pliku
+-   *\<MIM_Server\>*  Określa nazwę serwera FIM jako znaleziony w oryginalnej wersji pliku
 
--   *\<BHOLD_Server_FQDN\> * określa w pełni kwalifikowaną nazwę (FQDN) serwera BHOLD
+-   *\<BHOLD_Server_FQDN\>*  określa w pełni kwalifikowaną nazwę (FQDN) serwera BHOLD
 
--   *\<MIM_Port\> * Określa numer portu serwera usługi programu FIM, tak jak w oryginalnej wersji pliku
+-   *\<MIM_Port\>*  Określa numer portu serwera usługi programu FIM, tak jak w oryginalnej wersji pliku
 
--   *\<MIM_Server_FQDN\> * Określa nazwę FQDN serwera usługi FIM
+-   *\<MIM_Server_FQDN\>*  Określa nazwę FQDN serwera usługi FIM
 
--   *\<MIM_SSL_Port\> * Określa inny port do użycia przy użyciu protokołu SSL na serwerze programu FIM
+-   *\<MIM_SSL_Port\>*  Określa inny port do użycia przy użyciu protokołu SSL na serwerze programu FIM
 
 ### <a name="enable-approval-workflows-in-bhold-core"></a>Włącz przepływów pracy w BHOLD Core
 
@@ -189,7 +189,7 @@ Jeśli nie określono osobą zatwierdzającą dla żądania samoobsługi roli za
 
 18. Na **jednostki organizacyjnej/root** kliknij przycisk **Modyfikuj**.
 
-19. Na **zmodyfikować jednostki organizacyjnej atrybuty/root** strony w **osoba zatwierdzająca**, wpisz nazwę domeny i nazwę użytkownika, który będzie zatwierdzać żądania przypisania roli, w formacie * \<domeny\>*\\*\<użytkownika\>*, gdzie * \<domeny\> * jest Nazwa domeny NetBIOS (skrót) i * \<użytkownika\> * jest nazwą logowania użytkownika.
+19. Na **zmodyfikować jednostki organizacyjnej atrybuty/root** strony w **osoba zatwierdzająca**, wpisz nazwę domeny i nazwę użytkownika, który będzie zatwierdzać żądania przypisania roli, w formacie  *\<domeny\>*\\*\<użytkownika\>*, gdzie  *\<domeny\>*  jest Nazwa domeny NetBIOS (skrót) i  *\<użytkownika\>*  jest nazwą logowania użytkownika.
 20. Kliknij przycisk **OK**.
 
 >[!IMPORTANT]
@@ -207,7 +207,7 @@ Aby zapewnić lepsze zabezpieczenia przepływu pracy, oprócz osób zatwierdzaj�
 
 - powiadomienia*\<n\>*
 
-gdzie * \< n \> * wskazuje opcjonalne liczbowego sufiksu zapewnienie wiele atrybutów tego samego typu.
+gdzie  *\< n \>*  wskazuje opcjonalne liczbowego sufiksu zapewnienie wiele atrybutów tego samego typu.
 
 ### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Sprawdź przepływów pracy skonfigurowane w usłudze FIM
 

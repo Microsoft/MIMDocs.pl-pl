@@ -11,11 +11,11 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 694ec1e0d6577c4335fd75ab0984aed9a0e4f220
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
 
@@ -189,8 +189,7 @@ MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
-Ważne jest zrozumienie wymagań dyskowych dla używanego modelu odzyskiwania serwera SQL. W zależności od harmonogramu tworzenia kopii zapasowych można rozważyć użycie trybu odzyskiwania prostego podczas początkowego ładowania systemu, aby ograniczyć użycie miejsca na dysku, ale należy rozumieć konsekwencje tego wyboru z perspektywy utraty danych.
-W przypadku korzystania z trybu odzyskiwania pełnego konieczne jest zarządzanie użyciem dysku przez tworzenie kopii zapasowych, co obejmuje częste wykonywanie kopii zapasowych dziennika transakcji, aby zapobiec wysokiemu użyciu miejsca na dysku.
+Ważne jest zrozumienie wymagań dyskowych dla używanego modelu odzyskiwania serwera SQL. W zależności od harmonogramu tworzenia kopii zapasowych można rozważyć użycie trybu odzyskiwania prostego podczas początkowego ładowania systemu, aby ograniczyć użycie miejsca na dysku, ale należy rozumieć konsekwencje tego wyboru z perspektywy utraty danych. W przypadku korzystania z trybu odzyskiwania pełnego konieczne jest zarządzanie użyciem dysku przez tworzenie kopii zapasowych, co obejmuje częste wykonywanie kopii zapasowych dziennika transakcji, aby zapobiec wysokiemu użyciu miejsca na dysku.
 
 >[!IMPORTANT]
 Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
@@ -200,7 +199,6 @@ Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i
 W procesie ładowania początkowego należy zastosować tylko minimalną konfigurację wymaganą do konfiguracji programu FIM dla reguł zasad zarządzania (reguł MPR) i definicji zestawu. Po zakończeniu ładowania danych należy utworzyć dodatkowe zestawy wymagane dla wdrożenia. Użyj ustawienia Uruchom przy aktualizacji zasad w przepływach pracy akcji, aby wstecznie zastosować te zasady do załadowanych danych.
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Krok 3. Skonfigurowanie i zapełnienie usługi FIM Service przy użyciu danych tożsamości zewnętrznych
-
 
 W tym punkcie należy wykonać procedury opisane w przewodniku „How do I Synchronize Users from Active Directory
 
@@ -224,13 +222,11 @@ Dla każdego źródłowego agenta zarządzania, który jest częścią cyklu ini
 
 ### <a name="step-4-apply-your-full-mim-configuration"></a>Krok 4. Zastosowanie pełnej konfiguracji programu MIM
 
-
 Po zakończeniu początkowego ładowania danych należy zastosować pełną konfigurację programu MIM dla danego wdrożenia.
 
 W zależności od scenariuszy może to obejmować tworzenie dodatkowych zestawów, reguł MPR i przepływów pracy. W przypadku zasad wymagających wstecznego zastosowania do wszystkich istniejących obiektów w systemie należy użyć ustawienia Uruchom przy aktualizacji zasad w przepływach pracy akcji, aby wstecznie zastosować te zasady do załadowanych danych.
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Krok 5. Ponowne skonfigurowanie usługi SQL w celu przywrócenia poprzednich ustawień
-
 
 Pamiętaj, aby zmienić ustawienia usługi SQL na jej normalne ustawienia. Obejmuje to następujące działania:
 
@@ -267,8 +263,7 @@ ActivityInformationConfiguration wymagają numeru wersji, aby precyzyjnie odwoł
 
 ### <a name="avoid-cyclic-references"></a>Unikanie odwołań cyklicznych
 
-Ogólnie rzecz biorąc, odwołania cykliczne w konfiguracji programu MIM nie są zalecane.
-Jednak cykle czasami występują, gdy zestaw A odwołuje się do zestawu B, a zestaw B odwołuje się do zestawu A. Aby uniknąć problemów z odwołaniami cyklicznymi, należy zmienić definicję zestawu A lub zestawu B tak, aby nie odwoływały się do siebie nawzajem. Następnie należy ponownie uruchomić proces migracji. Jeśli masz odwołania cykliczne i w rezultacie polecenie cmdlet Compare-FIMConfig zwraca błąd, konieczne jest przerwanie cyklu ręcznie. Ponieważ polecenie cmdlet Compare-FIMConfig wyświetla listę zmian uporządkowaną według pierwszeństwa, wymaga to, aby wśród odwołań obiektów konfiguracji nie istniały żadne odwołania cykliczne.
+Ogólnie rzecz biorąc, odwołania cykliczne w konfiguracji programu MIM nie są zalecane. Jednak cykle czasami występują, gdy zestaw A odwołuje się do zestawu B, a zestaw B odwołuje się do zestawu A. Aby uniknąć problemów z odwołaniami cyklicznymi, należy zmienić definicję zestawu A lub zestawu B tak, aby nie odwoływały się do siebie nawzajem. Następnie należy ponownie uruchomić proces migracji. Jeśli masz odwołania cykliczne i w rezultacie polecenie cmdlet Compare-FIMConfig zwraca błąd, konieczne jest przerwanie cyklu ręcznie. Ponieważ polecenie cmdlet Compare-FIMConfig wyświetla listę zmian uporządkowaną według pierwszeństwa, wymaga to, aby wśród odwołań obiektów konfiguracji nie istniały żadne odwołania cykliczne.
 
 ## <a name="security"></a>Zabezpieczenia
 
@@ -394,17 +389,16 @@ Domyślnie program MIM 2016 czyści obiekty systemowe, które utraciły ważnoś
 
 Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zestawami.
 
--   Reguły MPR żądania (RMPR)
+-  Reguły MPR żądania (RMPR)
 
- - Służą do definiowania zasad kontroli dostępu (uwierzytelniania, autoryzacji i akcji) dla operacji tworzenia, odczytu, aktualizacji lub usuwania (CRUD) w odniesieniu do zasobów.
- - Stosowane podczas wydawania operacji CRUD w odniesieniu do zasobu docelowego w programie FIM.
-   - Zakres określony przez kryteria dopasowania zdefiniowane w regule, tj. do których żądań CRUD reguła będzie stosowana.
+  - Służą do definiowania zasad kontroli dostępu (uwierzytelniania, autoryzacji i akcji) dla operacji tworzenia, odczytu, aktualizacji lub usuwania (CRUD) w odniesieniu do zasobów.
+  - Stosowane podczas wydawania operacji CRUD w odniesieniu do zasobu docelowego w programie FIM.
+  - Zakres określony przez kryteria dopasowania zdefiniowane w regule, tj. do których żądań CRUD reguła będzie stosowana.
 
-
--   Reguły MPR przejścia między zestawami (TMPR)
- - Służą do definiowania zasad niezależnie od tego, jak obiekt wszedł w bieżący stan reprezentowany przez zestaw przejść. Reguły TMPR służą do modelowania zasad uprawnień.
- - Stosowane, kiedy zasób wchodzi do skojarzonego zestawu lub go opuszcza.
- - Zakres ograniczony do elementów członkowskich zestawu.
+- Reguły MPR przejścia między zestawami (TMPR)
+  - Służą do definiowania zasad niezależnie od tego, jak obiekt wszedł w bieżący stan reprezentowany przez zestaw przejść. Reguły TMPR służą do modelowania zasad uprawnień.
+  - Stosowane, kiedy zasób wchodzi do skojarzonego zestawu lub go opuszcza.
+  - Zakres ograniczony do elementów członkowskich zestawu.
 
 >[UWAGA] Aby uzyskać więcej informacji, zobacz [Projektowanie reguł dotyczących zasad firmowych](http://go.microsoft.com/fwlink/?LinkID=183691).
 
@@ -413,18 +407,14 @@ Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zest
 Podczas stosowania konfiguracji należy stosować zasadę najmniejszych uprawnień. Reguły MPR kontrolują zasady dostępu do wdrożenia programu FIM. Należy włączyć tylko funkcje używane przez większość użytkowników. Na przykład nie wszyscy użytkownicy używają programu FIM do zarządzania grupą, a więc skojarzone reguły MPR zarządzania grupami powinny być wyłączone. Domyślnie program FIM jest dostarczany z wyłączoną większością uprawnień użytkowników niebędących administratorami.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Zamiast bezpośrednio modyfikować wbudowane reguły MPR, należy je duplikować
-
 Jeśli zachodzi potrzeba zmodyfikowania wbudowanych reguł MPR, należy utworzyć nową regułę MPR z wymaganą konfiguracją i wyłączyć wbudowaną regułę MPR. Daje to gwarancję, że wszelkie przyszłe zmiany wbudowanych reguł MPR wprowadzane przez proces uaktualniania nie wpłyną niekorzystnie na konfigurację systemu.
 
 #### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>Uprawnienia użytkowników końcowych powinny korzystać z jawnych list atrybutów dostosowanych do potrzeb biznesowych użytkowników
-
-Używanie jawnych list atrybutów pomaga zapobiec przypadkowemu przyznaniu uprawnień nieuprzywilejowanym użytkownikom podczas dodawania atrybutów do obiektów.
-Administratorzy powinni jawnie udzielić dostępu do nowych atrybutów zamiast próbować usunąć dostęp.
+Używanie jawnych list atrybutów pomaga zapobiec przypadkowemu przyznaniu uprawnień nieuprzywilejowanym użytkownikom podczas dodawania atrybutów do obiektów. Administratorzy powinni jawnie udzielić dostępu do nowych atrybutów zamiast próbować usunąć dostęp.
 
 Dostęp do danych powinien być ograniczony do potrzeb biznesowych użytkownika. Na przykład członkowie grupy nie powinni mieć dostępu do atrybutu filtru grupy, której są członkami. Filtr może nieodwracalnie ujawnić dane organizacji, do których użytkownik normalnie nie miałby dostępu.
 
 #### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>Reguły MPR powinny odzwierciedlać czynne uprawnienia w systemie
-
 Należy unikać nadawania uprawnień do atrybutów, których użytkownik nigdy nie może używać. Na przykład nie należy przyznawać uprawnienia do modyfikowania podstawowych atrybutów zasobu, takich jak objectType. Pomimo reguły MPR każda próba zmodyfikowania typu zasobu po jego utworzeniu zostanie odrzucona przez system.
 
 #### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>Uprawnienia Odczyt powinny być oddzielone od uprawnień Modyfikowanie i Tworzenie w przypadku używania jawnych atrybutów w regułach MPR
@@ -443,12 +433,9 @@ W przypadku atrybutów z takimi samymi wymaganiami dotyczącymi dostępu, które
 
 W programie FIM uprawnienia są definiowane jako pozytywne potwierdzenie. Ponieważ program FIM nie obsługuje odmowy uprawnień, przydzielenie nieograniczonego dostępu do zasobu komplikuje określanie jakichkolwiek wykluczeń w uprawnieniach. Najlepszym rozwiązaniem jest przyznanie tylko niezbędnych uprawnień.
 
->[!NOTE]
-Sekcja dotycząca uprawnień znajduje się poniżej. Zastanawiam się, jak je scalić, aby uniknąć tworzenia nagłówków poziomu 5
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Niestandardowe uprawnienia należy definiować przy użyciu reguł TMPR
 
-Niestandardowe uprawnienia należy zdefiniować, używając reguł MPR przejścia między zestawami (TMPR) zamiast reguł RMPR.
-Reguły TMPR udostępniają model oparty na stanach w celu przypisywania lub usuwania uprawnień na podstawie członkostwa w określonych zestawach przejść (lub rolach) i towarzyszących działań przepływu pracy. Reguły TMPR powinny być zawsze definiowane w parach: jedna dla zasobów przechodzących do i jedna dla zasobów wychodzących z zestawu. Ponadto każda reguła MPR przejścia powinna zawierać oddzielne przepływy pracy dla działań aprowizacji i cofania aprowizacji.
+Niestandardowe uprawnienia należy zdefiniować, używając reguł MPR przejścia między zestawami (TMPR) zamiast reguł RMPR. Reguły TMPR udostępniają model oparty na stanach w celu przypisywania lub usuwania uprawnień na podstawie członkostwa w określonych zestawach przejść (lub rolach) i towarzyszących działań przepływu pracy. Reguły TMPR powinny być zawsze definiowane w parach: jedna dla zasobów przechodzących do i jedna dla zasobów wychodzących z zestawu. Ponadto każda reguła MPR przejścia powinna zawierać oddzielne przepływy pracy dla działań aprowizacji i cofania aprowizacji.
 
 >[!NOTE]
 Każdy przepływ pracy cofania aprowizacji powinien zapewniać, że atrybut Uruchom przy aktualizacji zasad ma wartość true.
@@ -461,8 +448,7 @@ Podczas tworzenia pary reguł TMPR regułę MPR przejścia między zestawami nal
 
 Przepływy pracy aprowizacji powinny najpierw sprawdzić, czy zasób docelowy został już aprowizowany zgodnie z uprawnieniem. Jeśli tak, wówczas nie powinny nic robić.
 
-Przepływy pracy cofania aprowizacji powinny najpierw sprawdzić, czy zasób docelowy został aprowizowany. Jeśli tak, powinny cofnąć aprowizację zasobu docelowego.
-W przeciwnym razie nie powinny nic robić.
+Przepływy pracy cofania aprowizacji powinny najpierw sprawdzić, czy zasób docelowy został aprowizowany. Jeśli tak, powinny cofnąć aprowizację zasobu docelowego. W przeciwnym razie nie powinny nic robić.
 
 #### <a name="select-run-on-policy-update-for-tmprs"></a>Należy wybrać ustawienie Uruchom przy aktualizacji zasad dla reguł TMPR
 
@@ -494,19 +480,17 @@ Aby usunąć uprawnienie, ale pozostawić bieżące elementy członkowskie (na p
 
 ### <a name="sets"></a>Zestawy
 
-Podczas stosowania najlepszych rozwiązań dla zestawów należy wziąć pod uwagę wpływ optymalizacji na możliwości zarządzania i łatwość administrowania w przyszłości.
-Przed zastosowaniem tych zaleceń należy przeprowadzić odpowiednie testy przy oczekiwanej skali produkcyjnej, aby znaleźć równowagę między wydajnością i możliwościami zarządzania.
+Podczas stosowania najlepszych rozwiązań dla zestawów należy wziąć pod uwagę wpływ optymalizacji na możliwości zarządzania i łatwość administrowania w przyszłości. Przed zastosowaniem tych zaleceń należy przeprowadzić odpowiednie testy przy oczekiwanej skali produkcyjnej, aby znaleźć równowagę między wydajnością i możliwościami zarządzania.
 
 >[!NOTE]
-Wszystkie poniższe wskazówki dotyczą zestawów dynamicznych i grup dynamicznych.
+> Wszystkie poniższe wskazówki dotyczą zestawów dynamicznych i grup dynamicznych.
 
 
 #### <a name="minimize-the-use-of-dynamic-nesting"></a>Należy zminimalizować użycie zagnieżdżania dynamicznego
 
 Odnosi się to do filtru zestawu odwołującego się do atrybutu ComputedMember innego zestawu. Typowym powodem zagnieżdżania zestawów jest unikanie duplikowania warunku członkostwa w wielu zestawach. Chociaż takie podejście może prowadzić do poprawy możliwości zarządzania zestawami, dzieje się to kosztem wydajności. Optymalizację pod kątem wydajności można uzyskać, duplikując warunki członkostwa zagnieżdżonego zestawu zamiast zagnieżdżania samego zestawu.
 
-W niektórych przypadkach, aby zaspokoić wymagania funkcjonalne, nie można uniknąć zagnieżdżania zestawów. Są to podstawowe sytuacje, w przypadku których należy zagnieżdżać zestawy. Na przykład aby zdefiniować zestaw wszystkich grup, których właścicielami nie są pełnoetatowi pracownicy, konieczne jest użycie zagnieżdżania zestawów w następujący sposób: `/Group[not(Owner =
-/Set[ObjectID = ‘X’]/ComputedMember]`, gdzie „X” to atrybut ObjectID zestawu wszystkich pełnoetatowych pracowników.
+W niektórych przypadkach, aby zaspokoić wymagania funkcjonalne, nie można uniknąć zagnieżdżania zestawów. Są to podstawowe sytuacje, w przypadku których należy zagnieżdżać zestawy. Na przykład aby zdefiniować zestaw wszystkich grup, których właścicielami nie są pełnoetatowi pracownicy, konieczne jest użycie zagnieżdżania zestawów w następujący sposób: `/Group[not(Owner = /Set[ObjectID = ‘X’]/ComputedMember]`, gdzie „X” to atrybut ObjectID zestawu wszystkich pełnoetatowych pracowników.
 
 #### <a name="minimize-the-use-of-negative-conditions"></a>Należy zminimalizować użycie warunków negatywnych
 
@@ -540,8 +524,7 @@ Communication Foundation (WCF). Ta opcja nie jest domyślnie włączona i odradz
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Nie należy mapować przepływu pracy autoryzacji na proces resetowania hasła
 
-Nie należy dołączać przepływu pracy autoryzacji do operacji resetowania hasła.
-Resetowanie hasła wymaga synchronicznej odpowiedzi, a przepływy pracy autoryzacji, które zawierają działania takie jak działanie zatwierdzania, są asynchroniczne.
+Nie należy dołączać przepływu pracy autoryzacji do operacji resetowania hasła. Resetowanie hasła wymaga synchronicznej odpowiedzi, a przepływy pracy autoryzacji, które zawierają działania takie jak działanie zatwierdzania, są asynchroniczne.
 
 #### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>Nie należy mapować wielu działań akcji na proces resetowania hasła
 
