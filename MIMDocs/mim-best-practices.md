@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
+ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
 
@@ -90,7 +90,7 @@ W zależności od ilości pamięci dostępnej na serwerze SQL oraz tego, czy ser
   WITH OVERRIDE
   ```
 
-  Ten przykład powoduje ponowne skonfigurowanie serwera SQL do używania nie więcej niż 12 gigabajtów (GB) pamięci.
+  W tym przykładzie spowoduje zmianę konfiguracji programu SQL server do użycia w nie więcej niż 12 gigabajtów (GB) pamięci.
 
 4.  Zweryfikuj ustawienie przy użyciu następującego zapytania:
 
@@ -108,13 +108,16 @@ W zależności od ilości pamięci dostępnej na serwerze SQL oraz tego, czy ser
 
 ### <a name="backup-and-recovery-configuration"></a>Konfiguracja tworzenia kopii zapasowych i odzyskiwania
 
-Ogólnie rzecz biorąc, wykonywanie kopii zapasowych baz danych należy przeprowadzać zgodnie z zasadami tworzenia kopii zapasowych przyjętymi w organizacji. Jeśli nie zaplanowano wykonywania przyrostowych kopii zapasowych dzienników, należy ustawić dla bazy danych tryb odzyskiwania prostego. Przed wdrożeniem strategii tworzenia kopii zapasowych upewnij się, że rozumiesz implikacje różnych modeli odzyskiwania, a także wymagania dotyczące miejsca na dysku dla tych modeli. Model odzyskiwania pełnego wymaga częstego wykonywania kopii zapasowych dziennika w celu uniknięcia wysokiego użycia miejsca na dysku. Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370) i [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM 2010).
+Ogólnie rzecz biorąc powinien współpracować z administratorem bazy danych do projektowania strategii tworzenia kopii zapasowych i odzyskiwania. Kilka zaleceń, obejmują:
+- Kopie zapasowe bazy danych zgodnie z zasadami tworzenia kopii zapasowej w organizacji. 
+- Jeśli nie zaplanowano wykonywania przyrostowych kopii zapasowych dzienników, należy ustawić dla bazy danych tryb odzyskiwania prostego. 
+- Upewnij się, że rozumiesz konsekwencje modeli odzyskiwania inny przed wdrożeniem strategii tworzenia kopii zapasowych. Dowiedz się, wymagania dotyczące miejsca na dysku dla tych modeli. Model odzyskiwania pełnego wymaga częstego wykonywania kopii zapasowych dziennika w celu uniknięcia wysokiego użycia miejsca na dysku. 
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>Tworzenie konta administratora kopii zapasowych dla usługi FIMService po instalacji
+Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370) i [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM 2010).
 
+## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Utwórz konto administratora kopii zapasowych dla usługi FIM po instalacji
 
->[!IMPORTANT]
-Elementy członkowskie zestawu Administratorzy usługi FIMService mają unikatowe uprawnienia o kluczowym znaczeniu dla działania wdrożenia programu FIM. Jeśli nie możesz zalogować się jako część zestawu Administratorzy, jedynym rozwiązaniem jest przywrócenie poprzedniej kopii zapasowej systemu. Aby uniknąć tej sytuacji, zalecane jest dodanie innych użytkowników do zestawu administracyjnego programu FIM w ramach konfiguracji po instalacji.
+Elementy członkowskie zestawu usługę programu FIM Administratorzy uprawnień unikatowy kluczowa dla funkcjonowania wdrożenie programu MIM. Jeśli nie możesz zalogować się jako część zestawu Administratorzy, jedynym rozwiązaniem jest przywrócenie poprzedniej kopii zapasowej systemu. Aby uniknąć tej sytuacji, zalecane jest dodanie innych użytkowników do zestawu administracyjnego programu FIM w ramach konfiguracji po instalacji.
 
 ## <a name="fim-service"></a>Usługa FIM Service
 
@@ -144,7 +147,7 @@ Aby uzyskać więcej informacji, zobacz artykuł [Configure Message Delivery Res
 
 ### <a name="disable-sharepoint-indexing"></a>Wyłączanie indeksowania programu SharePoint
 
-Zaleca się wyłączenie indeksowania programu Microsoft Office SharePoint®. Nie ma żadnych dokumentów, które muszą być indeksowane, a indeksowanie powoduje generowanie wielu wpisów dziennika błędów i potencjalne problemy z wydajnością programu FIM 2010. Aby wyłączyć indeksowanie programu SharePoint
+Zaleca się wyłączenie indeksowania programu Microsoft Office SharePoint®. Nie ma żadnych dokumentów, które muszą być indeksowany. Indeksowanie powoduje, że wiele wpisów dziennika błędów i potencjalnych problemów z wydajnością w programie MIM. Aby wyłączyć indeksowanie programu SharePoint, wykonaj poniższe kroki:
 
 1.  Na serwerze hostującym portal programu MIM 2016 kliknij menu Start.
 
@@ -164,16 +167,16 @@ Zaleca się wyłączenie indeksowania programu Microsoft Office SharePoint®. Ni
 
 ## <a name="mim-2016-initial-data-load"></a>Początkowe ładowanie danych programu MIM 2016
 
-W tej sekcji przedstawiono szereg kroków służących zwiększeniu wydajności początkowego ładowania danych z systemu zewnętrznego do programu FIM 2010. Ważne jest zrozumienie, że niektóre z tych kroków to czynności tymczasowe wykonywane podczas początkowego zapełniania systemu i należy je zresetować po jego ukończeniu. Jest to jednorazowa operacja, a nie ciągła synchronizacja.
+Ta sekcja zawiera szereg czynności, aby zwiększyć wydajność obciążenia początkowe dane z zewnętrznego systemu do programu MIM. Należy zrozumieć, że niektóre z tych kroków tylko są wykonywane podczas początkowej wypełniania systemu. Powinny one resetowane, po zakończeniu obciążenia. Jest to jednorazowa operacja, a nie ciągła synchronizacja.
 
 >[!NOTE]
-Aby uzyskać więcej informacji o synchronizowaniu użytkowników między programem FIM 2010 a usługami Active Directory Domain Services (AD DS), zobacz artykuł [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Synchronizowanie użytkowników z usługi Active Directory z programem FIM) w dokumentacji programu FIM.
+Aby uzyskać więcej informacji na temat synchronizowania użytkowników między usługą MIM i usług domenowych w usłudze Active Directory (AD DS), zobacz [jak synchronizowanie użytkowników z usługi Active Directory do portalu FIM](http://go.microsoft.com/fwlink/?LinkID=188277) w dokumentacji programu FIM.
 
 >[!IMPORTANT]
-Upewnij się, że zastosowane zostały najlepsze rozwiązania opisane w sekcji „Konfiguracja usługi SQL” w niniejszym przewodniku.                                                                                                                                                      |
+Upewnij się, że zastosowane zostały najlepsze rozwiązania opisane w sekcji „Konfiguracja usługi SQL” w niniejszym przewodniku. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Krok 1. Skonfigurowanie serwera SQL na potrzeby początkowego ładowania danych
-Jeśli planujesz początkowe ładowanie dużej ilości danych, możesz skrócić czas potrzebny do zapełnienia bazy danych, tymczasowo wyłączając wyszukiwanie pełnotekstowe i ponownie włączając je po ukończeniu eksportu w agencie zarządzania programu MIM 2016 (FIM MA).
+Obciążenie wstępne danych może być procesem długie. Planując początkowo załadować dużą ilość danych, można skrócić czas potrzebny do wypełniania bazy danych tymczasowo wyłączając wyszukiwanie pełnotekstowe i włączyć go ponownie po zakończeniu eksportu na agenta zarządzania programu MIM 2016 (FIM MA).
 
 Aby tymczasowo wyłączyć wyszukiwanie pełnotekstowe:
 
@@ -184,12 +187,9 @@ Aby tymczasowo wyłączyć wyszukiwanie pełnotekstowe:
 3.  Uruchom następujące instrukcje SQL:
 
 ```SQL
-ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING =
-MANUAL
+ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
-
-Ważne jest zrozumienie wymagań dyskowych dla używanego modelu odzyskiwania serwera SQL. W zależności od harmonogramu tworzenia kopii zapasowych można rozważyć użycie trybu odzyskiwania prostego podczas początkowego ładowania systemu, aby ograniczyć użycie miejsca na dysku, ale należy rozumieć konsekwencje tego wyboru z perspektywy utraty danych. W przypadku korzystania z trybu odzyskiwania pełnego konieczne jest zarządzanie użyciem dysku przez tworzenie kopii zapasowych, co obejmuje częste wykonywanie kopii zapasowych dziennika transakcji, aby zapobiec wysokiemu użyciu miejsca na dysku.
 
 >[!IMPORTANT]
 Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
@@ -200,16 +200,11 @@ W procesie ładowania początkowego należy zastosować tylko minimalną konfigu
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Krok 3. Skonfigurowanie i zapełnienie usługi FIM Service przy użyciu danych tożsamości zewnętrznych
 
-W tym punkcie należy wykonać procedury opisane w przewodniku „How do I Synchronize Users from Active Directory
-
-Domain Services to FIM” (Synchronizowanie użytkowników z usługi Active Directory z programem FIM) w celu skonfigurowania i zsynchronizowania systemu z użytkownikami z usługi Active Directory. Jeśli zachodzi potrzeba synchronizacji informacji o grupie, procedury dla tego procesu są opisane w przewodniku „How do I Synchronize Users from Active Directory Domain Services to FIM” (Synchronizowanie użytkowników z usługi Active Directory z programem FIM).
+Na tym etapie, jakie należy wykonać procedury opisane w jak to zrobić I synchronizowanie użytkowników z usług domenowych w usłudze Active Directory FIM przewodniku, aby skonfigurować i zsynchronizować systemu z użytkowników z usługi Active Directory. Jeśli chcesz synchronizować informacje o grupie procedury dla tego procesu są opisane w [jak zsynchronizować grup z usług domenowych w usłudze Active Directory do portalu FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) przewodnik.
 
 #### <a name="synchronization-and-export-sequences"></a>Sekwencje synchronizacji i eksportowania
 
-W celu optymalizacji wydajności należy uruchomić eksport po uruchomieniu synchronizacji, które skutkuje dużą liczbą oczekujących operacji eksportu w przestrzeni łącznika.
-
-Następnie należy uruchomić potwierdzający import na agencie zarządzania skojarzonym z tą przestrzenią łącznika. Na przykład gdy trzeba uruchomić profile uruchamiania synchronizacji na kilku agentach zarządzania w ramach początkowego ładowania danych, należy uruchomić eksport z następującym po nim importem zmian po uruchomieniu każdej pojedynczej synchronizacji.
-
+W celu optymalizacji wydajności należy uruchomić eksport po uruchomieniu synchronizacji, które skutkuje dużą liczbą oczekujących operacji eksportu w przestrzeni łącznika. Następnie należy uruchomić potwierdzający import na agencie zarządzania skojarzonym z tą przestrzenią łącznika. Na przykład gdy trzeba uruchomić profile uruchamiania synchronizacji na kilku agentach zarządzania w ramach początkowego ładowania danych, należy uruchomić eksport z następującym po nim importem zmian po uruchomieniu każdej pojedynczej synchronizacji.
 Dla każdego źródłowego agenta zarządzania, który jest częścią cyklu inicjowania, wykonaj następujące kroki:
 
 1.  Pełny import na źródłowym agencie zarządzania.
@@ -320,7 +315,7 @@ Aby zaimplementować protokół SSL:
 
 7.  Zapisz plik w dowolnej lokalizacji. Musisz mieć dostęp do tej lokalizacji w kolejnych krokach.
 
-8.  W programie Windows Internet Explorer® przejdź do strony https://nazwa_serwera/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
+8.  Przejdź do https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
 
 9.  Kliknij opcję Żądaj nowego certyfikatu.
 
@@ -374,7 +369,7 @@ Dla uzyskania optymalnej wydajności konfiguracji:
 
 -   Zastosuj najlepsze rozwiązania dotyczące konfiguracji usługi SQL opisane w sekcji „Konfiguracja usługi SQL” w tym dokumencie.
 
--   Wyłącz indeksowanie programu SharePoint w witrynie portalu programu FIM 2010 R2. Aby uzyskać więcej informacji, zobacz sekcję „Konfiguracja usługi SQL” w tym dokumencie.
+-   Wyłącz indeksowanie programu SharePoint na witryny portalu programu MIM. Aby uzyskać więcej informacji, zobacz sekcję „Konfiguracja usługi SQL” w tym dokumencie.
 
 ## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Najlepsze rozwiązania specyficzne dla funkcji (chcę to usunąć i zwinąć tę sekcję, aby mieć tylko określone funkcje na poziomie nagłówka 2 i 3)
 
@@ -392,7 +387,7 @@ Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zest
 -  Reguły MPR żądania (RMPR)
 
   - Służą do definiowania zasad kontroli dostępu (uwierzytelniania, autoryzacji i akcji) dla operacji tworzenia, odczytu, aktualizacji lub usuwania (CRUD) w odniesieniu do zasobów.
-  - Stosowane podczas wydawania operacji CRUD w odniesieniu do zasobu docelowego w programie FIM.
+  - Stosowane podczas operacji CRUD jest wystawiony na podstawie zasobu docelowego w programie MIM.
   - Zakres określony przez kryteria dopasowania zdefiniowane w regule, tj. do których żądań CRUD reguła będzie stosowana.
 
 - Reguły MPR przejścia między zestawami (TMPR)
@@ -404,7 +399,7 @@ Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zest
 
 #### <a name="only-enable-mprs-as-necessary"></a>Reguły MPR należy włączać tylko w razie potrzeby
 
-Podczas stosowania konfiguracji należy stosować zasadę najmniejszych uprawnień. Reguły MPR kontrolują zasady dostępu do wdrożenia programu FIM. Należy włączyć tylko funkcje używane przez większość użytkowników. Na przykład nie wszyscy użytkownicy używają programu FIM do zarządzania grupą, a więc skojarzone reguły MPR zarządzania grupami powinny być wyłączone. Domyślnie program FIM jest dostarczany z wyłączoną większością uprawnień użytkowników niebędących administratorami.
+Podczas stosowania konfiguracji należy stosować zasadę najmniejszych uprawnień. Reguły MPR dotyczące kontroli zasad dostępu, aby wdrożenie programu MIM. Należy włączyć tylko funkcje używane przez większość użytkowników. Na przykład nie wszyscy użytkownicy używać programu MIM do zarządzania grupami, więc skojarzoną grupą zarządzania MPR powinny być wyłączone. Domyślnie program MIM jest dostarczany z większość uprawnień administratora innych niż wyłączone.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Zamiast bezpośrednio modyfikować wbudowane reguły MPR, należy je duplikować
 Jeśli zachodzi potrzeba zmodyfikowania wbudowanych reguł MPR, należy utworzyć nową regułę MPR z wymaganą konfiguracją i wyłączyć wbudowaną regułę MPR. Daje to gwarancję, że wszelkie przyszłe zmiany wbudowanych reguł MPR wprowadzane przez proces uaktualniania nie wpłyną niekorzystnie na konfigurację systemu.
@@ -431,7 +426,7 @@ W przypadku atrybutów z takimi samymi wymaganiami dotyczącymi dostępu, które
 
 #### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>Należy unikać przyznawania nieograniczonego dostępu nawet wybranym grupom podmiotu zabezpieczeń
 
-W programie FIM uprawnienia są definiowane jako pozytywne potwierdzenie. Ponieważ program FIM nie obsługuje odmowy uprawnień, przydzielenie nieograniczonego dostępu do zasobu komplikuje określanie jakichkolwiek wykluczeń w uprawnieniach. Najlepszym rozwiązaniem jest przyznanie tylko niezbędnych uprawnień.
+W programie MIM uprawnienia są zdefiniowane jako pozytywne potwierdzenie. Ponieważ MIM nie obsługuje uprawnień Odmów, podając nieograniczony dostęp do zasobu komplikuje udostępnia wszystkie wyjątki w obszarze uprawnienia. Najlepszym rozwiązaniem jest przyznanie tylko niezbędnych uprawnień.
 
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Niestandardowe uprawnienia należy definiować przy użyciu reguł TMPR
 
@@ -470,7 +465,7 @@ Aby usunąć uprawnienie z systemu (i odwołać je ze wszystkich elementów czł
 
 3.  Wyłącz regułę MPR T-Out (Przejście z).
 
-Aby usunąć uprawnienie, ale pozostawić bieżące elementy członkowskie (na przykład zatrzymać zarządzanie uprawnieniem za pomocą programu FIM):
+Aby usunąć uprawnienia, ale pozostawić bieżących członków autonomicznie (na przykład zatrzymanie programu MIM do zarządzania uprawnienia):
 
 1.  Wyłącz regułę MPR T-In (Przejście do). Zapobiega to nowym przyznaniom.
 
@@ -504,11 +499,11 @@ Należy zminimalizować użycie warunków opartych na wielowartościowych atrybu
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Komputery typu kiosk używane do resetowania haseł powinny ustawiać zabezpieczenia lokalne w celu czyszczenia pliku stronicowania pamięci wirtualnej
 
-W przypadku wdrażania resetowania haseł programu FIM 2010 na stacji roboczej, która ma być kioskiem, zaleca się włączenie ustawienia zasad zabezpieczeń lokalnych „Zamknięcie: wyczyść plik stronicowania pamięci wirtualnej” w celu zapewnienia, że poufne informacje z pamięci procesu nie będą dostępne dla nieautoryzowanych użytkowników.
+W przypadku wdrażania resetowania na stacji roboczej przeznaczonych do kiosku hasła MIM, zaleca się zamknięcie: należy włączyć ustawienie zasad zabezpieczeń lokalnych pliku stronicowania pamięci wirtualnej wyczyść zapewnienie informacji poufnych pamięci procesu nie jest dostępne nieautoryzowanych użytkowników.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Użytkownicy powinni zawsze rejestrować się w celu resetowania haseł na komputerze, na którym są zalogowani
 
-Gdy użytkownik próbuje zarejestrować się w celu zresetowania hasła za pośrednictwem portalu sieci Web, program FIM 2010 zawsze inicjuje rejestrację w imieniu zalogowanego użytkownika, niezależnie od tego, kto jest zalogowany w witrynie sieci Web. Użytkownicy powinni zawsze rejestrować się w celu resetowania haseł na komputerze, na którym są zalogowani.
+Gdy użytkownik próbuje zarejestrować resetowania za pośrednictwem portalu sieci Web, MIM zawsze inicjuje rejestracji imieniu zalogowanego użytkownika, niezależnie od tego, który jest zalogowany na witrynie sieci Web. Użytkownicy powinni zawsze rejestrować się w celu resetowania haseł na komputerze, na którym są zalogowani.
 
 #### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>Nie należy ustawiać klucza rejestru AvoidPdcOnWan na wartość true
 
@@ -580,7 +575,7 @@ Nie należy usuwać zasobów schematu, gdy nadal istnieją wymagania inspekcji d
 
 #### <a name="making-regular-expressions-case-insensitive"></a>Ignorowanie wielkości liter w wyrażeniach regularnych
 
-W programie FIM przydatne może być ignorowanie wielkości liter w niektórych wyrażeniach regularnych. Aby ignorować wielkość liter w obrębie grupy, można użyć ciągu ?!:. Na przykład dla typu pracownika użyj wyrażenia
+W programie MIM może być przydatne dokonanie pewnych wyrażeń regularnych bez uwzględniania wielkości liter. Aby ignorować wielkość liter w obrębie grupy, można użyć ciągu ?!:. Na przykład dla typu pracownika użyj wyrażenia
 
 `\^(?!:contractor\|full time employee)%.`
 
@@ -590,17 +585,17 @@ Atrybut elementu członkowskiego udostępniany dla aparatu synchronizacji jest f
 
 #### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>Początkowe i końcowe spacje w ciągach są ignorowane
 
-W programie FIM można wprowadzać ciągi zawierające spacje wiodące i końcowe, ale system FIM ignoruje te spacje. Jeśli prześlesz ciąg zawierający spacje na początku i na końcu, aparat synchronizacji i usługi sieci Web zignorują te spacje.
+W programie MIM można wprowadzić ciągi zawierające spacje wiodące i końcowe, ale MIM system ignoruje tych miejscach. Jeśli prześlesz ciąg zawierający spacje na początku i na końcu, aparat synchronizacji i usługi sieci Web zignorują te spacje.
 
 #### <a name="empty-strings-do-not-equal-null"></a>Puste ciągi nie są równe wartości null
 
-Puste ciągi nie są równe wartości null w tej wersji programu FIM. Pusty ciąg wejściowy jest traktowany jako prawidłowa wartość. Nieobecny jest traktowany jako wartość null.
+Puste ciągi nie są równe null w tej wersji programu MIM. Pusty ciąg wejściowy jest traktowany jako prawidłowa wartość. Nieobecny jest traktowany jako wartość null.
 
 ### <a name="workflow-and-request-processing"></a>Przetwarzanie przepływów pracy i żądań
 
 #### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>Nie należy usuwać domyślnych przepływów pracy, które są dostarczane z programem MIM 2016
 
-Następujące przepływy pracy są dostarczane z programem FIM 2010 i nie należy ich usuwać:
+Następujące przepływy pracy są dostarczane z programem MIM i nie można usunąć:
 
 -   Expiration Workflow (przepływ pracy wygaśnięcia)
 
@@ -634,4 +629,11 @@ Jako części przepływów pracy w przepływach pracy autoryzacji należy unika�
 
 ### <a name="understanding-fim-service-partitions"></a>Informacje o partycjach usługi FIM Service
 
-Celem programu FIM jest przetwarzanie żądań, które mogą być inicjowane przez różnych klientów programu FIM, takich jak usługa FIM Synchronization Service i składniki samoobsługi, zgodnie ze skonfigurowanymi zasadami biznesowymi. Z założenia każde wystąpienie usługi FIM Service należy do grupy logicznej składającej się z co najmniej jednego wystąpienia usługi FIM Service, która jest także znana jako partycja usługi FIM Service. Jeśli masz tylko jedno wystąpienie usługi FIM Service wdrożone do obsługi wszystkich żądań, może to powodować opóźnienia przetwarzania. Niektóre operacje mogą nawet przekraczać domyślne wartości limitu czasu odpowiednie dla operacji samoobsługi. Partycje usługi FIM Service mogą pomóc rozwiązać ten problem. Aby uzyskać dodatkowe informacje, zobacz informacje o partycjach usługi FIM Service.
+Celem MIM jest do przetwarzania żądań, które mogą być inicjowane przez różnych klientów MIM, takich jak usługa synchronizacji programu FIM i składniki samoobsługowego zgodnie z zasadami skonfigurowanych firm. Z założenia każde wystąpienie usługi FIM Service należy do grupy logicznej składającej się z co najmniej jednego wystąpienia usługi FIM Service, która jest także znana jako partycja usługi FIM Service. Jeśli masz tylko jedno wystąpienie usługi FIM Service wdrożone do obsługi wszystkich żądań, może to powodować opóźnienia przetwarzania. Niektóre operacje mogą nawet przekraczać domyślne wartości limitu czasu odpowiednie dla operacji samoobsługi. Partycje usługi FIM Service mogą pomóc rozwiązać ten problem.
+
+Aby uzyskać więcej informacji, zobacz [Opis partycji usługi FIM](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
+
+## <a name="next-steps"></a>Następne kroki
+- [FIM tworzenia kopii zapasowej i przywracania przewodnik](http://go.microsoft.com/fwlink/?LinkID=165864)
+- [Jak synchronizowanie użytkowników z usługi Active Directory do portalu FIM](http://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Omówienie modelu odzyskiwania](http://go.microsoft.com/fwlink/?LinkID=185370).
