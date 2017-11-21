@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 >[!IMPORTANT]
-Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do daty wycofania 01 października 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
+Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
 
 # <a name="working-with-self-service-password-reset"></a>Praca z funkcją samoobsługowego resetowania hasła
 W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługowego resetowania hasła. Wprowadzono następujące ulepszenia:
