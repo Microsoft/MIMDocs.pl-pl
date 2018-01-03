@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Praca z funkcją raportowania hybrydowego programu Identity Manager — publiczna wersja zapoznawcza (odświeżanie)
 
@@ -50,11 +50,11 @@ Poniższa tabela zawiera listę wymagań dotyczących korzystania z funkcji rapo
 
 | Wymaganie | Opis |
 | --- | --- |
-| Azure AD Premium | Raportowanie hybrydowe to funkcja usługi Azure AD Premium, która wymaga usługi Azure AD Premium. </br></br>Aby uzyskać więcej informacji, zobacz artykuł [Wprowadzenie do usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium). </br>Aby uruchomić bezpłatną 30-dniową wersję próbną, zobacz sekcję [Włączanie wersji próbnej](https://azure.microsoft.com/trial/get-started-active-directory/). |
-| Aby rozpocząć pracę, musisz być administratorem globalnym usługi Azure AD |Domyślnie tylko administratorzy globalni mogą instalować i konfigurować agentów do rozpoczynania pracy, uzyskiwania dostępu do portalu i wykonywania operacji na platformie Azure. </br></br>**Ważne:** konto używane do instalowania agentów musi być kontem służbowym. Nie może to być konto Microsoft. Aby uzyskać więcej informacji, zobacz artykuł [Sign up for Azure as an organization](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization) (Tworzenie nowego konta platformy Azure jako organizacja). |
+| Azure AD Premium | Raportowanie hybrydowe to funkcja usługi Azure AD Premium, która wymaga usługi Azure AD Premium. </br></br>Aby uzyskać więcej informacji, zobacz artykuł [Wprowadzenie do usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Aby uruchomić bezpłatną 30-dniową wersję próbną, zobacz sekcję [Włączanie wersji próbnej](https://azure.microsoft.com/trial/get-started-active-directory/). |
+| Aby rozpocząć pracę, musisz być administratorem globalnym usługi Azure AD |Domyślnie tylko administratorzy globalni mogą instalować i konfigurować agentów do rozpoczynania pracy, uzyskiwania dostępu do portalu i wykonywania operacji na platformie Azure. </br></br>**Ważne:** konto używane do instalowania agentów musi być kontem służbowym. Nie może to być konto Microsoft. Aby uzyskać więcej informacji, zobacz artykuł [Sign up for Azure as an organization](https://docs.microsoft.com/azure/active-directory/sign-up-organization) (Tworzenie nowego konta platformy Azure jako organizacja). |
 | Hybrydowy agent programu Microsoft Identity Manager jest instalowany na każdym serwerze docelowym usługi MIM | Raportowanie hybrydowe wymaga, aby agenci byli instalowani na serwerach docelowych i konfigurowani do odbierania danych i udostępniania możliwości monitorowania oraz analizy. </br>|
 | Łączność wychodząca z punktami końcowymi usługi platformy Azure | Podczas instalacji i wykonywania agent musi mieć łączność z punktami końcowymi usługi platformy Azure. Jeśli łączność wychodząca jest blokowana przy użyciu zapór, upewnij się, że następujące punkty końcowe zostały dodane do listy dozwolonych elementów: </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net - Port: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|Łączność wychodząca oparta na adresach IP | W przypadku filtrowania opartego na adresach IP przy użyciu zapór zapoznaj się z artykułem [Azure IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653) (Zakresy adresów IP platformy Azure).|
+|Łączność wychodząca oparta na adresach IP | W przypadku filtrowania opartego na adresach IP przy użyciu zapór zapoznaj się z artykułem [Azure IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653) (Zakresy adresów IP platformy Azure).|
 | Inspekcja protokołu SSL dla ruchu wychodzącego jest filtrowana lub została wyłączona | Wykonywanie kroku rejestracji agenta lub operacji przekazywania danych może zakończyć się niepowodzeniem w przypadku przeprowadzania inspekcji protokołu SSL lub przerwania ruchu wychodzącego w warstwie sieciowej. |
 | Porty zapory na serwerze z uruchomionym agentem |Aby agent mógł komunikować się z punktami końcowymi usługi platformy Azure, poniższe porty zapory muszą być otwarte.</br></br><li>Port TCP 443</li><li>Port TCP 5671</li> |
 | Zezwolenie na następujące witryny sieci Web w przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer |W przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer korzystanie z poniższych witryn sieci Web musi być dozwolone na serwerze, na którym będzie instalowany agent.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Serwer federacyjny organizacji traktowany jako zaufany przez usługę Azure Active Directory, na przykład: https://sts.contoso.com</li> |
