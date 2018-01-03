@@ -93,6 +93,7 @@
 #### [Przewodnik dotyczący przepływu pracy łącznika usługi sieci Web dla przykładowego interfejsu API REST](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Usługa App Service przykładowego interfejsu API REST łącznika usługi sieci Web](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Opcje konfiguracji łącznika usługi sieci Web](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Importowanie łącznika usług sieci Web](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [Dokumentacja dla deweloperów pakietu BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Dokumentacja interfejsu API REST zarządzania certyfikatami](./reference/certificate-management-rest-api-reference.md)
