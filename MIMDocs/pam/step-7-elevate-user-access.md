@@ -1,22 +1,19 @@
 ---
 title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Dokumentacja firmy Microsoft"
 description: "Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne."
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
@@ -38,7 +35,12 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 
 ## <a name="request-privileged-access-from-mim"></a>Zażądaj uprzywilejowanego dostępu z programu MIM.
 
-1. W CORPWKSTN, nadal jako CONTOSO\Jen, wpisz następujące polecenie.
+> [!NOTE]
+> Zaleca się, że stacja robocza była workstation(PAW) uprzywilejowanych.  Aby uzyskać więcej informacji, zobacz [ŁAPY](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. Na PRIVWKSTN, zaloguj się jako PRIV\priv.jen.
+2. Kliknij przycisk **Start**, **Uruchom**, a następnie wprowadź **PowerShell.exe**.
+3. Wpisz następujące polecenie.
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
