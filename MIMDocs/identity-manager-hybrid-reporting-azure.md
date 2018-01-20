@@ -1,6 +1,6 @@
 ---
-title: Co to jest raportowanie hybrydowe | Dokumentacja firmy Microsoft
-description: "Raporty hybrydowe działania inspekcji w usłudze Azure Active Directory pozwalają przeglądać poddane inspekcji zdarzenia w chmurze i lokalne."
+title: "Co to jest raportowanie hybrydowe w usłudze Azure AD? | Microsoft Docs"
+description: "Raporty aktywności hybrydowe inspekcji w usłudze Azure Active Directory umożliwia przeglądanie zdarzeń inspekcji w chmurze i lokalnie."
 keywords: 
 author: fimguy
 ms.author: fimguy
@@ -12,38 +12,39 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
-ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
+ms.openlocfilehash: e2391be3d05f61335c134c104673a31ad7fc3830
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/20/2018
 ---
-# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Raporty hybrydowe inspekcji zarządzania tożsamościami w usłudze Azure Active Directory — publiczna wersja zapoznawcza (odświeżanie)
-Dzięki raportom działania inspekcji usługi Azure Active Directory (AD) można przeglądać jeden raport umożliwiający monitorowanie działań związanych z zarządzaniem tożsamościami, podejmowanych lokalnie lub w chmurze. Ta funkcja umożliwia zarządzanie wszystkimi tożsamościami i danymi dostępu w jednym miejscu, oszczędzając czas i obniżając ogólne koszty.
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory-public-preview-refresh"></a>Hybrydowe Zarządzanie tożsamościami inspekcji raportowania w programie Azure Active Directory w publicznej wersji zapoznawczej odświeżania
+Z usługi Azure Active Directory (Azure AD) inspekcji raportowania aktywności, można monitorować działania związane z zarządzaniem tożsamościami lokalnie lub w chmurze. Zarządzając wszystkich danych tożsamościami i dostępem w jeden raport, można zaoszczędzić czas i obniżenie ogólnych kosztów.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Co to jest raportowanie hybrydowe usługi Azure Active Directory?
-Raportowanie hybrydowe inspekcji ułatwia specjalistom IT rozwiązywanie typowych problemów z raportami związanymi z zarządzaniem tożsamościami.
+Hybrydowe inspekcji raportowania ułatwiająca informatykom wyzwań dotyczących wspólnych Zarządzanie tożsamościami raportowania, takie jak:
 
-1. **Zbieranie informacji dotyczących działań związanych z zarządzaniem tożsamościami w różnych systemach.** Raporty hybrydowe zawierają informacje dotyczące działań związanych z zarządzaniem tożsamościami pochodzące z usługi Azure AD i programu Identity Manager.
+* **Zbieranie działania związane z zarządzaniem tożsamościami w różnych systemach**. Raporty hybrydowe zawierają informacje dotyczące działań związanych z zarządzaniem tożsamościami pochodzące z usługi Azure AD i programu Identity Manager.
 
-2. **Eksportowanie danych raportów i tworzenie raportów niestandardowych.** Oprócz wyświetlania raportów w portalu platformy Azure można również eksportować dane w celu generowania własnych widoków niestandardowych.
+* **Eksportowanie danych raportowania i tworzenia raportów niestandardowych**. Oprócz wyświetlania raportów w portalu Azure, możesz wyeksportować dane w celu generowania własnych widoków niestandardowych.
 
-3. **Zmniejszenie kosztów infrastruktury systemu raportowania.** Raporty hybrydowe w chmurze umożliwiają eliminację lokalnej infrastruktury magazynu danych raportowania.
+* **Zmniejsza koszty infrastruktury systemu raportowania**. Raporty hybrydowe w chmurze oznacza, że może pomóc wyeliminować koszty, które są skojarzone z lokalnymi, infrastruktury magazynu danych.
 
 ## <a name="how-does-it-work"></a>Jak to działa?
 
-Aby zbierać dane lokalne, należy najpierw zainstalować agenta raportowania na serwerze programu Identity Manager 2016. Agenta raportowania można pobrać z Centrum pobierania Microsoft [tutaj](https://www.microsoft.com/download/details.aspx?id=55112).
+Aby zbierać dane lokalne, należy najpierw zainstalować agenta raportowania na serwerze programu Identity Manager 2016. [Pobierz agenta raportowania hybrydowego programu Microsoft Identity Manager](https://www.microsoft.com/download/details.aspx?id=55112).
 
-Proces raportowania hybrydowego obejmuje następujące kroki:
-1. Po zainstalowaniu agenta raportowania dane o aktywności są przesyłane z programu Identity Manager do dziennika zdarzeń systemu Windows.
-2. Agent raportowania przetwarza zdarzenia różnicowe co 10 minut lub po ponownym uruchomieniu usługi w dzienniku zdarzeń systemu Windows i przekazuje je do witryny Azure Portal.
-3. Witryna Azure Portal przetwarza dane w ciągu 1 godziny od ich odebrania.
+Raportowanie hybrydowe ulega następujący proces:
+1. Po zainstalowaniu agenta raportowania dane aktywności programu Identity Manager jest wysyłane do dziennika zdarzeń systemu Windows.
+2. Agent raportowania przetwarza zdarzenia różnicowych, co 10 minut lub po ponownym uruchomieniu usługi dziennika zdarzeń systemu Windows. Agent wysyła następnie zdarzenia do portalu Azure.
+3. Azure portal przetwarza odebranych danych w ciągu godziny od jego otrzymania.
 4. Dane o aktywności są przechowywane na platformie Azure przez jeden miesiąc.
-5. Witryna Azure Portal pobiera dane raportowania inspekcji i renderuje je jako inspekcję w bloku raportowania inspekcji platformy Azure.
+5. Azure portal pobiera dane raportowania inspekcji i wyświetla je w oknie raportów inspekcji usługi Azure.
 
 ## <a name="next-steps"></a>Następne kroki
-- Dodatkowe informacje na temat [Pracy z raportowaniem hybrydowym programu Identity Manager](working-with-identity-manager-hybrid-reporting.md)
-- Uzyskaj więcej szczegółowych informacji na temat [raportów działania inspekcji w portalu usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Dowiedz się więcej [raport zasady przechowywania](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
-- Dowiedz się więcej [integracji dziennika Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
-- Dowiedz się więcej [interfejsem API raportowania usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
+Dowiedz się więcej na następujące tematy:
+- [Praca z raportowaniem hybrydowym programu Identity Manager](working-with-identity-manager-hybrid-reporting.md)
+- [Raporty dotyczące działania inspekcji w portalu usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- [Zasady przechowywania raportowania](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- [Integracja dziennika Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- [Usługa Azure Active Directory raportowania interfejsu API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
