@@ -1,32 +1,33 @@
 ---
-title: "Obsługiwane platformy oprogramowania | Dokumentacja firmy Microsoft"
-description: "Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016"
-keywords: 
+title: Obsługiwane platformy oprogramowania | Dokumentacja firmy Microsoft
+description: Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016
+keywords: ''
 author: fimguy
-ms.author: fimguy
-manager: femila
-ms.date: 10/5/2017
+ms.author: davidste
+manager: davidste
+ms.date: 04/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
-ms.reviewer: mwahl
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: dd93c5bd4439aa6a485e1fcd6eaff970f07249b3
-ms.sourcegitcommit: ce027818d34f170b7bd216337751c646e0eb8ced
+ms.openlocfilehash: 3ff2ca7b9a268d4723861fcdec7f2f11932a6026
+ms.sourcegitcommit: 3502d636687e442f7d436ee56218b9b95f5056cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 
-W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczone gwiazdką * są obsługiwane tylko w wersji programu MIM 2016 z dodatkiem Service Pack 1.
+W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczonych * są obsługiwane tylko w MIM 2016 z dodatkiem Service pack 1 z najnowszych poprawek.
 
 
 | **Składnik programu MIM** | **Platforma** | **Wersja** |
-|-------------------|--------------|-------------|
+|-------------------|--------------|--------------|
 | **Usługa synchronizacji programu MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
+| | Poziom funkcjonalności Active Directory dla aprowizacji użytkowników, PCNS i synchronizacja usługi GAL | Windows 2000 <br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
 | | Baza danych usługi synchronizacji programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Usługi Active Directory dla Inicjowanie obsługi użytkowników, PCNS i synchronizacja usługi GAL (opcjonalnie)|Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange na potrzeby aprowizacji skrzynek pocztowych i synchronizacji usługi GAL (opcjonalnie)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
@@ -38,13 +39,13 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | |Scenariusz PAM: Active Directory dla scenariusza PAM istniejących lasów (CORP) | Windows Server 2008 <br/> Windows Server 2008 R2* <br/> Windows Server 2012* <br/> Windows Server 2012 R2* <br/> Windows Server 2016 * |
 | | Baza danych usługi programu MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
 | | Program SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Serwer poczty dla wiadomości e-mail zatwierdzania i zarządzania grupami usługi programu MIM (opcjonalnie) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* <br/> Exchange Online* (tylko powiadomienia) |
-| | Przeglądarka | Wszystkie główne przeglądarki * (tylko urządzeń przenośnych)|
+| | Serwer poczty dla wiadomości e-mail zatwierdzania i zarządzania grupami usługi programu MIM (opcjonalnie) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* <br/> Exchange Online * (tylko powiadomienie przed kompilacji [4.4.1749.0](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history#version-4417490) |
+| | Przeglądarka | Wszystkie główne obsługiwane przeglądarki * (tylko urządzeń przenośnych)|
 | **Raportowanie usługi programu MIM** | Windows Server |  Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Magazyn danych | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager* (z wersją 4.4.1459)<br/> [Zgodność wersji programu SQL Server z programem System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **Portale resetowania hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Przeglądarka sieci Web | Wszystkie popularne przeglądarki |
+| | Przeglądarka sieci Web | Wszystkie główne obsługiwanych przeglądarek |
 | **Dodatki i rozszerzenia programu MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | | Integracja z programem Outlook (opcjonalnie) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (w systemie Windows 10) * |
 | | Polecenia cmdlet obiektu żądającego programu PowerShell PAM (opcjonalnie) | Windows 8.1<br/>Windows 10 |
@@ -57,4 +58,4 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | **Pakiet BHOLD MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Baza danych BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
 | | Serwer poczty (opcjonalnie) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* |
-| | Przeglądarka sieci Web | Internet Explorer 7, 8, 9, 10 lub 11 z dodatkiem Silverlight |
+| | Przeglądarka sieci Web | Program Internet Explorer obsługiwane przeglądarki z dodatkiem Silverlight |
