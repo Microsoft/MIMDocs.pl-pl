@@ -144,3 +144,4 @@
 ## Historia wersji
 ### [Historia wersji programu MIM](./reference/version-history.md)
 ### [Historia wersji pakietu BHOLD](./reference/version-bhold-history.md)
+### [Historia wersji łącznika](./reference/microsoft-identity-manager-2016-connector-version-history.md)
