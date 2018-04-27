@@ -1,7 +1,7 @@
 ---
-title: "Praca z portalem samoobsługowego resetowania hasła | Dokumentacja firmy Microsoft"
-description: "Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego."
-keywords: 
+title: Praca z portalem samoobsługowego resetowania hasła | Dokumentacja firmy Microsoft
+description: Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/26/2018
 ---
 >[!IMPORTANT]
 Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
@@ -65,9 +65,9 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
 
-1.  Przejdź do [klasycznej wersji portalu Azure](http://manage.windowsazure.com) i zaloguj się jako administrator subskrypcji Azure.
+1.  Utwórz [dostawca usługi MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2.  Kliknij przycisk **Nowy** na dole po lewej stronie ekranu.
+2. Otwieranie sprawy pomocy technicznej i poproś bezpośredniego zestawu SDK dla programu ASP.net 2.0 C#. Zestaw SDK tylko zostaną dostarczone do bieżących użytkowników MIM za pomocą usługi MFA, ponieważ bezpośrednie zestawu SDK jest przestarzała. Nowi klienci powinna przyjąć na następną wersję programu MIM, który zostanie zintegrowana z serwera usługi MFA.
 
 3.  Kliknij pozycje **Usługi aplikacji &gt; Active Directory &gt; Dostawca usługi MFA &gt; Szybkie tworzenie**.
 

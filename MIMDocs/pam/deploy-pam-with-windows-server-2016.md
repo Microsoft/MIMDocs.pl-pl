@@ -1,7 +1,7 @@
 ---
-title: "Wdrażanie usługi Privileged Access Management programu MIM w systemie Windows Server 2016 | Dokumentacja firmy Microsoft"
-description: "Informacje dotyczące wdrażania usługi Privileged Access Management w systemie Windows Server 2016"
-keywords: 
+title: Wdrażanie usługi Privileged Access Management programu MIM w systemie Windows Server 2016 | Dokumentacja firmy Microsoft
+description: Informacje dotyczące wdrażania usługi Privileged Access Management w systemie Windows Server 2016
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 8827a8b6d49672a7860c9265efac5f0881a2c018
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 6088afccec45d1353233a32828353149bcf24740
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
 
@@ -130,13 +130,13 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
     -   Po ustanowieniu zaufania zaloguj się do kontrolera domeny PRIV jako PRIV\\Administrator, uruchom program PowerShell i wpisz następujące polecenia:
   ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
 
      netdom trust contoso.local /domain:priv.contoso.local /quarantine:no
-     /usero:contoso\\administrator /passwordo:Pass\@word1  
+     /usero:contoso\administrator /passwordo:Pass@word1  
 
      netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
   ```
 
 -   Element nr 5 (weryfikacja zaufania) **nie jest wymagany, gdy domeny CORP i PRIV działają na poziomie funkcjonalności domeny systemu Windows Server 2016**.

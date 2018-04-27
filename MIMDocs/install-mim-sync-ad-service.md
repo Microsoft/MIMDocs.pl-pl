@@ -1,7 +1,7 @@
 ---
-title: "Korzystanie z usługi synchronizacji z usługami AD w programie Microsoft Identity Manager | Dokumentacja firmy Microsoft"
-description: "Korzystając z agentów zarządzania i usługi synchronizacji programu MIM, można synchronizować bazy danych usług Active Directory i MIM."
-keywords: 
+title: Korzystanie z usługi synchronizacji z usługami AD w programie Microsoft Identity Manager | Dokumentacja firmy Microsoft
+description: Korzystając z agentów zarządzania i usługi synchronizacji programu MIM, można synchronizować bazy danych usług Active Directory i MIM.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 [« Usługa i portal MIM](install-mim-service-portal.md)
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — **Pass@word1**
@@ -43,7 +43,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 1.  Otwórz menedżera usługi synchronizacji.
 
-2.  Aby otworzyć kreatora tworzenia agenta zarządzania, zmień stronę na **Managment Actions** (Akcje zarządzania), a następnie w menu **Actions** (Akcje) kliknij pozycję **Create** (Utwórz).
+2.  Aby otworzyć Kreatora tworzenia agenta zarządzania, Zmień na **agentów zarządzania** strony, następnie na **akcje** menu, kliknij przycisk **Utwórz**.
 
 3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
 
@@ -57,7 +57,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
     -   Database (Baza danych): FIMService
 
-    -   MIM Service base address (Adres podstawowy usługi MIM): http://localhost:5725
+    -   Adres podstawowy usługi MIM: http://localhost:5725
 
     -   Authentication mode (Tryb uwierzytelniania): Windows integrated authentication (zintegrowane uwierzytelnianie systemu Windows)
 
@@ -114,7 +114,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
+    | Domena | Eksportowanie | domain |
     | Poczta e-mail | Eksportowanie | Poczta |
     | Identyfikator pracownika | Eksportowanie | employeeID |
     | EmployeeType | Eksportowanie | employeeType |
@@ -140,7 +140,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
+    | Domena | Eksportowanie | domain |
     | Poczta e-mail | Eksportowanie | Poczta |
     | MailNickName | Eksportowanie | mailNickName |
     | Element członkowski | Eksportowanie | członek |
@@ -225,7 +225,7 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 ## <a name="create-run-profiles"></a>Tworzenie profilów uruchamiania
 
-Można utworzyć profile uruchamiania dla łączników menedżerów zarządzania usług AD (ADMA) i MIM (MIMMA).
+Tworzenie profilów uruchamiania dla łączników MIMMA i ADMA.
 
 ### <a name="create-run-profiles-for-the-adma-connector"></a>Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi AD (ADMA)
 
