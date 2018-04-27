@@ -145,3 +145,11 @@
 ### [Historia wersji programu MIM](./reference/version-history.md)
 ### [Historia wersji pakietu BHOLD](./reference/version-bhold-history.md)
 ### [Historia wersji łącznika](./reference/microsoft-identity-manager-2016-connector-version-history.md)
+## Łączniki
+### [Graph](microsoft-identity-manager-2016-connector-graph.md)
+### [Lotus Notes](./reference/microsoft-identity-manager-2016-connector-domino.md)
+### [Ogólny łącznik LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
+### [Ogólny łącznik SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
+### [Usługi sieci Web](./reference/microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
+### [Historia wersji łącznika](./reference/microsoft-identity-manager-2016-connector-version-history.md)
