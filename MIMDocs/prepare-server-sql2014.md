@@ -1,7 +1,7 @@
 ---
-title: "Konfigurowanie programu SQL Server pod kątem instalacji programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft"
-description: "Zainstaluj program SQL Server 2014 w ramach przygotowań do instalacji programu MIM 2016."
-keywords: 
+title: Konfigurowanie programu SQL Server pod kątem instalacji programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
+description: Zainstaluj program SQL Server 2014 w ramach przygotowań do instalacji programu MIM 2016.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,10 @@ ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8a33e09719b8c806de43531d12ea4b65b5cb443a
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2014"></a>Konfigurowanie serwera zarządzania tożsamościami: SQL Server 2014
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 10/12/2017
 [SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — **Pass@word1**

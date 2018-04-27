@@ -1,7 +1,7 @@
 ---
-title: "Kroki wdrażania programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft"
-description: "Pobierz pełną listę kroków związanych z wdrażaniem programu Microsoft Identity Manager 2016 od przygotowania środowiska do konfigurowania portali."
-keywords: 
+title: Kroki wdrażania programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
+description: Pobierz pełną listę kroków związanych z wdrażaniem programu Microsoft Identity Manager 2016 od przygotowania środowiska do konfigurowania portali.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,13 +12,13 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2730c41d9b95d3c6e44c12dc734a0e9e13792a32
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: a1f2a30dd6d8519ec09ea3765e5584123725fe03
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="deploy-mim-2016"></a>Wdrażanie programu MIM 2016
+# <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Wdrażanie programu Microsoft Identity Manager 2016 z dodatkiem SP1
 Artykuły w tej sekcji zawierają instrukcje krok po kroku dotyczące wdrażania programu Microsoft Identity Manager (MIM) 2016 w scenariuszach samoobsługi użytkownika końcowego na serwerze, na którym nie wdrożono jeszcze usługi FIM ani programu MIM.
 
 > [!NOTE]
@@ -26,21 +26,22 @@ Artykuły w tej sekcji zawierają instrukcje krok po kroku dotyczące wdrażania
 
 Scenariusz zarządzania dostępem uprzywilejowanym jest wdrażany inaczej niż inne scenariusze z programem MIM, ponieważ wymaga dedykowanego środowiska lasu bastionu.  Jeśli chcesz dowiedzieć się więcej na temat wdrażania programu MIM dla usługi Privileged Identity Management, zobacz [Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management](./pam/configuring-mim-environment-for-pam.md).
 
-Proces wdrażania programu MIM 2016 jest bardzo podobny do procesu wdrażania jego poprzednika, programu FIM 2010 R2. Jeśli chcesz zapoznać się z dokumentacją programu FIM, zobacz [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Podręcznik wdrażania programu Forefront Identity Manager 2010 R2).
+Proces wdrażania MIM jest bardzo podobny do procesu jego poprzednika, programu FIM 2010 R2. Jeśli chcesz zapoznać się z dokumentacją programu FIM, zobacz [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310) (Podręcznik wdrażania programu Forefront Identity Manager 2010 R2).
 
 ## <a name="first-prepare-a-domain"></a>Po pierwsze: przygotowanie domeny
 Program MIM współpracuje z usługą Active Directory (AD), dlatego należy wykonać następujące kroki, aby skonfigurować kontroler domeny usługi AD.
 - [Konfiguracja domeny](preparing-domain.md)
 
-## <a name="next-prepare-an-identity-management-server"></a>Następnie: przygotowanie serwera zarządzania tożsamością
+## <a name="next-prepare-an-identity-management-servers"></a>Następnie: Tożsamość Przygotowanie serwerów zarządzania
 Po utworzeniu i skonfigurowaniu domeny należy przygotować firmowy serwer zarządzania tożsamością. Obejmuje to konfigurowanie następujących składników:
-- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [SQL Server 2014](prepare-server-sql2014.md)
-- [SharePoint](prepare-server-sharepoint.md)
+- [Windows Server 2012 R2](prepare-server-ws2016.md)
+- [SQL Server 2016](prepare-server-sql2016.md)
+- [Program SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcjonalnie)
 
-## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Na zakończenie: instalowanie składników programu Microsoft Identity Manager 2016
+## <a name="finally-install-microsoft-identity-manager-2016-sp1-components"></a>Zakończenie: Instalowanie programu Microsoft Identity Manager 2016 z dodatkiem SP1 składników
 Po skonfigurowaniu domeny i serwera można zainstalować składniki programu MIM i skonfigurować je do synchronizacji z usługą AD.
 - [Usługa synchronizacji programu MIM](install-mim-sync.md)
 - [Usługa i portal MIM](install-mim-service-portal.md)
 - [Synchronizowanie baz danych usług Active Directory i MIM](install-mim-sync-ad-service.md)
+- [Platformy obsługiwane przez program MIM 2016 lub nowszej](microsoft-identity-manager-2016-supported-platforms.md)
