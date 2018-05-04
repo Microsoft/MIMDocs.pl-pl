@@ -2,21 +2,21 @@
 title: Instalowanie usługi synchronizacji programu MIM | Dokumentacja firmy Microsoft
 description: Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji.
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
@@ -47,21 +47,21 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 3. Na ekranie powitalnym kliknij przycisk **Dalej**.
 
-    ![Obraz powitania w kreatorze instalatora programu MIM](media/MIM-Install1.png)
+    ![Obraz powitania w kreatorze instalatora programu MIM](media/install-mim-sync/MIM_Install1.png)
 
 4. Przejrzyj postanowienia licencyjne i kliknij przycisk **Dalej**, aby je zaakceptować.
 
 5. Na ekranie **Instalacja niestandardowa** kliknij przycisk **Dalej**.
 
-    ![Obraz z instalacją niestandardową](media/MIM-Install2.png)
+    ![Obraz z instalacją niestandardową](media/install-mim-sync/MIM_Install2.png)
 
 6.  Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-    1.  Program SQL Server znajduje się na: **Ten komputer**.
+    1.  Program SQL Server znajduje się na: **komputera zdalnego A** o nazwie **corpsql.contoso.com**.
 
-    2.  Wystąpienie programu SQL Server: **Wystąpienie domyślne**.
+    2.  Wystąpienie programu SQL Server: **domyślnego wystąpienia**
 
-    ![Obraz łączenia z bazą danych](media/MIM-Install3.png)
+    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 
 7.  Skonfiguruj konto usługi synchronizacji zgodnie z kontem utworzonym wcześniej:
 
@@ -71,7 +71,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     3.  Domena konta usługi lub nazwa komputera lokalnego: *contoso*
 
-    ![Obraz konta usługi](media/MIM-Install4.png)
+    ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
 
 8.  W instalatorze usługi synchronizacji programu MIM określ następujące grupy zabezpieczeń:
 
@@ -85,7 +85,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     5. Zarządzanie hasłami WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Obraz grup zabezpieczeń](media/MIM-Install5.png)
+    ![Obraz grup zabezpieczeń](media/install-mim-sync/MIM_Install5.png)
 
 9. Na ekranie ustawień zabezpieczeń zaznacz pozycję **Włącz reguły zapory dla przychodzącej komunikacji zdalnego wywołania procedur** i kliknij przycisk **Dalej**.
 

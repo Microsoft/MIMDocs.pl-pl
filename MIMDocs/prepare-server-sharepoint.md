@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
 
@@ -68,14 +68,15 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 1. Na karcie **Połącz z farmą serwerów** zmień ustawienia, aby utworzyć nową farmę serwerów.
 
 2. Określ ten serwer jako serwer bazy danych, takich jak **corpsql** bazy danych konfiguracji i *Contoso\SharePoint* jako konta dostępu do bazy danych programu SharePoint do użycia.
-    a. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) typu **frontonu**
 3. Utwórz hasło zabezpieczeń farmy.
 
-4. Po zakończeniu przez kreatora konfiguracji zadania konfiguracji o numerze 10 z 10 kliknij przycisk Zakończ. Zostanie otwarta przeglądarka sieci Web.
+4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) typu **frontonu**
 
-5. W menu podręcznym programu Internet Explorer, Uwierzytelnij się jako *Contoso\miminstall* (lub równoważne administratora), aby kontynuować.
+5. Po zakończeniu działania Kreatora konfiguracji zadania konfiguracji 10, 10, kliknij przycisk Zakończ sieci web zostanie otwarta w przeglądarce.
 
-6. W Kreatorze sieci web (w aplikacji sieci web) kliknij **Anuluj/Skip**.
+6. Jeśli zostanie wyświetlony monit podręcznego programu Internet Explorer, Uwierzytelnij się jako *Contoso\miminstall* (lub równoważne administratora), aby kontynuować.
+
+7. W Kreatorze sieci web (w aplikacji sieci web) kliknij **Anuluj/Skip**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Przygotowywanie programu SharePoint do hostowania portalu programu MIM
@@ -94,14 +95,13 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     > [!NOTE]
     > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Zachowaj **Powłoka zarządzania programu SharePoint 2016** okna otwarte dla odwołania później.
 
-2. Uruchom powłokę zarządzania programu SharePoint 2013 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
+2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **zbioru witryn programu SharePoint** skojarzoną z daną aplikacją sieci web.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 4. Na serwerze zarządzania tożsamością Otwórz nową kartę przeglądarki sieci web, przejdź do http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
 
-    ![Portalu MIM po adresem http://mim.contoso.com/ obrazu](media/MIM-DeploySP1.png)
+    ![Portalu MIM po adresem http://mim.contoso.com/ obrazu](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**.
 

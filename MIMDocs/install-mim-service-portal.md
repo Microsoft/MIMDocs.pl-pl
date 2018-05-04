@@ -5,18 +5,18 @@ keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
@@ -48,23 +48,23 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 6. Na stronie **Skonfiguruj połączenie bazy danych programu MIM** wybierz pozycję **Utwórz nową bazę danych**.
 
-    ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/MIM-Install10.png)
+    ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Na **Skonfiguruj połączenie z serwerem poczty**, wprowadź nazwę serwera programu Exchange jako **serwera poczty** lub skorzystać z usługi Office 365 skrzynki pocztowej. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
+7. Na **Skonfiguruj połączenie z serwerem poczty**, wprowadź nazwę serwera programu Exchange jako **serwera poczty** lub użyć **skrzynki pocztowej usługi Office 365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
 
-    ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/MIM-Install11.png)
+    ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Określ, że chcesz generować nowy certyfikat z podpisem własnym, lub wybierz odpowiedni certyfikat.
 
 9. Określ nazwę konta usługi, które ma być używane (np. *usługa_MIM*), hasło konta usługi (np. *Pass@word1*), domenę konta usługi (np. *contoso*) i konto e-mail usługi (np. *contoso*).
 
-    ![Obraz przedstawiający konfigurowanie konta usługi programu MIM](media/MIM-Install12.png)
+    ![Obraz przedstawiający konfigurowanie konta usługi programu MIM](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Należy pamiętać, że może zostać wyświetlone ostrzeżenie informujące o tym, że konto usługi nie jest zabezpieczone w bieżącej konfiguracji.
 
 11. Zaakceptuj ustawienia domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania MIM jako *contoso\MIMMA*.
 
-    ![Obraz konfigurowania usługi i portalu programu MIM](media/MIM-Install13.png)
+    ![Obraz konfigurowania usługi i portalu programu MIM](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Podaj wartość *CORPIDM* (nazwa tego komputera) jako adres serwera usługi programu MIM dla portalu programu MIM.
 
@@ -82,7 +82,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 2.  Określ *passwordregistration.contoso.com* jako nazwę hosta dla rejestracji haseł programu MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
 
-    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/MIM-Install14.png)
+    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
@@ -94,7 +94,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 2.  Określ *passwordreset.contoso.com* jako nazwę hosta dla portalu resetowania haseł MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
 
-    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/MIM-Install15.png)
+    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
