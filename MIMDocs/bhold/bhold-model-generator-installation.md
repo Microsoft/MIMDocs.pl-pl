@@ -1,7 +1,7 @@
 ---
 title: Instalacja generator modelu BHOLD | Dokumentacja firmy Microsoft
-description: "BHOLD model umożliwia struktury danych z różnych źródeł"
-keywords: 
+description: BHOLD model umożliwia struktury danych z różnych źródeł
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 96363fb3b0067ff5c8f8c2f32e9a855464038653
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 3d45d18042ccda83873aa929101222c15f36246a
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="bhold-model-generator-installation"></a>Instalacja Generator modelu BHOLD
 
@@ -24,7 +24,7 @@ Przy użyciu modułu BHOLD Generator modeli, można tworzyć struktury danych ze
 
 Przed zainstalowaniem modułu BHOLD Generator modeli, należy zainstalować następujące czynności:
 
-1. Moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł BHOLD Generator modeli. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx).
+1. Moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł BHOLD Generator modeli. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
 2. Dostawca Microsoft OLE DB dla programu Microsoft Jet musi być zainstalowany. Aby uzyskać więcej informacji, zobacz [w tym artykule](http://support.microsoft.com/kb/271908).
 
@@ -39,18 +39,18 @@ Aparat 2010 Redistributable bazy danych programu Microsoft Access
 
  
 
-*Z \<*  <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
+*Z \<*<http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
 
  
 
-<https://www.microsoft.com/en-us/Download/Confirmation.aspx?id=13255>
+<https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255>
 
 **Ustawienia konta**
 
 | **Element**                                    | **Opis**                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Użyj dostawcy zabezpieczeń na komputerze/domeny** | Po wybraniu Określa, że zabezpieczenia usług domenowych w usłudze Active Directory będzie kontrolował dostęp do podstawowych BHOLD.                                                                                                                | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
-| **Domeny**                                  | Określa domenę zawierającą konta usługi, utworzony podczas instalowania BHOLD Core. Aby uzyskać więcej informacji, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest nieprawidłowe. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
+| **Domeny**                                  | Określa domenę zawierającą konta usługi, utworzony podczas instalowania BHOLD Core. Aby uzyskać więcej informacji, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest nieprawidłowe. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
 | **User**                                    | Określa nazwę logowania konta użytkownika usługi BHOLD Core.                                                                                                                                                          | Napisz tutaj nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
 | **Hasło**                                | Określa hasło konta użytkownika usługi.                                                                                                                                                                       | Zapisać hasło tutaj: **ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
 
@@ -68,13 +68,13 @@ Aby zainstalować moduł Generator modeli BHOLD, zaloguj się jako członek grup
 
 - BholdModelGenerator  *\<wersji\>*\_Release.msi
 
-Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD Generator modeli.
+Zastąp *\<wersji\>* z numerem wersji instalowanej wersji BHOLD Generator modeli.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Aby uzyskać informacje na temat tworzenia plików wejściowych [dokumentacja techniczna pakietu Microsoft BHOLD](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx)
+- Aby uzyskać informacje na temat tworzenia plików wejściowych [dokumentacja techniczna pakietu Microsoft BHOLD](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
 - [Przewodnik instalacji BHOLD](bhold-installation-guide.md)
 - [Dokumentacja dla deweloperów pakietu BHOLD](../reference/mim2016-bhold-developer-reference.md)
 - [Historia wersji pakietu BHOLD](../reference/version-bhold-history.md)

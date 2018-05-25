@@ -1,7 +1,7 @@
 ---
 title: Podstawowa BHOLD instalacja | Dokumentacja firmy Microsoft
 description: Dokument core instalacji pakietu BHOLD
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 25825c1472dec44ed0e09519d4bc17809c1b95b1
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="bhold-core-installation"></a>Instalacja BHOLD Core
 
@@ -30,7 +30,7 @@ Moduł BHOLD Core stanowi podstawę pakietu BHOLD firmy Microsoft. Przed zainsta
 
 |          |        |          |
 |----------|--------|----------|
-|**Składnik** |**Minimalna** | **Zalecane** |
+|**Składnik** |**Minimum** | **Zalecane** |
 |Procesor | 64-bitowy procesor | Wielordzeniowych 64-bitowy procesor |
 | Pamięć |3 GB | 6 GB lub więcej |
 |Magazyn| Dostępne 30 GB |Zależy od rozmiaru wdrożenia |
@@ -98,8 +98,8 @@ Przed rozpoczęciem zainstalować moduł BHOLD Core, musisz być przygotowana do
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Użyj dostawcy zabezpieczeń na komputerze/domeny** | Po wybraniu Określa, że zabezpieczenia usług domenowych w usłudze Active Directory będzie kontrolował dostęp do podstawowych BHOLD.                                                                                                                                                                                                  | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                 |
 | **Domeny**                                  | Określa domenę zawierającą serwer BHOLD, konta usługi i grupy aplikacji. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako CONTOSO. | Wpisz nazwę domeny w tym miejscu:                                                                                                                                        |
-| **Grupy aplikacji**                       | Określa nazwę grupy zabezpieczeń utworzonej w [wymaganych użytkowników i grup](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Wpisz nazwę grupy w tym miejscu:                                                                                                                                         |
-| **Użytkownik usługi**                            | Nazwa logowania konta użytkownika usługi utworzonego wcześniej w [wymaganych użytkowników i grup](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Napisz tutaj nazwę konta użytkownika:                                                                                                                                  |
+| **Grupy aplikacji**                       | Określa nazwę grupy zabezpieczeń utworzonej w [wymaganych użytkowników i grup](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Wpisz nazwę grupy w tym miejscu:                                                                                                                                         |
+| **Użytkownik usługi**                            | Nazwa logowania konta użytkownika usługi utworzonego wcześniej w [wymaganych użytkowników i grup](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | Napisz tutaj nazwę konta użytkownika:                                                                                                                                  |
 | **Hasło**                                | Określa hasło konta użytkownika usługi BHOLD Core.                                                                                                                                                                                                                                              | Zapisać hasło tutaj: **ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                |
 | **Port IP witryny sieci Web**                         | Określa adres IP i port numer witryny sieci Web ma zostać utworzony na serwerze intranetowym. Zmień wartość domyślną (\*) tylko wtedy, gdy nie będzie używać tego samego adresu IP, jako domyślnej witryny sieci Web. Zmiany numeru portu dostępnego portu tylko wtedy, gdy domyślny port (5151) jest już używana.             | Jeśli adres IP niestandardowy jest używany przez domyślną witrynę sieci Web, zapisać go w tym miejscu: Jeśli domyślny numer portu jest już w użyciu, Zapisz numer portu witryny sieci Web BHOLD tutaj: |
 
@@ -120,7 +120,7 @@ Aby zainstalować moduł BHOLD Core, zaloguj się jako członek grupy Administra
 
 - BholdCore  *\<wersji\>*\_Release.msi
 
-Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD Core.
+Zastąp *\<wersji\>* z numerem wersji instalowanej wersji BHOLD Core.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
@@ -177,7 +177,7 @@ Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minim
 
 1.  Na kontrolerze domeny usług domenowych w usłudze Active Directory, kliknij przycisk **Start**, kliknij przycisk **wszystkie programy**, kliknij przycisk **Akcesoria**, kliknij prawym przyciskiem myszy **wiersza polecenia** , a następnie kliknij przycisk **Uruchom jako administrator**.
 
-2.  W wierszu polecenia wpisz następujące polecenie i naciśnij klawisz ENTER: setspn – S HTTP /  *\<networkalias\> \<domeny\>*  \\  *\<accountname\>*  gdzie:
+2.  W wierszu polecenia wpisz następujące polecenie i naciśnij klawisz ENTER: setspn – S HTTP / *\<networkalias\> \<domeny\>* \\ *\<accountname\>* gdzie:
 
     -   *\<networkalias\>*  adres używanego przez klientów do kontaktowania się z witryny sieci Web BHOLD
 
@@ -205,7 +205,7 @@ Jako członek grupy Administratorzy domeny, aby wykonać tę procedurę, należy
 
 1.  Kliknij przycisk **Start**, kliknij przycisk **wszystkie programy**, a następnie kliknij przycisk **programu Internet Explorer**.
 
-2.  W polu adresu wpisz, gdzie  *\<serwera\>*  jest nazwą serwera, witryny sieci Web BHOLD i  *\<portu\>*  jest powiązany numer portu witryny sieci Web.
+2.  W polu adresu wpisz, gdzie *\<serwera\>* jest nazwą serwera, witryny sieci Web BHOLD i *\<portu\>* jest powiązany numer portu witryny sieci Web.
 
 3.  Kliknij przycisk **Home**, kliknij przycisk **wartości**, a następnie kliknij przycisk **Modyfikuj**.
 
@@ -213,9 +213,9 @@ Jako członek grupy Administratorzy domeny, aby wykonać tę procedurę, należy
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po zainstalowaniu BHOLD Core i zweryfikować, czy instalacja zakończyła się pomyślnie, można zainstalować dodatkowe moduły. W tym momencie baza danych BHOLD jest zasadniczo pusta, zawierający tylko jedno konto użytkownika, konta głównego i jednej jednostki organizacyjnej (orgunit) orgunit głównego. Aby dodać więcej użytkowników do baza danych BHOLD, można zainstalować moduł łącznika zarządzania dostępu lub moduł BHOLD Generator modeli, w zależności od potrzeb. Można użyć modułu dostępu do zarządzania łącznika do importowania danych użytkownika z usługi synchronizacji programu FIM lub Generator modeli BHOLD służy do importowania danych użytkownika z grupy plików strukturalnych. Aby uzyskać więcej informacji o korzystaniu z modułu dostępu do zarządzania łącznika, zobacz [Przewodnik po laboratorium testowym: BHOLD dostępu administracyjnego łącznika](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+Po zainstalowaniu BHOLD Core i zweryfikować, czy instalacja zakończyła się pomyślnie, można zainstalować dodatkowe moduły. W tym momencie baza danych BHOLD jest zasadniczo pusta, zawierający tylko jedno konto użytkownika, konta głównego i jednej jednostki organizacyjnej (orgunit) orgunit głównego. Aby dodać więcej użytkowników do baza danych BHOLD, można zainstalować moduł łącznika zarządzania dostępu lub moduł BHOLD Generator modeli, w zależności od potrzeb. Można użyć modułu dostępu do zarządzania łącznika do importowania danych użytkownika z usługi synchronizacji programu FIM lub Generator modeli BHOLD służy do importowania danych użytkownika z grupy plików strukturalnych. Aby uzyskać więcej informacji o korzystaniu z modułu dostępu do zarządzania łącznika, zobacz [Przewodnik po laboratorium testowym: BHOLD dostępu administracyjnego łącznika](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 Aby uzyskać więcej informacji o korzystaniu z modułu BHOLD Generator modeli zobacz:
 
-- [Przewodnik koncepcje pakietu Microsoft BHOLD](https://technet.microsoft.com/en-us/library/jj134102(v=ws.10).aspx)
-- [TechnicalReference pakiet Microsoft BHOLD](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx).
+- [Przewodnik koncepcje pakietu Microsoft BHOLD](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx)
+- [TechnicalReference pakiet Microsoft BHOLD](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx).

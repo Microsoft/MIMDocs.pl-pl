@@ -12,6 +12,7 @@
 ## [Planowanie wdrożenia usługi PAM](./pam/environment-overview.md)
 # [Wdrażanie i użytkowanie](microsoft-identity-manager-deploy.md)
 ## [Przestarzałe funkcje](microsoft-identity-manager-2016-deprecated-features.md)
+## [Obsługa danych](mim-privacy-compliance.md)
 ## [Pierwsze wdrożenie](microsoft-identity-manager-deploy.md)
 ### [Konfiguracja domeny](preparing-domain.md)
 ### [Konfiguracja serwera: Windows Server](prepare-server-ws2016.md)

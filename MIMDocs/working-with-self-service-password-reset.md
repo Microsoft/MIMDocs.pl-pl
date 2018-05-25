@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: e2c252771bd114a3c70b900c8c089e09eff8cd23
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 >[!IMPORTANT]
 Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
@@ -65,7 +65,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
 
-1.  Utwórz [dostawca usługi MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Utwórz [dostawca usługi MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Otwieranie sprawy pomocy technicznej i poproś bezpośredniego zestawu SDK dla programu ASP.net 2.0 C#. Zestaw SDK tylko zostaną dostarczone do bieżących użytkowników MIM za pomocą usługi MFA, ponieważ bezpośrednie zestawu SDK jest przestarzała. Nowi klienci powinna przyjąć na następną wersję programu MIM, który zostanie zintegrowana z serwera usługi MFA.
 

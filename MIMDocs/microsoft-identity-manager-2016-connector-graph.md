@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: a0e2e280c3678867efc2ae8afa46c04ed38a1e11
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: a66d424e8388005855ac8e64623f5a00f89682e9
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 <a name="the-microsoft-identity-manager-management-agent-for-microsoft-graph-public-preview"></a>Agent zarządzania programu Microsoft Identity Manager dla programu Microsoft Graph (publicznej wersji zapoznawczej)
 =======================================================================================
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
 <a name="b2b-account-lifecycle-management"></a>Zarządzanie cyklem życia B2B konta
 --------------------------------
 
-Scenariusz początkowej w wersji zapoznawczej dla agenta zarządzania programu Microsoft Identity Manager dla programu Microsoft Graph (wersja zapoznawcza) jest zarządzanie cyklem życia konta użytkownika zewnętrznego AD. W tym scenariuszu organizacja zaprosiła gości do swojego katalogu usługi Azure AD i chce udostępnić te gości lokalnymi zintegrowanego uwierzytelniania systemu Windows lub aplikacji opartych na protokołu Kerberos, za pomocą [aplikacji usługi Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)serwera proxy lub innych mechanizmów bramy. Serwer proxy aplikacji usługi Azure AD wymaga od każdego użytkownika ma swoje własne konta usług AD DS, dla celów identyfikacji i delegowanie
+Scenariusz początkowej w wersji zapoznawczej dla agenta zarządzania programu Microsoft Identity Manager dla programu Microsoft Graph (wersja zapoznawcza) jest zarządzanie cyklem życia konta użytkownika zewnętrznego AD. W tym scenariuszu organizacja zaprosiła gości do swojego katalogu usługi Azure AD i chce udostępnić te gości lokalnymi zintegrowanego uwierzytelniania systemu Windows lub aplikacji opartych na protokołu Kerberos, za pomocą [aplikacji usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)serwera proxy lub innych mechanizmów bramy. Serwer proxy aplikacji usługi Azure AD wymaga od każdego użytkownika ma swoje własne konta usług AD DS, dla celów identyfikacji i delegowanie
 
 Dodatkowe scenariusze, które mogą być dodane w przyszłości i [opisanych tutaj](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
 
@@ -186,7 +186,7 @@ Uwaga: Jeśli "Uruchom ten agent zarządzania w oddzielnych procesach" włączon
 
 Rysunek 7. "Wygasł token dostępu". Error
 
-Przyczyną tego problemu może być konfiguracja okres istnienia tokenu dostępu, ze strony systemu Azure. Domyślnie wygaśnięcia tokenu dostępu po godzinie. Aby zwiększyć czas wygaśnięcia, zobacz [w tym artykule](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
+Przyczyną tego problemu może być konfiguracja okres istnienia tokenu dostępu, ze strony systemu Azure. Domyślnie wygaśnięcia tokenu dostępu po godzinie. Aby zwiększyć czas wygaśnięcia, zobacz [w tym artykule](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Przykład użycia tego [Azure AD PowerShell modułu publicznej wersji zapoznawczej](https://www.powershellgallery.com/packages/AzureADPreview)
 

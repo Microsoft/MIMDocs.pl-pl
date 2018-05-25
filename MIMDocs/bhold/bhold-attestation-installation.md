@@ -1,7 +1,7 @@
 ---
-title: "Instalacja zaświadczania BHOLD | Dokumentacja firmy Microsoft"
-description: "Moduł zaświadczania BHOLD umożliwia wyznaczanie osoby dokonujące przeglądu i wykonywanie przeglądów"
-keywords: 
+title: Instalacja zaświadczania BHOLD | Dokumentacja firmy Microsoft
+description: Moduł zaświadczania BHOLD umożliwia wyznaczanie osoby dokonujące przeglądu i wykonywanie przeglądów
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 93d0b9a17d82911b71b1b220465b6d637687444b
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 657c6ee8dd551f91f21636101f248f76977a12bc
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="bhold-attestation-installation"></a>Instalacja zaświadczania BHOLD
 
@@ -22,7 +22,7 @@ Moduł BHOLD zaświadczania umożliwia wyznaczanie osoby dokonujące przeglądu 
 
 ## <a name="bhold-attestation-installation-requirements"></a>Wymagania dotyczące instalacji poświadczenia BHOLD
 
-Przed zainstalowaniem modułu zaświadczania BHOLD, należy zainstalować moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł BHOLD zaświadczania. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). Ponieważ zaświadczania BHOLD modułu Kontakty wysyła wiadomości e-mail do użytkowników, środowisko musi mieć serwera poczty e-mail Simple Mail Transfer Protocol (SMTP), takich jak Microsoft Exchange Server.
+Przed zainstalowaniem modułu zaświadczania BHOLD, należy zainstalować moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł BHOLD zaświadczania. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Ponieważ zaświadczania BHOLD modułu Kontakty wysyła wiadomości e-mail do użytkowników, środowisko musi mieć serwera poczty e-mail Simple Mail Transfer Protocol (SMTP), takich jak Microsoft Exchange Server.
 
 >[!IMPORTANT]
 Jeśli instalujesz BHOLD raportowania i zaświadczania BHOLD należy zainstalować raportowania BHOLD przed zainstalowaniem BHOLD zaświadczania.
@@ -34,7 +34,7 @@ Przed rozpoczęciem instalowania modułu BHOLD zaświadczania o należy przygoto
 | **Element**                                    | **Opis**                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Użyj dostawcy zabezpieczeń na komputerze/domeny** | Po wybraniu Określa, że zabezpieczenia usług domenowych w usłudze Active Directory będzie kontrolował dostęp do podstawowych BHOLD.                                                                                                                | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
-| **Domeny**                                  | Określa domenę zawierającą konta usługi, utworzony podczas instalowania BHOLD Core. Aby uzyskać więcej informacji, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest nieprawidłowe. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
+| **Domeny**                                  | Określa domenę zawierającą konta usługi, utworzony podczas instalowania BHOLD Core. Aby uzyskać więcej informacji, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest nieprawidłowe. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
 | **User**                                    | Określa nazwę logowania konta użytkownika usługi BHOLD Core.                                                                                                                                                          | Napisz tutaj nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
 | **Hasło**                                | Określa hasło konta użytkownika usługi.                                                                                                                                                                       | Zapisać hasło tutaj: **ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
 
@@ -44,7 +44,7 @@ Aby zainstalować moduł zaświadczania BHOLD, zaloguj się jako członek grupy 
 
 - BholdAttestation*\<wersji\>*\_Release.msi
 
-Zastąp  *\<wersji\>*  z numerem wersji instalowanej wersji BHOLD zaświadczania.
+Zastąp *\<wersji\>* z numerem wersji instalowanej wersji BHOLD zaświadczania.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
