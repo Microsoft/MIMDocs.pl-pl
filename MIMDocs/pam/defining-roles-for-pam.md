@@ -1,7 +1,7 @@
 ---
-title: "Definiowanie ról uprzywilejowanych w usłudze PAM | Dokumentacja firmy Microsoft"
-description: "Istnieje możliwość określenia, które role uprzywilejowane mają być zarządzane, i zdefiniowania zasad zarządzania dla każdej z nich."
-keywords: 
+title: Definiowanie ról uprzywilejowanych w usłudze PAM | Dokumentacja firmy Microsoft
+description: Istnieje możliwość określenia, które role uprzywilejowane mają być zarządzane, i zdefiniowania zasad zarządzania dla każdej z nich.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/01/2017
+ms.locfileid: "21943761"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
 

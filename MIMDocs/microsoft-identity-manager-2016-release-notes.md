@@ -1,7 +1,7 @@
 ---
 title: Informacje o wersji programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
 description: Informacje o najnowszych wersjach programu MIM.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -18,6 +18,7 @@ ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/12/2017
+ms.locfileid: "23137578"
 ---
 # <a name="release-notes-for-mim-2016"></a>Informacje o wersji programu MIM 2016
 Brak informacji o tej wersji.

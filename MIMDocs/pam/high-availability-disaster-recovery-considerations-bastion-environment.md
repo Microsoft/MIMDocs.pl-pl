@@ -1,7 +1,7 @@
 ---
-title: "Odzyskiwanie awaryjne usługi PAM | Dokumentacja firmy Microsoft"
-description: "Dowiedz się, jak skonfigurować usługę Privileged Access Management pod kątem wysokiej dostępności i odzyskiwania po awarii."
-keywords: 
+title: Odzyskiwanie awaryjne usługi PAM | Dokumentacja firmy Microsoft
+description: Dowiedz się, jak skonfigurować usługę Privileged Access Management pod kątem wysokiej dostępności i odzyskiwania po awarii.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052318"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu
 

@@ -1,7 +1,7 @@
 ---
-title: "Planowanie środowiska bastionu | Dokumentacja firmy Microsoft"
-description: 
-keywords: 
+title: Planowanie środowiska bastionu | Dokumentacja firmy Microsoft
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052420"
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 

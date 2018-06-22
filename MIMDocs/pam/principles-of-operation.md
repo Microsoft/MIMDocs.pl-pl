@@ -1,7 +1,7 @@
 ---
-title: "Opis składników funkcji PAM | Dokumentacja firmy Microsoft"
-description: "Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą."
-keywords: 
+title: Opis składników funkcji PAM | Dokumentacja firmy Microsoft
+description: Usługa Privileged Access Management współużytkuje niektóre składniki z programem MIM, a także ma kilka własnych składników. Dowiedz się, jak te składniki współpracują ze sobą.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052369"
 ---
 # <a name="understand-the-components-of-pam"></a>Opis składników funkcji PAM
 

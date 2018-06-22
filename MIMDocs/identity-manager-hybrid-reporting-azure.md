@@ -1,7 +1,7 @@
 ---
-title: "Co to jest raportowanie hybrydowe w usłudze Azure AD? | Microsoft Docs"
-description: "Raporty aktywności hybrydowe inspekcji w usłudze Azure Active Directory umożliwia przeglądanie zdarzeń inspekcji w chmurze i lokalnie."
-keywords: 
+title: Co to jest raportowanie hybrydowe w usłudze Azure AD? | Microsoft Docs
+description: Raporty aktywności hybrydowe inspekcji w usłudze Azure Active Directory umożliwia przeglądanie zdarzeń inspekcji w chmurze i lokalnie.
+keywords: ''
 author: davidste
 ms.author: davidste
 manager: bhu
@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 02/20/2018
+ms.locfileid: "29370382"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Hybrydowe Zarządzanie tożsamościami inspekcji raportowania w usłudze Azure Active Directory
 Z usługi Azure Active Directory (Azure AD) inspekcji raportowania aktywności, można monitorować działania związane z zarządzaniem tożsamościami lokalnie lub w chmurze. Zarządzając wszystkich danych tożsamościami i dostępem w jeden raport, można zaoszczędzić czas i obniżenie ogólnych kosztów.

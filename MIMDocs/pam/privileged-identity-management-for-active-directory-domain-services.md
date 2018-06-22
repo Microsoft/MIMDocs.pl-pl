@@ -1,7 +1,7 @@
 ---
-title: "Usługa Privileged Access Management dla usług domenowych Active Directory | Dokumentacja firmy Microsoft"
-description: "Poznaj usługę Privileged Access Management i dowiedz się, jak możesz zarządzać środowiskiem usługi Active Directory i chronić je."
-keywords: 
+title: Usługa Privileged Access Management dla usług domenowych Active Directory | Dokumentacja firmy Microsoft
+description: Poznaj usługę Privileged Access Management i dowiedz się, jak możesz zarządzać środowiskiem usługi Active Directory i chronić je.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942718"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
 

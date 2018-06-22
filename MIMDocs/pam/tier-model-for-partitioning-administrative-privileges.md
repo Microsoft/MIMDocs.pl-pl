@@ -1,7 +1,7 @@
 ---
-title: "Model warstwowy środowiska usługi PAM | Dokumentacja firmy Microsoft"
-description: "Poznaj model warstwowy, który dzieli system na podstawie podatności na ryzyko."
-keywords: 
+title: Model warstwowy środowiska usługi PAM | Dokumentacja firmy Microsoft
+description: Poznaj model warstwowy, który dzieli system na podstawie podatności na ryzyko.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942735"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
