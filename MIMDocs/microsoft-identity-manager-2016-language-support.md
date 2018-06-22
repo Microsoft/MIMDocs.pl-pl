@@ -12,9 +12,10 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.openlocfilehash: 101f4110d6439cfc17f25c8880531e18f51920da
 ms.sourcegitcommit: 19ed53fa6af61086774a0429fd1520067caf4e93
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34462916"
 ---
 # <a name="supported-languages"></a>Obsługiwane języki
 
@@ -64,7 +65,7 @@ Usługa MIM i portalu Language Pack obsługuje następujące języki 33 językó
 |Serbski - Serbia |sr-latn-CS(Depricated)|SR-Latn r|
 |Tajski|TH-ty percentyl|TH|
 |Turecki|tr-TR|TR|
-|Ukraiński|uk-UA|Wielka Brytania|
+|Ukraiński|uk-UA|Zjednoczone Królestwo|
 
 ## <a name="certificate-management"></a>Zarządzanie certyfikatami 
 Zarządzanie certyfikatami Microsoft obsługuje następujące języki 9. 
