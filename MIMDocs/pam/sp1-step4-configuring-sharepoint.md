@@ -1,7 +1,7 @@
 ---
-title: "Krok 4 — Konfigurowanie programu SharePoint"
-description: "To jest krok 4 konfigurowania usługi PAM za pomocą skryptów. W tym kroku skonfigurujesz program SharePoint, dzięki czemu będzie można go użyć jako elementu wdrożenia usługi PAM."
-keywords: 
+title: Krok 4 — Konfigurowanie programu SharePoint
+description: To jest krok 4 konfigurowania usługi PAM za pomocą skryptów. W tym kroku skonfigurujesz program SharePoint, dzięki czemu będzie można go użyć jako elementu wdrożenia usługi PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f8d033bec440c6efed26dd959acc713638258dd3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e46b7cf75eb60930441e309448773353668ed454
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289632"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Krok 4 — Konfigurowanie programu SharePoint
 
->[!div class="step-by-step"]
-[« Krok 3](sp1-step3-installing-configuring-sql.md)
-[Krok 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 3](sp1-step3-installing-configuring-sql.md)
+> [Krok 5 »](sp1-step5-configuring-pam.md)
 
 Wymagana wersja programu SharePoint to SharePoint Foundation 2013 z dodatkiem SP1.
 
@@ -51,6 +52,6 @@ Po zakończeniu instalacji zostanie wyświetlony graficzny interfejs użytkownik
 
 Szczegółowe informacje można znaleźć w sekcji **Konfiguracja programu SharePoint** w artykule [Krok 3 — Przygotowanie serwera PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server). W celu ukończenia tego kroku po zakończeniu tej czynności ponownie uruchom skrypt „\PAMDeployment.ps1”, wybierając opcję menu 4 (Instalator programu SharePoint).
 
->[!div class="step-by-step"]
-[« Krok 3](sp1-step3-installing-configuring-sql.md)
-[Krok 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 3](sp1-step3-installing-configuring-sql.md)
+> [Krok 5 »](sp1-step5-configuring-pam.md)

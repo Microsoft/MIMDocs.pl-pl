@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 3d45d18042ccda83873aa929101222c15f36246a
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 90e7da2a1e39b802723ff0714bd0caccf9649440
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289139"
 ---
 # <a name="bhold-model-generator-installation"></a>Instalacja Generator modelu BHOLD
 
@@ -28,8 +29,8 @@ Przed zainstalowaniem modułu BHOLD Generator modeli, należy zainstalować nast
 
 2. Dostawca Microsoft OLE DB dla programu Microsoft Jet musi być zainstalowany. Aby uzyskać więcej informacji, zobacz [w tym artykule](http://support.microsoft.com/kb/271908).
 
->[!WARNING]
-Nie należy instalować Generator modeli BHOLD w sieci produkcyjnej. Generator modeli BHOLD jest przeznaczony do użycia w trybie offline w środowisku przemieszczania do utworzenia znormalizowane modelu roli, który można zaimportować do modelu roli przedsiębiorstwa. Uruchamianie Generator modeli BHOLD w sieci produkcyjnej może spowodować utratę istniejącego modelu roli.
+> [!WARNING]
+> Nie należy instalować Generator modeli BHOLD w sieci produkcyjnej. Generator modeli BHOLD jest przeznaczony do użycia w trybie offline w środowisku przemieszczania do utworzenia znormalizowane modelu roli, który można zaimportować do modelu roli przedsiębiorstwa. Uruchamianie Generator modeli BHOLD w sieci produkcyjnej może spowodować utratę istniejącego modelu roli.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 

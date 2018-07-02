@@ -1,7 +1,7 @@
 ---
-title: "Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016 | Microsoft Docs"
-description: 
-keywords: 
+title: Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016 | Microsoft Docs
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289367"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym 
 
 Synchronizacja haseł współpracuje z usługą powiadamiania o zmianie hasła (PCNS) w domenie usługi Active Directory i umożliwia automatyczne propagowanie zmian haseł pochodzących z usługi Active Directory do innych połączonych źródeł danych. Program MIM umożliwia wykonanie tej operacji przez uruchomienie serwera zdalnego wywołania procedur (RPC, Remote Procedure Call), który nasłuchuje powiadomień o zmianie hasła z kontrolera domeny usługi Active Directory. Po odebraniu i uwierzytelnieniu żądanie zmiany hasła jest przetwarzane przez program MIM i propagowane do odpowiednich agentów zarządzania.
 
->[!IMPORTANT]
-Dwukierunkowa synchronizacja haseł nie jest obsługiwana przez program MIM. Skonfigurowanie dwukierunkowej synchronizacji haseł może spowodować powstanie pętli, która będzie zużywać zasoby serwera i mieć negatywny wpływ na usługę Active Directory oraz program MIM.
+> [!IMPORTANT]
+> Dwukierunkowa synchronizacja haseł nie jest obsługiwana przez program MIM. Skonfigurowanie dwukierunkowej synchronizacji haseł może spowodować powstanie pętli, która będzie zużywać zasoby serwera i mieć negatywny wpływ na usługę Active Directory oraz program MIM.
 
 Usługa PCNS jest uruchamiana na każdym kontrolerze domeny usługi Active Directory. Systemy otrzymujące powiadomienia dotyczące haseł są określane jako elementy docelowe. Przed wysłaniem powiadomień dotyczących haseł serwer MIM musi zostać skonfigurowany jako element docelowy usługi PCNS w usłudze Active Directory. W konfiguracji usługi PCNS musi zostać zdefiniowania grupa dołączania i opcjonalnie grupa wykluczania. Te grupy są używane do ograniczenia przepływu poufnych haseł z domeny. Na przykład w celu wysłania haseł dla wszystkich użytkowników, bez uwzględniania haseł administracyjnych, można wybrać grupę Użytkownicy domeny jako grupę dołączania, a grupę Administratorzy domeny jako grupę wykluczania. Aby uzyskać więcej informacji o konfigurowaniu usługi powiadamiania o zmianie hasła, zobacz [Using Password Synchronization](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx) (Korzystanie z synchronizacji haseł)
 
@@ -152,15 +153,15 @@ Niektóre błędy są na tyle poważne, że żadna liczba ponownych prób nie sp
 | Zdarzenie | Ważność    | Opis                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informacje | Operacja ustawienia synchronizacji haseł nie została wykonana, ponieważ sygnatura czasowa jest nieaktualna.                                                                      |
-| 6921  | Błąd       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest włączone dla docelowego agenta zarządzania.                                |
-| 6922  | Błąd       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest skonfigurowane dla docelowego agenta zarządzania.                             |
+| 6921  | Error       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest włączone dla docelowego agenta zarządzania.                                |
+| 6922  | Error       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest skonfigurowane dla docelowego agenta zarządzania.                             |
 | 6923  | Ostrzeżenie     | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ nie odnaleziono docelowego obiektu przestrzeni łącznika w połączonym katalogu.                  |
-| 6927  | Błąd       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ hasło nie spełnia zasad dotyczących haseł systemu docelowego.                                      |
-| 6928  | Błąd       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ rozszerzenie haseł dla docelowego agenta zarządzania nie jest skonfigurowane pod kątem obsługi operacji ustawiania haseł. |
+| 6927  | Error       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ hasło nie spełnia zasad dotyczących haseł systemu docelowego.                                      |
+| 6928  | Error       | Operacja ustawienia synchronizacji haseł nie powiodła się, ponieważ rozszerzenie haseł dla docelowego agenta zarządzania nie jest skonfigurowane pod kątem obsługi operacji ustawiania haseł. |
 
 ## <a name="user-based-password-change-management"></a>Zarządzanie zmianą haseł oparte na użytkownikach
 
-Program MIM udostępnia dwie aplikacje sieci Web używające usługi Instrumentacja zarządzania Windows (WMI) do resetowania hasła. Podobnie jak w przypadku synchronizacji haseł zarządzanie hasłami jest aktywowane podczas konfigurowania agenta zarządzania w projektancie agenta zarządzania. Informacje dotyczące zarządzania hasłami i usługi WMI zawiera dokumentacja dla deweloperów programu MIM.
+Program MIM udostępnia dwie aplikacje internetowe używające usługi Instrumentacja zarządzania Windows (WMI) do resetowania hasła. Podobnie jak w przypadku synchronizacji haseł zarządzanie hasłami jest aktywowane podczas konfigurowania agenta zarządzania w projektancie agenta zarządzania. Informacje dotyczące zarządzania hasłami i usługi WMI zawiera dokumentacja dla deweloperów programu MIM.
 
 Podczas instalacji program MIM tworzy dwie grupy zabezpieczeń, które są przeznaczone do obsługi operacji zarządzania hasłami:
 

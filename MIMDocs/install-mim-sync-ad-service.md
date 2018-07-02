@@ -12,22 +12,23 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
-ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
+ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290156"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
->[!div class="step-by-step"]
-[« Usługa i portal MIM](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Usługa i portal MIM](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
-> - Hasło — **Pass@word1**
+> - Hasło — <strong>Pass@word1</strong>
 
 Domyślnie żadne łączniki usługi synchronizacji programu MIM (Sync) nie są skonfigurowane.  Typowym pierwszym krokiem jest użycie usługi synchronizacji programu MIM do wypełniania bazy danych usługi MIM informacjami z istniejących kont usługi Active Directory. W tym celu używana jest aplikacja usługi synchronizacji programu MIM.
 
@@ -39,7 +40,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 > [!NOTE]
 > Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
 
-###<a name="to-create-the-mim-ma"></a>Aby utworzyć agenta zarządzania programu MIM
+### <a name="to-create-the-mim-ma"></a>Aby utworzyć agenta zarządzania programu MIM
 
 1.  Otwórz menedżera usługi synchronizacji.
 
@@ -429,5 +430,5 @@ Wykonaj następujące czynności, aby uruchomić wymienione trzy profile urucham
     - Wybierz profil, który chcesz uruchomić, z listy **Run profiles** (Profile uruchamiania).
     - Kliknij przycisk **OK**, aby uruchomić profil.
 
->[!div class="step-by-step"]
-[« Usługa i portal MIM](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« Usługa i portal MIM](install-mim-service-portal.md)

@@ -1,7 +1,7 @@
 ---
-title: "Krok 1 — Konfigurowanie domeny PRIV"
-description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów"
-keywords: 
+title: Krok 1 — Konfigurowanie domeny PRIV
+description: Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager, z użyciem skryptów
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,21 +10,22 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290309"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Krok 1 — Konfigurowanie domeny PRIV
 
->[!div class="step-by-step"]
-[Krok 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Krok 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Zaloguj się do kontrolera domeny PRIVDC jako administrator.
-  * W przypadku środowiska PRIVOnly należy zalogować się do kontrolera domeny CORPDC.
+   * W przypadku środowiska PRIVOnly należy zalogować się do kontrolera domeny CORPDC.
 2. Uruchom program PowerShell jako administrator.
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -41,5 +42,5 @@ Dla poziomów funkcjonalności poniżej systemu Windows Server 2016 należy odrz
 Skopiuj plik SIDs.txt, który został wygenerowany w folderze $env:SYSTEMDRIVE\PAM do podobnego folderu w kontrolerze domeny CORPDC. Kontroler domeny CORPDC wymaga przeprowadzenia tej czynności w celu ustawienia uprawnień dla użytkowników domeny PRIV w celu umożliwienia im odczytu właściwości użytkownika domeny CORP.
 Po zakończeniu działania skryptu zostanie wyświetlony monit o ponowne uruchomienie maszyny, dzięki czemu zmiany zaczną obowiązywać.
 
->[!div class="step-by-step"]
-[Krok 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Krok 2 »](sp1-step2-configuring-corp-domain.md)

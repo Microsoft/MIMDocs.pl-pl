@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288915"
 ---
 # <a name="deprecated-features"></a>Przestarzałe funkcje
 
 W tym artykule opisano przestarzałe funkcje programu Microsoft Identity Manager 2016 z dodatkiem SP1. W przypadku, gdy funkcja jest nadal obecna programu Microsoft Identity Manager, nadal jest obsługiwany. Funkcje nie są zalecane w przypadku nowych wdrożeń, ponieważ mogą zostać usunięte w wersji funkcji.  Dla deweloperów zaleca się nie przy użyciu przestarzałe funkcje w nowych aplikacji lub rozwiązania.
 
->[!NOTE]
-Narzędzia i funkcje usunięte w dodatku SP1 dla programu Microsoft Identity Manager są oznaczone symbolem **. <br>
-Aby uzyskać więcej informacji na temat obsługi [cyklu życia dla programu Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> [!NOTE]
+> Narzędzia i funkcje usunięte w dodatku SP1 dla programu Microsoft Identity Manager są oznaczone symbolem **. <br>
+> Aby uzyskać więcej informacji na temat obsługi [cyklu życia dla programu Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Aby uzyskać więcej informacji na temat obsługi [cyklu życia dla programu Mic
 Nie zaleca się, że klientów rozpoczyna się nowych wdrożeń składników pakietu BHOLD firmy Microsoft. Istniejące wdrożenia BHOLD będzie w dalszym ciągu obsługiwana. Obecnie usługa Azure AD zapewnia [dostępu przeglądami](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) która zastępuje niektóre funkcje BHOLD zaświadczania kampanii.
 
 ## <a name="certificate-management"></a>Zarządzanie certyfikatami 
+
 | **Kategoria**                | **Funkcja przestarzała**              | **Zastąpienie i komentarza**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Agenci zarządzania | ** Zarządzanie certyfikatami FIM | Agent zarządzania certyfikatu FIM została usunięta w programie MIM 2016.                                                             |
@@ -53,8 +55,8 @@ Nie zaleca się, że klientów rozpoczyna się nowych wdrożeń składników pak
 | Agenci zarządzania           | Konfigurowanie partycji, nazwa wyświetlana    | Ta funkcja nie zostanie zastąpiony. Ta opcja została użyta tylko do zapewnienia alternatywnych nazw partycji w interfejsy usługi WMI.                                                                                                                                                                       |
 | Profile uruchamiania                | Łączna profilów                   | Import/synchronizacja różnicowa Scalonej profile, synchronizacja pełna import/różnicowa i pełny import/synchronizacji zostaną usunięte. Zamiast tego należy użyć profilów uruchamiania z dwóch kroków. 
 
->[!NOTE]
-Tylko w środowiskach gdy wydajność może mieć wpływ na dużą liczbę istniejących disconnectors Zachowaj Scalonej profile uruchamiania.
+> [!NOTE]
+> Tylko w środowiskach gdy wydajność może mieć wpływ na dużą liczbę istniejących disconnectors Zachowaj Scalonej profile uruchamiania.
 
 
 | **Kategoria**                | **Funkcja przestarzała**              | **Zastąpienie i komentarza**           |

@@ -1,7 +1,7 @@
 ---
-title: "Krok 8 — Weryfikacja wdrożenia usługi PAM"
-description: "Wdrożenie usługi PAM inicjowane przez skrypty obejmuje skrypty weryfikacji, które umożliwiają wykonanie scenariusza PAM w celu potwierdzenia prawidłowego działania wdrożenia usługi PAM."
-keywords: 
+title: Krok 8 — Weryfikacja wdrożenia usługi PAM
+description: Wdrożenie usługi PAM inicjowane przez skrypty obejmuje skrypty weryfikacji, które umożliwiają wykonanie scenariusza PAM w celu potwierdzenia prawidłowego działania wdrożenia usługi PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289476"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
 
->[!div class="step-by-step"]
-[« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Dodatek »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Dodatek »](sp1-pam-deployment-addendum.md)
 
 Pakiet wdrożeniowy zawiera skrypty weryfikacji, które umożliwiają wykonanie scenariusza PAM w celu potwierdzenia prawidłowego działania wdrożenia usługi PAM.
 Aby użyć funkcji weryfikacji wdrożenia, należy zmodyfikować sekcję <PamValidation/> pliku PAMDeploymentConfig.xml.
@@ -64,7 +65,7 @@ Krok 3:
 
 W tym kroku zostanie wyświetlony monit o poświadczenia konta CORPAdmin. Po ich podaniu następuje dodanie wymaganych użytkowników do grup „Użytkownicy pulpitu zdalnego” i „Użytkownicy zarządzania zdalnego”.
 Na komputerze klienckim CORP użyj następujących poleceń do otwarcia programu PowerShell jako użytkownik PRIV, który ma zostać poddany procedurze weryfikacji. </br></br>
-**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+**Runas/u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 W oknie programu PowerShell wpisz polecenie:
 
 1. cd $env:SYSTEMDRIVE\PAM
@@ -76,6 +77,6 @@ W oknie programu PowerShell wpisz polecenie:
   Początkowo użytkownik nie ma dostępu do zasobu. Użytkownik otrzyma dostęp, gdy zostanie dodany do roli w trybie Just-In-Time. Po wygaśnięciu czasu trwania żądania użytkownik ponownie traci dostęp.
   Skrypt wykorzystuje ustawienie domyślne (11 minut) czasu ważności żądania.
 
->[!div class="step-by-step"]
-[« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Dodatek »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Dodatek »](sp1-pam-deployment-addendum.md)

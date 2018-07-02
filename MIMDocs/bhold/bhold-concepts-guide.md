@@ -1,19 +1,20 @@
 ---
 title: Przewodnik koncepcje pakietu Microsoft BHOLD | Dokumentacja firmy Microsoft
-description: "Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji."
-keywords: 
+description: Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290071"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Przewodnik koncepcje pakietu Microsoft BHOLD
 
@@ -56,8 +57,8 @@ Pakiet BHOLD możesz określić i organizowanie ról w organizacji, mapy użytko
 
 Jednostki organizacyjne (OrgUnits) są podstawowych środków za pomocą której użytkownicy są zorganizowane w modelu BHOLD roli. Każdy użytkownik musi należeć do co najmniej jeden OrgUnit. (W rzeczywistości usunięcie użytkownika z ostatnich jednostki organizacyjnej w BHOLD rekordu danych użytkownika zostaną usunięte z bazy danych BHOLD.)
 
->[!Important]
-Jednostki organizacyjne w modelu roli BHOLD nie należy mylić z jednostki organizacyjnej w usługach domenowych w usłudze Active Directory (AD DS). Zazwyczaj struktury jednostek organizacyjnych w BHOLD opiera się na organizacji i zasad firmy, nie wymagania dotyczące infrastruktury sieci.
+> [!Important]
+> Jednostki organizacyjne w modelu roli BHOLD nie należy mylić z jednostki organizacyjnej w usługach domenowych w usłudze Active Directory (AD DS). Zazwyczaj struktury jednostek organizacyjnych w BHOLD opiera się na organizacji i zasad firmy, nie wymagania dotyczące infrastruktury sieci.
 
 Chociaż nie jest wymagany, w większości przypadków jednostek organizacyjnych struktura BHOLD do reprezentowania strukturę hierarchiczną rzeczywiste organizacji, podobny do przedstawionego poniżej:
 
@@ -127,8 +128,8 @@ Pierwszym krokiem przy użyciu Generator modeli BHOLD jest do importowania tych 
 - Proponowane role, które są połączone z jednostką organizacyjną, ale musi być aktywowana dla konkretnych użytkowników
 - Własność ról, które przyznać użytkownikowi kontrolę nad jednostki organizacyjne i role, dla których właścicielem nie została określona w importowanych plikach
 
->[!Important]
-Podczas przekazywania plików, wybierz **zachować istniejący Model** pola wyboru tylko w środowiskach testowych. W środowiskach produkcyjnych należy użyć Generator modeli do utworzenia początkowej modelu roli. Nie można go użyć do modyfikowania istniejącego modelu roli w bazie danych BHOLD.
+> [!Important]
+> Podczas przekazywania plików, wybierz **zachować istniejący Model** pola wyboru tylko w środowiskach testowych. W środowiskach produkcyjnych należy użyć Generator modeli do utworzenia początkowej modelu roli. Nie można go użyć do modyfikowania istniejącego modelu roli w bazie danych BHOLD.
 
 Po Generator modeli tworzy tych ról w modelu roli, aby baza danych BHOLD w formie pliku XML można następnie wyeksportować model roli.
 
@@ -252,8 +253,8 @@ Filtry zasad można się z trzech typów i operatory specyficzne dla ich typu, j
   - **Można tylko ma i może zawierać tylko wszystkie**
   - **Nie ma żadnej wyłącznie i wyłącznie mają wszystkie**
 
->[!Note]
-Filtry ograniczające można używać operatorów wskazany do testowania klucza z zestawem wielu wartości.
+> [!Note]
+> Filtry ograniczające można używać operatorów wskazany do testowania klucza z zestawem wielu wartości.
 
 Na przykład jeśli chcesz przetestować implementacji podział obowiązków (darni) zasady, które stany nie użytkownika, który ma uprawnienia do żądania płatności nieprawidłowość również mieć uprawnienie zatwierdzić płatności, można utworzyć reguły podobne do poniższych:
 

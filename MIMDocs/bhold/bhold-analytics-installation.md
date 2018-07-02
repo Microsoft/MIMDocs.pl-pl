@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 2cff1f0b048a647198be6c05c658713750b41180
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 24e43d8ad886fcd7bfa7a9e694754b956f1659cd
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290275"
 ---
 # <a name="bhold-analytics-installation"></a>Instalacja analizy BHOLD
 
@@ -39,7 +40,7 @@ Przed rozpoczęciem instalowania modułu analizy BHOLD, musisz być przygotowana
 
 Aby zainstalować moduł analizy BHOLD, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł analizy BHOLD na:
 
-- BholdAnalytics*\<wersji\>*\_Release.msi
+- BholdAnalytics<em>\<wersji\></em>\_Release.msi
 
 Zastąp *\<wersji\>* z numerem wersji wersji analizy BHOLD, który jest instalowany.
 

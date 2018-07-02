@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: c68b33b2ff28d75b6f4e63fa8caf0c87727a5927
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289401"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
-[Portal i usługa programu MIM »](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Exchange Server](prepare-server-exchange.md)
+> [Portal i usługa programu MIM »](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 > - Nazwa serwera usługi MIM — **corpservice**
 > - Nazwa serwera synchronizacji MIM — **corpsync**
 > - Nazwa programu SQL Server — **corpsql**
-> - Hasło — **Pass@word1**
+> - Hasło — <strong>Pass@word1</strong>
 
 Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy najpierw skonfigurować pakiet instalacyjny.
 
@@ -55,37 +56,37 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     ![Obraz z instalacją niestandardową](media/install-mim-sync/MIM_Install2.png)
 
-6.  Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
+6. Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-    1.  Program SQL Server znajduje się na: **komputera zdalnego A** o nazwie **corpsql.contoso.com**.
+   1.  Program SQL Server znajduje się na: **komputera zdalnego A** o nazwie **corpsql.contoso.com**.
 
-    2.  Wystąpienie programu SQL Server: **domyślnego wystąpienia**
+   2.  Wystąpienie programu SQL Server: **domyślnego wystąpienia**
 
-    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
+   ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 
-7.  Skonfiguruj konto usługi synchronizacji zgodnie z kontem utworzonym wcześniej:
+7. Skonfiguruj konto usługi synchronizacji zgodnie z kontem utworzonym wcześniej:
 
-    1.  Konto usługi: *MIMSync*
+   1. Konto usługi: *MIMSync*
 
-    2.  Hasło: *Pass@word1*
+   2. Hasło: <em>Pass@word1</em>
 
-    3.  Domena konta usługi lub nazwa komputera lokalnego: *contoso*
+   3. Domena konta usługi lub nazwa komputera lokalnego: *contoso*
 
-    ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
+   ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
 
-8.  W instalatorze usługi synchronizacji programu MIM określ następujące grupy zabezpieczeń:
+8. W instalatorze usługi synchronizacji programu MIM określ następujące grupy zabezpieczeń:
 
-    1. Administrator = *contoso\MIMSyncAdmins*
+   1. Administrator = *contoso\MIMSyncAdmins*
 
-    2. Operator = *contoso\MIMSyncOperators*
+   2. Operator = *contoso\MIMSyncOperators*
 
-    3. Węzły przyłączające = *contoso\MIMSyncJoiners*
+   3. Węzły przyłączające = *contoso\MIMSyncJoiners*
 
-    4. Przeglądanie łączników = *contoso\MIMSyncBrowse*
+   4. Przeglądanie łączników = *contoso\MIMSyncBrowse*
 
-    5. Zarządzanie hasłami WMI = *contoso\MIMSyncPasswordReset*
+   5. Zarządzanie hasłami WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Obraz grup zabezpieczeń](media/install-mim-sync/MIM_Install5.png)
+   ![Obraz grup zabezpieczeń](media/install-mim-sync/MIM_Install5.png)
 
 9. Na ekranie ustawień zabezpieczeń zaznacz pozycję **Włącz reguły zapory dla przychodzącej komunikacji zdalnego wywołania procedur** i kliknij przycisk **Dalej**.
 
@@ -103,6 +104,6 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     5. Aby zmiany członkostwa w grupach zostały uwzględnione, musisz wylogować się i zalogować ponownie. Kliknij przycisk **Tak**, aby się wylogować.
 
->[!div class="step-by-step"]  
-[« Exchange Server](prepare-server-exchange.md)
-[Portal i usługa programu MIM »](install-mim-service-portal.md)
+> [!div class="step-by-step"]  
+> [« Exchange Server](prepare-server-exchange.md)
+> [Portal i usługa programu MIM »](install-mim-service-portal.md)

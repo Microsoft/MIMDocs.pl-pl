@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: e0514530c9bceef18cc8eea7ec8b7060110811c2
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 11cde4e3b2779f9c32d9849a47713acf5f120b3c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289700"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Przewodnik instalacji dodatku SP1 dla (6.0) firmy Microsoft BHOLD
 
@@ -29,8 +30,8 @@ Dodatku Service Pack 1 (SP1) dla systemu Microsoft® BHOLD Suite to zbiór aplik
 - Poświadczenie BHOLD
 
 
->[!NOTE]
-**Dotyczy**: dodatek SP1 dla programu Microsoft Identity Manager 2016
+> [!NOTE]
+> **Dotyczy**: dodatek SP1 dla programu Microsoft Identity Manager 2016
 
 ## <a name="what-this-document-covers"></a>W tym dokumencie opisano
 
@@ -70,8 +71,8 @@ Instalowanie i BHOLD Core FIM na osobnych serwerach zapewnia większą wydajnoś
 
 ![Architektura dwóch serwerów](media/bhold-installation-guide/dual.png)
 
->[!IMPORTANT]
-Funkcja raportowania modułu BHOLD FIM integracji wymaga bazy danych BHOLD i FIM do zainstalowania na tym samym wystąpieniu programu SQL Server i BHOLD konto usługi musi mieć prawa dostępu do bazy danych usługi FIM.
+> [!IMPORTANT]
+> Funkcja raportowania modułu BHOLD FIM integracji wymaga bazy danych BHOLD i FIM do zainstalowania na tym samym wystąpieniu programu SQL Server i BHOLD konto usługi musi mieć prawa dostępu do bazy danych usługi FIM.
 
 ### <a name="two-tier-architecture"></a>Architektura dwuwarstwowa
 

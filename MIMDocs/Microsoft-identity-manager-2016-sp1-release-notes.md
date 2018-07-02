@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 98d21076801bbe60b7a2d2d5b7e1c41d4bce1b4a
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290292"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Co nowego w programie Microsoft Manager Identity 2016 z dodatkiem Service Pack 1 #
 
@@ -42,8 +43,8 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
 
 - **Obsługa lasu „PRIV” (bastionu) usługi PAM dla poziomu funkcjonalności systemu Windows Server 2016:** usługa PAM programu MIM może zostać skonfigurowana w środowisku z kontrolerami domeny uruchomionymi na poziomie funkcjonalności lasu Usług domenowych Active Directory systemu Windows Server 2016. Jeśli bilet protokołu Kerberos użytkownika zostanie skonfigurowany, będzie on ograniczony w czasie do pozostałego czasu aktywacji roli.
 
-    >[!Note]
-    Jeśli zdecydujesz się zachować dla lasu poziom funkcjonalności systemu Windows Server 2012 R2 w domenie CORP, zalecamy zainstalowanie aktualizacji [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) i [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) na kontrolerze domeny CORP.
+  > [!Note]
+  >   Jeśli zdecydujesz się zachować dla lasu poziom funkcjonalności systemu Windows Server 2012 R2 w domenie CORP, zalecamy zainstalowanie aktualizacji [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) i [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) na kontrolerze domeny CORP.
 
 - **Podniesienie uprawnień konta z dostępem uprzywilejowanym do grup ograniczonych do lasu „PRIV” (bastionu):** teraz administratorzy mogą informować usługę MIM o grupach i użytkownikach ograniczonych wyłącznie do lasu „PRIV”. W ten sposób te grupy i ci użytkownicy mogą zostać uwzględnieni w rolach usługi PAM.  Następnie można ich aktywować dla roli i przypisać im członkostwo w grupach w lesie „PRIV”.
 
@@ -51,8 +52,8 @@ Chcemy poznać także opinie użytkowników! Wszelkie opinie, komentarze lub uwa
 
 - **Polecenia cmdlet usługi PAM do konfiguracji silosów zasad uwierzytelniania:** z dodatkiem Service Pack 1 wprowadzono nowe polecenia cmdlet pozwalające wzmocnić zabezpieczenia lasu bastionu. Te polecenia cmdlet automatycznie tworzą silos zasad uwierzytelniania powiązany z szablonem zasady uwierzytelniania.
 
-    >[!Note]
-    Wspomniane polecenia cmdlet są uruchamiane automatycznie w ramach skryptów wdrażania.
+  > [!Note]
+  >   Wspomniane polecenia cmdlet są uruchamiane automatycznie w ramach skryptów wdrażania.
 
 
 ## <a name="platform-support"></a>Obsługa platform
@@ -77,8 +78,8 @@ Przed rozpoczęciem
 Przed uaktualnieniem usługi i portalu MIM należy uaktualnić aparat synchronizacji MIM.
 Należy utworzyć kopię zapasową baz danych MIMService i MIM Sync.
 
-  1. Odinstaluj składnik Microsoft Identity Manager, który chcesz uaktualnić.
-  2. Po zakończeniu dezinstalacji otwórz stronę powitalną, korzystając z nośnika instalacyjnego „FIMSplash.htm”.
-  3. Wybierz składnik MIM do uaktualnienia.
-  4. Kontynuuj instalację, wykonując wyświetlane polecenia.
-    * Instalacja usługi i portalu MIM: Jeśli chcesz wybrać Exchange Online jako konto poczty, wpisz adres e-mail i poświadczenia konta usługi Exchange Online na następnym ekranie.
+1. Odinstaluj składnik Microsoft Identity Manager, który chcesz uaktualnić.
+2. Po zakończeniu dezinstalacji otwórz stronę powitalną, korzystając z nośnika instalacyjnego „FIMSplash.htm”.
+3. Wybierz składnik MIM do uaktualnienia.
+4. Kontynuuj instalację, wykonując wyświetlane polecenia.
+   * Instalacja usługi i portalu MIM: Jeśli chcesz wybrać Exchange Online jako konto poczty, wpisz adres e-mail i poświadczenia konta usługi Exchange Online na następnym ekranie.

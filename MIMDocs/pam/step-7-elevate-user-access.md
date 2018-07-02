@@ -1,6 +1,6 @@
 ---
-title: "Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Dokumentacja firmy Microsoft"
-description: "Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne."
+title: Wdrożenie usługi PAM — krok 7 — dostęp użytkownika | Dokumentacja firmy Microsoft
+description: Ostatni krok obejmuje udzielenie uprzywilejowanemu użytkownikowi tymczasowego dostępu w celu zademonstrowania, że wdrożenie usługi Privileged Access Management było pomyślne.
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289850"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
->[!div class="step-by-step"]
-[« Krok 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 6 ](step-6-transition-group-to-pam.md)
 
 
 Ten krok pokazuje, że użytkownik może zażądać dostępu do roli przy użyciu programu MIM.
@@ -90,7 +91,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
     ```
 
 3. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno przeglądarki sieci Web.
-4. Przejdź do strony http://pamsrv.priv.contoso.local:8090 i upewnij się, że strona sieci Web z przykładowego portalu jest widoczna.
+4. Przejdź do http://pamsrv.priv.contoso.local:8090 i upewnij się, że strony sieci web z przykładowego portalu jest widoczna.
 5. W programie Internet Explorer wybierz kolejno pozycje **Narzędzia** > **Opcje internetowe** i kliknij kartę **Zabezpieczenia**.
 6. Kliknij kolejno pozycje **Lokalna strefa intranetowa** > **Witryny** > **Zaawansowane**, a następnie dodaj witrynę sieci Web do strefy.
 7. Zamknij okno dialogowe **Opcje internetowe**.
@@ -103,5 +104,5 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
 
->[!div class="step-by-step"]
-[« Krok 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 6 ](step-6-transition-group-to-pam.md)

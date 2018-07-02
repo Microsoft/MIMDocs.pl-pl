@@ -1,7 +1,7 @@
 ---
-title: "Krok 5 — Instalowanie/konfigurowanie usługi PAM"
-description: "Jest to krok 5 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Obejmuje on kroki wdrażania na serwerze usługi PAM."
-keywords: 
+title: Krok 5 — Instalowanie/konfigurowanie usługi PAM
+description: Jest to krok 5 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Obejmuje on kroki wdrażania na serwerze usługi PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 414851f8550f6419db7e268e982b88065730ab4e
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 839cb4fa69aefa8024d38aeff0ebae96599aefb3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288847"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Krok 5 — Instalowanie/konfigurowanie usługi PAM
 
->[!div class="step-by-step"]
-[« Krok 4](sp1-step4-configuring-sharepoint.md)
-[Krok 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Krok 4](sp1-step4-configuring-sharepoint.md)
+> [Krok 6 »](sp1-step6-setup-pam-trust.md)
 
 W przypadku serwera PAMServer przyłączonego do domeny należy zalogować się jako MIMAdmin; w przypadku innego serwera należy zalogować się jako administrator lokalny.
 1. Uruchom program PowerShell jako administrator.
@@ -40,9 +41,9 @@ Po ponownym uruchomieniu serwera PAMServer ponownie zaloguj się do komputera pr
 3. .\PAMDeployment.ps1
 4. Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).
 
-  Po wyświetleniu monitu wprowadź hasło do konta monitora programu MIM, konta składnika MIM, konta agenta zarządzania (MA) programu MIM, konta usługi MIM, konta administratora MIM i programu SharePoint.
-  Po zakończeniu instalacji nastąpi ponowne uruchomienie komputera.
+   Po wyświetleniu monitu wprowadź hasło do konta monitora programu MIM, konta składnika MIM, konta agenta zarządzania (MA) programu MIM, konta usługi MIM, konta administratora MIM i programu SharePoint.
+   Po zakończeniu instalacji nastąpi ponowne uruchomienie komputera.
 
->[!div class="step-by-step"]
-[« Krok 4](sp1-step4-configuring-sharepoint.md)
-[Krok 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Krok 4](sp1-step4-configuring-sharepoint.md)
+> [Krok 6 »](sp1-step6-setup-pam-trust.md)

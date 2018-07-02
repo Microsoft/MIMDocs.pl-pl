@@ -1,7 +1,7 @@
 ---
-title: "Wdrożenie usługi PAM — krok 5 — połączenie lasów | Dokumentacja firmy Microsoft"
-description: "Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki czemu uprzywilejowani użytkownicy w lesie PRIV będą mieli w dalszym ciągu dostęp do zasobów w lesie CORP."
-keywords: 
+title: Wdrożenie usługi PAM — krok 5 — połączenie lasów | Dokumentacja firmy Microsoft
+description: Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki czemu uprzywilejowani użytkownicy w lesie PRIV będą mieli w dalszym ciągu dostęp do zasobów w lesie CORP.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289095"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
->[!div class="step-by-step"]
-[« Krok 4](step-4-install-mim-components-on-pam-server.md)
-[Krok 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 4](step-4-install-mim-components-on-pam-server.md)
+> [Krok 6 »](step-6-transition-group-to-pam.md)
 
 Dla każdej domeny CORP, np. contoso.local, kontrolery domeny PRIV i CONTOSO muszą być związane relacją zaufania. Dzięki temu użytkownicy w domenie PRIV mogą uzyskać dostęp do zasobów w domenie CORP.
 
@@ -70,17 +71,17 @@ Na serwerze PAMSRV ustal jednokierunkowe zaufanie z każdą domeną, np. CORPDC,
 
 Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla administratorów PRIV i usługi monitorowania.
 
-1.  Zaloguj się do istniejącego kontrolera domeny lasu CORP (CORPDC) jako administrator domeny dla domeny najwyższego poziomu w tym lesie (Contoso\Administrator).  
-2.  Uruchom przystawkę **Użytkownicy i komputery usługi Active Directory**.  
-3.  Kliknij prawym przyciskiem myszy domenę **contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
-4.  Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
-5.  W oknie Wybieranie: Użytkownicy, komputery lub grupy kliknij pozycję **Lokalizacje**, a następnie zmień lokalizację na *priv.contoso.local*.  W polu nazwy obiektu wpisz *Administratorzy domeny*, a następnie kliknij pozycję **Sprawdź nazwy**. Po wyświetleniu okienka wyskakującego wprowadź nazwę użytkownika *priv\administrator* i hasło tego użytkownika.  
-6.  Po łańcuchu Administratorzy domeny dodaj wpis „*; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
-7.  Na liście typowych zadań wybierz pozycję **Odczytywanie wszystkich informacji o użytkowniku**, kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
-8.  Zamknij stronę Użytkownicy i komputery usługi Active Directory.
+1. Zaloguj się do istniejącego kontrolera domeny lasu CORP (CORPDC) jako administrator domeny dla domeny najwyższego poziomu w tym lesie (Contoso\Administrator).  
+2. Uruchom przystawkę **Użytkownicy i komputery usługi Active Directory**.  
+3. Kliknij prawym przyciskiem myszy domenę **contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
+4. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
+5. W oknie Wybieranie: Użytkownicy, komputery lub grupy kliknij pozycję **Lokalizacje**, a następnie zmień lokalizację na *priv.contoso.local*.  W polu nazwy obiektu wpisz *Administratorzy domeny*, a następnie kliknij pozycję **Sprawdź nazwy**. Po wyświetleniu okienka wyskakującego wprowadź nazwę użytkownika *priv\administrator* i hasło tego użytkownika.  
+6. Po łańcuchu Administratorzy domeny dodaj wpis „*; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
+7. Na liście typowych zadań wybierz pozycję **Odczytywanie wszystkich informacji o użytkowniku**, kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
+8. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
-9.  Otwórz okno programu PowerShell.
-10.  Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Typ:
+9. Otwórz okno programu PowerShell.
+10. Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Typ:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 
 W następnym kroku przeniesiesz grupę do systemu PAM.
 
->[!div class="step-by-step"]
-[« Krok 4](step-4-install-mim-components-on-pam-server.md)
-[Krok 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Krok 4](step-4-install-mim-components-on-pam-server.md)
+> [Krok 6 »](step-6-transition-group-to-pam.md)

@@ -16,7 +16,8 @@ ms.openlocfilehash: 7b685ffb6f2a52bd2782395e4c1f26501ffe3101
 ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479352"
 ---
 # <a name="connect-to-your-directories"></a>Łączenie z katalogami
 

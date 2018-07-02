@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 25825c1472dec44ed0e09519d4bc17809c1b95b1
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 752605be1392e514f5b132a654134185b38e2cef
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290139"
 ---
 # <a name="bhold-core-installation"></a>Instalacja BHOLD Core
 
@@ -168,8 +169,8 @@ Umożliwia usług IIS do poprawnego działania z modułem BHOLD Core należy sko
 
 Jeśli nazwa sieci, który jest używany do kontaktowania się z BHOLD witryny sieci Web nie jest taka sama jak nazwa hosta serwera, musisz ustanowić główną nazwę usługi (SPN) dla protokołu HTTP. Na przykład jeśli umożliwia rekord zasobu CNAME w systemie DNS, określają alias serwera lub jeśli używasz równoważenia obciążenia sieciowego, zarejestruj te adresy dodatkowe sieci w usłudze Active Directory. Jeśli nie to zrobić, program Internet Explorer nie można użyć protokołu Kerberos podczas kontaktowania się z BHOLD witryny sieci Web.
 
->[!IMPORTANT]
-Jeśli moduł BHOLD Core jest zainstalowany na tym samym komputerze co portalu programu FIM, należy utworzyć rekordy zasobów DNS (CNAME i A) z różne nazwy hostów dla serwerów z uruchomioną BHOLD Core i serwerze z uruchomioną portalu programu FIM. Można ustalić tylko jedną nazwę SPN dla określonego serwera alias, usługa typu w/pary, a BHOLD Core i portalu programu FIM wymagają oddzielnego SPN ponieważ są one zazwyczaj uruchamiane w ramach różnych kont. Polecenia setspn zgłasza błąd, jeśli nazwa SPN została ustanowiona w ramach innego konta.
+> [!IMPORTANT]
+> Jeśli moduł BHOLD Core jest zainstalowany na tym samym komputerze co portalu programu FIM, należy utworzyć rekordy zasobów DNS (CNAME i A) z różne nazwy hostów dla serwerów z uruchomioną BHOLD Core i serwerze z uruchomioną portalu programu FIM. Można ustalić tylko jedną nazwę SPN dla określonego serwera alias, usługa typu w/pary, a BHOLD Core i portalu programu FIM wymagają oddzielnego SPN ponieważ są one zazwyczaj uruchamiane w ramach różnych kont. Polecenia setspn zgłasza błąd, jeśli nazwa SPN została ustanowiona w ramach innego konta.
 
 Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minimalnym wymaganiem do wykonania tej procedury.
 

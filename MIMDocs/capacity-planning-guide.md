@@ -1,7 +1,7 @@
 ---
-title: "Przewodnik planowania pojemności | Dokumentacja firmy Microsoft"
-description: "Ten przewodnik ułatwia zrozumienie zmiennych, które należy wziąć pod uwagę przed wdrożeniem programu MIM 2016, w tym poziomów obciążeń i decyzji dotyczących zasad."
-keywords: 
+title: Przewodnik planowania pojemności | Dokumentacja firmy Microsoft
+description: Ten przewodnik ułatwia zrozumienie zmiennych, które należy wziąć pod uwagę przed wdrożeniem programu MIM 2016, w tym poziomów obciążeń i decyzji dotyczących zasad.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289017"
 ---
 # <a name="capacity-planning-guide"></a>Przewodnik planowania pojemności
 
@@ -49,7 +50,7 @@ Główne czynniki wpływające na pojemność i wydajność wdrożenia programu 
 
 Składniki programu Microsoft Identity Manager nie muszą znajdować się na tym samym komputerze. Ważnym elementem planowania pojemności jest analiza tych składników oraz maszyn fizycznych i wirtualnych, które będą je hostować.
 
-Czynniki sprzętowe mogą wpływać na wydajność środowiska programu MIM. Na przykład:
+Czynniki sprzętowe mogą wpływać na wydajność środowiska programu MIM. Przykład:
 
 - Jaka jest konfiguracja dysków fizycznych komputera, na którym uruchomiono bazę danych SQL usługi programu MIM 2016? Liczba jednostek wchodzących w skład konfiguracji dysków oraz rozkład plików dzienników i danych mogą wpłynąć w znaczący sposób na wydajność systemu.
 

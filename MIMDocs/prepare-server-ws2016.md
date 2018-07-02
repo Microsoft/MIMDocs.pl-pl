@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289493"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Konfigurowanie serwerów zarządzania tożsamościami: Windows Server 2016
 
->[!div class="step-by-step"]
-[«Przygotowywanie domeny](preparing-domain.md)
-[programu SQL Server 2016»](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [«Przygotowywanie domeny](preparing-domain.md)
+> [programu SQL Server 2016»](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Nazwa serwera usługi MIM — **corpservice**
 > - Nazwa serwera synchronizacji MIM — **corpsync**
 > - Nazwa programu SQL Server — **corpsql**
-> - Hasło — **Pass@word1**
+> - Hasło — <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Dołącz do domeny systemu Windows Server 2016
 
@@ -112,6 +113,6 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[«Przygotowywanie domeny](preparing-domain.md)
-[programu SQL Server 2016»](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [«Przygotowywanie domeny](preparing-domain.md)
+> [programu SQL Server 2016»](prepare-server-sql2016.md)

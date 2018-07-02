@@ -1,7 +1,7 @@
 ---
-title: "Wdrożenie usługi PAM — krok 3 — serwer usługi PAM | Dokumentacja firmy Microsoft"
-description: "Przygotowanie serwera usługi PAM, który będzie hostować programy SQL i SharePoint na potrzeby wdrożenia usługi Privileged Access Management."
-keywords: 
+title: Wdrożenie usługi PAM — krok 3 — serwer usługi PAM | Dokumentacja firmy Microsoft
+description: Przygotowanie serwera usługi PAM, który będzie hostować programy SQL i SharePoint na potrzeby wdrożenia usługi Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -13,17 +13,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3eb79847baed69ef53a27e09443ff9bf4647b347
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289918"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 
->[!div class="step-by-step"]
-[« Krok 2](step-2-prepare-priv-domain-controller.md)
-[Krok 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Krok 2](step-2-prepare-priv-domain-controller.md)
+> [Krok 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Instalowanie systemu Windows Server 2012 R2
 
@@ -93,13 +94,13 @@ Istnieją dwa sposoby zmiany konfiguracji usług IIS, aby umożliwić aplikacjom
 
 Jeśli chcesz użyć programu PowerShell:
 
-1.  Kliknij prawym przyciskiem myszy program PowerShell i wybierz opcję **Uruchom jako administrator**.
-2.  Zatrzymaj usługi IIS i odblokuj ustawienia hosta aplikacji przy użyciu tych poleceń
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Kliknij prawym przyciskiem myszy program PowerShell i wybierz opcję **Uruchom jako administrator**.
+2. Zatrzymaj usługi IIS i odblokuj ustawienia hosta aplikacji przy użyciu tych poleceń
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 Jeśli chcesz użyć edytora tekstu, np. programu Notatnik:
 
@@ -149,13 +150,13 @@ Uruchom kreatora konfiguracji produktów SharePoint, aby skonfigurować program 
 4.  Teraz zaakceptuj pozostałe domyślne ustawienia kreatora konfiguracji programu SharePoint, aby utworzyć farmę z jednym serwerem.    
 5.  Po zakończeniu przez kreatora konfiguracji zadania konfiguracji o numerze 10 z 10 kliknij przycisk **Zakończ**. Zostanie otwarta przeglądarka sieci Web.  
 6.  W menu podręcznym przeglądarki Internet Explorer przeprowadź uwierzytelnianie jako administrator domeny (PRIV\MIMAdmin), aby kontynuować.  
-7.  Uruchom kreator w aplikacji sieci Web, aby skonfigurować farmę programu SharePoint.  
+7.  Uruchom kreator w aplikacji internetowej, aby skonfigurować farmę programu SharePoint.  
 8.  Wybierz opcję użycia istniejącego konta zarządzanego (PRIV\SharePoint), usuń zaznaczenie pola wyboru, aby wyłączyć wszelkie dodatkowe usługi, a następnie kliknij przycisk **Dalej**.  
 9. Po wyświetleniu okna Tworzenie kolekcji witryn kliknij przycisk **Pomiń**, a następnie **Zakończ**.  
 
-## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Tworzenie aplikacji sieci Web programu SharePoint Foundation 2013
+## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Tworzenie aplikacji internetowej programu SharePoint Foundation 2013
 
-Po zakończeniu pracy kreatora użyj programu PowerShell, aby utworzyć aplikację sieci Web programu SharePoint Foundation 2013 w celu hostowania portalu MIM. Jako że niniejszy przewodnik służy w celach demonstracyjnych, protokół SSL nie będzie włączony.
+Po zakończeniu pracy kreatora użyj programu PowerShell, aby utworzyć aplikację internetową programu SharePoint Foundation 2013 w celu hostowania portalu MIM. Jako że niniejszy przewodnik służy w celach demonstracyjnych, protokół SSL nie będzie włączony.
 
 1.  Kliknij prawym przyciskiem myszy powłokę zarządzania programu SharePoint 2013, wybierz opcję **Uruchom jako administrator**, a następnie uruchom następujący skrypt programu PowerShell:
 
@@ -171,7 +172,7 @@ Po zakończeniu pracy kreatora użyj programu PowerShell, aby utworzyć aplikacj
 
 ## <a name="create-a-sharepoint-site-collection"></a>Tworzenie kolekcji witryn programu SharePoint
 
-Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplikacją sieci Web, aby hostować portal MIM.
+Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplikacją internetową, aby hostować portal MIM.
 
 1.  Uruchom **powłokę zarządzania programu SharePoint 2013**, jeśli nie jest jeszcze uruchomiona, a następnie uruchom poniższy skrypt programu PowerShell
 
@@ -204,7 +205,7 @@ Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplika
 ## <a name="set-the-website-as-the-local-intranet"></a>Ustawianie witryny jako lokalnego intranetu
 
 1. Uruchom przeglądarkę Internet Explorer i otwórz nową kartę przeglądarki sieci Web
-2. Przejdź do adresu http://pamsrv.priv.contoso.local:82/ i zaloguj się jako PRIV\MIMAdmin.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie „MIM Portal”.  
+2. Przejdź do http://pamsrv.priv.contoso.local:82/ i zaloguj się jako PRIV\MIMAdmin.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie „MIM Portal”.  
 3. W przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do karty **Zabezpieczenia**, wybierz opcję **Lokalny intranet** i dodaj adres URL `http://pamsrv.priv.contoso.local:82/`.
 
 Jeśli logowanie nie powiedzie się, nazwy SPN Kerberos utworzone wcześniej w [Kroku 2](step-2-prepare-priv-domain-controller.md) mogą wymagać aktualizacji.
@@ -215,6 +216,6 @@ Przy użyciu opcji **Usługi** (znajdującej się w narzędziach administracyjny
 
 W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 
->[!div class="step-by-step"]
-[« Krok 2](step-2-prepare-priv-domain-controller.md)
-[Krok 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Krok 2](step-2-prepare-priv-domain-controller.md)
+> [Krok 4 »](step-4-install-mim-components-on-pam-server.md)

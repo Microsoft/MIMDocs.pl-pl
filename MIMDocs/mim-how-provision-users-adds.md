@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
-description: "Przejdź przez proces tworzenia użytkowników w usłudze ADDS przy użyciu programu Microsoft Identity Manager 2016"
-keywords: 
+description: Przejdź przez proces tworzenia użytkowników w usłudze ADDS przy użyciu programu Microsoft Identity Manager 2016
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290105"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
@@ -87,8 +88,8 @@ Poniższa ilustracja przedstawia wymagane środowisko.
 
 Możesz uruchomić wszystkie składniki na jednym komputerze.
 
->[!NOTE]
-Aby uzyskać więcej informacji dotyczących konfigurowania programu MIM, zobacz [Przewodnik instalacji programu FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> [!NOTE]
+> Aby uzyskać więcej informacji dotyczących konfigurowania programu MIM, zobacz [Przewodnik instalacji programu FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Lista składników scenariusza
 
@@ -160,8 +161,8 @@ Aby utworzyć użytkownika w usługach AD DS, wymaga się przeniesienia nazwy wy
 
 W usługach AD DS nadal typowe dla użytkowników jest korzystanie z atrybutu sAMAccountName do logowania do usługi katalogu. Jeśli nie określisz wartości dla tego atrybutu, usługa katalogu wygeneruje dla niego losową wartość. Niemniej te losowe wartości nie są przyjazne dla użytkownika, dlatego zazwyczaj przyjazna dla użytkownika wersja tego atrybutu jest częścią eksportu do usług AD DS. Aby umożliwić użytkownikowi logowanie się do usług AD DS, musisz również uwzględnić utworzone hasło przy użyciu atrybutu unicodePwd w logice eksportu.
 
->[!Note]                                
-Upewnij się, że wartość określona jako unicodePwd jest zgodna z zasadami haseł docelowych usług AD DS.
+> [!Note]
+> Upewnij się, że wartość określona jako unicodePwd jest zgodna z zasadami haseł docelowych usług AD DS.
 
 Po ustawieniu hasła dla kont AD DS należy również utworzyć konto jako włączone konto. Możesz to zrobić, ustawiając atrybut userAccountControl. Aby uzyskać więcej informacji o atrybucie userAccountControl, zobacz [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory).
 
@@ -180,8 +181,8 @@ Więcej informacji znajduje się w następujących tematach pomocy:
 - Korzystanie z agenta zarządzania dla usługi Active Directory
 - Konfiguruj partycje katalogu
 
->[!Note]
-Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
+> [!Note]
+> Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Krok 4. Tworzenie agenta zarządzania Fabrikam FIMMA
 
@@ -194,7 +195,7 @@ W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla s
 | Strona projektanta agenta zarządzania | Konfiguracja |
 |------------|------------------------------------|
 | Utwórz agenta zarządzania | 1. **Agent zarządzania dla:** agent zarządzania usługi FIM Service <br/> 2. **Nazwa:** Fabrikam FIMMA |
-| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183; **Adres podstawowy usługi FIM Service:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
+| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183;**Adres podstawowy usługi FIM:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
 | Wybierz typy obiektów                                     | Poza już wybranymi typami obiektów wybierz **osobę**.   |
 | Skonfiguruj mapowania typów obiektów                          | Poza już istniejącymi mapowaniami typów obiektów dodaj mapowanie dla osoby **Typ obiektu źródła danych** do osoby typu obiektu **Metaverse**. |
 | Konfiguruj przepływ atrybutów                                | Poza już istniejącymi mapowaniami przepływu atrybutów dodaj następujące mapowania przepływu atrybutów: <br/><br/> ![Przepływ atrybutów](media/how-provision-users-adds/image018.jpg) |
@@ -211,8 +212,8 @@ Więcej informacji znajduje się w następujących tematach pomocy:
 
 -   Konfiguruj partycje katalogu
 
->[!NOTE]
- Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
+> [!NOTE]
+>  Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
 
 ### <a name="step-5-create-the-run-profiles"></a>Krok 5. Tworzenie profilów przebiegu
 
@@ -226,12 +227,12 @@ W poniższej tabeli wymieniono profile przebiegu, które należy utworzyć w ram
 Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią tabelą.
 
 
->[!Note]
-Aby uzyskać więcej informacji, zobacz Create a Management Agent Run Profile (Tworzenie profilu przebiegu agenta zarządzania) w Pomocy programu MIM.                                                                                                                  
-
-
->[!Important]
- Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Możesz to zrobić, uruchamiając skrypt opisany w artykule Using Windows PowerShell to Enable Provisioning (Korzystanie z programu PowerShell do włączenia aprowizacji) na stronie http://go.microsoft.com/FWLink/p/?LinkId=189660.
+> [!Note]
+> Aby uzyskać więcej informacji, zobacz Create a Management Agent Run Profile (Tworzenie profilu przebiegu agenta zarządzania) w Pomocy programu MIM.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Można to zrobić za pomocą skryptu, za pomocą środowiska Windows PowerShell można włączyć obsługi (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurowanie usługi FIM Service
@@ -243,7 +244,7 @@ W ramach scenariusza opisanego w tym przewodniku należy skonfigurować zasady a
 
 Celem tych zasad aprowizacji jest wprowadzenie grup do zakresu reguły synchronizacji ruchu wychodzącego użytkowników usługi AD. Przenosząc zasób do zakresu reguły synchronizacji, włączasz aparat synchronizacji, aby aprowizować zasób do usług AD DS zgodnie z konfiguracją.
 
-Aby skonfigurować usługę FIM Service, przejdź w programie Windows Internet Explorer® do strony http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
+Aby skonfigurować usługę programu FIM, przejdź w Windows Internet Explorer® do http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Krok 6. Tworzenie reguły synchronizacji
 
@@ -293,8 +294,8 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 
 
- >[!NOTE]
- Ważne: sprawdź, czy wybrano opcję Tylko przepływ początkowy dla przepływu atrybutu, którego miejscem docelowym jest DN.                                                                          
+> [!NOTE]
+>  Ważne: sprawdź, czy wybrano opcję Tylko przepływ początkowy dla przepływu atrybutu, którego miejscem docelowym jest DN.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Krok 7. Tworzenie przepływu pracy
 
@@ -365,8 +366,8 @@ W poniższej tabeli zawarto listę profilów przebiegu, które są częścią fa
 
 
 
->[!NOTE]
-Należy sprawdzić, czy reguła synchronizacji ruchu wychodzącego została pomyślnie przekazana do obiektu Metaverse.
+> [!NOTE]
+> Należy sprawdzić, czy reguła synchronizacji ruchu wychodzącego została pomyślnie przekazana do obiektu Metaverse.
 
 ## <a name="testing-the-configuration"></a>Testowanie konfiguracji
 
@@ -490,8 +491,8 @@ W programie FIM każdy przebieg eksportowania wymaga zakończenia następująceg
 
 Uruchom profile przebiegu zgodnie z instrukcjami w tej sekcji.
 
->[!IMPORTANT]
-Każde uruchomienie profilu przebiegu musi zakończyć się bez błędów.
+> [!IMPORTANT]
+> Każde uruchomienie profilu przebiegu musi zakończyć się bez błędów.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Krok 14. Zweryfikowanie aprowizowanego użytkownika w usługach AD DS
 

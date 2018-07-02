@@ -1,7 +1,7 @@
 ---
-title: "Przewodnik topologii wdrożenia | Dokumentacja firmy Microsoft"
-description: "W tym artykule opisano składniki programu MIM 2016 i przedstawiono sugestie dotyczące wdrażania ich w środowisku docelowym."
-keywords: 
+title: Przewodnik topologii wdrożenia | Dokumentacja firmy Microsoft
+description: W tym artykule opisano składniki programu MIM 2016 i przedstawiono sugestie dotyczące wdrażania ich w środowisku docelowym.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289816"
 ---
 # <a name="topology-considerations"></a>Kwestie dotyczące topologii
 Składniki programu Microsoft Identity Manager (MIM) można wdrożyć na tym samym serwerze lub na wielu serwerach w wielu konfiguracjach. Wybór topologii wdrożenia wpływa na wydajność programu MIM. W tym artykule przedstawiono różne topologie wdrożenia, które można zastosować.
 
 
->[!NOTE]
-Te opcje mają zastosowanie do wdrożeń wyłącznie z zastosowaniem oprogramowania MIM Sync, MIM Service i MIM Portal na potrzeby zarządzania tożsamościami.  Wdrożenia za pomocą oprogramowania MIM CM, MIM BHOLD Suite oraz wdrożenia z użyciem zarządzania podniesionego poziomu uprawnień mają inne opcje wdrażania.
+> [!NOTE]
+> Te opcje mają zastosowanie do wdrożeń wyłącznie z zastosowaniem oprogramowania MIM Sync, MIM Service i MIM Portal na potrzeby zarządzania tożsamościami.  Wdrożenia za pomocą oprogramowania MIM CM, MIM BHOLD Suite oraz wdrożenia z użyciem zarządzania podniesionego poziomu uprawnień mają inne opcje wdrażania.
 
 
 ## <a name="mim-components"></a>Składniki programu MIM
@@ -64,5 +65,5 @@ Tak jak w przypadku standardowej topologii wielowarstwowej można zwiększyć wy
 
 Komputery z zainstalowanym programem SQL Server hostujące usługę synchronizacji programu MIM i bazę danych usługi MIM mają znaczący wpływ na ogólną wydajność wdrażania programu MIM. Dlatego należy postępować zgodnie z zaleceniami w dokumentacji programu SQL Server dotyczącymi optymalizacji wydajności bazy danych. Więcej informacji można znaleźć w następujących dokumentach:
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 - Dostępny do pobrania podręcznik [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Podręcznik planowania pojemności programu Forefront Identity Manager [FIM] 2010) zawiera dodatkowe informacje na temat kompilacji testowych i wyników testowania wydajności.

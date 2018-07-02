@@ -1,7 +1,7 @@
 ---
-title: "Wdrożenie usługi PAM — krok 1 — domena CORP | Dokumentacja firmy Microsoft"
-description: "Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager"
-keywords: 
+title: Wdrożenie usługi PAM — krok 1 — domena CORP | Dokumentacja firmy Microsoft
+description: Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: f0d2ebd198ad6aee2b2b6ba07c83f5147243f598
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289605"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
->[!div class="step-by-step"]
-[Krok 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Krok 2 »](step-2-prepare-priv-domain-controller.md)
 
 W tym kroku przygotujesz się do hostowania środowiska bastionu. Ponadto, jeśli jest to konieczne, utworzysz kontroler domeny i członkowską stację roboczą w nowej domenie i lesie (las *CORP*) z tożsamościami do zarządzania przy użyciu środowiska bastionu. Las CORP symuluje istniejący las, który ma zasoby do zarządzania. Ten dokument zawiera przykładowy zasób do ochrony: udział plików.
 
@@ -56,15 +57,15 @@ W tej sekcji dodasz role usług domenowych Active Directory (AD DS), serwera DNS
 
 2. Wpisz następujące polecenia.
 
-  ```PowoerShell
-  import-module ServerManager
+   ```PowoerShell
+   import-module ServerManager
 
-  Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
+   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
-  Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
-  ```
+   Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+   ```
 
-  Spowoduje to wyświetlenie monitu o podanie hasła administratora trybu awaryjnego. Należy pamiętać, że pojawią się komunikaty ostrzegawcze dotyczące delegowania DNS i ustawień kryptograficznych. Jest to normalne zachowanie.
+   Spowoduje to wyświetlenie monitu o podanie hasła administratora trybu awaryjnego. Należy pamiętać, że pojawią się komunikaty ostrzegawcze dotyczące delegowania DNS i ustawień kryptograficznych. Jest to normalne zachowanie.
 
 3. Wyloguj się po utworzeniu lasu. Serwer zostanie automatycznie uruchomiony ponownie.
 
@@ -80,11 +81,11 @@ Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i
 
 2. Wpisz poniższe polecenia, zastępując „CONTOSO” nazwą NetBIOS domeny.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
-  ```
+   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
+   ```
 
 W niektórych przypadkach grupa może już istnieć — jest to normalne, jeśli domena była już używana w scenariuszach związanych z migracją usługi AD.
 
@@ -101,21 +102,21 @@ Zamierzamy utworzyć grupę zabezpieczeń o nazwie *CorpAdmins* i użytkownika o
 
 2. Wpisz następujące polecenia. Zamień hasło „Pass@word1” na inne.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
+   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
 
-  New-ADUser –SamAccountName Jen –name Jen
+   New-ADUser –SamAccountName Jen –name Jen
 
-  Add-ADGroupMember –identity CorpAdmins –Members Jen
+   Add-ADGroupMember –identity CorpAdmins –Members Jen
 
-  $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  Set-ADAccountPassword –identity Jen –NewPassword $jp
+   Set-ADAccountPassword –identity Jen –NewPassword $jp
 
-  Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
-  ```
+   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
+   ```
 
 ### <a name="configure-auditing"></a>Konfiguracja inspekcji
 
@@ -139,9 +140,9 @@ Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i
 
 8. Zastosuj ustawienia inspekcji, otwierając okno programu PowerShell i wpisując następujące polecenie:
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+   ```cmd
+   gpupdate /force /target:computer
+   ```
 
 Po upływie kilku minut powinien zostać wyświetlony komunikat **Pomyślnie ukończono aktualizowanie zasad komputera**.
 
@@ -153,11 +154,11 @@ W tej sekcji skonfigurujesz ustawienia rejestru wymagane do migracji sIDHistory,
 
 2. Wpisz następujące polecenia, aby skonfigurować domenę źródłową i zezwolić na zdalny dostęp do wywołania procedury (RPC) do bazy danych menedżera kont zabezpieczeń (SAM).
 
-  ```PowerShell
-  New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+   ```PowerShell
+   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
-  Restart-Computer
-  ```
+   Restart-Computer
+   ```
 
 Operacja spowoduje ponowne uruchomienie kontrolera domeny, CORPDC. Aby uzyskać więcej informacji na temat tego ustawienia rejestru, zobacz temat [Sposób rozwiązywania problemów związanych z migracją sIDHistory między lasami przy użyciu narzędzia ADMTv2](http://support.microsoft.com/kb/322970).
 
@@ -192,21 +193,21 @@ Potrzebujesz zasobu w celach demonstracyjnych związanych z kontrolą dostępu o
 
 4. Wpisz następujące polecenia.
 
-  ```PowerShell
-  mkdir c:\corpfs
+   ```PowerShell
+   mkdir c:\corpfs
 
-  New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
+   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
-  $acl = Get-Acl c:\corpfs
+   $acl = Get-Acl c:\corpfs
 
-  $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
+   $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
 
-  $acl.SetAccessRule($car)
+   $acl.SetAccessRule($car)
 
-  Set-Acl c:\corpfs $acl
-  ```
+   Set-Acl c:\corpfs $acl
+   ```
 
 W następnym kroku należy przygotować kontroler domeny PRIV.
 
->[!div class="step-by-step"]
-[Krok 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Krok 2 »](step-2-prepare-priv-domain-controller.md)

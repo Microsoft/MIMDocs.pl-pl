@@ -3,32 +3,33 @@ title: Praca z portalem samoobsługowego resetowania hasła | Dokumentacja firmy
 description: Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: e2c252771bd114a3c70b900c8c089e09eff8cd23
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
+ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963379"
 ---
->[!IMPORTANT]
-Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
-
 # <a name="working-with-self-service-password-reset"></a>Praca z funkcją samoobsługowego resetowania hasła
+
+> [!IMPORTANT]
+> Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego będzie on mógł pobrać zestaw SDK już za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA.  To zostaną uwzględnione w nadchodzących poprawki można znaleźć pod adresem [Historia wersji](/reference/version-history.md) dla anonsów.
+
 W programie Microsoft Identity Manager 2016 rozszerzono funkcję samoobsługowego resetowania hasła. Wprowadzono następujące ulepszenia:
 
--   Portal samoobsługowego resetowania hasła i ekran logowania do systemu Windows umożliwiają teraz użytkownikom odblokowanie ich kont bez konieczności zmiany haseł lub telefonicznego kontaktowania się z administratorami pomocy technicznej. Konta użytkowników mogą być blokowane z wielu uzasadnionych powodów, takich jak wprowadzenie starego hasła, użycie komputerów z obsługą dwóch języków i skonfigurowanie klawiatury dla niewłaściwego języka lub próba zalogowania się do udostępnionej stacji roboczej, która została już otwarta dla konta innej osoby.
+-   Portal samoobsługowego resetowania hasła i ekran logowania systemu Windows umożliwiają teraz użytkownikom odblokowanie ich kont bez konieczności zmiany haseł lub telefonicznego kontaktowania się administratorami pomocy technicznej. Użytkownicy mogą być blokowane z ich kont wielu uzasadnionych powodów, takich jak wprowadzenie starego hasła, użycie komputerów z obsługą dwóch języków i skonfigurowanie klawiatury dla niewłaściwego języka lub próba zalogowania do udostępnionej stacji roboczej jest już otwarty do konta innej osoby.
 
--   Dodano nową bramę uwierzytelniania Phone Gate. Umożliwia ona wykonywanie rozmów telefonicznych w celu uwierzytelniania użytkowników.
+-   Dodano nową bramę uwierzytelniania Phone Gate. Ta brama umożliwia uwierzytelnianie użytkowników za pośrednictwem połączenia telefonicznego.
 
--   Dodano obsługę dla usługi Microsoft Azure Multi-Factor Authentication (MFA). Ta funkcja może być używana dla istniejącej bramy SMS haseł jednorazowych lub nowej bramy Phone Gate.
+-   Dodano obsługę dla usługi Microsoft Azure Multi-Factor Authentication (MFA). Ta usługa może służyć do istniejącej bramy SMS jednorazowe-haseł jednorazowych lub nowej bramy Phone Gate.
 
 ## <a name="azure-for-multi-factor-authentication"></a>Uwierzytelnianie wieloskładnikowe Azure
 Microsoft Azure Multi-Factor Authentication jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw.
@@ -56,12 +57,12 @@ W tej sekcji założono, że użytkownik pobrał niezbędne pliki i ukończył w
 
     -   Konfigurowanie reguł synchronizacji w portalu MIM, zezwalających na synchronizację danych użytkowników i ułatwiających działania oparte na synchronizacji w usłudze MIM.
 
--   Dodatki i rozszerzenia programu MIM 2016, łącznie ze zintegrowanym klientem logowania systemu Windows dla funkcji SSPR, zostały wdrożone na serwerze lub oddzielnym komputerze klienckim.
+-   Program MIM 2016 Add-ins &amp; rozszerzeń w tym systemu Windows SSPR zintegrowane logowania klienta zostały wdrożone na serwerze lub oddzielnym komputerze klienckim.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Przygotowanie programu MIM do pracy z uwierzytelnianiem wieloskładnikowym
 Skonfiguruj synchronizację programu MIM do obsługi resetowania haseł i odblokowywania kont. Aby uzyskać więcej informacji, zobacz [Instalowanie dodatków i rozszerzeń usługi FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Instalowanie funkcji SSPR usługi FIM](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Bramy uwierzytelniania SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) i [Przewodnik po laboratorium testowym funkcji SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
-W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory. W ramach tego procesu zostanie wygenerowany plik zawierający materiał uwierzytelniania, umożliwiający usłudze MFA kontaktowanie się z usługą Azure MFA.  Aby kontynuować, należy uzyskać subskrypcję Azure.
+W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory. Zostanie wygenerowany plik zawierający materiał uwierzytelniania, umożliwiający uwierzytelnianie wieloskładnikowe wymaga, aby mieć możliwość kontaktu z usługą Azure MFA.  Aby kontynuować, należy uzyskać subskrypcję Azure.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
 
@@ -85,7 +86,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 7.  W nowym oknie w lewym panelu w obszarze **Konfiguruj** kliknij pozycję **Ustawienia**.
 
-8.  W obszarze **alarm oszustwa**, usuń zaznaczenie pola wyboru ** Blokuj użytkownika, gdy zostaje zgłoszone oszustwo. W ten sposób można zapobiec zablokowaniu całej usługi.
+8.  W obszarze **alarm oszustwa**, usuń zaznaczenie pola wyboru ** Blokuj użytkownika, gdy zostaje zgłoszone oszustwo. Usunięcie zaznaczenia pola jest, aby zapobiec zablokowaniu całej usługi.
 
 9. W otwartym oknie **Azure Multi-Factor Authentication** kliknij pozycję **SDK** w obszarze **Pliki do pobrania** w menu po lewej stronie.
 
@@ -117,13 +118,13 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 9. W elemencie `<username>` wprowadź dowolną nazwę użytkownika.
 
-10. W elemencie `<DefaultCountryCode>` wprowadź swój domyślny kod kraju. Ten kod będzie przypisywany do numerów telefonów zarejestrowanych dla użytkowników bez kodu kraju. Jeśli użytkownik ma międzynarodowy kod kraju, musi on zostać uwzględniony w zarejestrowanym numerze telefonu.
+10. W elemencie `<DefaultCountryCode>` wprowadź swój domyślny kod kraju. W przypadkach, gdy numerów telefonów zarejestrowanych dla użytkowników bez kodu kraju użytkownicy będą uzyskiwać tego kodu. W przypadkach, gdy użytkownik ma międzynarodowy kod kraju musi on zostać uwzględniony w zarejestrowanym numerze telefonu.
 
 11. Zapisz plik MfaSettings.xml z taką samą nazwą w tej samej lokalizacji.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Konfigurowanie bramy telefonicznej lub bramy SMS haseł jednorazowych
 
-1.  Uruchom program Internet Explorer i przejdź do portalu MIM, uwierzytelniając się jako administrator programu MIM, a następnie kliknij przycisk **Przepływy pracy** na pasku nawigacyjnym po lewej stronie.
+1.  Uruchom program Internet Explorer i przejdź do portalu MIM, uwierzytelniając się jako administrator programu MIM, a następnie kliknij przycisk **przepływy pracy** na pasku nawigacyjnym po lewej stronie.
 
     ![Obraz nawigacji w portalu MIM](media/MIM-SSPR-workflow.jpg)
 
@@ -156,7 +157,7 @@ Istnieją dwa sposoby resetowania hasła i odblokowania konta przez użytkownika
 
 Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do domeny i połączonym za pośrednictwem sieci organizacji z usługą MIM, użytkownicy mogą odzyskać zapomniane hasło na ekranie logowania do komputera.  Poniższe kroki objaśniają ten proces:
 
-#### <a name="windows-desktop-login-integrated-password-reset"></a>Resetowanie hasła zintegrowane z logowaniem do komputera z systemem Windows
+#### <a name="windows-desktop-login-integrated-password-reset"></a>Resetowanie hasła zintegrowane logowania pulpitu systemu Windows
 
 1.  Jeśli użytkownik wprowadzi nieprawidłowe hasło kilka razy na ekranie logowania, musi kliknąć link **Problemy z logowaniem?** .
 

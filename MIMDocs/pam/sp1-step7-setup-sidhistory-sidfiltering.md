@@ -1,7 +1,7 @@
 ---
-title: "Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID"
-description: "To jest krok 7 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Ten krok obejmuje konfigurowanie historii/filtrowania identyfikatorów SID."
-keywords: 
+title: Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
+description: To jest krok 7 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Ten krok obejmuje konfigurowanie historii/filtrowania identyfikatorów SID.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: e3d8578e9d58ccc2f3dc3bb4ff437d124bf15291
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: d2512690ce648767157a7417e5b41095c970b8eb
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289112"
 ---
 # <a name="step-7-set-up-sid-historysid-filtering"></a>Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
 
->[!div class="step-by-step"]
-[« Krok 6](sp1-step6-setup-pam-trust.md)
-[Krok 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Krok 6](sp1-step6-setup-pam-trust.md)
+> [Krok 8 »](sp1-step8-pam-deployment-verification.md)
 
 **Ten krok nie jest wymagany dla środowiska PRIVOnly**. Zaloguj się na serwerze PAMServer przy użyciu konta MIMAdmin.
 
@@ -38,6 +39,6 @@ Filtrowanie identyfikatorów SID: <br/></br>
 Historia SID: </br></br>
 „Włączanie historii SID dla tego zaufania” lub „Historia identyfikatorów SID jest już włączona dla tego zaufania”.
 
->[!div class="step-by-step"]
-[« Krok 6](sp1-step6-setup-pam-trust.md)
-[Krok 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Krok 6](sp1-step6-setup-pam-trust.md)
+> [Krok 8 »](sp1-step8-pam-deployment-verification.md)

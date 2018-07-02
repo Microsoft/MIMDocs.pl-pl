@@ -1,7 +1,7 @@
 ---
-title: "Konfigurowanie programu MIM 2016 pod kątem usługi Privileged Access Management | Dokumentacja firmy Microsoft"
-description: "Przewodnik instalacji programu MIM i konfigurowania go pod kątem usługi Privileged Access Management."
-keywords: 
+title: Konfigurowanie programu MIM 2016 pod kątem usługi Privileged Access Management | Dokumentacja firmy Microsoft
+description: Przewodnik instalacji programu MIM i konfigurowania go pod kątem usługi Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 79de8ef08b49a41638a09e829efbd8c17301004b
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: 5180d487dcaabcf024ba76cb86c9d849bdf1adc1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289554"
 ---
 # <a name="configure-the-mim-environment-for-privileged-access-management"></a>Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management
 
@@ -38,5 +39,5 @@ Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć �
 
 7.  Zaprezentowanie żądania, odbierania i używania uprzywilejowanego dostępu z podwyższonym poziomem uprawnień do chronionych zasobów.
 
->[!div class="step-by-step"]
-[Początek »](step-1-prepare-corp-domain.md)
+> [!div class="step-by-step"]
+> [Początek »](step-1-prepare-corp-domain.md)

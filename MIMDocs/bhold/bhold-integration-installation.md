@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 86ab45d1deaac2a7d697bc9860764e598252a0ef
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 08a0aaa60891727482e80c8998cc075eacf042cf
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290173"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>BHOLD FIM/MIM integracji instalacji
 
@@ -32,8 +33,8 @@ Poniżej przedstawiono składniki oprogramowania, które musi znajdować się na
 
 Ponadto moduły BHOLD Core i dostępu do zarządzania łącznika musi już zostać wdrożony na serwerze w środowisku, a FIM musi mieć skonfigurowaną co najmniej jeden agent zarządzania BHOLD. Informacje o instalowaniu i konfigurowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Aby uzyskać informacje o instalowaniu i używaniu modułu dostępu do zarządzania łącznika, zobacz [instalacji łącznika zarządzania dostępu](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) i [Przewodnik po laboratorium testowym: BHOLD dostępu administracyjnego łącznika](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
->[!IMPORTANT]
-Nazwa bazy danych usługi FIM musi być usługę programu FIM. BHOLD FIM integracji instalacja nie powiedzie się, jeśli nie zainstalowano usługi FIM z domyślną nazwą bazy danych usługi FIM.
+> [!IMPORTANT]
+> Nazwa bazy danych usługi FIM musi być usługę programu FIM. BHOLD FIM integracji instalacja nie powiedzie się, jeśli nie zainstalowano usługi FIM z domyślną nazwą bazy danych usługi FIM.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -73,7 +74,7 @@ Ponadto należy przygotować się do zawierają informacje, które Kreator BHOLD
 
 Aby zainstalować moduł BHOLD FIM integracji, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł BHOLD FIM integracji na:
 
-- BholdFIMIntegration*\<wersji\>*\_Release.msi
+- BholdFIMIntegration<em>\<wersji\></em>\_Release.msi
 
 Zastąp *\<wersji\>* z numerem wersji instalowanej wersji BHOLD FIM integracji.
 
@@ -192,20 +193,20 @@ Jeśli nie określono osobą zatwierdzającą dla żądania samoobsługi roli za
 19. Na **zmodyfikować jednostki organizacyjnej atrybuty/root** strony w **osoba zatwierdzająca**, wpisz nazwę domeny i nazwę użytkownika, który będzie zatwierdzać żądania przypisania roli, w formacie  *\<domeny\>*\\*\<użytkownika\>*, gdzie *\<domeny\>* jest Nazwa domeny NetBIOS (skrót) i *\<użytkownika\>* jest nazwą logowania użytkownika.
 20. Kliknij przycisk **OK**.
 
->[!IMPORTANT]
-Domena i nazwa użytkownika musi być zgodna domyślny alias użytkownika w bazie danych BHOLD Core.
+> [!IMPORTANT]
+> Domena i nazwa użytkownika musi być zgodna domyślny alias użytkownika w bazie danych BHOLD Core.
 
 Jako alternatywę do określania osobą zatwierdzającą dla jednostek organizacyjnych można określić osobą zatwierdzającą dla proponowanych ról w bazie danych BHOLD Core. W tym celu należy utworzyć atrybutu approver1, dodaj go do atrybutu poziomego złożenia skojarzone z typem obiektu roli, a następnie zmodyfikuj każdej roli proponowanych określone osoby zatwierdzającej.
 
 Aby zapewnić lepsze zabezpieczenia przepływu pracy, oprócz osób zatwierdzających, należy wyznaczyć tryby dodatkowego zatwierdzenia i użytkowników przez tworzenie i wypełnianie następujące atrybuty OrgUnits i ról:
 
-- Schody ruchome*\<n\>*
+- Schody ruchome<em>\<n\></em>
 
-- właściciel*\<n\>*
+- właściciel<em>\<n\></em>
 
-- securityOfficer*\<n\>*
+- securityOfficer<em>\<n\></em>
 
-- powiadomienie*\<n\>*
+- powiadomienie<em>\<n\></em>
 
 gdzie *\<n\>* wskazuje opcjonalne liczbowego sufiksu zapewnienie wiele atrybutów tego samego typu.
 
@@ -213,8 +214,8 @@ gdzie *\<n\>* wskazuje opcjonalne liczbowego sufiksu zapewnienie wiele atrybutó
 
 BHOLD FIM integracji instalacji tworzy zestawy, definicje przepływów pracy i reguły zasad zarządzania (MPR) z usługą FIM. Jeśli były dostosowane wdrożenia FIM można zmienić grupy Administratorzy i grupy użytkowników, którzy mogą wysyłać żądania, należy upewnić się, czy MPR odwołują się do zestawów użytkownika.
 
->[!NOTE]
-Zanim użytkownicy portalu FIM można użyć funkcji samoobsługi udostępniane przez BHOLD, należy zsynchronizować konta użytkowników do BHOLD bazy danych usługi synchronizacji programu FIM. W szczególności musi istnieć rekord użytkownika w bazie danych BHOLD rdzeni i w bazie danych usługi FIM dla każdego użytkownika, który można wysłać żądanie samoobsługi lub jest określony jako osoba zatwierdzająca lub schody ruchome dla żądań samoobsługi.
+> [!NOTE]
+> Zanim użytkownicy portalu FIM można użyć funkcji samoobsługi udostępniane przez BHOLD, należy zsynchronizować konta użytkowników do BHOLD bazy danych usługi synchronizacji programu FIM. W szczególności musi istnieć rekord użytkownika w bazie danych BHOLD rdzeni i w bazie danych usługi FIM dla każdego użytkownika, który można wysłać żądanie samoobsługi lub jest określony jako osoba zatwierdzająca lub schody ruchome dla żądań samoobsługi.
 
 ## <a name="next-steps"></a>Następne kroki
 

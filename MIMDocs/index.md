@@ -3,11 +3,12 @@ layout: LandingPage
 ms.topic: landing-page
 title: Dokumentacja programu Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: Dowiedz się, jak korzystać z programu Microsoft Identity Manager.
-ms.openlocfilehash: 99fdb07edc7bd8996e620f27de9f5906aa6a15ed
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: 46aaf8fffc6cf4629c2d2768979ba6a5a68c2f54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288891"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Dokumentacja programu Microsoft Identity Manager
 
@@ -71,8 +72,8 @@ Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania 
 
 ---
 <br>
->[!Warning]
-Wsparcie podstawowe dla programu Forefront Identity Manager (FIM) zakończyło się 10.10.2017 r. [Uaktualnij](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) do programu Microsoft Identity Manager 2016. Więcej informacji: </br>  — Informacje o cyklu życia programu FIM znajdują się [tutaj](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) </br> — Aby uzyskać informacje dotyczące publicznych wersji produktów do zarządzania tożsamościami, zapoznaj się z wpisem zatytułowanym [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Oprogramowanie do zarządzania tożsamościami firmy Microsoft: wersje kompilacji wydań publicznych)
+&gt;[!Warning]
+Wsparcie podstawowe dla programu Forefront Identity Manager (FIM) zakończyło się 10.10.2017 r. <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">Uaktualnij</a> do programu Microsoft Identity Manager 2016. Więcej informacji: </br>  — Informacje o cyklu życia programu FIM znajdują się <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">tutaj</a> </br> — Aby uzyskać informacje dotyczące publicznych wersji produktów do zarządzania tożsamościami, zapoznaj się z wpisem zatytułowanym <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions</a> (Oprogramowanie do zarządzania tożsamościami firmy Microsoft: wersje kompilacji wydań publicznych)
 
 <h2>Tematy pomocy</h2>
 <ul class="panelContent cardsFTitle">

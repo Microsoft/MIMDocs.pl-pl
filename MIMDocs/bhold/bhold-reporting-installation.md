@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 2b8e6935eda6c679b00b5b5b17752a675a257de9
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: deb43aeb9133d7eed958730b0eb2cbd22fe3a0ef
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289309"
 ---
 # <a name="bhold-reporting-installation"></a>Zgłoszenie instalacji BHOLD
 
@@ -24,8 +25,8 @@ Moduł raportowania BHOLD daje możliwość generowania raportów na temat ról 
 
 Przed zainstalowaniem modułu BHOLD raportowania, należy zainstalować moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł raportowania BHOLD. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
->[!IMPORTANT]
-Jeśli instalujesz BHOLD raportowania i zaświadczania BHOLD należy zainstalować raportowania BHOLD przed zainstalowaniem BHOLD zaświadczania.
+> [!IMPORTANT]
+> Jeśli instalujesz BHOLD raportowania i zaświadczania BHOLD należy zainstalować raportowania BHOLD przed zainstalowaniem BHOLD zaświadczania.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -42,7 +43,7 @@ Przed rozpoczęciem zainstalować moduł raportowania BHOLD, musisz być przygot
 
 Aby zainstalować moduł raportowania BHOLD, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, na którym chcesz zainstalować moduł raportowania BHOLD na:
 
-- BholdReporting*\<wersji\>*\_Release.msi
+- BholdReporting<em>\<wersji\></em>\_Release.msi
 
 Zastąp *\<wersji\>* z numerem wersji BHOLD raportowania wersji, który jest instalowany.
 

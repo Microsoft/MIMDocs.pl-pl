@@ -1,7 +1,7 @@
 ---
-title: "Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016 | Microsoft Docs"
-description: 
-keywords: 
+title: Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016 | Microsoft Docs
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,20 +10,21 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
-ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
+ms.assetid: ''
+ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290122"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
 
 W tym temacie opisano najlepsze rozwiązania dotyczące wdrażania i obsługi programu Microsoft Identity Manager 2016 (MIM)
 
 ## <a name="sql-setup"></a>Konfiguracja usługi SQL
->[!NOTE]
-Poniższe zalecenia dotyczące konfigurowania serwera z uruchomioną usługą SQL zakładają wystąpienie usługi SQL dedykowane usłudze FIMService i wystąpienie usługi SQL dedykowane bazie danych usługi FIMSynchronizationService. Jeśli usługa FIMService jest uruchomiona w środowisku skonsolidowanym, konieczne będzie wprowadzenie dostosowań odpowiednich dla danej konfiguracji.
+> [!NOTE]
+> Poniższe zalecenia dotyczące konfigurowania serwera z uruchomioną usługą SQL zakładają wystąpienie usługi SQL dedykowane usłudze FIMService i wystąpienie usługi SQL dedykowane bazie danych usługi FIMSynchronizationService. Jeśli usługa FIMService jest uruchomiona w środowisku skonsolidowanym, konieczne będzie wprowadzenie dostosowań odpowiednich dla danej konfiguracji.
 
 Konfiguracja serwera usługi SQL (Structured Query Language) ma kluczowe znaczenie dla optymalnej wydajności systemu. Osiągnięcie optymalnej wydajności programu MIM w dużych wdrożeniach zależy od stosowania najlepszych rozwiązań dla serwera z uruchomioną usługą SQL. Aby uzyskać więcej informacji, zobacz następujące tematy dotyczące najlepszych rozwiązań dla usługi SQL:
 
@@ -71,40 +72,40 @@ Ważne jest zrozumienie wymagań dyskowych modelu odzyskiwania. Tryb odzyskiwani
 
 W zależności od ilości pamięci dostępnej na serwerze SQL oraz tego, czy serwer SQL jest udostępniany innym usługom (tj. usłudze MIM 2016 Service i usłudze MIM 2016 Synchronization Service), można ograniczyć użycie pamięci serwera SQL. Można to zrobić, wykonując następujące kroki.
 
-1.  Uruchom program SQL Server Enterprise Manager.
+1. Uruchom program SQL Server Enterprise Manager.
 
-2.  Wybierz opcję Nowe zapytanie.
+2. Wybierz opcję Nowe zapytanie.
 
-3.  Uruchom następujące zapytanie:
+3. Uruchom następujące zapytanie:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  W tym przykładzie spowoduje zmianę konfiguracji programu SQL server do użycia w nie więcej niż 12 gigabajtów (GB) pamięci.
+   W tym przykładzie spowoduje zmianę konfiguracji programu SQL server do użycia w nie więcej niż 12 gigabajtów (GB) pamięci.
 
-4.  Zweryfikuj ustawienie przy użyciu następującego zapytania:
+4. Zweryfikuj ustawienie przy użyciu następującego zapytania:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### <a name="backup-and-recovery-configuration"></a>Konfiguracja tworzenia kopii zapasowych i odzyskiwania
 
@@ -169,11 +170,11 @@ Zaleca się wyłączenie indeksowania programu Microsoft Office SharePoint®. Ni
 
 Ta sekcja zawiera szereg czynności, aby zwiększyć wydajność obciążenia początkowe dane z zewnętrznego systemu do programu MIM. Należy zrozumieć, że niektóre z tych kroków tylko są wykonywane podczas początkowej wypełniania systemu. Powinny one resetowane, po zakończeniu obciążenia. Jest to jednorazowa operacja, a nie ciągła synchronizacja.
 
->[!NOTE]
-Aby uzyskać więcej informacji na temat synchronizowania użytkowników między usługą MIM i usług domenowych w usłudze Active Directory (AD DS), zobacz [jak synchronizowanie użytkowników z usługi Active Directory do portalu FIM](http://go.microsoft.com/fwlink/?LinkID=188277) w dokumentacji programu FIM.
-
->[!IMPORTANT]
-Upewnij się, że zastosowane zostały najlepsze rozwiązania opisane w sekcji „Konfiguracja usługi SQL” w niniejszym przewodniku. 
+> [!NOTE]
+> Aby uzyskać więcej informacji na temat synchronizowania użytkowników między usługą MIM i usług domenowych w usłudze Active Directory (AD DS), zobacz [jak synchronizowanie użytkowników z usługi Active Directory do portalu FIM](http://go.microsoft.com/fwlink/?LinkID=188277) w dokumentacji programu FIM.
+> 
+> [!IMPORTANT]
+> Upewnij się, że zastosowane zostały najlepsze rozwiązania opisane w sekcji „Konfiguracja usługi SQL” w niniejszym przewodniku. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Krok 1. Skonfigurowanie serwera SQL na potrzeby początkowego ładowania danych
 Obciążenie wstępne danych może być procesem długie. Planując początkowo załadować dużą ilość danych, można skrócić czas potrzebny do wypełniania bazy danych tymczasowo wyłączając wyszukiwanie pełnotekstowe i włączyć go ponownie po zakończeniu eksportu na agenta zarządzania programu MIM 2016 (FIM MA).
@@ -191,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
+> [!IMPORTANT]
+> Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Krok 2. Zastosowanie minimalnej niezbędnej konfiguracji programu MIM podczas procesu ładowania
 
@@ -288,8 +289,8 @@ Konta usług nie powinny być członkiem lokalnej grupy administratorów.
 
 Konto usługi FIM Synchronization Service nie powinno być członkiem grupy zabezpieczeń używanej do kontrolowania dostępu do usługi FIM Synchronization Service (grupy rozpoczynające się od FIMSync, na przykład FIMSyncAdmins itd.).
 
->[!IMPORTANT]
- Jeśli wybrano opcję w celu używania tego samego konta dla obu kont usług, a usługi FIM Service i FIM Synchronization Service są oddzielone, nie można włączyć ustawienia „Odmowa dostępu do tego komputera z sieci” na serwerze usługi synchronizacji mms. Odmowa dostępu uniemożliwi usłudze FIM Service kontaktowanie się z usługą FIM Synchronization Service w celu zmiany konfiguracji i zarządzania hasłami.
+> [!IMPORTANT]
+>  Jeśli wybrano opcję w celu używania tego samego konta dla obu kont usług, a usługi FIM Service i FIM Synchronization Service są oddzielone, nie można włączyć ustawienia „Odmowa dostępu do tego komputera z sieci” na serwerze usługi synchronizacji mms. Odmowa dostępu uniemożliwi usłudze FIM Service kontaktowanie się z usługą FIM Synchronization Service w celu zmiany konfiguracji i zarządzania hasłami.
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Resetowanie haseł wdrożone na komputerach typu kiosk powinno ustawiać zabezpieczenia lokalne w celu czyszczenia pliku stronicowania pamięci wirtualnej
 
@@ -315,7 +316,7 @@ Aby zaimplementować protokół SSL:
 
 7.  Zapisz plik w dowolnej lokalizacji. Musisz mieć dostęp do tej lokalizacji w kolejnych krokach.
 
-8.  Przejdź do https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
+8.  Przejdź do pliku https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
 
 9.  Kliknij opcję Żądaj nowego certyfikatu.
 
@@ -357,9 +358,9 @@ Aby zaimplementować protokół SSL:
 
 28. Kliknij pozycję Operacje, a następnie kliknij opcję Mapowania dostępu alternatywnego.
 
-29. Kliknij pozycję http://nazwa_serwera.
+29. Kliknij przycisk http://servername.
 
-30. Zmień ciąg http://nazwa_serwera na https://nazwa_serwera, a następnie kliknij przycisk OK.
+30. Zmień http://servername do https://servername, a następnie kliknij przycisk OK.
 
 31. Kliknij przycisk Start, kliknij pozycję Uruchom, wpisz polecenie iisreset, a następnie kliknij przycisk OK.
 
@@ -384,7 +385,7 @@ Domyślnie program MIM 2016 czyści obiekty systemowe, które utraciły ważnoś
 
 Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zestawami.
 
--  Reguły MPR żądania (RMPR)
+- Reguły MPR żądania (RMPR)
 
   - Służą do definiowania zasad kontroli dostępu (uwierzytelniania, autoryzacji i akcji) dla operacji tworzenia, odczytu, aktualizacji lub usuwania (CRUD) w odniesieniu do zasobów.
   - Stosowane podczas operacji CRUD jest wystawiony na podstawie zasobu docelowego w programie MIM.
@@ -432,8 +433,8 @@ W programie MIM uprawnienia są zdefiniowane jako pozytywne potwierdzenie. Ponie
 
 Niestandardowe uprawnienia należy zdefiniować, używając reguł MPR przejścia między zestawami (TMPR) zamiast reguł RMPR. Reguły TMPR udostępniają model oparty na stanach w celu przypisywania lub usuwania uprawnień na podstawie członkostwa w określonych zestawach przejść (lub rolach) i towarzyszących działań przepływu pracy. Reguły TMPR powinny być zawsze definiowane w parach: jedna dla zasobów przechodzących do i jedna dla zasobów wychodzących z zestawu. Ponadto każda reguła MPR przejścia powinna zawierać oddzielne przepływy pracy dla działań aprowizacji i cofania aprowizacji.
 
->[!NOTE]
-Każdy przepływ pracy cofania aprowizacji powinien zapewniać, że atrybut Uruchom przy aktualizacji zasad ma wartość true.
+> [!NOTE]
+> Każdy przepływ pracy cofania aprowizacji powinien zapewniać, że atrybut Uruchom przy aktualizacji zasad ma wartość true.
 
 #### <a name="enable-the-set-transition-in-mpr-last"></a>Regułę MPR przejścia między zestawami należy włączyć jako ostatnią
 
