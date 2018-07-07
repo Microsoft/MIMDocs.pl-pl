@@ -2,27 +2,25 @@
 title: Użycie usługi Azure MFA do aktywacji usługi PAM | Dokumentacja firmy Microsoft
 description: Konfigurowanie usługi Azure MFA jako drugiej warstwy zabezpieczeń używanej, gdy użytkownicy aktywują role w ramach usługi Privileged Access Management.
 keywords: ''
-author: barclayn
-ms.author: fimguy
-manager: mbaldwin
-ms.date: 11/14/2017
+author: billmath
+ms.author: billmath
+ms.reviewer: fimguy
+manager: mtillman
+ms.date: 07/06/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: ad47de279dd18239ff55d89c1b717ccafe16374f
+ms.sourcegitcommit: 0b6cb02d1d6e0d821b00c17090622ba354252188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289833"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895507"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
-> Z powodu ogłoszenia zaniechania z Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane dla istniejących klientów do wycofania dnia 14 listopada 2018. Nowych klientów oraz klientów bieżącego nie będzie można już pobrać zestaw SDK za pośrednictwem klasycznego portalu Azure. Możesz pobrać musi dotrzeć do platformy Azure techniczną w celu odbierania wygenerowany pakiet poświadczenia usługi MFA. <br> Zespół deweloperów Microsoft pracuje nad planowania zmiany MFA dzięki integracji z zestawem SDK serwera usługi MFA. W wczesne 2018 to będą uwzględniane w nadchodzących poprawki.
-
+> Ze względu na ogłoszenie wycofywania z usługi Azure Multi-Factor Authentication uwierzytelnianie Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów do dnia wycofania 14 listopada 2018 r. Nowych klientów i obecni klienci nie będzie można już pobrać zestaw SDK, za pośrednictwem klasycznego portalu Azure. Możesz pobrać będzie konieczne skontaktowanie się z obsługą klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA. <br> Zespół projektowy Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK serwera MFA.  Będzie uwzględniane w nadchodzącej poprawce zobacz [historię wersji](/reference/version-history.md) zapowiedzi. 
 
 
 Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania użytkowników, którzy zażądali aktywowania roli. Możliwości implementowane przez działanie autoryzacji funkcji PAM to:
@@ -32,7 +30,7 @@ Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania uż
 
 Jeśli żadne sprawdzanie nie jest włączone, rola będzie automatycznie aktywowana dla użytkowników kandydujących.
 
-Microsoft Azure Multi-Factor Authentication (MFA) jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw. W przypadku scenariusza funkcji PAM usługi Azure MFA zapewnia dodatkowy mechanizm uwierzytelniania. Usługa Azure MFA może służyć do autoryzacji, niezależnie od tego, jak użytkownik uwierzytelniony w domenie PRIV systemu Windows.
+Microsoft Azure Multi-Factor Authentication (MFA) jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw. W przypadku scenariusza funkcji PAM usługi Azure MFA zapewnia dodatkowy mechanizm uwierzytelniania. Usługa Azure MFA może służyć do autoryzacji, niezależnie od tego, w jaki sposób użytkownik uwierzytelniony do domeny Windows PRIV.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -45,7 +43,7 @@ Aby można było używać usługi Azure MFA z programem MIM, potrzebne są:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Tworzenie dostawcy usługi Azure MFA
 
-W tej sekcji możesz skonfigurowany dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory.  Jeśli korzystasz już z usługi Azure MFA (autonomicznej lub skonfigurowanej za pomocą usługi Azure Active Directory Premium), przejdź do następnej sekcji.
+W tej sekcji służy do konfigurowania dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory.  Jeśli korzystasz już z usługi Azure MFA (autonomicznej lub skonfigurowanej za pomocą usługi Azure Active Directory Premium), przejdź do następnej sekcji.
 
 1.  Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
@@ -84,9 +82,9 @@ Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dl
 
 2.  Utwórz nowy folder w katalogu, w którym została zainstalowana usługa MIM, np. ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Korzystając z Eksploratora Windows, przejdź do ```pf\certs``` folderu pliku ZIP pobranego w poprzedniej sekcji. Skopiuj plik ```cert\_key.p12``` do nowego katalogu.
+3.  Korzystając z Eksploratora Windows przejdź do ```pf\certs``` folderu pliku ZIP pobranego w poprzedniej sekcji. Skopiuj plik ```cert\_key.p12``` do nowego katalogu.
 
-4.  Korzystając z Eksploratora Windows, przejdź do ```pf``` folderu ZIP, a następnie otwórz plik ```pf\_auth.cs``` w edytorze tekstu, takim jak program Wordpad.
+4.  Korzystając z Eksploratora Windows przejdź do ```pf``` folderu ZIP, a następnie otwórz plik ```pf\_auth.cs``` w edytorze tekstów, takim jak program Wordpad.
 
 5. Znajdź trzy następujące parametry: ```LICENSE\_KEY```, ```GROUP\_KEY```, ```CERT\_PASSWORD```.
 
@@ -155,5 +153,5 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Co to jest uwierzytelnianie wieloskładnikowe Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Utwórz bezpłatne konto platformy Azure dzisiaj](https://azure.microsoft.com/free/)
+- [Co to jest uwierzytelnianie wieloskładnikowe systemu Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Utwórz bezpłatne konto platformy Azure już dzisiaj](https://azure.microsoft.com/free/)
