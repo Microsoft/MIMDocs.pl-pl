@@ -204,16 +204,16 @@ Reguły przepływu:
 
 | **Tylko początkowego przepływu** | **Używany jako Test istnienia** | **Przepływ (atrybut docelowy ⇒ wartość FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName] (javascript:void(0);)                        |
-|                       |                           | [Lewej (identyfikator, 20) ⇒accountName] (javascript:void(0);)                        |
-|                       |                           | [id⇒uid] (javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType] (javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName] (javascript:void(0);)                            |
-|                       |                           | [surname⇒sn] (javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName] (javascript:void(0);)            |
-|                       |                           | [id⇒cn] (javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail] (javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone] (javascript:void(0);)                        |
+|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
+|                       |                           | [Lewej (identyfikator, 20) ⇒accountName](javascript:void(0);)                        |
+|                       |                           | [id⇒uid](javascript:void(0);)                                         |
+|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
+|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
+|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
+|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
+|                       |                           | [id⇒cn](javascript:void(0);)                                          |
+|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
+|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Reguła synchronizacji: Tworzenie konta użytkownika gościa do usługi Active Directory 
 
@@ -229,14 +229,14 @@ Reguły przepływu:
 
 | **Tylko początkowego przepływu** | **Używany jako Test istnienia** | **Przepływ (atrybut docelowy ⇒ wartość FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [accountName⇒sAMAccountName] (javascript:void(0);)                     |
-|                       |                           | [givenName⇒givenName] (javascript:void(0);)                            |
-|                       |                           | [mail⇒mail] (javascript:void(0);)                                      |
-|                       |                           | [sn⇒sn] (javascript:void(0);)                                          |
-|                       |                           | [userPrincipalName⇒userPrincipalName] (javascript:void(0);)            |
-| **Y**                 |                           | ["CN ="+ uid +", OU = B2BGuest, DC = scontoso, DC = com" ⇒dn] (javascript:void(0);) |
-| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd] (javascript:void(0);)  |
-| **Y**                 |                           | [262656⇒userAccountControl] (javascript:void(0);)                      |
+|                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
+|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
+|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
+|                       |                           | [sn⇒sn](javascript:void(0);)                                          |
+|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
+| **Y**                 |                           | ["CN ="+ uid +", OU = B2BGuest, DC = scontoso, DC = com" ⇒dn](javascript:void(0);) |
+| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
+| **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
 ### <a name="synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Reguła synchronizacji: Import B2B gościa użytkownika obiekty SID umożliwiające logowanie do programu MIM 
 
@@ -278,9 +278,9 @@ Ponadto obok dodany ręcznie do Zarządzaj użytkownikami i grupami. Opcje, aby 
 
 | **Tylko początkowego przepływu** | **Używany jako Test istnienia** | **Przepływ (atrybut docelowy ⇒ wartość FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName] (javascript:void(0);)                     |
-|                       |                           | ["CONTOSO" ⇒domain] (javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid] (javascript:void(0);)                                      |
+|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
+|                       |                           | ["CONTOSO" ⇒domain](javascript:void(0);)                            |
+|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
 Po skonfigurowania wszystkich
 
