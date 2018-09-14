@@ -12,25 +12,25 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: a64ee79897ce73242d0f8510842fdcb6758fab2c
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289537"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538578"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
 
 > [!div class="step-by-step"]
-> [«Programu SQL Server 2016](prepare-server-sql2016.md)
-> [Exchange Server»](prepare-server-exchange.md)
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [program Exchange Server»](prepare-server-exchange.md)
 > 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **corpdc**
+> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi MIM — **corpservice**
-> - Nazwa serwera synchronizacji MIM — **corpsync**
+> - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa programu SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
@@ -42,7 +42,7 @@ ms.locfileid: "36289537"
 
 Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zakończeniu instalacji serwer zostanie uruchomiony ponownie.
 
-1.  Uruchom **PowerShell** jako konto domeny z administratora lokalnego na **corpservice** i **sysadmin** na serwerze bazy danych SQL, będziemy używać limit **contoso\ miminstall**.
+1.  Uruchom **PowerShell** jako konto domeny z lokalnym administratorem **corpservice** i **sysadmin** na serwerze bazy danych SQL, firma Microsoft użyje się **contoso\ miminstall**.
 
     -   Przejdź do katalogu, do którego rozpakowano program SharePoint.
 
@@ -52,7 +52,7 @@ Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zako�
         .\prerequisiteinstaller.exe
         ```
 
-2.  Po **SharePoint** wymagania wstępne są zainstalowane, należy zainstalować **programu SharePoint 2016** , wpisując następujące polecenie:
+2.  Po **SharePoint** wstępnie wymagane składniki są zainstalowane, należy zainstalować **programu SharePoint 2016** , wpisując następujące polecenie:
 
     ```
     .\setup.exe
@@ -68,16 +68,16 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 1. Na karcie **Połącz z farmą serwerów** zmień ustawienia, aby utworzyć nową farmę serwerów.
 
-2. Określ ten serwer jako serwer bazy danych, takich jak **corpsql** bazy danych konfiguracji i *Contoso\SharePoint* jako konta dostępu do bazy danych programu SharePoint do użycia.
+2. Określ ten serwer jako serwer bazy danych, takich jak **corpsql** bazy danych konfiguracji i *Contoso\SharePoint* jako konta dostępu do bazy danych dla programu SharePoint do użycia.
 3. Utwórz hasło zabezpieczeń farmy.
 
-4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) typu **frontonu**
+4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) typu **frontonu**
 
-5. Po zakończeniu działania Kreatora konfiguracji zadania konfiguracji 10, 10, kliknij przycisk Zakończ sieci web zostanie otwarta w przeglądarce.
+5. Po zakończeniu działania Kreatora konfiguracji zadania konfiguracji 10 10, kliknij przycisk Zakończ sieci web zostanie otwarta przeglądarka...
 
-6. Jeśli zostanie wyświetlony monit podręcznego programu Internet Explorer, Uwierzytelnij się jako *Contoso\miminstall* (lub równoważne administratora), aby kontynuować.
+6. Jeśli zostanie wyświetlony monit wyskakującym przeglądarki Internet Explorer, Uwierzytelnij się jako *Contoso\miminstall* (lub konta administratora równoważne) aby kontynuować.
 
-7. W Kreatorze sieci web (w aplikacji sieci web) kliknij **Anuluj/Skip**.
+7. W Kreatorze sieci web (w ramach aplikacji sieci web) kliknij **Anuluj/Skip**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Przygotowywanie programu SharePoint do hostowania portalu programu MIM
@@ -85,7 +85,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 > [!NOTE]
 > Początkowo protokół SSL nie zostanie skonfigurowany. Należy pamiętać o skonfigurowaniu protokołu SSL lub równoważnego przed włączeniem dostępu do tego portalu.
 
-1. Uruchom **Powłoka zarządzania programu SharePoint 2016** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikacji sieci Web programu SharePoint 2016**.
+1. Uruchom **powłoki zarządzania programu SharePoint 2016** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikacji sieci Web programu SharePoint 2016**.
 
     ```
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
@@ -94,9 +94,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     ```
 
     > [!NOTE]
-    > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Zachowaj **Powłoka zarządzania programu SharePoint 2016** okna otwarte dla odwołania później.
+    > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Zachowaj **powłoki zarządzania programu SharePoint 2016** otwartego z odwołaniem w dalszej części okna.
 
-2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **zbioru witryn programu SharePoint** skojarzoną z daną aplikacją sieci web.
+2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **zbioru witryn programu SharePoint** skojarzone z tą aplikacją sieci web.
 
    ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
@@ -107,9 +107,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
    ```
 
    > [!NOTE]
-   > Sprawdź, czy wynik *CompatibilityLevel* zmiennej wynosi "15". Jeśli wynik jest inne niż "15", następnie kolekcja witryn nie utworzono wersji poprawne środowisko; Usuń kolekcję witryn i utwórz ją ponownie.
+   > Upewnij się, że wynik *CompatibilityLevel* zmiennej wynosi "15". Jeśli wynik jest równa "15", następnie zbioru witryn nie utworzono wersji środowiska poprawne; Usuń kolekcję witryn i utwórz ją ponownie.
 
-3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint "Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)" za pomocą programu PowerShell następujące polecenia w  **Powłoka zarządzania programu SharePoint 2016**:
+3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint "Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)", uruchamiając następujące polecenie programu PowerShell polecenia w  **Powłokę zarządzania programu SharePoint 2016**:
 
    ```
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -131,5 +131,5 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 7. Otwórz program **Narzędzia administracyjne**, przejdź do karty **Usługi**, odszukaj usługę administracji programu SharePoint i uruchom ją, jeśli nie jest jeszcze uruchomiona.
 
 > [!div class="step-by-step"]  
-> [«Programu SQL Server 2016](prepare-server-sql2016.md)
-> [Exchange Server»](prepare-server-exchange.md)
+> [«SQL Server 2016](prepare-server-sql2016.md)
+> [program Exchange Server»](prepare-server-exchange.md)
