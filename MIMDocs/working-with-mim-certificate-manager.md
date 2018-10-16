@@ -7,21 +7,21 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bf655d451e86261ffd3043117a56f4daccb4b460
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 304c030bc08be222a147373acbda8ba45e8f8cb5
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289877"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333946"
 ---
-# <a name="mim-certificate-manager-windows-store-application-deployment"></a>Wdrażanie aplikacji ze Sklepu Windows w Menedżerze certyfikatów programu MIM
+# <a name="mim-certificate-manager-windows-store-application-deployment"></a>Windows Menedżer certyfikatów programu MIM przechowywania wdrożenia aplikacji
 
-Po utworzeniu programu MIM 2016 i Menedżera certyfikatów do pracy można wdrożyć aplikację Sklepu Windows w Menedżerze certyfikatów programu MIM. Aplikację ze sklepu windows umożliwia użytkownikom zarządzanie ich fizycznymi kartami inteligentnymi, wirtualnymi kartami inteligentnymi i certyfikatami oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
+Po skonfigurowaniu i uruchomieniu za mają programu MIM 2016 i Menedżera certyfikatów można wdrożyć aplikację ze Sklepu Windows Menedżer certyfikatów programu MIM. Aplikacji magazynu systemu windows zezwala użytkownikom na zarządzanie ich fizycznymi kartami inteligentnymi wirtualne karty inteligentne i certyfikaty oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
 
 1. Utworzenie szablonu certyfikatu.
 
@@ -35,7 +35,7 @@ Po utworzeniu programu MIM 2016 i Menedżera certyfikatów do pracy można wdro�
 
 Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w normalny sposób. Jednak w tym przypadku musisz upewnić się, że szablon certyfikatu jest w wersji 3 lub nowszej.
 
-1. Zaloguj się do serwera z usługami AD CS (serwera certyfikatów).
+1. Zaloguj się do serwera z uruchomionymi usługami AD CS (serwera certyfikatów).
 
 2. Otwórz program MMC.
 
@@ -47,10 +47,10 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 6. Kliknij prawym przyciskiem myszy szablon **Logowanie karty inteligentnej**, a następnie kliknij polecenie **Duplikuj szablon**.
 
-7. Na karcie zgodność w obszarze urząd certyfikacji wybierz systemu Windows Server 2008. Wybierz pozycję Windows 8.1 / Windows Server 2012 R2 w obszarze odbiorca certyfikatu. Wersja szablonu wersja jest ustawiana podczas pierwszego tworzenia i zapisywania szablonu certyfikatu. Jeśli nie utworzono szablonu certyfikatu w ten sposób istnieje sposób zmodyfikować go do prawidłowej wersji.
+7. Na karcie zgodność w obszarze urząd certyfikacji wybierz system Windows Server 2008. W obszarze odbiorca certyfikatu wybierz pozycję Windows 8.1 / Windows Server 2012 R2. Wersja szablonu wersji jest ustawiana po raz pierwszy utworzyć i zapisać szablon certyfikatu. Jeśli nie utworzono szablonu certyfikatu w ten sposób nie istnieje żaden sposób modyfikować go odpowiednio do poprawnej wersji.
 
    > [!NOTE]
-   >  Ten krok jest niezwykle ważny, ponieważ pozwala sprawdzić, czy masz wersji szablonu certyfikatu 3 (lub nowszej). Działa tylko szablonów w wersji 3 z aplikacją Menedżer certyfikatów.
+   >  Ten krok jest niezwykle istotne, ponieważ daje to pewność, że masz wersję szablonu certyfikatu 3 (lub nowszej). Tylko szablonów w wersji 3 pracy z aplikacją Menedżer certyfikatów.
 
 8. Na karcie **Ogólne** w polu **Nazwa wyświetlana** wpisz nazwę, która ma być wyświetlana w interfejsie użytkownika aplikacji, taką jak **Logowanie wirtualnej karty inteligentnej**.
 
@@ -79,7 +79,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-2.  Przejdź do pozycji Administracja &gt; Zarządzaj szablonami profilów. Upewnij się, że pole wyboru jest zaznaczone obok **MIM CM przykładowego kart inteligentnych dziennika w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
+2.  Przejdź do pozycji Administracja &gt; Zarządzaj szablonami profilów. Upewnij się, że pole jest zaznaczone pole wyboru obok pozycji **MIM CM przykładowy karty inteligentnej dziennik w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
 
 3.  Wpisz nazwę szablonu profilu, a następnie kliknij przycisk **OK**.
 
@@ -97,11 +97,11 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 10. W lewym okienku kliknij pozycje **Odnów zasady &gt; Zmień ustawienia ogólne**. Wybierz pozycję **Użyj karty ponownie przy odnawianiu** i kliknij przycisk **OK**.
 
-11. Musisz wyłączyć elementy kolekcji danych dla każdej zasady, klikając zasady w okienku po lewej stronie. Należy następnie zaznacz pole wyboru obok pozycji **element danych przykładowych** kliknij **Usuń elementy kolekcji danych** , a następnie kliknij przycisk **OK**.
+11. Musisz wyłączyć pozycje zbierania danych dla każdej zasady, klikając zasady w okienku po lewej stronie. Następnie należy zaznacz pole wyboru obok pozycji **element danych przykładowych** kliknij **Usuń elementy kolekcji danych** a następnie kliknij przycisk **OK**.
 
 ## <a name="prepare-the-cm-app-for-deployment"></a>Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
 
-1. W wierszu polecenia Uruchom następujące polecenie, aby rozpakować aplikację. Polecenie będzie Wyodrębnij zawartość do nowego podfolderu o nazwie appx oraz Utwórz kopię, tak aby nie modyfikować oryginalnego pliku.
+1. W wierszu polecenia Uruchom następujące polecenie, aby rozpakować aplikację. Polecenie wyodrębnić zawartość do nowego podfolderu o nazwie appx, a następnie utworzyć kopię, tak aby nie modyfikować oryginalnego pliku.
 
     ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
@@ -117,7 +117,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
    |                     |                                                                                                                                                                                                          |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |      MIMCM URL      |                                              Nazwa FQDN portalu, w którym skonfigurowano Menedżera certyfikatów. Na przykład https://mimcmServerAddress/certificatemanagement                                              |
-   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład <https://adfsServerSame/adfs> </br> Jeśli usługi AD FS nie jest używana, należy skonfigurować ustawienie z pustym ciągiem.  Na przykład  ```<ADFS URL=""/>``` |
+   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład <https://adfsServerSame/adfs> </br> Jeśli usługi AD FS nie jest używany, należy skonfigurować to ustawienie z pustym ciągiem.  Na przykład  ```<ADFS URL=""/>``` |
    |     PrivacyUrl      |                                         Możesz podać adres URL strony sieci Web z informacjami o tym, co się dzieje z danymi użytkowników zebranymi na potrzeby rejestracji certyfikatu.                                          |
    |     SupportMail     |                                                                           Możesz podać adres e-mail pomocy technicznej.                                                                           |
    | LobComplianceEnable |                                                                     Możesz ustawić wartość true lub false. Domyślnie jest ustawiona wartość true.                                                                      |
@@ -125,7 +125,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
    |      NonAdmin       |           Możesz ustawić wartość true lub false. Domyślnie jest ustawiona wartość false. To ustawienie należy modyfikować tylko wtedy, gdy użytkownicy niebędący administratorami na swoich komputerach mają mieć możliwość rejestrowania i odnawiania certyfikatów.            |
 
    > [!IMPORTANT]
-   > Należy określić wartość dla adresu URL usług AD FS. Jeśli nie określono wartości nowoczesnych aplikacji spowoduje błąd na pierwszego użycia.
+   > Należy określić wartość dla adresu URL usług AD FS. Jeśli nie określono wartości nowoczesnych aplikacji spowoduje błąd na pierwsze użycie.
 4. Zapisz plik i zamknij edytor.
 
 5. Podpisanie pakietu powoduje utworzenie pliku podpisywania, więc musisz usunąć oryginalny plik podpisywania o nazwie AppxSignature.p7x.
@@ -257,7 +257,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
     - Parametr serverFQDN określa tylko pełną nazwę komputera serwera Menedżera certyfikatów programu MIM.
 
-    - Aby uzyskać pomoc dotyczącą **ConfigureMIimCMClientAndRelyingParty.ps1** skryptu, uruchom: </br> 
+    - Aby uzyskać pomoc dotyczącą **ConfigureMIimCMClientAndRelyingParty.ps1** uruchomienia skryptu: </br> 
       ```Powershell
       get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
       ```
@@ -266,7 +266,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
-- [Konfigurowanie szablonów profilu](https://technet.microsoft.com/library/cc708656)
+- [Szablony profilu konfiguracji](https://technet.microsoft.com/library/cc708656)
 - [Zarządzanie aplikacjami karty inteligentnej](https://technet.microsoft.com/library/cc708681)

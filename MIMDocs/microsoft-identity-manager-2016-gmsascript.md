@@ -1,26 +1,26 @@
 ---
-title: Aktualizowanie konta usługi MIM w określonym powiadomień i zatwierdzenia po włączeniu gMSA | Dokumentacja firmy Microsoft
-description: Temat opisujący podstawowe kroki, aby skonfigurować usługi zarządzane przez grupę.
+title: Aktualizowanie konta określonych usług programu MIM dla powiadomień i zatwierdzeń, po włączeniu gMSA | Dokumentacja firmy Microsoft
+description: Temat opisujący podstawowe kroki, aby skonfigurować gMSA.
 author: fimguy
 ms.author: billmath
 manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: cc33293c0a836f9e5118fc372abc5d96c1a5373d
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: d989f9dc3a3b1dbde8290c2b4588a9beb8142949
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065178"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333262"
 ---
-# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Aktualizacja MIM określonego konta usługi dla powiadomień do gMSA
+# <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Aktualizacja programu MIM określonego konta usługi dla powiadomień do gMSA
 ===========================================
 
-Aktualizacja hasła do przechowywania kont, poniżej jest programu powershell, więc klienci nie trzeba uruchomić Zmień tryb
+Aktualizacji hasła przechowywane kont, poniżej jest programu powershell, dzięki czemu klienci nie mają do uruchomienia Zmień tryb
 
-Środowiska PowerShell: Aktualizacja konta usługi Office 365:
+PowerShell: Aktualizacja konta usługi Office 365:
 
 ```powershell
 #O365update.ps1

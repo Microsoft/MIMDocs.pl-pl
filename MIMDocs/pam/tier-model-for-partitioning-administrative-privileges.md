@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: 0d4ae72b897af3c6e737b412b7f8971b249ffa23
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942735"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334248"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
@@ -25,7 +25,7 @@ W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesi
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Podniesienie uprawnień w lasach usługi Active Directory
 
-Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często obiektem ataków, ponieważ w przypadku naruszenia ich zabezpieczeń, ma uprawnienia do połączenia z innymi serwerami lub aplikacjami w domenie.
+Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często obiektem ataków, ponieważ w przypadku naruszenia zabezpieczeń, osoba atakująca ma uprawnienia do połączenia z innymi serwerami lub aplikacjami w domenie.
 
 Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
 
@@ -39,7 +39,7 @@ Zmniejszenie ryzyka kradzieży poświadczeń dla kont z uprawnieniami administra
 
 Następny krok obejmuje zaimplementowanie ograniczeń logowania oraz wdrożenie procesów i praktyk, które spełniają wymagania modelu warstwy. Najlepszym rozwiązaniem jest ograniczenie poświadczeń do najniższych uprawnień wymaganych dla danej roli w każdej warstwie.
 
-Należy wymusić ograniczenia logowania, tak aby konta z wysokim poziomem uprawnień nie miały dostępu do mniej bezpiecznych zasobów. Na przykład:
+Należy wymusić ograniczenia logowania, tak aby konta z wysokim poziomem uprawnień nie miały dostępu do mniej bezpiecznych zasobów. Przykład:
 
 - Administratorzy domeny (warstwa 0) nie mogą logować się do serwerów przedsiębiorstwa (warstwa 1) i stacji roboczych standardowych użytkowników (warstwa 2).
 - Administratorzy serwerów (warstwa 1) nie mogą logować się do stacji roboczych standardowych użytkowników (warstwa 2).
@@ -58,7 +58,7 @@ Aby wymusić ograniczenia logowania, można użyć następujących rozwiązań:
 - Zasady uwierzytelniania i silosy, jeśli jest używany system Windows Server 2012 lub nowszy
 - Uwierzytelnianie selektywne, jeśli konto należy do dedykowanego lasu administracyjnego
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 - W artykule [Planning a bastion environment](planning-bastion-environment.md) (Planowanie środowiska bastionu) opisano dodawanie dedykowanego lasu administracyjnego dla programu Microsoft Identity Manager w celu ustanowienia kont administracyjnych.
-- [Stacje robocze z podwyższonymi uprawnieniami dostępu](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) Podaj dedykowanego systemu operacyjnego dla zadań poufnych, które jest chroniony z Internetu ataków i zagrożeń wektory.
+- [Stacji roboczych z dostępem uprzywilejowana](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) zapewniają dedykowany system operacyjny do realizacji zadań poufnych, które jest chronione przed atakami internetowymi i wektorami zagrożenia.

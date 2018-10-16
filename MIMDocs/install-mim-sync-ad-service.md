@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 398b57d88d9aab3a981631fc3630631fecb034da
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290156"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333823"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
@@ -44,7 +44,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 1.  Otwórz menedżera usługi synchronizacji.
 
-2.  Aby otworzyć Kreatora tworzenia agenta zarządzania, Zmień na **agentów zarządzania** strony, następnie na **akcje** menu, kliknij przycisk **Utwórz**.
+2.  Aby otworzyć Kreatora tworzenia agenta zarządzania, należy zmienić na **agentów zarządzania** strony, a następnie w **akcje** menu, kliknij przycisk **Utwórz**.
 
 3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
 
@@ -226,7 +226,7 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 ## <a name="create-run-profiles"></a>Tworzenie profilów uruchamiania
 
-Tworzenie profilów uruchamiania dla łączników MIMMA i ADMA.
+Tworzenie profilów uruchamiania dla ADMA i MIMMA łączników.
 
 ### <a name="create-run-profiles-for-the-adma-connector"></a>Tworzenie profilów uruchamiania dla łącznika menedżera zarządzania usługi AD (ADMA)
 

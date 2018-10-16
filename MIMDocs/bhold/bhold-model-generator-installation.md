@@ -1,5 +1,5 @@
 ---
-title: Instalacja generator modelu BHOLD | Dokumentacja firmy Microsoft
+title: Instalacja generatora modeli pakietu BHOLD | Dokumentacja firmy Microsoft
 description: BHOLD model umożliwia struktury danych z różnych źródeł
 keywords: ''
 author: barclayn
@@ -7,36 +7,36 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/07/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 90e7da2a1e39b802723ff0714bd0caccf9649440
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: ddb49219b5f68ff060f9b15a9ab64cb85a035d98
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289139"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333483"
 ---
-# <a name="bhold-model-generator-installation"></a>Instalacja Generator modelu BHOLD
+# <a name="bhold-model-generator-installation"></a>Instalacja generatora modeli pakietu BHOLD
 
-Przy użyciu modułu BHOLD Generator modeli, można tworzyć struktury danych ze źródeł autorytatywny, zawierający użytkowników i informacje organizacyjne, wraz z listy kontroli dostępu (ACL) w modelu, który może być używana w administrowaniu BHOLD.
+Przy użyciu modułu generatora modeli pakietu BHOLD, tworzyć struktury danych ze źródeł autorytatywny, która zawiera użytkownika i informacji organizacyjnych wraz z listy kontroli dostępu (ACL) do modelu, który może służyć w administrowaniu pakietu BHOLD.
 
-## <a name="bhold-model-generator-installation-requirements"></a>Wymagania dotyczące instalacji Generator modeli BHOLD 
+## <a name="bhold-model-generator-installation-requirements"></a>Wymagania dotyczące instalacji generatora modeli pakietu BHOLD 
 
-Przed zainstalowaniem modułu BHOLD Generator modeli, należy zainstalować następujące czynności:
+Przed zainstalowaniem modułu generatora modeli pakietu BHOLD, należy zainstalować następujące czynności:
 
-1. Moduł BHOLD Core na serwerze, na którym planujesz zainstalować moduł BHOLD Generator modeli. Informacje o instalowaniu modułu BHOLD Core, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
+1. Moduł Core pakietu BHOLD na serwerze, na którym planujesz zainstalować moduł generatora modeli pakietu BHOLD. Aby dowiedzieć się, jak instalowanie modułu BHOLD Core, zobacz [Instalacja podstawowa pakietu BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
-2. Dostawca Microsoft OLE DB dla programu Microsoft Jet musi być zainstalowany. Aby uzyskać więcej informacji, zobacz [w tym artykule](http://support.microsoft.com/kb/271908).
+2. Musi być zainstalowany dostawca Microsoft OLE DB dla programu Microsoft Jet. Aby uzyskać więcej informacji, zobacz [w tym artykule](http://support.microsoft.com/kb/271908).
 
 > [!WARNING]
-> Nie należy instalować Generator modeli BHOLD w sieci produkcyjnej. Generator modeli BHOLD jest przeznaczony do użycia w trybie offline w środowisku przemieszczania do utworzenia znormalizowane modelu roli, który można zaimportować do modelu roli przedsiębiorstwa. Uruchamianie Generator modeli BHOLD w sieci produkcyjnej może spowodować utratę istniejącego modelu roli.
+> Nie należy instalować generatora modeli pakietu BHOLD w sieci produkcyjnej. Generator modeli pakietu BHOLD jest przeznaczony do użycia w trybie offline w środowisku przejściowym do utworzenia znormalizowane modelu roli, który można zaimportować do modelu roli przedsiębiorstwa. Uruchamianie generatora modeli pakietu BHOLD w sieci produkcyjnej może spowodować utratę istniejącego modelu roli.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Przed zainstalowaniem modułu BHOLD Generator modeli, należy przygotować się do zawierają informacje, z Kreatora instalacji Generator modelu BHOLD wymaga, aby zakończyć instalację. Następujący arkusz pomoże Ci Zarejestruj te informacje, więc wszystko będzie gotowe do dostarczenia go w razie potrzeby. Należy również upewnić się, że
+Przed zainstalowaniem modułu generatora modeli pakietu BHOLD, musisz być przygotowany do podawania, Kreator instalacji generatora modeli pakietu BHOLD wymaga, aby ukończyć instalację. Następujący arkusz pomoże Zarejestruj te informacje będą gotowe do dostarczenia go, gdy jest to konieczne. Należy również upewnić się, że
 
-Aparat 2010 Redistributable bazy danych programu Microsoft Access
+Program Microsoft Access bazy danych aparatu 2010 Redistributable
 
  
 
@@ -50,32 +50,32 @@ Aparat 2010 Redistributable bazy danych programu Microsoft Access
 
 | **Element**                                    | **Opis**                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Użyj dostawcy zabezpieczeń na komputerze/domeny** | Po wybraniu Określa, że zabezpieczenia usług domenowych w usłudze Active Directory będzie kontrolował dostęp do podstawowych BHOLD.                                                                                                                | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
-| **Domeny**                                  | Określa domenę zawierającą konta usługi, utworzony podczas instalowania BHOLD Core. Aby uzyskać więcej informacji, zobacz [instalacji Core BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest nieprawidłowe. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (short), a nie w pełni kwalifikowaną nazwę (FQDN). Na przykład jeśli nazwa FQDN domeny, to fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
-| **User**                                    | Określa nazwę logowania konta użytkownika usługi BHOLD Core.                                                                                                                                                          | Napisz tutaj nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
-| **Hasło**                                | Określa hasło konta użytkownika usługi.                                                                                                                                                                       | Zapisać hasło tutaj: **ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
+| **Użyj dostawcy zabezpieczeń na komputerze/domeny** | Po wybraniu Określa, czy zabezpieczeń Active Directory Domain Services będzie kontrolować dostęp do pakietu BHOLD Core.                                                                                                                | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
+| **Domeny**                                  | Określa domenę zawierającą konto usługi, który został utworzony podczas instalowania pakietu BHOLD Core. Aby uzyskać więcej informacji, zobacz [Instalacja podstawowa pakietu BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę, tylko wtedy, gdy będzie ona nieprawidłowa. **Ważne:** Podaj nazwę domeny przy użyciu nazwy NetBIOS (krótki), a nie w pełni kwalifikowana nazwa domeny (FQDN). Na przykład jeśli nazwę FQDN domeny fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
+| **User**                                    | Określa nazwę logowania konta użytkownika BHOLD podstawowe usługi.                                                                                                                                                          | Napisz tutaj nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
+| **Hasło**                                | Określa hasło konta użytkownika usługi.                                                                                                                                                                       | Zapisz hasło w tym miejscu: **ważne:** koniecznie Zapisz to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
 
 **Ustawienia tworzenia kopii zapasowej bazy danych**
 
 | Element                                        | Opis                                                                                                                                                                                                                                                                                                                                                                                                                  | Wartość                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Użyj zintegrowanych zabezpieczeń**                 | Określa, że dostęp do bazy danych jest używane uwierzytelnianie systemu Windows.                                                                                                                                                                                                                                                                                                                                                        | Zaznacz pole wyboru, jeśli uwierzytelnianie systemu Windows są używane do łączenia się z serwerem SQL. Wyczyść pole wyboru, jeśli jest używane uwierzytelnianie programu SQL Server. Bazy danych muszą być utworzone przed systemem BHOLD podstawowe ustawienia jeśli uwierzytelniania programu SQL Server jest używany. **Uwaga:** Jeśli używane jest uwierzytelnianie systemu Windows, użytkownik musi być zalogowany przy użyciu konta, które ma roli serwera sysadmin na serwerze bazy danych. **Ważne:** Użyj uwierzytelniania programu SQL Server tylko w środowiskach testowych. Firma Microsoft zaleca używanie uwierzytelniania systemu Windows w przypadku wdrożeń produkcyjnych. |
-| **Baza danych użytkownika** i **hasła bazy danych** | Określa nazwę użytkownika i hasło użytkownika z roli serwera sysadmin na serwerze bazy danych. Te wartości są określane tylko wtedy, gdy jest używane uwierzytelnianie programu SQL Server.                                                                                                                                                                                                                                                  | Zapis tutaj nazwę użytkownika programu SQL Server: zapis w tym miejscu hasło użytkownika programu SQL Server: </br></br> **Ważne:** należy zachować to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwa kopii zapasowej bazy danych, który spowoduje utworzenie konfiguracji Generator modelu BHOLD. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci  *\<serwera\>*\\*\<wystąpienia\>* .  Firma Microsoft zaleca się, że nazwa kopii zapasowej bazy danych przy użyciu nazwy bazy danych BHOLD Core następuje \_kopii zapasowej, na przykład B1_BACKUP. | Nazwa serwera (lub serwera i wystąpienia) w tym miejscu zapisu: </br> Wpisz nazwę bazy danych w tym miejscu:
+| **Użyj zintegrowanych zabezpieczeń**                 | Określa, że uwierzytelnianie Windows jest używane do dostępu do bazy danych.                                                                                                                                                                                                                                                                                                                                                        | Zaznacz pole wyboru, jeśli jest używane uwierzytelnianie Windows, aby połączyć się z serwerem SQL. Usuń zaznaczenie pola wyboru, jeśli jest używane uwierzytelnianie programu SQL Server. Baza danych muszą zostać utworzone przed systemem BHOLD podstawowych ustawień Jeśli uwierzytelnianie programu SQL Server jest używany. **Uwaga:** Jeśli używane jest uwierzytelnianie Windows, użytkownik musi być zalogowany przy użyciu konta które ma roli serwera sysadmin na serwerze bazy danych. **Ważne:** Użyj uwierzytelniania programu SQL Server tylko w środowiskach testowych. Firma Microsoft zaleca korzystanie z uwierzytelniania Windows we wdrożeniach produkcyjnych. |
+| **Użytkownika bazy danych** i **hasła bazy danych** | Określa nazwę użytkownika i hasło użytkownika z roli serwera sysadmin na serwerze bazy danych. Wartości te są dostarczane tylko wtedy, gdy jest używane uwierzytelnianie programu SQL Server.                                                                                                                                                                                                                                                  | Zapis nazwę użytkownika w tym miejscu programu SQL Server: zapis w tym miejscu hasło użytkownika programu SQL Server: </br></br> **Ważne:** koniecznie Zapisz to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Serwer bazy danych** i **Nazwa bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwę pliku kopii zapasowej, który spowoduje utworzenie ustawienia generatora modeli pakietu BHOLD. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, określ wystąpienie serwera bazy danych w postaci  *\<serwera\>*\\*\<wystąpienia\>* .  Firma Microsoft zaleca, nadaj nazwę kopii zapasowej bazy danych przy użyciu nazwy podstawowej BHOLD bazę danych, a następnie \_kopii zapasowej, na przykład B1_BACKUP. | Zapis nazwy serwera (lub serwera i wystąpienia) w tym miejscu: </br> Napisz tutaj nazwę bazy danych:
 
-## <a name="bhold-model-generator-setup"></a>Instalator Generator modeli BHOLD
+## <a name="bhold-model-generator-setup"></a>Ustawienia generatora modeli pakietu BHOLD
 
-Aby zainstalować moduł Generator modeli BHOLD, zaloguj się jako członek grupy Administratorzy domeny, Pobierz następującego pliku i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł BHOLD Core na:
+Aby zainstalować moduł generatora modeli pakietu BHOLD, zaloguj się jako członek grupy Administratorzy domeny, pobierz następujący plik i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł Core pakietu BHOLD na:
 
 - BholdModelGenerator  *\<wersji\>*\_Release.msi
 
-Zastąp *\<wersji\>* z numerem wersji instalowanej wersji BHOLD Generator modeli.
+Zastąp *\<wersji\>* numerem wersji, wersji generatora modeli pakietu BHOLD, którym ją instalujesz.
 
 Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
-- Aby uzyskać informacje na temat tworzenia plików wejściowych [dokumentacja techniczna pakietu Microsoft BHOLD](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
-- [Przewodnik instalacji BHOLD](bhold-installation-guide.md)
+- Aby uzyskać informacje na temat tworzenia plików wejściowych [Microsoft dokumentacja techniczna pakietu BHOLD](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
+- [Przewodnik instalacji pakietu BHOLD](bhold-installation-guide.md)
 - [Dokumentacja dla deweloperów pakietu BHOLD](../reference/mim2016-bhold-developer-reference.md)
 - [Historia wersji pakietu BHOLD](../reference/version-bhold-history.md)

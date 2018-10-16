@@ -7,15 +7,15 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 7191e445688cc9e3c5c02b9c6852c869a28a937a
-ms.sourcegitcommit: ad0690bd57e3d056397108bf1c8417965d69a32c
+ms.openlocfilehash: 868e5c543fb55257f7de903eade69529d90ec895
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772682"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334367"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Aktywacji funkcji PAM lub funkcji samoobsługowego resetowania HASEŁ za pomocą usługi Azure Multi-Factor Authentication
 Ten dokument zawiera opis sposobu konfiguracji serwera Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy aktywują role w uprawnienia dostępu do zarządzania lub samoobsługowego resetowania hasła.

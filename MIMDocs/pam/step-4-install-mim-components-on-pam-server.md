@@ -7,18 +7,18 @@ ms.author: barclayn
 manager: barclayn
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 81fe10b8fbf8ada08983c4bf3c58f85215cf1d66
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 3f5ee3e2a6bdbd1ab203ffcf406b4ca3b991b6f5
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290037"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334010"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
@@ -101,7 +101,7 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
-2. Uruchom program Internet Explorer i nawiąż połączenie z portalem programu MIM na http://pamsrv.priv.contoso.local:82/identitymanagement. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
+2. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na http://pamsrv.priv.contoso.local:82/identitymanagement. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
 
 3. W razie potrzeby zaloguj się w programie Internet Explorer jako PRIV\Administrator.
 
@@ -164,7 +164,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    iisreset
    ```
 
-7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/uwierzytelniania w razie potrzeby i upewnij się, że występuje pobieranie.
+7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, uwierzytelnianie, w razie potrzeby i upewnij się, że odbywa się dostępny do pobrania.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
 

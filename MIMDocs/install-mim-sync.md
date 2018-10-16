@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 05/01/2018
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c68b33b2ff28d75b6f4e63fa8caf0c87727a5927
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 0c6f980aea883ef4e76b9a21e4492c4c21532b9f
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289401"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332871"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
@@ -27,16 +27,16 @@ ms.locfileid: "36289401"
 > 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **corpdc**
+> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi MIM — **corpservice**
-> - Nazwa serwera synchronizacji MIM — **corpsync**
+> - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa programu SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
 Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy najpierw skonfigurować pakiet instalacyjny.
 
-1. Zaloguj się jako *contoso\miminstall* na serwerze używanym do serwera synchronizacja zarządzania tożsamościami **corpsync**.
+1. Zaloguj się jako *contoso\miminstall* z serwerem używasz dla serwera synchronizacji zarządzania tożsamościami **corpsync**.
 
 2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.
 
@@ -58,9 +58,9 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 6. Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-   1.  Program SQL Server znajduje się na: **komputera zdalnego A** o nazwie **corpsql.contoso.com**.
+   1.  SQL Server znajduje się na: **maszyny zdalnej** o nazwie **corpsql.contoso.com**.
 
-   2.  Wystąpienie programu SQL Server: **domyślnego wystąpienia**
+   2.  Wystąpienie programu SQL Server: **wystąpienie domyślne**
 
    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 

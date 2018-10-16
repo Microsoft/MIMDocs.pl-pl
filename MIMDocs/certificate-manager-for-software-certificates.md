@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: ce86d2eed526972873015e62ef134358de56fdbd
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290326"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333126"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.

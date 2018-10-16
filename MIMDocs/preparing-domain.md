@@ -7,22 +7,22 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/26/2017
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ddab5b1ab57d3d332d5cd36ecc5a29abd83222ec
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: c4fd7d2e8cc6e5efc092d92bc4a97a9516fe7d4c
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289034"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333245"
 ---
 # <a name="set-up-a-domain"></a>Konfigurowanie domeny
 
 > [!div class="step-by-step"]
-> [Windows Server 2016»](prepare-server-ws2016.md)
+> [System Windows Server 2016»](prepare-server-ws2016.md)
 
 Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi Active Directory (AD). Usługa AD powinna już być zainstalowana, a w środowisku musi istnieć kontroler dla domeny, którą możesz administrować.
 
@@ -34,10 +34,10 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **corpdc**
+> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi MIM — **corpservice**
-> - Nazwa serwera synchronizacji MIM — **corpsync**
+> - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa programu SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
@@ -100,11 +100,11 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
     setspn -S FIMService/mim.contoso.com Contoso\MIMService
     setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
-5.  Podczas instalacji należy dodać następujące rekordy DNS "A" do mechanizmu rozpoznawania nazw
+5.  Podczas instalacji należy dodać następujące rekordy DNS "A" do poprawnego rozpoznawania nazw
 
 - mim.contoso.com punktu z adresem ip fizycznych corpservice
 - passwordreset.contoso.com punktu z adresem ip fizycznych corpservice
 - passwordregistration.contoso.com punktu z adresem ip fizycznych corpservice
 
 > [!div class="step-by-step"]
-> [Windows Server 2016»](prepare-server-ws2016.md)
+> [System Windows Server 2016»](prepare-server-ws2016.md)

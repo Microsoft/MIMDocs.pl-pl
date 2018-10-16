@@ -7,24 +7,24 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/06/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 751bad4dc8632fbffca8724056c8faff7a01caac
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288966"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334197"
 ---
 # <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
 
 Usługa Privileged Access Management nie ma wymagań sprzętowych poza wymaganiami jej bazowych platform oprogramowania. Po prostu upewnij się, że masz wystarczającą ilość pamięci lub miejsca na dysku i łączność sieciową.
 
 > [!IMPORTANT]
-> Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Nie jest on przeznaczony do zaprezentowania wydajności, skalowalności i wysokiej dostępności. Ten element nie reprezentuje zalecanej topologii wdrożenia dla dużych firm i środowisk produkcyjnych.
+> Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Go nie ma na celu zademonstrowania, wydajność, skalowalność i wysoką dostępność. Nie reprezentuje w zalecanej topologii wdrożenia dla dużych przedsiębiorstw i środowisk produkcyjnych.
 
 ## <a name="installing-from-software-packages"></a>Instalowanie z pakietów oprogramowania
 
@@ -36,7 +36,7 @@ Następujące oprogramowanie można pobrać z witryny TechNet Evaluation Center 
 
 Następujące oprogramowanie można pobrać z witryny GitHub:
 
-- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): zawiera przykładową aplikację sieci web dla interfejsu API REST
+- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): zawiera przykładową aplikację sieci web interfejsu API REST
 
 ## <a name="required-software"></a>Wymagane oprogramowanie
 

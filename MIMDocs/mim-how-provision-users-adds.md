@@ -7,15 +7,15 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/18/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 032f3cb68214dcdb7008b4b771a8b66c05ebe890
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290105"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333976"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
@@ -195,7 +195,7 @@ W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla s
 | Strona projektanta agenta zarządzania | Konfiguracja |
 |------------|------------------------------------|
 | Utwórz agenta zarządzania | 1. **Agent zarządzania dla:** agent zarządzania usługi FIM Service <br/> 2. **Nazwa:** Fabrikam FIMMA |
-| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183;**Adres podstawowy usługi FIM:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
+| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183;**Adres podstawowy usługi FIM Service:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
 | Wybierz typy obiektów                                     | Poza już wybranymi typami obiektów wybierz **osobę**.   |
 | Skonfiguruj mapowania typów obiektów                          | Poza już istniejącymi mapowaniami typów obiektów dodaj mapowanie dla osoby **Typ obiektu źródła danych** do osoby typu obiektu **Metaverse**. |
 | Konfiguruj przepływ atrybutów                                | Poza już istniejącymi mapowaniami przepływu atrybutów dodaj następujące mapowania przepływu atrybutów: <br/><br/> ![Przepływ atrybutów](media/how-provision-users-adds/image018.jpg) |
@@ -232,7 +232,7 @@ Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią
 > 
 > 
 > [!Important]
->  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Można to zrobić za pomocą skryptu, za pomocą środowiska Windows PowerShell można włączyć obsługi (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+>  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Można to zrobić, uruchamiając skrypt przy użyciu programu Windows PowerShell do włączenia aprowizacji (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurowanie usługi FIM Service
@@ -460,7 +460,7 @@ Aby wykonać te zadania, uruchamia się następujące profile przebiegu.
 | Fabrikam FIMMA   | 1. Eksportowanie <br/> 2. Import zmian       |
 
 
-Po zaimportowaniu z bazy danych usługi FIM, Simona Britta i obiektu ExpectedRuleEntry prowadzący Britta z wychodzącą regułą synchronizacji użytkowników usługi AD są umieszczane w przestrzeni łącznika FIMMA firmy Fabrikam. Przejrzyj właściwości Britta firmy w obszarze łączników obok wartości atrybutów, które zostały skonfigurowane w portalu programu FIM można również znaleźć prawidłowego odwołania do obiektu oczekiwano wpis reguły. Poniższy zrzut ekranu pokazuje przykład takiej sytuacji.
+Po zaimportowaniu z bazy danych usługi FIM Service Britta Simon oraz obiekt ExpectedRuleEntry łączący Britta do reguły synchronizacji ruchu wychodzącego użytkownika usług AD są umieszczane w obszarze łącznika Fabrikam fimma. Podczas przeglądania właściwości Britty w obszarze łącznika obok wartości atrybutów, które zostały skonfigurowane w portalu programu FIM znajdziesz prawidłowe odwołanie do obiektu oczekiwanego wpisu reguły. Poniższy zrzut ekranu pokazuje przykład takiej sytuacji.
 
 ![Właściwości obiektu obszaru łącznika](media/how-provision-users-adds/image025.jpg)
 

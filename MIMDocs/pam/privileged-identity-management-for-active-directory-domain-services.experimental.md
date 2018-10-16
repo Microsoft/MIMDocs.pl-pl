@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 00bae1f1c202e4808e641068c13a40f50ffd479a
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: ce5d168c429928ec46b090dec038f1b5bbe61666
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
-ms.locfileid: "22052403"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334418"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
 

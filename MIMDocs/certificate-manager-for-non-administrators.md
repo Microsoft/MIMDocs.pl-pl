@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 70891643de7035ea80cfe4be533b9e5457bd767b
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289166"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332481"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
 Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyślnie nie może zarejestrować karty inteligentnej na tym komputerze. Poniższa procedura umożliwia obejście tego ograniczenia.

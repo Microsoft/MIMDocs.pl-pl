@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 5a54cd60f8ccee51d3bdb9cdb4770ff659afe854
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289017"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333806"
 ---
 # <a name="capacity-planning-guide"></a>Przewodnik planowania pojemności
 
@@ -32,19 +32,19 @@ Jeśli nie znasz jeszcze programu MIM 2016 i jego składników, przed kontynuowa
 Istnieje wiele czynników, które mogą wpłynąć na ogólną pojemność i wydajność wdrożenia programu Microsoft Identity Manager:
 
 - Sposoby, w którym fizycznego wdrożenia składników (topologii) programu MIM.
-- Sprzęt, na którym uruchomiono te składniki.
-- Liczba i złożoność obiektów konfiguracji zasad MIM są pewne istotne czynniki, które należy uwzględnić podczas planowania pojemności.
-- Zazwyczaj bardziej oczywistymi czynnikami, które mają wpływ na wydajność i pojemność są oczekiwana Skala wdrożenia oraz spodziewane obciążenie.
+- Sprzęt, na którym te składniki są uruchomione.
+- Liczba i złożoność obiektów konfiguracji zasad programu MIM są pewne istotne czynniki, które należy uwzględnić podczas planowania pojemności.
+- Oczekiwana Skala wdrożenia oraz oczekiwane obciążenia są zazwyczaj bardziej oczywistymi czynnikami, które mają wpływ na wydajność i pojemność.
 
-Główne czynniki wpływające na pojemność i wydajność wdrożenia programu MIM 2016, omówiono w tabeli poniżej:
+Główne czynniki wpływające na pojemność i wydajność wdrożenia programu MIM 2016 zostały omówione w poniższej tabeli:
 
 | Współczynnik projektu | Kwestie do rozważenia |
 | ------------- | -------------- |
 | Topologia | Dystrybucja usług programu MIM między komputerami w sieci. |
-| Sprzęt | Sprzęt fizyczny (fizycznych lub wirtualnych) dla każdego składnika MIM, w tym Procesora, pamięci, karty sieciowej i dysku twardego. |
+| Sprzęt | Sprzęt fizyczny (fizyczny lub wirtualny) dla każdego składnika programu MIM, w tym procesora CPU, pamięć, karty sieciowej i konfiguracją dysku twardego. |
 | Obiekty konfiguracji zasad programu MIM | Liczba i typ obiektów konfiguracji zasad programu MIM, w tym zestawów, reguł zasad zarządzania (MPR) i przepływów pracy. |
 | Skala | Użytkowników, grup, grup obliczeniowych i typów obiektów niestandardowych mają być zarządzane przez program MIM 2016. Ponadto należy wziąć pod uwagę złożoność grup dynamicznych oraz uwzględnić zagnieżdżanie grup. |
-| Obciążenie | Częstotliwość używania. Resetuje hasło operacji, takich jak nowej grupy lub tworzenie użytkownika, lub portalu odwiedzin minutę lub godzinę. Należy pamiętać, że obciążenie może się różnić zależnie od godziny, dnia, tygodnia lub roku. Poszczególne składniki można projektować pod kątem obciążenia szczytowego lub średniego. |
+| Obciążenie | Częstotliwość używania. Resetuje hasło operacji, takich jak nowej grupy lub tworzenie użytkownika, lub portalu odwiedzin minuta lub godzina. Należy pamiętać, że obciążenie może się różnić zależnie od godziny, dnia, tygodnia lub roku. Poszczególne składniki można projektować pod kątem obciążenia szczytowego lub średniego. |
 
 ## <a name="hosting-microsoft-identity-manager-components"></a>Hosting składników programu Microsoft Identity Manager
 
@@ -68,7 +68,7 @@ Liczba użytkowników i grup w danym środowisku to typowa kwestia do uwzględni
 
 ## <a name="expected-load-levels"></a>Spodziewane poziomy obciążenia
 
-Należy również rozważyć typ obciążenia, którego doświadczą składniki programu MIM. Konieczne będzie obciążenia oszacować, analizując aplikacje znajdujące się obecnie w danym środowisku. Niektóre istotne pytania, które należy zadać, przedstawiono poniżej:
+Należy również rozważyć typ obciążenia, którego doświadczą składniki programu MIM. Będzie trzeba oszacować obciążenia, analizując bieżące aplikacje w danym środowisku. Niektóre istotne pytania, które należy zadać, przedstawiono poniżej:
 
 - Jak często będą pojawiać się żądania dołączenia do grupy lub opuszczenia jej?
 
@@ -76,17 +76,17 @@ Należy również rozważyć typ obciążenia, którego doświadczą składniki 
 
 - Ile operacji niezależnych od użytkowników, takich jak synchronizacja zmian z systemów zewnętrznych, powinno występować? Upewnij się, że zostało uwzględnione obciążenie wygenerowane przez synchronizację danych tożsamości z systemami zewnętrznymi.
 
-- Jakiego rodzaju scenariusze planujesz wdrożyć? Różne scenariusze przyczyniają się do różnych wzorców obciążenia. Na przykład komputery klienckie, które okresowo zainstalowano klienta programu MIM 2016 sprawdzają, czy logowanie wymaga rejestracji.
+- Jakiego rodzaju scenariusze planujesz wdrożyć? Różne scenariusze przyczyniają się do różnych wzorców obciążenia. Na przykład komputery klienckie, które okresowo zainstalowanego klienta programu MIM 2016 Sprawdź, czy rejestracja jest wymagana podczas logowania.
 
-- Czy spodziewasz się dużej zmienności poziomów obciążeń między obciążeniem normalnym i szczytowym? Na przykład istnieje zwykle jest wiele resetuje hasło po okresach świątecznych. Upewnij się, że harmonogramy konserwacji i synchronizacji systemu uwzględniają przewidywane obciążenia szczytowe. Przy planowaniu pojemności należy pamiętać o uwzględnieniu okresów obciążenia szczytowego.
+- Czy spodziewasz się dużej zmienności poziomów obciążeń między obciążeniem normalnym i szczytowym? Na przykład świątecznych zwiększa się wiele operacji resetowania hasła po okresach. Upewnij się, że harmonogramy konserwacji i synchronizacji systemu uwzględniają przewidywane obciążenia szczytowe. Przy planowaniu pojemności należy pamiętać o uwzględnieniu okresów obciążenia szczytowego.
 
 ## <a name="policy-configuration-objects"></a>Obiekty konfiguracji zasad
 
-Obiekty konfiguracji zasad programu MIM obejmują reguły MPR, zestawy, przepływy pracy i reguły synchronizacji dla wdrożenia. Wdrożenia programu MIM różnią się pomiędzy klientami, ponieważ konfiguracja zasad zmienia się zgodnie z potrzebami poszczególnych wdrożeń. Kluczowe zagadnienia dotyczące wydajności obejmują następujące obiekty konfiguracji zasad MIM:
+Obiekty konfiguracji zasad programu MIM obejmują reguły MPR, zestawy, przepływy pracy i reguły synchronizacji do wdrożenia. Wdrożenia programu MIM różnią się pomiędzy klientami, ponieważ konfiguracja zasad zmienia się zgodnie z potrzebami poszczególnych wdrożeń. Kluczowe zagadnienia dotyczące wydajności obejmują poniższe obiekty konfiguracji zasad programu MIM:
 
-- **Zestawy** Każda operacja w systemie musi zostać oceniona pod kątem istniejących członkostw zestawów i aktualizacji, które powodują zmiany w członkostwach zestawów. Na przykład zmiana numeru budynku dla biura danej osoby, może nie mieć duży wpływ. Jednak inne zmiany mogą mieć wpływ bardzo poważny, na przykład zmiana menedżera, która może wpływać na wiele obiektów na różnych poziomach.
+- **Zestawy** Każda operacja w systemie musi zostać oceniona pod kątem istniejących członkostw zestawów i aktualizacji, które powodują zmiany w członkostwach zestawów. Na przykład zmiana numeru budynku dla biura danej osoby nie mogą mieć duży wpływ. Jednak inne zmiany mogą mieć wpływ bardzo poważny, na przykład zmiana menedżera, która może wpływać na wiele obiektów na różnych poziomach.
 
-- **Reguły zasad zarządzania (MPR)** Reguły MPR zarządzają regułami kontroli dostępu i wyzwalają przepływy pracy. Tworzenie reguł MPR może spowodować konieczność zwiększenia liczby zestawów tak, aby przechwytywać różnych stanów przejścia obiektów. Te dodatkowe zestawy mogą wyzwalać dodatkowe przepływy pracy. Każdy przepływ pracy odpowiada unikatowym żądaniom w systemie. W związku z tym jest to kolejny element do uwzględnienia podczas planowania pojemności.
+- **Reguły zasad zarządzania (MPR)** Reguły MPR zarządzają regułami kontroli dostępu i wyzwalają przepływy pracy. Tworzenie reguł MPR może spowodować konieczność zwiększenia liczby zestawów, dzięki czemu można przechwycić różnych stanów przejścia obiektów. Te dodatkowe zestawy mogą wyzwalać dodatkowe przepływy pracy. Każdy przepływ pracy odpowiada unikatowym żądaniom w systemie. W związku z tym jest to kolejny element do uwzględnienia podczas planowania pojemności.
 
 Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania obsługi w danym środowisku. Pamiętaj o uwzględnieniu następujących kwestii:
 
@@ -94,7 +94,7 @@ Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania o
 
 - Czy będziesz używać aprowizacji bez kodu? Taka sytuacja wpływa na liczbę oczekiwanych wpisów reguł, jak również na skojarzone żądania i przepływy pracy w systemie.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 - [Zagadnienia dotyczące topologii wdrożeń programu MIM](topology-considerations.md)
-- Do pobrania [przewodniku planowania pojemności programu Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) przechodzi w stan więcej szczegółów na temat kompilacji testowych i wyników testowania wydajności.
+- Dostępny do pobrania [przewodnika planowania pojemności programu Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) przechodzi w stan więcej szczegółów na temat kompilacji testowych i wyników testowania wydajności.

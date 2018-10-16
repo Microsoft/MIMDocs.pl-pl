@@ -8,14 +8,14 @@ ms.reviewer: fimguy
 manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.openlocfilehash: 85ab84231c2ebfede125ffaf5fb39964e8a8450c
-ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
+ms.openlocfilehash: c878fa85ae2c93e77a34f497c4f770e30517462f
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43694913"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333415"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Użyj niestandardowego dostawcę uwierzytelniania Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli funkcji PAM lub funkcji samoobsługowego resetowania haseł
 

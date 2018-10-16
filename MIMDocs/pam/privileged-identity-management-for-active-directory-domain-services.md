@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 890e0f77219f6871de3fc43e3122fbc829c6adba
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: f3c5a74966498264cd60033b2f7751622d111e2e
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942718"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333551"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
 
@@ -40,16 +40,16 @@ Obecnie jednym z priorytetów przedsiębiorstw jest dostęp do zasobów w środo
 - [Pass--hash](https://technet.microsoft.com/dn785092.aspx).
 - Pass--ticket.
 - spear phishing.
-- Naruszeniach zabezpieczeń protokołu Kerberos.
+- Naruszeń protokołu Kerberos.
 - Inne ataki.
 
 Niestety uzyskanie przez hakerów poświadczeń dla konta administratora domeny jest obecnie bardzo łatwe, a wykrycie takiego ataku — trudne. Celem usługi PAM jest zmniejszenie możliwości uzyskania dostępu przez złośliwych użytkowników przy jednoczesnym zapewnieniu administratorom lepszego rozeznania i większej kontroli nad środowiskiem.
 
-Usługa PAM utrudnia osobom atakującym spenetrowanie sieci i uzyskanie dostępu do uprzywilejowanych kont. Zapewnia ona ochronę uprzywilejowanym grupom, które kontrolują dostęp do komputerów dołączonych do domeny i aplikacji zainstalowanych na tych komputerach. Dodaje również więcej monitorowania, widoczność i bardziej szczegółowe mechanizmy kontroli. Dzięki temu organizacje, aby zobaczyć, kim są uprzywilejowani Administratorzy i jakie czynności wykonują. Usługa PAM pozwala organizacjom uzyskać lepszy wgląd w używanie kont administracyjnych w środowisku.
+Usługa PAM utrudnia osobom atakującym spenetrowanie sieci i uzyskanie dostępu do uprzywilejowanych kont. Zapewnia ona ochronę uprzywilejowanym grupom, które kontrolują dostęp do komputerów dołączonych do domeny i aplikacji zainstalowanych na tych komputerach. Dodaje również więcej opcji monitorowania, widoczność i bardziej szczegółowe mechanizmy kontroli. Dzięki temu organizacje, aby zobaczyć, kim są uprzywilejowani Administratorzy i co one robią. Usługa PAM pozwala organizacjom uzyskać lepszy wgląd w używanie kont administracyjnych w środowisku.
 
-## <a name="setting-up-pam"></a>Konfigurowanie PAM
+## <a name="setting-up-pam"></a>Konfigurowanie usługi PAM
 
-Usługa PAM korzysta z zasady administrowania w miarę potrzeb, która jest powiązana z zasadą [wystarczających uprawnień administracyjnych (Just Enough Administration, JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). Technologia JEA jest zestaw narzędzi programu Windows PowerShell, który definiuje zestaw poleceń służących do wykonywania uprzywilejowanych działań. Jego jest punktem końcowym, w którym administratorzy uzyskują autoryzację do uruchamiania polecenia. W ramach zasad JEA to administrator decyduje, jakie uprawnienia są wymagane do wykonywania danego zadania. Za każdym razem, gdy zachodzi potrzeba wykonania tego zadania przez kwalifikującego się użytkownika, jest włączane odpowiednie uprawnienie. Uprawnienia wygasają po upływie określonego czasu. Uniemożliwia to złośliwym użytkownikom przechwycenie uprawnień dostępu.
+Usługa PAM korzysta z zasady administrowania w miarę potrzeb, która jest powiązana z zasadą [wystarczających uprawnień administracyjnych (Just Enough Administration, JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). Technologia JEA jest zestaw narzędzi programu Windows PowerShell, który definiuje zestaw poleceń służących do wykonywania uprzywilejowanych działań. Go to punkt końcowy, w którym administratorzy uzyskują autoryzację do uruchamiania poleceń. W ramach zasad JEA to administrator decyduje, jakie uprawnienia są wymagane do wykonywania danego zadania. Za każdym razem, gdy zachodzi potrzeba wykonania tego zadania przez kwalifikującego się użytkownika, jest włączane odpowiednie uprawnienie. Uprawnienia wygasają po upływie określonego czasu. Uniemożliwia to złośliwym użytkownikom przechwycenie uprawnień dostępu.
 
 Konfiguracja i działanie usługi PAM obejmuje cztery kroki.
 
@@ -107,7 +107,7 @@ Po zatwierdzeniu żądania przepływ pracy akcji komunikuje się bezpośrednio z
 
 Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Administratorzy, którzy rzadko potrzebują dostępu do uprzywilejowanych grup, mogą wysyłać precyzyjne żądania dostępu. To samo dotyczy skryptów. Program MIM rejestruje żądanie i zmiany w usłudze Active Directory. Można je wyświetlić w Podglądzie zdarzeń lub wysłać dane do rozwiązań służących do monitorowania infrastruktury przedsiębiorstwa, na przykład usług Audit Collection Services (ACS) programu System Center 2012 — Operations Manager lub narzędzi innych firm.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
-- [Ograniczające zagrożenie atakami Pass--Hash (PtH) i kradzieżą poświadczeń, innych wersji 1 i 2](https://www.microsoft.com/download/details.aspx?id=36036)
-- [Polecenia cmdlet do zarządzania dostęp uprzywilejowany](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)
+- [Ograniczanie ryzyka ataków Pass--Hash (PtH) i innych kradzieży poświadczeń w wersji 1 i 2](https://www.microsoft.com/download/details.aspx?id=36036)
+- [Privileged Access Management poleceń cmdlet](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)

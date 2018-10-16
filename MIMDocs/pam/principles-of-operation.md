@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 328005c1f55b715c81d33a84ffe1e0e41c905379
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
-ms.locfileid: "22052369"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334299"
 ---
 # <a name="understand-the-components-of-pam"></a>Opis składników funkcji PAM
 
@@ -33,7 +33,7 @@ Rozwiązanie MIM skonfigurowane na potrzeby funkcji PAM zawiera następujące sk
 - **Baza danych usługi MIM**: przechowywana w programie SQL Server 2012 lub 2014, zawierająca dane tożsamości i metadane wymagane przez usługę programu MIM.
 - **Usługa monitorowania PAM** oraz **usługa składników PAM**: dwie usługi służące do zarządzania kontami uprzywilejowanymi i wspomagające usługę AD lasu PRIV w cyklu członkostwa w grupach.
 - **Polecenia cmdlet programu PowerShell**: umożliwiają wprowadzanie do usługi MIM oraz usługi AD lasu PRIV użytkowników i grup odpowiadających użytkownikom i grupom w lesie CORP, dla administratorów funkcji PAM oraz użytkowników końcowych wymagających przywilejów konta administracyjnego na żądanie.
-- **Interfejs API REST i portal przykładowy PAM**: dla deweloperów chcących włączyć program MIM do scenariusza funkcji PAM z uwzględnieniem klientów niestandardowych na potrzeby podnoszenia uprawnień, bez konieczności korzystania z programu PowerShell lub protokołu SOAP. Korzystanie z interfejsu API REST przedstawiono na podstawie przykładowej aplikacji sieci Web.
+- **Interfejs API REST i portal przykładowy PAM**: dla deweloperów chcących włączyć program MIM do scenariusza funkcji PAM z uwzględnieniem klientów niestandardowych na potrzeby podnoszenia uprawnień, bez konieczności korzystania z programu PowerShell lub protokołu SOAP. Korzystanie z interfejsu API REST przedstawiono na podstawie przykładowej aplikacji internetowej.
 
 Po zainstalowaniu i skonfigurowaniu każda grupa utworzona w lesie PRIV w procesie migracji jest grupą zabezpieczeń opartą na historii identyfikatora SID (lub w późniejszej aktualizacji systemu Windows Server vNext, grupą obcego podmiotu zabezpieczeń), dublującą grupę SID w oryginalnym lesie CORP. Ponadto członkowie dodani do tych grup w lesie PRIV przez usługę MIM zostaną objęci ograniczeniem czasowym.
 

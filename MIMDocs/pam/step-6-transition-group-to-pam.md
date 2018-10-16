@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a7359c664e1c4aeacbc571242c2b348be186a89
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: f449ca475d8b1fe72203bf4cd3b5dd3c65329d13
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289588"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49332939"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 
@@ -67,9 +67,9 @@ Te polecenia cmdlet należy uruchomić jeden raz dla każdej grupy i dla poszcze
     Polecenie **New-PAMGroup** przyjmuje następujące parametry:
 
      -   Nazwa domeny lasu CORP w postaci NetBIOS  
-     -   Nazwa grupy, aby skopiować z tej domeny  
+     -   Nazwa grupy, które można skopiować z tej domeny  
      -   Nazwa NetBIOS kontrolera domeny lasu CORP  
-     -   Poświadczenia użytkownika administratora domeny w lesie Corp.  
+     -   Poświadczenia administratora domeny w lesie Corp.  
 
 5. (Opcjonalnie) Na kontrolerze domeny CORPDC usuń konto użytkownika Jen z grupy **CONTOSO CorpAdmins**, jeśli jest ono nadal tam obecne.  To działanie ma na celu jedynie pokazanie, jak można kojarzyć uprawnienia z kontami utworzonymi w lesie PRIV.
 
