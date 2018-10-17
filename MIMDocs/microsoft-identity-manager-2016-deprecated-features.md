@@ -2,20 +2,19 @@
 title: Program MIM przestarzałe funkcje i planowania w przyszłości | Dokumentacja firmy Microsoft
 description: Ten artykuł dokumentów przestarzałe funkcje programu MIM Identity Manager 2016 SP1.
 keywords: ''
-author: barclayn
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: a7acf38f877b34582acf83c636a866b35ecf733a
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: fcf9ec8387761b6f154a95d6100ef54a12d4caf8
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334282"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358443"
 ---
 # <a name="deprecated-features"></a>Przestarzałe funkcje
 

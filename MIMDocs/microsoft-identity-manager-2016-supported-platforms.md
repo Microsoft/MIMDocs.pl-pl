@@ -2,23 +2,22 @@
 title: Obsługiwane platformy oprogramowania | Dokumentacja firmy Microsoft
 description: Produkty i wersje zgodne z poszczególnymi składnikami programu MIM 2016
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: davidste
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 04/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 0bb242c6f8a25a2a0b0f6827e146964635d47206
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333296"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358690"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 

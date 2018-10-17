@@ -2,20 +2,19 @@
 title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
 description: Przejdź przez proces tworzenia użytkowników w usłudze ADDS przy użyciu programu Microsoft Identity Manager 2016
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 032f3cb68214dcdb7008b4b771a8b66c05ebe890
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 88473df88271937b07450df409353c0b3ca08684
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333976"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358792"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 

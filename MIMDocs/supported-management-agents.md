@@ -2,22 +2,21 @@
 title: Obsługiwane łączniki | Dokumentacja firmy Microsoft
 description: Łączniki umożliwiają zarządzanie przesyłaniem danych między usługą MIM i z połączonych źródeł danych.
 keywords: ''
-author: fimguy
-ms.author: fimguy
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 1/24/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5b56ad34c0549f21568585fb1a25d9a3f3fc6d00
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 16dba460d9b5f9ce81076f8f883c352b1e8f4a81
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334384"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358430"
 ---
 # <a name="connect-to-your-directories"></a>Łączenie z katalogami
 

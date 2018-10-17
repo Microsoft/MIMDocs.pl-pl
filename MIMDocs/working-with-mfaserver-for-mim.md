@@ -2,20 +2,19 @@
 title: Aktywacji funkcji PAM lub scenariuszy funkcji samoobsługowego resetowania HASEŁ za pomocą zestawu SDK usługi Azure Multi-Factor Authentication Server | Dokumentacja firmy Microsoft
 description: Konfigurowanie zestawu SDK usługi Azure Multi-Factor Authentication Server jako drugą warstwę zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management i samoobsługowego resetowania hasła.
 keywords: ''
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 868e5c543fb55257f7de903eade69529d90ec895
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: b92a217dd86d9e4de177ebec9ecec7c76222d7b1
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334367"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358282"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Aktywacji funkcji PAM lub funkcji samoobsługowego resetowania HASEŁ za pomocą usługi Azure Multi-Factor Authentication
 Ten dokument zawiera opis sposobu konfiguracji serwera Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy aktywują role w uprawnienia dostępu do zarządzania lub samoobsługowego resetowania hasła.

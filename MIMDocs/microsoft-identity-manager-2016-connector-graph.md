@@ -4,18 +4,17 @@ author: fimguy
 description: Łącznik programu Microsoft Identity Manager dla programu Microsoft Graph umożliwia użytkownikowi zewnętrznemu zarządzania cyklem życia konta usługi AD. W tym scenariuszu organizacja ma zaproszenie gości do swojego katalogu usługi Azure AD i chce udzielić tych dostępu gości do uwierzytelniania Windows-Integrated lokalnego lub aplikacje oparte na protokołu Kerberos
 keywords: ''
 ms.author: billmath
-manager: bhu
+manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 121b4f3759ef57a9b80d0c1f68c605542e72ae24
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333602"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358656"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Łącznik programu Microsoft Identity Manager dla programu Microsoft Graph
 =======================================================================================

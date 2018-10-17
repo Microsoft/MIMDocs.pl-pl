@@ -3,21 +3,20 @@ title: Instalowanie usługi i portalu programu Microsoft Identity Manager | Doku
 description: Pobierz kroki konfigurowania i instalowania usługi i portalu programu MIM dla programu Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldiwn
+ms.author: billmath
+manager: mtillman
 ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f975bf659f285418380d52db5724bcbb46bbcf46
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333738"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358622"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 

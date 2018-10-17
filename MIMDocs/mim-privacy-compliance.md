@@ -2,21 +2,20 @@
 title: Obsługa danych programu Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: Zrozumienie danych programu Microsoft Identity Manager, obsługi do identyfikowania i raporty dotyczące danych w środowisku, podjąć działania w danym system na podstawie funkcji operacyjnych i wymagań.
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: mbaldiwn
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 05/22/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 4cb17b6e30a59c8acb3871e694ed4df72538deab
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334044"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358724"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Obsługa danych programu Microsoft Identity Manager 
 

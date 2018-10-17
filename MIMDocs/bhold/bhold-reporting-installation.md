@@ -2,20 +2,19 @@
 title: Instalacja raportowania pakietu BHOLD | Dokumentacja firmy Microsoft
 description: Moduł raportowania pakietu BHOLD umożliwia generowanie raportów dotyczących ról i zasad autoryzacji
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 7c95529bf1cd227bee8f1dde11c94a810b44fc8c
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 1f69f9f08cba24898509c771e4477b81c5ed272f
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332259"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358012"
 ---
 # <a name="bhold-reporting-installation"></a>Instalacja raportowania pakietu BHOLD
 

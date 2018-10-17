@@ -3,21 +3,20 @@ title: Przewodnik topologii wdrożenia | Dokumentacja firmy Microsoft
 description: W tym artykule opisano składniki programu MIM 2016 i przedstawiono sugestie dotyczące wdrażania ich w środowisku docelowym.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f59b40f79c58ea5e34fbe090ac9c4a224c561654
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 42562e92b3fe0daa63110d33d8952a3a1fc3de17
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333279"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358084"
 ---
 # <a name="topology-considerations"></a>Kwestie dotyczące topologii
 Składniki programu Microsoft Identity Manager (MIM) można wdrożyć na tym samym serwerze lub na wielu serwerach w wielu konfiguracjach. Wybór topologii wdrożenia wpływa na wydajność programu MIM. W tym artykule przedstawiono różne topologie wdrożenia, które można zastosować.
