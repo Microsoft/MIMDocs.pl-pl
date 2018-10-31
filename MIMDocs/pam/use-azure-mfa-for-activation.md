@@ -9,14 +9,13 @@ manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379943"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ Aby można było używać usługi Azure MFA z programem MIM, potrzebne są:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Tworzenie dostawcy usługi Azure MFA
 
-W tej sekcji służy do konfigurowania dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory.  Jeśli korzystasz już z usługi Azure MFA (autonomicznej lub skonfigurowanej za pomocą usługi Azure Active Directory Premium), przejdź do następnej sekcji.
+W tej sekcji służy do konfigurowania dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory.  Jeśli korzystasz już z usługi Azure MFA (autonomicznej lub skonfigurowanej za pomocą usługi Azure Active Directory Premium), przejdź do następnej sekcji.
 
 1.  Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
@@ -71,7 +70,7 @@ Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dl
 
 ![Pobieranie zestawu SDK usługi Multi-Factor Authentication — zrzut ekranu](media/PAM-Azure-MFA-Activation-Image-1.png)
 
-7.  Skopiuj wynikowy plik ZIP do każdego systemu, w którym jest zainstalowana usługa MIM. 
+7.  Skopiuj wynikowy plik ZIP do każdego systemu, w którym jest zainstalowana usługa MIM. 
 
 >[!NOTE]
 > Plik ZIP zawiera klucz używany do uwierzytelniania w usłudze Azure MFA.

@@ -2,20 +2,19 @@
 title: Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016 | Microsoft Docs
 description: ''
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/01/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: def1be943b4f2f919a079e3fc4aa544af10463aa
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50380196"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
 

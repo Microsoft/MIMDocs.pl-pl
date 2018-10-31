@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: d3c0b6677c42d4f14d4f6255a2a661d3ef23661d
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
+ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358299"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237234"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konwersja określonych usług programu MIM na gMSA
 
@@ -82,9 +82,9 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
     -   Na serwerze, który usługa synchronizacji jest zainstalowana na zlokalizuj narzędzia Zarządzanie kluczami usługi synchronizacji
 
-    -   Domyślnie ** eksportu klucza zestawu ** jest już wybrany
+    -   Domyślnie **wyeksportować zestawu kluczy** jest już wybrany
 
-    -   Kliknij pozycję **dalej**
+    -   Kliknij pozycję **dalej**
 
     -   Użytkownik będzie teraz monit o wprowadzenie istniejące informacje o koncie synchronizacji
 
@@ -96,13 +96,13 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
         -   Domena - domeny od siebie z konta usługi synchronizacji
 
-    -   Kliknij pozycję **dalej**
+    -   Kliknij pozycję **dalej**
 
     -   Jeśli coś niepoprawnie, zostanie wyświetlony następujący błąd
 
     -   Teraz zostały pomyślnie wprowadzone informacje o koncie, zostaną wyświetlone z opcją Zmień lokalizację docelową (lokalizacja pliku eksportu), klucza szyfrowania kopii zapasowych
 
-        -   Domyślnie jest lokalizacja pliku eksportu **C:\\Windows\\system32**\\miiskeys 1.bin.
+        -   Domyślnie jest lokalizacja pliku eksportu **C:\\Windows\\system32**\\miiskeys 1.bin.
 
 4. Zainstaluj usługi synchronizacji programu Microsoft Identity Manager z dodatkiem SP1, kompilację 4.4.1302.0. Możesz z nich można znaleźć w Centrum pobierania licencji woluminu lub Centrum pobierania MSDN. Po zakończeniu instalacji upewnij się, Zapisz miiskeys.bin zestawu kluczy.
 
@@ -152,7 +152,7 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **UWAGA**.  Znany problem, który usług korzystających z kontem zarządzanym zawieszanie się po ponownym uruchomieniu serwera z powodu usługi dystrybucji kluczy firmy Microsoft nie jest uruchomiona po ponownym uruchomieniu Windows. Nie można uruchomić usługi, a Windows mogła nie zostać ponownie uruchomiona zbyt. Problem polega powtarzalne, co najmniej w systemie Windows Server 2012 R2. Obejście tego problemu jest uruchomienie polecenia 
+3.  **UWAGA**.  Znany problem, który usług korzystających z kontem zarządzanym zawieszanie się po ponownym uruchomieniu serwera z powodu usługi dystrybucji kluczy firmy Microsoft nie jest uruchomiona po ponownym uruchomieniu Windows. Nie można uruchomić usługi, a Windows mogła nie zostać ponownie uruchomiona zbyt. Problem polega powtarzalne, co najmniej w systemie Windows Server 2012 R2. Obejście tego problemu jest uruchomienie polecenia 
 
 -   **kdssvc triggerinfo sc start/networkon**
 

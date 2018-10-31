@@ -5,16 +5,16 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/02/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: b92a217dd86d9e4de177ebec9ecec7c76222d7b1
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379798"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Aktywacji funkcji PAM lub funkcji samoobsługowego resetowania HASEŁ za pomocą usługi Azure Multi-Factor Authentication
 Ten dokument zawiera opis sposobu konfiguracji serwera Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy aktywują role w uprawnienia dostępu do zarządzania lub samoobsługowego resetowania hasła.
@@ -22,7 +22,7 @@ Ten dokument zawiera opis sposobu konfiguracji serwera Azure MFA jako drugiej wa
 > [!IMPORTANT]
 > Ze względu na ogłoszenie wycofywania z usługi Azure Multi-Factor Authentication uwierzytelnianie Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów do dnia wycofania 14 listopada 2018 r. Nowych klientów i obecni klienci nie będzie można już pobrać zestaw SDK, za pośrednictwem klasycznego portalu Azure. Możesz pobrać będzie konieczne skontaktowanie się z obsługą klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA. <br> Zespół projektowy Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK usługi Azure Multi-Factor Authentication Server.
 
-Poniższy artykuł opisują aktualizację konfiguracji i czynności, aby umożliwić prostego przełącznika z usługi Azure MFA z zestawu SDK do usługi Azure Multi-Factor Authentication uwierzytelnianie serwera SDK wydana jako to zostaną uwzględnione w nadchodzącej poprawce zobacz [Historia wersji ](/reference/version-history.md) dla anonsów. 
+Poniższy artykuł opisują aktualizację konfiguracji i czynności, aby umożliwić prostego przełącznika z usługi Azure MFA z zestawu SDK do usługi Azure Multi-Factor Authentication uwierzytelnianie serwera SDK wydana jako to zostaną uwzględnione w nadchodzącej poprawce zobacz [Historia wersji ](./reference/version-history.md) dla anonsów. 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -33,7 +33,7 @@ Aby można było używać usługi Azure Multi-Factor Authentication z programem 
 - Instalacja jest już przy użyciu zestawu SDK usługi Azure MFA
 - Licencje usługi Azure Active Directory Premium dla użytkowników kandydujących lub alternatywne metody licencjonowania usługi Azure MFA
 - Numery telefonów wszystkich użytkowników kandydujących
-- Poprawka programu MIM 4.5. lub zobacz większy [historię wersji](/reference/version-history.md) zapowiedzi
+- Poprawka programu MIM 4.5. lub zobacz większy [historię wersji](./reference/version-history.md) zapowiedzi
 
 ## <a name="azure-multi-factor-authentication-server-configuration"></a>Konfiguracja serwera usługi Azure Multi-Factor Authentication 
 > [!NOTE] 

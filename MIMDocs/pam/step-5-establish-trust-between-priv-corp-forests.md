@@ -2,22 +2,21 @@
 title: Wdrożenie usługi PAM — krok 5 — połączenie lasów | Dokumentacja firmy Microsoft
 description: Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki czemu uprzywilejowani użytkownicy w lesie PRIV będą mieli w dalszym ciągu dostęp do zasobów w lesie CORP.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a18ddac2c324cbefa0c87e24cec654175c9021dc
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379771"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
