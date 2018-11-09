@@ -1,4 +1,4 @@
-# [Poznawanie i eksplorowanie](microsoft-identity-manager-2016.md)
+# [Przegląd](microsoft-identity-manager-2016.md)
 ## [Co to jest program MIM 2016?](microsoft-identity-manager-2016.md)
 ## [Co nowego w dodatku Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
 ### [Skrypty wdrażania usługi PAM w programie MIM2016 SP1](sp1-deployment-scripts.md)

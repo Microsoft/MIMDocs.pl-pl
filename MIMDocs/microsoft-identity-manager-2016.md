@@ -1,49 +1,49 @@
 ---
-title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
+title: Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: Program MIM obejmuje funkcje zarządzania dostępem programu FIM 2010 oraz pomaga w zarządzaniu użytkownikami, poświadczeniami, zasadami i dostępem w organizacji.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/02/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: abbd661fa1bef13ad92b916f8485934390905bf4
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.technology: security
+ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
+ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358316"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265269"
 ---
-# <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
+# <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nowości i aktualizacje
 
-Program Microsoft Identity Manager (MIM) 2016 korzysta z funkcji zarządzania tożsamościami i dostępem, uwzględnionych w programie [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Podobnie jak jego poprzednik, program MIM ułatwia zarządzanie użytkownikami, poświadczeniami, zasadami i dostępem w organizacji.  Ponadto program MIM 2016 zapewnia obsługę hybrydową, funkcje zarządzania dostępem uprzywilejowanym i obsługę nowych platform.
+Program Microsoft Identity Manager (MIM) 2016 opiera się na możliwości zarządzania tożsamościami i dostępem z programu Forefront Identity Manager. Podobnie jak jego poprzednik, program MIM ułatwia zarządzanie użytkownikami, poświadczeniami, zasadami i dostępem w organizacji.  Ponadto program MIM 2016 zapewnia obsługę hybrydową, funkcje zarządzania dostępem uprzywilejowanym i obsługę nowych platform.
 
-Oprócz istniejące funkcje zarządzania tożsamościami, objęte [FIM](https://technet.microsoft.com/library/jj133868). Program MIM 2016 zawiera nowe funkcje i ulepszenia, takich jak:
+Bieżąca wersja w ramach wsparcia jest program MIM 2016 Service Pack 1 (SP1).  Ta wersja w sierpniu 2017 r uwzględnione aktualizacje z portalem MIM, scenariusza funkcji PAM i dodano obsługę nowych platform.  Klienci korzystający z programu FIM ani MIM wersje poprzedzające programu MIM 2016 z dodatkiem SP1, należy uaktualnić do programu MIM 2016 z dodatkiem SP1 lub nowszej poprawki.  Przeczytaj więcej na temat [uaktualnianie do programu MIM 2016 z dodatkiem SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
 
-- Zarządzanie tożsamościami uprzywilejowanymi
-- Nowa funkcja Zarządzanie certyfikatami
-  - [Dokumentacja interfejsu API REST zarządzania certyfikatami](./reference/certificate-management-rest-api-reference.md)
-  - Obsługę topologii z wieloma lasami.
-  - [Aplikacja Windows, dla wirtualnej karty inteligentnej](working-with-mim-certificate-manager.md)
-  - Zaktualizowane zdarzenia oraz funkcje do rozwiązywania problemów. 
-- [Scenariusze samoobsługi](working-with-self-service-password-reset.md) uwzględniają teraz odblokowywanie kont i usługi Azure MFA bramy (uwierzytelniania wieloskładnikowego) do resetowania hasła.
+## <a name="updates-since-mim-2016-sp1"></a>Aktualizacje, ponieważ program MIM 2016 z dodatkiem SP1
 
-## <a name="hybrid-experience"></a>Obsługa hybrydowa
+Firma Microsoft regularnie dostarcza aktualizacje do programu MIM, w tym ulepszenia dla żądań klientów i poprawki błędów w cyklu tworzenia wydań bieżące.
 
-Microsoft Identity Manager 2016 działa równolegle [usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) aby zapewnić kontrolę nad całym środowiskiem użytkownika. Raportowanie hybrydowe w usłudze Azure AD umożliwia wyświetlanie danych z chmury i danych lokalnych w jednym miejscu. Ponadto [portalu samoobsługowego resetowania hasła](working-with-self-service-password-reset.md) obsługuje usługa Azure Multi-Factor authentication (MFA).
+### <a name="major-new-and-updated-scenarios"></a>Główne scenariusze nowe i zaktualizowane
 
-## <a name="privileged-identity-management"></a>Zarządzanie tożsamościami uprzywilejowanymi
+- [Współpracy usługi Azure AD B2B przy użyciu serwera proxy programu MIM i aplikacji na platformie Azure jest dostępna w wersji zapoznawczej](microsoft-identity-manager-2016-graph-b2b-scenario.md), ostatni zaktualizowano kwietnia 2018 r.
+- [Raportowanie programu MIM hybrydowe jest ogólnie](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), ostatni zaktualizowano lutego 2018 r.
+- [Listę przestarzałych funkcji MIM zmian](microsoft-identity-manager-2016-deprecated-features.md), ostatni zaktualizowano lutego 2018 r.
 
-Zarządzanie tożsamościami uprzywilejowanymi umożliwia kontrolowanie dostępu administracyjnego i zarządzanie nim dzięki tymczasowemu, opartemu na zadaniach dostępowi do ważnych zasobów. Oznacza to, że można udzielać użytkownikom tylko niezbędnych uprawnień, co ogranicza ryzyko uzyskania pełnego dostępu administracyjnego przez osobę atakującą. Ponadto zarządzanie tożsamościami uprzywilejowanymi umożliwia wyodrębnianie i izolowanie kont administracyjnych z istniejących lasów usługi Active Directory.
+### <a name="recent-software-releases"></a>Najnowsze wersje oprogramowania
 
-Program MIM obsługuje lokalne rozwiązanie zarządzania tożsamościami uprzywilejowanymi do zarządzania usługą Active Directory. Aby rozpocząć, [skorzystaj z funkcji zarządzania dostępem uprzywilejowanym](./pam/privileged-identity-management-for-active-directory-domain-services.md).
+- [Zwalnia łącznika usługi MIM](./reference/microsoft-identity-manager-2016-connector-version-history.md), ostatni zaktualizowano marca 2018 r.
+- [Usługa synchronizacji programu MIM, usługa, portalu, CM, dodatki i klient zwalnia](./reference/version-history.md) Ostatnia aktualizacja: listopad 2017
+- [Zwalnia modułów MIM BHOLD](./reference/version-bhold-history.md) Ostatnia aktualizacja: wrzesień 2017
+
+
+
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-- Program Microsoft Identity Manager jest nadal ściśle związany ze swoim poprzednikiem, programem Forefront Identity Manager. Jeśli nadal korzystasz z programu FIM lub chcesz zapoznać się z dodatkową dokumentacją, zobacz [plan dokumentacji programu FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
-- [Zagadnienia dotyczące wdrażania programu MIM topologii](topology-considerations.md) w tym artykule przedstawiono różne topologie wdrożenia, które można rozważyć wykonania.
-- [Przewodnik planowania pojemności](capacity-planning-guide.md) można użyć tego przewodnika oraz środowisk testowych, aby zrozumieć odpowiedni zakres dla danego wdrożenia.
+Dowiedz się więcej w scenariuszach dodanych w programie MIM 2016 i wcześniej w [programu Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
+
+Przeczytaj więcej dokumentacji na temat wdrażania programu MIM i najnowszej wersji w [plan dokumentacji programu MIM](https://docs.microsoft.com/en-us/microsoft-identity-manager/).
+
