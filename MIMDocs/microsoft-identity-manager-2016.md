@@ -9,18 +9,18 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
-ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
+ms.openlocfilehash: 67064d930935f0091c14c64bf271dd0e1ded6bb4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265269"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718233"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 nowości i aktualizacje
 
 Program Microsoft Identity Manager (MIM) 2016 opiera się na możliwości zarządzania tożsamościami i dostępem z programu Forefront Identity Manager. Podobnie jak jego poprzednik, program MIM ułatwia zarządzanie użytkownikami, poświadczeniami, zasadami i dostępem w organizacji.  Ponadto program MIM 2016 zapewnia obsługę hybrydową, funkcje zarządzania dostępem uprzywilejowanym i obsługę nowych platform.
 
-Bieżąca wersja w ramach wsparcia jest program MIM 2016 Service Pack 1 (SP1).  Ta wersja w sierpniu 2017 r uwzględnione aktualizacje z portalem MIM, scenariusza funkcji PAM i dodano obsługę nowych platform.  Klienci korzystający z programu FIM ani MIM wersje poprzedzające programu MIM 2016 z dodatkiem SP1, należy uaktualnić do programu MIM 2016 z dodatkiem SP1 lub nowszej poprawki.  Przeczytaj więcej na temat [uaktualnianie do programu MIM 2016 z dodatkiem SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
+Bieżąca wersja w ramach wsparcia jest program MIM 2016 Service Pack 1 (SP1).  Ta wersja w sierpniu 2017 r uwzględnione aktualizacje z portalem MIM, scenariusza funkcji PAM i dodano obsługę nowych platform.  Klienci korzystający z programu FIM ani MIM wersje poprzedzające programu MIM 2016 z dodatkiem SP1, należy uaktualnić do programu MIM 2016 z dodatkiem SP1 lub nowszej poprawki.  Przeczytaj więcej na temat [uaktualnianie do programu MIM 2016 z dodatkiem SP1](./reference/version-history.md).
 
 ## <a name="updates-since-mim-2016-sp1"></a>Aktualizacje, ponieważ program MIM 2016 z dodatkiem SP1
 

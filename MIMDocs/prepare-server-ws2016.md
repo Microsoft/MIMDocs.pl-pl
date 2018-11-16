@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 49e549913a5fd87528df2205b8d5b0a83f3d2b24
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358248"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718337"
 ---
-# <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Konfigurowanie serwerów zarządzania tożsamościami: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [«Przygotowywanie domeny](preparing-domain.md)
@@ -39,9 +39,9 @@ Zacznij od maszynę systemu Windows Server 2016 z co najmniej 8 12 GB pamięci R
 
 1. Zaloguj się na nowym komputerze jako administrator.
 
-2. Za pomocą Panelu sterowania nadaj komputerowi statyczny adres IP w sieci. Skonfiguruj ten interfejs sieciowy do wysyłania zapytań DNS do adresu IP kontrolera domeny w poprzednim kroku, a następnie ustaw nazwę komputera na **CORPSERVICE**.  Wymaga to ponownego uruchomienia serwera.
+2. Za pomocą Panelu sterowania nadaj komputerowi statyczny adres IP w sieci. Skonfiguruj ten interfejs sieciowy do wysyłania zapytań DNS do adresu IP kontrolera domeny w poprzednim kroku, a następnie ustaw nazwę komputera na **CORPSERVICE**.  Ta operacja wymaga ponownego uruchomienia serwera.
 
-3. Otwórz Panel sterowania, a następnie dołącz komputer do domeny, który został skonfigurowany w ostatnim kroku *contoso.com*.  Wymaga to też podania nazwy użytkownika i poświadczeń administratora domeny, takich jak *Contoso\Administrator*.  Gdy zostanie wyświetlony komunikat powitalny, zamknij okno dialogowe i ponownie uruchom serwer.
+3. Otwórz Panel sterowania, a następnie dołącz komputer do domeny, który został skonfigurowany w ostatnim kroku *contoso.com*.  Ta operacja obejmuje podanie nazwy użytkownika i poświadczeń administratora domeny, takich jak *Contoso\Administrator*.  Gdy zostanie wyświetlony komunikat powitalny, zamknij okno dialogowe i ponownie uruchom serwer.
 
 4. Zaloguj się do komputera *CORPSERVICE* jako konto domeny z administratorem komputera lokalnego, takie jak *Contoso\MIMINSTALL*.
 
@@ -69,13 +69,13 @@ Zacznij od maszynę systemu Windows Server 2016 z co najmniej 8 12 GB pamięci R
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 > [!NOTE] 
-> W zależności od konfiguracji jednego server(all-in-one) lub serwer rozproszonych, które należy dodać oparte na roli komputera członkowskiego, takich jak serwer synchronizacji. 
+> W zależności od usługi konfiguracji, pojedynczy server(all-in-one) lub serwerów rozproszonych, które należy dodać na podstawie roli komputera członkowskiego, takich jak serwer synchronizacji. 
 
 1. Uruchom program Zasady zabezpieczeń lokalnych.
 
 2. Przejdź do lokalizacji **Zasady lokalne > Przypisywanie praw użytkownika**.
 
-3. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie w trybie usługi** i wybierz polecenie **Właściwości**.
+3. W okienku szczegółów kliknij prawym przyciskiem myszy **Zaloguj się jako usługa**i wybierz **właściwości**.
 
     ![Obraz programu Zasady zabezpieczeń lokalnych](media/MIM-DeployWS3.png)
 
@@ -85,13 +85,13 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 6.  W okienku szczegółów kliknij prawym przyciskiem myszy **odmowa dostępu do tego komputera z sieci**i wybierz **właściwości**. >
 
-[!NOTE] Jeśli rolę oddzielnych serwerów ten krok spowoduje awarię niektórych funkcjonalność, takich jak funkcja samoobsługowego resetowania HASEŁ.
+[!NOTE] Oddzielenie serwerów roli spowoduje awarię niektórych funkcji, takich jak funkcji samoobsługowego resetowania HASEŁ.
 
 7. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 
 8. Kliknij przycisk **OK**, aby zamknąć okno **Odmowa dostępu do tego komputera z sieci: właściwości**.
 
-9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmowa logowania lokalnego** i wybierz polecenie **Właściwości**.
+9. W okienku szczegółów kliknij prawym przyciskiem myszy **Odmowa logowania lokalnego**i wybierz **właściwości**.
 
 10. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 

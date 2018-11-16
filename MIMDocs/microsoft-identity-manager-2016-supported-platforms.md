@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 077a0330e3a9169583331854525d19cee2d9eaf4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358690"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718308"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 
@@ -47,7 +47,7 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | **Portale resetowania hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Przeglądarka sieci Web | Wszystkie główne obsługiwane przeglądarki |
 | **Dodatki i rozszerzenia programu MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Integracja z programem Outlook (opcjonalnie) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (w systemie Windows 10) * |
+| | Integracja z programem Outlook (opcjonalnie) | Program Outlook 2010 (na Windows z wyjątkiem Szybka instalacja)<br/>Program Outlook 2013 (w systemie Windows, z wyjątkiem Szybka instalacja) <br/> Outlook 2016 (w systemie Windows 10, z wyjątkiem Szybka instalacja) * |
 | | Polecenia cmdlet obiektu żądającego programu PowerShell PAM (opcjonalnie) | Windows 8.1<br/>Windows 10 |
 | **Zarządzanie certyfikatami programu MIM** (integracja serwera i urzędu certyfikacji) | Serwer systemu Windows | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Urząd certyfikacji | Windows Server 2008 R2 z dodatkiem SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
