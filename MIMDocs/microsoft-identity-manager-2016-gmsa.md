@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
-ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
+ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237234"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825777"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konwersja określonych usług programu MIM na gMSA
 
@@ -84,7 +84,7 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
     -   Domyślnie **wyeksportować zestawu kluczy** jest już wybrany
 
-    -   Kliknij pozycję **dalej**
+    -   Kliknij pozycję **dalej**
 
     -   Użytkownik będzie teraz monit o wprowadzenie istniejące informacje o koncie synchronizacji
 
@@ -96,7 +96,7 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
         -   Domena - domeny od siebie z konta usługi synchronizacji
 
-    -   Kliknij pozycję **dalej**
+    -   Kliknij pozycję **dalej**
 
     -   Jeśli coś niepoprawnie, zostanie wyświetlony następujący błąd
 
@@ -142,7 +142,7 @@ Pierwszym krokiem na kontrolerze domeny systemu windows
 
     -   Upewnij się, że nazwy SPN i delegowania gMSA
         -   Set-ADServiceAccount-Identity \<konta\> - ServicePrincipalNames \@{Dodaj = "\<SPN\>"}
-        -   Delegowanie
+        -   Delegacja
             -   Set-ADServiceAccount-Identity \<gsmaaccount\> - TrustedForDelegation \$true
         -   Delegowanie ograniczone
             -   \$delspns = "http/mim", "http/mim.contoso.com"

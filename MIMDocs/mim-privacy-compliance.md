@@ -5,21 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/22/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825794"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Obsługa danych programu Microsoft Identity Manager 
 
-W tym artykule przedstawiono wskazówki dotyczące sposobu organizacja będzie mogła za pośrednictwem wyszukiwania, usuwanie, aktualizacja i raport podejmowanie decyzji dotyczących operacji potrzebnych firmie rozwiązaniem, lub wdrożyć na wiele połączonych źródeł danych. Przed podjęciem decyzji, daną metodę, usuwanie i aktualizowanie zrozumienie bieżącego projektu i konfiguracji systemu identity manager (MIM) jest krytyczna. Poniżej przedstawiono kilka scenariuszy klientów należy wziąć pod uwagę i odpowiedzieć na następujące pytania: 
+W tym artykule przedstawiono wskazówki, w jaki sposób organizacje mogą decyzje, które można zastosować na wiele połączonych źródeł danych.  Można to osiągnąć za pomocą wyszukiwania, usuwanie, aktualizacja i operacji tworzenia raportów.  Przed podjęciem decyzji, daną metodę, usuwanie lub aktualizacja, ważne jest zrozumienie bieżącego projektu i konfiguracji systemu identity manager (MIM). 
+
+Poniżej przedstawiono kilka scenariuszy klientów należy wziąć pod uwagę i odpowiedzieć na następujące pytania: 
 
 - Jakie dane potrzebujesz możesz Zarządzanie tożsamościami pomagające w procesie biznesowym?
 - Bieżące dane gdzie mają być przechowywane w programie MIM?

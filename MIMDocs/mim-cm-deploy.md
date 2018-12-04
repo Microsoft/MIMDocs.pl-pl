@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 01c5c8357c8cb0424bd38b61836919f5c2c3e96a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7ab76d386d8633de8919167c6b8f26b5137323e5
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825845"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Wdrażanie Menedżera certyfikatów programu Microsoft Identity Manager 2016 (MIM CM)
 
@@ -58,7 +58,7 @@ Na poniższym diagramie przedstawiono przykład typ środowiska, która może by
 
         - Uprawnienia bazy danych
 
-2. wdrażania
+2. Wdrażanie
 
 ## <a name="pre-deployment-steps"></a>Kroki przed wdrożeniem
 
@@ -493,15 +493,15 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do **domeny Administratorzy, 
     >[!NOTE] 
     >Nie klikaj przycisk Zakończ, aż do zakończenia wykonywania Kreatora konfiguracji. Rejestrowanie dla kreatora można znaleźć tutaj: **%programfiles%\\Microsoft Forefront Identity Management\\2010\\zarządzania certyfikatami\\config.log**
 
-17. Kliknij przycisk **Finish** (Zakończ).
+17. Kliknij przycisk **Zakończ**.
 
     ![Ukończono działanie kreatora MIM CM](media/mim-cm-deploy/image033.png)
 
 18. Zamknij wszystkie otwarte okna.
 
-19. Dodaj https://cm.contoso.com/certificatemanagement do strefy Lokalny intranet w przeglądarce.
+19. Dodaj `https://cm.contoso.com/certificatemanagement` do strefy Lokalny intranet w przeglądarce.
 
-20. Odwiedź witrynę z serwera CORPCM https://cm.contoso.com/certificatemanagement  
+20. Odwiedź witrynę z serwera CORPCM `https://cm.contoso.com/certificatemanagement`  
 
     ![Diagram](media/mim-cm-deploy/image035.png)
 
