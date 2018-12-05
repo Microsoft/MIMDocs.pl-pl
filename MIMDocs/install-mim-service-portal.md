@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358622"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825811"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
@@ -68,11 +68,11 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 12. Podaj wartość *CORPIDM* (nazwa tego komputera) jako adres serwera usługi programu MIM dla portalu programu MIM.
 
-13. Określ *http://mim.contoso.com* programu SharePoint adres URL zbioru witryn.
+13. Określ `*http://mim.contoso.com*` programu SharePoint adres URL zbioru witryn.
 
-14. Określ *http://passwordregistration.contoso.com* jako adres URL rejestracji haseł port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
+14. Określ `*http://passwordregistration.contoso.com*` jako adres URL rejestracji haseł port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
 
-15. Określ *http://passwordreset.contoso.com* jako adres URL resetowania hasła port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
+15. Określ `*http://passwordreset.contoso.com*` jako adres URL resetowania hasła port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
 
 16. Zaznacz pole wyboru umożliwiające otwarcie portów 5725 i 5726 w zaporze i pole wyboru umożliwiające zezwolenie wszystkim uwierzytelnionym użytkownikom na dostęp do portalu programu MIM.
 
@@ -90,7 +90,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 ## <a name="configure-mim-password-reset-portal"></a>Konfigurowanie portalu resetowania haseł programu MIM
 
-1. Ustaw nazwę konta usługi dla rejestracji SSPR *Contoso\MIMSSPR* i jego hasło <em>Pass@word1</em>.
+1. Ustaw nazwę konta usługi dla rejestracji SSPR *Contoso\MIMSSPR* i jego hasło <em> Pass@word1 </em>.
 
 2. Określ *passwordreset.contoso.com* jako nazwę hosta dla portalu resetowania haseł programu MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
 
@@ -106,7 +106,7 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na *http://mim.contoso.com/identitymanagement*. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na * http://mim.contoso.com/identitymanagement *. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
 
     - Jeśli to konieczne, Uwierzytelnij się jako *contoso\miminstall* do programu Internet Explorer.
 
