@@ -90,7 +90,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 ## <a name="configure-mim-password-reset-portal"></a>Konfigurowanie portalu resetowania haseł programu MIM
 
-1. Ustaw nazwę konta usługi dla rejestracji SSPR *Contoso\MIMSSPR* i jego hasło <em> Pass@word1 </em>.
+1. Ustaw nazwę konta usługi dla rejestracji SSPR *Contoso\MIMSSPR* i jego hasło <em>Pass@word1</em>.
 
 2. Określ *passwordreset.contoso.com* jako nazwę hosta dla portalu resetowania haseł programu MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
 
@@ -106,7 +106,7 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na * http://mim.contoso.com/identitymanagement *. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na *http://mim.contoso.com/identitymanagement*. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
 
     - Jeśli to konieczne, Uwierzytelnij się jako *contoso\miminstall* do programu Internet Explorer.
 
