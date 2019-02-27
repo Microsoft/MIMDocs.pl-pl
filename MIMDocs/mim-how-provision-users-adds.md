@@ -1,5 +1,5 @@
 ---
-title: Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
+title: Microsoft Identity Manager 2016 aprowizacji użytkowników w usłudze AD | Dokumentacja firmy Microsoft
 description: Przejdź przez proces tworzenia użytkowników w usłudze ADDS przy użyciu programu Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
@@ -9,16 +9,16 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 88473df88271937b07450df409353c0b3ca08684
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
+ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358792"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852667"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
-Dotyczy: programu Microsoft Identity Manager 2016 SP1 (MIM)
+Dotyczy: Program Microsoft Identity Manager 2016 z dodatkiem SP1 (MIM)
 
 Jednym z podstawowych wymagań dotyczących systemu zarządzania tożsamościami jest możliwość aprowizacji zasobów do systemu zewnętrznego.
 
@@ -121,14 +121,14 @@ Scenariusz opisany w tym przewodniku składa się z bloków konstrukcyjnych poka
 
 W tej sekcji znajdziesz instrukcje dotyczące zasobów spoza środowiska programu MIM, które należy utworzyć.
 
-### <a name="step-1-create-the-ou"></a>Krok 1. Tworzenie jednostki organizacyjnej
+### <a name="step-1-create-the-ou"></a>Krok 1: Tworzenie jednostki Organizacyjnej
 
 
 Potrzebujesz jednostki organizacyjnej jako kontenera dla aprowizowanego przykładowego użytkownika. Aby uzyskać więcej informacji o tworzeniu jednostek organizacyjnych, zobacz [Tworzenie nowej jednostki organizacyjnej](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Utwórz jednostkę organizacyjną o nazwie MIMObjects w usługach AD DS.
 
-### <a name="step-2-create-the-active-directory-user-accounts"></a>Krok 2. Tworzenie kont użytkowników usługi Active Directory
+### <a name="step-2-create-the-active-directory-user-accounts"></a>Krok 2: Tworzenie kont użytkowników usługi Active Directory
 
 W ramach scenariusza opisywanego w tym przewodniku potrzebujesz dwóch kont użytkowników usługi Active Directory:
 
@@ -152,7 +152,7 @@ W ramach scenariusza opisywanego w tym przewodniku musisz utworzyć dwóch agent
 
 -   **Fabrikam FIMMA** — agenta zarządzania dla agenta zarządzania usług FIM Service.
 
-### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Krok 3. Tworzenie agenta zarządzania Fabrikam ADMA
+### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Krok 3: Tworzenie agenta zarządzania Fabrikam ADMA
 
 Podczas konfigurowania agenta zarządzania dla usług AD DS należy określić konto, które jest wykorzystywane przez agenta zarządzania w ramach wymiany danych z usługami AD DS. Należy użyć normalnego konta użytkownika. Niemniej jednak, aby zaimportować dane z usług AD DS, konto musi mieć uprawnienia do sondowania zmian z kontroli DirSync. Jeśli chcesz, aby agent zarządzania eksportował dane do usług AD DS, musisz przyznać odpowiednie uprawnienia dla konta w docelowych jednostkach organizacyjnych. Aby uzyskać więcej informacji na ten temat, zobacz [Konfigurowanie konta ADMA](http://go.microsoft.com/FWLink/p/?LinkId=189657).
 
@@ -167,10 +167,10 @@ Po ustawieniu hasła dla kont AD DS należy również utworzyć konto jako włą
 
 W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla scenariusza, które należy skonfigurować.
 
-| Strona projektanta agenta zarządzania                          | Konfiguracja                                                  |
+| Strona projektanta agenta zarządzania                          | Konfigurowanie                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
-| Utwórz agenta zarządzania                                 | 1. **Agent zarządzania dla:** AD DS  <br/> 2.  **Nazwa:** Fabrikam ADMA |
-| Łączenie z lasem usługi Active Directory                      | 1. **Wybierz partycje katalogu:** „DC=Fabrikam,DC=com”   <br/>   2. Kliknij pozycję **Kontenery**, aby otworzyć okno dialogowe **Wybieranie kontenerów**, i upewnij się, że **MIMObjects** jest jedyną wybraną jednostką organizacyjną.        |
+| Utwórz agenta zarządzania                                 | 1. **Agent zarządzania dla:** USŁUGI AD DS  <br/> 2.  **Nazwa:** Fabrikam ADMA |
+| Łączenie z lasem usługi Active Directory                      | 1. **Wybierz partycje katalogu:** "DC = Fabrikam, DC = com"   <br/>   2. Kliknij pozycję **Kontenery**, aby otworzyć okno dialogowe **Wybieranie kontenerów**, i upewnij się, że **MIMObjects** jest jedyną wybraną jednostką organizacyjną.        |
 | Wybierz typy obiektów                                     | Poza już wybranymi typami obiektów wybierz **użytkownika**. |
 | Wybierz atrybuty                                       | 1. Kliknij pozycję **Pokaż wszystko.** <br/>   2. Wybierz następujące atrybuty: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
 
@@ -183,7 +183,7 @@ Więcej informacji znajduje się w następujących tematach pomocy:
 > [!Note]
 > Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
 
-### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Krok 4. Tworzenie agenta zarządzania Fabrikam FIMMA
+### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Krok 4: Tworzenie agenta zarządzania Fabrikam FIMMA
 
 Podczas konfigurowania agenta zarządzania usługi FIM Service musisz określić konto, które jest wykorzystywane przez agenta zarządzania w wymianie danych z usługą FIM Service.
 
@@ -191,10 +191,10 @@ Należy użyć normalnego konta użytkownika. Konto musi być tym samym kontem, 
 
 W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla scenariusza, które należy skonfigurować. Utwórz agenta zarządzania w oparciu o informacje podane w poniższej tabeli.  
 
-| Strona projektanta agenta zarządzania | Konfiguracja |
+| Strona projektanta agenta zarządzania | Konfigurowanie |
 |------------|------------------------------------|
-| Utwórz agenta zarządzania | 1. **Agent zarządzania dla:** agent zarządzania usługi FIM Service <br/> 2. **Nazwa:** Fabrikam FIMMA |
-| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183;**Adres podstawowy usługi FIM Service:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
+| Utwórz agenta zarządzania | 1. **Agent zarządzania dla:** Agent zarządzania usługi FIM <br/> 2. **Nazwa:** Fabrikam FIMMA |
+| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Database:** FIMService <br/> &#183;**Adres podstawowy usługi FIM Service:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
 | Wybierz typy obiektów                                     | Poza już wybranymi typami obiektów wybierz **osobę**.   |
 | Skonfiguruj mapowania typów obiektów                          | Poza już istniejącymi mapowaniami typów obiektów dodaj mapowanie dla osoby **Typ obiektu źródła danych** do osoby typu obiektu **Metaverse**. |
 | Konfiguruj przepływ atrybutów                                | Poza już istniejącymi mapowaniami przepływu atrybutów dodaj następujące mapowania przepływu atrybutów: <br/><br/> ![Przepływ atrybutów](media/how-provision-users-adds/image018.jpg) |
@@ -214,7 +214,7 @@ Więcej informacji znajduje się w następujących tematach pomocy:
 > [!NOTE]
 >  Upewnij się, że skonfigurowano regułę przepływu atrybutu importowania dla atrybutu ExpectedRulesList.
 
-### <a name="step-5-create-the-run-profiles"></a>Krok 5. Tworzenie profilów przebiegu
+### <a name="step-5-create-the-run-profiles"></a>Krok 5: Tworzenie profilów uruchamiania
 
 W poniższej tabeli wymieniono profile przebiegu, które należy utworzyć w ramach scenariusza opisywanego w tym przewodniku.
 
@@ -245,13 +245,13 @@ Celem tych zasad aprowizacji jest wprowadzenie grup do zakresu reguły synchroni
 
 Aby skonfigurować usługę programu FIM, przejdź w Windows Internet Explorer® do http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
 
-### <a name="step-6-create-the-synchronization-rule"></a>Krok 6. Tworzenie reguły synchronizacji
+### <a name="step-6-create-the-synchronization-rule"></a>Krok 6: Utwórz regułę synchronizacji
 
 W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchronizacji aprowizacji firmy Fabrikam. Utwórz regułę synchronizacji zgodnie z danymi w następujących tabelach.
 
 | Konfiguracja reguły synchronizacji                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Nazwa                                                                                                       | Reguła synchronizacji ruchu wychodzącego użytkowników usługi Active Directory                         |                                                          
+| Name                                                                                                       | Reguła synchronizacji ruchu wychodzącego użytkowników usługi Active Directory                         |                                                          
 | Opis                                                                                               |                                                                             |                                                           
 | Pierwszeństwo                                                                                                | 2                                                                           |                                                           
 | Kierunek przepływu danych   | Wychodzące             |       
@@ -269,7 +269,7 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 | Relacja ||
 |------------|---------|
 | Utwórz zasób w systemie zewnętrznym                                                                         | Prawda                                                                        |                                                           
-| Włącz anulowanie aprowizacji                                                                                      | Fałsz                                                                       |                                                           
+| Włącz anulowanie aprowizacji                                                                                      | False                                                                       |                                                           
 
 | Kryteria relacji                                                                                      | |
 |------------|----------|
@@ -280,51 +280,51 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 |-------------------|---------------------- |---------------|
 | Zezwalaj na wartości null                 | Lokalizacja docelowa                                                                 | Źródło                                                    |
 | fałsz                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
-| fałsz                       | userAccountControl                                                          | **Stała:** 512                                         |
-| fałsz                                                                     | unicodePwd                    | Stała: P\@\$\$W0rd                                    |
+| false                       | userAccountControl                                                          | **Stałe:** 512                                         |
+| false                                                                     | unicodePwd                    | Stałe: P\@\$\$W0rd                                    |
 
 | Trwałe przepływy atrybutów wychodzących  |                                                                     |                                                           |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
 | Zezwalaj na wartości null                                                                                                | Lokalizacja docelowa                                                                 | Źródło                                                    |
-| fałsz                                                                                                      | sAMAccountName                                                              | accountName                                               |
-| fałsz                                                                                                      | displayName                                                                 | displayName                                               |
-| fałsz                                                                                                      | givenName                                                                   | firstName                                                 |
-| fałsz                                                                                                      | sn                                                                          | lastName                                                  |
+| false                                                                                                      | sAMAccountName                                                              | accountName                                               |
+| false                                                                                                      | displayName                                                                 | displayName                                               |
+| false                                                                                                      | givenName                                                                   | firstName                                                 |
+| false                                                                                                      | numery seryjne                                                                          | lastName                                                  |
 
 
 
 > [!NOTE]
 >  Ważne: sprawdź, czy wybrano opcję Tylko przepływ początkowy dla przepływu atrybutu, którego miejscem docelowym jest DN.                                                                          
 
-### <a name="step-7-create-the-workflow"></a>Krok 7. Tworzenie przepływu pracy
+### <a name="step-7-create-the-workflow"></a>Krok 7: Tworzenie przepływu pracy
 
 Celem przepływu pracy aprowizacji AD jest dodanie reguły synchronizacji aprowizacji firmy Fabrikam do zasobu. W poniższych tabelach przedstawiono konfigurację.  Utwórz przepływ pracy zgodnie z danymi w poniższych tabelach.
 
 | Konfiguracja przepływu pracy               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nazwa                                 | Przepływ pracy aprowizacji użytkownika usługi Active Directory                     |
+| Name (Nazwa)                                 | Przepływ pracy aprowizacji użytkownika usługi Active Directory                     |
 | Opis                          |                                                                 |
 | Typ przepływu pracy                        | Akcja                                                          |
-| Uruchom podczas aktualizacji zasad                 | Fałsz                                                           |
+| Uruchom podczas aktualizacji zasad                 | False                                                           |
 
 | Reguła synchronizacji                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nazwa                                 | Reguła synchronizacji ruchu wychodzącego użytkowników usługi Active Directory             |
-| Akcja                               | Dodaj                                                             |
+| Name                                 | Reguła synchronizacji ruchu wychodzącego użytkowników usługi Active Directory             |
+| Akcja                               | Add                                                             |
 
 
 
 
-### <a name="step-8-create-the-mpr"></a>Krok 8. Tworzenie reguły MPR
+### <a name="step-8-create-the-mpr"></a>Krok 8: Tworzenie reguły MPR
 
 Wymagana reguła MPR to reguła typu Przejście między zestawami i jest wyzwalana, gdy zasób staje się elementem członkowskim zestawu Wszyscy wykonawcy. W poniższych tabelach przedstawiono konfigurację.  Utwórz regułę MPR zgodnie z danymi w poniższych tabelach.
 
 | Konfiguracja reguły MPR                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Nazwa                                 | Reguła zasad zarządzania aprowizacją użytkownika usługi AD                 |
+| Name                                 | Reguła zasad zarządzania aprowizacją użytkownika usługi AD                 |
 | Opis                          |                                                             |
-| Typ                                 | Przejście między zestawami                                              |
-| Przyznaje uprawnienia                   | Fałsz                                                       |
+| Type                                 | Przejście między zestawami                                              |
+| Przyznaje uprawnienia                   | False                                                       |
 | Wyłączone                             | Fałsz                                                       |
 
 | Definicja przejścia                |                                                             |
@@ -334,7 +334,7 @@ Wymagana reguła MPR to reguła typu Przejście między zestawami i jest wyzwala
 
 | Przepływy pracy zasad                     |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Typ                                 | Akcja                                                      |
+| Type                                 | Akcja                                                      |
 | Nazwa wyświetlana                         | Przepływ pracy aprowizacji użytkownika usługi Active Directory                 |
 
 
@@ -349,11 +349,11 @@ Cele fazy inicjowania są następujące:
 
 -   przeniesienie struktury usługi Active Directory do obszaru łącznika usługi Active Directory.
 
-### <a name="step-9-run-the-run-profiles"></a>Krok 9. Uruchomienie profilów przebiegu
+### <a name="step-9-run-the-run-profiles"></a>Krok 9: Uruchom profile przebiegu
 
 W poniższej tabeli zawarto listę profilów przebiegu, które są częścią fazy inicjowania.  Uruchom profile przebiegu zgodnie z poniższą tabelą.
 
-| Uruchom                                                                                                           | Agent zarządzania                                      | Profil przebiegu          |
+| Uruchom polecenie                                                                                                           | Agent zarządzania                                      | Profil przebiegu          |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Pełny import          |
 | 2                                                                                                             |                                                       | Pełna synchronizacja |
@@ -381,7 +381,7 @@ Celem tej sekcji jest przetestowanie faktycznej konfiguracji. Aby przetestować 
 
 4.  sprawdzić, czy użytkownik istnieje w usługach AD DS.
 
-### <a name="step-10-create-a-sample-user-in-mim"></a>Krok 10. Tworzenie przykładowego użytkownika w programie MIM
+### <a name="step-10-create-a-sample-user-in-mim"></a>Krok 10: Utwórz przykładowego użytkownika w programie MIM
 
 
 Poniższa tabela zawiera listę właściwości przykładowego użytkownika. Utwórz przykładowego użytkownika zgodnie z danymi w poniższej tabeli.
@@ -406,14 +406,14 @@ Aby aprowizować przykładowego użytkownika do usług AD DS, należy spełnić 
 
 2.  Ustawiony użytkownik musi znajdować się w zakresie reguły synchronizacji ruchu wychodzącego.
 
-### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Krok 11. Sprawdzenie, czy użytkownik jest członkiem zestawu Wszyscy wykonawcy
+### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Krok 11: Sprawdź, czy użytkownik jest członkiem zestawu Wszyscy wykonawcy
 
 Aby sprawdzić, czy użytkownik jest członkiem zestawu Wszyscy wykonawcy, otwórz zestaw i kliknij pozycję Wyświetl członków.
 
 ![Sprawdzenie, czy użytkownik jest członkiem zestawu Wszyscy wykonawcy](media/how-provision-users-adds/image022.jpg)
 
 
-### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Krok 12. Sprawdzenie, czy użytkownik znajduje się w zakresie reguły synchronizacji ruchu wychodzącego
+### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Krok 12: Sprawdź, czy użytkownik znajduje się w zakresie reguły synchronizacji ruchu wychodzącego
 
 Aby sprawdzić, czy użytkownik znajduje się w zakresie reguły synchronizacji, otwórz stronę właściwości użytkownika i zweryfikuj atrybut Lista oczekiwanych reguł na karcie Aprowizacja. Atrybut Lista oczekiwanych reguł powinien zawierać regułę synchronizacji ruchu wychodzącego
 
@@ -425,7 +425,7 @@ Na tym etapie procesu stan reguły synchronizacji to Oczekująca. Oznacza to, ż
 
 
 
-### <a name="step-13-synchronize-the-sample-group"></a>Krok 13. Synchronizacja przykładowej grupy
+### <a name="step-13-synchronize-the-sample-group"></a>Krok 13 Synchronizacja przykładowej grupy
 
 
 Przed rozpoczęciem pierwszego cyklu synchronizacji dla obiektu testowego należy prześledzić oczekiwany stan obiektu po każdym profilu przebiegu uruchamianym w planie testowania. Plan testowania powinien obejmować ogólny stan obiektu (utworzony, zaktualizowany lub usunięty) oraz oczekiwane wartości atrybutów.
@@ -524,7 +524,7 @@ Atrybuty nazwy konta, domeny i objectSID są wymagane, jeśli chcesz umożliwić
 
 [How Can I Manage My FIM MA Account](http://go.microsoft.com/FWLink/p/?LinkId=189672) (Jak zarządzać kontem FIM MA)
 
-[Detecting Nonauthoritative Accounts – Part 1: Envisioning](http://go.microsoft.com/FWLink/p/?LinkId=189673) (Wykrywanie kont nieautorytatywnych — część 1: planowanie)
+[Wykrywanie kont nieautorytatywne — część 1: Planowanie](http://go.microsoft.com/FWLink/p/?LinkId=189673)
 
 [The Poor Man’s Version of a Connector Detection Mechanism](http://go.microsoft.com/FWLink/p/?LinkId=189674) (Przeciętna wersja mechanizmu wykrywania łącznika)
 
