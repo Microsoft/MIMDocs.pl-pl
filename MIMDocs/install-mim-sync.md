@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1bc313a66776778fe3617969645076a6d2d10418
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357840"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952183"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
+# <a name="install-mim-2016-mim-synchronization-service"></a>Instalowanie programu MIM 2016: Usługa synchronizacji programu MIM
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
@@ -37,7 +37,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 1. Zaloguj się jako *contoso\miminstall* z serwerem używasz dla serwera synchronizacji zarządzania tożsamościami **corpsync**.
 
-2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.
+2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.  Jeśli nie masz tego dysku DVD, zobacz [licencjonowania programu Microsoft Identity Manager i pliki do pobrania](microsoft-identity-manager-licensing.md).
 
 ## <a name="install-mim-2016-sp1-synchronization-service"></a>Zainstaluj usługę synchronizacji programu MIM 2016 z dodatkiem SP1
 
@@ -57,9 +57,9 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 6. Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-   1.  SQL Server znajduje się na: **maszyny zdalnej** o nazwie **corpsql.contoso.com**.
+   1.  SQL Server znajduje się na: **Maszyna zdalna** o nazwie **corpsql.contoso.com**.
 
-   2.  Wystąpienie programu SQL Server: **wystąpienie domyślne**
+   2.  To wystąpienie programu SQL Server: **Wystąpienie domyślne**
 
    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 

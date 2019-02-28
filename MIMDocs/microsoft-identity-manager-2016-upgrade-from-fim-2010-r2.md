@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 07998c20fcdc325cd33d8f9ee3d06c9c8572b654
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358675"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952166"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Uaktualnienie z programu Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 2.  Na każdym serwerze, na którym są zainstalowane składniki programu FIM 2010 R2 — np. *CORPIDM* — zaloguj się jako użytkownik Contoso\Administrator. W tym przykładzie wdrożenia do uaktualnienia programu FIM 2010 R2 do programu **MIM** niezbędne są prawa administracyjne.
 
-3.  Pobierz i rozpakuj pliki oprogramowania MIM.
+3.  Pobierz i rozpakuj pliki oprogramowania MIM.  Jeśli nie masz tego oprogramowania, zobacz [licencjonowania programu Microsoft Identity Manager i pliki do pobrania](microsoft-identity-manager-licensing.md).
 
 ## <a name="upgrade-the-synchronization-service"></a>Uaktualnianie usługi synchronizacji
 
@@ -197,6 +197,6 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 4. Pamiętaj, że **Usługa programu Forefront Identity Manager** została uruchomiona ponownie.
 
-Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia programu FIM dla usługi SSPR, nie konfiguruj nowych bram telefonicznych usługi MFA na potrzeby resetowania haseł, dopóki wszystkie dodatki i rozszerzenia programu FIM nie zostaną uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
+Uwaga: Jeśli FIM Add-ins and Extensions aktualnie są wdrażane na komputerach użytkowników dla usługi SSPR, nie Konfiguruj nowych bram telefonicznych usługi MFA dla resetowania haseł, dopóki wszystkie dodatki programu FIM i rozszerzenia zostały uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
 
 Instrukcje dotyczące uaktualniania programu Microsoft Identity Manager 2016 SP1 można znaleźć w artykule [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Pakiet aktualizacji programu Microsoft Identity Manager 2016 Service Pack 1)
