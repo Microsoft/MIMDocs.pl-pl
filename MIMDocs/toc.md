@@ -12,6 +12,7 @@
 ## [Planowanie wdrożenia usługi PAM](./pam/environment-overview.md)
 # [Wdrażanie i użytkowanie](microsoft-identity-manager-deploy.md)
 ## [Przestarzałe funkcje](microsoft-identity-manager-2016-deprecated-features.md)
+## [Licencjonowanie i pobieranie](microsoft-identity-manager-licensing.md)
 ## [Obsługa danych](mim-privacy-compliance.md)
 ## [Pierwsze wdrożenie](microsoft-identity-manager-deploy.md)
 ### [Konfiguracja domeny](preparing-domain.md)
@@ -21,7 +22,7 @@
 ### [Konfiguracja serwera: Exchange](prepare-server-exchange.md)
 ### [Instalowanie programu MIM: synchronizacja](install-mim-sync.md)
 ### [Instalowanie programu MIM: usługa i portal](install-mim-service-portal.md)
-### [Instalowanie programu MIM: synchronizowanie baz danych](install-mim-sync-ad-service.md)
+### [Instalowanie programu MIM: synchronizacja baz danych](install-mim-sync-ad-service.md)
 ## [Uaktualnianie z programu Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [Instalowanie zarządzania certyfikatami programu MIM](mim-cm-deploy.md)
 ## [Tematy dotyczące instalacji pakietu BHOLD](./bhold/bhold-installation-guide.md)
@@ -84,7 +85,7 @@
 ### [Przewodnik dotyczący wydajności eksportu](https://technet.microsoft.com/library/hh322883)
 ## Raportowanie
 ### [Raportowanie przy użyciu raportów niestandardowych oraz rozszerzalność](https://technet.microsoft.com/library/jj133861)
-## [Oprogramowanie Microsoft Identity: publiczne wersje kompilacji](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
+## [Oprogramowanie do obsługi tożsamości firmy Microsoft: wydanie publiczne — wersje kompilacji](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Tematy pomocy](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Dokumentacja dla deweloperów
 ### [Dokumentacja dla deweloperów programu MIM 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
