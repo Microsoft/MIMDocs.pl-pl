@@ -5,7 +5,7 @@
       "docset_name": "MIMDocs",
       "build_output_subfolder": "MIMDocs",
       "locale": "pl-pl",
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       }
@@ -14,7 +14,7 @@
       "docset_name": "MIMUnderstand",
       "build_output_subfolder": "MIMDocs/Understand",
       "locale": "pl-pl",
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       }
@@ -23,7 +23,7 @@
       "docset_name": "MIMPlanDesign",
       "build_output_subfolder": "MIMDocs/PlanDesign",
       "locale": "pl-pl",
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       }
@@ -32,7 +32,7 @@
       "docset_name": "MIMGetStarted",
       "build_output_subfolder": "MIMDocs/GetStarted",
       "locale": "pl-pl",
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       }
@@ -41,7 +41,7 @@
       "docset_name": "MIMTroubleshoot",
       "build_output_subfolder": "MIMDocs/Troubleshoot",
       "locale": "pl-pl",
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       }
