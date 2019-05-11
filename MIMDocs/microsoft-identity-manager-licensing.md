@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 9e74b7ccf332c1572ce395fad18b8629673c756a
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.openlocfilehash: 7c5ab987801c63dca2457025442a35560dca3b86
+ms.sourcegitcommit: 225fca802d6b59bdc98d50020b297eb6393f70eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954549"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "64518748"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Licencjonowanie programu Microsoft Identity Manager 2016 i pliki do pobrania
 
@@ -59,7 +59,7 @@ Jeśli rozpoczynasz zainstalować od nowa, należy pobrać pliki instalacyjne dl
 | Samoobsługa | Raportowanie programu SCSM | Nie | `Data Warehouse Support Scripts` | |
 | Samoobsługa | Agenta raportowania hybrydowego | Nie | ND | Rozpowszechniane za pośrednictwem Centrum pobierania |
 | Samoobsługa | Pakiety językowe | Nie | `LANGUAGE Packs` | |
-| Zarządzanie certyfikatami | CM | Tak | `Certificate Management` | |
+| Zarządzanie certyfikatami | CM | Yes | `Certificate Management` | |
 | Zarządzanie certyfikatami | Klient zarządzania certyfikatami w usłudze masowego | Nie | `CM Bulk Client` | |
 | Zarządzanie certyfikatami | Klient zarządzania Certyfikatami | Nie | `CM Client`  | |
 | Zarządzanie certyfikatami | Aplikacji Menedżer certyfikatów dla Windows | Nie | `FIMCMModernApp*` | | |
@@ -110,7 +110,7 @@ Następujące pliki do pobrania mogą być istotne:
 
 - Jeśli nie masz jeszcze domeny usługi Active Directory i konfigurowania scenariusza funkcji PAM na potrzeby doświadczeń, zobacz [skrypty wdrażania usługi PAM programu MIM 2016 z dodatkiem SP1](sp1-deployment-scripts.md).
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 - Dowiedz się więcej w scenariuszach dostarczane w [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md).
 - Odczyt [przewodnik planowania pojemności](capacity-planning-guide.md).
