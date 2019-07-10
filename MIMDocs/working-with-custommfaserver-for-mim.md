@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358406"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690743"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Użyj niestandardowego dostawcę uwierzytelniania Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli funkcji PAM lub funkcji samoobsługowego resetowania haseł
 
@@ -32,22 +32,22 @@ W tym artykule opisano sposób używania programu MIM z dostawcą uwierzytelnian
 Aby można było używać niestandardowego interfejsu API dostawcy usługi Multi-Factor Authentication z programem MIM, potrzebne są:
 
 - Numery telefonów wszystkich użytkowników kandydujących
-- Poprawka programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowsze wersje — zobacz [historię wersji](/reference/version-history.md) zapowiedzi
+- Poprawka programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowsze wersje — zobacz [historię wersji](reference/version-history.md) zapowiedzi
 - Usługa MIM skonfigurowane dla funkcji samoobsługowego resetowania HASEŁ lub usługi PAM
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Podejście przy użyciu kodu niestandardowe uwierzytelnianie wieloskładnikowe
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Krok 1 upewnienie się, usługa MIM jest w wersji 4.5.202.0 lub nowszej
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Krok 1: Upewnij się, usługa MIM jest w wersji 4.5.202.0 lub nowszej
 
 Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowszej.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Krok 2: Tworzenie biblioteki DLL, która implementuje interfejs IPhoneServiceProvider
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Krok 2: Tworzy bibliotekę DLL, która implementuje interfejs IPhoneServiceProvider
 
 Biblioteka DLL musi zawierać klasę, która implementuje trzy metody:
 
 - `InitiateCall`: Usługa MIM spowoduje wywołanie tej metody. Usługa przekazuje identyfikator telefonu numer i żądania jako parametry.  Metoda musi zwracać `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
 - `GetCallStatus`: Jeśli podczas wcześniejszego wywołania `initiateCall` zwrócił `Pending`, usługa MIM spowoduje wywołanie tej metody. Ta metoda zwraca też wartość `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
-- `GetFailureMessage`: Jeśli poprzedniego wywołania `InitiateCall` lub `GetCallStatus` zwrócił `Failed`, usługa MIM spowoduje wywołanie tej metody. Ta metoda zwraca komunikat diagnostyczny.
+- `GetFailureMessage`: Jeśli poprzednie wywołanie `InitiateCall` lub `GetCallStatus` zwrócił `Failed`, usługa MIM spowoduje wywołanie tej metody. Ta metoda zwraca komunikat diagnostyczny.
 
 Implementacje tych metod musi zapewniać bezpieczeństwo wątkowe, a ponadto wykonania `GetCallStatus` i `GetFailureMessage` nie należy zakładać, będzie można wywołać w tym samym wątku, jak podczas wcześniejszego wywołania `InitiateCall`.
 
@@ -137,7 +137,7 @@ namespace CustomPhoneGate
 ```
 ### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Krok 3: Kopia zapasowa MfaSettings.xml znajduje się w "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-4-edit-the-mfasettingsxml-file"></a>Krok 4: Edytuj plik MfaSettings.xml
+### <a name="step-4-edit-the-mfasettingsxml-file"></a>Krok 4. Edytuj plik MfaSettings.xml
 
 Zaktualizuj lub usuń następujące wiersze:
 
@@ -146,7 +146,7 @@ Zaktualizuj lub usuń następujące wiersze:
 - Zaktualizuj lub Dodaj następujące wiersze do następującego MfaSettings.xml z dostawcą telefon niestandardowy <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
 
-### <a name="step-5-restart-mim-service"></a>Krok 5: Uruchom ponownie usługę programu MIM
+### <a name="step-5-restart-mim-service"></a>Krok 5. Uruchom ponownie usługę programu MIM
 
 Po ponownym uruchomieniu usługi użyj funkcji samoobsługowego resetowania HASEŁ i/lub PAM do weryfikacji funkcjonalności za pomocą niestandardowego dostawcy tożsamości.
 

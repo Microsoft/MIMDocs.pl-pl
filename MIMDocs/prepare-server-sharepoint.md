@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 466f5eb7d4aee27336948e15f96087d6ba898170
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358639"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690769"
 ---
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: Program SharePoint
 
 > [!div class="step-by-step"]
 > [«SQL Server 2016](prepare-server-sql2016.md)
@@ -70,7 +70,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 2. Określ ten serwer jako serwer bazy danych, takich jak **corpsql** bazy danych konfiguracji i *Contoso\SharePoint* jako konta dostępu do bazy danych dla programu SharePoint do użycia.
 3. Utwórz hasło zabezpieczeń farmy.
 
-4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) typu **frontonu**
+4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) typu **frontonu**
 
 5. Po zakończeniu działania Kreatora konfiguracji zadania konfiguracji 10 10, kliknij przycisk Zakończ sieci web zostanie otwarta przeglądarka...
 

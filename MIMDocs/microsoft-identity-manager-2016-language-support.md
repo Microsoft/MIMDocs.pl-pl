@@ -9,12 +9,12 @@ ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358707"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690728"
 ---
 # <a name="supported-languages"></a>Obsługiwane języki
 
@@ -32,28 +32,28 @@ Pakiet językowy Portal i usługa programu MIM Microsoft obsługują następują
 
 |       Język        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
 |-----------------------|--------------------------|--------------|
-|       Bułgarski       |          bg-BG           |      BG      |
+|       Bułgarski       |          bg-BG           |      bg      |
 | Chiński (uproszczony)  |          zh-CN           |   nazwy zh-hans    |
 |   Chiński (Tajwan)    |          zh-TW           |   nazwy zh-hant    |
 |       Chorwacki        |          hr-HR           |      godz.      |
-|         Czeski         |          cs-CZ           |      CS      |
+|         Czeski         |          cs-CZ           |      cs      |
 |        Duński         |          Akcelerator deweloperski w wersji DK           |      da      |
 |         Holenderski         |          NL-NL           |      nl      |
-|       Estoński        |          et EE           |      et      |
-|        Francuski         |          fr-FR           |      FR      |
+|       Estoński        |          et-EE           |      et      |
+|        Francuski         |          fr-FR           |      fr      |
 |        Fiński        |          fi-FI           |      fi      |
-|        Niemiecki         |          de-DE.           |      Niemcy      |
+|        Niemiecki         |          de-DE.           |      de      |
 |         Grecki         |          el-GR           |      el      |
 |         Hindi         |          w           |      hi      |
 |       Węgierski       |          hu-HU           |      hu      |
-|        Włoski        |          IT-IT           |      go      |
-|       japoński        |          ja-JP           |      ja      |
+|        Włoski        |          IT-IT           |      it      |
+|       Japoński        |          ja-JP           |      ja      |
 |        Koreański         |          ko-KR           |      ko      |
 |      Litewski       |          lt-LT           |      lt      |
-|        Łotewski        |          LV — Łotwa           |      LV      |
+|        Łotewski        |          lv-LV           |      lv      |
 |       Norweski       |          nb-NO           |    nb-NO     |
 |        Polski         |          pl-PL           |      pl      |
-| Portugalski (Portugalia) |          pt-PT           |      (czas pacyficzny)      |
+| Portugalski (Portugalia) |          pt-PT           |      pt      |
 |  Portugalski (Brazylia)  |          pt-BR           |    pt-BR     |
 |        Rosyjski        |          ru-RU           |      ru      |
 |       Rumuński        |          RO RO           |      ro      |
@@ -62,8 +62,8 @@ Pakiet językowy Portal i usługa programu MIM Microsoft obsługują następują
 |        Szwedzki        |          sv-SE           |      sv      |
 |       Słoweński       |          sl SI           |      sl      |
 |   Serbski - Serbia    |  sr-latn-CS(Depricated)  |  Funkcja SR-Latn-RS  |
-|         Tajski          |          th TH           |      TH      |
-|        Turecki        |          tr-TR           |      TR      |
+|         Tajlandzki          |          th TH           |      TH      |
+|        Turecki        |          tr-TR           |      tr      |
 |       Ukraiński       |          uk-UA           |      Zjednoczone Królestwo      |
 
 ## <a name="certificate-management"></a>Zarządzanie certyfikatami 
@@ -74,10 +74,10 @@ Zarządzanie certyfikatami firmy Microsoft obsługuje następujące języki 9.
 |Chiński (uproszczony)|zh-CN|nazwy zh-hans|
 |Chiński (Tajwan)|zh-TW|nazwy zh-hant|
 |Holenderski|NL-NL|nl|
-|Francuski|fr-FR|FR|
-|Niemiecki|de-DE.|Niemcy|
-|Włoski|IT-IT|go|
-|japoński|ja-JP|ja|
+|Francuski|fr-FR|fr|
+|Niemiecki|de-DE.|de|
+|Włoski|IT-IT|it|
+|Japoński|ja-JP|ja|
 |Portugalski (Portugalia)|pt-PT|pt-PT|
 |Hiszpański|es-ES|Tak|
 
@@ -89,27 +89,27 @@ Nowoczesnych aplikacji zarządzania certyfikatów firmy Microsoft obsługuje nas
 |Holenderski|NL-NL|nl|
 |Chiński (uproszczony)|zh-CN|nazwy zh-hans|
 |Chiński (Tajwan)|zh-TW|nazwy zh-hant|
-|Czeski|cs-CZ|CS|
+|Czeski|cs-CZ|cs|
 |Duński|Akcelerator deweloperski w wersji DK|da|
-|Francuski|fr-FR|FR|
+|Francuski|fr-FR|fr|
 |Fiński|fi-FI|fi|
-|Niemiecki|de-DE.|Niemcy|
+|Niemiecki|de-DE.|de|
 |Grecki|el-GR|el|
 |Węgierski|hu-HU|hu|
-|Włoski|IT-IT|go|
-|japoński|ja-JP|ja|
+|Włoski|IT-IT|it|
+|Japoński|ja-JP|ja|
 |Koreański|ko-KR|ko|
 |Norweski|nb-NO|nb-NO|
 |Polski|pl-PL|pl|
-|Portugalski (Portugalia)|pt-PT|(czas pacyficzny)|
+|Portugalski (Portugalia)|pt-PT|pt|
 |Portugalski (Brazylia)|pt-BR|pt-BR|
 |Rosyjski|ru-RU|ru|
 |Rumuński|RO RO|ro|
 |Hiszpański|es-ES|Tak|
 |Szwedzki|sv-SE|sv|
-|Turecki|tr-TR|TR|
+|Turecki|tr-TR|tr|
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - [Pierwsze wdrożenie](microsoft-identity-manager-deploy.md)
-- [Historia wersji](/reference/version-history.md)
+- [Historia wersji](reference/version-history.md)

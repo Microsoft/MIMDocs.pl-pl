@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 7ab76d386d8633de8919167c6b8f26b5137323e5
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825845"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690801"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Wdrażanie Menedżera certyfikatów programu Microsoft Identity Manager 2016 (MIM CM)
 
@@ -24,12 +24,12 @@ Na poniższym diagramie przedstawiono przykład typ środowiska, która może by
 
 ![Diagram środowiska](media/mim-cm-deploy/image001.png)
 
-1. Kontrolera domeny CORPDC — kontroler domeny
+1. CORPDC – Domain Controller
 2. CORPCM — serwer zarządzania Certyfikatami programu MIM
 3. CORPCA — urząd certyfikacji
 4. CORPCMR — sieci Web interfejsu API Rest zarządzania Certyfikatami programu MIM — CM Portal dla interfejsu API Rest — używane do późniejszego
-5. CORPSQL1 — SQL 2016 SP1
-6. CORPWK1 — przyłączonych do domeny systemu Windows 10
+5. CORPSQL1 – SQL 2016 SP1
+6. CORPWK1 – Windows 10 Domain Joined
 
 ## <a name="deployment-overview"></a>Przegląd wdrożenia
 
@@ -38,7 +38,7 @@ Na poniższym diagramie przedstawiono przykład typ środowiska, która może by
     Laboratorium składa się serwerów z systemem windows 2016 Datacenter.
 
     >[!NOTE]
-    >Aby uzyskać więcej informacji na platformach obsługiwanych przez program MIM 2016, zapoznaj się z artykuł [platformy obsługiwane przez program MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
+    >Aby uzyskać więcej informacji na platformach obsługiwanych przez program MIM 2016, zapoznaj się z artykuł [platformy obsługiwane przez program MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).
 
 1. Kroki przed wdrożeniem
 
@@ -58,13 +58,13 @@ Na poniższym diagramie przedstawiono przykład typ środowiska, która może by
 
         - Uprawnienia bazy danych
 
-2. Wdrażanie
+2. Wdrożenie
 
 ## <a name="pre-deployment-steps"></a>Kroki przed wdrożeniem
 
 Kreator konfiguracji programu MIM CM wymaga podania informacji o po drodze w kolejności na jego zakończenie pomyślnie.
 
-![Diagram](media/mim-cm-deploy/image003.png)
+![diagram](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Rozszerzanie schematu
 
@@ -77,7 +77,7 @@ Proces rozszerzania schematu jest prosty, ale musi być skontaktowali się ostro
 
 2. Skopiuj folder schematu do kontrolera domeny CORPDC, a następnie przejdź do niego.
 
-    ![Diagram](media/mim-cm-deploy/image005.png)
+    ![diagram](media/mim-cm-deploy/image005.png)
 
 3. Uruchom skrypt resourceForestModifySchema.vbs pojedynczego lasu scenariusza. W scenariuszu lasu zasobów, uruchamianie skryptów:
    - DomenaA — użytkownicy znajdujący się (userForestModifySchema.vbs)
@@ -86,7 +86,7 @@ Proces rozszerzania schematu jest prosty, ale musi być skontaktowali się ostro
      >[!NOTE]
      >Zmiany schematu są jednym ze sposobów operacji i wymagają lasu odzyskiwania, aby wycofać więc upewnij się, niezbędne kopie zapasowe. Dla informacji na temat zmian wprowadzonych w schemacie przez wykonanie tej operacji zapoznaj się z artykułem [zmiany schematu programu Forefront Identity Manager 2010 certyfikatu zarządzania](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
 
-     ![Diagram](media/mim-cm-deploy/image007.png)
+     ![diagram](media/mim-cm-deploy/image007.png)
 
 4. Uruchom skrypt i powinien zostać wyświetlony sukcesu raz komunikat, że ukończeniu działania skryptu.
 
@@ -359,7 +359,7 @@ Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo
 
 **Aktualizowanie usługi IIS na CORPCM**
 
-![Diagram](media/mim-cm-deploy/image022.png)
+![diagram](media/mim-cm-deploy/image022.png)
 
 ```powershell
 add-pssnapin WebAdministration
@@ -421,9 +421,9 @@ Zdecydowanie zaleca się wymagać protokołu SSL w portalu MIM CM. Jeśli jeszcz
 
 7. Na stronie postanowienia licencyjne przeczytaj umowę, Włącz akceptuję warunki umowy licencyjnej **pole wyboru**, a następnie kliknij przycisk Dalej.
 
-8. Upewnij się, na stronie Instalacja niestandardowa **portalu programu MIM CM** i **składniki programu MIM CM aktualizacji usługi** jest ustawiona do zainstalowania, a następnie **kliknij przycisk Dalej,**.
+8. Upewnij się, na stronie Instalacja niestandardowa **portalu programu MIM CM** i **składniki programu MIM CM aktualizacji usługi** jest ustawiona do zainstalowania, a następnie **kliknij przycisk Dalej,** .
 
-9. Na stronie Folder wirtualny sieci Web, upewnij się, że nazwa folderu wirtualnej **CertificateManagement**, a następnie **kliknij przycisk Dalej,**.
+9. Na stronie Folder wirtualny sieci Web, upewnij się, że nazwa folderu wirtualnej **CertificateManagement**, a następnie **kliknij przycisk Dalej,** .
 
 10. Na stronie Instalowanie zarządzania certyfikatami Menedżer tożsamości firmy Microsoft **kliknij przycisk Instaluj**.
 
@@ -455,13 +455,13 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do **domeny Administratorzy, 
 
 9. W **agentów — programu FIM CM** okno dialogowe z wieloma kartami, na każdej karcie wpisz następujące informacje:
 
-   - Nazwa użytkownika: **aktualizacji**
+   - Nazwa użytkownika: **Aktualizacja**
 
-   - Hasło: **przekazać\@word1**
+   - Hasło: **Przekaż\@word1**
 
-   - Potwierdź hasło: **przekazać\@word1**
+   - Potwierdź hasło: **Przekaż\@word1**
 
-   - Użyj istniejącego użytkownika: **włączone**
+   - Użyj istniejącego użytkownika: **Włączone**
 
      >[!NOTE]
      >Te konta utworzony wcześniej. Upewnij się, że procedur opisanych w kroku 8 są powtarzane dla wszystkich kart konta sześć agenta.
@@ -474,11 +474,11 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do **domeny Administratorzy, 
 
 12. Na **Konfigurowanie certyfikatów serwera** strony, należy włączyć następujące szablony certyfikatów:
 
-    - Szablon certyfikatu do użycia dla certyfikatu agenta odzyskiwania kluczy agenta odzyskiwania: **MIMCMKeyRecoveryAgent**.
+    - Szablon certyfikatu, który ma być używany dla certyfikatu agenta odzyskiwania kluczy agenta odzyskiwania: **MIMCMKeyRecoveryAgent**.
 
-    - Szablon certyfikatu do użycia certyfikatu agenta programu FIM CM: **MIMCMSigning**.
+    - Szablon certyfikatu, który ma być używany dla certyfikatu agenta programu FIM CM: **MIMCMSigning**.
 
-    - Szablon certyfikatu do użycia dla certyfikatu agenta rejestracji: **FIMCMEnrollmentAgent**.
+    - Szablon certyfikatu, który ma być używany dla certyfikatu agenta rejestracji: **FIMCMEnrollmentAgent**.
 
 13. Na **certyfikaty serwera konfiguracji** kliknij **dalej**.
 
@@ -488,7 +488,7 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do **domeny Administratorzy, 
 
 16. W **Kreator konfiguracji — Microsoft Forefront Identity Manager 2010 R2** okno dialogowe ostrzeżenia kliknij **OK** można potwierdzić, że protokół SSL nie jest włączone w katalogu wirtualnym programu IIS.
 
-    ![Media/image17.png](media/mim-cm-deploy/image032.png)
+    ![media/image17.png](media/mim-cm-deploy/image032.png)
 
     >[!NOTE] 
     >Nie klikaj przycisk Zakończ, aż do zakończenia wykonywania Kreatora konfiguracji. Rejestrowanie dla kreatora można znaleźć tutaj: **%programfiles%\\Microsoft Forefront Identity Management\\2010\\zarządzania certyfikatami\\config.log**
@@ -503,7 +503,7 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do **domeny Administratorzy, 
 
 20. Odwiedź witrynę z serwera CORPCM `https://cm.contoso.com/certificatemanagement`  
 
-    ![Diagram](media/mim-cm-deploy/image035.png)
+    ![diagram](media/mim-cm-deploy/image035.png)
 
 ### <a name="verify-the-cng-key-isolation-service"></a>Sprawdzić, czy Usługa izolacji klucza CNG
 
@@ -536,7 +536,7 @@ W tym kroku będziemy instalowanych i konfigurowanych modułów programu FIM CM 
 
 6. Zamknij **Znajdź i Zamień** okno dialogowe.
 
-7. Należy w wierszu  **\<Dodaj key="Clm.RequestSecurity.Flags" wartość = "UseUser UseGroups" /\>**. Zmień wiersz do odczytania  **\<Dodaj key="Clm.RequestSecurity.Flags" wartość = "UseUser" /\>**.
+7. Należy w wierszu  **\<Dodaj key="Clm.RequestSecurity.Flags" wartość = "UseUser UseGroups" /\>** . Zmień wiersz do odczytania  **\<Dodaj key="Clm.RequestSecurity.Flags" wartość = "UseUser" /\>** .
 
 8. Zamknij wszystkie zmiany zapisywania pliku.
 
@@ -554,7 +554,7 @@ W tym kroku będziemy instalowanych i konfigurowanych modułów programu FIM CM 
 
 15. Kliknij prawym przyciskiem myszy **logowania**, a następnie kliknij przycisk **nowy identyfikator logowania**.
 
-16. Na **ogólne** stronie **nazwa logowania** wpisz **contoso\\CORPCA\$**. Wybierz **uwierzytelniania Windows**. Domyślna baza danych jest **FIMCertificateManagement**.
+16. Na **ogólne** stronie **nazwa logowania** wpisz **contoso\\CORPCA\$** . Wybierz **uwierzytelniania Windows**. Domyślna baza danych jest **FIMCertificateManagement**.
 
 17. W okienku po lewej stronie wybierz **mapowania użytkowników**. W okienku po prawej stronie, kliknij pole wyboru w **mapy** kolumnę obok **FIMCertificateManagement**. W **członkostwo roli dla bazy danych: FIMCertificateManagement** listy, należy włączyć **clmApp** roli.
 
@@ -688,7 +688,7 @@ W tym kroku będziemy instalowanych i konfigurowanych modułów programu FIM CM 
 
 **Ostatni krok w ramach wdrożenia** jest chcemy upewnić się, że CONTOSO\\menedżerów Menedżera można wdrożyć i tworzenie szablonów i skonfigurować system bez schematu oraz Administratorzy domeny. Następny skrypt będzie listy ACL uprawnień szablonów certyfikatów przy użyciu dsacls. Uruchom przy użyciu konta, które ma pełne uprawnienia do zmiany zabezpieczeń uprawnienia odczytu i zapisu do każdego istniejącego szablonu certyfikatu w lesie.
 
-Pierwsze kroki: **konfigurowania punktu połączenia usługi i uprawnienia grupy docelowej i delegowanie zarządzania szablonu profilu**
+Pierwsze kroki: **Konfigurowanie punktu połączenia usługi i uprawnienia grupy docelowej i delegowanie zarządzania szablonu profilu**
 
 1. Skonfiguruj uprawnienia dla punktu połączenia usługi (SCP).
 
@@ -835,7 +835,7 @@ Pierwsze kroki: **konfigurowania punktu połączenia usługi i uprawnienia grupy
 
 14. Pozostaw **użytkownicy usługi Active Directory i komputery** Otwórz.
 
-Druga procedura: **uprawnień zarządzania szablonów certyfikatów delegowanie \<skryptu\>**
+Druga procedura: **Delegowanie uprawnień do zarządzania szablonów certyfikatów \<skryptu\>**
 
 - Delegowanie uprawnień w kontenerze szablonów certyfikatów.
 
@@ -887,7 +887,7 @@ Definiowanie uprawnień w kontenerze OID:
 
 **Skrypty: Uprawnień w kontenerze OID, szablon profilu i szablonów certyfikatów**
 
-![Diagram](media/mim-cm-deploy/image021.png)
+![diagram](media/mim-cm-deploy/image021.png)
 
 ```powershell
 import-module activedirectory
@@ -913,7 +913,7 @@ $acl.AddAccessRule($ace)
 
 **Skrypty: Delegowanie uprawnień do istniejących szablonów certyfikatów.**  
 
-![Diagram](media/mim-cm-deploy/image039.png)
+![diagram](media/mim-cm-deploy/image039.png)
 
 ```shell
 dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key

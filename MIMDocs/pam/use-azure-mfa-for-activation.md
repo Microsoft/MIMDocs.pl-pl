@@ -10,16 +10,16 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379943"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690781"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
-> Ze względu na ogłoszenie wycofywania z usługi Azure Multi-Factor Authentication uwierzytelnianie Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów do dnia wycofania 14 listopada 2018 r. Nowych klientów i obecni klienci nie będzie można już pobrać zestaw SDK, za pośrednictwem klasycznego portalu Azure. Możesz pobrać będzie konieczne skontaktowanie się z obsługą klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA. <br> Zespół projektowy Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK serwera MFA.  Będzie uwzględniane w nadchodzącej poprawce zobacz [historię wersji](/reference/version-history.md) zapowiedzi. 
+> Ze względu na ogłoszenie wycofywania z usługi Azure Multi-Factor Authentication uwierzytelnianie Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów do dnia wycofania 14 listopada 2018 r. Nowych klientów i obecni klienci nie będzie można już pobrać zestaw SDK, za pośrednictwem klasycznego portalu Azure. Możesz pobrać będzie konieczne skontaktowanie się z obsługą klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA. <br> Zespół projektowy Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK serwera MFA.  Będzie uwzględniane w nadchodzącej poprawce zobacz [historię wersji](../reference/version-history.md) zapowiedzi. 
 
 
 Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania użytkowników, którzy zażądali aktywowania roli. Możliwości implementowane przez działanie autoryzacji funkcji PAM to:
@@ -66,7 +66,7 @@ Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dl
 
 5.  W otwartym oknie **Azure Multi-Factor Authentication** kliknij pozycję **SDK** w obszarze **Pliki do pobrania**.
 
-6.  Kliknij link **Pobierz** w kolumnie ZIP dla pliku z językiem **SDK dla programu ASP.net 2.0 C\#**.
+6.  Kliknij link **Pobierz** w kolumnie ZIP dla pliku z językiem **SDK dla programu ASP.net 2.0 C\#** .
 
 ![Pobieranie zestawu SDK usługi Multi-Factor Authentication — zrzut ekranu](media/PAM-Azure-MFA-Activation-Image-1.png)
 
@@ -118,7 +118,7 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>Konfigurowanie ról funkcji PAM na potrzeby usługi Azure MFA
 
-Jeśli numery telefonów wszystkich użytkowników kandydujących do roli funkcji PAM znajdują się już w bazie danych usługi MIM, rola może zostać skonfigurowana tak, aby wymagała usługi Azure MFA. Odbywa się to przy użyciu polecenia `New-PAMRole` lub `Set-PAMRole`. Przykład:
+Jeśli numery telefonów wszystkich użytkowników kandydujących do roli funkcji PAM znajdują się już w bazie danych usługi MIM, rola może zostać skonfigurowana tak, aby wymagała usługi Azure MFA. Odbywa się to przy użyciu polecenia `New-PAMRole` lub `Set-PAMRole`. Na przykład
 
 ```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
@@ -130,7 +130,7 @@ Usługę Azure MFA można wyłączyć dla roli, określając parametr „-MFAEna
 
 Następujące zdarzenia można znaleźć w dzienniku zdarzeń funkcji PAM:
 
-| Identyfikator  | Ważność | Wygenerowane przez | Opis |
+| Identyfikator  | severity | Wygenerowane przez | Opis |
 |-----|----------|--------------|-------------|
 | 101 | Błąd       | Usługa MIM            | Użytkownik nie zakończył uwierzytelniania za pomocą usługi Azure MFA (np. nie odebrał telefonu) |
 | 103 | Informacje | Usługa MIM            | Użytkownik zakończył uwierzytelnianie za pomocą usługi Azure MFA podczas aktywacji                       |
