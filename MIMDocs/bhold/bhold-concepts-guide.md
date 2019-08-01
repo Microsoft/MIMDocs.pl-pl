@@ -1,346 +1,347 @@
 ---
-title: Przewodnik pojęcia pakietu BHOLD firmy Microsoft | Dokumentacja firmy Microsoft
+title: Przewodnik dotyczący pojęć związanych z pakietem Microsoft pakietu BHOLD Suite | Microsoft Docs
 description: Rozpoczęcie pracy ze składnikami programu MIM 2016 przez instalację i konfigurację usługi synchronizacji.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/14/2017
+ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 32bd77140cf70047eaa02d363a1348e73783f87a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358843"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701422"
 ---
-# <a name="microsoft-bhold-suite-concepts-guide"></a>Przewodnik pojęcia pakietu BHOLD firmy Microsoft
+# <a name="microsoft-bhold-suite-concepts-guide"></a>Przewodnik dotyczący pojęć związanych z pakietem Microsoft pakietu BHOLD Suite
 
-Microsoft Identity Manager 2016 (MIM) umożliwia organizacjom zarządzanie w całym cyklu życia tożsamości użytkowników i ich skojarzone poświadczenia. Może on zostać skonfigurowany do synchronizacji tożsamości, centralne zarządzanie certyfikatami i haseł i zainicjowanie obsługi administracyjnej użytkowników we wszystkich systemach heterogenicznych. Z programem MIM organizacje z branży IT można definiować i automatyzować procesy używane do zarządzania tożsamościami od tworzenia po ewentualne wycofanie.
+Microsoft Identity Manager 2016 (MIM) umożliwia organizacjom zarządzanie całym cyklem życia tożsamości użytkowników i ich skojarzonymi poświadczeniami. Można ją skonfigurować tak, aby synchronizować tożsamości, centralnie zarządzać certyfikatami i hasłami oraz dostarczać użytkowników w systemach heterogenicznych. Dzięki programowi MIM organizacje IT mogą definiować i automatyzować procesy służące do zarządzania tożsamościami od tworzenia do wycofania.
 
-Pakiet BHOLD Microsoft rozszerza te możliwości programu MIM, dodając kontroli dostępu opartej na rolach. BHOLD umożliwia organizacjom do definiowania ról użytkowników oraz kontrolować dostęp do poufnych danych i aplikacji. Dostęp opiera się co to jest odpowiedni dla tych ról. Pakiet BHOLD obejmuje, usługami i narzędziami, które upraszczają modelowania relacji roli w organizacji. BHOLD mapuje tych ról, prawa i sprawdź, czy definicje ról i skojarzonymi prawami są prawidłowo stosowane do użytkowników. Te funkcje są w pełni zintegrowane z programem MIM, zapewniając bezproblemowe środowisko dla użytkowników końcowych i informatyków podobne.
+Pakiet Microsoft pakietu BHOLD Suite rozszerza te możliwości programu MIM przez dodanie kontroli dostępu opartej na rolach. PAKIETU BHOLD umożliwia organizacjom definiowanie ról użytkowników oraz kontrolowanie dostępu do poufnych danych i aplikacji. Dostęp jest oparty na tym, co jest odpowiednie dla tych ról. Pakiet pakietu BHOLD zawiera usługi i narzędzia, które upraszczają modelowanie relacji roli w organizacji. PAKIETU BHOLD mapuje te role na prawa i aby sprawdzić, czy definicje ról i skojarzone prawa są poprawnie stosowane do użytkowników. Te funkcje są w pełni zintegrowane z programem MIM, zapewniając bezproblemowe środowisko dla użytkowników końcowych i INFORMATYKów.
 
-Ten przewodnik pomaga zrozumieć, jak pakietu BHOLD współpracuje z usługą MIM i obejmuje następujące tematy:
+Ten przewodnik pomaga zrozumieć, w jaki sposób pakiet pakietu BHOLD współpracuje z programem MIM i obejmuje następujące tematy:
 
 - Kontrola dostępu oparta na rolach
-- Poświadczenie
+- Zaświadczanie
 - Analiza
 - Raportowanie
-- Dostęp do łącznika zarządzania
-- Integracja programu MIM
+- Łącznik zarządzania dostępem
+- Integracja z programem MIM
 
 ## <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
-To najbardziej typowa metoda kontroli dostępu użytkownika do danych i aplikacji za pośrednictwem arbitralnej kontroli dostępu (DAC). W najbardziej typowych implementacjach każdy obiekt znaczące ma zidentyfikowanych właściciela. Właściciel ma możliwość udzielania lub odmawiania dostępu do obiektu, aby inne osoby na podstawie indywidualne tożsamości lub członkostwo w grupie. W praktyce DAC zwykle powoduje mnóstwo grup zabezpieczeń, niektóre, które odzwierciedlają strukturę organizacyjną, inne osoby, które reprezentują funkcjonalnych grup (na przykład typy zadań lub przydziałów projektu) i innych, które składają się z makeshift kolekcji użytkowników i urządzenia, które są połączone więcej celów tymczasowych. Wraz z potrzebami organizacji, członkostwo w tych grupach staje się coraz trudniejsze do zarządzania. Na przykład jeśli pracownik został przeniesiony z jednego projektu do innego, grup, które są używane do kontrolowania dostępu do zasobów projekty muszą być aktualizowane ręcznie. W takich przypadkach nie jest niczym niezwykłym błędy występują błędy, które może utrudniać zabezpieczenia projektu lub wydajność.
+Najbardziej Typowa metoda kontrolowania dostępu użytkowników do danych i aplikacji odbywa się za pomocą poufnej kontroli dostępu (DAC). W większości typowych implementacji każdy znaczący obiekt ma zidentyfikowany właściciel. Właściciel ma możliwość udzielenia lub odmowy dostępu do obiektu innym osobom opartym na poszczególnych tożsamościach lub członkostwie w grupie. W tym przypadku DAC zwykle mnóstwo grupy zabezpieczeń, niektóre odzwierciedlające strukturę organizacyjną, inne reprezentujące funkcjonalne grupowania (takie jak typy zadań lub przypisania projektu), a także inne, które składają się z kolekcji Makeshift użytkowników i urządzenia, które są połączone na potrzeby bardziej tymczasowych celów. W miarę rozwoju organizacji członkostwo w tych grupach stają się coraz trudniejsze do zarządzania. Na przykład, jeśli pracownik jest przenoszony z jednego projektu do innego, grupy, które są używane do kontrolowania dostępu do zasobów projektów, muszą być aktualizowane ręcznie. W takich przypadkach nie jest zdarza się występowania błędów, co może utrudnić bezpieczeństwo projektu lub produktywność.
 
-Program MIM zawiera funkcje, które pomagają uniknąć tego problemu, zapewniając automatyczne kontrolę nad członkostwa grupy i dystrybucji na liście. Jednak nie eliminuje złożoność wewnętrzne rozmnażające grup, które nie są zawsze powiązane ze sobą w taki sposób, ze strukturą.
+Program MIM zawiera funkcje, które pomagają ograniczyć ten problem, zapewniając automatyczne sterowanie członkostwem w grupie i liście dystrybucyjnej. Nie dotyczy to jednak wewnętrznej złożoności rozbudowanych grup, które nie muszą być ze sobą powiązane.
 
-Jednym ze sposobów jest znacznie krótszy to rozprzestrzenianie jest wdrażanie kontroli dostępu opartej na rolach (RBAC). RBAC wykluczają DAC.  RBAC opiera się na aplikacji DAC, zapewniając strukturę do klasyfikowania użytkowników i zasoby informatyczne. Dzięki temu, że jawne ich relacje i prawa dostępu, które są odpowiednie, zgodnie z danej klasyfikacji. Na przykład przypisując go do użytkownika stanowisko atrybuty określające użytkowników i przydziałów projektu, użytkownik może otrzymać dostęp do narzędzia potrzebne do użytkownika zadania i dane, które użytkownik chce przyczyniają się do określonego projektu. Po użytkownik przyjmuje różne zadania i przypisania innego projektu, zmiana atrybutów, które określają stanowisko użytkownika i projektów automatycznie blokuje dostęp do zasobów wymagane tylko dla użytkowników poprzedniej pozycji.
+Jednym ze sposobów znacznego zmniejszenia tego rozprzestrzenienia jest wdrożenie kontroli dostępu opartej na rolach (RBAC). RBAC nie rozmieszczenie DAC.  Kontrola RBAC kompiluje na DAC, dostarczając strukturę do klasyfikowania użytkowników i zasobów IT. Dzięki temu można jawnie wprowadzić swoje relacje i prawa dostępu, które są odpowiednie zgodnie z tą klasyfikacją. Na przykład, przypisując do atrybutów użytkownika, które określają tytuł zadania użytkowników i przypisania projektu, użytkownik może uzyskać dostęp do narzędzi niezbędnych dla zadania użytkownika i danych, które użytkownik musi współtworzyć w określonym projekcie. Gdy użytkownik zaleci inne zadanie i różne przypisania projektu, zmiana atrybutów określających stanowisko użytkownika i projekty automatycznie blokuje dostęp tylko do zasobów wymaganych przez poprzednią pozycję Użytkownicy.
 
-Ponieważ role mogą być zawarte w ramach ról w hierarchiczny sposób (na przykład role kierownikiem ds. sprzedaży i przedstawicielem handlowym firmy mogą być zawarte w bardziej ogólnych roli sales), można łatwo przypisać odpowiednie uprawnienia do określonych ról i nadal jeszcze zapewniają odpowiednie uprawnienia do wszystkich użytkowników, którzy udostępnia również bardziej włącznie roli. Na przykład w szpitalu, wszyscy członkowie personelu medycznych może mieć prawo, aby wyświetlić rekordy pacjentów, ale lekarzy (rolą podrzędną rolę medycznych) może mieć prawo do wprowadzania wymagań dla pacjenta. Podobnie użytkownicy należący do roli maszynowy może mieć dostępu do kartoteki pacjentów, z wyjątkiem rozliczeń urzędników (rolą podrzędną rolę biurowych), którzy mogą uzyskać dostęp do tych obszarach rekordy pacjentów, które są wymagane do rozliczania pacjenta dla usług udostępniane przez szpitala.
+Ponieważ role mogą być zawarte w rolach hierarchicznie, (na przykład role kierownika ds. sprzedaży i przedstawiciel handlowy mogą znajdować się w bardziej ogólnym zakresie sprzedaży), można łatwo przypisywać odpowiednie prawa do określonych ról, a jeszcze w dalszym ciągu odpowiednie prawa do wszystkich osób, które współużytkują tę rolę bardziej włącznie. Na przykład w szpitalu Wszyscy Pracownicy medyczni mogą uzyskać prawo do wyświetlania rekordów pacjentów, ale tylko lekarzy liczy (podrolą roli medycznej) mogą mieć prawo do wprowadzania postanowień dotyczących pacjenta. Podobnie w przypadku użytkowników należących do roli biurowej można odmówić dostępu do rekordów pacjenta, z wyjątkiem urzędników rozliczeń (podrolą roli biurowej), którzy mogli udzielić dostępu do tych części rekordów pacjentów, które są wymagane do rozliczenia pacjenta dla usług dostarczone przez szpital.
 
-Dodatkową zaletą RBAC jest możliwość definiujące i wymuszające rozdzielenia obowiązków (darni). Dzięki temu organizacja zdefiniować kombinacje ról, które udzielić uprawnień, które nie powinny być przechowywane przez tego samego użytkownika, aby dany użytkownik nie może przypisać role, które umożliwiają użytkownikom, aby zainicjować płatności, a autoryzowanie płatności, na przykład. RBAC zapewnia możliwość automatycznie wymuszać taką zasadę, niż musieć go obliczyć skutecznego stosowania zasad dla poszczególnych użytkowników.
+Dodatkową zaletą RBAC jest możliwość definiowania i wymuszania rozdzielania obowiązków (SoD). Dzięki temu organizacja może definiować kombinacje ról, które przyznają uprawnienia, które nie powinny być przechowywane przez tego samego użytkownika, tak aby określony użytkownik nie mógł mieć przypisanych ról, które umożliwiają użytkownikowi Zainicjowanie płatności i autoryzację płatności na przykład. Funkcja RBAC umożliwia automatyczne wymuszanie takich zasad, a nie testowanie efektywnej implementacji zasad dla poszczególnych użytkowników.
 
 ### <a name="bhold-role-model-objects"></a>Obiekty modelu roli pakietu BHOLD
 
-Za pomocą pakietu BHOLD można określić i organizowanie ról w organizacji, mapa użytkowników do ról i mapy odpowiednich uprawnień do ról. Ta struktura jest nazywany model roli i zawiera i łączy się z pięciu typów obiektów: 
+Dzięki pakietowi pakietu BHOLD można określić i zorganizować role w organizacji, zamapować użytkowników na role i zmapować odpowiednie uprawnienia do ról. Ta struktura jest nazywana modelem roli i zawiera i łączy pięć typów obiektów: 
 
 - Jednostki organizacyjne
-- Users
+- Użytkownicy
 - Role
 - Uprawnienia
 - Aplikacje
 
 #### <a name="organizational-units"></a>Jednostki organizacyjne
 
-Jednostki organizacyjne (OrgUnits) są podmiotu zabezpieczeń oznacza, że za pomocą którego użytkownicy są zorganizowane w modelu roli BHOLD. Każdy użytkownik musi należeć do co najmniej jeden OrgUnit. (W rzeczywistości po usunięciu użytkownika z ostatnich jednostki organizacyjnej w BHOLD użytkownika danych rekord zostanie usunięty z bazy danych BHOLD.)
+Jednostki organizacyjne (OrgUnits) są podmiotem zabezpieczeń, za pomocą którego użytkownicy są zorganizowane w modelu roli pakietu BHOLD. Każdy użytkownik musi należeć do co najmniej jednego OrgUnit. (W przypadku, gdy użytkownik zostanie usunięty z ostatniej jednostki organizacyjnej w pakietu BHOLD, rekord danych użytkownika zostanie usunięty z bazy danych pakietu BHOLD).
 
 > [!Important]
-> Jednostki organizacyjne w modelu roli pakietu BHOLD nie należy mylić z jednostkami organizacyjnymi w usługach domenowych w usłudze Active Directory (AD DS). Zazwyczaj struktury jednostek organizacyjnych w BHOLD zależy od organizacji i zgodnie z zasadami firmy, nie wymagania dotyczące infrastruktury sieciowej.
+> Jednostki organizacyjne w modelu roli pakietu BHOLD nie należy mylić z jednostkami organizacyjnymi w Active Directory Domain Services (AD DS). Zazwyczaj struktura jednostki organizacyjnej w programie pakietu BHOLD opiera się na organizacji i zasadach firmy, a nie w wymaganiach dotyczących infrastruktury sieciowej.
 
-Chociaż nie jest wymagane, jednostki organizacyjne są w większości przypadków umieszczonymi w BHOLD do reprezentowania struktury hierarchicznej organizacji rzeczywiste, podobny do przedstawionego poniżej:
+Chociaż nie jest to wymagane, w większości przypadków jednostki organizacyjne są uporządkowane w pakietu BHOLD do reprezentowania hierarchicznej struktury rzeczywistej organizacji, podobnej do przedstawionej poniżej:
 
 ![](media/bhold-concepts-guide/org-chart.png)
 
-W tym przykładzie model roli będzie organizationalganizatinal jednostkę corporation jako całość (reprezentowany przez Prezes, ponieważ Prezes nie jest częścią zestawu mororganizationalganizatinal) lub jednostki organizacyjnej głównym pakietu BHOLD (co zawsze istnieje) może służyć do tego celu. OrgUnits reprezentujący oddziałów firmy czele prezydentów Wiceprezes zostają umieszczone w jednostce organizacyjnej firmowych. Następny, organizacji jednostki odpowiadający dyrektorów sprzedaży i marketingu zostaną dodane do jednostki organizacyjnej sprzedaży i marketingu i jednostek organizacyjnych, reprezentujący regionalnych menedżerowie ds. sprzedaży zostanie umieszczony w jednostce organizacyjnej dla wschodnim regionie kierownikiem ds. sprzedaży. Kojarzy sprzedaży, którzy nie zarządzają innych użytkowników, nastąpi elementów członkowskich jednostki organizacyjnej z kierownikiem ds. sprzedaży w regionie wschodnim. Należy pamiętać, że użytkownicy mogą być członkami jednostki organizacyjnej, na dowolnym poziomie. Na przykład Asystenta administracyjnego, który nie jest menedżera i raporty bezpośrednio Wiceprezes, będzie należeć do jednostki organizacyjnej wiceprezes ds.
+W tym przykładzie model roli organizationalganizatinal jednostkę dla firmy jako całość (reprezentowana przez prezesa, ponieważ prezes nie jest częścią jednostki mororganizationalganizatinal) lub głównej jednostki organizacyjnej pakietu BHOLD (która zawsze istnieje) może być używany w tym celu. OrgUnits reprezentujący działy firmy, które są umieszczone przez wiceprezesów, zostałyby przekazane do firmowej jednostki organizacyjnej. Następnie jednostki organizacyjne odpowiadające podmiotom gospodarczym marketingu i sprzedaży byłyby dodawane do jednostek organizacyjnych Marketing i sprzedaż, a jednostki organizacyjne reprezentujące regionalnych menedżerów sprzedaży byłyby umieszczane w jednostce organizacyjnej dla Kierownik ds. sprzedaży w regionie Wschodniej. Jednostki organizacyjne, które nie zarządzają innymi użytkownikami, powinny należeć do działu organizacji w menedżerze sprzedaży wschodnie regiony. Należy pamiętać, że użytkownicy mogą być członkami jednostki organizacyjnej na dowolnym poziomie. Na przykład asystent administracyjny, który nie jest kierownikiem i raportami bezpośrednio dla wiceprezesa, będzie członkiem jednostki organizacyjnej wiceprezesa.
 
-Oprócz reprezentowania struktury organizacyjnej, jednostek organizacyjnych może również do grupy użytkowników i innych jednostek organizacyjnych, zgodnie z kryteriami funkcjonalności, takie jak dla projektów lub specjalizacji. Na poniższym diagramie przedstawiono sposób organizacji jednostki może służyć do grupowania kojarzy sprzedaży, zależnie od typu klienta:
+Oprócz reprezentowania struktury organizacyjnej jednostki organizacyjne mogą być również używane do grupowania użytkowników i innych jednostek organizacyjnych zgodnie z kryteriami funkcjonalnymi, takimi jak w przypadku projektów lub specjalizacji. Na poniższym diagramie pokazano, w jaki sposób jednostki organizacyjne byłyby używane do grupowania partnerów sprzedaży w zależności od typu klienta:
 
 ![](media/bhold-concepts-guide/org-chart-02.png)
 
-W tym przykładzie każdy pracownik sprzedaży będzie należeć do dwóch jednostek organizacyjnych: jeden reprezentujący skojarzenia miejsce w strukturze zarządzania Twojej organizacji i jeden reprezentujący bazy klientów skojarzenia (sprzedaży lub firmowe). Każda jednostka organizacyjna można przypisać różne role, które z kolei mogą być przypisane różne uprawnienia do uzyskiwania dostępu do organizacji zasobów informatycznych. Ponadto role mogą być dziedziczone z nadrzędnego jednostek organizacyjnych, upraszczając proces propagowanie ról do użytkowników. Z drugiej strony określonych ról nie są dziedziczone, zapewniając, że określonej roli są skojarzone tylko z odpowiednich jednostek organizacyjnych.
+W tym przykładzie każdy podmiot sprzedaży będzie należał do dwóch jednostek organizacyjnych: jeden reprezentuje miejsce skojarzenia w strukturze zarządzania organizacji, a drugi reprezentuje bazę klienta (detaliczną lub firmową). Do każdej jednostki organizacyjnej można przypisać różne role, które z kolei mogą mieć przypisane różne uprawnienia dostępu do zasobów IT organizacji. Ponadto role można dziedziczyć z nadrzędnych jednostek organizacyjnych, upraszczając proces propagowania ról do użytkowników. Z drugiej strony można zapobiegać dziedziczeniu określonych ról, upewniając się, że określona rola jest skojarzona tylko z odpowiednimi jednostkami organizacyjnymi.
 
-Za pomocą portalu sieci web pakietu BHOLD Core lub za pomocą generatora modeli pakietu BHOLD OrgUnits można utworzyć pakietu BHOLD Suite.
+OrgUnits można utworzyć w pakietu BHOLD Suite przy użyciu głównego portalu sieci Web pakietu BHOLD lub przy użyciu generatora modelu pakietu BHOLD.
 
-#### <a name="users"></a>Users
+#### <a name="users"></a>Użytkownicy
 
-Jak wspomniano powyżej, każdy użytkownik musi należeć do co najmniej jedną jednostkę organizacyjną (OrgUnit). Ponieważ jednostki organizacyjne są jednostki mechanizm kojarzenia użytkownika z ról, w większości organizacji dany użytkownik należy do wielu OrgUnits, aby ułatwić Skojarz role z użytkownikiem. W niektórych przypadkach jednak może być konieczne do skojarzenia z roli użytkownika, niezależnie od wszelkich OrgUnits, której należy użytkownik. W związku z tym użytkownikowi można przypisać bezpośrednio do roli, a także uzyskiwania ról z OrgUnits, do której należy użytkownik.
+Jak wspomniano powyżej, każdy użytkownik musi należeć do co najmniej jednej jednostki organizacyjnej (OrgUnit). Ponieważ jednostki organizacyjne są głównym mechanizmem kojarzenia użytkownika z rolami, w większości organizacji dany użytkownik należy do wielu OrgUnits, aby ułatwić skojarzenie ról z tym użytkownikiem. Jednak w niektórych przypadkach może być konieczne skojarzenie roli z użytkownikiem niezależnie od dowolnych OrgUnits, do których należy użytkownik. W związku z tym użytkownik może być przypisany bezpośrednio do roli, a także do uzyskiwania ról z OrgUnits, do którego należy użytkownik.
 
-Gdy użytkownik nie jest aktywny w organizacji (trochę natychmiast medycznych urlopu, na przykład), użytkownik może zostać zawieszone, która odwołuje wszystkie uprawnienia użytkownika bez usuwania użytkownika z roli modelu. Po powrocie do podatku, użytkownik może ponownie uaktywnić, przywraca wszystkie uprawnienia przyznane przez bieżącego użytkownika.
+Jeśli użytkownik nie jest aktywny w organizacji (na przykład w przypadku urlopu medycznego), użytkownik może zostać zawieszony, który odwołuje wszystkie uprawnienia użytkownika bez usuwania użytkownika z modelu roli. Po powrocie do cła można ponownie aktywować użytkownika, co spowoduje przywrócenie wszystkich uprawnień udzielonych przez role użytkownika.
 
-Obiekty użytkowników można tworzyć osobno w pakietu BHOLD za pośrednictwem portalu sieci web Core pakietu BHOLD lub importowane zbiorczo za pomocą generatora modeli pakietu BHOLD lub za pomocą łącznika zarządzania dostęp za pomocą usługi synchronizacji programu FIM do importowania informacji o użytkowniku z źródeł, takich jak Active Directory Domain Services lub zarządzania zasobami ludzkimi aplikacji.
+Obiekty dla użytkowników mogą być tworzone pojedynczo w pakietu BHOLD za pośrednictwem portalu sieci Web pakietu BHOLD Core lub można je zaimportować zbiorczo przy użyciu generatora modelu pakietu BHOLD lub przy użyciu łącznika zarządzania dostępem z usługą synchronizacji FIM w celu zaimportowania informacji o użytkowniku z takie źródła jako Active Directory Domain Services lub aplikacje kadrowe.
 
-Użytkownicy mogą być tworzone bezpośrednio w BHOLD bez korzystania z programu FIM Synchronization Service. Może to być przydatne, gdy modelowania ról w środowisku przedprodukcyjnym lub testowym środowisku. Możesz również zezwolić użytkowników zewnętrznych (na przykład pracownicy podwykonawcy) może być przypisane role i dlatego wydane dostępu do zasobów informatycznych, bez dodawane do bazy danych pracownika. Jednak te użytkownicy nie będą mogli korzystać z funkcji samoobsługi BHOLD.
+Użytkowników można tworzyć bezpośrednio w usłudze pakietu BHOLD bez używania usługi synchronizacji FIM. Może to być przydatne w przypadku modelowania ról w środowisku przedprodukcyjnym lub testowym. Można również zezwolić użytkownikom zewnętrznym (takim jak pracownikom podwykonawców) na przypisywanie ról, a tym samym dostęp do zasobów IT bez dodawania do bazy danych pracownika; jednak Ci użytkownicy nie będą mogli korzystać z funkcji samoobsługowych pakietu BHOLD.
 
 #### <a name="roles"></a>Role
 
-Jak wspomniano wcześniej, w ramach modelu kontroli dostępu opartej na rolach uprawnienia są skojarzone z rolami, a nie poszczególnych użytkowników. Umożliwia ona każdemu użytkownikowi zapewnić uprawnień wymaganych do wykonywania obowiązków użytkownika, zmieniając role użytkownika, zamiast oddzielnie udzielanie lub odmawianie uprawnień użytkownika. W konsekwencji przypisanie uprawnień nie wymaga już udział działu IT, ale zamiast tego mogą być wykonywane w ramach zarządzania firmy. Rola może agregować uprawnienia dostępu do różnych systemów, bezpośrednio lub za pomocą podrzędne, co dodatkowo ogranicza potrzebę dodatkowych zasobów informatycznych w zarządzanie uprawnieniami użytkowników.
+Jak wspomniano wcześniej, w modelu kontroli dostępu opartej na rolach (RBAC) uprawnienia są skojarzone z rolami, a nie pojedynczymi użytkownikami. Dzięki temu każdy użytkownik może dać każdemu użytkownikowi uprawnienia wymagane do wykonania obowiązków użytkownika, zmieniając role użytkownika, a nie przydzielając ani nie odmawiając uprawnień użytkownika. W związku z tym przypisanie uprawnień nie wymaga już uczestnictwa działu IT, ale można je wykonać w ramach zarządzania firmą. Rola może agregować uprawnienia do uzyskiwania dostępu do różnych systemów bezpośrednio lub za pomocą podról, co dodatkowo zmniejsza potrzebę zaangażowania działu IT w Zarządzanie uprawnieniami użytkownika.
 
-Jest ważne, należy pamiętać, że role są funkcją modelu RBAC. Zazwyczaj role nie są udostępnione do aplikacji docelowej. Dzięki temu funkcji RBAC w usłudze można używać razem z istniejących aplikacji, które nie są zaprojektowane role lub zmień rolę definicje potrzeb zmiana modeli biznesowych bez konieczności modyfikowania same aplikacje. Jeśli aplikacja docelowa jest przeznaczony do stosowania ról, następnie można skojarzone role w modelu roli BHOLD przy użyciu odpowiednich ról aplikacji przez traktowanie ról specyficzne dla aplikacji jako uprawnień.
+Należy pamiętać, że role są funkcją samego modelu RBAC; zazwyczaj role nie są obsługiwane w aplikacjach docelowych. Dzięki temu funkcja RBAC może być używana razem z istniejącymi aplikacjami, które nie są przeznaczone do używania ról lub do zmiany definicji ról, muszą spełniać potrzeby zmiany modeli firmy bez konieczności modyfikowania samych aplikacji. Jeśli aplikacja docelowa została zaprojektowana do korzystania z ról, można kojarzyć role w modelu roli pakietu BHOLD z odpowiednimi rolami aplikacji, traktując role specyficzne dla aplikacji jako uprawnienia.
 
-W BHOLD możesz przypisać rolę użytkownikowi, głównie za pośrednictwem dwóch mechanizmów:
+W pakietu BHOLD można przypisać rolę do użytkownika głównie za pomocą dwóch mechanizmów:
 
-- Przez przypisanie roli organizacyjnej jednostki (jednostki organizacyjnej), której członkiem jest użytkownik
+- Przypisanie roli do jednostki organizacyjnej (jednostki organizacyjnej), do której należy użytkownik
 - Przypisanie roli bezpośrednio do użytkownika
 
-Rola przypisana do nadrzędnej jednostki organizacyjnej opcjonalnie mogą być dziedziczone przez jej elementu członkowskiego jednostek organizacyjnych. Gdy rola przypisana do lub jest dziedziczona przez jednostkę organizacyjną, może być wyznaczony jako skuteczne lub proponowanej roli. Jeśli efektywną rolę, wszyscy użytkownicy w tej jednostce organizacyjnej przypisano rolę. Jeśli jest to rola proponowane, musi być aktywowana dla każdego użytkownika lub elementu członkowskiego jednostki organizacyjnej przestanie obowiązywać dla tego użytkownika lub elementów członkowskich jednostki organizacyjnej. Dzięki temu można przypisać użytkowników z podzbiorem ról skojarzony z jednostką organizacyjną, a nie automatyczne przypisywanie wszystkich ról jednostki organizacyjnej do wszystkich elementów członkowskich. Ponadto można podać ról daty rozpoczęcia i zakończenia i limity można umieścić na procencie użytkowników w ramach jednostki organizacyjnej, dla której rolą może być skuteczne.
+Rola przypisana do nadrzędnej jednostki organizacyjnej opcjonalnie może być dziedziczona przez jej składowe jednostki organizacyjne. Gdy rola jest przypisywana lub dziedziczona przez jednostkę organizacyjną, można ją wyznaczyć jako obowiązującą lub proponowaną rolę. Jeśli jest to skuteczna rola, wszyscy użytkownicy w jednostce organizacyjnej są przypisani do roli. Jeśli jest to proponowana rola, musi być aktywowana dla każdej jednostki organizacyjnej użytkownika lub członka, aby stała obowiązywać z członkami tego użytkownika lub jednostki organizacyjnej. Dzięki temu można przypisywać użytkownikom podzestaw ról skojarzonych z jednostką organizacyjną, a nie automatycznie przypisywać wszystkich ról jednostki organizacyjnej do wszystkich członków. Ponadto role mogą mieć określone daty rozpoczęcia i zakończenia, a limity mogą być umieszczane w procentach użytkowników w jednostce organizacyjnej, dla której rola może być skuteczna.
 
-Na poniższym diagramie przedstawiono, jak użytkownik może mieć przypisaną rolę w BHOLD:
+Na poniższym diagramie przedstawiono, w jaki sposób pojedynczy użytkownik może mieć przypisaną rolę w pakietu BHOLD:
 
 ![](media/bhold-concepts-guide/org-chart-flow.png)
 
-Na poniższym diagramie roli A jest przypisany do jednostki organizacyjnej jako rola dziedziczone, a więc jest dziedziczona przez jej elementu członkowskiego jednostki organizacyjne i wszyscy użytkownicy w tych jednostkach organizacyjnych. Jako proponowane rola przypisano rolę B dla jednostki organizacyjnej. Musi zostać aktywowana, aby użytkownik w jednostce organizacyjnej, może być autoryzowane przy użyciu uprawnień w ramach roli. Rola języka C jest efektywną rolę, dzięki czemu jego uprawnienia natychmiast zastosowane do wszystkich użytkowników w jednostce organizacyjnej. Rola D jest połączone bezpośrednio do użytkownika, i dlatego jego uprawnienia natychmiast zastosowane do tego użytkownika.
+Na tym diagramie rola A jest przypisana do jednostki organizacyjnej jako rola dziedziczna i dlatego jest dziedziczona przez jej składowe jednostki organizacyjne i wszystkich użytkowników w tych jednostkach organizacyjnych. Rola B jest przypisana jako proponowana rola dla jednostki organizacyjnej. Aby użytkownik w jednostce organizacyjnej mógł zostać autoryzowany przy użyciu uprawnień roli, musi zostać aktywowany. Rola C jest efektywną rolą, dlatego uprawnienia są stosowane natychmiast do wszystkich użytkowników w jednostce organizacyjnej. Rola D jest połączona bezpośrednio z użytkownikiem i dlatego uprawnienia do nich mają zastosowanie natychmiast.
 
-Ponadto można aktywować rolę dla użytkownika na podstawie atrybutów użytkownika. Aby uzyskać więcej informacji zobacz autoryzacja na podstawie atrybutu.
+Ponadto można aktywować rolę dla użytkownika na podstawie atrybutów użytkownika. Aby uzyskać więcej informacji, zobacz Autoryzacja oparta na atrybutach.
 
 #### <a name="permissions"></a>Uprawnienia
 
-Dla uprawnienia w BHOLD odnosi się do autoryzacji importowane z aplikacji docelowej. Oznacza to gdy BHOLD jest skonfigurowane do pracy z aplikacją, otrzymuje listę autoryzacji, które BHOLD można połączyć z ról. Na przykład po dodaniu usługi Active Directory Domain Services (AD DS) do pakietu BHOLD jako aplikacji otrzymuje listę grup zabezpieczeń, które jako BHOLD uprawnienia, mogą być połączone do ról w BHOLD.
+Uprawnienie w pakietu BHOLD odnosi się do autoryzacji zaimportowanej z aplikacji docelowej. Oznacza to, że jeśli pakietu BHOLD jest skonfigurowany do pracy z aplikacją, otrzymuje listę autoryzacji, które pakietu BHOLD mogą łączyć się z rolami. Na przykład po dodaniu Active Directory Domain Services (AD DS) do pakietu BHOLD jako aplikacji otrzymuje listę grup zabezpieczeń, które jako uprawnienia pakietu BHOLD mogą być połączone z rolami w pakietu BHOLD.
 
-Uprawnienia są specyficzne dla aplikacji. BHOLD zapewnia jednym, ujednoliconym widoku uprawnienia, dzięki czemu można kojarzyć uprawnienia z rolami bez konieczności roli menedżerów poznać szczegóły implementacji uprawnienia. W praktyce różnych systemów może wymuszać uprawnienia inaczej. Łącznik specyficzne dla aplikacji z programu FIM Synchronization Service do aplikacji określa, jak zmiany uprawnień dla użytkownika są dostarczane do tej aplikacji. 
+Uprawnienia są specyficzne dla aplikacji. PAKIETU BHOLD zapewnia jednolity, ujednolicony widok uprawnień, aby uprawnienia mogły być skojarzone z rolami bez konieczności poznania szczegółów implementacji uprawnień przez menedżerów ról. W tym przypadku różne systemy mogą wymuszać uprawnienia inaczej. Łącznik specyficzny dla aplikacji z usługi synchronizacji FIM do aplikacji określa, w jaki sposób zmiany uprawnień dla użytkownika są udostępniane tej aplikacji. 
 
 #### <a name="applications"></a>Aplikacje
 
-BHOLD implementuje metodę stosowania kontroli dostępu opartej na rolach (RBAC) do aplikacji zewnętrznych. Oznacza to gdy BHOLD był zaopatrzony użytkowników i uprawnień z aplikacji, pakietu BHOLD można skojarzyć te uprawnienia użytkownikom przez przypisywanie ról do użytkowników, a następnie łącząc uprawnienia do ról. Proces w tle aplikacji może być przeprowadzenie mapowania odpowiednich uprawnień do jego użytkowników na podstawie mapowania uprawnienia/roli w BHOLD.
+PAKIETU BHOLD implementuje metodę stosowania kontroli dostępu opartej na rolach (RBAC) do aplikacji zewnętrznych. Oznacza to, że po zainicjowaniu pakietu BHOLD z użytkownikami i uprawnieniami z aplikacji pakietu BHOLD może skojarzyć te uprawnienia z użytkownikami, przypisując role do użytkowników, a następnie łącząc uprawnienia z rolami. Proces w tle aplikacji może następnie zmapować odpowiednie uprawnienia do swoich użytkowników na podstawie mapowania ról/uprawnień w pakietu BHOLD.
 
-### <a name="developing-the-bhold-suite-role-model"></a>Tworzenie modelu roli pakietu BHOLD
+### <a name="developing-the-bhold-suite-role-model"></a>Opracowywanie modelu roli pakietu BHOLD Suite
 
-Aby pomóc w tworzeniu modelu ról, pakietu BHOLD udostępnia Generator modelu, który jest łatwy w użyciu i wszechstronne narzędzie.
+Aby ułatwić tworzenie modelu roli, pakiet pakietu BHOLD Suite oferuje Generator modeli, narzędzie, które jest proste do użycia i wszechstronne.
 
-Przed użyciem Generator modelu, należy utworzyć szereg pliki definiujące obiekty, które Generator modelu używa do konstruowania modelu roli. Aby uzyskać informacje dotyczące sposobu tworzenia tych plików Zobacz dokumentacja techniczna pakietu BHOLD firmy Microsoft.
+Przed użyciem generatora modeli należy utworzyć serię plików, która definiuje obiekty używane przez generator modelu do konstruowania modelu roli. Aby uzyskać informacje na temat sposobu tworzenia tych plików, zobacz informacje techniczne dotyczące pakietu Microsoft pakietu BHOLD Suite.
 
-Pierwszym krokiem przy użyciu generatora modeli pakietu BHOLD jest importowanie tych plików, aby załadować podstawowe bloki konstrukcyjne do Generator modelu. Gdy pliki zostały pomyślnie załadowane, możesz określić kryteria, które używa Generator modelu w celu utworzenia kilka rodzajów ról:
+Pierwszym krokiem przy użyciu generatora modelu pakietu BHOLD jest zaimportowanie tych plików w celu załadowania podstawowych bloków konstrukcyjnych do generatora modelu. Po pomyślnym załadowaniu plików można określić kryteria używane przez generator modelu do tworzenia kilku klas ról:
 
-- Ról członkostwa, które są przypisane do użytkownika w oparciu OrgUnits (jednostki organizacyjnej), której należy użytkownik
-- Atrybut role, które są przypisane do użytkownika, na podstawie atrybutów użytkownika w bazie danych pakietu BHOLD
-- Proponowana role, które są połączone z jednostką organizacyjną, ale musi być aktywowana dla konkretnych użytkowników
-- Przyznaj użytkownikowi kontrolę nad jednostkach organizacyjnych i role, których właścicielem nie jest określony w importowanych plików role własności
+- Role członkostwa przypisane do użytkownika w oparciu o OrgUnits (jednostki organizacyjne), do których należy użytkownik
+- Role atrybutów, które są przypisane do użytkownika na podstawie atrybutów użytkownika w bazie danych pakietu BHOLD
+- Proponowane role, które są połączone z jednostką organizacyjną, ale muszą być aktywowane dla określonych użytkowników
+- Role własności, które przydzielą kontrolę użytkownika na jednostki organizacyjne i role, dla których właściciel nie jest określony w importowanych plikach
 
 > [!Important]
-> Po przekazaniu plików wybierz **zachować istniejący Model** pole wyboru tylko w środowiskach testowych. W środowiskach produkcyjnych należy użyć Generator modeli do utworzenia początkowej modelu roli. Nie można używać go, aby zmodyfikować istniejący model roli w bazie danych BHOLD.
+> Podczas przekazywania plików zaznacz pole wyboru **Zachowaj istniejący model** tylko w środowiskach testowych. W środowiskach produkcyjnych należy użyć generatora modeli, aby utworzyć początkowy model roli. Nie można jej użyć do zmodyfikowania istniejącego modelu roli w bazie danych pakietu BHOLD.
 
-Po utworzeniu Generator modeli tych ról w modelu ról, można następnie wyeksportować model roli, aby baza danych BHOLD w postaci pliku XML.
+Po utworzeniu przez generator modelu ról w modelu roli można wyeksportować model roli do bazy danych pakietu BHOLD w postaci pliku XML.
 
 ### <a name="advanced-bhold-features"></a>Zaawansowane funkcje pakietu BHOLD
 
-Przedstawione w poprzednich sekcjach opisano podstawowe funkcje kontroli dostępu opartej na rolach (RBAC) w BHOLD. W tej sekcji opisano dodatkowe funkcje pakietu BHOLD, która może zapewnić większe bezpieczeństwo i elastyczność implementacji RBAC w Twojej organizacji. Ta sekcja zawiera omówienie następujących funkcji BHOLD:
+Poprzednie sekcje opisują podstawowe funkcje kontroli dostępu opartej na rolach (RBAC) w pakietu BHOLD. W tej sekcji opisano dodatkowe funkcje w pakietu BHOLD, które mogą zapewnić zwiększone zabezpieczenia i elastyczność implementacji RBAC w organizacji. Ta sekcja zawiera przegląd następujących funkcji pakietu BHOLD:
 
-- Kardynalność
-- Podział obowiązków
-- Kontekst potężnej uprawnień
-- Autoryzacja na podstawie atrybutu
-- Typy elastyczne atrybutów
+- Kardynalności
+- Rozdzielenie obowiązków
+- Uprawnienia z możliwością dostosowania kontekstu
+- Autoryzacja oparta na atrybutach
+- Elastyczne typy atrybutów
 
 
-#### <a name="cardinality"></a>Kardynalność
+#### <a name="cardinality"></a>Kardynalności
 
-*Kardynalność* odwołuje się do stosowania reguł biznesowych, które są przeznaczone do ograniczenia liczby dwie jednostki mogą być powiązane ze sobą. W przypadku pakietu BHOLD reguły Kardynalność może zostać nawiązana ról, uprawnienia i użytkowników.
+*Kardynalność* odnosi się do implementacji reguł biznesowych, które zostały zaprojektowane w celu ograniczenia liczby przypadków, w których dwie jednostki mogą być ze sobą powiązane. W przypadku pakietu BHOLD można ustalić reguły kardynalności dla ról, uprawnień i użytkowników.
 
-Można skonfigurować role, aby ograniczyć następujące czynności:
+Można skonfigurować rolę, aby ograniczyć następujące czynności:
 
-- Maksymalna liczba użytkowników, dla których można aktywować rolę proponowanego
-- Maksymalna liczba podrzędne, które mogą być połączone do roli
-- Maksymalna liczba uprawnienia, które mogą być połączone do roli
+- Maksymalna liczba użytkowników, dla których można aktywować proponowaną rolę
+- Maksymalna liczba ról, które mogą być połączone z rolą
+- Maksymalna liczba uprawnień, które mogą być połączone z rolą
 
-Można skonfigurować uprawnienia, aby ograniczyć następujące czynności:
+Można skonfigurować uprawnienie do ograniczania następujących czynności:
 
-- Maksymalna liczba ról, które mogą być połączone do uprawnień
+- Maksymalna liczba ról, które mogą być połączone z uprawnieniem
 - Maksymalna liczba użytkowników, którym można udzielić uprawnienia
 
-Można skonfigurować użytkownika, aby ograniczyć następujące czynności:
+Można skonfigurować użytkownika tak, aby ograniczyć następujące czynności:
 
-- Maksymalna liczba ról, które mogą być połączone do użytkownika
-- Maksymalna liczba uprawnień przypisanych do użytkownika za pomocą przypisań ról
+- Maksymalna liczba ról, które mogą być połączone z użytkownikiem
+- Maksymalna liczba uprawnień, które mogą być przypisane do użytkownika za pomocą przypisań ról
 
-#### <a name="separation-of-duties"></a>Podział obowiązków
+#### <a name="separation-of-duties"></a>Rozdzielenie obowiązków
 
-Rozdzielenie obowiązków (darni) to zasady biznesowe, że stara, aby uniemożliwić osobom możliwość wykonywania akcji, które nie powinny być dostępne dla jednej osoby. Na przykład pracownik powinna nie można zażądać płatności i autoryzowanie płatności. Zasady darni umożliwia organizacjom Implementowanie system kontroli i zrównoważenia, aby zminimalizować ich narażenia na zagrożenia z błąd pracownika lub naruszenie.
+Rozdzielenie obowiązków (SoD) jest zasadą biznesową, która dąży do uniemożliwienia jednostkom wykonywania działań, które nie powinny być dostępne dla jednej osoby. Na przykład pracownik nie powinien w stanie zażądać płatności i autoryzować płatności. Zasada SoD umożliwia organizacjom wdrożenie systemu kontroli i bilansów w celu zminimalizowania ryzyka związanego z błędem pracownika lub ich niepowodzeniem.
 
-BHOLD implementuje darni, umożliwiając Definiowanie niezgodne uprawnień. Gdy te uprawnienia są zdefiniowane, BHOLD wymusza darni zapobieganie tworzeniu role, które są połączone z niezgodną uprawnień, czy są połączone bezpośrednio lub poprzez dziedziczenie i poprzez uniemożliwienie użytkownikom miałyby przypisać wiele ról, gdy w połączeniu, przyznano uprawnienia niezgodne ponownie przypisania bezpośredniego lub przez dziedziczenie. Opcjonalnie można przesłonić, konflikty.
+PAKIETU BHOLD implementuje SoD przez umożliwienie definiowania niezgodnych uprawnień. Gdy te uprawnienia są zdefiniowane, pakietu BHOLD wymusza SoD, uniemożliwiając tworzenie ról, które są połączone z niezgodnymi uprawnieniami, niezależnie od tego, czy są połączone bezpośrednio, czy przez dziedziczenie, i uniemożliwiając użytkownikom przypisanie wielu ról, gdy połączone, przydzielą ponownie niezgodne uprawnienia przez przypisanie bezpośrednie lub dziedziczenie. Opcjonalnie można zastąpić konflikty.
 
-#### <a name="context-adaptable-permissions"></a>Kontekst potężnej uprawnień
+#### <a name="context-adaptable-permissions"></a>Uprawnienia z możliwością dostosowania kontekstu
 
-Tworząc uprawnienia, które mogą być automatycznie modyfikowane na podstawie atrybutu obiektu, można zmniejszyć całkowita liczba uprawnienia, które trzeba zarządzać. Kontekst potężnej uprawnienia (CAP) pozwalają zdefiniować formułę jako atrybut uprawnień, który modyfikuje sposób stosowania uprawnienia aplikacji skojarzonych z uprawnieniem. Na przykład można utworzyć formułę, która zmienia uprawnienia dostępu do folderu plików (za pośrednictwem grupy zabezpieczeń skojarzone z listy kontroli dostępu folderu) czy użytkownik należy do organizacji jednostki (jednostki organizacyjnej) zawierającej pełnym wymiarze czasu lub umowy pracowników. Jeśli użytkownik zostanie przeniesiony z jednej jednostki organizacyjnej do innego, nowe uprawnienie jest automatycznie stosowana i starego uprawnienie jest zdezaktywowane. 
+Tworząc uprawnienia, które mogą być automatycznie modyfikowane na podstawie atrybutu obiektu, można zmniejszyć łączną liczbę uprawnień do zarządzania. Uprawnienia z możliwością dostosowania kontekstu (CAP) umożliwiają zdefiniowanie formuły jako atrybutu uprawnienia, która modyfikuje sposób zastosowania uprawnień przez aplikację skojarzoną z uprawnieniem. Można na przykład utworzyć formułę, która zmienia uprawnienia dostępu do folderu plików (za pośrednictwem grupy zabezpieczeń skojarzonej z listą kontroli dostępu), w zależności od tego, czy użytkownik należy do jednostki organizacyjnej (jednostki organizacyjnej) zawierającej pracownicy w całym czasie lub w danej umowie. Jeśli użytkownik jest przenoszony z jednej jednostki organizacyjnej do innej, nowe uprawnienie jest automatycznie stosowane i stare uprawnienie zostanie zdezaktywowane. 
 
-Formuła zakończenia można badać wartości atrybutów, które zostały zastosowane do aplikacji, uprawnienia, jednostki organizacyjne i użytkowników.
+Formuła zakończenia może wysyłać zapytania dotyczące wartości atrybutów, które zostały zastosowane do aplikacji, uprawnień, jednostek organizacyjnych i użytkowników.
 
-#### <a name="attribute-based-authorization"></a>Autoryzacja na podstawie atrybutu
+#### <a name="attribute-based-authorization"></a>Autoryzacja oparta na atrybutach
 
-Jednym ze sposobów formant czy rolę, która jest połączona z jednostką organizacyjną (jednostki organizacyjnej) aktywowano dla określonego użytkownika w jednostce organizacyjnej jest użycie autoryzacji opartych na atrybutach (ABA). Za pomocą ABA, można automatycznie aktywować rolę, tylko wtedy, gdy są spełnione pewne reguły na podstawie atrybutów użytkownika. Na przykład można połączyć roli do jednostki organizacyjnej, która stanie się aktywny dla użytkownika tylko wtedy, gdy stanowisko użytkownika odpowiada stanowisko w regule ABA. Eliminuje potrzebę ręcznie uaktywnić proponowane rolę dla użytkownika. Zamiast tego można aktywować rolę wszystkich użytkowników w jednostce organizacyjnej, którzy mają wartość atrybutu, który spełnia reguły ABA ról. Zasady można łączyć tak, że rola jest aktywowany tylko wtedy, gdy atrybuty użytkownika spełniać wszystkie reguły ABA określone dla roli.
+Jednym ze sposobów, aby kontrolować, czy rola, która jest połączona z jednostką organizacyjną (jednostka organizacyjna) została aktywowana dla określonego użytkownika w jednostce organizacyjnej, ma używać autoryzacji opartej na atrybutach (ABA). Za pomocą ABA można automatycznie aktywować rolę tylko wtedy, gdy spełnione są pewne reguły na podstawie atrybutów użytkownika. Można na przykład połączyć rolę z jednostką organizacyjną, która stanie się aktywna dla użytkownika tylko wtedy, gdy stanowisko użytkownika jest zgodne z tytułem zadania w regule ABA. Eliminuje to konieczność ręcznego uaktywniania proponowanej roli dla użytkownika. Zamiast tego można aktywować rolę dla wszystkich użytkowników w jednostce organizacyjnej, którzy mają wartość atrybutu, która spełnia warunki reguły ABA roli. Można łączyć reguły, aby rola została aktywowana tylko wtedy, gdy atrybuty użytkownika spełniają wszystkie reguły ABA określone dla roli.
 
-Należy pamiętać, wyniki testów reguły ABA są ograniczeni ustawienia kardynalności. Na przykład jeśli ustawienie kardynalności reguły określa, że nie więcej niż dwóch użytkowników można przypisać roli i regułę ABA w przeciwnym razie może aktywować rolę dla czterech użytkowników, roli zostaną uaktywnione tylko w przypadku dwóch pierwszych użytkowników, którzy przeszedł ABA test.
+Należy pamiętać, że wyniki testów reguł ABA są ograniczone przez ustawienia kardynalności. Na przykład jeśli ustawienie kardynalności reguły określa, że nie można przypisać roli więcej niż dwóch użytkowników, a w przeciwnym razie reguła ABA będzie aktywować rolę dla czterech użytkowników, rola zostanie aktywowana tylko dla pierwszych dwóch użytkowników, którzy przechodzą test ABA.
 
-#### <a name="flexible-attribute-types"></a>Typy elastyczne atrybutów
+#### <a name="flexible-attribute-types"></a>Elastyczne typy atrybutów
 
-System atrybutów w BHOLD jest wysoce rozszerzalny. Można zdefiniować nowe typy atrybutów dla takich obiektów jako użytkownicy organizacji jednostki (jednostki organizacyjnej) i ról. Atrybuty można zdefiniować wartości, które są liczbami całkowitymi, atrybut typu wartość logiczna (tak/nie), litery, cyfry, daty, godziny i wiadomości e-mail adresów. Atrybuty można określić jako pojedyncze wartości lub listy wartości.
+System atrybutów w pakietu BHOLD jest wysoce rozszerzalny. Można zdefiniować nowe typy atrybutów dla takich obiektów, jak użytkownicy, jednostki organizacyjne (jednostki organizacyjne) i role. Atrybuty mogą być zdefiniowane, aby mieć wartości, które są liczbami całkowitymi, wartość logiczna (tak/nie), alfanumeryczne, daty, godziny i adresy e-mail. Atrybuty można określić jako pojedyncze wartości lub listę wartości.
 
-## <a name="attestation"></a>Poświadczenie
+## <a name="attestation"></a>Zaświadczanie
 
-Pakiet BHOLD zawiera narzędzia, których można użyć, aby sprawdzić, czy poszczególnych użytkowników ma odpowiednie uprawnienia do wykonywania ich zadań biznesowych. Administrator można użyć portalu, dostarczone przez moduł zaświadczania pakietu BHOLD projektować Zarządzaj procesu zaświadczania.
+Pakiet pakietu BHOLD zawiera narzędzia, których można użyć do sprawdzenia, czy poszczególni użytkownicy mają odpowiednie uprawnienia do wykonywania ich zadań firmowych. Administrator może użyć portalu dostarczonego przez moduł zaświadczania pakietu BHOLD, aby zaprojektować proces zarządzania zaświadczeniem.
 
-Proces zaświadczania odbywa się za pomocą kampanie, w których kampanii stewards jest możliwość i oznacza, że sprawdzić, czy użytkownicy, dla których są one odpowiedzialne mają odpowiedni dostęp do aplikacji zarządzanych BHOLD i odpowiednie uprawnienia w ramach te aplikacje. Nadzoruj kampanii i upewnij się, że kampanii jest przeprowadzana prawidłowo nazw jest wyznaczony właściciel kampanii. Występuje raz lub cykliczne można utworzyć kampanię.
+Proces zaświadczania jest realizowany przez kampanie, w których Stewards kampanii otrzymuje okazję i środki, aby sprawdzić, czy użytkownicy, dla których są odpowiedzialni, mają odpowiedni dostęp do aplikacji zarządzanych przez pakietu BHOLD i odpowiednie uprawnienia w ramach te aplikacje. Właściciel kampanii jest wyznaczeni do nadzorowania kampanii i upewnienia się, że Kampania została przeprowadzona prawidłowo. Kampanię można utworzyć tak, aby była wykonywana raz lub cyklicznie.
 
-Zazwyczaj steward kampanii będzie menedżera, który potwierdza prawa dostępu użytkowników należących do jednego lub więcej jednostek organizacyjnych, za które odpowiada menedżera. Stewards automatycznie wybiera się dla użytkowników, że zaświadczenia w ramach kampanii, na podstawie atrybutów użytkownika lub przez wymienienie ich w pliku, który mapuje każdego użytkownika jest potwierdzone w kampanii do steward można zdefiniować stewards dla kampanii.
+Zazwyczaj Steward dla kampanii będzie menedżerem, który zaświadczy prawa dostępu użytkowników należących do co najmniej jednej jednostki organizacyjnej, dla której Menedżer jest odpowiedzialny. Stewards można automatycznie wybrać dla użytkowników zapisywanych w kampanii na podstawie atrybutów użytkownika, a Stewards dla kampanii można zdefiniować przez wystawienie ich w pliku, który mapuje każdego użytkownika zarejestrowanego w kampanii na Steward.
 
-Po rozpoczęciu kampanii BHOLD wysyła wiadomość e-mail z powiadomieniem do stewards kampanii i właściciela, a następnie wysyła okresowe przypomnienia, aby pomóc im Obsługa postęp w kampanii. Stewards nastąpi przekierowanie do portalu kampanii, w którym można zobaczyć listę użytkowników, dla których są one odpowiedzialne i role, które są przypisane do tych użytkowników. Stewards następnie można potwierdzić, czy ich są odpowiedzialni za każdy z listy użytkowników i Zatwierdź lub Odrzuć prawa dostępu do każdego z listy użytkowników.
+Po rozpoczęciu kampanii pakietu BHOLD wysyła wiadomość e-mail z powiadomieniem do Stewards i właściciela kampanii, a następnie wysyła okresowe przypomnienia, aby ułatwić im zachowanie postępu w kampanii. Stewards są kierowane do portalu kampanii, gdzie mogą zobaczyć listę użytkowników, dla których są odpowiedzialni, oraz ról przypisanych do tych użytkowników. Stewards może następnie potwierdzić, czy są odpowiedzialni za każdego z wymienionych użytkowników i zatwierdzić lub odmówić prawa dostępu każdego z wymienionych użytkowników.
 
-Właściciele kampanii również korzystać z portalu do monitorowania postępu kampanii i działań marketingowych są rejestrowane, dzięki czemu właściciele kampanii można analizować akcje, które zostały wykonane w ramach kampanii.
+Właściciele kampanii używają również portalu do monitorowania postępu kampanii, a działania kampanii są rejestrowane, aby właściciele kampanii mogli analizować akcje, które zostały wykonane w trakcie kampanii.
 
 ## <a name="analytics"></a>Analiza
 
-Jedną z istotne zagadnienia po wdrożenie systemu kontroli łącznie z kompleksowym dostępem na podstawie praw równowagę między zachowaniem kontroli dostępu i unikanie niepotrzebnych (lub niższa, nieoczekiwany) barier w celu uzyskania dostępu do. Nakład pracy w celu zachowania tej równowagi często powoduje w strukturze kontroli dostępu, więc skomplikowanego, że nieoczekiwany interakcje między zasady są prawie nieuniknione.
+Jednym z ważnych zagadnień związanych z implementowaniem kompleksowej kontroli dostępu opartej na prawach jest równowaga między utrzymaniem ścisłej kontroli dostępu i uniknięciem niepotrzebnych (lub gorszych, nieoczekiwanych) barier w dostępie. Konieczność utrzymania tego salda często skutkuje strukturą kontroli dostępu, która jest tak skomplikowana, że nieoczekiwane interakcje między zasadami są prawie nieuniknione.
 
-Z tego powodu należy mieć możliwość analizowania wpływu zasady kontroli dostępu, zanim zostaną one faktycznie w miejscu. Moduł analizy pakietu BHOLD zapewnia możesz możliwość wykonywania tej analizy, co pozwala na tworzenie reguł, które reprezentują zasad, a następnie przedstawiające użytkowników, którego uprawnienia są zgodne lub konflikt z regułą. Na podstawie tej analizy, można dostosować zasady lub zmodyfikować role i uprawnienia w celu wyeliminowania konfliktów z zasadami.
+Z tego powodu ważne jest, aby można było analizować skutki zasad kontroli dostępu, zanim zostaną one rzeczywiście umieszczone. Moduł analityczny pakietu pakietu BHOLD Suite daje możliwość wykonywania tej analizy, umożliwiając tworzenie reguł reprezentujących zasady, a następnie wyświetlanie użytkowników, których uprawnienia są zgodne lub powodują konflikt z regułą. Na podstawie tej analizy można dostosować zasady lub zmodyfikować role i uprawnienia, aby wyeliminować konflikty z zasadami.
 
-Portal analizy BHOLD oferuje możliwość skonstruowania zestawów reguł, który składa się z co najmniej jedną regułę, które tworzysz do testowania konkretne zasady lub grupa zasad. Reguła oświadczeń składa się z następujących głównych składników:
+Portal pakietu BHOLD Analytics umożliwia konstruowanie zestawów reguł składających się z co najmniej jednej reguły, która została utworzona w celu przetestowania określonych zasad lub grup zasad. Reguła składa się z następujących głównych części:
 
-- Tytuł i opis, które umożliwiają identyfikujących i opisujących regułę
-- Stan, który wskazuje, czy reguła jest gotowa do przeglądu, są przeglądane lub zatwierdzone
-- Element ustawiony (na przykład użytkowników lub uprawnienia), reguła została opracowana w celu przetestowania
-- Filtry podzbioru opcjonalne, które są wyrażeniami, które można użyć, aby zaznaczyć podgrupę odpowiedniego elementu do badania
-- Co najmniej jeden filtr reguły, które są wyrażeniami, które reprezentują zasad poddawana testom.
+- Tytuł i opis, które umożliwiają identyfikację i opisywanie reguły
+- Stan wskazujący, czy reguła jest gotowa do przeglądu, jest przeglądana lub zatwierdzana
+- Zestaw elementów (na przykład użytkownicy lub uprawnienia), który ma zostać przetestowany przez regułę
+- Opcjonalne filtry podzestawów, które są wyrażeniami, których można użyć do wybrania odpowiedniej podgrupy elementu do zbadania
+- Jeden lub więcej filtrów reguł, które są wyrażeniami reprezentującymi testowane zasady.
 
-Regułę można przetestować dowolne spośród następujących zestawów elementów:
+Reguła może przetestować jeden z następujących zestawów elementów:
 
-- Users
+- Użytkownicy
 - Jednostki organizacyjne
 - Role
 - Uprawnienia
 - Aplikacje
 - Konta
 
-Na poniższym diagramie przedstawiono prostej reguły składające się z dwóch podzbiór reguł i dwie reguły filtru:
+Na poniższym diagramie przedstawiono prostą regułę składającą się z dwóch reguł podzbioru i dwóch reguł filtrów:
 
 ![](media/bhold-concepts-guide/rules.png)
 
-Należy zanotować różnicę w efekcie przechodzenie w filtrze podzestawu i kończy się niepowodzeniem filtr reguły: niepowodzenie filtrowania podzbioru usuwa obiekt elementu z testowanie przez kolejne filtry, gdy kończy się niepowodzeniem filtr reguły powoduje, że obiekt jest raportowane jako niezgodne. Te obiekty, które pomyślnie przejść wszystkie filtry podzbioru i wszystkie filtry reguły są raportowane jako zgodne.
+Zwróć uwagę na różnice w efekcie niepowodzenia filtru podzbioru i niepowodzenia filtru reguł: Niepowodzenie filtru podzestawu powoduje usunięcie obiektu elementu z testów przez kolejne filtry, podczas gdy filtr reguły powoduje niezgodność obiektu. Tylko te obiekty, które przechodzą wszystkie filtry podzestawów i wszystkie filtry reguł są zgłaszane jako zgodne.
 
-Każdy filtr składa się z typem, operatora (jest to zależne od typu), klucz (jeden z elementów) i wartości, względem którego klucza jest testowane przez operatora. Na przykład następujący filtr może sprawdzić, czy liczba użytkowników w podzbiorze elementu przekracza 10:
+Każdy filtr składa się z typu, operatora (który jest zależny od typu), klucza (jednego z elementów) i wartości, względem których klucz jest testowany przez operatora. Na przykład następujący filtr przetestuje, czy liczba użytkowników w podzbiorze elementów przekracza 10:
 
 
 |   |   |   |   |   |
 |---|---|---|---|---|
 |**Typ:**   | Liczba   |
-| **Klucz:**  | Users  |
+| **Głównych**  | Użytkownicy  |
 | **Operator**  | >  |
 | **Wartość:** | 10 |
 
-Filtry zasad można się z trzech typów i operatory specyficzne dla ich typu, jak wskazano:
+Filtry reguł mogą mieć trzy typy i używać operatorów specyficznych dla ich typu, jak wskazano:
 
 - Atrybut
   - < i >
   - = i! =
-  - **zawiera**
+  - **Wyświetlana**
   - **Nie zawiera**
 - Liczba
   - < i >
   - = i! =
-- Restrykcyjny
-  - **Musi to być dowolny i musi mieć wszystkie**
-  - **Nie może zawierać żadnych i nie może mieć wszystko**
-  - **Można tylko ma i może mieć tylko wszystkie**
-  - **Nie ma żadnej wyłącznie i wyłącznie mają wszystkie**
+- Restrykcyjne
+  - **Musi mieć wszystkie**
+  - **Nie może istnieć i nie może zawierać wszystkich**
+  - **Może mieć tylko wszystkie i mogą mieć tylko wszystkie**
+  - **Dostępne wyłącznie dla wszystkich**
 
 > [!Note]
-> Filtry ograniczające można używać wskazany operatorów, aby przetestować klucza z zestawem wiele wartości.
+> Filtry restrykcyjne mogą używać wskazanych operatorów do testowania klucza względem zestawu wielu wartości.
 
-Na przykład jeśli chcesz przetestować implementacji podziału obowiązków (darni) zasad, stwierdzający nie użytkownika, który ma uprawnienia do żądania płatności jest również mieć uprawnienie zatwierdzić płatności, można utworzyć reguły podobne do następującego:
+Na przykład jeśli chcesz przetestować implementację zasad podziału obowiązków (SoD), które określają, że żaden użytkownik, który ma uprawnienia do płatności, ma także uprawnienia do zatwierdzania płatności, można utworzyć regułę podobną do następującej:
 
 |   |  |
 |---|--|
-|Nazwa:| Test darni płatności|
-|Element:| Users|
-|Filtr podzbioru:| Wszelkie uprawnienia żądanie płatności|
-|Reguła filtru: | Nie może mieć żadnych uprawnień Zatwierdź płatności|
+|Nazwa:| Test SoD płatności|
+|Postaci| Użytkownicy|
+|Filtr podzestawu:| Posiadanie każdej płatności żądania uprawnień|
+|Filtr reguł: | Nie może mieć żadnych płatności zatwierdzania uprawnień|
 
-Po uruchomieniu tej reguły, moduł analizy BHOLD Wyświetla liczbę użytkowników w wybranej podzestawu (liczba użytkowników z uprawnieniem żądanie płatności), liczbę użytkowników, które są zgodne z regułą i liczbę użytkowników, które nie są zgodne z regułą. Następnie można wyświetlić niezgodnych użytkowników, dzięki czemu można poprawić niespójność.
+Po uruchomieniu tej reguły moduł pakietu BHOLD Analytics wyświetli liczbę użytkowników w wybranym podzbiorze (liczbę użytkowników z uprawnieniem Żądaj płatności), liczbę użytkowników, którzy są zgodni z regułą, oraz liczbę użytkowników, którzy nie są zgodni z tą regułą. Następnie można wyświetlić niezgodnych użytkowników, aby można było poprawić niespójność.
 
-Oprócz wyświetlania wyników, można również Zapisz raport jako wartości rozdzielanych przecinkami (CSV) lub plik XML, aby możliwe było później analizować wyniki. Można również dostosować wynikowego raportu, aby wyświetlić dodatkowe informacje, które mogą pomóc lepiej zrozumieć wpływ. Na przykład jeśli testujesz użytkowników, możesz wyświetlać (lub zgłosić) kont użytkowników zgodnych i niezgodnych, aby było widać aplikacji, które są zaangażowane.
+Oprócz wyświetlania wyników można również zapisać raport jako plik z wartościami rozdzielanymi przecinkami (CSV) lub XML, aby umożliwić przeanalizowanie wyników później. Możesz również dostosować raport wynikowy, aby wyświetlić dodatkowe informacje, które mogą pomóc lepiej zrozumieć wpływ. Na przykład w przypadku testowania użytkowników można wyświetlić (lub zgłosić) konta zgodnych lub niezgodnych użytkowników, aby zobaczyć, które aplikacje są wykorzystywane.
 
-Reguła może zawierać wiele filtrów, możesz połączyć z filtrów, aby sprawdzić czy istnieją określonej kombinacji warunków. Domyślnie wynik jest wynikiem testu logicznego wszystkich filtrów, ale można określić, czy można przeprowadzić testu lub kombinacji filtru.
+Ponieważ reguła może zawierać wiele filtrów, można połączyć filtry w celu sprawdzenia, czy istnieje określona kombinacja warunków. Domyślnie wynikiem jest iloczyn i test logiczny wszystkich filtrów, ale można określić, czy ma być wykonywany test kombinacji filtru.
 
-Na przykład zasady firmy wymagają menedżerom mają uprawnienia do modyfikowania płatności lub uprawnienia do zatwierdzania płatności, następnie można sprawdzić zgodność z zasadami tworząc reguły podobne do następującego:
+Na przykład jeśli zasady biznesowe wymagają od menedżerów posiadania uprawnienia Modyfikuj płatność lub zatwierdzenia płatności, można przetestować zgodność z zasadami, tworząc regułę podobną do następującej:
 
-
-|  |  |
-|--|--|
-|Nazwa: | Zmodyfikuj Test darni płatności|
-|Element: | Users |
-|Filtr podzbioru: | Posiadanie żadnej roli menedżera|
-| Reguły filtrów: |Musi mieć żadnych uprawnień Modyfikowanie płatności </br> Musi mieć żadnych uprawnień Zatwierdź płatności|
-
-Domyślnie każdy użytkownik, który jest kierownikiem, kto ma uprawnienia do żądania płatności i zmodyfikować płatności będą raportowane jako zgodne. Zasady wymaga jednak, że menedżera jest albo uprawnienie, nie musi to być zarówno. Aby przetestować rzeczywista zgodność z zasadami, musi być operatora logicznego OR z regułą Określa, czy wszystkie menedżerów, którzy nie mają uprawnień do modyfikowania płatności lub uprawnienie zatwierdzić płatności.
-
-W odróżnieniu od innych operatorów **wyłącznie nie ma żadnej** i **wyłącznie mają wszystkie** operatory wskazują zgodności dla obiektów, które w przeciwnym razie mogłyby być wykluczone przez filtr podzbioru. Na przykład, aby sprawdzić zasady, czy wszyscy menedżerowie (i tylko menedżerowie) ma uprawnienia zatwierdzić przeglądy można utworzyć regułę w następujący sposób:
 
 |  |  |
 |--|--|
-|Nazwa: | Przegląd zatwierdzenia Test|
-|Element: | Users|
-| Filtr podzbioru: | Posiadanie żadnej roli menedżera
-|Reguła filtru: | Wyłącznie mają przeglądy zatwierdzić wszystkie uprawnienia|
+|Nazwa: | Modyfikowanie testu SoD płatności|
+|Postaci | Użytkownicy |
+|Filtr podzestawu: | Posiadanie dowolnego menedżera ról|
+| Filtry reguł: |Musi mieć uprawnienia Modyfikuj płatność </br> Musi mieć zatwierdzenie zgody|
 
-Ta zasada będzie raportowane jako zgodne użytkowników, którzy są menedżerów i zatwierdzić przeglądy uprawnień i użytkowników, którzy nie mają menedżerów i którzy nie mają uprawnienia do zatwierdzania przeglądów. Z drugiej strony menedżerów, którzy mają to uprawnienie, ale bez tego uprawnienia i użytkowników, którzy nie są menedżerowie są zgłaszane jako niezgodne.
+Domyślnie każdy użytkownik, który jest menedżerem, który ma uprawnienie Modyfikuj płatność i płatność żądania płatności, będzie raportowany jako zgodny. Zasady wymagają jednak, aby Menedżer miał uprawnienia, niekoniecznie oba te elementy. Aby przetestować rzeczywistą zgodność z zasadami, należy użyć operatora logicznego OR z regułą, aby określić, czy istnieją menedżerów, którzy nie mają uprawnień do modyfikowania płatności lub zatwierdzania płatności.
 
-Jak wspomniano wcześniej, można łączyć zasady w zestaw reguł, ułatwiając umożliwiające kategoryzowanie i zarządzanie nimi reguły, aby spełnić wymagania biznesowe.
+W przeciwieństwie do innych operatorów, **wyłączny jest dowolny** i **wyłączność wszystkich** operatorów wskazują zgodność dla obiektów, które w przeciwnym razie byłyby wykluczone przez filtr podzestawu. Na przykład w celu przetestowania zasad, które wszyscy menedżerowie (i tylko menedżerowie) mają uprawnienie zatwierdzanie recenzji, można utworzyć regułę w następujący sposób:
 
-Można również zdefiniować zestaw globalne filtry, po włączeniu, zastosować do dowolnej reguły, który jest testowany. Jeśli potrzebujesz często do wykluczenia konkretnego podzbioru rekordów podczas testowania reguł w różnych zestawów reguł, można określić filtry globalne, które można włączyć lub wyłączyć zgodnie z potrzebami.
+|  |  |
+|--|--|
+|Nazwa: | Przejrzyj test zatwierdzania|
+|Postaci | Użytkownicy|
+| Filtr podzestawu: | Posiadanie dowolnego menedżera ról
+|Filtr reguł: | Dowolna zgoda na zatwierdzenie ma wyłącznie uprawnienia|
+
+Ta reguła będzie raportowana jako użytkownicy zgodni z menedżerami i uprawnieni do zatwierdzania recenzji oraz użytkowników, którzy nie mają uprawnień do zatwierdzania recenzji. Z kolei kierownicy, którzy nie mają uprawnień i użytkowników, którzy nie są menedżerami, ale mają uprawnienia, które są zgłaszane jako niezgodne.
+
+Jak wspomniano wcześniej, można połączyć reguły z zestawem reguł, ułatwiając kategoryzowanie reguł i zarządzanie nimi w celu spełnienia wymagań firmy.
+
+Można również zdefiniować zestaw filtrów globalnych, które po włączeniu są stosowane do każdej testowanej reguły. Jeśli często konieczne jest wykluczenie określonego podzbioru rekordów podczas testowania reguł z różnych zestawów reguł, można określić filtry globalne, które można włączać lub wyłączać w razie potrzeby.
 
 ## <a name="reporting"></a>Raportowanie
 
-Moduł raportowania pakietu BHOLD daje możliwość wyświetlania informacji w modelu roli przy użyciu szerokiej gamy raportów. Moduł raportowania pakietu BHOLD udostępnia wiele wbudowanych raportów, a także zawiera kreatora, który służy do tworzenia niestandardowych raportów podstawowe i zaawansowane. Po uruchomieniu raportu możesz natychmiast wyświetlić wyniki lub zapisać wyniki w pliku programu Excel (xlsx). Aby wyświetlić ten plik za pomocą programu Microsoft Excel 2000, programu Microsoft Excel 2002 lub Microsoft Excel 2003, można pobrać i zainstalować pakiet zgodności programu Microsoft Office dla programów Word, Excel i formaty plików programu PowerPoint.
+Moduł raportowania pakietu BHOLD umożliwia wyświetlanie informacji w modelu roli za pomocą różnych raportów. Moduł raportowania pakietu BHOLD zawiera obszerny zestaw wbudowanych raportów, a także kreatora, który służy do tworzenia podstawowych i zaawansowanych raportów niestandardowych. Po uruchomieniu raportu można natychmiast wyświetlić wyniki lub zapisać wyniki w pliku programu Microsoft Excel (. xlsx). Aby wyświetlić ten plik przy użyciu programu Microsoft Excel 2000, programu Microsoft Excel 2002 lub Microsoft Excel 2003, można pobrać i zainstalować pakiet zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint.
 
 
-Umożliwia moduł raportowania pakietu BHOLD przede wszystkim tworzenia raportów, które są oparte na bieżących informacji o roli. Do generowania raportów dotyczących inspekcji zmiany informacji o tożsamości programu Forefront Identity Manager 2010 R2 ma możliwości raportowania usługi FIM, która jest zaimplementowana w magazynie danych programu System Center Service Manager. Aby uzyskać więcej informacji na temat raportowania usługi FIM zobacz dokumentację programu Forefront Identity Manager 2010 i Forefront Identity Manager 2010 R2 w bibliotece technicznej Forefront Identity Management.
+Moduł raportowania pakietu BHOLD jest używany głównie do tworzenia raportów na podstawie bieżących informacji o rolach. Aby generować raporty na potrzeby inspekcji zmian informacji o tożsamości, program Forefront Identity Manager 2010 R2 ma możliwość raportowania dla usługi FIM, która jest zaimplementowana w magazynie danych System Center Service Manager. Aby uzyskać więcej informacji na temat raportowania FIM, zobacz dokumentację programu Forefront Identity Manager 2010 i Forefront Identity Manager 2010 R2 w bibliotece technicznej programu Forefront Identity Management.
 
-Kategorie objętych wbudowanych raportów są następujące:
+Kategorie objęte wbudowanymi raportami obejmują następujące elementy:
 
 - Administration
-- Poświadczenie
-- Formanty
-- Kontrola dostępu czynnego
+- Zaświadczanie
+- Kontrolki
+- Access Control do wewnątrz
 - Rejestrowanie
-- Model
-- statystyki
+- Modelowanie
+- Statystyki
 - Przepływ pracy
 
-Można tworzyć raporty i dodawać je do tych kategorii lub można zdefiniować własne kategorie, w których można umieścić niestandardowych i wbudowanych raportów.
+Można tworzyć raporty i dodawać je do tych kategorii lub definiować własne kategorie, w których można umieszczać raporty niestandardowe i wbudowane.
 
-Podczas tworzenia raportu, Kreator przeprowadzi Cię przez podanie następujących parametrów:
+Podczas tworzenia raportu Kreator poprowadzi Cię przez podawanie następujących parametrów:
 
-- Informacje identyfikacyjne, w tym nazwę, opis, kategorii, użycia i odbiorców
+- Informacje identyfikacyjne, w tym nazwa, opis, Kategoria, użycie i odbiorcy
 - Pola, które mają być wyświetlane w raporcie
-- Zapytania określające elementy, które mają być analizowane
-- Kolejność, w którym mają być sortowane wierszy
-- Pola używane do Podziel raportu na sekcje
-- Filtry w celu uściślenia elementy, które są zwracane w raporcie
+- Zapytania określające, które elementy mają być analizowane
+- Kolejność, w której wiersze mają być sortowane
+- Pola używane do dzielenia raportu na sekcje
+- Filtry w celu uściślenia elementów, które są zwracane w raporcie
 
-Na każdym etapie kreatora możesz wyświetlić podgląd raportu zdefiniowano ją do tej pory i zapisz go, jeśli jest konieczne wymagają podania dodatkowych parametrów. Można także cofnąć do poprzednich kroków do zmiany parametrów, które określono wcześniej w kreatorze.
+Na każdym etapie kreatora można wyświetlić podgląd raportu zgodnie z jego definicją i zapisać go, jeśli nie trzeba podawać dodatkowych parametrów. Możesz również przejść z powrotem do poprzednich kroków, aby zmienić parametry określone wcześniej w kreatorze.
 
-## <a name="access-management-connector"></a>Dostęp do łącznika zarządzania
+## <a name="access-management-connector"></a>Łącznik zarządzania dostępem
 
-Moduł BHOLD Suite dostępu do zarządzania łącznika obsługuje zarówno początkowy, jak i bieżące synchronizacji danych do pakietu BHOLD. Dostęp do łącznika zarządzania współpracuje z FIM Synchronization Service do przenoszenia danych między baza danych BHOLD Core, metaverse programu MIM i aplikacjach docelowych i magazyny tożsamości.
+Moduł łącznika zarządzania dostępem do pakietu BHOLD Suite obsługuje początkową i ciągłą synchronizację danych w pakietu BHOLD. Łącznik zarządzania dostępem współpracuje z usługą synchronizacji FIM do przenoszenia danych między podstawową bazą danych pakietu BHOLD, metaverseem programu MIM oraz aplikacjami docelowymi i magazynami tożsamości.
 
-Poprzednie wersje pakietu BHOLD wymaga wielu MAs do sterowania przepływem danych między usługą MIM i pośredniego tabel bazy danych BHOLD. W dodatku SP1 dla pakietu BHOLD dostęp do łącznika zarządzania pozwala zdefiniować agentów zarządzania (MAs) w programie MIM, które zapewniają transferu danych bezpośrednio między BHOLD i MIM.
+Poprzednie wersje pakietu BHOLD wymagały wielu MAs do sterowania przepływem danych między tabelami programu MIM i pośrednimi bazami danych pakietu BHOLD Database. W programie pakietu BHOLD Suite z dodatkiem SP1 łącznik zarządzania dostępem umożliwia definiowanie agentów zarządzania (MAs) w programie MIM, które zapewniają transfer danych bezpośrednio między pakietu BHOLD i MIM.
 
-## <a name="mim-integration"></a>Integracja programu MIM
+## <a name="mim-integration"></a>Integracja z programem MIM
 
-Ważną i zaawansowaną funkcją Forefront Identity Manager 2010 oraz programu Forefront Identity Manager 2010 R2 jest portalu samoobsługowego, która umożliwia użytkownikom końcowym wyświetlanie i zarządzanie informacjami o tożsamości i członkostwa. Integracja programu MIM rozszerza portalu MIM za pomocą funkcji zarządzania rolą samoobsługi. Na przykład za pomocą funkcji BHOLD w portalu programu MIM, użytkownik może zażądać przypisania roli i można wyświetlić aktywnych ról i oczekujące żądania. Dodatkowe funkcje można udzielić do administratorów delegowanych, takie jak możliwość żądania przypisania roli dla innych użytkowników.
+Ważną i wydajną funkcją programów Forefront Identity Manager 2010 i Forefront Identity Manager 2010 R2 jest Portal samoobsługowy, który umożliwia użytkownikom końcowym wyświetlanie informacji o tożsamości i członkostwie oraz zarządzanie nimi. Integracja z programem MIM rozszerza Portal programu MIM za pomocą samoobsługowego zarządzania rolami. Na przykład przy użyciu funkcji pakietu BHOLD w portalu MIM użytkownik może zażądać przypisania roli i może wyświetlać aktywne role i oczekujące żądania. Do administratorów delegowanych mogą być udzielane dodatkowe możliwości, takie jak możliwość żądania przypisywania ról innym użytkownikom.
 
-Należy pamiętać, że rozszerzenia portalu programu MIM BHOLD obsługuje rolą samoobsługi i zarządzanie przepływem pracy i raportowania jest. Innych funkcji administracyjnych BHOLD, a także w przypadku zaświadczania są dostarczane przez portale sieci web modułów BHOLD, które są obsługiwane osobno z portalu programu MIM.
+Należy pamiętać, że rozszerzenia pakietu BHOLD w portalu MIM obsługują Samoobsługowe zarządzanie rolami i przepływami pracy oraz raportowanie. Inne funkcje administracyjne pakietu BHOLD, a także zaświadczanie, są dostarczane przez portale sieci Web modułów pakietu BHOLD, które są hostowane niezależnie od portalu programu MIM.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - [Przewodnik instalacji pakietu BHOLD](bhold-installation-guide.md)
 - [Dokumentacja dla deweloperów pakietu BHOLD](../reference/mim2016-bhold-developer-reference.md)

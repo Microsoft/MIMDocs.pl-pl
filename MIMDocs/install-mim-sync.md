@@ -6,38 +6,38 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/01/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56952183"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701276"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>Instalowanie programu MIM 2016: Usługa synchronizacji programu MIM
+# <a name="install-mim-2016-mim-synchronization-service"></a>Zainstaluj program MIM 2016: Usługa synchronizacji programu MIM
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
 > [Portal i usługa programu MIM »](install-mim-service-portal.md)
 > 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
-> - Nazwa serwera usługi MIM — **corpservice**
+> - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
-> - Nazwa programu SQL Server — **corpsql**
+> - Nazwa SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
 Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy najpierw skonfigurować pakiet instalacyjny.
 
-1. Zaloguj się jako *contoso\miminstall* z serwerem używasz dla serwera synchronizacji zarządzania tożsamościami **corpsync**.
+1. Zaloguj się jako *contoso\miminstall* na serwerze używanym przez program Identity Management synchronizacja Server **corpsync**.
 
-2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.  Jeśli nie masz tego dysku DVD, zobacz [licencjonowania programu Microsoft Identity Manager i pliki do pobrania](microsoft-identity-manager-licensing.md).
+2. Rozpakuj pakiet instalacyjny programu MIM lub zamontuj dysk DVD z obrazem programu MIM.  Jeśli nie masz tego dysku DVD, zobacz [Microsoft Identity Manager Licencjonowanie i pobieranie](microsoft-identity-manager-licensing.md).
 
 ## <a name="install-mim-2016-sp1-synchronization-service"></a>Zainstaluj usługę synchronizacji programu MIM 2016 z dodatkiem SP1
 
@@ -57,9 +57,9 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 6. Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-   1.  SQL Server znajduje się na: **Maszyna zdalna** o nazwie **corpsql.contoso.com**.
+   1.  SQL Server znajduje się w: **Maszyna zdalna** o nazwie **corpsql.contoso.com**.
 
-   2.  To wystąpienie programu SQL Server: **Wystąpienie domyślne**
+   2.  Wystąpienie SQL Server: **Wystąpienie domyślne**
 
    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 

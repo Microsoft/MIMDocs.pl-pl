@@ -6,26 +6,26 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: ca2a9a4a646387b044e3a504c19eae904b2a6be1
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825811"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701280"
 ---
-# <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
+# <a name="install-mim-2016-mim-service-and-portal"></a>Zainstaluj program MIM 2016: Usługa i portal MIM
 
 > [!div class="step-by-step"]
 > [« Usługa synchronizacji programu MIM](install-mim-sync.md)
 > [Bazy danych synchronizacji »](install-mim-sync-ad-service.md)
 > 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — <strong>Pass@word1</strong>
@@ -50,7 +50,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
     ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Na **Skonfiguruj połączenie z serwerem poczty**, wprowadź nazwę serwera programu Exchange jako **serwera poczty** lub użyć **skrzynki pocztowej usługi O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
+7. Na stronie **Konfigurowanie połączenia z serwerem poczty**wprowadź nazwę serwera Exchange Server jako **serwer poczty** lub użyj skrzynki pocztowej usługi **O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
 
     ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/install-mim-service-portal/MIM_Install11.png)
 
@@ -68,11 +68,11 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 12. Podaj wartość *CORPIDM* (nazwa tego komputera) jako adres serwera usługi programu MIM dla portalu programu MIM.
 
-13. Określ `*http://mim.contoso.com*` programu SharePoint adres URL zbioru witryn.
+13. Określ `* http://mim.contoso.com*` jako adres URL zbioru witryn programu SharePoint.
 
-14. Określ `*http://passwordregistration.contoso.com*` jako adres URL rejestracji haseł port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
+14. Określ `* http://passwordregistration.contoso.com*` jako port 80 adresu URL rejestracji hasła, zalecamy późniejsze aktualizacje przy użyciu certyfikatu SSL na 443.
 
-15. Określ `*http://passwordreset.contoso.com*` jako adres URL resetowania hasła port 80, zaleca się zaktualizowanie później za pomocą certyfikatu SSL na porcie 443.
+15. Określ `* http://passwordreset.contoso.com*` jako port 80 adresu URL resetowania hasła, zalecamy późniejsze aktualizacje przy użyciu certyfikatu SSL na 443.
 
 16. Zaznacz pole wyboru umożliwiające otwarcie portów 5725 i 5726 w zaporze i pole wyboru umożliwiające zezwolenie wszystkim uwierzytelnionym użytkownikom na dostęp do portalu programu MIM.
 
@@ -80,25 +80,25 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 1. Ustaw wartość *contoso\MIMSSPR* jako nazwę konta usługi dla rejestracji SSPR i <em>Pass@word1</em> jako jego hasło.
 
-2. Określ *passwordregistration.contoso.com* jako nazwę hosta dla rejestracji haseł programu MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
+2. Określ *passwordregistration.contoso.com* jako nazwę hosta dla rejestracji haseł programu MIM i Ustaw port na **80**. Włącz opcję **Otwórz port w zaporze**.
 
    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/install-mim-service-portal/MIM_Install14.png)
 
 3. Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
-4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM określ *mim.contoso.com* jako adres serwera usługi MIM dla portalu rejestracji haseł.
+4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM Określ *MIM.contoso.com* jako adres serwera usługi programu MIM dla portalu rejestracji haseł.
 
 ## <a name="configure-mim-password-reset-portal"></a>Konfigurowanie portalu resetowania haseł programu MIM
 
-1. Ustaw nazwę konta usługi dla rejestracji SSPR *Contoso\MIMSSPR* i jego hasło <em>Pass@word1</em>.
+1. W polu Nazwa konta usługi dla rejestracji SSPR ustaw wartość *wartość contoso\mimsspr jako* i hasło na <em>Pass@word1</em>.
 
-2. Określ *passwordreset.contoso.com* jako nazwę hosta dla portalu resetowania haseł programu MIM i Ustaw port **80**. Włącz opcję **Otwórz port w zaporze**.
+2. Określ *PasswordReset.contoso.com* jako nazwę hosta dla portalu resetowania haseł programu MIM i Ustaw port na **80**. Włącz opcję **Otwórz port w zaporze**.
 
    ![Obraz wprowadzania informacji konfiguracyjnych używanych przez usługi IIS](media/install-mim-service-portal/MIM_Install15.png)
 
 3. Zostanie wyświetlone ostrzeżenie — przeczytaj je i kliknij przycisk **Dalej**.
 
-4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM określ *mim.contoso.com* jako adres serwera usługi MIM dla portalu resetowania haseł.
+4. Na następnym ekranie konfiguracji portalu rejestracji haseł programu MIM Określ *MIM.contoso.com* jako adres serwera usługi programu MIM dla portalu resetowania haseł.
 
 ## <a name="install-mim-service-and-portal"></a>Instalacja portalu i usługi programu MIM
 
@@ -106,9 +106,9 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na *http://mim.contoso.com/identitymanagement*. Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na *http://mim.contoso.com/identitymanagement* . Podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
 
-    - Jeśli to konieczne, Uwierzytelnij się jako *contoso\miminstall* do programu Internet Explorer.
+    - W razie potrzeby należy uwierzytelnić się jako *contoso\miminstall* w programie Internet Explorer.
 
 2. W programie Internet Explorer otwórz okno **Opcje internetowe**, wyświetl kartę **Zabezpieczenia** i dodaj witrynę do strefy **Lokalny intranet**, jeśli nie została jeszcze tam dodana.  Zamknij okno dialogowe **Opcje internetowe**.
 
@@ -116,7 +116,7 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
     1.  Korzystając z programu Internet Explorer, w **portalu programu MIM** kliknij pozycję **Reguły zasad zarządzania**.
 
-    2.  Wyszukaj regułę zasad zarządzania **Zarządzanie użytkownikami: użytkownicy mogą odczytywać atrybuty we własnym zakresie**.
+    2.  Wyszukaj regułę zasad zarządzania, **zarządzanie użytkownikami: Użytkownicy mogą odczytywać atrybuty własnych**.
 
     3.  Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pozycji **Zasady są wyłączone**.
 
@@ -143,7 +143,7 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
     7.  Zamknij **Panel sterowania**.
 
 > [!NOTE]
-> Opcjonalnie: na tym etapie można zainstalować dodatki i rozszerzenia programu MIM.
+> Opcjonalnie: W tym momencie można zainstalować dodatki i rozszerzenia programu MIM.
 > 
 > [!div class="step-by-step"]  
 > [« Usługa synchronizacji programu MIM](install-mim-sync.md)

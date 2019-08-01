@@ -1,59 +1,59 @@
 ---
-title: Obsługiwane języki dodatku SP1 dla programu Microsoft Identity Manager 2016 | Dokumentacja firmy Microsoft
-description: Lista języków obsługiwanych przez program Microsoft Identity Manager 2016 z dodatkiem SP1.
+title: Obsługiwane języki Microsoft Identity Manager 2016 z dodatkiem SP1 | Microsoft Docs
+description: Lista języków obsługiwanych przez Microsoft Identity Manager 2016 z dodatkiem SP1.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/23/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690728"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701470"
 ---
 # <a name="supported-languages"></a>Obsługiwane języki
 
-W tym artykule opisano obsługiwane języki i mapowania aktualizacji z wersji Microsoft Identity Manager 2016 z dodatkiem SP1 4.5.x lub nowszej.
+W tym artykule opisano obsługiwane języki i mapowanie aktualizacji z Microsoft Identity Manager 2016 SP1 w wersji 4.5. x lub nowszej.
 
-## <a name="mim-service-and-portal-and-add-ins-and-extensions-language-pack"></a>Usługa MIM i portalu i Add-ins and Extensions Language Pack 
+## <a name="mim-service-and-portal-and-add-ins-and-extensions-language-pack"></a>Pakiet językowy usługi i portalu oraz dodatki i rozszerzenia programu MIM 
 
-Pakiet językowy Portal i usługa programu MIM Microsoft obsługują następujące języki 33 języków.  
+Pakiet językowy usługi Microsoft MIM i Portal obsługuje następujące języki 33.  
 
 > [!NOTE]
-> W [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) klucz rejestru został dodany o nazwie "OverrideDefaultUILocale" do programu MIM Add-ins i pakietu językowego rozszerzenia spróbuje zmapować wszystkie języki podobne do tego, który jest obsługiwany. Na przykład w przypadku języka wyświetlania Windows ES-CL (Hiszpański Chile), lub dowolnym ES -\*, podejmie próbę Mapuj do ES-ES (Hiszpański (Hiszpania)).
+> W [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) klucz rejestru został dodany o nazwie "OverrideDefaultUILocale" do dodatków programu MIM i rozszerzenia pakietu Language Pack spróbuje zmapować wszystkie podobne Języki do obsługiwanego. Na przykład, jeśli język wyświetlania systemu Windows to es-CL (hiszpański Chile) lub dowolny z es-\*, podejmie próbę mapowania tego elementu na ES-es (hiszpański Hiszpania).
 
 > [!IMPORTANT]
-> Zostanie zlokalizowany tekst w dodatku do funkcji samoobsługowego resetowania HASEŁ i portalu, ale pytania będą nie bez konieczności dodatkowej pracy. Należy utworzyć authn w zakresie przepływów pracy (i towarzyszące zestawów i reguł MPR pod kątem ich) do pytania trzeba odpowiedzieć w każdym języku do lokalizacji docelowej.
+> Tekst w dodatku SSPR i portalu zostanie zlokalizowany, ale pytania nie będą działać. Do lokalizacji docelowej należy utworzyć przepływy pracy AuthN (oraz dołączone zestawy i reguł MPR).
 
-|       Język        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|       Język        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM (4.5. x. x) |
 |-----------------------|--------------------------|--------------|
-|       Bułgarski       |          bg-BG           |      bg      |
-| Chiński (uproszczony)  |          zh-CN           |   nazwy zh-hans    |
-|   Chiński (Tajwan)    |          zh-TW           |   nazwy zh-hant    |
-|       Chorwacki        |          hr-HR           |      godz.      |
-|         Czeski         |          cs-CZ           |      cs      |
+|       Bułgarski       |          bg-BG           |      BG      |
+| Chiński (uproszczony)  |          zh-CN           |   zh-Hans    |
+|   Chiński (Tajwan)    |          zh-TW           |   zh-Hant    |
+|       Chorwacki        |          hr-HR           |      wysoki      |
+|         Czeski         |          cs-CZ           |      Rejestr      |
 |        Duński         |          Akcelerator deweloperski w wersji DK           |      da      |
 |         Holenderski         |          NL-NL           |      nl      |
-|       Estoński        |          et-EE           |      et      |
+|       Estoński        |          et-EE           |      staw      |
 |        Francuski         |          fr-FR           |      fr      |
 |        Fiński        |          fi-FI           |      fi      |
-|        Niemiecki         |          de-DE.           |      de      |
+|        niemiecki         |          de-DE.           |      de      |
 |         Grecki         |          el-GR           |      el      |
 |         Hindi         |          w           |      hi      |
 |       Węgierski       |          hu-HU           |      hu      |
 |        Włoski        |          IT-IT           |      it      |
 |       Japoński        |          ja-JP           |      ja      |
 |        Koreański         |          ko-KR           |      ko      |
-|      Litewski       |          lt-LT           |      lt      |
-|        Łotewski        |          lv-LV           |      lv      |
+|      Litewski       |          lt-LT           |      przelew      |
+|        Łotewski        |          LV — LV           |      lv      |
 |       Norweski       |          nb-NO           |    nb-NO     |
 |        Polski         |          pl-PL           |      pl      |
-| Portugalski (Portugalia) |          pt-PT           |      pt      |
+| Portugalski (Portugalia) |          pt-PT           |      zmiennoprzecinkow      |
 |  Portugalski (Brazylia)  |          pt-BR           |    pt-BR     |
 |        Rosyjski        |          ru-RU           |      ru      |
 |       Rumuński        |          RO RO           |      ro      |
@@ -61,39 +61,39 @@ Pakiet językowy Portal i usługa programu MIM Microsoft obsługują następują
 |        Słowacki         |          sk-SK           |      SK      |
 |        Szwedzki        |          sv-SE           |      sv      |
 |       Słoweński       |          sl SI           |      sl      |
-|   Serbski - Serbia    |  sr-latn-CS(Depricated)  |  Funkcja SR-Latn-RS  |
-|         Tajlandzki          |          th TH           |      TH      |
-|        Turecki        |          tr-TR           |      tr      |
+|   Serbski — Serbia    |  sr-latn-CS (przestarzałe)  |  sr-latn-RS  |
+|         Tajlandzki          |          th TH           |      th      |
+|        Turecki        |          tr-TR           |      zdawczy      |
 |       Ukraiński       |          uk-UA           |      Zjednoczone Królestwo      |
 
 ## <a name="certificate-management"></a>Zarządzanie certyfikatami 
-Zarządzanie certyfikatami firmy Microsoft obsługuje następujące języki 9. 
+Zarządzanie certyfikatami firmy Microsoft obsługuje następujące 9 języków. 
 
-|Język|FIM(4.3.x.x)/MIM(4.4.xx)|Nowe MIM(4.5.x.x)
+|Język|FIM(4.3.x.x)/MIM(4.4.xx)|Nowy MIM (4.5. x. x)
 |-----|-----|-----|-----|
-|Chiński (uproszczony)|zh-CN|nazwy zh-hans|
-|Chiński (Tajwan)|zh-TW|nazwy zh-hant|
+|Chiński (uproszczony)|zh-CN|zh-Hans|
+|Chiński (Tajwan)|zh-TW|zh-Hant|
 |Holenderski|NL-NL|nl|
 |Francuski|fr-FR|fr|
-|Niemiecki|de-DE.|de|
+|niemiecki|de-DE.|de|
 |Włoski|IT-IT|it|
 |Japoński|ja-JP|ja|
 |Portugalski (Portugalia)|pt-PT|pt-PT|
 |Hiszpański|es-ES|Tak|
 
-## <a name="certificate-management-modern-application"></a>Certyfikat zarządzania nowoczesnych aplikacji  
-Nowoczesnych aplikacji zarządzania certyfikatów firmy Microsoft obsługuje następujące języki 33. 
+## <a name="certificate-management-modern-application"></a>Nowoczesne aplikacje zarządzania certyfikatami  
+Nowoczesne aplikacje zarządzania certyfikatami firmy Microsoft obsługują następujące języki 33. 
 
 |Język | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
 |Holenderski|NL-NL|nl|
-|Chiński (uproszczony)|zh-CN|nazwy zh-hans|
-|Chiński (Tajwan)|zh-TW|nazwy zh-hant|
-|Czeski|cs-CZ|cs|
+|Chiński (uproszczony)|zh-CN|zh-Hans|
+|Chiński (Tajwan)|zh-TW|zh-Hant|
+|Czeski|cs-CZ|Rejestr|
 |Duński|Akcelerator deweloperski w wersji DK|da|
 |Francuski|fr-FR|fr|
 |Fiński|fi-FI|fi|
-|Niemiecki|de-DE.|de|
+|niemiecki|de-DE.|de|
 |Grecki|el-GR|el|
 |Węgierski|hu-HU|hu|
 |Włoski|IT-IT|it|
@@ -101,13 +101,13 @@ Nowoczesnych aplikacji zarządzania certyfikatów firmy Microsoft obsługuje nas
 |Koreański|ko-KR|ko|
 |Norweski|nb-NO|nb-NO|
 |Polski|pl-PL|pl|
-|Portugalski (Portugalia)|pt-PT|pt|
+|Portugalski (Portugalia)|pt-PT|zmiennoprzecinkow|
 |Portugalski (Brazylia)|pt-BR|pt-BR|
 |Rosyjski|ru-RU|ru|
 |Rumuński|RO RO|ro|
 |Hiszpański|es-ES|Tak|
 |Szwedzki|sv-SE|sv|
-|Turecki|tr-TR|tr|
+|Turecki|tr-TR|zdawczy|
 
 ## <a name="next-steps"></a>Następne kroki
 

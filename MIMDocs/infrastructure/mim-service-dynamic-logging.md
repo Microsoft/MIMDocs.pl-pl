@@ -6,12 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
-ms.openlocfilehash: e5d8bcc640ad77b71a515b13bcb3bcf6985654f5
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.prod: microsoft-identity-manager
+ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380089"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701295"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Rejestrowanie dynamiczne usługi MIM z dodatkiem SP1 (4.4.1436.0)
 
@@ -30,11 +31,11 @@ Poziomy rejestrowania dynamicznego można znaleźć [tutaj](https://msdn.microso
 - Krytyczne = w przypadku domyślnego poziomu usługi są zapisywane tylko zdarzenia krytyczne
 - Zaktualizuj wiersz 8 (dynamicLogging mode="true" loggingLevel="Critical") przy użyciu preferowanej wartości rejestrowania
 
-Konfiguracji rejestrowania dynamicznego znajduje się w wierszu 266: Microsoft.ResourceManagement.Service.exe.config
+Konfiguracja rejestrowania dynamicznego znajdująca się w wierszu 266: Microsoft. ResourceManagement. Service. exe. config
 
 ![Wyróżnione sekcje zawierają wiersze z różnymi dostępnymi obszarami rejestrowania](media/mim-service-dynamic-logging/screen02.png)
 
-Domyślnie lokalizacją rejestrowania będzie na ** C:\Program Files\Microsoft Forefront Identity Manager\2010\Service konta będą konieczne uprawnienia zapisu w tej lokalizacji umożliwiające Generowanie dziennika dynamicznego usługi FIM.
+Domyślnie lokalizacja rejestrowania będzie znajdować się w lokalizacji * * C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. konto usługi FIM będzie wymagało uprawnienia do zapisu w tej lokalizacji w celu wygenerowania dziennika dynamicznego.
 
 ![Lokalizacja folderu dzienników](media/mim-service-dynamic-logging/screen03.png)
 
@@ -44,20 +45,20 @@ Domyślnie lokalizacją rejestrowania będzie na ** C:\Program Files\Microsoft F
 > 2. „%TEMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log”
 > 3. „% USERPROFILE %\Microsoft.ResourceManagement.Service.exe_Emergency.log”
 
-Aby wyświetlić ślad, można użyć [narzędzia podglądu śledzenia usług](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
+Aby wyświetlić ślad, można użyć [narzędzia Podgląd śledzenia usług](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
 
  ![Zrzut ekranu narzędzia do przeglądania danych śledzenia usług](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Aktualizacje: Tworzenie 4.5.x.x lub nowszej
+# <a name="updates-build-45xx-or-greater"></a>Dostępności Kompiluj 4.5. x. x lub nowszy
 
-W kompilacji jest 4.5.x.x, poprawiona funkcja rejestrowania, aby określić domyślny poziom rejestrowania **"Ostrzeżenie"**. Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" dodany przed rozszerzeniem). Te pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy rozmiar pliku przekracza maksymalny rozmiar usługa zostanie uruchomiona zapisu w innym pliku. Jeśli inny plik istnieje, zostanie on zastąpiony. Domyślny maksymalny rozmiar pliku wynosi 1 GB. Aby zmienić domyślny maksymalny rozmiar, jest konieczne dodanie **"maxOutputFileSizeKB"** parametru z wartością Maksymalny rozmiar pliku w KB do odbiornika (zobacz poniższy przykład) i ponownie uruchomić usługę programu MIM. Gdy usługa jest uruchomiona, dołącza go dzienniki w pliku nowszą (po przekroczeniu limitu miejsca jej zastąpienia najstarszych pliku). 
-
-> [!NOTE] 
-> Jako rozmiar pliku wyboru usługi przed zapisaniem komunikat rozmiar pliku może być większy niż rozmiar maksymalny rozmiar jednego komunikatu. Domyślnie rozmiar dzienników może być około 6 GB (trzy > odbiorniki z dwóch plików w przypadku o rozmiarze 1 GB pamięci).
+W kompilacji 4.5. x. x Zaktualizowaliśmy funkcję rejestrowania, aby określić domyślny poziom rejestrowania to **"Warning" (ostrzeżenie**). Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" są dodawane przed rozszerzeniem). Pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy plik przekracza maksymalny rozmiar, Usługa uruchamia zapis w innym pliku. Jeśli istnieje inny plik, zostanie on nadpisany. Domyślny maksymalny rozmiar pliku to 1 GB. Aby zmienić domyślny maksymalny rozmiar, należy dodać parametr **"maxOutputFileSizeKB"** z wartością maksymalnego rozmiaru pliku w kilobajtach do odbiornika (Zobacz przykład poniżej) i ponownie uruchomić usługę programu MIM. Gdy usługa zostanie uruchomiona, dołącza dzienniki w nowszej pliku (w przypadku przekroczenia limitu miejsca zastępuje najstarszy plik). 
 
 > [!NOTE] 
-> Konto usługi musi mieć uprawnienia do zapisu > "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" > katalogu. W przypadku, gdy konto usługi nie ma takich praw > pliki nie zostaną utworzone.
+> Gdy rozmiar pliku sprawdzania usługi zostanie zapisany przed zapisaniem wiadomości, rozmiar pliku może być większy niż maksymalny rozmiar jednego komunikatu. Domyślnie rozmiar dzienników może wynosić około 6 GB (trzy > detektory z dwoma plikami dla jednego rozmiaru GB).
 
-Przykład sposobu ustawiania maksymalny rozmiar pliku do 200 MB (200 * 1024 KB) dla plików svclog i 100 MB * (100 * 1024 KB) dla plików txt
+> [!NOTE] 
+> Konto usługi powinno mieć uprawnienia do zapisu w > katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" >. W przypadku, gdy konto usługi nie ma takich uprawnień, pliki > nie zostaną utworzone.
+
+Przykład ustawiania maksymalnego rozmiaru pliku na 200 MB (200 * 1024 KB) dla plików svclog i 100 MB * (100 * 1024 KB) dla plików txt
 
 `<add initializeData="Microsoft.ResourceManagement.Service_tracelog.svclog" type="Microsoft.IdentityManagement.CircularTraceListener.CircularXmlTraceListener, Microsoft.IdentityManagement.CircularTraceListener, PublicKeyToken=31bf3856ad364e35" name="ServiceModelTraceListener" traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" maxOutputFileSizeKB="204800">`

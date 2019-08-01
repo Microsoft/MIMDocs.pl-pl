@@ -1,49 +1,49 @@
 ---
-title: Konfigurowanie systemu Windows Server 2016 do dodatku SP1 dla programu MIM 2016 | Dokumentacja firmy Microsoft
-description: Pobierz kroki i minimalne wymagania niezbędne do przygotowania systemu Windows Server 2016 do pracy z programu MIM 2016 z dodatkiem SP1.
+title: Konfigurowanie systemu Windows Server 2016 dla programu MIM 2016 z dodatkiem SP1 | Microsoft Docs
+description: Zapoznaj się z krokami i minimalnymi wymaganiami dotyczącymi przygotowania systemu Windows Server 2016 do pracy z programem MIM 2016 z dodatkiem SP1.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
-ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
+ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51718337"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701408"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [«Przygotowywanie domeny](preparing-domain.md)
-> [programu SQL Server 2016»](prepare-server-sql2016.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)
 > 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
-> - Nazwa serwera usługi MIM — **corpservice**
+> - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
-> - Nazwa programu SQL Server — **corpsql**
+> - Nazwa SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
-## <a name="join-windows-server-2016-to-your-domain"></a>Dołącz do systemu Windows Server 2016 do Twojej domeny
+## <a name="join-windows-server-2016-to-your-domain"></a>Przyłączanie do domeny systemu Windows Server 2016
 
-Zacznij od maszynę systemu Windows Server 2016 z co najmniej 8 12 GB pamięci RAM. Podczas instalacji Określ wersję "Windows Server 2016 Standard/centrum danych (serwer z graficznym interfejsem użytkownika) x 64".
+Zacznij od maszyny z systemem Windows Server 2016 z co najmniej 8 12GB pamięci RAM. Podczas instalacji Określ wartość "Windows Server 2016 Standard/Datacenter (serwer z graficznym interfejsem użytkownika) x64".
 
 1. Zaloguj się na nowym komputerze jako administrator.
 
-2. Za pomocą Panelu sterowania nadaj komputerowi statyczny adres IP w sieci. Skonfiguruj ten interfejs sieciowy do wysyłania zapytań DNS do adresu IP kontrolera domeny w poprzednim kroku, a następnie ustaw nazwę komputera na **CORPSERVICE**.  Ta operacja wymaga ponownego uruchomienia serwera.
+2. Za pomocą Panelu sterowania nadaj komputerowi statyczny adres IP w sieci. Skonfiguruj ten interfejs sieciowy do wysyłania zapytań DNS na adres IP kontrolera domeny w poprzednim kroku, a następnie ustaw nazwę komputera na **CORPSERVICE**.  Ta operacja wymaga ponownego uruchomienia serwera.
 
-3. Otwórz Panel sterowania, a następnie dołącz komputer do domeny, który został skonfigurowany w ostatnim kroku *contoso.com*.  Ta operacja obejmuje podanie nazwy użytkownika i poświadczeń administratora domeny, takich jak *Contoso\Administrator*.  Gdy zostanie wyświetlony komunikat powitalny, zamknij okno dialogowe i ponownie uruchom serwer.
+3. Otwórz Panel sterowania i Przyłącz komputer do domeny skonfigurowanej w ostatnim kroku *contoso.com*.  Ta operacja obejmuje podanie nazwy użytkownika i poświadczeń administratora domeny, takich jak *contoso\administrator*.  Gdy zostanie wyświetlony komunikat powitalny, zamknij okno dialogowe i ponownie uruchom serwer.
 
-4. Zaloguj się do komputera *CORPSERVICE* jako konto domeny z administratorem komputera lokalnego, takie jak *Contoso\MIMINSTALL*.
+4. Zaloguj się do komputera *CORPSERVICE* jako konto domeny przy użyciu administratora komputera lokalnego, takiego jak *Contoso\MIMINSTALL*.
 
 
 5. Uruchom okno programu PowerShell jako administrator i wpisz poniższe polecenie, aby zaktualizować komputer przy użyciu ustawień zasad grupy.
@@ -69,29 +69,29 @@ Zacznij od maszynę systemu Windows Server 2016 z co najmniej 8 12 GB pamięci R
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 > [!NOTE] 
-> W zależności od usługi konfiguracji, pojedynczy server(all-in-one) lub serwerów rozproszonych, które należy dodać na podstawie roli komputera członkowskiego, takich jak serwer synchronizacji. 
+> W zależności od konfiguracji, jednego serwera (wszystkie w jednym) lub serwerów rozproszonych, które należy dodać tylko na podstawie roli komputera członkowskiego, na przykład serwera synchronizacji. 
 
 1. Uruchom program Zasady zabezpieczeń lokalnych.
 
 2. Przejdź do lokalizacji **Zasady lokalne > Przypisywanie praw użytkownika**.
 
-3. W okienku szczegółów kliknij prawym przyciskiem myszy **Zaloguj się jako usługa**i wybierz **właściwości**.
+3. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie jako usługa**, a następnie wybierz pozycję **Właściwości**.
 
     ![Obraz programu Zasady zabezpieczeń lokalnych](media/MIM-DeployWS3.png)
 
-4. Kliknij przycisk **Dodaj użytkownika lub grupę**, a w polu tekstowym wpisz następujące na podstawie roli `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, kliknij przycisk **Sprawdź nazwy**i kliknij przycisk **OK**.
+4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`polecenie, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
 
 5. Kliknij przycisk **OK**, aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
 
-6.  W okienku szczegółów kliknij prawym przyciskiem myszy **odmowa dostępu do tego komputera z sieci**i wybierz **właściwości**. >
+6.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmów dostępu do tego komputera z sieci**, a następnie wybierz polecenie **Właściwości**. >
 
-[!NOTE] Oddzielenie serwerów roli spowoduje awarię niektórych funkcji, takich jak funkcji samoobsługowego resetowania HASEŁ.
+[!NOTE] Rozdzielenie serwerów ról spowoduje przerwanie niektórych funkcji, takich jak SSPR.
 
 7. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 
 8. Kliknij przycisk **OK**, aby zamknąć okno **Odmowa dostępu do tego komputera z sieci: właściwości**.
 
-9. W okienku szczegółów kliknij prawym przyciskiem myszy **Odmowa logowania lokalnego**i wybierz **właściwości**.
+9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **odmowa logowania lokalnego**i wybierz polecenie **Właściwości**.
 
 10. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 
@@ -100,7 +100,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
 
-## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Zmień tryb uwierzytelniania Windows usług IIS, jeśli to konieczne
+## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>W razie konieczności zmień tryb uwierzytelniania systemu Windows usług IIS
 
 1.  Otwórz okno programu PowerShell.
 
@@ -114,4 +114,4 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 > [!div class="step-by-step"]  
 > [«Przygotowywanie domeny](preparing-domain.md)
-> [programu SQL Server 2016»](prepare-server-sql2016.md)
+> [SQL Server 2016»](prepare-server-sql2016.md)

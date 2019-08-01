@@ -6,42 +6,42 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690769"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701380"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: Program SharePoint
 
 > [!div class="step-by-step"]
 > [«SQL Server 2016](prepare-server-sql2016.md)
-> [program Exchange Server»](prepare-server-exchange.md)
+> [Exchange Server»](prepare-server-exchange.md)
 > 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
-> - Nazwa serwera usługi MIM — **corpservice**
+> - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
-> - Nazwa programu SQL Server — **corpsql**
+> - Nazwa SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
 
-## <a name="install-sharepoint-2016"></a>Zainstaluj **programu SharePoint 2016**
+## <a name="install-sharepoint-2016"></a>Zainstaluj **program SharePoint 2016**
 
 > [!NOTE]
 > Instalator wymaga połączenia internetowego w celu pobrania jego wymagań wstępnych. Jeśli komputer znajduje się w sieci wirtualnej, która nie zapewnia łączności z Internetem, dodaj do komputera dodatkowy interfejs sieciowy pozwalający na łączenie się z Internetem. Interfejs ten można wyłączyć po ukończeniu instalacji.
 
 Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zakończeniu instalacji serwer zostanie uruchomiony ponownie.
 
-1.  Uruchom **PowerShell** jako konto domeny z lokalnym administratorem **corpservice** i **sysadmin** na serwerze bazy danych SQL, firma Microsoft użyje się **contoso\ miminstall**.
+1.  Uruchom program **PowerShell** jako konto domeny z uprawnieniami administratora lokalnego na **corpservice** i **sysadmin** na serwerze bazy danych SQL, użyjemy **contoso\miminstall**.
 
     -   Przejdź do katalogu, do którego rozpakowano program SharePoint.
 
@@ -51,7 +51,7 @@ Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zako�
         .\prerequisiteinstaller.exe
         ```
 
-2.  Po **SharePoint** wstępnie wymagane składniki są zainstalowane, należy zainstalować **programu SharePoint 2016** , wpisując następujące polecenie:
+2.  Po zainstalowaniu wymagań wstępnych **programu SharePoint** zainstaluj **program SharePoint 2016** , wpisując następujące polecenie:
 
     ```
     .\setup.exe
@@ -67,16 +67,16 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 1. Na karcie **Połącz z farmą serwerów** zmień ustawienia, aby utworzyć nową farmę serwerów.
 
-2. Określ ten serwer jako serwer bazy danych, takich jak **corpsql** bazy danych konfiguracji i *Contoso\SharePoint* jako konta dostępu do bazy danych dla programu SharePoint do użycia.
+2. Określ ten serwer jako serwer bazy danych, taki jak **corpsql** dla bazy danych konfiguracji, i *Contoso\SharePoint* jako konto dostępu do bazy danych używane przez program SharePoint.
 3. Utwórz hasło zabezpieczeń farmy.
 
-4. W Kreatorze konfiguracji zalecane jest wybranie opcji [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) typu **frontonu**
+4. W Kreatorze konfiguracji zalecamy wybranie [MinRole](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server) typu **frontonu**
 
-5. Po zakończeniu działania Kreatora konfiguracji zadania konfiguracji 10 10, kliknij przycisk Zakończ sieci web zostanie otwarta przeglądarka...
+5. Gdy Kreator konfiguracji ukończy zadanie konfiguracji o wartości 10 z 10, kliknij przycisk Zakończ. zostanie otwarta przeglądarka sieci Web...
 
-6. Jeśli zostanie wyświetlony monit wyskakującym przeglądarki Internet Explorer, Uwierzytelnij się jako *Contoso\miminstall* (lub konta administratora równoważne) aby kontynuować.
+6. Jeśli zostanie wyświetlony monit z menu podręcznego programu Internet Explorer, należy przeprowadzić uwierzytelnianie jako *Contoso\miminstall* (lub równoważne konto administratora).
 
-7. W Kreatorze sieci web (w ramach aplikacji sieci web) kliknij **Anuluj/Skip**.
+7. W Kreatorze sieci Web (w aplikacji sieci Web) kliknij przycisk **Anuluj/Pomiń**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Przygotowywanie programu SharePoint do hostowania portalu programu MIM
@@ -84,7 +84,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 > [!NOTE]
 > Początkowo protokół SSL nie zostanie skonfigurowany. Należy pamiętać o skonfigurowaniu protokołu SSL lub równoważnego przed włączeniem dostępu do tego portalu.
 
-1. Uruchom **powłoki zarządzania programu SharePoint 2016** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikacji sieci Web programu SharePoint 2016**.
+1. Uruchom **powłokę zarządzania programu sharepoint 2016** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikację sieci Web programu SharePoint 2016**.
 
     ```
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
@@ -93,9 +93,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     ```
 
     > [!NOTE]
-    > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Zachowaj **powłoki zarządzania programu SharePoint 2016** otwartego z odwołaniem w dalszej części okna.
+    > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Pozostaw otwarte okno **powłoki zarządzania programu SharePoint 2016** do późniejszego odwoływania się do niego.
 
-2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **zbioru witryn programu SharePoint** skojarzone z tą aplikacją sieci web.
+2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
 
    ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
@@ -106,9 +106,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
    ```
 
    > [!NOTE]
-   > Upewnij się, że wynik *CompatibilityLevel* zmiennej wynosi "15". Jeśli wynik jest równa "15", następnie zbioru witryn nie utworzono wersji środowiska poprawne; Usuń kolekcję witryn i utwórz ją ponownie.
+   > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to "15". Jeśli wynik jest inny niż "15", kolekcja witryn nie została utworzona w odpowiedniej wersji środowiska; Usuń kolekcję witryn i utwórz ją ponownie.
 
-3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint "Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)", uruchamiając następujące polecenie programu PowerShell polecenia w  **Powłokę zarządzania programu SharePoint 2016**:
+3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint "zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)", uruchamiając następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2016**:
 
    ```
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -117,9 +117,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Na serwerze zarządzania tożsamością Otwórz nową kartę przeglądarki sieci web, przejdź do http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
+4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do strony http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
 
-    ![Portalu MIM po adresem http://mim.contoso.com/ obrazu](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![Portal programu mim http://mim.contoso.com/ na obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**.
 
@@ -131,4 +131,4 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 > [!div class="step-by-step"]  
 > [«SQL Server 2016](prepare-server-sql2016.md)
-> [program Exchange Server»](prepare-server-exchange.md)
+> [Exchange Server»](prepare-server-exchange.md)

@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 11/30/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31bb2560b470453423c7d200dba2d670fc338260
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: bad4cb03062a77494bbf429a929d62ca6e140c30
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358051"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701340"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Konfigurowanie serwera zarządzania tożsamościami: Exchange
 

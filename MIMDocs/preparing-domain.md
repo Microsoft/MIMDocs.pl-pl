@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 10/26/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cbba7abe810fea0943e087206f7b0b6e3baa7cbb
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 35845cc9bb4358f3f837b8a007de15da972c980d
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357887"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701324"
 ---
 # <a name="set-up-a-domain"></a>Konfigurowanie domeny
 
@@ -33,11 +33,11 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
-> - Nazwa kontrolera domeny — **kontrolera domeny corpdc**
+> - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
-> - Nazwa serwera usługi MIM — **corpservice**
+> - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
-> - Nazwa programu SQL Server — **corpsql**
+> - Nazwa SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
 
 1. Zaloguj się do kontrolera domeny jako administrator domeny (*np. Contoso\Administrator*).
@@ -99,11 +99,11 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
     setspn -S FIMService/mim.contoso.com Contoso\MIMService
     setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
-5.  Podczas instalacji należy dodać następujące rekordy DNS "A" do poprawnego rozpoznawania nazw
+5.  Podczas instalacji musimy dodać następujące rekordy DNS "A" w celu rozpoznawania nazw
 
-- mim.contoso.com punktu z adresem ip fizycznych corpservice
-- passwordreset.contoso.com punktu z adresem ip fizycznych corpservice
-- passwordregistration.contoso.com punktu z adresem ip fizycznych corpservice
+- mim.contoso.com wskaż fizyczny adres IP corpservice
+- passwordreset.contoso.com wskaż fizyczny adres IP corpservice
+- passwordregistration.contoso.com wskaż fizyczny adres IP corpservice
 
 > [!div class="step-by-step"]
 > [System Windows Server 2016»](prepare-server-ws2016.md)
