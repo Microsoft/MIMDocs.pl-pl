@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/01/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 0a8fd7fb4d36beffde86b020522ccd52287b5806
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701276"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329267"
 ---
-# <a name="install-mim-2016-mim-synchronization-service"></a>Zainstaluj program MIM 2016: Usługa synchronizacji programu MIM
+# <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
 > [Portal i usługa programu MIM »](install-mim-service-portal.md)
-> 
+ 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
@@ -57,11 +57,13 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
 6. Na ekranie konfiguracji bazy danych usługi synchronizacji wybierz:
 
-   1.  SQL Server znajduje się w: **Maszyna zdalna** o nazwie **corpsql.contoso.com**.
+   1.  SQL Server znajduje się w lokalizacji: **maszyna zdalna** o nazwie **corpsql.contoso.com**.
 
-   2.  Wystąpienie SQL Server: **Wystąpienie domyślne**
+   2.  Wystąpienie programu SQL Server: **Wystąpienie domyślne**.
 
    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
+
+    3. *MIM 2016 SP2 i nowsze*: Skonfiguruj nazwę bazy danych usługi synchronizacji programu MIM
 
 7. Skonfiguruj konto usługi synchronizacji zgodnie z kontem utworzonym wcześniej:
 
@@ -70,6 +72,9 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
    2. Hasło: <em>Pass@word1</em>
 
    3. Domena konta usługi lub nazwa komputera lokalnego: *contoso*
+
+    >[!NOTE]
+Program MIM 2016 SP2 i nowsze: dla kont usług zarządzanych przez grupę upewnij się, że **$** znak znajduje się na końcu nazwy konta usługi, np. MIMSync $, i pozostaw pole hasła puste.
 
    ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
 
@@ -97,7 +102,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
     3. Zostanie wyświetlone powiadomienie dotyczące tworzenia kopii zapasowej klucza szyfrowania — kliknij przycisk **OK** i wybierz folder, w którym zostanie zapisana kopia zapasowa klucza szyfrowania.
 
-        ![Obraz uwagi dotyczącej kopii zapasowej klucza szyfrowania usługi synchronizacji programu MIM](media/MIM-Install7.png)
+    ![Obraz uwagi dotyczącej kopii zapasowej klucza szyfrowania usługi synchronizacji programu MIM](media/MIM-Install7.png)
 
     4. Gdy instalator pomyślnie ukończy instalację, kliknij przycisk **Zakończ**.
 

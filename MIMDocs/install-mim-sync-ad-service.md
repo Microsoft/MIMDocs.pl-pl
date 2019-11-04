@@ -11,20 +11,20 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701198"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329323"
 ---
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Zainstaluj program MIM 2016: Synchronizacja Active Directory i usługi MIM
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
 > [!div class="step-by-step"]
 > [« Usługa i portal MIM](install-mim-service-portal.md)
 > 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — <strong>Pass@word1</strong>
@@ -37,7 +37,7 @@ Agent zarządzania (MA) programu MIM jest łącznikiem usługi synchronizacji pr
 Podczas konfigurowania agenta zarządzania programu MIM należy określić konto użytkownika. W niniejszym dokumencie użyto nazwy **MIMMA** dla tego konta.
 
 > [!NOTE]
-> Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM.
+> Konto używane dla agenta zarządzania programu MIM musi być tym samym kontem, które określono podczas instalacji usługi MIM. Jeśli planujesz włączenie funkcji "Użyj konta MIMSync", usługa synchronizacji programu MIM musi być zainstalowana za pomocą konta usługi zarządzanego przez grupę.
 
 ### <a name="to-create-the-mim-ma"></a>Aby utworzyć agenta zarządzania programu MIM
 
@@ -47,19 +47,18 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
 
-    -   Agent zarządzania dla: Agent zarządzania usługą FIM Service
+    -   Management agent for (Agent zarządzania dla): FIM Service management agent (agent zarządzania usługi FIM)
 
-    -   Nazwa: MIMMA
+    -   Name (Nazwa): MIMMA
 
 4.  Na stronie **Connect to Database** (Połączenie z bazą danych) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
-
     -   Server (Serwer): localhost
 
-    -   Database Usługi FIMService
+    -   Database (Baza danych): FIMService
 
-    -   Adres podstawowy usługi programu MIM: http://localhost:5725
+    -   Adres podstawowy usługi MIM: http://localhost:5725
 
-    -   Tryb uwierzytelniania: Zintegrowane uwierzytelnianie systemu Windows
+    -   Authentication mode (Tryb uwierzytelniania): Windows integrated authentication (zintegrowane uwierzytelnianie systemu Windows)
 
     -   User name (Nazwa użytkownika): mimma
 
@@ -75,7 +74,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
     -   Grupa
 
-    -   Person (Osoba)
+    -   Person
 
     -   SynchronizationRule
 
@@ -113,14 +112,14 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     | **Atrybut źródła danych** | **Kierunek przepływu** | **Atrybut Metaverse** |
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
-    | DisplayName | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
-    | Email | Eksportowanie | Poczta |
+    | Nazwa wyświetlana | Eksportowanie | displayName |
+    | Domena | Eksportowanie | domain |
+    | Poczta e-mail | Eksportowanie | Poczta |
     | Identyfikator pracownika | Eksportowanie | employeeID |
     | EmployeeType | Eksportowanie | employeeType |
     | FirstName | Eksportowanie | firstName |
     | LastName | Eksportowanie | lastName |
-    | ObjectSID | Eksportowanie | atrybuty objectSid |
+    | ObjectSID | Eksportowanie | objectSid |
 
     -   Wybierz pozycję **Group** (Grupa) jako typ źródła danych i typ obiektu Metaverse.
 
@@ -139,23 +138,23 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     | **Atrybut źródła danych** | **Kierunek przepływu** | **Atrybut Metaverse** |
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
-    | DisplayName | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
-    | Email | Eksportowanie | poczta |
+    | Nazwa wyświetlana | Eksportowanie | displayName |
+    | Domena | Eksportowanie | domain |
+    | Poczta e-mail | Eksportowanie | Poczta |
     | MailNickName | Eksportowanie | mailNickName |
     | Element członkowski | Eksportowanie | członek |
     | ObjectSID | Eksportowanie | objectSid |
-    | Scope | Eksportowanie | zakres |
-    | Type | Eksportowanie | type |
+    | Zakres | Eksportowanie | zakres |
+    | Type | Eksportowanie | typ |
     | MembershipAddWorkflow | Eksportowanie | membershipAddWorkflow |
     | MembershipLocked | Eksportowanie | membershipLocked |
-    | AccountName | Import | accountName |
-    | DisplayedOwner | Import | displayedOwner |
-    | DisplayName | Import | displayName |
-    | MailNickName | Import | mailNickName |
-    | Element członkowski | Importuj | członek |
-    | Scope | Import | scope |
-    | Type | Import | typ |
+    | AccountName | Importowanie | accountName |
+    | DisplayedOwner | Importowanie | displayedOwner |
+    | Nazwa wyświetlana | Importowanie | displayName |
+    | MailNickName | Importowanie | mailNickName |
+    | Element członkowski | Importowanie | członek |
+    | Zakres | Importowanie | zakres |
+    | Type | Importowanie | typ |
 
 10.  Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
 
@@ -168,8 +167,8 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 2. Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
-    - Agent zarządzania dla: Usługi domenowe Active Directory
-    - Nazwa: ADMA
+    - Management agent for (Agent zarządzania dla): Active Directory Domain Services (Usługi domenowe Active Directory)
+    - Name (Nazwa): ADMA
 
 3. Na stronie **Connect to Active Directory Forest** (Połączenie z lasem usługi Active Directory) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
@@ -196,7 +195,7 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 7. Na stronie **Select Attributes** (Wybieranie atrybutów), zaznacz pole **Show ALL** (Pokaż WSZYSTKO), wybierz poniższe atrybuty, a następnie kliknij przycisk **Next** (Dalej):
 
-    -   Firmy
+    -   company
     -   displayName
     -   employeeID
     -   employeeType
@@ -205,10 +204,10 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
     -   managedBy
     -   manager
     -   członek
-    -   atrybuty objectSid
+    -   objectSid
     -   sAMAccountName
     -   sAMAccountType
-    -   numery seryjne
+    -   sn
     -   unicodePwd
     -   userAccountControl
 
@@ -231,7 +230,7 @@ Utwórz profile uruchamiania dla łączników ADMA i MIMMA.
 
 W poniższej tabeli zamieszczono pięć profilów uruchamiania tworzonych dla łącznika menedżera ADMA:
 
-| Name (Nazwa) | Type |
+| Nazwa | Type |
 | ---- | ---- |
 | Profil1 | Pełny import (tylko przemieszczanie) |
 | Profil2 | Pełna synchronizacja |
@@ -263,7 +262,7 @@ Aby utworzyć profile uruchamiania dla łącznika menedżera ADMA:
 
 W poniższej tabeli zamieszczono pięć pasujących profilów uruchamiania dla łącznika MIMMA:
 
-| Name (Nazwa) | Type |
+| Nazwa | Type |
 | -------- | -------- |
 | Profil1 | Pełny import (tylko przemieszczanie) |
 | Profil2 | Pełna synchronizacja |
@@ -305,13 +304,13 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
 4. Na karcie **General** (Ogólne) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
-    -   Nazwa wyświetlana: Reguła synchronizacji ruchu przychodzącego użytkowników usługi AD
-    -   Kierunek przepływu danych: Przychodzące
+    -   Display Name (Nazwa wyświetlana): AD User Inbound Synchronization Rule (Reguła synchronizacji ruchu przychodzącego użytkowników usługi AD)
+    -   Data Flow Direction (Kierunek przepływu danych): Inbound (Przychodzący)
 
 5. Na karcie **Scope** (Zakres) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
     -   Metaverse Resource Type (Typ zasobu Metaverse): person (osoba)
-    -   System zewnętrzny: ADMA
+    -   External System (System zewnętrzny): ADMA
     -   External System Resource Type (Typ zasobu systemu zewnętrznego): user (użytkownik)
 
 6. Na karcie **Relationship** (Relacja) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
@@ -322,14 +321,14 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
 7. Na stronie **Inbound Attribute Flow** (Przepływ atrybutów ruchu przychodzącego) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
-    | Reguła przepływu | Source | Miejsce docelowe |
+    | Reguła przepływu | Źródło | Lokalizacja docelowa |
     |-|-|-|
     |Reguła 1|samAccountName|accountName|
     |Reguła 2|displayName|displayName|
     |Reguła 3|EmployeeType|employeeType|
     |Reguła 4|givenName|firstName|
     |Reguła 5|sn|lastName|
-    |Reguła 6|maszyny wirtualnej|menedżer|
+    |Reguła 6|Menedżer|manager|
     |Reguła 7|objectSid|ObjectSID|
     |Reguła 8|"Contoso"|domain|
 

@@ -11,21 +11,25 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 46320c8c2d1ae7c530c4670159e393ee1be7165c
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701380"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329462"
 ---
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: Program SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
 
 > [!div class="step-by-step"]
-> [«SQL Server 2016](prepare-server-sql2016.md)
+> [«SQL Server](prepare-server-sql2016.md)
 > [Exchange Server»](prepare-server-exchange.md)
 > 
+
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
+
+> [!NOTE]
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
@@ -46,14 +50,13 @@ Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zako�
     -   Przejdź do katalogu, do którego rozpakowano program SharePoint.
 
     -   Wpisz następujące polecenie.
-
-        ```
-        .\prerequisiteinstaller.exe
-        ```
+    ```CMD
+    .\prerequisiteinstaller.exe
+    ```
 
 2.  Po zainstalowaniu wymagań wstępnych **programu SharePoint** zainstaluj **program SharePoint 2016** , wpisując następujące polecenie:
 
-    ```
+    ```CMD
     .\setup.exe
     ```
 
@@ -86,7 +89,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 
 1. Uruchom **powłokę zarządzania programu sharepoint 2016** i uruchom następujący skrypt programu PowerShell, aby utworzyć **aplikację sieci Web programu SharePoint 2016**.
 
-    ```
+    ```PowerShell
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\mimpool
     New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 80 -URL http://mim.contoso.com
@@ -96,30 +99,42 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Pozostaw otwarte okno **powłoki zarządzania programu SharePoint 2016** do późniejszego odwoływania się do niego.
 
 2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
-
-   ```
+   ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
    ```
-
    > [!NOTE]
    > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to "15". Jeśli wynik jest inny niż "15", kolekcja witryn nie została utworzona w odpowiedniej wersji środowiska; Usuń kolekcję witryn i utwórz ją ponownie.
 
+    > [!IMPORTANT]
+Program SharePoint Server 2019 używa innej właściwości aplikacji sieci Web, aby zachować listę zablokowanych rozszerzeń plików. Dlatego w celu odblokowania. Pliki ASHX używane przez portal programu MIM trzy dodatkowe polecenia muszą zostać wykonane ręcznie z poziomu powłoki zarządzania programu SharePoint.
+<br/>
+    **Wykonaj kolejne trzy polecenia tylko dla programu SharePoint 2019:**
+
+   ```PowerShell
+    $w.BlockedASPNetExtensions.Remove("ashx")
+    $w.Update()
+    $w.BlockedASPNetExtensions
+   ```
+   > [!NOTE]
+   > Upewnij się, że lista *BlockedASPNetExtensions* nie zawiera rozszerzenia ASHX, w przeciwnym razie kilka stron portalu programu MIM nie zostanie prawidłowo renderowane.
+
+
 3. Wyłącz **stan wyświetlania po stronie serwera SharePoint** i zadanie programu SharePoint "zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)", uruchamiając następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2016**:
 
-   ```
+   ```PowerShell
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
    $contentService.ViewStateOnServer = $false;
    $contentService.Update();
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do strony http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
+4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
 
-    ![Portal programu mim http://mim.contoso.com/ na obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![Portal programu MIM na http://mim.contoso.com/ obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**.
 
@@ -130,5 +145,5 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
 7. Otwórz program **Narzędzia administracyjne**, przejdź do karty **Usługi**, odszukaj usługę administracji programu SharePoint i uruchom ją, jeśli nie jest jeszcze uruchomiona.
 
 > [!div class="step-by-step"]  
-> [«SQL Server 2016](prepare-server-sql2016.md)
+> [«SQL Server](prepare-server-sql2016.md)
 > [Exchange Server»](prepare-server-exchange.md)

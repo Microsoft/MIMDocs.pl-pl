@@ -1,6 +1,6 @@
 ---
-title: Konfigurowanie SQL Server dla Microsoft Identity Manager 2016 z dodatkiem SP1 | Microsoft Docs
-description: Zainstaluj SQL Server 2016 w przygotowaniu do instalacji programu MIM 2016.
+title: Konfigurowanie SQL Server dla Microsoft Identity Manager 2016 SP2 | Microsoft Docs
+description: Zainstaluj SQL Server 2016 lub 2017 w przygotowaniu do instalacji programu MIM 2016.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,27 +11,34 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d32638bda8fd757233af0c697ea3d1ac9eb47eb9
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 757e5c49b12e47f1b5610fd96d4be319696be113
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701369"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329415"
 ---
-# <a name="set-up-an-identity-management-server-sql-server-2016"></a>Konfigurowanie serwera zarządzania tożsamościami: SQL Server 2016
+# <a name="set-up-an-identity-management-server-sql-server-2016-or-2017"></a>Konfigurowanie serwera zarządzania tożsamościami: SQL Server 2016 lub 2017
 
 > [!div class="step-by-step"]
-> [«Windows Server 2016](prepare-server-ws2016.md)
+> [«Windows Server](prepare-server-ws2016.md)
 > [SharePoint»](prepare-server-sharepoint.md)
 > 
+
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+Procedura instalacji programu SQL Server 2017 nie różni się od procedury instalacji programu SQL Server 2016.
+
+> [!NOTE]
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
 > - Hasło — <strong>Pass@word1</strong>
+
+> [!IMPORTANT]
+Program MIM 2016 SP2 obsługuje odbiorniki grupy dostępności funkcji SQL AlwaysOn (AoAG) z opcją *RegisterAllProvidersIP* ustawioną na 0, co oznacza, że SQL Server tryb failover między podsieciami nie jest obecnie obsługiwany.
 
 ## <a name="install-sql-server-2016-standardenterprise-edition"></a>Zainstaluj **SQL Server 2016 Standard/Enterprise Edition**
 
@@ -46,9 +53,10 @@ ms.locfileid: "68701369"
     ```
     
 Więcej informacji na temat kont i usług wdrożenia SQL można znaleźć [tutaj](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
+
 > [!NOTE]
 > Program SSMS nie jest już uwzględniony w programie SQL 2016. Szczegóły pobierania można znaleźć [tutaj](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
 > 
 > [!div class="step-by-step"]  
-> [«Windows Server 2016](prepare-server-ws2016.md)
+> [«Windows Server](prepare-server-ws2016.md)
 > [SharePoint»](prepare-server-sharepoint.md)

@@ -1,31 +1,36 @@
 ---
-title: Konfigurowanie systemu Windows Server 2016 dla programu MIM 2016 z dodatkiem SP1 | Microsoft Docs
-description: Zapoznaj się z krokami i minimalnymi wymaganiami dotyczącymi przygotowania systemu Windows Server 2016 do pracy z programem MIM 2016 z dodatkiem SP1.
+title: Konfigurowanie systemu Windows Server 2016 lub 2019 dla programu MIM 2016 SP2 | Microsoft Docs
+description: Pobierz kroki i minimalne wymagania w celu przygotowania systemu Windows Server 2016 lub 2019 do pracy z programem MIM 2016 SP2.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 66011b135d575ce09d916be7c528accb230b343b
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701408"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329424"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
 
 > [!div class="step-by-step"]
 > [«Przygotowywanie domeny](preparing-domain.md)
-> [SQL Server 2016»](prepare-server-sql2016.md)
+> [SQL Server»](prepare-server-sql2016.md)
 > 
+
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+Procedura instalacji systemu Windows Server 2019 nie różni się od procedury instalacji systemu Windows Server 2016.
+
+
+> [!NOTE]
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
@@ -79,7 +84,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
     ![Obraz programu Zasady zabezpieczeń lokalnych](media/MIM-DeployWS3.png)
 
-4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`polecenie, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
+4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące polecenie w oparciu o rolę `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
 
 5. Kliknij przycisk **OK**, aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
 
@@ -99,6 +104,19 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
+## <a name="software-prerequisites"></a>Wymagania wstępne dotyczące oprogramowania
+
+Przed zainstalowaniem składników programu MIM 2016 SP2 upewnij się, że zainstalowano wszystkie wymagania wstępne dotyczące oprogramowania:
+
+13. Zainstaluj [pakiet C++ redystrybucyjny Visual 2013](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Zainstaluj .NET Framework 4,6.
+
+15. Na serwerze, który będzie hostować usługę synchronizacji programu MIM, usługa synchronizacji programu MIM wymaga [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+
+16. Na serwerze, który będzie hostować usługę programu MIM, usługa MIM wymaga .NET Framework 3,5.
+
+17. Opcjonalnie, jeśli używany jest tryb TLS 1,2 lub FIPS, zobacz Program [MIM 2016 SP2 w artykule "TLS 1,2 Only" lub w trybie FIPS](preparing-tls.md).
 
 ## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>W razie konieczności zmień tryb uwierzytelniania systemu Windows usług IIS
 
@@ -114,4 +132,4 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 > [!div class="step-by-step"]  
 > [«Przygotowywanie domeny](preparing-domain.md)
-> [SQL Server 2016»](prepare-server-sql2016.md)
+> [SQL Server»](prepare-server-sql2016.md)

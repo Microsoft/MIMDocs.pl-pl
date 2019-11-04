@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bad4cb03062a77494bbf429a929d62ca6e140c30
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 2994711949122aac7a545d3849db6c66f8cb09ed
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701340"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329307"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Konfigurowanie serwera zarządzania tożsamościami: Exchange
 
@@ -27,15 +27,7 @@ ms.locfileid: "68701340"
 ## <a name="deploy-microsoft-exchange-server"></a>Wdrażanie programu Microsoft Exchange Server
 Jeśli chcesz skonfigurować program MIM do wysyłania i odbierania wiadomości e-mail lub aprowizowania skrzynek pocztowych, w środowisku musi być zainstalowany program Exchange. Jeśli program Exchange nie jest jeszcze wdrożony, możesz zainstalować wersję próbną w celu przeprowadzenia oceny:
 
-1. Pobierz i zainstaluj pakiety filtrów pakietu Microsoft Office 2010 — wersja 2.0 oraz pakiety filtrów pakietu Microsoft Office 2010 — wersja 2.0 SP1
-
-    - [Pakiety filtrów MS Office 10 2.0](http://www.microsoft.com/download/details.aspx?id=17062)
-
-    - [Pakiety filtrów MS Office 10 2.0 SP1](http://www.microsoft.com/download/details.aspx?id=26604)
-
-2. Pobierz i zainstaluj [podstawowe 64-bitowe środowisko uruchomieniowe interfejsu Microsoft Unified Communications Managed API 4.0](http://www.microsoft.com/download/details.aspx?id=34992).
-
-3. Pobierz i zainstaluj [180-dniową wersję próbną programu MS Exchange Server 2013](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013).
+* Pobierz i zainstaluj [180-dniową wersję próbną programu MS Exchange Server 2013](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013).
 
 > [!div class="step-by-step"]  
 > [« SharePoint](prepare-server-sharepoint.md)
