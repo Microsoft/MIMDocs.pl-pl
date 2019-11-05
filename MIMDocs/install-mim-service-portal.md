@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: d579de0957efb6027f7061e67aa4d1f1ddff2395
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: 1f7aa8e257ef4fd1d97ee602a4e0f3f878d8c1b6
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329377"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568068"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
@@ -58,8 +58,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 9. Określ nazwę konta usługi, które ma być używane (np. *usługa_MIM*), hasło konta usługi (np. <em>Pass@word1</em>), domenę konta usługi (np. *contoso*) i konto e-mail usługi (np. *contoso*).
     >[!NOTE]
-Program MIM 2016 SP2 i nowsze: Jeśli używasz kont usług zarządzanych przez grupę, musisz upewnić się, że **$** znak jest na końcu nazwy konta usługi, np. MIMService $, i pozostaw puste pole hasła konta usługi.
-
+    >Program MIM 2016 SP2 i nowsze: Jeśli używasz kont usług zarządzanych przez grupę, musisz upewnić się, że **$** znak jest na końcu nazwy konta usługi, np. MIMService $, i pozostaw puste pole hasła konta usługi.
 
     ![Obraz przedstawiający konfigurowanie konta usługi programu MIM](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -67,7 +66,7 @@ Program MIM 2016 SP2 i nowsze: Jeśli używasz kont usług zarządzanych przez g
 
 11. Zaakceptuj wartości domyślne dla lokalizacji serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *contoso\MIMMA*.
     >[!NOTE]
-MIM 2016 SP2 i nowszych: Jeśli planujesz używać konta usługi zarządzanej przez grupę usługi synchronizacji programu MIM w programie MIM Sync, a następnie Włącz funkcję "Użyj konta synchronizacji programu MIM", wprowadź nazwę gMSA usługi synchronizacji programu MIM jako konto w programie MIM, np. *contoso\MIMSync $* .
+    >MIM 2016 SP2 i nowszych: Jeśli planujesz używać konta usługi zarządzanej przez grupę usługi synchronizacji programu MIM w programie MIM Sync, a następnie Włącz funkcję "Użyj konta synchronizacji programu MIM", wprowadź nazwę gMSA usługi synchronizacji programu MIM jako konto w programie MIM, np. *contoso\MIMSync $* .
 
     ![Obraz konfigurowania usługi i portalu programu MIM](media/install-mim-service-portal/MIM_Install13.png)
 

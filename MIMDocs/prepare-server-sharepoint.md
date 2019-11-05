@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 46320c8c2d1ae7c530c4670159e393ee1be7165c
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: 62ef8796717dbcaea18d21bc3d28248efdeef92e
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329462"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568104"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "73329462"
 > 
 
 > [!NOTE]
-Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
+> Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
 
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -50,13 +50,13 @@ Wykonaj następujące kroki, aby zainstalować program SharePoint 2016. Po zako�
     -   Przejdź do katalogu, do którego rozpakowano program SharePoint.
 
     -   Wpisz następujące polecenie.
-    ```CMD
+    ```
     .\prerequisiteinstaller.exe
     ```
 
 2.  Po zainstalowaniu wymagań wstępnych **programu SharePoint** zainstaluj **program SharePoint 2016** , wpisując następujące polecenie:
 
-    ```CMD
+    ```
     .\setup.exe
     ```
 
@@ -99,26 +99,26 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
     > Zostanie wyświetlony komunikat ostrzegawczy z informacją, że jest używana metoda uwierzytelniania Windows Classic i powrót z polecenia końcowego może potrwać kilka minut. Po ukończeniu dane wyjściowe będą wskazywać adres URL nowego portalu. Pozostaw otwarte okno **powłoki zarządzania programu SharePoint 2016** do późniejszego odwoływania się do niego.
 
 2. Uruchom powłokę zarządzania programu SharePoint 2016 i uruchom następujący skrypt programu PowerShell, aby utworzyć **kolekcję witryn programu SharePoint** skojarzoną z daną aplikacją sieci Web.
-   ```PowerShell
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-   ```
-   > [!NOTE]
-   > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to "15". Jeśli wynik jest inny niż "15", kolekcja witryn nie została utworzona w odpowiedniej wersji środowiska; Usuń kolekcję witryn i utwórz ją ponownie.
+    ```
+    > [!NOTE]
+    > Sprawdź, czy wynik zmiennej *CompatibilityLevel* to "15". Jeśli wynik jest inny niż "15", kolekcja witryn nie została utworzona w odpowiedniej wersji środowiska; Usuń kolekcję witryn i utwórz ją ponownie.
 
     > [!IMPORTANT]
-Program SharePoint Server 2019 używa innej właściwości aplikacji sieci Web, aby zachować listę zablokowanych rozszerzeń plików. Dlatego w celu odblokowania. Pliki ASHX używane przez portal programu MIM trzy dodatkowe polecenia muszą zostać wykonane ręcznie z poziomu powłoki zarządzania programu SharePoint.
-<br/>
+    > Program SharePoint Server 2019 używa innej właściwości aplikacji sieci Web, aby zachować listę zablokowanych rozszerzeń plików. Dlatego w celu odblokowania. Pliki ASHX używane przez portal programu MIM trzy dodatkowe polecenia muszą zostać wykonane ręcznie z poziomu powłoki zarządzania programu SharePoint.
+    <br/>
     **Wykonaj kolejne trzy polecenia tylko dla programu SharePoint 2019:**
 
-   ```PowerShell
+    ```PowerShell
     $w.BlockedASPNetExtensions.Remove("ashx")
     $w.Update()
     $w.BlockedASPNetExtensions
-   ```
+    ```
    > [!NOTE]
    > Upewnij się, że lista *BlockedASPNetExtensions* nie zawiera rozszerzenia ASHX, w przeciwnym razie kilka stron portalu programu MIM nie zostanie prawidłowo renderowane.
 

@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 0a8fd7fb4d36beffde86b020522ccd52287b5806
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: b9bc580710a13b3a0868b0580d55469a753e7f33
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329267"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568095"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
@@ -74,9 +74,9 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
    3. Domena konta usługi lub nazwa komputera lokalnego: *contoso*
 
     >[!NOTE]
-Program MIM 2016 SP2 i nowsze: dla kont usług zarządzanych przez grupę upewnij się, że **$** znak znajduje się na końcu nazwy konta usługi, np. MIMSync $, i pozostaw pole hasła puste.
+    >Program MIM 2016 SP2 i nowsze: dla kont usług zarządzanych przez grupę upewnij się, że **$** znak znajduje się na końcu nazwy konta usługi, np. MIMSync $, i pozostaw pole hasła puste.
 
-   ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
+    ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
 
 8. W instalatorze usługi synchronizacji programu MIM określ następujące grupy zabezpieczeń:
 

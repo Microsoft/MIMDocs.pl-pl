@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 66011b135d575ce09d916be7c528accb230b343b
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329424"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568031"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
 
@@ -26,7 +26,7 @@ ms.locfileid: "73329424"
 > 
 
 > [!NOTE]
-Procedura instalacji systemu Windows Server 2019 nie różni się od procedury instalacji systemu Windows Server 2016.
+> Procedura instalacji systemu Windows Server 2019 nie różni się od procedury instalacji systemu Windows Server 2016.
 
 
 > [!NOTE]
@@ -89,8 +89,6 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 5. Kliknij przycisk **OK**, aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
 
 6.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmów dostępu do tego komputera z sieci**, a następnie wybierz polecenie **Właściwości**. >
-
-[!NOTE] Rozdzielenie serwerów ról spowoduje przerwanie niektórych funkcji, takich jak SSPR.
 
 7. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 

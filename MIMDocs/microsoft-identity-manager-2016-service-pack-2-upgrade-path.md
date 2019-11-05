@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 35c4dc2aa3c933a729d3503527eca03c68bf02b5
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.openlocfilehash: bdf34be4841b1a911fdb61673e5a3855e66e7320
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73383961"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568060"
 ---
 # <a name="mim-2016-sp2-upgrade--from-forefront-identity--or-microsoft-identity-manager"></a>Uaktualnienie programu MIM 2016 SP2 z tożsamości Forefront lub Microsoft Identity Manager
 
@@ -30,7 +30,7 @@ Dostępnych jest kilka opcji uaktualniania. Jeśli korzystasz już z programu MI
 ## <a name="upgrade-from-fim-2010-r2-sp1-or-later-fim-builds"></a>Uaktualnianie z programu FIM 2010 R2 z dodatkiem SP1 lub nowsze kompilacje FIM
 
 > [!NOTE]
-Minimalna obsługiwana wersja programu Forefront Identity Manager, która może zostać uaktualniona bezpośrednio do programu MIM 2016 SP2, to FIM 2010 R2 SP1 (kompilacja 4.1.3419.0). Bezpośrednie uaktualnienie do programu MIM 2016 SP2 z wcześniejszych wersji programu FIM nie jest obsługiwane. Jeśli korzystasz z kompilacji programu FIM wcześniej niż 4.1.3419.0, musisz przeprowadzić uaktualnienie do wersji FIM 2010 R2 SP1 przed uaktualnieniem do programu MIM 2016 SP2.
+> Minimalna obsługiwana wersja programu Forefront Identity Manager, która może zostać uaktualniona bezpośrednio do programu MIM 2016 SP2, to FIM 2010 R2 SP1 (kompilacja 4.1.3419.0). Bezpośrednie uaktualnienie do programu MIM 2016 SP2 z wcześniejszych wersji programu FIM nie jest obsługiwane. Jeśli korzystasz z kompilacji programu FIM wcześniej niż 4.1.3419.0, musisz przeprowadzić uaktualnienie do wersji FIM 2010 R2 SP1 przed uaktualnieniem do programu MIM 2016 SP2.
 
 1. **Opcja 1: Pełna instalacja przy użyciu istniejących baz danych**
     1. Utwórz kopię zapasową baz danych FIMSynchronizationService i usługi FIMService.
@@ -69,6 +69,6 @@ Minimalna obsługiwana wersja programu Forefront Identity Manager, która może 
     1. Uaktualnij Dodatki programu MIM 2016 i klientów resetowania hasła, podaj nową nazwę serwera usługi MIM, Jeśli zmieniono nazwę serwera usługi programu MIM.
 
 > [!NOTE]
-Aktualizacje pakietów językowych po zainstalowaniu programu MIM 2016 SP2 będą dystrybuowane jako poprawki (pliki msp), eliminując konieczność odinstalowywania/ponownego instalowania pakietów językowych.
+> Aktualizacje pakietów językowych po zainstalowaniu programu MIM 2016 SP2 będą dystrybuowane jako poprawki (pliki msp), eliminując konieczność odinstalowywania/ponownego instalowania pakietów językowych.
 
 Więcej szczegółowych informacji na temat procedur uaktualniania i tworzenia baz danych można znaleźć w artykule [uaktualnienie do programu fim 2010 R2](https://docs.microsoft.com/previous-versions/mim/jj134291%28v%3dws.10%29) , który ma zastosowanie do dowolnego procesu uaktualniania usługi FIM lub MIM.
