@@ -25,7 +25,7 @@ ms.locfileid: "73568068"
 > [Bazy danych synchronizacji »](install-mim-sync-ad-service.md)
  
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — <strong>Pass@word1</strong>
@@ -50,7 +50,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
     ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Na stronie **Konfigurowanie połączenia z serwerem poczty**wprowadź nazwę serwera Exchange Server jako **serwer poczty** lub Użyj **skrzynki pocztowej usługi O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Next** (Dalej).
+7. Na stronie **Konfigurowanie połączenia z serwerem poczty**wprowadź nazwę serwera Exchange Server jako **serwer poczty** lub Użyj **skrzynki pocztowej usługi O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
 
     ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/install-mim-service-portal/MIM_Install11.png)
 
@@ -110,7 +110,7 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i Połącz się z portalem programu MIM na *http://mim.contoso.com/identitymanagement* . Należy zauważyć, że podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na *http://mim.contoso.com/identitymanagement* . Należy zauważyć, że podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
     - W razie potrzeby należy uwierzytelnić się jako *contoso\miminstall* w programie Internet Explorer.
 
 2. W programie Internet Explorer otwórz okno **Opcje internetowe**, wyświetl kartę **Zabezpieczenia** i dodaj witrynę do strefy **Lokalny intranet**, jeśli nie została jeszcze tam dodana.  Zamknij okno dialogowe **Opcje internetowe**.

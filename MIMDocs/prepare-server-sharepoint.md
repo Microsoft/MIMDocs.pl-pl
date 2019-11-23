@@ -29,7 +29,7 @@ ms.locfileid: "73568104"
 > Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
