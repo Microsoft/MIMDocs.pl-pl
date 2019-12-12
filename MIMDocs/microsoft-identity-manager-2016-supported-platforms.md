@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
 ms.openlocfilehash: f69566c9d6abc6b7c54cc875a958b66a112c3111
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73329353"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
@@ -55,6 +55,6 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | **Zarządzanie certyfikatami programu MIM** (klient zbiorczy) | Windows | Windows 7 |
 | **Zarządzanie certyfikatami programu MIM** (karta inteligentna oparta na kontrolce ActiveX klienta) | Windows | Windows 7 <br/> Windows 8 <br/> Windows 8.1 <br/> 10 systemu Windows |
 | **Pakiet BHOLD MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Baza danych BHOLD | SQL Server 2008 R2 z dodatkiem SP3 (NR)<br/>SQL Server 2012 z dodatkiem SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 z dodatkiem SP2 * |
+| | Baza danych BHOLD | SQL Server 2008 R2 z dodatkiem SP3 (NR)<br/>SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 z dodatkiem SP2 * |
 | | Serwer poczty (opcjonalnie) | Exchange Server 2010 z dodatkiem SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016* |
 | | Przeglądarka sieci Web | Przeglądarki obsługiwane przez program Internet Explorer z technologią Silverlight |

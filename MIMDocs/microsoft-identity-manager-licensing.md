@@ -12,10 +12,10 @@ ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
 ms.openlocfilehash: e0bfd868345b8e7dcc6a02e745d3ccbf632a6c58
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73329280"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016 Licencjonowanie i pobieranie
@@ -24,13 +24,13 @@ W tym artykule opisano podejścia do licencjonowania Microsoft Identity Manager 
 
 ## <a name="licensing-mim-for-your-organization"></a>Licencjonowanie programu MIM dla Twojej organizacji
 
-Microsoft Identity Manager 2016 jest licencjonowana na poszczególnych użytkowników.  Szczegółowe informacje na temat licencjonowania znajdują się w tematach dotyczących produktów i powiązane dokumenty, które można pobrać ze strony [postanowienia licencyjne](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
+Program Microsoft Identity Manager 2016 jest licencjonowany na użytkownika.  Szczegółowe informacje na temat licencjonowania znajdują się w tematach dotyczących produktów i powiązane dokumenty, które można pobrać ze strony [postanowienia licencyjne](https://www.microsoft.com/licensing/product-licensing/products.aspx) .
 
 ### <a name="licensing-for-azure-ad-premium-customers"></a>Licencjonowanie dla Azure AD — wersja Premium klientów
 
 Microsoft Identity Manager 2016 jest dołączony do Azure Active Directory — wersja Premium (P1 i P2), który jest częścią Enterprise Mobility + Security.
 
-Azure AD — wersja Premium jest dostępna za pomocą usługi [Microsoft Umowa Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), [programu licencjonowania zbiorowego Open](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)i programu [dostawców rozwiązań w chmurze](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Subskrybenci platformy Azure i pakietu Office 365 mogą również kupować Azure Active Directory — wersja Premium P1 i P2 w trybie online.  Więcej informacji można znaleźć pod adresem [Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD — wersja Premium jest dostępna za pomocą usługi [Microsoft Umowa Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), [programu licencjonowania zbiorowego Open](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)i programu [dostawców rozwiązań w chmurze](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Subskrybenci platformy Azure i usługi Office 365 mogą również kupić usługę Active Directory w wersjach Premium P1 i P2 w trybie online.  Więcej informacji można znaleźć pod adresem [Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>Licencje CAL programu MIM
 

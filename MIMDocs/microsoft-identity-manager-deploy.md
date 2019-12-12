@@ -12,10 +12,10 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
-ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73329440"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Wdrażanie Microsoft Identity Manager 2016 z dodatkiem SP2
@@ -39,9 +39,9 @@ Po utworzeniu i skonfigurowaniu domeny należy przygotować firmowy serwer zarz�
 Aby uzyskać więcej informacji na temat obsługiwanych platform, zobacz [obsługiwane platformy dla programu MIM 2016 lub nowszego](microsoft-identity-manager-2016-supported-platforms.md)
 
  Obejmuje to konfigurowanie następujących składników:
-- [System Windows Server](prepare-server-ws2016.md)
+- [Windows Server](prepare-server-ws2016.md)
 - [Program SQL Server](prepare-server-sql2016.md)
-- [Serwer programu SharePoint](prepare-server-sharepoint.md)
+- [SharePoint Server](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcjonalnie)
 
 ## <a name="finally-install-microsoft-identity-manager-2016-sp2-components"></a>Na koniec: Zainstaluj składniki Microsoft Identity Manager 2016 SP2
