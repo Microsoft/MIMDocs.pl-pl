@@ -12,15 +12,15 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8ff9edce6da865418e300095ff0827853a35d4eb
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358350"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517215"
 ---
-# <a name="mim-certificate-manager-windows-store-application-deployment"></a>Windows Menedżer certyfikatów programu MIM przechowywania wdrożenia aplikacji
+# <a name="mim-certificate-manager-windows-store-application-deployment"></a>Wdrożenie aplikacji ze sklepu Windows Menedżera certyfikatów programu MIM
 
-Po skonfigurowaniu i uruchomieniu za mają programu MIM 2016 i Menedżera certyfikatów można wdrożyć aplikację ze Sklepu Windows Menedżer certyfikatów programu MIM. Aplikacji magazynu systemu windows zezwala użytkownikom na zarządzanie ich fizycznymi kartami inteligentnymi wirtualne karty inteligentne i certyfikaty oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
+Po zakończeniu działania programu MIM 2016 i Menedżera certyfikatów można wdrożyć aplikację Windows Store Menedżera certyfikatów programu MIM. Aplikacja ze sklepu Windows umożliwia użytkownikom zarządzanie swoimi fizycznymi kartami inteligentnymi, wirtualnymi kartami inteligentnymi i certyfikatami oprogramowania. Wdrażanie aplikacji Menedżer certyfikatów programu MIM obejmuje następujące czynności:
 
 1. Utworzenie szablonu certyfikatu.
 
@@ -34,11 +34,11 @@ Po skonfigurowaniu i uruchomieniu za mają programu MIM 2016 i Menedżera certyf
 
 Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w normalny sposób. Jednak w tym przypadku musisz upewnić się, że szablon certyfikatu jest w wersji 3 lub nowszej.
 
-1. Zaloguj się do serwera z uruchomionymi usługami AD CS (serwera certyfikatów).
+1. Zaloguj się na serwerze, na którym są uruchomione usługi AD CS (serwer certyfikatów).
 
 2. Otwórz program MMC.
 
-3. Kliknij przycisk **pliku &gt; Dodaj/Usuń przystawkę**.
+3. Kliknij pozycję **plik &gt; Dodaj/Usuń przystawkę**.
 
 4. Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
 
@@ -46,10 +46,10 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 6. Kliknij prawym przyciskiem myszy szablon **Logowanie karty inteligentnej**, a następnie kliknij polecenie **Duplikuj szablon**.
 
-7. Na karcie zgodność w obszarze urząd certyfikacji wybierz system Windows Server 2008. W obszarze odbiorca certyfikatu wybierz pozycję Windows 8.1 / Windows Server 2012 R2. Wersja szablonu wersji jest ustawiana po raz pierwszy utworzyć i zapisać szablon certyfikatu. Jeśli nie utworzono szablonu certyfikatu w ten sposób nie istnieje żaden sposób modyfikować go odpowiednio do poprawnej wersji.
+7. Na karcie Zgodność w obszarze urząd certyfikacji wybierz pozycję Windows Server 2008. W obszarze odbiorca certyfikatu wybierz pozycję Windows 8.1/Windows Server 2012 R2. Wersja szablonu wersji jest ustawiana podczas pierwszego tworzenia i zapisywania szablonu certyfikatu. Jeśli szablon certyfikatu nie został utworzony w ten sposób, nie ma możliwości zmodyfikowania go do odpowiedniej wersji.
 
    > [!NOTE]
-   >  Ten krok jest niezwykle istotne, ponieważ daje to pewność, że masz wersję szablonu certyfikatu 3 (lub nowszej). Tylko szablonów w wersji 3 pracy z aplikacją Menedżer certyfikatów.
+   >  Ten krok jest decydujący, ponieważ sprawdza, czy istnieje szablon certyfikatu w wersji 3 (lub nowszej). Tylko szablony wersji 3 współpracują z aplikacją Menedżer certyfikatów.
 
 8. Na karcie **Ogólne** w polu **Nazwa wyświetlana** wpisz nazwę, która ma być wyświetlana w interfejsie użytkownika aplikacji, taką jak **Logowanie wirtualnej karty inteligentnej**.
 
@@ -66,7 +66,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 13. Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**.
 
-14. W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)**, a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
+14. W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)** , a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
 
 15. Kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, a następnie kliknij pozycje **Nowy &gt; Szablon certyfikatu do wystawienia**.
 
@@ -78,7 +78,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-2.  Przejdź do pozycji Administracja &gt; Zarządzaj szablonami profilów. Upewnij się, że pole jest zaznaczone pole wyboru obok pozycji **MIM CM przykładowy karty inteligentnej dziennik w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
+2.  Przejdź do pozycji Administracja &gt; Zarządzanie szablonami profilów. Upewnij się, że pole jest zaznaczone obok **Zarządzanie certyfikatami w usłudze MIM Przykładowy dziennik kart inteligentnych w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
 
 3.  Wpisz nazwę szablonu profilu, a następnie kliknij przycisk **OK**.
 
@@ -96,11 +96,11 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 10. W lewym okienku kliknij pozycje **Odnów zasady &gt; Zmień ustawienia ogólne**. Wybierz pozycję **Użyj karty ponownie przy odnawianiu** i kliknij przycisk **OK**.
 
-11. Musisz wyłączyć pozycje zbierania danych dla każdej zasady, klikając zasady w okienku po lewej stronie. Następnie należy zaznacz pole wyboru obok pozycji **element danych przykładowych** kliknij **Usuń elementy kolekcji danych** a następnie kliknij przycisk **OK**.
+11. Musisz wyłączyć elementy kolekcji danych dla każdej zasady, klikając zasady w okienku po lewej stronie. Następnie należy zaznaczyć pole wyboru obok **pozycji element danych przykładowych** kliknij pozycję **Usuń elementy kolekcji danych** , a następnie kliknij przycisk **OK**.
 
 ## <a name="prepare-the-cm-app-for-deployment"></a>Przygotowywanie aplikacji Menedżer certyfikatów do wdrożenia
 
-1. W wierszu polecenia Uruchom następujące polecenie, aby rozpakować aplikację. Polecenie wyodrębnić zawartość do nowego podfolderu o nazwie appx, a następnie utworzyć kopię, tak aby nie modyfikować oryginalnego pliku.
+1. W wierszu polecenia Uruchom następujące polecenie, aby rozpakować aplikację. Polecenie wyodrębni zawartość do nowego podfolderu o nazwie appx i utworzy kopię, aby nie modyfikować oryginalnego pliku.
 
     ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
@@ -116,7 +116,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
    |                     |                                                                                                                                                                                                          |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |      MIMCM URL      |                                              Nazwa FQDN portalu, w którym skonfigurowano Menedżera certyfikatów. Na przykład https://mimcmServerAddress/certificatemanagement                                              |
-   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład <https://adfsServerSame/adfs> </br> Jeśli usługi AD FS nie jest używany, należy skonfigurować to ustawienie z pustym ciągiem.  Na przykład  ```<ADFS URL=""/>``` |
+   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład <https://adfsServerSame/adfs> </br> Jeśli usługi ADFS nie są używane, należy skonfigurować to ustawienie za pomocą pustego ciągu.  Na przykład ```<ADFS URL=""/>``` |
    |     PrivacyUrl      |                                         Możesz podać adres URL strony sieci Web z informacjami o tym, co się dzieje z danymi użytkowników zebranymi na potrzeby rejestracji certyfikatu.                                          |
    |     SupportMail     |                                                                           Możesz podać adres e-mail pomocy technicznej.                                                                           |
    | LobComplianceEnable |                                                                     Możesz ustawić wartość true lub false. Domyślnie jest ustawiona wartość true.                                                                      |
@@ -124,7 +124,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
    |      NonAdmin       |           Możesz ustawić wartość true lub false. Domyślnie jest ustawiona wartość false. To ustawienie należy modyfikować tylko wtedy, gdy użytkownicy niebędący administratorami na swoich komputerach mają mieć możliwość rejestrowania i odnawiania certyfikatów.            |
 
    > [!IMPORTANT]
-   > Należy określić wartość dla adresu URL usług AD FS. Jeśli nie określono wartości nowoczesnych aplikacji spowoduje błąd na pierwsze użycie.
+   > Należy określić wartość dla adresu URL usług ADFS. Jeśli nie określono żadnej wartości, aplikacja Modern spowoduje błąd podczas pierwszego użycia.
 4. Zapisz plik i zamknij edytor.
 
 5. Podpisanie pakietu powoduje utworzenie pliku podpisywania, więc musisz usunąć oryginalny plik podpisywania o nazwie AppxSignature.p7x.
@@ -256,7 +256,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
     - Parametr serverFQDN określa tylko pełną nazwę komputera serwera Menedżera certyfikatów programu MIM.
 
-    - Aby uzyskać pomoc dotyczącą **ConfigureMIimCMClientAndRelyingParty.ps1** uruchomienia skryptu: </br> 
+    - Aby uzyskać pomoc dotyczącą skryptu **ConfigureMIimCMClientAndRelyingParty. ps1** , uruchom polecenie: </br> 
       ```Powershell
       get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
       ```
@@ -265,7 +265,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp_&lt;wersja&gt;_AnyCPU_Test.zip z Centrum pobierania i wyodrębnij całą jego zawartość. Instalatorem jest plik appx. Możesz wdrożyć aplikację tak jak zwykle wdrażasz aplikacje ze Sklepu Windows przy użyciu programu [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) lub usługi [Intune](https://technet.microsoft.com/library/dn613839.aspx) w celu lokalnego pobrania aplikacji, aby użytkownicy musieli uzyskiwać do niej dostęp za pośrednictwem Portalu firmy. W przeciwnym razie zawartość zostanie wypchnięta bezpośrednio na maszyny użytkowników.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
-- [Szablony profilu konfiguracji](https://technet.microsoft.com/library/cc708656)
+- [Konfigurowanie szablonów profilów](https://technet.microsoft.com/library/cc708656)
 - [Zarządzanie aplikacjami karty inteligentnej](https://technet.microsoft.com/library/cc708681)

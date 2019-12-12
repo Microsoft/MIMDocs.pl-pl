@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2b5340ef3f98ba94904e595c3526d09bdac3f95f
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379926"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518493"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
@@ -59,7 +59,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
 7. Ustaw wartość *PAMSRV* jako adres serwera usługi programu MIM.
 
-8. Ustaw *http://pamsrv.priv.contoso.local:82* programu SharePoint adres URL zbioru witryn.
+8. Ustaw *http://pamsrv.priv.contoso.local:82* jako adres URL zbioru witryn programu SharePoint.
 
 9. Pozostaw puste pole adresu URL portalu rejestracji.
 
@@ -100,7 +100,7 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
-2. Uruchom program Internet Explorer i połączyć się z portalem programu MIM na http://pamsrv.priv.contoso.local:82/identitymanagement. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
+2. Uruchom program Internet Explorer i Połącz się z portalem programu MIM na http://pamsrv.priv.contoso.local:82/identitymanagement. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
 
 3. W razie potrzeby zaloguj się w programie Internet Explorer jako PRIV\Administrator.
 
@@ -143,7 +143,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Skonfiguruj przykładową aplikację internetową pod kątem przekierowywania użytkowników do interfejsu API REST usługi PAM programu MIM. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. W sekcji **<system.webServer>** dodaj następujące wiersze:
+4. Skonfiguruj przykładową aplikację internetową pod kątem przekierowywania użytkowników do interfejsu API REST usługi PAM programu MIM. Za pomocą edytora tekstów, takiego jak Notatnik, edytuj plik **C:\Program Files\Microsoft Forefront Identity Manager\2010\privileged Access Access Management REST API\web.config**. W sekcji **< System. WebServer >** Dodaj następujące wiersze:
 
    ```XML
    <httpProtocol>
@@ -155,7 +155,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    </httpProtocol>
    ```
 
-5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** do *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** na *http://pamsrv.priv.contoso.local:8086/api/pamresources/* .
 
 6. Uruchom ponownie usługę IIS przy użyciu następującego polecenia, aby te zmiany zaczęły obowiązywać.
 
@@ -163,7 +163,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    iisreset
    ```
 
-7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, uwierzytelnianie, w razie potrzeby i upewnij się, że odbywa się dostępny do pobrania.
+7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci Web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, Uwierzytelnij w razie potrzeby i upewnij się, że występuje pobieranie.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
 

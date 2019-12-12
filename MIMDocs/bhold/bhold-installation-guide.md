@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: 4c4bc7aa42cd5984c838abdd302490355ddcb4ea
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68238902"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Przewodnik instalacji programu Microsoft pakietu BHOLD Suite SP1 (6,0)
@@ -99,7 +99,7 @@ System Windows można skonfigurować do pobierania certyfikatów głównych od f
 
 ![PAKIETU BHOLD instalacji usług IIS](media/bhold-installation-guide/iis-install-bhold.png)
 
-W przypadku instalowania programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016 strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost. config znajdującego się ```C:\Windows\System32\inetsrv\config```w temacie. W sekcji Dodaj ```preCondition="bitness64``` do wpisu, który rozpoczyna się ```<add name="SPNativeRequestModule"``` w następujący sposób: ```<globalModules>```
+W przypadku instalowania programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016 strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost. config znajdującego się w ```C:\Windows\System32\inetsrv\config```. W sekcji ```<globalModules>``` Dodaj ```preCondition="bitness64``` do pozycji rozpoczynającej się ```<add name="SPNativeRequestModule"``` tak, aby odczytał się w następujący sposób:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 

@@ -8,10 +8,10 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701295"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Rejestrowanie dynamiczne usługi MIM z dodatkiem SP1 (4.4.1436.0)
@@ -49,7 +49,7 @@ Aby wyświetlić ślad, można użyć [narzędzia Podgląd śledzenia usług](ht
 
  ![Zrzut ekranu narzędzia do przeglądania danych śledzenia usług](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Dostępności Kompiluj 4.5. x. x lub nowszy
+# <a name="updates-build-45xx-or-greater"></a>Aktualizacje: kompilacja 4.5. x. x lub większa
 
 W kompilacji 4.5. x. x Zaktualizowaliśmy funkcję rejestrowania, aby określić domyślny poziom rejestrowania to **"Warning" (ostrzeżenie**). Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" są dodawane przed rozszerzeniem). Pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy plik przekracza maksymalny rozmiar, Usługa uruchamia zapis w innym pliku. Jeśli istnieje inny plik, zostanie on nadpisany. Domyślny maksymalny rozmiar pliku to 1 GB. Aby zmienić domyślny maksymalny rozmiar, należy dodać parametr **"maxOutputFileSizeKB"** z wartością maksymalnego rozmiaru pliku w kilobajtach do odbiornika (Zobacz przykład poniżej) i ponownie uruchomić usługę programu MIM. Gdy usługa zostanie uruchomiona, dołącza dzienniki w nowszej pliku (w przypadku przekroczenia limitu miejsca zastępuje najstarszy plik). 
 

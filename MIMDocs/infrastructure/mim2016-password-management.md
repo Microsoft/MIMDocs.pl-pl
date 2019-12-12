@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380196"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516580"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
 
@@ -45,7 +45,7 @@ Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym 
 
 | Zarządzanie hasłami jest obsługiwane domyślnie w ramach agentów zarządzania na potrzeby: | Dzięki użyciu rozszerzenia haseł zarządzanie hasłami jest również obsługiwane w ramach agentów zarządzania dla następujących zasobów: |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Active Directory                                                          | Pliki tekstowe z parami atrybut-wartość                                                                    |
+| Usługi domenowe                                                          | Pliki tekstowe z parami atrybut-wartość                                                                    |
 | Usługi LDS Active Directory (ADLDS)                   | Rozdzielane pliki tekstowe                                                                               |
 | IBM Directory Server                                                      | Directory Services Markup Language (DSML)                                                          |
 | Lotus Notes                                                               | Extensible Connectivity                                                                            |
@@ -67,7 +67,7 @@ Usługa PCNS jest uruchamiana na każdym kontrolerze domeny usługi Active Direc
 
 Składniki biorące udział w procesie synchronizacji haseł to:
 
--   **Usługa powiadamiania o zmianie hasła (Pcnssvc.exe)**— usługa powiadamiania o zmianie hasła jest uruchamiana na kontrolerze domeny i jest odpowiedzialna za odbieranie powiadomień o zmianie haseł z lokalnego filtru haseł, kolejkowanie tych powiadomień na potrzeby docelowego serwera z uruchomionym programem MIM oraz używanie usługi RPC do dostarczania powiadomień. Usługa szyfruje hasło i zapewnia, że hasło pozostanie bezpieczne, dopóki nie zostanie pomyślnie dostarczone na serwer docelowy, na którym działa program MIM.
+-   **Usługa powiadamiania o zmianie hasła (Pcnssvc.exe)** — usługa powiadamiania o zmianie hasła jest uruchamiana na kontrolerze domeny i jest odpowiedzialna za odbieranie powiadomień o zmianie haseł z lokalnego filtru haseł, kolejkowanie tych powiadomień na potrzeby docelowego serwera z uruchomionym programem MIM oraz używanie usługi RPC do dostarczania powiadomień. Usługa szyfruje hasło i zapewnia, że hasło pozostanie bezpieczne, dopóki nie zostanie pomyślnie dostarczone na serwer docelowy, na którym działa program MIM.
 
 -   **Nazwa jednostki usługi (SPN, Service Principal Name)** — nazwa SPN to właściwość w ramach obiektu konta w usłudze Active Directory, która jest używana przez protokół Kerberos do wzajemnego uwierzytelnienia usługi PCNS i elementu docelowego. Nazwa SPN służy do zapewnienia, że usługa PCNS jest uwierzytelniana na odpowiednim serwerze, na którym działa program MIM, a żadna inna usługa nie będzie otrzymywać powiadomień o zmianie haseł. Nazwa SPN jest tworzona i przypisywana za pomocą narzędzia setspn.exe. Aby uzyskać więcej informacji o konfigurowaniu nazwy SPN, zobacz Using Password Synchronization (Korzystanie z synchronizacji haseł).
 
@@ -109,7 +109,7 @@ Aby uzyskać więcej informacji na temat konfigurowania synchronizacji haseł, z
 
 Proces synchronizacji żądania zmiany hasła pochodzącego z kontrolera domeny usługi Active Directory z innymi połączonymi źródłami danych przedstawiono na poniższym diagramie:
 
-1.  Użytkownik inicjuje żądanie zmiany hasła, naciskając klawisze Ctrl+Alt+Del. Żądanie zmiany hasła wraz z nowym hasłem jest wysyłane do najbliższego kontrolera domeny.
+1.  Użytkownik inicjuje żądanie zmiany hasła przez naciśnięcie klawiszy Ctrl + Alt + Del. Żądanie zmiany hasła, łącznie z nowym hasłem, jest wysyłane do najbliższego kontrolera domeny.
 
 2.  Kontroler domeny rejestruje żądanie zmiany hasła i wysyła powiadomienie do filtru powiadamiania o zmianie hasła (Pcnsflt.dll).
 
@@ -148,7 +148,7 @@ Idealna sytuacja ma miejsce, gdy użytkownik zmieni hasło, a zmiana zostanie zs
 
 Niektóre błędy są na tyle poważne, że żadna liczba ponownych prób nie spowoduje pomyślnego uruchomienia operacji. W takich przypadkach zostanie zarejestrowane zdarzenie błędu, a proces zostanie zatrzymany. Następujące zdarzenia nie są ponawiane:
 
-| Zdarzenie | Ważność    | Opis                                                                                                                                                            |
+| Zdarzenie | Ważność    | Description                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informacje | Operacja ustawienia synchronizacji haseł nie została wykonana, ponieważ sygnatura czasowa jest nieaktualna.                                                                      |
 | 6921  | Error       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest włączone dla docelowego agenta zarządzania.                                |

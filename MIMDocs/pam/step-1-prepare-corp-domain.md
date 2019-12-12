@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379994"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518181"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
@@ -35,7 +35,7 @@ Niniejsza sekcja opisuje sposób skonfigurowania kontrolera domeny dla domeny CO
 
 Zainstaluj system Windows Server 2012 R2 lub Windows Server 2016 Technical Preview 4 (lub nowszy) na maszynie wirtualnej, aby utworzyć komputer o nazwie *CORPDC*.
 
-1. Wybierz **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64** lub **Windows Server 2016 Technical Preview (serwer ze środowiskiem pulpitu)**.
+1. Wybierz **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64** lub **Windows Server 2016 Technical Preview (serwer ze środowiskiem pulpitu)** .
 
 2. Przeczytaj i zaakceptuj postanowienia licencyjne.
 
@@ -66,13 +66,13 @@ W tej sekcji dodasz role usług domenowych Active Directory (AD DS), serwera DNS
 
    Spowoduje to wyświetlenie monitu o podanie hasła administratora trybu awaryjnego. Należy pamiętać, że pojawią się komunikaty ostrzegawcze dotyczące delegowania DNS i ustawień kryptograficznych. Jest to normalne zachowanie.
 
-3. Wyloguj się po utworzeniu lasu. Serwer zostanie automatycznie uruchomiony ponownie.
+3. Po zakończeniu tworzenia lasu Wyloguj się. Serwer zostanie automatycznie uruchomiony ponownie.
 
 4. Po ponownym uruchomieniu serwera zaloguj się do komputera CORPDC jako administrator domeny. Zazwyczaj jest to użytkownik CONTOSO\\Administrator, który korzysta z hasła utworzonego podczas instalacji systemu Windows na komputerze CORPDC.
 
 ### <a name="create-a-group"></a>Tworzenie grupy
 
-Utwórz grupę na potrzeby inspekcji przy użyciu usługi Active Directory, jeśli grupa jeszcze nie istnieje. Nazwa grupy musi być nazwą NetBIOS domeny z trzema znakami dolara, np. *CONTOSO$$$*.
+Utwórz grupę na potrzeby inspekcji przy użyciu usługi Active Directory, jeśli grupa jeszcze nie istnieje. Nazwa grupy musi być nazwą NetBIOS domeny z trzema znakami dolara, np. *CONTOSO$$$* .
 
 Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i wykonaj następujące czynności:
 

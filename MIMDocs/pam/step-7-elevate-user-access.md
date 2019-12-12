@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.openlocfilehash: d00eaa284f1d54a1cbe2e0f8b936bbc41c19caea
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379623"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517853"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
@@ -36,10 +36,10 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 ## <a name="request-privileged-access-from-mim"></a>Zażądaj uprzywilejowanego dostępu z programu MIM.
 
 > [!NOTE]
-> Zaleca się, że stacja robocza był workstation(PAW) uprzywilejowanych.  Aby uzyskać więcej informacji, zobacz [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+> Zaleca się, aby stacja robocza była uprzywilejowaną stacją roboczą (dostępem UPRZYWILEJOWANYM).  Aby uzyskać więcej informacji, zobacz [dostępem uprzywilejowanym](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
 
-1. Na PRIVWKSTN należy zalogować się jako PRIV\priv.jen.
-2. Kliknij przycisk **Start**, **Uruchom**, a następnie wprowadź **PowerShell.exe**.
+1. W witrynie PRIVWKSTN Zaloguj się jako PRIV\priv.jen.
+2. Kliknij przycisk **Start**, **Uruchom**polecenie i wprowadź **PowerShell. exe**.
 3. Wpisz następujące polecenie.
 
     ```cmd
@@ -90,7 +90,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
     ```
 
 3. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno przeglądarki sieci Web.
-4. Przejdź do http://pamsrv.priv.contoso.local:8090 i upewnij się, że strony sieci web z przykładowego portalu jest widoczna.
+4. Przejdź do http://pamsrv.priv.contoso.local:8090 i upewnij się, że strona sieci Web z przykładowego portalu jest widoczna.
 5. W programie Internet Explorer wybierz kolejno pozycje **Narzędzia** > **Opcje internetowe** i kliknij kartę **Zabezpieczenia**.
 6. Kliknij kolejno pozycje **Lokalna strefa intranetowa** > **Witryny** > **Zaawansowane**, a następnie dodaj witrynę sieci Web do strefy.
 7. Zamknij okno dialogowe **Opcje internetowe**.

@@ -12,11 +12,11 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379771"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518261"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
@@ -75,7 +75,7 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 3. Kliknij prawym przyciskiem myszy domenę **contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
 4. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
 5. W oknie Wybieranie: Użytkownicy, komputery lub grupy kliknij pozycję **Lokalizacje**, a następnie zmień lokalizację na *priv.contoso.local*.  W polu nazwy obiektu wpisz *Administratorzy domeny*, a następnie kliknij pozycję **Sprawdź nazwy**. Po wyświetleniu okienka wyskakującego wprowadź nazwę użytkownika *priv\administrator* i hasło tego użytkownika.  
-6. Po łańcuchu Administratorzy domeny dodaj wpis „*; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
+6. Po łańcuchu Administratorzy domeny dodaj wpis „ *; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
 7. Na liście typowych zadań wybierz pozycję **Odczytywanie wszystkich informacji o użytkowniku**, kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
 8. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 

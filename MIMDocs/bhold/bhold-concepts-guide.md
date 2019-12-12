@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701422"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Przewodnik dotyczący pojęć związanych z pakietem Microsoft pakietu BHOLD Suite
@@ -48,7 +48,7 @@ Dodatkową zaletą RBAC jest możliwość definiowania i wymuszania rozdzielania
 Dzięki pakietowi pakietu BHOLD można określić i zorganizować role w organizacji, zamapować użytkowników na role i zmapować odpowiednie uprawnienia do ról. Ta struktura jest nazywana modelem roli i zawiera i łączy pięć typów obiektów: 
 
 - Jednostki organizacyjne
-- Użytkownicy
+- Users
 - Role
 - Uprawnienia
 - Aplikacje
@@ -74,7 +74,7 @@ W tym przykładzie każdy podmiot sprzedaży będzie należał do dwóch jednost
 
 OrgUnits można utworzyć w pakietu BHOLD Suite przy użyciu głównego portalu sieci Web pakietu BHOLD lub przy użyciu generatora modelu pakietu BHOLD.
 
-#### <a name="users"></a>Użytkownicy
+#### <a name="users"></a>Users
 
 Jak wspomniano powyżej, każdy użytkownik musi należeć do co najmniej jednej jednostki organizacyjnej (OrgUnit). Ponieważ jednostki organizacyjne są głównym mechanizmem kojarzenia użytkownika z rolami, w większości organizacji dany użytkownik należy do wielu OrgUnits, aby ułatwić skojarzenie ról z tym użytkownikiem. Jednak w niektórych przypadkach może być konieczne skojarzenie roli z użytkownikiem niezależnie od dowolnych OrgUnits, do których należy użytkownik. W związku z tym użytkownik może być przypisany bezpośrednio do roli, a także do uzyskiwania ról z OrgUnits, do którego należy użytkownik.
 
@@ -137,14 +137,14 @@ Po utworzeniu przez generator modelu ról w modelu roli można wyeksportować mo
 
 Poprzednie sekcje opisują podstawowe funkcje kontroli dostępu opartej na rolach (RBAC) w pakietu BHOLD. W tej sekcji opisano dodatkowe funkcje w pakietu BHOLD, które mogą zapewnić zwiększone zabezpieczenia i elastyczność implementacji RBAC w organizacji. Ta sekcja zawiera przegląd następujących funkcji pakietu BHOLD:
 
-- Kardynalności
-- Rozdzielenie obowiązków
+- Kardynalność
+- Podział obowiązków
 - Uprawnienia z możliwością dostosowania kontekstu
 - Autoryzacja oparta na atrybutach
 - Elastyczne typy atrybutów
 
 
-#### <a name="cardinality"></a>Kardynalności
+#### <a name="cardinality"></a>Kardynalność
 
 *Kardynalność* odnosi się do implementacji reguł biznesowych, które zostały zaprojektowane w celu ograniczenia liczby przypadków, w których dwie jednostki mogą być ze sobą powiązane. W przypadku pakietu BHOLD można ustalić reguły kardynalności dla ról, uprawnień i użytkowników.
 
@@ -164,7 +164,7 @@ Można skonfigurować użytkownika tak, aby ograniczyć następujące czynności
 - Maksymalna liczba ról, które mogą być połączone z użytkownikiem
 - Maksymalna liczba uprawnień, które mogą być przypisane do użytkownika za pomocą przypisań ról
 
-#### <a name="separation-of-duties"></a>Rozdzielenie obowiązków
+#### <a name="separation-of-duties"></a>Podział obowiązków
 
 Rozdzielenie obowiązków (SoD) jest zasadą biznesową, która dąży do uniemożliwienia jednostkom wykonywania działań, które nie powinny być dostępne dla jednej osoby. Na przykład pracownik nie powinien w stanie zażądać płatności i autoryzować płatności. Zasada SoD umożliwia organizacjom wdrożenie systemu kontroli i bilansów w celu zminimalizowania ryzyka związanego z błędem pracownika lub ich niepowodzeniem.
 
@@ -214,7 +214,7 @@ Portal pakietu BHOLD Analytics umożliwia konstruowanie zestawów reguł składa
 
 Reguła może przetestować jeden z następujących zestawów elementów:
 
-- Użytkownicy
+- Users
 - Jednostki organizacyjne
 - Role
 - Uprawnienia
@@ -225,7 +225,7 @@ Na poniższym diagramie przedstawiono prostą regułę składającą się z dwó
 
 ![](media/bhold-concepts-guide/rules.png)
 
-Zwróć uwagę na różnice w efekcie niepowodzenia filtru podzbioru i niepowodzenia filtru reguł: Niepowodzenie filtru podzestawu powoduje usunięcie obiektu elementu z testów przez kolejne filtry, podczas gdy filtr reguły powoduje niezgodność obiektu. Tylko te obiekty, które przechodzą wszystkie filtry podzestawów i wszystkie filtry reguł są zgłaszane jako zgodne.
+Zwróć uwagę na różnice wynikające z niepowodzenia filtru podzbioru i niepowodzenia filtru reguł: niepowodzenie filtru podzestawu powoduje usunięcie obiektu elementu z testów przez kolejne filtry, podczas gdy filtr reguły powoduje niezgodność obiektu. Tylko te obiekty, które przechodzą wszystkie filtry podzestawów i wszystkie filtry reguł są zgłaszane jako zgodne.
 
 Każdy filtr składa się z typu, operatora (który jest zależny od typu), klucza (jednego z elementów) i wartości, względem których klucz jest testowany przez operatora. Na przykład następujący filtr przetestuje, czy liczba użytkowników w podzbiorze elementów przekracza 10:
 
@@ -233,7 +233,7 @@ Każdy filtr składa się z typu, operatora (który jest zależny od typu), kluc
 |   |   |   |   |   |
 |---|---|---|---|---|
 |**Typ:**   | Liczba   |
-| **Głównych**  | Użytkownicy  |
+| **Głównych**  | Users  |
 | **Operator**  | >  |
 | **Wartość:** | 10 |
 
@@ -242,7 +242,7 @@ Filtry reguł mogą mieć trzy typy i używać operatorów specyficznych dla ich
 - Atrybut
   - < i >
   - = i! =
-  - **Wyświetlana**
+  - **Contains**
   - **Nie zawiera**
 - Liczba
   - < i >
@@ -261,7 +261,7 @@ Na przykład jeśli chcesz przetestować implementację zasad podziału obowiąz
 |   |  |
 |---|--|
 |Nazwa:| Test SoD płatności|
-|Postaci| Użytkownicy|
+|Postaci| Users|
 |Filtr podzestawu:| Posiadanie każdej płatności żądania uprawnień|
 |Filtr reguł: | Nie może mieć żadnych płatności zatwierdzania uprawnień|
 
@@ -277,7 +277,7 @@ Na przykład jeśli zasady biznesowe wymagają od menedżerów posiadania uprawn
 |  |  |
 |--|--|
 |Nazwa: | Modyfikowanie testu SoD płatności|
-|Postaci | Użytkownicy |
+|Postaci | Users |
 |Filtr podzestawu: | Posiadanie dowolnego menedżera ról|
 | Filtry reguł: |Musi mieć uprawnienia Modyfikuj płatność </br> Musi mieć zatwierdzenie zgody|
 
@@ -288,7 +288,7 @@ W przeciwieństwie do innych operatorów, **wyłączny jest dowolny** i **wyłą
 |  |  |
 |--|--|
 |Nazwa: | Przejrzyj test zatwierdzania|
-|Postaci | Użytkownicy|
+|Postaci | Users|
 | Filtr podzestawu: | Posiadanie dowolnego menedżera ról
 |Filtr reguł: | Dowolna zgoda na zatwierdzenie ma wyłącznie uprawnienia|
 
@@ -312,7 +312,7 @@ Kategorie objęte wbudowanymi raportami obejmują następujące elementy:
 - Kontrolki
 - Access Control do wewnątrz
 - Rejestrowanie
-- Modelowanie
+- Model
 - Statystyki
 - Przepływ pracy
 

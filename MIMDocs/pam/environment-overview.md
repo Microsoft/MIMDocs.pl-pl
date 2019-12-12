@@ -12,11 +12,11 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6f4b6e224b6b50bf2190688a994f35159d273713
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379502"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518565"
 ---
 # <a name="environment-overview"></a>Omówienie środowiska
 
@@ -24,14 +24,14 @@ Usługa Privileged Access Management działa na maszynach wirtualnych z oddzieln
 
 ![Serwery PAM: relacje i obsługiwane platformy — diagram](media/pam-test-lab-architecture.png)
 
-Należy co najmniej trzech maszyn wirtualnych.  Jeśli nie masz jeszcze domeny usługi AD dla funkcji PAM służący do zarządzania, konieczne będzie jedna dodatkowa maszyna wirtualna działa jako kontroler domeny CORP.  Jeśli chcesz skonfigurować oprogramowanie PRIV w celu zapewnienia wysokiej dostępności, należy się dwie dodatkowe maszyny wirtualne.
+Wymagana jest co najmniej trzy maszyny wirtualne.  Jeśli nie masz jeszcze domeny usługi AD do zarządzania usługą PAM, musisz mieć jedną dodatkową maszynę wirtualną, która będzie działać jako kontroler domeny CORP.  Jeśli chcesz skonfigurować oprogramowanie PRIV pod kątem wysokiej dostępności, potrzebujesz dwóch dodatkowych maszyn wirtualnych.
 
-Dysków, w którym będą przechowywane obrazy dysków maszyny Wirtualnej należy co najmniej 120 GB wolnego miejsca na dysku.  Jeśli planujesz przeprowadzić wdrożenie w celu uzyskania wysokiej dostępności, upewnij się, że podsystem dysku spełnia wymagania udostępnionego magazynu SQL.  Magazyn udostępniony mogą stanowić dyski klastra trybu failover systemu Windows Server, dyski w sieci SAN lub udziały plików na serwerze SMB.
+Dyski, na których będą przechowywane obrazy dysków maszyny wirtualnej, wymagają co najmniej 120 GB wolnego miejsca na dysku.  Jeśli planujesz przeprowadzić wdrożenie w celu uzyskania wysokiej dostępności, upewnij się, że podsystem dysku spełnia wymagania udostępnionego magazynu SQL.  Magazyn udostępniony mogą stanowić dyski klastra trybu failover systemu Windows Server, dyski w sieci SAN lub udziały plików na serwerze SMB.
 
 > [!IMPORTANT]
-> Magazyn musi zostać przeznaczona dla środowiska bastionu. Udostępnianie magazynu z innymi obciążeniami poza środowisko bastionu nie jest zalecane, ponieważ może zagrozić integralności środowiska bastionu.
+> Magazyn musi być dedykowany dla środowiska bastionu. Nie zaleca się udostępniania magazynu z innymi obciążeniami poza środowiskiem bastionu, ponieważ może to spowodować zagrożenie integralności środowiska bastionu.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
-- [Privileged Access Management dla usług domenowych w usłudze Active Directory](privileged-identity-management-for-active-directory-domain-services.md) zawiera omówienie usługi PAM i sposób jej działania.
-- [Opis składników funkcji PAM](principles-of-operation.md) zawiera omówienie różnych składników funkcji PAM.
+- [Privileged Access Management dla Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) to Omówienie usługi Pam i sposobu jej działania.
+- [Zrozumienie składników usługi PAM](principles-of-operation.md) to omówienie różnych składników usługi PAM.

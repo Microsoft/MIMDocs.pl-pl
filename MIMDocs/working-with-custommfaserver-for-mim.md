@@ -1,6 +1,6 @@
 ---
-title: Użyj alternatywnego dostawcy usługi Multi-Factor Authentication za pośrednictwem interfejsu API do aktywacji usługi PAM lub w scenariuszu samoobsługowego resetowania HASEŁ | Dokumentacja firmy Microsoft
-description: Ustawienie interfejsu API usługi Custom uwierzytelnianie wieloskładnikowe jako drugą warstwę zabezpieczeń, gdy użytkownicy aktywują role w ramach Privileged Access Management i używać samoobsługowego resetowania hasła.
+title: Użyj alternatywnego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API w celu aktywowania usługi PAM lub w scenariuszu SSPR | Microsoft Docs
+description: Skonfiguruj niestandardowy interfejs API usługi MFA jako drugą warstwę zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management i korzystają z funkcji samoobsługowego resetowania hasła.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,50 +10,50 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690743"
 ---
-# <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Użyj niestandardowego dostawcę uwierzytelniania Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli funkcji PAM lub funkcji samoobsługowego resetowania haseł
+# <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Używanie niestandardowego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli PAM lub w SSPR
 
-Klienci usługi Azure AD Premium lub usługi Azure MFA można zintegrować usługę Azure MFA w przypadku dwóch scenariuszy programu MIM — Privileged Access Management (PAM) aktywacji roli i funkcji samoobsługowego resetowania haseł (SSPR).
+Klienci Azure AD — wersja Premium lub Azure MFA mogą zintegrować usługę Azure MFA w dwóch scenariuszach programu MIM — aktywacja roli Privileged Access Management (PAM) i samoobsługowego resetowania hasła (SSPR).
 
-Klienci programu MIM są dwie opcje dodatkowe:
+Klienci programu MIM mają dwie dodatkowe opcje:
 
- - Użyj niestandardowego jeden haseł dostawcę, który ma zastosowanie tylko w scenariuszu samoobsługowego resetowania HASEŁ programu MIM i udokumentowane w przewodniku, aby [Konfigurowanie samoobsługowego resetowania z hasła, za pomocą brama SMS portalu OTP](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
- - Użyj dostawcy telefonii niestandardowe uwierzytelnianie wieloskładnikowe. Ta opcja ma zastosowanie w scenariuszach samoobsługowego resetowania HASEŁ programu MIM i PAM, opisane w tym artykule
+ - Użyj niestandardowego dostawcy dostarczania jednorazowych haseł, który jest stosowany tylko w scenariuszu programu MIM SSPR i udokumentowany w przewodniku [konfigurowania funkcji samoobsługowego resetowania haseł za pomocą bramy SMS OTP](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - Użyj niestandardowego dostawcy usługi telefonii usługi uwierzytelniania wieloskładnikowego. Dotyczy to zarówno scenariuszy SSPR i PAM programu MIM, opisanych w tym artykule.
 
-W tym artykule opisano sposób używania programu MIM z dostawcą uwierzytelnianie wieloskładnikowe niestandardowe, za pośrednictwem interfejsu API i integracji zestawu SDK opracowanych przez klienta.  
+W tym artykule opisano sposób korzystania z programu MIM z niestandardowym dostawcą usługi uwierzytelniania wieloskładnikowego za pośrednictwem interfejsu API i zestawu integracyjnego integracji opracowanego przez klienta.  
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby można było używać niestandardowego interfejsu API dostawcy usługi Multi-Factor Authentication z programem MIM, potrzebne są:
+Aby można było używać niestandardowego interfejsu API dostawcy Multi-Factor Authentication z programem MIM, potrzebne są:
 
 - Numery telefonów wszystkich użytkowników kandydujących
-- Poprawka programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowsze wersje — zobacz [historię wersji](reference/version-history.md) zapowiedzi
-- Usługa MIM skonfigurowane dla funkcji samoobsługowego resetowania HASEŁ lub usługi PAM
+- Poprawka programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowsza — zobacz [historię wersji](reference/version-history.md) dla anonsów
+- Usługa MIM skonfigurowana dla SSPR lub PAM
 
-## <a name="approach-using-custom-multi-factor-authentication-code"></a>Podejście przy użyciu kodu niestandardowe uwierzytelnianie wieloskładnikowe
+## <a name="approach-using-custom-multi-factor-authentication-code"></a>Podejście przy użyciu niestandardowego kodu uwierzytelniania wieloskładnikowego
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Krok 1: Upewnij się, usługa MIM jest w wersji 4.5.202.0 lub nowszej
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Krok 1. upewnienie się, że usługa MIM jest w wersji 4.5.202.0 lub nowszej
 
-Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowszej.
+Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowszą wersję.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Krok 2: Tworzy bibliotekę DLL, która implementuje interfejs IPhoneServiceProvider
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Krok 2. Tworzenie biblioteki DLL implementującej interfejs IPhoneServiceProvider
 
 Biblioteka DLL musi zawierać klasę, która implementuje trzy metody:
 
-- `InitiateCall`: Usługa MIM spowoduje wywołanie tej metody. Usługa przekazuje identyfikator telefonu numer i żądania jako parametry.  Metoda musi zwracać `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
-- `GetCallStatus`: Jeśli podczas wcześniejszego wywołania `initiateCall` zwrócił `Pending`, usługa MIM spowoduje wywołanie tej metody. Ta metoda zwraca też wartość `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
-- `GetFailureMessage`: Jeśli poprzednie wywołanie `InitiateCall` lub `GetCallStatus` zwrócił `Failed`, usługa MIM spowoduje wywołanie tej metody. Ta metoda zwraca komunikat diagnostyczny.
+- `InitiateCall`: usługa MIM wywoła tę metodę. Usługa przekazuje numer telefonu i identyfikator żądania jako parametry.  Metoda musi zwracać `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
+- `GetCallStatus`: Jeśli starsze wywołanie `initiateCall` zwróciło `Pending`, usługa MIM wywoła tę metodę. Ta metoda zwraca również wartość `PhoneCallStatus` `Pending`, `Success` lub `Failed`.
+- `GetFailureMessage`: Jeśli poprzednie wywołanie `InitiateCall` lub `GetCallStatus` zwróciło `Failed`, usługa MIM wywoła tę metodę. Ta metoda zwraca komunikat diagnostyczny.
 
-Implementacje tych metod musi zapewniać bezpieczeństwo wątkowe, a ponadto wykonania `GetCallStatus` i `GetFailureMessage` nie należy zakładać, będzie można wywołać w tym samym wątku, jak podczas wcześniejszego wywołania `InitiateCall`.
+Implementacje tych metod muszą być bezpieczne wątkowo, a ponadto implementacja `GetCallStatus` i `GetFailureMessage` nie może przyjąć, że zostaną wywołane przez ten sam wątek, który jest wcześniejszym wywołaniem do `InitiateCall`.
 
-Biblioteki DLL w Store `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` katalogu.
+Zapisz bibliotekę DLL w katalogu `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\`.
 
-Przykładowy kod, który może być skompilowany przy użyciu programu Visual Studio 2010 lub nowszej.
+Przykładowy kod, który można skompilować przy użyciu programu Visual Studio 2010 lub nowszego.
 
 ```csharp
 using System;
@@ -135,27 +135,27 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Krok 3: Kopia zapasowa MfaSettings.xml znajduje się w "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Krok 3. Tworzenie kopii zapasowej pliku pliku mfasettings. XML znajdującego się w folderze "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-4-edit-the-mfasettingsxml-file"></a>Krok 4. Edytuj plik MfaSettings.xml
+### <a name="step-4-edit-the-mfasettingsxml-file"></a>Krok 4: edytowanie pliku pliku mfasettings. XML
 
-Zaktualizuj lub usuń następujące wiersze:
+Zaktualizuj lub wyczyść następujące wiersze:
 
-- Usuń/wyczyść wszystkie wiersze z pozycji konfiguracji 
+- Usuń/Wyczyść wszystkie wiersze wpisów konfiguracji 
 
-- Zaktualizuj lub Dodaj następujące wiersze do następującego MfaSettings.xml z dostawcą telefon niestandardowy <br>
+- Zaktualizuj lub Dodaj następujące wiersze do pliku pliku mfasettings. XML z niestandardowym dostawcą telefonu <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
 
-### <a name="step-5-restart-mim-service"></a>Krok 5. Uruchom ponownie usługę programu MIM
+### <a name="step-5-restart-mim-service"></a>Krok 5. ponowne uruchomienie usługi MIM
 
-Po ponownym uruchomieniu usługi użyj funkcji samoobsługowego resetowania HASEŁ i/lub PAM do weryfikacji funkcjonalności za pomocą niestandardowego dostawcy tożsamości.
+Po ponownym uruchomieniu usługi należy użyć SSPR i/lub PAM do zweryfikowania funkcjonalności z niestandardowym dostawcą tożsamości.
 
 > [!NOTE] 
-> Aby przywrócić ustawienia Zamień MfaSettings.xml pliku kopii zapasowej utworzonego w kroku 3
+> Aby przywrócić ustawienie Zamień pliku mfasettings. XML na plik kopii zapasowej w kroku 3
 
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wprowadzenie do usługi Azure Multi-Factor Authentication](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [Co to jest uwierzytelnianie wieloskładnikowe systemu Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Historia wersji programu MIM](./reference/version-history.md)

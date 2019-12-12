@@ -12,11 +12,11 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380021"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518582"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
 
@@ -24,11 +24,11 @@ Za pomocą funkcji Privileged Access Management (PAM) można przypisać użytkow
 
 Najprostszym sposobem definiowania ról funkcji Privileged Access Management jest skompilowanie wszystkich informacji w arkuszu kalkulacyjnym. Utwórz listę ról i użyj kolumn do określenia wymagań i uprawnień ładu.
 
-Wymagania ładu różnią się w zależności od istniejącej tożsamości i zasad dostępu lub wymagań dotyczących zgodności. Parametry, aby zidentyfikować dla każdej roli mogą być następujące:
+Wymagania dotyczące ładu różnią się w zależności od istniejących zasad dotyczących tożsamości i dostępu lub wymagań dotyczących zgodności. Parametry do identyfikacji dla każdej roli mogą obejmować:
 
 - Właściciel roli.
-- Użytkowników kandydujących, którzy mogą znajdować się w tej roli
-- Formanty uwierzytelniania, zatwierdzania lub powiadamiania, które powinny być skojarzone z użyciem roli.
+- Użytkownicy kandydująci, którzy mogą znajdować się w tej roli
+- Kontrolki uwierzytelnianie, zatwierdzenie lub powiadomienia, które powinny być skojarzone z użyciem roli.
 
 Uprawnienia roli są zależne od zarządzanych aplikacji. W tym artykule jako przykładowa aplikacja jest używana usługa Active Directory, w której uprawnienia dzielą się na dwie kategorie:
 
@@ -42,9 +42,9 @@ Rozpocznij od zidentyfikowania wszystkich ról, które mają być zarządzane za
 
 Aby znaleźć odpowiednie role, rozważ każdą aplikację w zakresie zarządzania:
 
-- Aplikacja w [warstwy 0, 1 czy 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Czy aplikacja znajduje się w [warstwie 0, warstwa 1 czy 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
 - Jakie uprawnienia wpływają na poufność, integralność lub dostępność aplikacji?
-- Czy aplikacja ma zależności od innych składników systemu Na przykład czy ma zależności od bazy danych, sieci, zabezpieczeń infrastruktury wirtualizacji lub hostingu platformy?
+- Czy aplikacja ma zależności od innych składników systemu? Na przykład czy ma zależności od baz danych, sieci, infrastruktury zabezpieczeń, wirtualizacji czy platformy hostingu?
 
 Określ sposób grupowania tych zagadnień dotyczących aplikacji. Wymagane są role, które mają wyraźne granice i dają tylko wystarczające uprawnienia do wykonywania typowych zadań administracyjnych w aplikacji.
 
@@ -84,15 +84,15 @@ Po zidentyfikowaniu ról kandydujących rozpocznij wypełnianie arkusza kalkulac
 
 ## <a name="select-an-access-method"></a>Wybieranie metody dostępu
 
-Może istnieć wiele ról w systemie zarządzania dostępem uprzywilejowanym przy użyciu tych samych uprawnień przypisanych do nich. Może to nastąpić, jeśli różne społeczności użytkowników mają wymagania ładu dotyczące dostępu distinct. Na przykład organizacja może zastosować inne zasady dla swoich pełnoetatowych pracowników, a inne dla zewnętrznych pracowników IT z innej organizacji.
+W systemie zarządzania dostępem uprzywilejowanym może istnieć wiele ról z tymi samymi przypisanymi uprawnieniami. Taka sytuacja może wystąpić, jeśli różne społeczności użytkowników mają różne wymagania dotyczące zarządzania dostępem. Na przykład organizacja może zastosować inne zasady dla swoich pełnoetatowych pracowników, a inne dla zewnętrznych pracowników IT z innej organizacji.
 
-W niektórych przypadkach użytkownik może zostać trwale przypisany do roli. W takim przypadku nie ma potrzeby żądać lub aktywować przypisania roli. Przykłady scenariuszy stałych przypisań obejmują:
+W niektórych przypadkach użytkownik może zostać trwale przypisany do roli. W takim przypadku nie muszą żądać ani aktywować przypisania roli. Przykłady scenariuszy stałych przypisań obejmują:
 
 - Zarządzane konto usługi w istniejącym lesie.
 
-- Konto użytkownika w istniejącym lesie z poświadczeniami zarządzanymi poza funkcją PAM. Może to być konto "break szkła". Konto awaryjne, że wymagane rolę takich jak "domeny / kontrolera domeny konserwacji" do rozwiązywania problemów, takich jak zaufania i kontroler domeny kondycji problemów. Jako konto awaryjne miałby roli trwale przypisane z fizycznie zabezpieczonym hasłem)
+- Konto użytkownika w istniejącym lesie z poświadczeniami zarządzanymi poza usługą PAM. Może to być konto "ze szlifem". Aby rozwiązać problemy, takie jak problemy związane z zaufaniem i kondycją kontrolera domeny, może być konieczne posiadanie roli na koncie ze szkła awaryjnego. Jako szkło konto może mieć trwale przypisaną rolę z bezpiecznym hasłem.
 
-- Konto użytkownika w lesie administracyjnym, który jest uwierzytelniany przy użyciu hasła. Może to być, użytkownik musi mieć uprawnienia administracyjne w 24 x 7 trwałe i loguje się z urządzenia, które nie obsługuje silnego uwierzytelniania.
+- Konto użytkownika w lesie administracyjnym, który jest uwierzytelniany przy użyciu hasła. Może to być — użytkownik, który potrzebuje trwałych uprawnień administracyjnych 24x7 i loguje się z urządzenia, które nie może obsługiwać silnego uwierzytelniania.
 
 - Konto użytkownika w lesie administracyjnym z kartą inteligentną lub wirtualną kartą inteligentną (na przykład konto z kartą inteligentną w trybie offline potrzebną do rzadkich zadań konserwacji).
 
@@ -100,7 +100,7 @@ W przypadku organizacji niepokojących się o potencjalną kradzież poświadcze
 
 ## <a name="delegate-active-directory-permissions"></a>Delegowanie uprawnień usługi Active Directory
 
-System Windows Server podczas tworzenia nowych domen automatycznie tworzy grupy domyślne, takie jak „Administratorzy domeny”. Te grupy ułatwiają rozpoczęcie pracy i mogą być przydatne dla mniejszych organizacji. Większe organizacje lub organizacje, które wymagają większej izolacji uprawnień administracyjnych, powinny opróżnić grupy, te i zastąpić je grupami, które zapewniają szczegółowe uprawnienia.
+System Windows Server podczas tworzenia nowych domen automatycznie tworzy grupy domyślne, takie jak „Administratorzy domeny”. Te grupy ułatwiają rozpoczęcie pracy i mogą być przydatne dla mniejszych organizacji. W przypadku większych organizacji lub tych, które wymagają większej izolacji uprawnień administracyjnych, należy opróżnić te grupy i zastąpić je grupami, które zapewniają szczegółowe uprawnienia.
 
 Jednym z ograniczeń grupy Administratorzy domeny jest to, że jej członkami nie mogą być osoby z domeny zewnętrznej. Innym ograniczeniem jest to, że przyznaje ona uprawnienia do trzech osobnych funkcji:
 
@@ -108,15 +108,15 @@ Jednym z ograniczeń grupy Administratorzy domeny jest to, że jej członkami ni
 - Zarządzanie danymi przechowywanymi w usłudze Active Directory
 - Umożliwianie zdalnego logowania do komputerów przyłączonych do domeny
 
-Zamiast domyślnych grup, takich jak Administratorzy domeny należy utworzyć nowe grupy zabezpieczeń, które zapewniają tylko wymagane uprawnienia. Następnie należy użyć programu MIM do dynamicznego udostępniania kont administratorów z tym członkostwem w grupach.
+Zamiast grup domyślnych, takich jak Administratorzy domeny, Utwórz nowe grupy zabezpieczeń, które udostępniają tylko niezbędne uprawnienia. Następnie należy użyć programu MIM do dynamicznego dostarczania kont administratorów do tych członkostw w grupie.
 
 ### <a name="service-management-permissions"></a>Uprawnienia zarządzania usługami
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania usługą AD.
 
-| Rola | Opis |
+| Role | Description |
 | ---- | ---- |
-| Konserwacja domeny/kontrolera domeny | Członkostwo w grupie DOMENA\Administratorzy umożliwia rozwiązywania problemów i zmieniania systemu operacyjnego kontrolera domeny. Operacje, takie jak podwyższania poziomu nowego kontrolera domeny do istniejącej domeny w lesie oraz delegowania ról usługi AD.
+| Konserwacja domeny/kontrolera domeny | Członkostwo w grupie Domena\administratorzy umożliwia rozwiązywanie problemów i zmienianie systemu operacyjnego kontrolera domeny. Operacje, takie jak podwyższanie poziomu nowego kontrolera domeny do istniejącej domeny w lesie i delegowanie roli usługi AD.
 |Zarządzanie wirtualnymi kontrolerami domeny | Zarządzanie maszynami wirtualnymi kontrolerów domeny za pomocą oprogramowania do zarządzania wirtualizacją. To uprawnienie można przyznać za pośrednictwem pełnej kontroli nad wszystkimi maszynami wirtualnymi w narzędziu do zarządzania lub funkcji kontroli dostępu na podstawie ról. |
 | Rozszerzanie schematu | Zarządzanie schematem, w tym dodawanie nowych definicji obiektów, zmienianie uprawnień do obiektów schematu i zmienianie domyślnych uprawnień schematu dla typów obiektów. |
 | Tworzenie kopii zapasowej bazy danych usługi Active Directory | Wykonywanie kopii zapasowej całej bazy danych usługi Active Directory, w tym wszystkich kluczy tajnych powierzonych kontrolerowi domeny i domenie. |
@@ -128,9 +128,9 @@ W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do 
 
 ### <a name="data-management-permissions"></a>Uprawnienia zarządzania danymi
 
-Poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania lub korzystanie z danych przechowywanych w usłudze AD.
+W poniższej tabeli przedstawiono przykłady uprawnień, które mają zastosowanie w przypadku ról do zarządzania danymi przechowywanymi w usłudze AD lub korzystania z nich.
 
-| Rola | Opis |
+| Role | Description |
 | ---- | ---- |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 1                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 1 w usłudze Active Directory. |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 2                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 2 w usłudze Active Directory. |
@@ -144,7 +144,7 @@ Poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do r�
 
 ## <a name="example-role-definitions"></a>Przykładowe definicje ról
 
-Wybór definicji ról zależy od warstwy serwerów zarządzanych. To również zależy od wyboru zarządzanych aplikacji. Aplikacje takie jak Exchange lub strona trzecia produktami w przedsiębiorstwie, takich jak SAP, często będą miały własne dodatkowe definicje ról na potrzeby administracji delegowanej.
+Wybór definicji ról zależy od warstwy zarządzanych serwerów. Zależy to również od wyboru zarządzanych aplikacji. Aplikacje, takie jak program Exchange lub produkty korporacyjne innych firm, takie jak SAP, często korzystają z własnych dodatkowych definicji ról do administracji delegowanej.
 
 W poniższych sekcjach znajdują się przykłady dla typowych scenariuszy przedsiębiorstwa.
 
@@ -205,7 +205,7 @@ Role dla użytkowników innych niż użytkownicy administracyjni i role na potrz
 - Administratorzy grup zabezpieczeń
 - Pomoc techniczna dla stacji roboczych na miejscu
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
-- [Zabezpieczanie dostępu uprzywilejowanego — materiały referencyjne](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Zabezpieczanie uprzywilejowanego dostępu do materiału referencyjnego](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
 - [Używanie usługi Azure MFA do aktywacji](use-azure-mfa-for-activation.md)

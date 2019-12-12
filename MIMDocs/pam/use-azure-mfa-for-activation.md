@@ -11,15 +11,15 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690781"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
-> Ze względu na ogłoszenie wycofywania z usługi Azure Multi-Factor Authentication uwierzytelnianie Software Development Kit. Zestaw SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów do dnia wycofania 14 listopada 2018 r. Nowych klientów i obecni klienci nie będzie można już pobrać zestaw SDK, za pośrednictwem klasycznego portalu Azure. Możesz pobrać będzie konieczne skontaktowanie się z obsługą klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA. <br> Zespół projektowy Microsoft pracuje nad zmiany MFA dzięki integracji z zestawem SDK serwera MFA.  Będzie uwzględniane w nadchodzącej poprawce zobacz [historię wersji](../reference/version-history.md) zapowiedzi. 
+> Z powodu powiadomienia o zaniechaniu korzystania z platformy Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów aż do daty wycofania 14 listopada 2018. Nowi klienci i obecni klienci nie będą mogli pobrać zestawu SDK już za pośrednictwem klasycznego portalu Azure. Aby pobrać pakiet poświadczeń usługi MFA, należy skontaktować się z działem pomocy technicznej platformy Azure. <br> Zespół programistyczny firmy Microsoft pracuje nad zmianami w usłudze MFA poprzez integrację z zestawem SDK serwera MFA.  Ten element zostanie uwzględniony w nadchodzącej wersji poprawki. w tym celu zobacz [historię](../reference/version-history.md) poprawek dla anonsów. 
 
 
 Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania użytkowników, którzy zażądali aktywowania roli. Możliwości implementowane przez działanie autoryzacji funkcji PAM to:
@@ -29,11 +29,11 @@ Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania uż
 
 Jeśli żadne sprawdzanie nie jest włączone, rola będzie automatycznie aktywowana dla użytkowników kandydujących.
 
-Microsoft Azure Multi-Factor Authentication (MFA) jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw. W przypadku scenariusza funkcji PAM usługi Azure MFA zapewnia dodatkowy mechanizm uwierzytelniania. Usługa Azure MFA może służyć do autoryzacji, niezależnie od tego, w jaki sposób użytkownik uwierzytelniony do domeny Windows PRIV.
+Microsoft Azure Multi-Factor Authentication (MFA) jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw. W przypadku scenariusza PAM usługa Azure MFA zapewnia dodatkowy mechanizm uwierzytelniania. Usługi Azure MFA można używać do autoryzacji, niezależnie od sposobu uwierzytelniania użytkownika w domenie PRIV systemu Windows.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby można było używać usługi Azure MFA z programem MIM, potrzebne są:
+Aby można było korzystać z usługi Azure MFA z programem MIM, potrzebne są:
 
 - Dostęp do Internetu z każdej usługi MIM udostępniającej funkcję PAM na potrzeby kontaktowania się z usługą Azure MFA
 - Subskrypcja platformy Azure
@@ -42,13 +42,13 @@ Aby można było używać usługi Azure MFA z programem MIM, potrzebne są:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Tworzenie dostawcy usługi Azure MFA
 
-W tej sekcji służy do konfigurowania dostawca usługi Azure MFA w usłudze Microsoft Azure Active Directory.  Jeśli korzystasz już z usługi Azure MFA (autonomicznej lub skonfigurowanej za pomocą usługi Azure Active Directory Premium), przejdź do następnej sekcji.
+W tej sekcji skonfigurujesz dostawcę usługi Azure MFA w Microsoft Azure Active Directory.  Jeśli już używasz usługi Azure MFA, autonomicznej lub skonfigurowanej z Azure Active Directory — wersja Premium, przejdź do następnej sekcji.
 
 1.  Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
 2.  Kliknij przycisk **Nowy** na dole po lewej stronie ekranu.
 
-3.  Kliknij pozycję **Usługi aplikacji > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
+3.  Kliknij pozycję **App Services > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
 
 4.  W polu **Nazwa** wprowadź wartość **PAM**, a w polu Model zastosowania wybierz pozycję Za każdego włączonego użytkownika. Jeśli masz już katalog usługi Azure AD, wybierz go. Na koniec kliknij pozycję **Utwórz**.
 
@@ -58,7 +58,7 @@ Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dl
 
 1. Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
-2.  Kliknij pozycję **Active Directory** w menu Portalu Azure, a następnie kliknij kartę **Dostawcy usługi MFA**.
+2.  Kliknij pozycję **Active Directory** w menu witryny Azure Portal, a następnie kliknij kartę **Dostawcy usługi MFA**.
 
 3.  Kliknij dostawcę usługi Azure MFA, który będzie używany na potrzeby funkcji PAM, a następnie kliknij pozycję **Zarządzaj**.
 
@@ -81,11 +81,11 @@ Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dl
 
 2.  Utwórz nowy folder w katalogu, w którym została zainstalowana usługa MIM, np. ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Korzystając z Eksploratora Windows przejdź do ```pf\certs``` folderu pliku ZIP pobranego w poprzedniej sekcji. Skopiuj plik ```cert\_key.p12``` do nowego katalogu.
+3.  Korzystając z Eksploratora Windows, przejdź do folderu ```pf\certs``` pliku ZIP pobranego w poprzedniej sekcji. Skopiuj plik ```cert\_key.p12``` do nowego katalogu.
 
-4.  Korzystając z Eksploratora Windows przejdź do ```pf``` folderu ZIP, a następnie otwórz plik ```pf\_auth.cs``` w edytorze tekstów, takim jak program Wordpad.
+4.  Korzystając z Eksploratora Windows, przejdź do folderu ```pf``` pliku ZIP, a następnie otwórz plik ```pf\_auth.cs``` w edytorze tekstu, takim jak program WordPad.
 
-5. Znajdź trzy następujące parametry: ```LICENSE\_KEY```, ```GROUP\_KEY```, ```CERT\_PASSWORD```.
+5. Znajdź te trzy parametry: ```LICENSE\_KEY```, ```GROUP\_KEY```, ```CERT\_PASSWORD```.
 
 ![Kopiowanie wartości z pliku pf\_auth.cs — zrzut ekranu](media/PAM-Azure-MFA-Activation-Image-2.png)
 
@@ -118,7 +118,7 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>Konfigurowanie ról funkcji PAM na potrzeby usługi Azure MFA
 
-Jeśli numery telefonów wszystkich użytkowników kandydujących do roli funkcji PAM znajdują się już w bazie danych usługi MIM, rola może zostać skonfigurowana tak, aby wymagała usługi Azure MFA. Odbywa się to przy użyciu polecenia `New-PAMRole` lub `Set-PAMRole`. Na przykład
+Jeśli numery telefonów wszystkich użytkowników kandydujących do roli funkcji PAM znajdują się już w bazie danych usługi MIM, rola może zostać skonfigurowana tak, aby wymagała usługi Azure MFA. Odbywa się to przy użyciu polecenia `New-PAMRole` lub `Set-PAMRole`. Przykład:
 
 ```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
@@ -130,9 +130,9 @@ Usługę Azure MFA można wyłączyć dla roli, określając parametr „-MFAEna
 
 Następujące zdarzenia można znaleźć w dzienniku zdarzeń funkcji PAM:
 
-| Identyfikator  | severity | Wygenerowane przez | Opis |
+| Identyfikator  | Ważność | Wygenerowane przez | Description |
 |-----|----------|--------------|-------------|
-| 101 | Błąd       | Usługa MIM            | Użytkownik nie zakończył uwierzytelniania za pomocą usługi Azure MFA (np. nie odebrał telefonu) |
+| 101 | Error       | Usługa MIM            | Użytkownik nie zakończył uwierzytelniania za pomocą usługi Azure MFA (np. nie odebrał telefonu) |
 | 103 | Informacje | Usługa MIM            | Użytkownik zakończył uwierzytelnianie za pomocą usługi Azure MFA podczas aktywacji                       |
 | 825 | Ostrzeżenie     | Usługa monitorowania funkcji PAM | Numer telefonu został zmieniony                                |
 
@@ -152,5 +152,5 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Co to jest uwierzytelnianie wieloskładnikowe systemu Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Utwórz bezpłatne konto platformy Azure już dzisiaj](https://azure.microsoft.com/free/)

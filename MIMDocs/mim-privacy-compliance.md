@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
 ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68701493"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Obsługa danych Microsoft Identity Manager 
@@ -46,8 +46,8 @@ Jeśli nie masz pewności, że źródło uprawnień można śledzić przy użyci
 - Aby przeprowadzić przegląd lub przeszukać dane obiektów użytkownika
     - Otwórz klienta usługi synchronizacji
         - Za pomocą projektanta Metaverse można zobaczyć Importy i pierwszeństwo przepływu atrybutów.
-![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Użycie wyszukiwania Metaverse umożliwia wyszukiwanie dowolnego obiektu i atrybutu w bazie danych ![MIM-privacy-compliance_2. png.](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+![MIM — Ochrona prywatności — compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
+        - Użycie wyszukiwania Metaverse umożliwia wyszukanie dowolnego obiektu i atrybutu w bazie danych ![MIM-compliance_2. PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 Po znalezieniu obiektu, kliknięcie obiektu spowoduje otwarcie strony profilu użytkownika. Szczegóły obiektu udostępniają kompleksowe szczegóły dotyczące obiektu, jego atrybutów, ostatniej modyfikacji i źródła uprawnień oraz powiązane źródło danych pochodzące z konfiguracji agenta zarządzania poniżej.
 
@@ -145,7 +145,7 @@ Usługa synchronizacji na wiele sposobów obsługi danych lub usuwania danych w 
 
 ### <a name="service-and-portal--pam"></a>Usługa i Portal/PAM
 
-Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfigurację przechowywania zasobów systemowych. Oznacza to, że usługa zostanie usunięta, nie tylko Zażądaj danych, ale również dla każdego obiektu, który musi zostać wyczyszczony z systemu. Po wystąpieniu tego procesu wszystkie dane połączone z tym obiektem zostaną usunięte. obejmuje to wszystkie dane rejestracji SSPR. Spowoduje to odtworzenie powyższej konfiguracji usuwania obiektów. Mamy jedną tabelę przechowującą identyfikator GUID obiektów. Aby zmniejszyć całkowity rozmiar tabeli w kompilacji 4.4.1459, dodaliśmy proces o nazwie FIM_DeleteExpiredSystemObjectsJob szczegóły tego procesu można znaleźć [tutaj](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
+Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfigurację przechowywania zasobów systemowych. Oznacza to, że usługa zostanie usunięta, nie tylko Zażądaj danych, ale również dla każdego obiektu, który musi zostać wyczyszczony z systemu. Po wystąpieniu tego procesu wszystkie dane połączone z tym obiektem zostaną usunięte. obejmuje to wszystkie dane rejestracji SSPR. Spowoduje to odtworzenie powyższej konfiguracji usuwania obiektów. Mamy jedną tabelę przechowującą identyfikator GUID obiektów. Aby zmniejszyć całkowity rozmiar tabeli w 4.4.1459 kompilacji, dodaliśmy proces o nazwie FIM_DeleteExpiredSystemObjectsJob szczegóły tego procesu można znaleźć [tutaj](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
 ![MIM-privacy-zgodność-srrc. Format](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
@@ -155,7 +155,7 @@ Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfiguracj�
 Pakietu BHOLD jak większość systemów podłączonych do usługi synchronizacji można skonfigurować do usuwania po usunięciu obiektu źródłowego, takiego jak HR. Ta konfiguracja jest konfigurowana w agencie zarządzania. i kontrolowane przez reguły usuwania obiektów zgodnie z opisem w obszarze funkcje usługi synchronizacji.
 
 Innym rozwiązaniem jest usunięcie obiektu użytkownika bezpośrednio z interfejsu użytkownika pakietu BHOLD Core. W zależności od konfiguracji może to potrwać, ale Uwaga logika aprowizacji może odtworzyć tego użytkownika, jeśli nie zostanie usunięty ze źródła.
-![MIM-privacy-zgodność-bholdr. Format](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+![MIM-privacy-zgodność-bholdr.](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG) PNG
 
 
 ### <a name="certificate-management"></a>Zarządzanie certyfikatami
@@ -173,11 +173,11 @@ Aby wyłączyć zbieranie danych w poprzedniej wersji, uruchom tryb zmiany i usu
 
 ![MIM-privacy-zgodność-CEIP. Format](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
-lub Edytuj rejestr i ustaw wartość na 0: Składnika Program CEIP HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
+lub Edytuj rejestr i ustaw wartość 0: (składnik) CEIP HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 
 ![MIM-privacy-zgodność-ceip2. Format](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Następne kroki 
 - [Wskazówki dotyczące prywatności związanych z programem SQL](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
 - [Sekcja Rodo portalu zaufania usługi](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
-- [Archiwum programu FIM 2010: Zwiększanie wdrożenia programu Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
+- [Archiwum programu FIM 2010: zwiększanie wdrożenia programu Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)

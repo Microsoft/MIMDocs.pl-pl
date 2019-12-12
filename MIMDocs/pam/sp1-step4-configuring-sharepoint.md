@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 422c4c973d76f5b91fb2463e237ead1984153484
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379434"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518092"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Krok 4 — Konfigurowanie programu SharePoint
 
@@ -46,7 +46,7 @@ Po zakończeniu instalacji zostanie wyświetlony graficzny interfejs użytkownik
 
 1. Na karcie **Połączenie z farmą serwerów** zmień ustawienia, aby **utworzyć nową farmę serwerów**.
 2. Określ serwer **SQLServer** jako serwer baz danych dla bazy danych konfiguracji, a konto **SharePoint ServiceAccount** jako konto dostępu do bazy danych używane przez program SharePoint.
-3. Ustaw hasło jako hasło zabezpieczeń farmy **(nie będzie ono używane później)**.
+3. Ustaw hasło jako hasło zabezpieczeń farmy **(nie będzie ono używane później)** .
 4. Zaakceptuj pozostałe domyślne ustawienia kreatora konfiguracji programu SharePoint, aby utworzyć farmę z jednym serwerem.
 
 Szczegółowe informacje można znaleźć w sekcji **Konfiguracja programu SharePoint** w artykule [Krok 3 — Przygotowanie serwera PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server). W celu ukończenia tego kroku po zakończeniu tej czynności ponownie uruchom skrypt „\PAMDeployment.ps1”, wybierając opcję menu 4 (Instalator programu SharePoint).

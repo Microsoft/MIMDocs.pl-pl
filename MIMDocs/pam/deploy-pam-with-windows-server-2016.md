@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379754"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518517"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
 
 
-W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”.  Po skonfigurowaniu tego scenariusza bilet protokołu Kerberos użytkownika zostanie ograniczony w czasie do pozostałego czasu aktywacji roli. 
+W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”.  W przypadku skonfigurowania tego scenariusza bilet protokołu Kerberos użytkownika będzie ograniczony czasowo do pozostałego czasu aktywacji roli. 
 
 > [!Note]
 > Z tą wersją programu MIM nie można używać wersji przeglądowych systemu Windows Server 2016 wcześniejszych od wersji Technical Preview 5.

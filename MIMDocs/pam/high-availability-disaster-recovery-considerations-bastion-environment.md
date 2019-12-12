@@ -12,11 +12,11 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0d0d55d4007ab88df4c2f3b5a30ca0fdedea9fe2
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379977"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518631"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu
 
@@ -40,7 +40,7 @@ Zakres uwzględnionych funkcji ma wpływ na całkowity koszt wdrożenia i obsłu
 | Migracja użytkowników i grup   | Niski | Zaczekać na przywrócenie środowiska bastionu |
 | Administracja programu MIM          | Niski | Zaczekać na przywrócenie środowiska bastionu |
 | Aktywacja ról uprzywilejowanych  | Średni | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
-| Zarządzanie zasobami         | Wysoki | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
+| Zarządzanie zasobami         | Duży | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
 | Monitorowanie użytkowników i grup w istniejącym lesie | Niski | Zaczekać na przywrócenie środowiska bastionu |
 
 Teraz omówimy kolejno poszczególne funkcje lasu bastionu.
@@ -85,7 +85,7 @@ Na potrzeby monitorowania kontrolery domen w istniejącym lesie oraz składniki 
 
 Sekcja [Omówienie środowiska](environment-overview.md) przedstawia podstawową topologię umożliwiającą zapoznanie się z technologią — nie jest ona przeznaczona do zapewniania wysokiej dostępności. W tej sekcji opisano sposób rozszerzenia tej topologii w celu zapewnienia wysokiej dostępności, zarówno w przypadku organizacji mających jedną lokację, jak i tych mających większą liczbę istniejących lokacji.
 
-### <a name="networking"></a>Obsługa sieci
+### <a name="networking"></a>Sieci
 
 Ruch sieciowy pomiędzy komputerami w środowisku bastionu powinien być oddzielony od istniejących sieci, na przykład poprzez użycie innej sieci fizycznej lub wirtualnej.  W zależności od występujących zagrożeń dla środowiska bastionu może być konieczne także zastosowanie niezależnych fizycznych połączeń pomiędzy tymi komputerami.  Niektóre technologie klastra trybu failover są związane z dodatkowymi wymaganiami dotyczącymi interfejsów sieciowych.
 
@@ -150,7 +150,7 @@ Niektóre organizacje przewidują również utworzenie środowiska bastionu odr�
 
 - W celu ochrony przed atakami pochodzącymi z istniejących domen należy oddzielić administrację środowiska bastionu od kont administracyjnych istniejącej domeny.
 - Środowisko bastionu wymaga połączenia protokołu TCP/IP z kontrolerami domeny w istniejącej domenie.  Lista portów znajduje się w artykule [Konfigurowanie zapory na potrzeby domen i zaufania](https://support.microsoft.com/kb/179442).
-- Zwirtualizowane wdrożenie Usług domenowych Active Directory wymaga określonych funkcji platformy wirtualizacji, zgodnie z opisem w artykule [Wdrażanie i konfigurowanie zwirtualizowanego kontrolera domeny](https://technet.microsoft.com/library/jj574223.aspx).
+- Zwirtualizowane wdrożenie usług Active Directory Domain Services wymaga określonych funkcji platformy wirtualizacji, zgodnie z opisem w artykule [Wdrażanie i konfigurowanie zwirtualizowanego kontrolera domeny](https://technet.microsoft.com/library/jj574223.aspx).
 - Wdrożenie z wysoką dostępnością programu SQL Server dla usługi MIM wymaga specjalnej konfiguracji magazynu, zgodnie z opisem w sekcji [Magazyn bazy danych programu SQL Server](#sql-server-database-storage) poniżej.  Nie wszyscy dostawcy hostingu mogą aktualnie oferować hosting systemu Windows Server z konfiguracjami dysków spełniającymi wymagania klastra trybu failover dla programu SQL Server.
 
 ## <a name="deployment-preparation-and-recovery-procedures"></a>Przygotowanie do wdrożenia i procedury odzyskiwania

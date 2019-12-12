@@ -1,6 +1,6 @@
 ---
-title: Instalacja integracji pakietu BHOLD FIM/programu MIM | Dokumentacja firmy Microsoft
-description: Moduł integracji pakietu BHOLD Dodaj zarządzania rolą samoobsługi do programu MIM i programu FIM
+title: PAKIETU BHOLD z instalacją integracji z programem FIM/MIM | Microsoft Docs
+description: Moduł integracji pakietu BHOLD Dodaj Samoobsługowe zarządzanie rolami do programu MIM i usługi FIM
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,215 +10,215 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 317c9ae4c940a509b6ac328cd5bb7cd7baa4dde9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358809"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516017"
 ---
-# <a name="bhold-fimmim-integration-installation"></a>Instalacja programu FIM/MIM integracji pakietu BHOLD
+# <a name="bhold-fimmim-integration-installation"></a>PAKIETU BHOLD z instalacją integracji z programem FIM/MIM
 
-Moduł integracji usługi FIM BHOLD dodano funkcję zarządzania rolą samoobsługi do Microsof programu Identity Manager, co umożliwia użytkownikom na żądanie dodatkowe role i wymuszania, które można wykonać na tych ról. Moduł integracji usługi FIM BHOLD rozszerza portalu programu FIM, aby ułatwić zarządzanie rolami użytkowników w ramach ogólnej administracji programu FIM. W tym temacie opisano, jak należy skonfigurować infrastrukturę sieci, aby umożliwić instalowanie i używanie modułu BHOLD FIM integracji. Omówiono również sposób instalowania modułu BHOLD FIM integracji oraz konfiguracji wymaganej po zainstalowaniu modułu BHOLD FIM integracji.
+Moduł integracji programu pakietu BHOLD FIM dodaje funkcję samoobsługowego zarządzania rolami do programu Microsof Identity Manager, dzięki czemu użytkownicy mogą żądać dodatkowych ról i wymuszać, kto może podejmować te role. Moduł integracji programu pakietu BHOLD FIM rozszerza Portal programu FIM, aby ułatwić zarządzanie rolami użytkowników w ramach ogólnej administracji programu FIM. W tym temacie opisano, jak należy skonfigurować infrastrukturę sieciową, aby umożliwić instalowanie i Używanie modułu integracji programu pakietu BHOLD FIM. Opisano w nim również, jak zainstalować moduł integracji i konfigurację programu pakietu BHOLD FIM, który jest wymagany po zainstalowaniu modułu integracji programu pakietu BHOLD FIM.
 
-## <a name="bhold-fim-integration-installation-requirements"></a>Wymagania dotyczące instalacji pakietu BHOLD FIM integracji
+## <a name="bhold-fim-integration-installation-requirements"></a>Wymagania dotyczące instalacji integracji z programem FIM pakietu BHOLD
 
-Moduł integracji usługi FIM pakietu BHOLD rozszerza portalu programu FIM i usługi FIM Service umożliwiającą użytkownikom zarządzanie ich ról w portalu programu FIM. Z tego powodu jest istotne, że moduł BHOLD Core i niezbędnych funkcji programu FIM należy zainstalować i skonfigurować przed zainstalowaniem modułu BHOLD FIM integracji.
-Poniżej przedstawiono składniki oprogramowania, które musi być obecny na komputerze, zanim będzie można zainstalować moduł BHOLD FIM integracji:
+Moduł integracji programu pakietu BHOLD FIM rozszerza Portal programu FIM i usługę FIM, aby umożliwić użytkownikom zarządzanie swoimi rolami w portalu programu FIM. Z tego powodu bardzo ważne jest, aby przed zainstalowaniem modułu integracji programu FIM pakietu BHOLD pakietu BHOLD rdzeń i wymagane funkcje programu FIM.
+Poniżej wymieniono składniki oprogramowania, które muszą znajdować się na komputerze, aby można było zainstalować moduł integracji programu pakietu BHOLD FIM:
 
-- Microsoft Identity Manager 2016 portalem i usługą
-- Program Microsoft Silverlight 3 lub nowszym
-- Internetowe usługi informacyjne i platformy ASP.NET
-- Narzędzia Microsoft Silverlight
+- Portal i usługa Microsoft Identity Manager 2016
+- Microsoft Silverlight 3 lub nowszy
+- Internetowe usługi informacyjne i ASP.NET
+- Microsoft Silverlight Tools
 
-Ponadto modułów BHOLD Core i dostęp do łącznika zarządzania muszą już być rozmieszczone na serwerze w środowisku i FIM musi mieć skonfigurowaną co najmniej jednego pakietu BHOLD agenta zarządzania. Aby uzyskać informacji o instalowaniu i konfigurowaniu moduł BHOLD Core, zobacz [Instalacja podstawowa pakietu BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Uzyskać informacji o instalowaniu i używaniu modułu dostępu do zarządzania łącznika, zobacz [instalacja łącznika do dostępu do zarządzania](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) i [Przewodnik po laboratorium testowym: łącznika zarządzania dostęp do pakietu BHOLD](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
+Ponadto moduły łącznika zarządzania usługami pakietu BHOLD Core i Access muszą być już wdrożone na serwerze w środowisku, a program FIM musi być skonfigurowany przy użyciu co najmniej jednego agenta zarządzania pakietu BHOLD. Aby uzyskać informacje na temat instalowania i konfigurowania modułu pakietu BHOLD Core, zobacz [pakietu BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Aby uzyskać informacje o instalowaniu i używaniu modułu łącznika zarządzania dostępem, zobacz temat [Instalacja łącznika zarządzania dostępem](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) i [Przewodnik po laboratorium testowym: Łącznik zarządzania dostępem pakietu BHOLD](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 > [!IMPORTANT]
-> Nazwa bazy danych usługi FIM musi być usługę programu FIM. Instalacja pakietu BHOLD FIM Integration zakończy się niepowodzeniem, jeśli FIM nie została zainstalowana z domyślną nazwą bazy danych usługi FIM.
+> Nazwa bazy danych usługi FIM musi być usługi FIMService. PAKIETU BHOLD integracja programu FIM nie powiedzie się, jeśli program FIM nie zostanie zainstalowany z domyślną nazwą bazy danych usługi FIM.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Przed rozpoczęciem instalowania modułu BHOLD FIM integracji, trzeba utworzyć katalog pakietu BHOLD w katalogu głównym dysku C: (C:\BHOLD).
+Przed rozpoczęciem instalacji modułu integracji programu pakietu BHOLD FIM należy utworzyć katalog pakietu BHOLD w katalogu głównym dysku C: Disk (C:\BHOLD).
 
-Ponadto, musisz mieć możliwość informacje, które Kreator pakietu BHOLD FIM integracji instalacji wymaga, aby ukończyć instalację. Następujący arkusz pomoże Zarejestruj te informacje będą gotowe do dostarczenia go, gdy jest to konieczne.
+Ponadto należy przygotować się do podania informacji wymaganych przez Kreatora instalacji integracji usługi FIM pakietu BHOLD do ukończenia instalacji. Poniższy arkusz pomoże Ci zarejestrować te informacje, dzięki czemu będzie można je w razie potrzeby udostępnić.
 
 ### <a name="bholdfim-account-settings"></a>Ustawienia konta BHOLDFim
 
 | **Element**                            | **Opis**                                                                                                                                                                                                               | **Wartość**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Użyj dostawcy zabezpieczeń w domenie** | Po wybraniu Określa, czy zabezpieczeń Active Directory Domain Services będzie kontrolować dostęp do pakietu BHOLD Core.                                                                                                                    | Zaznacz pole wyboru. **Ważne:** instalacja zakończy się niepowodzeniem, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
-| **Domeny**                          | Określa domeny zawierający **konto usługi** utworzony podczas instalowania pakietu BHOLD Core. Aby uzyskać więcej informacji, zobacz [Instalacja podstawowa pakietu BHOLD](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest ona dostarczana automatycznie przez kreatora. Zmień nazwę, tylko wtedy, gdy będzie ona nieprawidłowa. **Ważne:** Podaj nazwę domeny przy użyciu nazwy NetBIOS (krótki), a nie w pełni kwalifikowana nazwa domeny (FQDN). Na przykład jeśli nazwę FQDN domeny fabrikam.com, należy określić nazwę domeny jako firmy FABRIKAM. |
-| **Nazwa użytkownika**                        | Określa nazwę logowania konta użytkownika BHOLD podstawowe usługi.                                                                                                                                                              | Napisz tutaj nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
-| **Hasło**                        | Określa hasło konta użytkownika usługi.                                                                                                                                                                           | Zapisz hasło w tym miejscu: **ważne:** koniecznie Zapisz to hasło w ukrytym, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
+| **Używanie dostawcy zabezpieczeń w domenie** | Po wybraniu określa, że zabezpieczenia Active Directory Domain Services będą kontrolować dostęp do pakietu BHOLD rdzeń.                                                                                                                    | zaznacz pole wyboru. **Ważne:** Instalacja nie powiedzie się, jeśli to pole wyboru nie jest zaznaczone.                                                                                                                                                                                                                   |
+| **Domeny**                          | Określa domenę zawierającą **konto usługi** , które zostało utworzone podczas instalowania pakietu BHOLD Core. Aby uzyskać więcej informacji, zobacz [pakietu BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Nazwa domeny jest dostarczana automatycznie przez kreatora. Zmień nazwę tylko wtedy, gdy jest ona niepoprawna. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (krótkiej), a nie w pełni kwalifikowanej nazwy domeny (FQDN). Na przykład, jeśli nazwa FQDN domeny to fabrikam.com, określ nazwę domeny jako FABRIKAM. |
+| **Nazwa użytkownika**                        | Określa nazwę logowania konta użytkownika usługi pakietu BHOLD Core.                                                                                                                                                              | W tym miejscu wpisz nazwę konta użytkownika:                                                                                                                                                                                                                                                                                    |
+| **Hasło**                        | Określa hasło konta użytkownika usługi.                                                                                                                                                                           | Napisz hasło tutaj: **Ważne:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>Ustawienia usługi FIM
 
 | **Element**            | **Opis**                                                                                                                                                                                                                               | **Wartość**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| **User**            | Określa nazwę logowania konta z uprawnieniami administratora dla programu FIM. Firma Microsoft zaleca nieużywanie na koncie skojarzonym z użytkownika root w BHOLD Core (domyślnie konto użyte do zainstalowania pakietu BHOLD Core). | Napisz tutaj nazwę konta użytkownika:                                                                   |
-| **Hasło**        | Określa hasło konta administratora programu FIM.                                                                                                                                                                                 | Zapisz hasło w tym miejscu: **ważne:** koniecznie Zapisz to hasło w ukrytym, bezpiecznej lokalizacji. |
-| **Baza danych programu FIM**    | Określa nazwę bazy danych usługi FIM Service.                                                                                                                                                                                               | Usługę programu FIM                                                                                          |
-| **Port IP witryny sieci Web** | Określa nazwę lub adres IP serwera portalu programu FIM oraz port witryny sieci Web.                                                                                                                                                               | Napisz nazwę serwera lub adres i port w tym miejscu:                                                     |
+| **User**            | Określa nazwę logowania konta z uprawnieniami administratora dla programu FIM. Firma Microsoft zdecydowanie zaleca, aby nie używać konta skojarzonego z użytkownikiem głównym w pakietu BHOLD Core (domyślnie konto używane do zainstalowania rdzeń pakietu BHOLD). | W tym miejscu wpisz nazwę konta użytkownika:                                                                   |
+| **Hasło**        | Określa hasło konta użytkownika administratora programu FIM.                                                                                                                                                                                 | Napisz hasło tutaj: **Ważne:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji. |
+| **Baza danych programu FIM**    | Określa nazwę bazy danych usługi FIM.                                                                                                                                                                                               | Usługi FIMService                                                                                          |
+| **Adres IP/port witryny sieci Web** | Określa nazwę lub adres IP serwera portalu programu FIM oraz port witryny sieci Web.                                                                                                                                                               | W tym miejscu wpisz nazwę lub adres i port serwera:                                                     |
 
-### <a name="bhold-core-connection"></a>Połączenie podstawowe pakietu BHOLD
+### <a name="bhold-core-connection"></a>PAKIETU BHOLD podstawowe połączenie
 
 | **Element**               | **Opis**                                                                                                                                                                                                                                                                                                                                                                               | **Wartość**                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| **Domeny**             | Określa nazwę domeny konta określonego w **użytkownika**poniżej. Określ domenę w formacie (short) NetBIOS.                                                                                                                                                                                                                                                                   | Zapis nazwę konta użytkownika domeny w tym miejscu?                                                            |
-| **User**               | Nazwa logowania konta **użytkownika BHOLD, że kierownik** wszystkich użytkowników i ról i ma uprawnienia do łączenie i rozłączanie ról użytkownika. Firma Microsoft zaleca nieużywanie na koncie skojarzonym z użytkownika root w BHOLD Core (domyślnie konto użyte do zainstalowania pakietu BHOLD Core). To konto może być tego samego konta używane do łączenia się do programu FIM | Napisz tutaj nazwę konta użytkownika:                                                                   |
-| **Hasło**           | Określa hasło konta użytkownika określonego w **użytkownika**.                                                                                                                                                                                                                                                                                                                             | Zapisz hasło w tym miejscu: **ważne:** koniecznie Zapisz to hasło w ukrytym, bezpiecznej lokalizacji. |
-| **Adres IP/komputera** | Określa adres IP pakietu BHOLD podstawowego serwera witryny sieci Web. Nie należy używać nazwy serwera.                                                                                                                                                                                                                                                                                                        | Wpisz tutaj adres IP:                                                                          |
-| **Numer portu**        | Określa numer portu witryny sieci Web pakietu BHOLD Core.                                                                                                                                                                                                                                                                                                                                          | Zapisz tutaj numer portu:                                                                         |
+| **Domeny**             | Określa nazwę domeny konta określonego w polu **użytkownik**, poniżej. Określ domenę w formacie NetBIOS (krótki).                                                                                                                                                                                                                                                                   | W tym miejscu wpisz nazwę domeny konta użytkownika?                                                            |
+| **User**               | Określa nazwę logowania konta **użytkownika pakietu BHOLD, który jest nadzorcą** wszystkich użytkowników i ról i ma uprawnienia do łączenia i rozłączania ról użytkownika. Firma Microsoft zdecydowanie zaleca, aby nie używać konta skojarzonego z użytkownikiem głównym w pakietu BHOLD Core (domyślnie konto używane do zainstalowania rdzeń pakietu BHOLD). To konto może być tym samym kontem, które jest używane do nawiązywania połączenia z usługą FIM | W tym miejscu wpisz nazwę konta użytkownika:                                                                   |
+| **Hasło**           | Określa hasło konta użytkownika określonego w polu **użytkownik**.                                                                                                                                                                                                                                                                                                                             | Napisz hasło tutaj: **Ważne:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji. |
+| **Adres IP/komputera** | Określa adres IP serwera witryny sieci Web pakietu BHOLD Core. Nie należy używać nazwy serwera.                                                                                                                                                                                                                                                                                                        | Napisz tutaj adres IP:                                                                          |
+| **Numer portu**        | Określa numer portu witryny sieci Web pakietu BHOLD Core.                                                                                                                                                                                                                                                                                                                                          | Tutaj wpisz numer portu:                                                                         |
 
-## <a name="bhold-fim-integration-setup"></a>Instalacja pakietu BHOLD FIM Integration
+## <a name="bhold-fim-integration-setup"></a>PAKIETU BHOLD — konfiguracja integracji programu FIM
 
-Aby zainstalować moduł BHOLD FIM integracji, zaloguj się jako członek grupy Administratorzy domeny, pobierz następujący plik i uruchom go jako administrator na serwerze, który ma zostać zainstalowany moduł integracji usługi FIM pakietu BHOLD na:
+Aby zainstalować moduł integracji programu pakietu BHOLD FIM, zaloguj się jako członek grupy Administratorzy domeny, pobierz następujący plik i uruchom go jako administrator na serwerze, na którym ma zostać zainstalowany moduł integracji programu pakietu BHOLD FIM:
 
-- BholdFIMIntegration<em>\<wersji\></em>\_Release.msi
+- BholdFIMIntegration<em>\<wersja\></em>\_Release. msi
 
-Zastąp *\<wersji\>* numerem wersji, wersji pakietu BHOLD FIM integracji, którym ją instalujesz.
+Zastąp *\<version\>* numerem wersji pakietu bholdej integracji z programem FIM.
 
-Aby uruchomić plik programu jako administrator, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **Uruchom jako administrator**.
+Aby uruchomić plik programu jako administrator, kliknij plik prawym przyciskiem myszy, a następnie kliknij polecenie **Uruchom jako administrator**.
 
-![Uruchamianie Instalatora msi](media/bhold-integration-installation/cmd.png)
+![uruchamianie pliku MSI](media/bhold-integration-installation/cmd.png)
 
-## <a name="post-installation-tasks"></a>Zadań poinstalacyjnych
+## <a name="post-installation-tasks"></a>Zadania poinstalacyjne
 
-Po zainstalowaniu pakietu BHOLD FIM integracji, należy skonfigurować Microsoft SharePoint do nadaj uprawnienia właściciela witryny kontu usługi BHOLD. Jeśli portalu programu FIM jest skonfigurowany do używania protokołu Secure Sockets Layer (SSL), zabezpieczeń, należy zmodyfikować pliki, które zawierają odwołania do adresów stron BHOLD dodany do portalu programu FIM.
+Po zainstalowaniu integracji z usługą pakietu BHOLD FIM należy skonfigurować program Microsoft SharePoint, aby przyznać uprawnienia właściciela lokacji konta usługi pakietu BHOLD. Ponadto, jeśli Portal programu FIM jest skonfigurowany do korzystania z zabezpieczeń SSL (SSL), należy zmodyfikować pliki, które zawierają odwołania do adresów stron pakietu BHOLD dodanych do portalu programu FIM.
 
 ### <a name="configuring-sharepoint"></a>Konfigurowanie programu SharePoint
 
-Działał prawidłowo, BHOLD FIM Integration wymaga pakietu BHOLD konto usługi musi mieć uprawnienia członek witryny Microsoft SharePoint.
+Aby zapewnić prawidłowe działanie, integracja z usługą FIM pakietu BHOLD wymaga, aby konto usługi pakietu BHOLD miało uprawnienia do elementu członkowskiego lokacji w programie Microsoft SharePoint.
 
-### <a name="to-grant-site-member-permissions-to-the-bhold-service-account"></a>Aby udzielić uprawnień elementu członkowskiego witryny do konta usługi pakietu BHOLD
+### <a name="to-grant-site-member-permissions-to-the-bhold-service-account"></a>Aby przyznać uprawnienia elementu członkowskiego do konta usługi pakietu BHOLD
 
-1.  Zaloguj się do serwera z uruchomioną BHOLD FIM integracji z uprawnieniami administratora.
+1.  Zaloguj się do serwera z uruchomioną integracją programu pakietu BHOLD FIM z uprawnieniami administratora.
 
-2.  Kliknij przycisk **Start**, a następnie kliknij przycisk **Internet Exporer**.
+2.  Kliknij przycisk **Start**, a następnie kliknij pozycję **Internet Exporer**.
 
-3.  Na pasku adresu wpisz <https://localhost> Jeśli program SharePoint jest skonfigurowany do używania protokołu SSL, zabezpieczeń, w przeciwnym razie wpisz <http://localhost>.
+3.  Na pasku adresu wpisz <https://localhost>, jeśli program SharePoint jest skonfigurowany do korzystania z zabezpieczeń SSL, w przeciwnym razie wpisz <http://localhost>.
 
-4.  W lewej części **witryny zespołu** kliknij **osoby i grupy**.
+4.  Po lewej stronie strony **zespołu** kliknij pozycję **osoby i grupy**.
 
-5.  W obszarze **grup** kliknij **członkom zespołu**i w pasku narzędzi w środkowym okienku kliknij **New**, a następnie kliknij przycisk **Add Users**.
+5.  W obszarze **grupy** kliknij pozycję **Członkowie witryny zespołu**, a następnie w środkowym okienku Pasek narzędzi kliknij pozycję **Nowy**, a następnie kliknij pozycję **Dodaj użytkowników**.
 
-6.  Na **Add Users: witryny zespołu** strony w **użytkowników/grup**, wpisz BHOLDApplicationGroup, a następnie kliknij przycisk Sprawdź nazwy w obszarze **użytkowników/grup** pole. Nazwa grupy powinna być rozwiązywana na zawierają nazwę domeny.
+6.  Na stronie **Dodawanie użytkowników: Witryna zespołu** w obszarze **Użytkownicy/grupy**wpisz BHOLDApplicationGroup, a następnie kliknij przycisk Sprawdź nazwy w polu **Użytkownicy/grupy** . Nazwa grupy powinna zostać rozpoznana w celu uwzględnienia nazwy domeny.
 
-7.  Kliknij przycisk **bezpośrednio nadać użytkownikom uprawnienia**, wybierz opcję **Pełna kontrola — ma pełną kontrolę**, a następnie kliknij przycisk **OK**.
+7.  Kliknij pozycję **Udziel użytkownikom uprawnień bezpośrednio**, wybierz pozycję **pełna kontrola — Pełna kontrola**, a następnie kliknij przycisk **OK**.
 
-8.  Sprawdź, czy BHOLDApplicationGroup znajduje się w **uprawnienia: witryny zespołu**, a następnie zamknij program Internet Explorer.
+8.  Sprawdź, czy BHOLDApplicationGroup jest wymieniony w obszarze **uprawnienia: Witryna zespołu**, a następnie zamknij program Internet Explorer.
 
-![Uruchamianie Instalatora msi](media/bhold-integration-installation/sharepoint.png)
+![uruchamianie pliku MSI](media/bhold-integration-installation/sharepoint.png)
 
 ### <a name="configuring-bhold-to-support-ssl"></a>Konfigurowanie pakietu BHOLD do obsługi protokołu SSL
 
-Jeśli portalu programu FIM jest skonfigurowany do używania protokołu SSL, zabezpieczeń, należy zmodyfikować plików na serwerze programu FIM, aby łącza do stron BHOLD zostanie otwarty. Pliki znajdują się w następującym folderze: ```C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\BHOLD```.
+Jeśli portal programu FIM jest skonfigurowany do korzystania z zabezpieczeń SSL, należy zmodyfikować pliki na serwerze programu FIM, aby otworzyć linki do stron pakietu BHOLD. Pliki znajdują się w następującym folderze: ```C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\BHOLD```.
 
-W poniższej tabeli wymieniono pliki i oryginalnego i zmiany wersji ciągi, które można edytować.
+W poniższej tabeli wymieniono pliki oraz oryginalne i zmienione wersje ciągów, które mają być edytowane.
 
-| **Plik**                  | **Oryginalny ciąg**                                                                                                                   | **Zmieniono parametry**                                                                                                                                |
+| **Plik**                  | **Oryginalny ciąg**                                                                                                                   | **Zmieniony ciąg**                                                                                                                                |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Analytics.aspx            |   http://<BHOLD_Server>/bhold/Analytics/index_fim.HTML | https://<BHOLD_Server_FQDN>/bhold/Analytics/index_fim.HTML       |
-| AttestationCampaigns.aspx |    http://<BHOLD_Server>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | https://<BHOLD_Server_FQDN>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | 
-| AttestationMain.aspx      |  http://<BHOLD_Server>/bhold/Attestation/Dashboard.aspx?hideMenu=1        | https://<BHOLD_Server_FQDN>/bhold/Attestation/Dashboard.aspx?hideMenu=1 |
-| Reporting.aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.HTML |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.HTML |
-| Selfservice.aspx          | RoleExchangePoint = http: / /\<*FIM_Server*\>: \< *FIM_Port*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint.svc TransportMode = transportu | RoleExchangePoint = https: / /\<*FIM_Server_FQDN*\>: \< *FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint / BHOLDRoleExchangePoint.svc,TransportMode=Transport |
+| Analiza. aspx            |   http://< BHOLD_Server >/bhold/Analytics/index_fim. html | https://< BHOLD_Server_FQDN >/bhold/Analytics/index_fim. html       |
+| AttestationCampaigns. aspx |    http://< BHOLD_Server >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | https://< BHOLD_Server_FQDN >/bhold/Attestation/Campaigns.aspx? hideMenu = 1 | 
+| AttestationMain. aspx      |  http://< BHOLD_Server >/bhold/Attestation/Dashboard.aspx? hideMenu = 1        | https://< BHOLD_Server_FQDN >/bhold/Attestation/Dashboard.aspx? hideMenu = 1 |
+| Raportowanie. aspx            | http://< BHOLD_Server >/bhold/Reporting/index_fim. html |  https://< BHOLD_Server_FQDN >/bhold/Reporting/index_fim. html |
+| Samoobsługowy. aspx          | RoleExchangePoint = http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. svc, Transportmode = transport | RoleExchangePoint = https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>* \>/BHOLD/RoleExchangePoint/BHOLDRoleExchangePoint. svc, Transportmode = transport |
 
 Gdzie:
 
--   *\<BHOLD_Server\>*  Określa nazwę serwera BHOLD jako znaleziony w oryginalnej wersji pliku
+-   *\<BHOLD_Server\>* określa nazwę serwera pakietu BHOLD, która znajduje się w oryginalnej wersji pliku
 
--   *\<MIM_Server\>*  Określa nazwę serwera programu FIM, tak jak w programie oryginalną wersję pliku
+-   *\<MIM_Server\>* określa nazwę serwera programu FIM, która została znaleziona w oryginalnej wersji pliku
 
--   *\<BHOLD_Server_FQDN\>*  określa w pełni kwalifikowana nazwa domeny (FQDN) serwera pakietu BHOLD
+-   *\<BHOLD_Server_FQDN\>* określa w pełni kwalifikowaną nazwę domeny (FQDN) serwera pakietu BHOLD
 
--   *\<MIM_Port\>*  Określa numer portu serwera usługi programu FIM, tak jak w programie oryginalną wersję pliku
+-   *\<MIM_Port\>* określa numer portu serwera programu FIM, który znajduje się w oryginalnej wersji pliku
 
--   *\<MIM_Server_FQDN\>*  Określa nazwę FQDN serwera programu FIM
+-   *\<MIM_Server_FQDN\>* określa nazwę FQDN serwera programu FIM
 
--   *\<MIM_SSL_Port\>*  Określa inny port do użycia przy użyciu protokołu SSL na serwerze programu FIM
+-   *\<MIM_SSL_Port\>* określa inny port do użycia z protokołem SSL na serwerze programu FIM
 
-### <a name="enable-approval-workflows-in-bhold-core"></a>Włącz przepływy pracy zatwierdzania w Core pakietu BHOLD
+### <a name="enable-approval-workflows-in-bhold-core"></a>Włącz przepływy pracy zatwierdzania w pakietu BHOLD rdzeń
 
-Gdy FIM a BHOLD są zintegrowane do samoobsługi, przepływy pracy dla zatwierdzeń są uruchamiane w usłudze FIM. Jest to podobne do modelu przepływu pracy dla żądań, które pochodzą z portalu programu FIM, na przykład gdy użytkownik przesyła żądanie do dołączenia do listy dystrybucyjnej. Istnieją podstawowe różnice między BHOLD roli przepływy i inne przepływy pracy, jednak hostowanej w usłudze FIM. W przypadku pakietu BHOLD parametry przepływu pracy, które określają, użytkowników, którzy muszą zatwierdzić żądanie roli pochodzą BHOLD zamiast przechowywania go w definicji przepływu pracy w bazie danych usługi FIM Service. Te parametry są przekazywane do usługi FIM Service przez BHOLD, przy pierwszym żądaniu skierowanym i przepływ pracy akcji komunikuje się wyniki z powrotem do podstawowej BHOLD.
+Gdy usługa FIM i pakietu BHOLD są zintegrowane do samoobsługi, przepływy pracy dla zatwierdzeń są uruchamiane w usłudze FIM. Jest to podobne do modelu przepływu pracy dla żądań, które pochodzą z portalu FIM, na przykład gdy użytkownik przesyła żądanie dołączenia do listy dystrybucyjnej. Istnieją jednak kluczowe różnice między przepływami pracy roli pakietu BHOLD i innymi przepływami pracy obsługiwanymi w usłudze FIM. W przypadku pakietu BHOLD parametry przepływu pracy, które określają, którzy użytkownicy muszą zatwierdzić żądanie roli, pochodzą z pakietu BHOLD, a nie są przechowywane w definicjach przepływu pracy w bazie danych usługi FIM. Parametry te są dostarczane do usługi FIM przez pakietu BHOLD, gdy następuje pierwsze żądanie, a przepływ pracy w ramach akcji komunikuje wyniki z powrotem do pakietu BHOLD Core.
 
-BHOLD wybiera osobą zatwierdzającą dla żądania samoobsługi w jednym z trzech sposobów:
+PAKIETU BHOLD wybiera osobę zatwierdzającą dla żądania samoobsługi na jeden z trzech sposobów:
 
--   **Menedżer wierszy jako osoba zatwierdzająca: wybór opartej na rolach dla jednostki organizacyjnej (OrgUnit)** rola ma atrybut o nazwie roletype, który jest ustawiony na osoba zatwierdzająca lub schodów ruchomych, a jeśli ta rola jest połączony z co najmniej jeden użytkownik w kontekście OrgUnit, żąda od Użytkownicy w tym OrgUnit muszą zostać zatwierdzone przez jednego z użytkowników, które jest połączone z roli o roletype osoba zatwierdzająca lub schodów ruchomych.
+-   **Menedżer linii jako osoba zatwierdzająca: wybór oparty na rolach dla jednostki organizacyjnej (OrgUnit)** Jeśli rola ma atrybut o nazwie roleType, który jest ustawiony na osobę zatwierdzającą lub eskalację, a jeśli ta rola jest połączona z co najmniej jednym użytkownikiem w kontekście OrgUnit, żądania od użytkowników w ramach tego OrgUnit muszą zostać zatwierdzone przez jednego z użytkowników połączonych z rolą przy użyciu elementu role osoby zatwierdzającej lub eskalacji.
 
--   **Menedżer wierszy jako osoba zatwierdzająca: opartych na atrybutach wybór OrgUnit** OrgUnit każdy może mieć jeden lub więcej atrybutów, które określają aliasy użytkowników, którzy mogą zatwierdzać przypisania roli dla innych użytkowników w OrgUnit. Te atrybuty są nazywane approver1, approver2 i tak dalej. Po użytkownik w OrgUnit żądania przypisania roli, BHOLD kieruje żądania (przy użyciu programu FIM) do użytkowników określonych przez atrybuty osoba zatwierdzająca OrgUnit. W przypadku OrgUnit nie ma żadnego z tych zestawów atrybutów, BHOLD sprawdza nadrzędnego OrgUnits do głównego OrgUnit.
+-   **Menedżer linii jako osoba zatwierdzająca: wybór oparty na atrybutach dla elementu OrgUnit** Każdy OrgUnit może mieć jeden lub więcej atrybutów, które określają aliasy użytkowników, którzy mogą zatwierdzać przypisania ról dla innych użytkowników w OrgUnit. Te atrybuty mają nazwę approver1, approver2 i tak dalej. Gdy użytkownik w OrgUnit żąda przypisania roli, pakietu BHOLD kieruje żądanie (za pomocą programu FIM) do użytkowników określonych przez atrybuty osoby zatwierdzającej OrgUnit. Jeśli OrgUnit nie ma żadnego z tych zestawów atrybutów, pakietu BHOLD sprawdza element nadrzędny OrgUnits do głównego OrgUnit.
 
--   **Menedżer ról jako osoba zatwierdzająca: opartych na atrybutach wybranej roli** rola może mieć jeden lub więcej atrybutów (również o nazwie approver1 itd.), które określają aliasy użytkowników, którzy mogą zatwierdzać przypisania roli. Gdy użytkownik zażąda do przypisania roli, która ma tych atrybutów osoba zatwierdzająca, wartość, BHOLD kieruje żądanie do użytkowników określonych przez atrybuty.
+-   **Menedżer ról jako osoba zatwierdzająca: wybór oparty na atrybutach dla roli** Rola może mieć jeden lub więcej atrybutów (również o nazwie approver1 itd.), które określają aliasy użytkowników, którzy mogą zatwierdzać przypisanie roli. Gdy użytkownik zażąda przypisania roli, która ma te atrybuty osoby zatwierdzającej, pakietu BHOLD kieruje żądanie do użytkowników określonych przez atrybuty.
 
-Jeśli osoba zatwierdzająca żądania rolą samoobsługi nie jest określony za pomocą jednej z tych metod, domyślnie BHOLD automatycznie przypisuje rolę bez konieczności zatwierdzania. Z tego powodu od razu po zainstalowaniu pakietu BHOLD FIM integracji, należy skonfigurować katalog główny OrgUnit z aliasem osobę zatwierdzającą, takich jak konto główne. Uniemożliwi to użytkownik przypadkowo zostanie im przyznany rolę przed można zaimplementować bardziej złożone zasady zatwierdzania.
+Jeśli osoba zatwierdzająca dla żądania roli samoobsługi nie została określona przez jedną z tych metod, domyślnie pakietu BHOLD automatycznie przypisuje rolę bez konieczności zatwierdzania. Z tego powodu natychmiast po zainstalowaniu integracji z programem pakietu BHOLD FIM należy skonfigurować główny OrgUnit przy użyciu aliasu osoby zatwierdzającej, takiej jak konto główne. Uniemożliwi to użytkownikowi niezamierzone uzyskanie roli przed zaimplementowaniem bardziej kompleksowych zasad zatwierdzania.
 
-#### <a name="to-configure-an-approver-for-the-root-orgunit"></a>Aby skonfigurować osobą zatwierdzającą dla głównego OrgUnit
+#### <a name="to-configure-an-approver-for-the-root-orgunit"></a>Aby skonfigurować osobę zatwierdzającą dla elementu głównego OrgUnit
 
-1.  Zaloguj się na serwer podstawowy BHOLD jako administrator.
+1.  Zaloguj się do serwera pakietu BHOLD Core jako administrator.
 
-2.  Kliknij przycisk **Start**, a następnie kliknij przycisk **programu Internet Explorer**.
+2.  Kliknij przycisk **Start**, a następnie kliknij pozycję **Internet Explorer**.
 
-3.  Na pasku adresu programu Internet Explorer wpisz <http://localhost:5151/bhold/core>, a następnie naciśnij klawisz Enter.
+3.  Na pasku adresu programu Internet Explorer wpisz <http://localhost:5151/bhold/core>, a następnie naciśnij klawisz ENTER.
 
-4.  Na podstawowych BHOLD stronę główną, w obszarze **def atrybut**, kliknij przycisk **typy atrybutów**.
+4.  Na stronie głównej pakietu BHOLD Core w obszarze **atrybut def**kliknij pozycję **typy atrybutów**.
 
-5.  Na **typ atrybutu** kliknij **Dodaj**.
+5.  Na stronie **Typ atrybutu** kliknij przycisk **Dodaj**.
 
-6.  Na **Dodaj atrybut typ strony**w **tożsamości**, wpisz approver1, **— typ danych** kliknij **alfanumeryczne**, w **Maksymalna długość**, 255, wpisz **listę wartości**, kliknij przycisk **nie**w **angielski**, wpisz 1 osoby zatwierdzającej, kliknij przycisk **OK**, a następnie kliknij przycisk **gotowe**.
+6.  Na **stronie Dodawanie typu atrybutu**w polu **tożsamość**wpisz approver1, na liście **Typ danych** kliknij pozycję **alfanumeryczne**, w polu **długość maksymalna**wpisz 255, w polu **Lista wartości**kliknij przycisk **nie**, w **języku angielskim**wpisz tekst zatwierdzającego 1, kliknij przycisk **OK**, a następnie kliknij przycisk **gotowe**.
 
-7.  W okienku po lewej stronie w obszarze **def atrybut** kliknij **zestawów typów atrybutów**.
+7.  W lewym okienku w obszarze **atrybut def** kliknij pozycję **zestawy typów atrybutów**.
 
-8.  Na **zestawów typów atrybutów** kliknij **Dodaj**.
+8.  Na stronie **zestawy typów atrybutów** kliknij przycisk **Dodaj**.
 
-9.  Na **Dodaj atrybut typu zestawu** stronie **opis**wpisz OrgUnit atrybutów, a następnie kliknij przycisk **OK**.
+9.  Na stronie **Dodawanie zestawu typów atrybutów** w polu **Opis**wpisz atrybuty OrgUnit, a następnie kliknij przycisk **OK**.
 
-10. Na **atrybuty OrgUnit** rozwiń **typy atrybutów**, a następnie kliknij przycisk **Modyfikuj**.
+10. Na stronie **atrybuty OrgUnit** rozwiń węzeł **typy atrybutów**, a następnie kliknij przycisk **Modyfikuj**.
 
-11. W **typ atrybutu** kliknij **approver1**, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **gotowe**.
+11. Na liście **Typ atrybutu** kliknij pozycję **approver1**, kliknij pozycję **Dodaj**, a następnie kliknij pozycję **gotowe**.
 
-12. W okienku po lewej stronie kliknij **typy obiektów**.
+12. W lewym okienku kliknij pozycję **typy obiektów**.
 
-13. Na **typy obiektów** kliknij **OrgUnit**.
+13. Na stronie **typy obiektów** kliknij pozycję **OrgUnit**.
 
-14. Na **obiektu typu/OrgUnit** rozwiń **zestawów typów atrybutów**, a następnie kliknij przycisk **Modyfikuj**.
+14. Na stronie **Typ obiektu/OrgUnit** rozwiń węzeł **zestawy typów atrybutów**, a następnie kliknij przycisk **Modyfikuj**.
 
-15. Na **Link atrybutu typu zestawu/OrgUnit** strony w **kolejności**, 10, wpisz **atrybutu typu zestawu** kliknij **atrybuty OrgUnit**, Kliknij przycisk **Dodaj**, a następnie kliknij przycisk **gotowe**.
+15. Na stronie Typ **atrybutu linku Ustaw/OrgUnit** , w **kolejności**wpisz 10, na liście **Typ atrybutu** kliknij pozycję **atrybuty OrgUnit**, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **gotowe**.
 
-16. W okienku po lewej stronie w obszarze **modelu**, kliknij przycisk **jednostek organizacyjnych**.
+16. W lewym okienku w obszarze **model**kliknij pozycję **jednostki organizacyjne**.
 
-17. Na **jednostek organizacyjnych** kliknij **głównego**.
+17. Na stronie **jednostki organizacyjne** kliknij pozycję **główny**.
 
-18. Na **jednostkę organizacyjną/root** kliknij **Modyfikuj**.
+18. Na stronie **jednostka organizacyjna/główna** kliknij przycisk **Modyfikuj**.
 
-19. Na **zmodyfikować jednostki organizacyjnej atrybuty/root** stronie **osoba zatwierdzająca**, wpisz nazwę domeny i nazwę użytkownika, który spowoduje zatwierdzenie żądania przypisania roli, w formacie  *\<domeny\>*\\*\<użytkownika\>*, gdzie *\<domeny\>* jest Nazwa domeny NetBIOS (krótki) i *\<użytkownika\>* jest nazwą logowania użytkownika.
+19. Na stronie **Modyfikuj atrybuty jednostki organizacyjnej/głównej** w obszarze **osoba zatwierdzająca**wpisz domenę i nazwę użytkownika, który będzie zatwierdzał żądania przypisywania ról, w formacie *\<domena\>* \\ *\<użytkownika\>* , gdzie\<*domena*\>jest nazwą NetBIOS (krótką), a *\<użytkownika*\>to nazwa logowania użytkownika.
 20. Kliknij przycisk **OK**.
 
 > [!IMPORTANT]
-> Domena i nazwa użytkownika musi być zgodna domyślny alias użytkownika w bazie danych BHOLD Core.
+> Domena i nazwa użytkownika muszą być zgodne z domyślnym aliasem użytkownika w podstawowej bazie danych pakietu BHOLD.
 
-Zamiast określania osobą zatwierdzającą dla jednostek organizacyjnych możesz określić osobą zatwierdzającą dla proponowanych role w bazie danych BHOLD Core. Aby to zrobić, Utwórz atrybut approver1, dodaj go do atrybutu poziomego złożenia skojarzonej z typem obiektu roli, a następnie zmodyfikuj każdej proponowane roli, aby określić osoby zatwierdzającej.
+Alternatywą dla określenia osoby zatwierdzającej dla jednostek organizacyjnych jest określenie osoby zatwierdzającej dla proponowanych ról w podstawowej bazie danych pakietu BHOLD. W tym celu należy utworzyć atrybut approver1, dodać go do atrybutu poziomego złożenia skojarzonego z typem obiektu roli, a następnie zmodyfikować każdą proponowaną rolę, aby określić osobę zatwierdzającą.
 
-Aby zapewnić lepsze zabezpieczenia przepływu pracy, oprócz osób zatwierdzających, należy wyznaczyć trybów dodatkowego zatwierdzenia i użytkowników przez tworzenie i wypełnianie następujące atrybuty OrgUnits i ról:
+Aby zapewnić lepsze zabezpieczenia przepływu pracy, oprócz osób zatwierdzających, należy wyznaczyć dodatkowe tryby zatwierdzania i użytkowników, tworząc i wypełniając następujące atrybuty dla OrgUnits i ról:
 
-- schodów ruchomych<em>\<n\></em>
+- eskalacja<em>\<n\></em>
 
-- właściciel<em>\<n\></em>
+- Właściciel<em>\<n\></em>
 
 - securityOfficer<em>\<n\></em>
 
 - powiadomienie<em>\<n\></em>
 
-gdzie *\<n\>* wskazuje opcjonalne sufiksu liczbowego, aby zapewnić wiele atrybutów tego samego typu.
+gdzie *\<n\>* wskazuje opcjonalny sufiks numeryczny, aby zapewnić wiele atrybutów tego samego typu.
 
-### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Sprawdź skonfigurowane w usłudze FIM przepływy pracy zatwierdzania
+### <a name="verify-approval-workflows-configured-in-the-fim-service"></a>Sprawdź, czy przepływy pracy zatwierdzania zostały skonfigurowane w usłudze FIM
 
-Instalacja pakietu BHOLD FIM integracji tworzy zestawy, definicje przepływów pracy i reguły zasad zarządzania (MPR) do usługi FIM Service. Jeśli dostosowano miał wdrożenia programu FIM, aby zmienić zestawów administratorów lub grupy użytkowników, którzy mogą wysyłać żądania, należy upewnić się, czy reguły MPR odwołują się do zestawów właściwy użytkownik.
+PAKIETU BHOLD integracja z usługą FIM umożliwia tworzenie zestawów, definicji przepływu pracy i reguł zasad zarządzania (reguł MPR) w usłudze FIM. Jeśli dostosowano wdrożenie programu FIM w celu zmiany zestawów administratorów lub zestawów użytkowników, którzy mogą wykonywać żądania, należy się upewnić, że reguł MPR odwołuje się do poprawnych zestawów użytkownika.
 
 > [!NOTE]
-> Zanim użytkownicy portalu programu FIM, można użyć funkcji samoobsługi udostępniane przez BHOLD, należy zsynchronizować konta użytkowników do bazy danych BHOLD FIM Synchronization Service. W szczególności musi istnieć rekord użytkownika w bazie danych BHOLD podstawowych i w bazie danych usługi FIM Service dla każdego użytkownika, który zgłosić wniosek samoobsługi lub została ona określona jako osoba zatwierdzająca lub schodów ruchomych dla żądań samoobsługi.
+> Aby użytkownicy portalu FIM mogli korzystać z funkcji samoobsługowych udostępnianych przez usługę pakietu BHOLD, konta użytkowników muszą zostać zsynchronizowane z bazą danych pakietu BHOLD z usługi synchronizacji FIM. W szczególności musi istnieć rekord użytkownika w bazie danych pakietu BHOLD Core i w bazie danych usługi FIM dla każdego użytkownika, który może wykonać żądanie samoobsługowe lub określić jako osobę zatwierdzającą lub eskalację do obsługi żądań samoobsługi.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
-- Aby uzyskać informacje o instalowaniu portalu programu FIM i inne funkcje programu FIM, zobacz [planowania i architektury](https://technet.microsoft.com/library/ee808044.aspx) w bibliotece technicznej Forefront firmy Microsoft.
+- Informacje o instalowaniu portalu FIM i innych funkcji programu FIM można znaleźć w temacie [Planning and Architecture](https://technet.microsoft.com/library/ee808044.aspx) in the Microsoft Forefront Technical Library.
 - [Przewodnik instalacji pakietu BHOLD](bhold-installation-guide.md)
 - [Dokumentacja dla deweloperów pakietu BHOLD](../reference/mim2016-bhold-developer-reference.md)
 - [Historia wersji pakietu BHOLD](../reference/version-bhold-history.md)

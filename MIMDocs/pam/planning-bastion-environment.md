@@ -12,17 +12,17 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380072"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518865"
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 
 Dodanie środowiska bastionu z dedykowanym lasem administracyjnym do usługi Active Directory umożliwia organizacjom łatwe zarządzanie kontami administracyjnymi, stacjami roboczymi i grupami w środowisku mającym silniejsze kontrole zabezpieczeń niż ich istniejące środowisko produkcyjne.
 
-Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Taka architektura umożliwia również korzystanie z funkcji selektywnego uwierzytelniania zaufania w celu ograniczania logowań (i widoczności poświadczeń) tylko do autoryzowanych hostów. W sytuacjach, w których żądany jest wyższy poziom gwarancji dla lasu produkcyjnego bez ponoszenia kosztów i wprowadzania złożoności pełnego ponownego tworzenia, las administracyjny może zapewnić środowisko, które zwiększa poziom gwarancji środowiska produkcyjnego.
+Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Architektura ta pozwala również korzystać z funkcji uwierzytelniania selektywnego w relacji zaufania jako metody ograniczenia możliwości logowania (i ujawnienia poświadczeń) tylko do grupy autoryzowanych hostów. W sytuacjach, w których od lasu produkcyjnego oczekuje się podniesienia poziomu bezpieczeństwa bez zwiększania kosztu i złożoności projektu związanego z całkowitą przebudową infrastruktury, środowisko lasu administracyjnego może zwiększyć bezpieczeństwo środowiska produkcyjnego.
 
 Oprócz dedykowanego lasu administracyjnego można użyć innych technik. Obejmują one ograniczanie widoczności poświadczeń administracyjnych, ograniczanie uprawnień ról użytkowników w tym lesie i zapewnianie, że zadania administracyjne nie są wykonywane na hostach używanych do standardowych działań użytkowników (na przykład korzystania z poczty e-mail i przeglądania sieci Web).
 
@@ -76,11 +76,11 @@ Ponieważ administrowanie aplikacjami zostanie przeniesione do środowiska basti
 
 Las administracyjny musi być skonfigurowany z najmniejszymi uprawnieniami na podstawie wymagań dotyczących administracji usługi Active Directory.
 
-- Kontom w lesie administracyjnym używanym do administrowania środowiskiem produkcyjnym nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani znajdujących się w nim domen i stacji roboczych.
+- Kontom znajdującym się w lesie administracyjnym, które są używane do zarządzania środowiskiem produkcyjnym, nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani stacji roboczych i domen, które zawiera ten las.
 
-- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Pomaga to także zapewnić, że pracownicy z produkcyjnymi kontami administracyjnymi nie zmniejszą ograniczeń dotyczących własnych kont, co spowoduje zwiększenie ryzyka dla organizacji.
+- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Dodatkowa korzyść polega na zapewnieniu, że członkowie personelu z kontami administratora w środowisku produkcyjnym nie mogą złagodzić ograniczeń swoich kont, a przez to zwiększyć zagrożenia bezpieczeństwa dla organizacji.
 
-- W przypadku lasu administracyjnego należy stosować konfiguracje Menedżera zgodności zabezpieczeń firmy Microsoft (SCM, Security Compliance Manager) dla domeny, w tym silne konfiguracje protokołów uwierzytelniania.
+- Las administracyjny powinien być zgodny z konfiguracją Menedżera zgodności zabezpieczeń firmy Microsoft dla domeny, w tym również z rygorystyczną konfiguracją protokołów uwierzytelniania.
 
 Podczas tworzenia środowiska bastionu przed zainstalowaniem programu Microsoft Identity Manager należy określić i utworzyć konta, które będą używane na potrzeby administracyjne w ramach tego środowiska. Dotyczy to następujących kont:
 
@@ -96,7 +96,7 @@ Wszystkie hosty, w tym kontrolery domeny, serwery i stacje robocze przyłączone
 
 - Aplikacje wymagane do wykonywania czynności administracyjnych należy wstępnie zainstalować na stacjach roboczych, aby konta ich używające nie musiały należeć do grupy administratorów lokalnych w celu zainstalowania tych aplikacji. Konserwacja kontrolera domeny może być zwykle przeprowadzona przy użyciu protokołu RDP i narzędzi administracji zdalnej serwera.
 
-- Na hostach lasu administracyjnego powinny być automatycznie stosowane aktualizacje zabezpieczeń. Mimo że może to spowodować ryzyko przerwania operacji obsługi kontrolera domeny, zapewnia to znaczące zmniejszenie zagrożeń bezpieczeństwa wynikających z luk w zabezpieczeniach, względem których nie zostały zastosowane poprawki.
+- Hosty w lesie administracyjnym powinny być skonfigurowane pod kątem automatycznej instalacji aktualizacji zabezpieczeń. Może to powodować ryzyko przerywania operacji konserwacji kontrolera domeny, ale znacząco zmniejsza zagrożenie bezpieczeństwa związane z brakiem poprawek usuwających luki.
 
 ### <a name="identify-administrative-hosts"></a>Identyfikowanie hostów administracyjnych
 
@@ -164,7 +164,7 @@ Istnieje siedem wymagań dotyczących włączania zarządzania dla istniejącej 
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. Grupa zabezpieczeń w domenie lokalnej
 
-W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$*. Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
+W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$* . Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
@@ -200,7 +200,7 @@ Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmo
 
 Komunikat „Pomyślnie ukończono aktualizowanie zasad komputera” powinien zostać wyświetlony po kilku minutach.
 
-### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Zezwalanie na połączenia z urzędem zabezpieczeń lokalnych
+### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Zezwalaj na połączenia z urzędem zabezpieczeń lokalnych
 
 Kontrolery domeny muszą zezwalać na połączenia RCP przez protokół TCP/IP dla urzędu zabezpieczeń lokalnych (LSA, Local Security Authority) ze środowiska bastionu. W starszych wersjach systemu Windows Server obsługa protokołu TCP/IP w urzędzie LSA musi zostać włączona w rejestrze:
 
@@ -208,7 +208,7 @@ Kontrolery domeny muszą zezwalać na połączenia RCP przez protokół TCP/IP d
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-### <a name="4-create-the-pam-domain-configuration"></a>4. Tworzenie konfiguracji domeny PAM
+### <a name="4-create-the-pam-domain-configuration"></a>4. Utwórz konfigurację domeny PAM
 
 Polecenie cmdlet `New-PAMDomainConfiguration` musi zostać wywołane na komputerze usługi MIM w domenie administracyjnej. Parametrami tego polecenia jest nazwa istniejącej domeny i poświadczenia administratora tej domeny.
 
@@ -216,7 +216,7 @@ Polecenie cmdlet `New-PAMDomainConfiguration` musi zostać wywołane na komputer
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-### <a name="5-give-read-permissions-to-accounts"></a>5. Nadawanie kontom uprawnień do odczytu
+### <a name="5-give-read-permissions-to-accounts"></a>5. Nadaj uprawnienia do odczytu kontom
 
 Konta w lesie bastionu używane do ustanawiania ról (administratorzy korzystający z poleceń cmdlet `New-PAMUser` i `New-PAMGroup`) oraz konto używane przez usługę monitorowania MIM potrzebują uprawnień do odczytu w tej domenie.
 
@@ -238,11 +238,11 @@ Wykonanie poniższych kroków spowoduje włączenie dostępu do odczytu dla uży
 
 18. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
-### <a name="6-a-break-glass-account"></a>6. Konto awaryjne
+### <a name="6-a-break-glass-account"></a>6. konto szklanej przerwy
 
 Jeśli celem projektu zarządzania dostępem uprzywilejowanym jest ograniczenie liczby kont z uprawnieniami administratora domeny trwale przypisanymi do domeny, w domenie musi istnieć konto *awaryjne* w przypadku wystąpienia w przyszłości problemów z relacją zaufania. Konta służące do awaryjnego dostępu do lasu produkcyjnego powinny istnieć w każdej domenie i z ich poziomu powinno być możliwe zalogowanie się tylko do kontrolerów domeny. W przypadku organizacji z wieloma lokacjami na potrzeby nadmiarowości mogą być wymagane dodatkowe konta.
 
-### <a name="7-update-permissions-in-the-bastion-environment"></a>7. Aktualizowanie uprawnień w środowisku bastionu
+### <a name="7-update-permissions-in-the-bastion-environment"></a>7. aktualizowanie uprawnień w środowisku bastionu
 
 Przejrzyj uprawnienia obiektu *AdminSDHolder* w kontenerze systemu w tej domenie. Obiekt *AdminSDHolder* zawiera unikatową listę kontroli dostępu służącą do kontrolowania uprawnień podmiotów zabezpieczeń, które są członkami wbudowanych uprzywilejowanych grup usługi Active Directory. Sprawdź, czy wprowadzono jakiekolwiek zmiany mogące mieć wpływ na użytkowników z uprawnieniami administracyjnymi w domenie, ponieważ te uprawnienia nie będą miały zastosowania względem użytkowników, których konto znajduje się w środowisku bastionu.
 

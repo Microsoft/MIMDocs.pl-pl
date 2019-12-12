@@ -12,11 +12,11 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8e7b7217714f0ef74c1d959eb51dac07018d6e77
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379727"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517838"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
@@ -24,7 +24,7 @@ W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesi
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Podniesienie uprawnień w lasach usługi Active Directory
 
-Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często obiektem ataków, ponieważ w przypadku naruszenia zabezpieczeń, osoba atakująca ma uprawnienia do połączenia z innymi serwerami lub aplikacjami w domenie.
+Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często wskazywane przez osoby atakujące, ponieważ w przypadku naruszenia zabezpieczeń osoba atakująca ma uprawnienia do łączenia się z innymi serwerami lub aplikacjami w domenie.
 
 Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
 
@@ -57,7 +57,7 @@ Aby wymusić ograniczenia logowania, można użyć następujących rozwiązań:
 - Zasady uwierzytelniania i silosy, jeśli jest używany system Windows Server 2012 lub nowszy
 - Uwierzytelnianie selektywne, jeśli konto należy do dedykowanego lasu administracyjnego
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - W artykule [Planning a bastion environment](planning-bastion-environment.md) (Planowanie środowiska bastionu) opisano dodawanie dedykowanego lasu administracyjnego dla programu Microsoft Identity Manager w celu ustanowienia kont administracyjnych.
-- [Stacji roboczych z dostępem uprzywilejowana](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) zapewniają dedykowany system operacyjny do realizacji zadań poufnych, które jest chronione przed atakami internetowymi i wektorami zagrożenia.
+- [Stacje robocze dostępu instrukcja uprzywilejowana](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) zapewniają dedykowany system operacyjny dla poufnych zadań, które są chronione przed atakami internetowymi i nosicielami zagrożeń.

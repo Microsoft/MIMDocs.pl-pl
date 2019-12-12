@@ -1,5 +1,5 @@
 ---
-title: Praca z samoobsługowego resetowania hasła | Dokumentacja firmy Microsoft
+title: Praca z funkcją samoobsługowego resetowania hasła | Microsoft Docs
 description: Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego resetowania hasła (SSPR) w programie MIM 2016, łącznie z obsługą uwierzytelniania wieloskładnikowego.
 keywords: ''
 author: billmath
@@ -10,37 +10,37 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690694"
 ---
-# <a name="self-service-password-reset-deployment-options"></a>Opcje wdrażania samoobsługowego resetowania hasła
+# <a name="self-service-password-reset-deployment-options"></a>Opcje wdrożenia samoobsługowego resetowania hasła
 
-Nowi klienci, którzy są [licencjonowane na potrzeby usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), firma Microsoft zaleca używanie [usługi Azure AD samoobsługowego resetowania haseł](/azure/active-directory/authentication/concept-sspr-howitworks) oferują środowisko użytkownika końcowego.  Samoobsługowe haseł usługi Azure AD zapewnia zarówno oparte na sieci web i zintegrowane Windows do użytkownika, aby zresetować własne hasło resetowania i obsługuje wiele tych samych funkcji jak program MIM, w tym alternatywny adres e-mail i bramy pytań i odpowiedzi.  Podczas wdrażania usługi Azure AD samoobsługowego resetowania hasła, program Azure AD Connect obsługuje [zapisania zwrotnego nowych haseł w usługach AD DS](/azure/active-directory/authentication/concept-sspr-writeback)i MIM [usługi powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md) może służyć do przekazywania hasła do innych systemów, takich jak serwer katalogowy innego dostawcy, jak również.  Wdrażanie programu MIM dla [zarządzania hasłami](infrastructure/mim2016-password-management.md) nie wymaga usługi MIM lub portale resetowania lub rejestracji haseł programu MIM do wdrożenia.  Można zamiast niego, wykonaj następujące kroki:
+W przypadku nowych klientów, którzy mają [licencję na Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), zalecamy korzystanie z funkcji samoobsługowego [resetowania haseł usługi Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks) w celu zapewnienia środowiska użytkownika końcowego.  Funkcja samoobsługowego resetowania haseł w usłudze Azure AD umożliwia użytkownikowi zresetowanie własnego hasła oraz obsługę wielu takich samych funkcji, jak program MIM, w tym alternatywnej poczty e-mail i pytania & bram.  W przypadku wdrażania funkcji samoobsługowego resetowania hasła w usłudze Azure AD Azure AD Connect obsługuje [zapisywanie nowych haseł do AD DS](/azure/active-directory/authentication/concept-sspr-writeback), a [Usługa powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md) programu MIM może służyć do przekazywania haseł do innych systemów, takich jak serwer katalogowy innego dostawcy.  Wdrażanie programu MIM do [zarządzania hasłami](infrastructure/mim2016-password-management.md) nie wymaga wdrożenia usługi MIM ani samoobsługowego resetowania hasła lub rejestracji w programie MIM.  Zamiast tego można wykonać następujące czynności:
 
-- Pierwsze, jeśli musisz wysyłać hasła do katalogów innych niż Azure AD i AD DS, wdrażania synchronizacji programu MIM za pomocą łączników usług domenowych Active Directory i wszelkie dodatkowe docelowych systemach, konfigurowanie programu MIM dla [zarządzania hasłami](infrastructure/mim2016-password-management.md) i wdrażanie [usługi powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Następnie, jeśli musisz wysyłać hasła do katalogów innych niż Usługa Azure AD, skonfiguruj program Azure AD Connect dla [zapisania zwrotnego nowych haseł w usługach AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
-- Opcjonalnie [użytkowników Zarezerwuj wstępnie](/azure/active-directory/authentication/howto-sspr-authenticationdata).
-- Na koniec [wdrażanie usługi Azure AD samoobsługowego resetowania hasła użytkownikom końcowym](/azure/active-directory/authentication/howto-sspr-deployment).
+- Najpierw, jeśli trzeba będzie wysyłać hasła do katalogów innych niż Azure AD i AD DS, wdrożyć program MIM Sync z łącznikami, aby Active Directory Domain Services i wszystkie dodatkowe systemy docelowe, skonfigurować program MIM do [zarządzania hasłami](infrastructure/mim2016-password-management.md) i wdrożyć [usługę powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md).
+- Następnie, jeśli chcesz wysyłać hasła do katalogów innych niż usługa Azure AD, skonfiguruj Azure AD Connect [zapisywania nowych haseł, aby AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- Opcjonalnie [zarejestruj wstępnie użytkowników](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Na koniec należy wdrożyć funkcję samoobsługowego [resetowania haseł w usłudze Azure AD dla użytkowników końcowych](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Dla istniejących klientów, którzy wcześniej wdrożyli Forefront Identity Manager (FIM) dla hasła samoobsługowego resetowania i są licencjonowane na potrzeby usługi Azure Active Directory — wersja Premium, firma Microsoft zaleca planowanie przejścia do haseł usługi Azure AD do zresetowania.  Można przejść użytkownikom końcowym usługi Azure AD Samoobsługowe resetowanie haseł bez konieczności ich ponownie zarejestrować, przez [synchronizowanie lub ustawienie za pomocą programu PowerShell użytkownika alternatywny adres e-mail lub telefon komórkowy numer](/azure/active-directory/authentication/howto-sspr-authenticationdata). Po użytkownicy są zarejestrowani do samoobsługowego hasła usługi Azure AD zresetować, portal resetowania hasła FIM można zlikwidować.
+W przypadku istniejących klientów, którzy wcześniej wdrożyły program Forefront Identity Manager (FIM) do samoobsługowego resetowania hasła i mają licencję na Azure Active Directory — wersja Premium, zalecamy zaplanowanie przejścia do funkcji samoobsługowego resetowania haseł w usłudze Azure AD.  Możesz przełączać użytkowników końcowych do samoobsługowego resetowania haseł usługi Azure AD bez konieczności ponownego rejestrowania, [synchronizując lub ustawiając za pomocą programu PowerShell alternatywny adres e-mail lub numer telefonu komórkowego użytkownika](/azure/active-directory/authentication/howto-sspr-authenticationdata). Po zarejestrowaniu użytkowników do samoobsługowego resetowania hasła w usłudze Azure AD można zlikwidować Portal resetowania haseł programu FIM.
 
-W przypadku klientów, które nie zostały jeszcze wdrożone usługi Azure AD Samoobsługowe resetowanie haseł dla swoich użytkowników, program MIM znajdują się również samoobsługowego resetowania haseł portali.  W porównaniu do programu FIM, program MIM 2016 zawiera następujące zmiany:
+W przypadku klientów, którzy nie wdrożono jeszcze funkcji samoobsługowego resetowania hasła usługi Azure AD dla swoich użytkowników, program MIM udostępnia również portale samoobsługowego resetowania hasła.  W porównaniu do programu FIM w programie MIM 2016 wprowadzono następujące zmiany:
 
-- Portal samoobsługowego resetowania haseł programu MIM i ekran logowania Windows zezwala użytkownikom odblokowanie ich kont bez konieczności zmieniania swoich haseł.
-- Dodano nową bramę uwierzytelniania Phone Gate programu MIM. Dzięki temu uwierzytelniania użytkowników za pomocą połączeń telefonicznych za pośrednictwem usługi Microsoft Azure Multi-Factor Authentication (MFA).
+- Portal samoobsługowego resetowania haseł w programie MIM i ekran logowania do systemu Windows umożliwiają użytkownikom odblokowywanie ich kont bez konieczności zmiany haseł.
+- Dodano nową bramę uwierzytelniania, bramę telefoniczną do programu MIM. Pozwala to na uwierzytelnianie użytkowników za pośrednictwem połączenia telefonicznego za pośrednictwem usługi Microsoft Azure Multi-Factor Authentication (MFA).
 
-Program MIM 2016 kompilacji wydania do wersji 4.5.26.0 polegać klienta do pobrania usługi Azure Multi-Factor Authentication Software Development Kit (zestaw SDK usługi MFA Azure).  Ten zestaw SDK jest przestarzała i zestawu SDK usługi Azure MFA będą obsługiwane w przypadku istniejących klientów tylko aż do daty wycofania 14 listopada 2018 r. Do tego czasu klienci muszą kontaktować się obsługi klienta platformy Azure do odbierania wygenerowanego pakietu poświadczenia usługi MFA, ponieważ będą one nie można pobrać zestaw SDK usługi Azure MFA. 
+Wydanie programu MIM 2016 kompiluje się do wersji 4.5.26.0 z klientem w celu pobrania zestawu Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  Ten zestaw SDK jest przestarzały, a zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów dopiero po dacie wycofania 14 listopada 2018. Do tej pory klienci muszą skontaktować się z działem obsługi klienta platformy Azure, aby odebrać wygenerowany pakiet poświadczeń usługi MFA, ponieważ nie będzie on w stanie pobrać zestawu SDK usługi Azure MFA. 
 
-#### <a name="new-update-current-azure-mfa-configuration-to-azure-multi-factor-authentication-server"></a>NOWOŚĆ! Zaktualizuj bieżącą konfigurację usługi Azure MFA do serwera Azure Multi-Factor Authentication
+#### <a name="new-update-current-azure-mfa-configuration-to-azure-multi-factor-authentication-server"></a>NOWOŚĆ! Zaktualizuj bieżącą konfigurację usługi Azure MFA do usługi Azure Serwer Multi-Factor Authentication
 
-To [artykułu](working-with-mfaserver-for-mim.md) opisano, jak zaktualizować portal resetowania haseł programu MIM wdrażania i konfiguracji usługi PAM za pomocą usługi Azure Multi-Factor Authentication dla usługi Multi-Factor authentication.
+W tym [artykule](working-with-mfaserver-for-mim.md) opisano sposób aktualizowania portalu samoobsługowego resetowania haseł programu MIM i konfiguracji PAM przy użyciu usługi Azure serwer Multi-Factor Authentication na potrzeby uwierzytelniania wieloskładnikowego.
 
-## <a name="deploying-mim-self-service-password-reset-portal-using-azure-mfa-for-multi-factor-authentication"></a>Wdrażanie programu MIM portalu samoobsługowego resetowania hasła przy użyciu usługi Azure MFA, Multi-Factor Authentication
+## <a name="deploying-mim-self-service-password-reset-portal-using-azure-mfa-for-multi-factor-authentication"></a>Wdrażanie portalu samoobsługowego resetowania haseł programu MIM za pomocą usługi Azure MFA dla Multi-Factor Authentication
 
-W poniższej sekcji opisano sposób wdrażania portalu resetowania haseł programu MIM przy użyciu usługi Azure MFA, Multi-Factor Authentication.  Te kroki są tylko niezbędne dla klientów, którzy nie używają usługi Azure AD Samoobsługowe resetowanie haseł dla swoich użytkowników.
+W poniższej sekcji opisano sposób wdrażania portalu funkcji samoobsługowego resetowania haseł w programie MIM przy użyciu usługi Azure MFA na potrzeby uwierzytelniania wieloskładnikowego.  Te kroki są niezbędne tylko w przypadku klientów, którzy nie korzystają z funkcji samoobsługowego resetowania hasła w usłudze Azure AD dla swoich użytkowników.
 
 Microsoft Azure Multi-Factor Authentication jest usługą uwierzytelniania, która wymaga weryfikowania prób zalogowania się przez użytkowników przy użyciu aplikacji mobilnej, połączenia telefonicznego lub wiadomości tekstowej. Jest ona dostępna do użycia z usługą Microsoft Azure Active Directory oraz jako usługa dla aplikacji w chmurze i lokalnych aplikacji przedsiębiorstw.
 
@@ -50,7 +50,7 @@ Usługa Azure MFA umożliwia uwierzytelnianie i weryfikację tożsamości użytk
 
 ## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Wymagania wstępne związane z konfigurowaniem samoobsługowego odblokowywania kont i resetowania haseł przy użyciu usługi MFA
 
-W tej sekcji założono, że pobrane i ukończył wdrożenie programu Microsoft Identity Manager 2016 [synchronizacji programu MIM, usługa MIM i portalu programu MIM składniki](microsoft-identity-manager-deploy.md), w tym następujących składników i usług:
+W tej sekcji założono, że pobrano i ukończono wdrożenie składnika synchronizacji programu MIM Microsoft Identity Manager 2016 [, usługi MIM i portalu MIM](microsoft-identity-manager-deploy.md), w tym następujących składników i usług:
 
 -   System Windows Server 2008 R2 lub nowszy został skonfigurowany jako serwer usługi Active Directory, łącznie z Usługami domenowymi w usłudze Active Directory i kontrolerem domeny z wyznaczoną domeną (domena „firmowa”).
 
@@ -70,7 +70,7 @@ W tej sekcji założono, że pobrane i ukończył wdrożenie programu Microsoft 
 
 -   Dodatki i rozszerzenia programu MIM 2016, łącznie ze zintegrowanym klientem logowania systemu Windows dla funkcji SSPR, zostały wdrożone na serwerze lub oddzielnym komputerze klienckim.
 
-Ten scenariusz wymaga posiadania licencji CAL programu MIM dla usługi użytkownikom, jak i subskrypcji usługi Azure MFA.
+Ten scenariusz wymaga posiadania licencji CAL programu MIM dla użytkowników oraz subskrypcji usługi Azure MFA.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Przygotowanie programu MIM do pracy z uwierzytelnianiem wieloskładnikowym
 Skonfiguruj synchronizację programu MIM do obsługi resetowania haseł i odblokowywania kont. Aby uzyskać więcej informacji, zobacz [Instalowanie dodatków i rozszerzeń usługi FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Instalowanie funkcji SSPR usługi FIM](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Bramy uwierzytelniania SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) i [Przewodnik po laboratorium testowym funkcji SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
@@ -79,9 +79,9 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Rejestrowanie dostawcy uwierzytelniania wieloskładnikowego na platformie Azure
 
-1.  Tworzenie [dostawcę usługi MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Utwórz [dostawcę usługi MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2. Otwórz zgłoszenie do pomocy technicznej i zażądać bezpośredni zestaw SDK dla programu ASP.net 2.0 C#. Zestaw SDK tylko zostanie udzielona bieżący użytkownicy programu MIM z usługą MFA, ponieważ bezpośredni zestaw SDK jest przestarzała. Nowi klienci powinna przyjąć następnej wersji programu MIM, która integruje się z serwera usługi MFA.
+2. Otwórz przypadek pomocy technicznej i zażądaj bezpośredniego zestawu SDK dla C#ASP.NET 2,0. Zestaw SDK zostanie udostępniony tylko bieżącym użytkownikom programu MIM z uwierzytelnianiem MFA, ponieważ zestaw Direct SDK został uznany za przestarzały. Nowi klienci powinni przyjąć następną wersję programu MIM, która będzie integrowana z serwerem usługi MFA.
 
 3. Skopiuj wynikowy plik ZIP do każdego systemu, w którym jest zainstalowana usługa MIM.  Należy pamiętać, że plik ZIP zawiera klucz używany do uwierzytelniania w usłudze Azure MFA.
 
@@ -99,7 +99,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
     ![Obraz kodu pliku pf_auth.cs](media/MIM-SSPR-pFile.png)
 
-6.  W **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, otwórz plik: **MfaSettings**.xml.
+6.  W folderze **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service** otwórz następujący plik: **MfaSettings**.xml.
 
 7.  Skopiuj wartości z parametrów `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` w pliku pf_aut.cs do odpowiednich elementów xml w pliku MfaSettings.xml.
 
@@ -125,7 +125,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 4.  Wybierz pozycję **Phone Gate** lub **One-Time Password SMS Gate**, kliknij przycisk **Wybierz**, a następnie kliknij przycisk **OK**.
 
-Uwaga: Jeśli używasz serwera Azure MFA lub innego dostawcy, która powoduje wygenerowanie hasła jednorazowego, upewnij się, w polu Długość skonfigurowanych powyżej tę samą długość jak wygenerowany przez dostawcę usługi MFA.  To długość musi być 6 dla serwera Azure MFA.  Serwer usługi Azure MFA generuje również swój własny tekst komunikatu, więc jest ignorowana, wiadomości SMS.
+Uwaga: Jeśli korzystasz z serwera usługi Azure MFA lub innego dostawcy, który generuje hasło jednorazowe, upewnij się, że pole Długość skonfigurowane powyżej ma taką samą długość jak wygenerowane przez dostawcę usługi MFA.  Ta długość musi wynosić 6 dla serwera usługi Azure MFA.  Serwer usługi Azure MFA generuje również swój własny tekst komunikatu, aby wiadomość SMS z tekstem jest ignorowana.
 
 Użytkownicy w organizacji mogą teraz rejestrować się w celu resetowania haseł.  W trakcie tego procesu będą oni wprowadzać swoje numery telefonów służbowych lub komórkowych, aby umożliwić systemowi ustanawianie połączeń telefonicznych z nimi (lub wysyłanie do nich wiadomości SMS).
 
@@ -192,7 +192,7 @@ Instalując dodatki i rozszerzenia programu MIM na komputerze przyłączonym do 
 
 4.  Po pomyślnym uwierzytelnieniu użytkownik będzie mógł skorzystać z dwóch opcji: zachowanie bieżącego hasła lub ustawienie nowego hasła.
 
-5.  ! [MIM ac
-6.  Liczba pomyślnie odblokowanego image](media/MIM-SSPR-account-unlock.JPG)
+5.  ! [MIM AC
+6.  Liczba odblokowanych obrazów sukcesu] (Media/MIM-SSPR-account-unlock. JPG)
 
 6.  Jeśli użytkownik wybierze opcję resetowania hasła, będzie musiał wpisać nowe hasło dwa razy i kliknąć przycisk **Dalej**, aby zmienić hasło.

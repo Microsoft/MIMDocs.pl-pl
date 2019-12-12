@@ -12,18 +12,18 @@ ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4838e9e8a495866902a78e713bb3b226eaf9def1
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379815"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518827"
 ---
 # <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
 
 Usługa Privileged Access Management nie ma wymagań sprzętowych poza wymaganiami jej bazowych platform oprogramowania. Po prostu upewnij się, że masz wystarczającą ilość pamięci lub miejsca na dysku i łączność sieciową.
 
 > [!IMPORTANT]
-> Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Go nie ma na celu zademonstrowania, wydajność, skalowalność i wysoką dostępność. Nie reprezentuje w zalecanej topologii wdrożenia dla dużych przedsiębiorstw i środowisk produkcyjnych.
+> Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Nie jest przeznaczona do zademonstrowania wydajności, skalowalności ani wysokiej dostępności. Nie reprezentuje ona zalecanej topologii wdrażania dla dużych przedsiębiorstw lub środowisk produkcyjnych.
 
 ## <a name="installing-from-software-packages"></a>Instalowanie z pakietów oprogramowania
 
@@ -35,7 +35,7 @@ Następujące oprogramowanie można pobrać z witryny TechNet Evaluation Center 
 
 Następujące oprogramowanie można pobrać z witryny GitHub:
 
-- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): zawiera przykładową aplikację sieci web interfejsu API REST
+- [PAMSamplePortal](https://github.com/Azure/identity-management-samples): zawiera przykładową aplikację sieci Web dla interfejsu API REST
 
 ## <a name="required-software"></a>Wymagane oprogramowanie
 
@@ -52,7 +52,7 @@ Jeśli nie masz licencji dla systemu Windows, programu SQL Server lub systemu Wi
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
 
-### <a name="microsoft-download-center"></a>Microsoft Download Center (Centrum pobierania Microsoft)
+### <a name="microsoft-download-center"></a>Centrum pobierania firmy Microsoft
 
 - [Program SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
 - [SharePoint Foundation 2013 SP1 i jego wymagania wstępne](https://www.microsoft.com/download/details.aspx?id=42039)

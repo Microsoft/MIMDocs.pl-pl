@@ -12,11 +12,11 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358222"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516649"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
 Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyślnie nie może zarejestrować karty inteligentnej na tym komputerze. Poniższa procedura umożliwia obejście tego ograniczenia.
@@ -49,7 +49,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     4.  Edytuj plik o nazwie AppxManifest.xml.
 
-    5.  W elemencie &lt;Identity&gt; zmodyfikuj wartość atrybutu Publisher zgodnie z podmiotem certyfikatu podpisywania, np. "CN=ABCD"
+    5.  W elemencie &lt;Identity&gt; zmodyfikuj wartość atrybutu wydawcy na temat certyfikatu podpisywania, np. "CN = ABCD"
 
         Podmiot w tym elemencie powinien być taki sam jak podmiot w certyfikacie podpisywania używanym do podpisania aplikacji.
 

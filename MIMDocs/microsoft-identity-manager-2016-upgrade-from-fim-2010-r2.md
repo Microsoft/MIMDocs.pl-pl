@@ -12,11 +12,11 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56952166"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519660"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Uaktualnienie z programu Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 2.  Na każdym serwerze, na którym są zainstalowane składniki programu FIM 2010 R2 — np. *CORPIDM* — zaloguj się jako użytkownik Contoso\Administrator. W tym przykładzie wdrożenia do uaktualnienia programu FIM 2010 R2 do programu **MIM** niezbędne są prawa administracyjne.
 
-3.  Pobierz i rozpakuj pliki oprogramowania MIM.  Jeśli nie masz tego oprogramowania, zobacz [licencjonowania programu Microsoft Identity Manager i pliki do pobrania](microsoft-identity-manager-licensing.md).
+3.  Pobierz i rozpakuj pliki oprogramowania MIM.  Jeśli nie masz tego oprogramowania, zobacz [Microsoft Identity Manager Licencjonowanie i pobieranie](microsoft-identity-manager-licensing.md).
 
 ## <a name="upgrade-the-synchronization-service"></a>Uaktualnianie usługi synchronizacji
 
@@ -133,13 +133,13 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     ![Obraz przedstawiający konfigurowanie portalu i usługi programu MIM](media/MIM-UpgSP10.png)
 
-13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Dalej**.
+13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Next** (Dalej).
 
-14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Dalej**.
+14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Next** (Dalej).
 
 ## <a name="install-the-mim-password-registration-portal"></a>Instalowanie portalu rejestracji haseł programu MIM
 
-1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Dalej**.
+1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Next** (Dalej).
 
 2. Skonfiguruj możliwość używania usługi i portalu przez klientów i użytkowników końcowych.
 
@@ -159,7 +159,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Dalej**.
+    4.  Kliknij przycisk **Next** (Dalej).
 
 4. Na następnym ekranie konfiguracji rejestracji haseł programu MIM:
 
@@ -179,7 +179,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Dalej**.
+    4.  Kliknij przycisk **Next** (Dalej).
 
 2. Na następnym ekranie konfiguracji resetowania haseł programu MIM:
 
@@ -197,6 +197,6 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
 4. Pamiętaj, że **Usługa programu Forefront Identity Manager** została uruchomiona ponownie.
 
-Uwaga: Jeśli FIM Add-ins and Extensions aktualnie są wdrażane na komputerach użytkowników dla usługi SSPR, nie Konfiguruj nowych bram telefonicznych usługi MFA dla resetowania haseł, dopóki wszystkie dodatki programu FIM i rozszerzenia zostały uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
+Uwaga: jeśli na komputerach użytkowników są wdrożone dodatki i rozszerzenia programu FIM dla usługi SSPR, nie konfiguruj nowych bram telefonicznych usługi MFA na potrzeby resetowania haseł, dopóki wszystkie dodatki i rozszerzenia programu FIM nie zostaną uaktualnione do programu MIM 2016.  Ponieważ dodatki i rozszerzenia programu FIM 2010 i FIM 2010 R2 nie rozpoznają nowych bram, zwracają błąd uniemożliwiający użytkownikom ukończenie resetowania hasła.
 
 Instrukcje dotyczące uaktualniania programu Microsoft Identity Manager 2016 SP1 można znaleźć w artykule [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Pakiet aktualizacji programu Microsoft Identity Manager 2016 Service Pack 1)

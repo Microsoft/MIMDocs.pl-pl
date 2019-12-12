@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379909"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518214"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 
@@ -186,7 +186,7 @@ Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplika
 
     Upewnij się, że zmienna **CompatibilityLevel** jest ustawiona na wartość *14*. Jeśli zmienna zwraca wartość *15*, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
 
-2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Operacja wyłączy stan wyświetlania po stronie serwera SharePoint i zadanie programu SharePoint **Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)**.
+2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Operacja wyłączy stan wyświetlania po stronie serwera SharePoint i zadanie programu SharePoint **Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)** .
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;

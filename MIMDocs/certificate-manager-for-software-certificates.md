@@ -12,11 +12,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e9454643f425a6bd306c2828479129312d5a5d4f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358369"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516635"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
@@ -25,7 +25,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
-2.  Kliknij menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**.
+2.  Kliknij przycisk **pliku**, a następnie kliknij przycisk **Dodaj/Usuń przystawkę**.
 
 3.  Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
 
@@ -65,7 +65,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     7.  Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**.
 
-    8.  W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)**, a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
+    8.  W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)** , a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
 
     9. Kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, kliknij polecenie **Nowy**, a następnie kliknij pozycję **Szablon certyfikatu do wystawienia**.
 

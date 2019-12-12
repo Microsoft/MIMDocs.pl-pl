@@ -12,11 +12,11 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380055"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518077"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
 
@@ -260,7 +260,7 @@ Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następuj�
     - **Usuwanie wszystkich obiektów podrzędnych**
     - **Odczyt wszystkich właściwości**
     - **Zapis wszystkich właściwości**
-    - **Migrowanie historii SID** kliknij **dalej** następnie **Zakończ**.
+    - **Migrowanie historii SID** Kliknij przycisk **dalej** , a następnie **Zakończ**.
 
 11. Ponownie kliknij prawym przyciskiem myszy domenę **priv.contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
 12. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
@@ -289,7 +289,7 @@ Jeśli nie masz jeszcze stacji roboczej służącej do wykonywania konserwacji z
 
 ### <a name="install-windows-81-or-windows-10-enterprise"></a>Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise
 
-Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *„PRIVWKSTN”*.
+Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *„PRIVWKSTN”* .
 
 1. Użyj ustawień ekspresowych podczas instalacji.
 
