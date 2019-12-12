@@ -12,17 +12,17 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: bdf34be4841b1a911fdb61673e5a3855e66e7320
-ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73568060"
 ---
 # <a name="mim-2016-sp2-upgrade--from-forefront-identity--or-microsoft-identity-manager"></a>Uaktualnienie programu MIM 2016 SP2 z tożsamości Forefront lub Microsoft Identity Manager
 
 Organizacje mogą przeprowadzić uaktualnienie do Microsoft Identity Manager 2016 SP2 ze starszych wersji Microsoft Identity Manager lub programu Forefront Identity Manager.  Każda sekcja w tym artykule obejmuje obsługiwaną ścieżkę uaktualnienia.
 
-Dostępnych jest kilka opcji uaktualniania. Jeśli korzystasz już z programu MIM 2016 i nie musisz odświeżać podstawowej platformy (Windows Server, SQL, SharePoint, SCSM DW) ani uruchamiać usług programu MIM przy użyciu kont usług zarządzanych przez grupę, a nie korzystasz z pakietów językowych programu MIM, najprostszą opcją będzie w miejscu instalacja uaktualnienia/poprawki (msp). W przeciwnym razie zalecana jest pełna instalacja.
+Dostępnych jest kilka opcji uaktualniania. Jeśli korzystasz już z programu MIM 2016 i nie musisz odświeżać podstawowej platformy (Windows Server, SQL, SharePoint, SCSM DW) ani uruchamiać usług programu MIM przy użyciu kont usług zarządzanych przez grupę, a nie używasz pakietów językowych programu MIM, najprostszą opcją będzie instalacja uaktualnienia/poprawek w miejscu (msp). W przeciwnym razie zalecana jest pełna instalacja.
 
 > [!IMPORTANT]
 > Zapoznaj się z sekcją [wymagania wstępne dotyczące oprogramowania](prepare-server-ws2016.md#software-prerequisites) przed zainstalowaniem programu MIM 2016 SP2
