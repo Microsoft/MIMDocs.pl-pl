@@ -10,16 +10,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6c3a2d87037a818a9a8784b0d4a7b86227fcaef4
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690781"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684061"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
-> Z powodu powiadomienia o zaniechaniu korzystania z platformy Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów aż do daty wycofania 14 listopada 2018. Nowi klienci i obecni klienci nie będą mogli pobrać zestawu SDK już za pośrednictwem klasycznego portalu Azure. Aby pobrać pakiet poświadczeń usługi MFA, należy skontaktować się z działem pomocy technicznej platformy Azure. <br> Zespół programistyczny firmy Microsoft pracuje nad zmianami w usłudze MFA poprzez integrację z zestawem SDK serwera MFA.  Ten element zostanie uwzględniony w nadchodzącej wersji poprawki. w tym celu zobacz [historię](../reference/version-history.md) poprawek dla anonsów. 
+> Ze względu na powiadomienie o zaniechaniu korzystania z usługi Azure Multi-Factor Authentication Software Development Kit, zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów aż do daty wycofania 14 listopada 2018. Nowi klienci i obecni klienci nie będą mogli pobrać zestawu SDK usługi Azure MFA już za pośrednictwem klasycznego portalu Azure. Aby uzyskać informacje na temat korzystania z serwera usługi Azure MFA, zobacz [Korzystanie z serwera usługi Azure MFA w usłudze PAM lub SSPR](../working-with-mfaserver-for-mim.md).
+
+
 
 
 Podczas konfigurowania roli funkcji PAM można wybrać sposób autoryzowania użytkowników, którzy zażądali aktywowania roli. Możliwości implementowane przez działanie autoryzacji funkcji PAM to:
@@ -48,13 +50,17 @@ W tej sekcji skonfigurujesz dostawcę usługi Azure MFA w Microsoft Azure Active
 
 2.  Kliknij przycisk **Nowy** na dole po lewej stronie ekranu.
 
-3.  Kliknij pozycję **App Services > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
+3.  Kliknij pozycję **Usługi aplikacji > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
 
 4.  W polu **Nazwa** wprowadź wartość **PAM**, a w polu Model zastosowania wybierz pozycję Za każdego włączonego użytkownika. Jeśli masz już katalog usługi Azure AD, wybierz go. Na koniec kliknij pozycję **Utwórz**.
 
 ## <a name="downloading-the-azure-mfa-service-credentials"></a>Pobieranie poświadczeń usługi Azure MFA
 
-Następnie zostanie wygenerowany plik zawierający materiał uwierzytelniania dla funkcji PAM służący do kontaktowania się z usługą Azure MFA.
+> [!IMPORTANT]
+> Zestaw SDK usługi Azure MFA nie jest już dostępny. Aby uzyskać informacje na temat korzystania z serwera usługi Azure MFA, zobacz [Korzystanie z serwera usługi Azure MFA w usłudze PAM lub SSPR](../working-with-mfaserver-for-mim.md) .
+
+
+Wcześniej Wygenerowano plik, który zawiera materiał uwierzytelniania dla usługi PAM, aby skontaktować się z usługą Azure MFA.
 
 1. Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
@@ -140,7 +146,7 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 
 1.  Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator globalny usługi Azure AD.
 
-2.  Wybierz pozycję **Active Directory** w menu Portalu Azure, a następnie wybierz kartę **Dostawcy usługi MFA**.
+2.  Wybierz pozycję **Active Directory** w menu witryny Azure Portal, a następnie wybierz kartę **Dostawcy usługi MFA**.
 
 3.  Wybierz dostawcę usługi Azure MFA używanego na potrzeby funkcji PAM, a następnie kliknij pozycję **Zarządzaj**.
 

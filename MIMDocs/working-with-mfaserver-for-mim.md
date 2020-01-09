@@ -1,6 +1,6 @@
 ---
-title: Użyj usługi Azure Serwer Multi-Factor Authentication SDK, aby aktywować scenariusze PAM lub SSPR | Microsoft Docs
-description: Skonfiguruj zestaw Azure Serwer Multi-Factor Authentication SDK jako drugą warstwę zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management i samoobsługowego resetowania hasła.
+title: Użyj usługi Azure Serwer Multi-Factor Authentication, aby aktywować scenariusze PAM lub SSPR | Microsoft Docs
+description: Skonfiguruj Serwer Multi-Factor Authentication platformy Azure jako drugą warstwę zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management i samoobsługowego resetowania hasła.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -9,20 +9,20 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 39ebec3002f488077cfda28a5780b0c78c19f363
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517660"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684095"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Korzystanie z usługi Azure Serwer Multi-Factor Authentication w celu aktywowania PAM lub SSPR
-W poniższym dokumencie opisano sposób konfigurowania serwera usługi Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy uaktywniają role w programie uprawnienia Access Management lub Samoobsługowe resetowanie hasła.
+W poniższym dokumencie opisano sposób konfigurowania serwera usługi Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management lub samoobsługowego resetowania hasła.
 
 > [!IMPORTANT]
-> Z powodu powiadomienia o zaniechaniu korzystania z platformy Azure Multi-Factor Authentication Software Development Kit. Zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów aż do daty wycofania 14 listopada 2018. Nowi klienci i obecni klienci nie będą mogli pobrać zestawu SDK już za pośrednictwem klasycznego portalu Azure. Aby pobrać pakiet poświadczeń usługi MFA, należy skontaktować się z działem pomocy technicznej platformy Azure. <br> Zespół programistyczny firmy Microsoft pracuje nad zmianami w usłudze MFA poprzez integrację z usługą Azure Serwer Multi-Factor Authentication SDK.
+> Ze względu na powiadomienie o zaniechaniu korzystania z usługi Azure Multi-Factor Authentication Software Development Kit, zestaw SDK usługi Azure MFA będzie obsługiwany dla istniejących klientów aż do daty wycofania 14 listopada 2018. Nowi klienci i obecni klienci nie będą mogli pobrać zestawu SDK już za pośrednictwem klasycznego portalu Azure. Aby pobrać pakiet poświadczeń usługi MFA, należy skontaktować się z działem pomocy technicznej platformy Azure.
 
-W poniższym artykule opisano aktualizację konfiguracji i kroki umożliwiające proste przełączenie z zestawu SDK usługi Azure MFA do usługi Azure Serwer Multi-Factor Authentication SDK, gdy zostanie on uwzględniony w nadchodzącej poprawce, zobacz [historię wersji](./reference/version-history.md) dla anonsów. 
+W poniższym artykule opisano aktualizację konfiguracji i kroki umożliwiające przejście z zestawu Azure MFA SDK do usługi Azure Serwer Multi-Factor Authentication.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -47,7 +47,7 @@ Zaloguj się do [Azure Portal](https://portal.azure.com/) i Pobierz serwer usłu
 Użyj linku **Generuj poświadczenia aktywacji, aby zainicjować korzystanie** z poświadczeń aktywacji. Po wygenerowaniu Zapisz do późniejszego użycia.
 
 ### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Krok 3. Instalowanie usługi Azure Serwer Multi-Factor Authentication
-Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) go.  Twoje poświadczenia aktywacji będą wymagane. 
+Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) go.  Twoje poświadczenia aktywacji będą wymagane. 
 
 ### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Krok 4. Tworzenie aplikacji sieci Web usług IIS, która będzie hostować zestaw SDK
 1. Otwórz Menedżera usług IIS ![działające z-mfaserver-for-mim_iis.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG) PNG
@@ -87,9 +87,9 @@ Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/en-us/azure/active-d
 > Aby przywrócić ustawienie Zamień pliku mfasettings. XML na plik kopii zapasowej w kroku 2
 
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="see-also"></a>Zobacz także
 
--    [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Korzystanie z niestandardowego interfejsu API Multi-Factor Authentication w celu aktywowania usługi PAM lub SSPR](Working-with-custommfaserver-for-mim.md)
 - [Historia wersji programu MIM](./reference/version-history.md)
