@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
+ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329440"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756173"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Wdrażanie Microsoft Identity Manager 2016 z dodatkiem SP2
 Artykuły w tej sekcji zawierają instrukcje krok po kroku dotyczące wdrażania programu Microsoft Identity Manager (MIM) 2016 w scenariuszach samoobsługi użytkownika końcowego na serwerze, na którym nie wdrożono jeszcze usługi FIM ani programu MIM.
@@ -30,7 +30,8 @@ Proces wdrażania programu MIM jest bardzo podobny do procesu jego poprzednika, 
 
 ## <a name="first-prepare-a-domain"></a>Po pierwsze: przygotowanie domeny
 Program MIM współpracuje z usługą Active Directory (AD), dlatego należy wykonać następujące kroki, aby skonfigurować kontroler domeny usługi AD.
-- [Konfiguracja domeny](preparing-domain.md)
+- [Konfiguracja domeny](preparing-domain.md) lub
+- [Konfiguracja domeny dla kont usług zarządzanych przez grupę](preparing-domain-gmsa.md)
 
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Dalej: przygotowywanie serwerów zarządzania tożsamościami
@@ -49,4 +50,3 @@ Po skonfigurowaniu domeny i serwera można zainstalować składniki programu MIM
 - [Usługa synchronizacji programu MIM](install-mim-sync.md)
 - [Usługa i portal MIM](install-mim-service-portal.md)
 - [Synchronizowanie baz danych usług Active Directory i MIM](install-mim-sync-ad-service.md)
-
