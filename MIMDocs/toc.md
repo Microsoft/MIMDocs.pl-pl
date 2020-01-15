@@ -92,7 +92,6 @@
 ### [Przewodnik dotyczący wydajności eksportu](https://technet.microsoft.com/library/hh322883)
 ## Raportowanie
 ### [Raportowanie przy użyciu raportów niestandardowych oraz rozszerzalność](https://technet.microsoft.com/library/jj133861)
-## [Oprogramowanie do obsługi tożsamości firmy Microsoft: wydanie publiczne — wersje kompilacji](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Tematy pomocy](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Dokumentacja dla deweloperów
 ### [Dokumentacja dla deweloperów programu MIM 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
