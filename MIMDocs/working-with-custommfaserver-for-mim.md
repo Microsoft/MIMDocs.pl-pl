@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 9ce531fb3f6f9c831ecdb716f006f947611871e6
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690743"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256601"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Używanie niestandardowego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli PAM lub w SSPR
 
@@ -22,7 +22,7 @@ Klienci Azure AD — wersja Premium lub Azure MFA mogą zintegrować usługę Az
 
 Klienci programu MIM mają dwie dodatkowe opcje:
 
- - Użyj niestandardowego dostawcy dostarczania jednorazowych haseł, który jest stosowany tylko w scenariuszu programu MIM SSPR i udokumentowany w przewodniku [konfigurowania funkcji samoobsługowego resetowania haseł za pomocą bramy SMS OTP](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - Użyj niestandardowego dostawcy dostarczania jednorazowych haseł, który jest stosowany tylko w scenariuszu programu MIM SSPR i udokumentowany w przewodniku [konfigurowania funkcji samoobsługowego resetowania haseł za pomocą bramy SMS OTP](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10))
  - Użyj niestandardowego dostawcy usługi telefonii usługi uwierzytelniania wieloskładnikowego. Dotyczy to zarówno scenariuszy SSPR i PAM programu MIM, opisanych w tym artykule.
 
 W tym artykule opisano sposób korzystania z programu MIM z niestandardowym dostawcą usługi uwierzytelniania wieloskładnikowego za pośrednictwem interfejsu API i zestawu integracyjnego integracji opracowanego przez klienta.  
@@ -32,7 +32,7 @@ W tym artykule opisano sposób korzystania z programu MIM z niestandardowym dost
 Aby można było używać niestandardowego interfejsu API dostawcy Multi-Factor Authentication z programem MIM, potrzebne są:
 
 - Numery telefonów wszystkich użytkowników kandydujących
-- Poprawka programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowsza — zobacz [historię wersji](reference/version-history.md) dla anonsów
+- Poprawka programu MIM 4.5.202.0 lub nowsza — zobacz [historię wersji](reference/version-history.md) dla anonsów
 - Usługa MIM skonfigurowana dla SSPR lub PAM
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Podejście przy użyciu niestandardowego kodu uwierzytelniania wieloskładnikowego
@@ -156,6 +156,6 @@ Po ponownym uruchomieniu usługi należy użyć SSPR i/lub PAM do zweryfikowania
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Historia wersji programu MIM](./reference/version-history.md)

@@ -9,12 +9,12 @@ ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fcf9ec8387761b6f154a95d6100ef54a12d4caf8
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: dd023e2152693f56dd9a86dc66d9c1a8ef4ec64e
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518944"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256584"
 ---
 # <a name="deprecated-features"></a>Przestarzałe funkcje
 
@@ -27,7 +27,7 @@ W tym artykule opisano przestarzałe funkcje programu Microsoft Identity Manager
 
 ## <a name="bhold"></a>BHOLD 
 
-Firma Microsoft nie zaleca klientom uruchamiania nowych wdrożeń składników Microsoft pakietu BHOLD Suite. Istniejące wdrożenia programu pakietu BHOLD będą nadal obsługiwane. Usługa Azure AD zapewnia teraz [przeglądy dostępu](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) , które zastępują niektóre funkcje kampanii zaświadczania pakietu BHOLD.
+Firma Microsoft nie zaleca klientom uruchamiania nowych wdrożeń składników Microsoft pakietu BHOLD Suite. Istniejące wdrożenia programu pakietu BHOLD będą nadal obsługiwane. Usługa Azure AD zapewnia teraz [przeglądy dostępu](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) , które zastępują niektóre funkcje kampanii zaświadczania pakietu BHOLD.
 
 ## <a name="certificate-management"></a>Zarządzanie certyfikatami 
 
@@ -47,7 +47,7 @@ Firma Microsoft nie zaleca klientom uruchamiania nowych wdrożeń składników M
 | **Kategoria**                | **Przestarzała funkcja**              | **Zastąpienie i komentarz**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Konfiguracja programowa | Interfejs konfiguracji usługi sieci Web | Możliwość skonfigurowania usługi synchronizacji FIM za pomocą usługi FIM zostanie usunięta w następnej wersji.                                                          |
-| Agenci zarządzania           | Wbudowana MAs                        | Następujące MAs zostały usunięte w programie MIM 2016: </br> 1. * * MA dla zarządzania certyfikatami programu FIM </br>2. * * MA dla programu Lotus Notes</br> 3. * * MA dla SAP R/3 </br> Programy Lotus Notes i SAP R/3 MAs zostały zastąpione nowymi wersjami. Aby uzyskać więcej informacji, zobacz [Najnowsza wersja łącznika historia wersji & pobieranie](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history)                                                                                                                                                                                                                                              |
+| Agenci zarządzania           | Wbudowana MAs                        | Następujące MAs zostały usunięte w programie MIM 2016: </br> 1. * * MA dla zarządzania certyfikatami programu FIM </br>2. * * MA dla programu Lotus Notes</br> 3. * * MA dla SAP R/3 </br> Programy Lotus Notes i SAP R/3 MAs zostały zastąpione nowymi wersjami. Aby uzyskać więcej informacji, zobacz [Najnowsza wersja łącznika historia wersji & pobieranie](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history)                                                                                                                                                                                                                                              |
 | Agenci zarządzania           | ECMA1                               | Struktura rozszerzalności ECMA1/XMA została zastąpiona przez ECMA 2,0. Wymagane jest zaktualizowanie istniejących agentów zarządzania ECMA1 przy użyciu łączników ECMA 2.0.                                                                                                                                          |
 | Agenci zarządzania           | Uruchomione łączniki poza procesem      | Ta funkcja nie zostanie zastąpiona. Usługa synchronizacji zawsze wywoła łącznik w tym samym procesie. Jest odpowiedzialny za łącznik do uruchamiania i zarządzania innym procesem. |
 | Agenci zarządzania           | Konfiguruj nazwę wyświetlaną partycji    | Ta funkcja nie zostanie zastąpiona. Ta opcja była używana tylko w celu zapewnienia alternatywnej nazwy partycji w interfejsach usługi WMI.                                                                                                                                                                       |

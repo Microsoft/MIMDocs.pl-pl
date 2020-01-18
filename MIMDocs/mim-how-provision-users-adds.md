@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519912"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256618"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
@@ -27,7 +27,7 @@ Ten przewodnik przeprowadzi Cię przez główne bloki konstrukcyjne związane z 
 ## <a name="before-you-begin"></a>Zanim rozpoczniesz
 
 
-W tej części znajdziesz informacje dotyczące zakresu tego dokumentu. Ogólnie rzecz biorąc, przewodniki „Jak mogę” są kierowane do czytelników, którzy mają już podstawowe doświadczenie z procesem synchronizacji obiektów z programem MIM zgodnie z informacjami zawartymi w powiązanych [przewodnikach wprowadzających](http://go.microsoft.com/FWLink/p/?LinkId=190486).
+W tej części znajdziesz informacje dotyczące zakresu tego dokumentu. Ogólnie rzecz biorąc, przewodniki „Jak mogę” są kierowane do czytelników, którzy mają już podstawowe doświadczenie z procesem synchronizacji obiektów z programem MIM zgodnie z informacjami zawartymi w powiązanych [przewodnikach wprowadzających](https://go.microsoft.com/FWLink/p/?LinkId=190486).
 
 ### <a name="audience"></a>Odbiorcy
 
@@ -39,9 +39,9 @@ Ten przewodnik jest przeznaczony dla profesjonalistów z dziedziny IT, którzy m
 
 Dokument ten zakłada, że masz dostęp do uruchomionego wystąpienia programu MIM oraz że masz doświadczenie w konfigurowaniu prostych scenariuszy synchronizacji zgodnie z informacjami podanymi w następujących dokumentach:
 
--   [Wprowadzenie do synchronizacji danych wejściowych](http://go.microsoft.com/FWLink/p/?LinkId=189652)
+-   [Wprowadzenie do synchronizacji danych wejściowych](https://go.microsoft.com/FWLink/p/?LinkId=189652)
 
--   [Wprowadzenie do synchronizacji danych wyjściowych](http://go.microsoft.com/FWLink/p/?LinkId=189653)
+-   [Wprowadzenie do synchronizacji danych wyjściowych](https://go.microsoft.com/FWLink/p/?LinkId=189653)
 
 Zawartość tego dokumentu została opracowana jako rozszerzenie tych dokumentów wprowadzających.
 
@@ -62,7 +62,7 @@ Szacunkowe wymagania czasowe zakładają, że środowisko testowe jest już skon
 ### <a name="getting-support"></a>Uzyskiwanie pomocy technicznej
 
 
-Jeśli masz pytania dotyczące zawartości niniejszego dokumentu lub masz ogólne opinie, które chcesz omówić, możesz opublikować wiadomość na [forum programu Forefront Identity Manager 2010](http://go.microsoft.com/FWLink/p/?LinkId=189654).
+Jeśli masz pytania dotyczące zawartości niniejszego dokumentu lub masz ogólne opinie, które chcesz omówić, możesz opublikować wiadomość na [forum programu Forefront Identity Manager 2010](https://go.microsoft.com/FWLink/p/?LinkId=189654).
 
 ## <a name="scenario-description"></a>Opis scenariusza
 
@@ -88,7 +88,7 @@ Poniższa ilustracja przedstawia wymagane środowisko.
 Możesz uruchomić wszystkie składniki na jednym komputerze.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji dotyczących konfigurowania programu MIM, zobacz [Przewodnik instalacji programu FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> Aby uzyskać więcej informacji dotyczących konfigurowania programu MIM, zobacz [Przewodnik instalacji programu FIM](https://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Lista składników scenariusza
 
@@ -124,7 +124,7 @@ W tej sekcji znajdziesz instrukcje dotyczące zasobów spoza środowiska program
 ### <a name="step-1-create-the-ou"></a>Krok 1. Tworzenie jednostki organizacyjnej
 
 
-Potrzebujesz jednostki organizacyjnej jako kontenera dla aprowizowanego przykładowego użytkownika. Aby uzyskać więcej informacji o tworzeniu jednostek organizacyjnych, zobacz [Tworzenie nowej jednostki organizacyjnej](http://go.microsoft.com/FWLink/p/?LinkId=189655).
+Potrzebujesz jednostki organizacyjnej jako kontenera dla aprowizowanego przykładowego użytkownika. Aby uzyskać więcej informacji o tworzeniu jednostek organizacyjnych, zobacz [Tworzenie nowej jednostki organizacyjnej](https://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Utwórz jednostkę organizacyjną o nazwie MIMObjects w usługach AD DS.
 
@@ -136,7 +136,7 @@ W ramach scenariusza opisywanego w tym przewodniku potrzebujesz dwóch kont uży
 
 - **FIMMA** — używanego przez agenta zarządzania usługi FIM Service.
 
-W obu przypadkach wystarczy utworzyć regularne konta użytkowników. Więcej informacji o konkretnych wymaganiach dla obu kont można znaleźć w dalszej części tego dokumentu. Aby uzyskać więcej informacji o tworzeniu użytkowników, zobacz [Tworzenie nowego konta użytkownika](http://go.microsoft.com/FWLink/p/?LinkId=189656).
+W obu przypadkach wystarczy utworzyć regularne konta użytkowników. Więcej informacji o konkretnych wymaganiach dla obu kont można znaleźć w dalszej części tego dokumentu. Aby uzyskać więcej informacji o tworzeniu użytkowników, zobacz [Tworzenie nowego konta użytkownika](https://go.microsoft.com/FWLink/p/?LinkId=189656).
 
 
 ## <a name="configuring-the-fim-synchronization-service"></a>Konfiguracja usługi FIM Synchronization Service
@@ -154,7 +154,7 @@ W ramach scenariusza opisywanego w tym przewodniku musisz utworzyć dwóch agent
 
 ### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Krok 3. Tworzenie agenta zarządzania Fabrikam ADMA
 
-Podczas konfigurowania agenta zarządzania dla usług AD DS należy określić konto, które jest wykorzystywane przez agenta zarządzania w ramach wymiany danych z usługami AD DS. Należy użyć normalnego konta użytkownika. Niemniej jednak, aby zaimportować dane z usług AD DS, konto musi mieć uprawnienia do sondowania zmian z kontroli DirSync. Jeśli chcesz, aby agent zarządzania eksportował dane do usług AD DS, musisz przyznać odpowiednie uprawnienia dla konta w docelowych jednostkach organizacyjnych. Aby uzyskać więcej informacji na ten temat, zobacz [Konfigurowanie konta ADMA](http://go.microsoft.com/FWLink/p/?LinkId=189657).
+Podczas konfigurowania agenta zarządzania dla usług AD DS należy określić konto, które jest wykorzystywane przez agenta zarządzania w ramach wymiany danych z usługami AD DS. Należy użyć normalnego konta użytkownika. Niemniej jednak, aby zaimportować dane z usług AD DS, konto musi mieć uprawnienia do sondowania zmian z kontroli DirSync. Jeśli chcesz, aby agent zarządzania eksportował dane do usług AD DS, musisz przyznać odpowiednie uprawnienia dla konta w docelowych jednostkach organizacyjnych. Aby uzyskać więcej informacji na ten temat, zobacz [Konfigurowanie konta ADMA](https://go.microsoft.com/FWLink/p/?LinkId=189657).
 
 Aby utworzyć użytkownika w usługach AD DS, wymaga się przeniesienia nazwy wyróżniającej obiektu na zewnątrz. Ponadto dobrym rozwiązaniem jest przeniesienie imienia, nazwiska i nazwy wyświetlanej, aby zapewnić możliwość wykrycia obiektów.
 
@@ -163,7 +163,7 @@ W usługach AD DS nadal typowe dla użytkowników jest korzystanie z atrybutu sA
 > [!Note]
 > Upewnij się, że wartość określona jako unicodePwd jest zgodna z zasadami haseł docelowych usług AD DS.
 
-Po ustawieniu hasła dla kont AD DS należy również utworzyć konto jako włączone konto. Możesz to zrobić, ustawiając atrybut userAccountControl. Aby uzyskać więcej informacji o atrybucie userAccountControl, zobacz [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory).
+Po ustawieniu hasła dla kont AD DS należy również utworzyć konto jako włączone konto. Możesz to zrobić, ustawiając atrybut userAccountControl. Aby uzyskać więcej informacji o atrybucie userAccountControl, zobacz [Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189658) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory).
 
 W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla scenariusza, które należy skonfigurować.
 
@@ -187,7 +187,7 @@ Więcej informacji znajduje się w następujących tematach pomocy:
 
 Podczas konfigurowania agenta zarządzania usługi FIM Service musisz określić konto, które jest wykorzystywane przez agenta zarządzania w wymianie danych z usługą FIM Service.
 
-Należy użyć normalnego konta użytkownika. Konto musi być tym samym kontem, które zostało określone podczas instalacji programu MIM. Aby uzyskać informacje o skrypcie, którego możesz użyć do określenia nazwy konta FIMMA podanego podczas instalacji i do przetestowania, czy to konto jest nadal ważne, zobacz Using Windows PowerShell to Do a [FIM MA Account Configuration Quick Test](http://go.microsoft.com/FWLink/p/?LinkId=189659) (Korzystanie z programu Windows PowerShell do wykonania szybkiego testu konfiguracji konta FIM MA).
+Należy użyć normalnego konta użytkownika. Konto musi być tym samym kontem, które zostało określone podczas instalacji programu MIM. Aby uzyskać informacje o skrypcie, którego możesz użyć do określenia nazwy konta FIMMA podanego podczas instalacji i do przetestowania, czy to konto jest nadal ważne, zobacz Using Windows PowerShell to Do a [FIM MA Account Configuration Quick Test](https://go.microsoft.com/FWLink/p/?LinkId=189659) (Korzystanie z programu Windows PowerShell do wykonania szybkiego testu konfiguracji konta FIM MA).
 
 W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla scenariusza, które należy skonfigurować. Utwórz agenta zarządzania w oparciu o informacje podane w poniższej tabeli.  
 
@@ -231,7 +231,7 @@ Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią
 > 
 > 
 > [!Important]
->  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Możesz to zrobić, uruchamiając skrypt przy użyciu programu Windows PowerShell, aby włączyć obsługę administracyjną (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+>  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Możesz to zrobić, uruchamiając skrypt przy użyciu programu Windows PowerShell, aby włączyć obsługę administracyjną (https://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurowanie usługi FIM Service
@@ -243,7 +243,7 @@ W ramach scenariusza opisanego w tym przewodniku należy skonfigurować zasady a
 
 Celem tych zasad aprowizacji jest wprowadzenie grup do zakresu reguły synchronizacji ruchu wychodzącego użytkowników usługi AD. Przenosząc zasób do zakresu reguły synchronizacji, włączasz aparat synchronizacji, aby aprowizować zasób do usług AD DS zgodnie z konfiguracją.
 
-Aby skonfigurować usługę FIM, przejdź do® programu Windows Internet Explorer, aby http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
+Aby skonfigurować usługę FIM, przejdź do® programu Windows Internet Explorer, aby http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](https://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Krok 6. Tworzenie reguły synchronizacji
 
@@ -266,7 +266,7 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 
 
-| Relacja ||
+| Relationship ||
 |------------|---------|
 | Utwórz zasób w systemie zewnętrznym                                                                         | Prawda                                                                        |                                                           
 | Włącz anulowanie aprowizacji                                                                                      | Fałsz                                                                       |                                                           
@@ -278,14 +278,14 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 | Początkowe przepływy atrybutów wychodzących        | |                                                             |
 |-------------------|---------------------- |---------------|
-| Zezwalaj na wartości null                 | Lokalizacja docelowa                                                                 | Źródło                                                    |
+| Zezwalaj na wartości null                 | Lokalizacja docelowa                                                                 | Obiekt źródłowy                                                    |
 | fałsz                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
 | fałsz                       | userAccountControl                                                          | **Stała:** 512                                         |
 | fałsz                                                                     | unicodePwd                    | Stała: P\@\$\$W0rd                                    |
 
 | Trwałe przepływy atrybutów wychodzących  |                                                                     |                                                           |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Zezwalaj na wartości null                                                                                                | Lokalizacja docelowa                                                                 | Źródło                                                    |
+| Zezwalaj na wartości null                                                                                                | Lokalizacja docelowa                                                                 | Obiekt źródłowy                                                    |
 | fałsz                                                                                                      | sAMAccountName                                                              | accountName                                               |
 | fałsz                                                                                                      | displayName                                                                 | displayName                                               |
 | fałsz                                                                                                      | givenName                                                                   | firstName                                                 |
@@ -357,7 +357,7 @@ W poniższej tabeli zawarto listę profilów przebiegu, które są częścią fa
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Pełny import          |
 | 2                                                                                                             |                                                       | Pełna synchronizacja |
-| 3                                                                                                             |                                                       | Eksportowanie               |
+| 3                                                                                                             |                                                       | Eksportuj               |
 | 4                                                                                                             |                                                       | Import zmian         |
 |                                                                                                               |                                                       |                      |
 | 5                                                                                                             | Fabrikam ADMA                                         | Pełny import          |
@@ -417,7 +417,7 @@ Aby sprawdzić, czy użytkownik jest członkiem zestawu Wszyscy wykonawcy, otwó
 
 Aby sprawdzić, czy użytkownik znajduje się w zakresie reguły synchronizacji, Otwórz stronę właściwości użytkownika i przejrzyj oczekiwany atrybut lista reguł na karcie aprowizacji. Atrybut listy oczekiwanych reguł powinien być listą użytkowników usługi AD
 
-użytkownika usługi AD. Poniższy zrzut ekranu przedstawia przykład atrybutu Lista oczekiwanych reguł.
+użytkownika usługi AD. Poniższy zrzut ekranu przedstawia przykład atrybutu lista oczekiwanych reguł.
 
 ![Stan reguły synchronizacji](media/how-provision-users-adds/image023.jpg)
 
@@ -459,7 +459,7 @@ Aby wykonać te zadania, uruchamia się następujące profile przebiegu.
 | Fabrikam FIMMA   | 1. eksport <br/> 2. import Delta       |
 
 
-Po zaimportowaniu z bazy danych usługi FIM, Britta Simon i obiekt ExpectedRuleEntry, który łączy Britta z regułą synchronizacji wychodzącej użytkownika usługi AD, są przemieszczane w obszarze łącznika Fabrikam FIMMA. Podczas przeglądania właściwości Britta w obszarze łącznika obok wartości atrybutów, które zostały skonfigurowane w portalu programu FIM, można również znaleźć prawidłowe odwołanie do oczekiwanego obiektu wpisu reguły. Poniższy zrzut ekranu pokazuje przykład takiej sytuacji.
+Po zaimportowaniu z bazy danych usługi FIM, Britta Simon i obiekt ExpectedRuleEntry, który łączy Britta z regułą synchronizacji wychodzącej użytkownika usługi AD, są przemieszczane w obszarze łącznika Fabrikam FIMMA. Podczas przeglądania właściwości Britta w obszarze łącznika obok wartości atrybutów, które zostały skonfigurowane w portalu programu FIM, można również znaleźć prawidłowe odwołanie do oczekiwanego obiektu wpisu reguły. Poniższy zrzut ekranu przedstawia przykład tego elementu.
 
 ![Właściwości obiektu obszaru łącznika](media/how-provision-users-adds/image025.jpg)
 
@@ -481,7 +481,7 @@ Podczas następującej operacji eksportowania Fabrikam FIMMA stan reguły synchr
 
 ![Zastosowana reguła synchronizacji](media/how-provision-users-adds/image028.jpg)
 
-Ponieważ nowy obiekt został aprowizowany do obszaru łącznika ADMA, w tym agencie zarządzania powinna znaleźć się jedna operacja eksportowania oczekująca na dodanie. Używając skryptu opracowanego w tym celu, możesz zobaczyć zgłoszoną operację eksportowania oczekującą na dodanie dla łącznika Fabrikam ADMA. Aby użyć skryptu, zobacz [Using Windows PowerShell to Display the Export State of a Management Agent](http://go.microsoft.com/FWLink/p/?LinkId=189664) (Korzystanie z programu Windows PowerShell w celu wyświetlenia stanu operacji eksportowania agenta zarządzania).
+Ponieważ nowy obiekt został aprowizowany do obszaru łącznika ADMA, w tym agencie zarządzania powinna znaleźć się jedna operacja eksportowania oczekująca na dodanie. 
 
 ![Oczekujące operacje eksportowania dla agenta zarządzania](media/how-provision-users-adds/image029.jpg)
 
@@ -507,10 +507,10 @@ Celem tego dokumentu jest wprowadzenie do głównych bloków konstrukcyjnych zwi
 Podczas testowania konfiguracji bardzo prawdopodobne jest, że dojdzie do usunięcia i ponownego utworzenia nowych obiektów testowych. Dla obiektów z
 
 uzupełnionym atrybutem ExpectedRulesList może to spowodować powstanie oddzielonych obiektów ERE.
-Aby uzyskać opis sposobu usuwania tych obiektów ze środowiska testowego, zobacz [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](http://go.microsoft.com/FWLink/p/?LinkId=189667) (Metoda usuwania oddzielonych obiektów ExpectedRuleEntry ze środowiska).
+Aby uzyskać opis sposobu usuwania tych obiektów ze środowiska testowego, zobacz [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](https://go.microsoft.com/FWLink/p/?LinkId=189667) (Metoda usuwania oddzielonych obiektów ExpectedRuleEntry ze środowiska).
 
 W typowym scenariuszu synchronizacji, obejmującym usługi AD DS jako cel synchronizacji, program MIM nie jest autorytatywny dla wszystkich atrybutów obiektu. Na przykład podczas zarządzania obiektami użytkowników w usługach AD DS przy użyciu programu FIM należy jako minimum przekazać atrybuty domeny i objectSID przez agenta zarządzania usług AD DS.
-Atrybuty nazwy konta, domeny i objectSID są wymagane, jeśli chcesz umożliwić użytkownikowi logowanie do portalu programu FIM. Aby uzupełnić te atrybuty z usługi AD DS, wymagana jest dodatkowa reguła synchronizacji ruchu przychodzącego dla obszaru łącznika usług AD DS. W przypadku zarządzania obiektami z wieloma źródłami wartości atrybutów należy upewnić się, że pierwszeństwo przepływu atrybutów zostało skonfigurowane prawidłowo. Jeśli pierwszeństwo przepływu atrybutów nie jest skonfigurowane prawidłowo, aparat synchronizacji zablokuje uzupełnianie wartości atrybutów. Więcej informacji o pierwszeństwie przepływu atrybutów znajduje się w artykule [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów).
+Atrybuty nazwy konta, domeny i objectSID są wymagane, jeśli chcesz umożliwić użytkownikowi logowanie do portalu programu FIM. Aby uzupełnić te atrybuty z usługi AD DS, wymagana jest dodatkowa reguła synchronizacji ruchu przychodzącego dla obszaru łącznika usług AD DS. W przypadku zarządzania obiektami z wieloma źródłami wartości atrybutów należy upewnić się, że pierwszeństwo przepływu atrybutów zostało skonfigurowane prawidłowo. Jeśli pierwszeństwo przepływu atrybutów nie jest skonfigurowane prawidłowo, aparat synchronizacji zablokuje uzupełnianie wartości atrybutów. Więcej informacji o pierwszeństwie przepływu atrybutów znajduje się w artykule [About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów).
 
 <a name="see-also"></a>Zobacz też
 =========
@@ -518,20 +518,18 @@ Atrybuty nazwy konta, domeny i objectSID są wymagane, jeśli chcesz umożliwić
 <a name="other-resources"></a>Inne zasoby
 ---------------
 
-[Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory)
+[Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory)
 
-[About Reference Attributes](http://go.microsoft.com/FWLink/p/?LinkId=189671) (Informacje o atrybutach odwołania)
+[Informacje o przetwarzaniu atrybutów odwołania](https://go.microsoft.com/FWLink/p/?LinkId=189671)
 
-[How Can I Manage My FIM MA Account](http://go.microsoft.com/FWLink/p/?LinkId=189672) (Jak zarządzać kontem FIM MA)
+[Jak zarządzać kontem usługi FIM](https://go.microsoft.com/FWLink/p/?LinkId=189672)
 
-[Detecting Nonauthoritative Accounts – Part 1: Envisioning](http://go.microsoft.com/FWLink/p/?LinkId=189673) (Wykrywanie kont nieautorytatywnych — część 1: planowanie)
+[Wykrywanie kont nieautorytatywnych — część 1: Planowanie](https://go.microsoft.com/FWLink/p/?LinkId=189673)
 
-[The Poor Man’s Version of a Connector Detection Mechanism](http://go.microsoft.com/FWLink/p/?LinkId=189674) (Przeciętna wersja mechanizmu wykrywania łącznika)
+[Jak wykryć łączniki](https://go.microsoft.com/FWLink/p/?LinkId=189674)
 
-[Konfigurowanie konta ADMA](http://go.microsoft.com/FWLink/p/?LinkId=189657)
+[Jak skonfigurować konto ADMA](https://go.microsoft.com/FWLink/p/?LinkId=189657)
 
-[A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](http://go.microsoft.com/FWLink/p/?LinkId=189667) (Metoda usuwania oddzielonych obiektów ExpectedRuleEntry ze środowiska)
+[About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów)
 
-[About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów)
-
-[Informacje o operacjach eksportowania](http://go.microsoft.com/FWLink/p/?LinkId=189676)
+[Informacje o eksportach](https://social.technet.microsoft.com/wiki/contents/articles/1861.understanding-exports-in-ilm-2007.aspx)
