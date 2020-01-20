@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 139c58510117ad422529a4ff0facd23040023713
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64521050"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256635"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Współpraca między firmami (B2B) w usłudze Azure AD z Microsoft Identity Manager (MIM) 2016 z dodatkiem SP1 przy użyciu serwera proxy aplikacji platformy Azure
 ============================================================================================================================
@@ -31,8 +31,6 @@ Kilka założeń w konfiguracji B2B przy użyciu programu MIM i usługi Azure se
 -   Wykonano już instrukcje zawarte w artykule na temat pobierania i instalowania [łącznika grafu](microsoft-identity-manager-2016-connector-graph.md).
 
 -   Azure AD Connect skonfigurowany do synchronizowania użytkowników i grup w usłudze Azure AD.
-
--   Azure AD Connect skonfigurowany do synchronizowania grup pakietu Office w celu sterowania aplikacjami [z powrotem do lokalnego AD DS](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
 -   Już skonfigurowano łączniki serwera proxy aplikacji i grupy łączników, jeśli nie możesz odwiedzić [tutaj](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) , aby zainstalować i skonfigurować
 
@@ -63,13 +61,13 @@ Domyślnie Azure AD Connect założono, że użytkownicy niebędący administrat
 W związku z tym użytkownicy przeniesieni do AD DS przez program MIM z usługi Azure AD muszą być przechowywani w taki sposób, aby usługa Azure AD nie próbowała synchronizować tych użytkowników z powrotem z usługą Azure AD.
 Jednym ze sposobów jest utworzenie nowej jednostki organizacyjnej w AD DS i skonfigurowanie Azure AD Connect do wykluczenia tej jednostki organizacyjnej.  
 
-Więcej informacji można znaleźć w temacie [Azure AD Connect Sync: Skonfiguruj](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering)filtrowania. 
+Więcej informacji można znaleźć w temacie [Azure AD Connect Sync: Configure Filter](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
  
 
 ## <a name="create-the-azure-ad-application"></a>Tworzenie aplikacji usługi Azure AD 
 
 
-Uwaga: Przed utworzeniem w programie MIM zsynchronizuj agenta zarządzania dla łącznika grafu, upewnij się, że przewodnik został poddany przeglądowi wdrożenia [łącznika grafu](microsoft-identity-manager-2016-connector-graph.md)i utworzenia aplikacji z identyfikatorem klienta i wpisem tajnym.
+Uwaga: przed utworzeniem w programie MIM zsynchronizuj agenta zarządzania dla łącznika grafu, upewnij się, że został on sprawdzony w celu wdrożenia [łącznika grafu](microsoft-identity-manager-2016-connector-graph.md)i utworzenia aplikacji z identyfikatorem klienta i wpisem tajnym.
 Upewnij się, że aplikacja została autoryzowana dla co najmniej jednego z następujących uprawnień: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` lub `Directory.ReadWrite.All`. 
 
 ## <a name="create-the-new-management-agent"></a>Utwórz nowego agenta zarządzania
@@ -183,7 +181,7 @@ Następnie wykonaj następujące szczegóły
 
 Nazwa atrybutu: **userPrincipalName**
 
-Typ atrybutu: **Ciąg (z indeksem)**
+Typ atrybutu: **ciąg (z indeksem)**
 
 Indeksowane = **prawda**
 
@@ -199,7 +197,7 @@ W następnych krokach będzie wymagane dodanie minimalnej konfiguracji do usług
 
 Więcej szczegółów można znaleźć tutaj dla konfiguracji <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> — jak zapewnić użytkownikom możliwość AD DS
 
-### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Reguła synchronizacji: Zaimportuj użytkownika-gościa do funkcji MV usługi synchronizacji z Azure Active Directory<br>
+### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Reguła synchronizacji: zaimportuj użytkownika-gościa do funkcji MV usługi synchronizacji z Azure Active Directory<br>
 
 Przejdź do portalu MIM, wybierz pozycję reguły synchronizacji, a następnie kliknij przycisk Nowy.  Utwórz regułę synchronizacji ruchu przychodzącego dla przepływu B2B za pośrednictwem łącznika Graf.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
@@ -291,7 +289,7 @@ Następnie Zapraszamy użytkownika, a następnie uruchamiasz reguły synchroniza
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
 
-## <a name="optional-application-proxy-for-b2b-guests-logging-into-mim-portal"></a>Opcjonalnie: Serwer proxy aplikacji do logowania gościa w portalu programu MIM
+## <a name="optional-application-proxy-for-b2b-guests-logging-into-mim-portal"></a>Opcjonalnie: serwer proxy aplikacji dla Gości B2B logowanie do portalu MIM
 
 Teraz, gdy utworzyliśmy reguły synchronizacji w programie MIM. W konfiguracji serwera proxy aplikacji Zdefiniuj użycie usługi Cloud, aby zezwolić na KCD na serwerze proxy aplikacji.
 Dodatkowo dodano użytkownika ręcznie do pozycji Zarządzaj użytkownikami i grupami. Opcje, które nie pokazują użytkownika, dopóki nie nastąpi utworzenie w programie MIM, aby dodać gościa do grupy Office po zainicjowaniu obsługi administracyjnej wymaga nieco więcej konfiguracji, które nie zostały omówione w tym dokumencie.
@@ -316,6 +314,6 @@ Po skonfigurowaniu programu należy zalogować użytkownika B2B i zobaczyć apli
 
 [Dokumentacja funkcji programu FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Jak zapewnić bezpieczny dostęp zdalny do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[Jak zapewnić bezpieczny, zdalny dostęp do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Pobierz Łącznik Microsoft Identity Manager dla Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Pobierz Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
