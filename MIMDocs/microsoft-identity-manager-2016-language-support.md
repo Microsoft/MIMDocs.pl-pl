@@ -38,7 +38,7 @@ Pakiet językowy usługi Microsoft MIM i Portal obsługuje następujące języki
 |       Chorwacki        |          hr-HR           |      Kadry      |
 |         czeski         |          cs-CZ           |      cs      |
 |        Duński         |          Akcelerator deweloperski w wersji DK           |      da      |
-|         Holenderski         |          NL-NL           |      nl      |
+|         Niderlandzki         |          NL-NL           |      nl      |
 |       Estoński        |          et-EE           |      staw      |
 |        Francuski         |          fr-FR           |      fr      |
 |        Fiński        |          fi-FI           |      fi      |
@@ -73,7 +73,7 @@ Zarządzanie certyfikatami firmy Microsoft obsługuje następujące 9 języków.
 |-----|-----|-----|-----|
 |Chiński uproszczony|zh-CN|zh-Hans|
 |Chiński (Tajwan)|zh-TW|zh-Hant|
-|Holenderski|NL-NL|nl|
+|Niderlandzki|NL-NL|nl|
 |Francuski|fr-FR|fr|
 |Niemiecki|de-DE.|de|
 |Włoski|IT-IT|it|
@@ -86,7 +86,7 @@ Nowoczesne aplikacje zarządzania certyfikatami firmy Microsoft obsługują nast
 
 |Język | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
-|Holenderski|NL-NL|nl|
+|Niderlandzki|NL-NL|nl|
 |Chiński uproszczony|zh-CN|zh-Hans|
 |Chiński (Tajwan)|zh-TW|zh-Hant|
 |czeski|cs-CZ|cs|
