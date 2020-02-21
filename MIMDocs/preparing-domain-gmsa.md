@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: a74f4074d9a0cf8378fd4972b7f51f723bd2f1c6
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: be5dc1e8615f56d3157a78891e80897e446eafab
+ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756274"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77527926"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Skonfiguruj domenę dla scenariusza kont usług zarządzanych przez grupę (gMSA)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75756274"
 
 Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi Active Directory (AD). Usługa AD powinna już być zainstalowana, a w środowisku musi istnieć kontroler dla domeny, którą możesz administrować.  W tym artykule opisano sposób konfigurowania kont usług zarządzanych przez grupę w tej domenie do użycia przez program MIM.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Przegląd
 
 Konta usług zarządzane przez grupę eliminują konieczność okresowego zmieniania haseł kont usług. W wersji programu MIM 2016 SP2 następujące składniki programu MIM mogą mieć skonfigurowane konta gMSA do użycia podczas procesu instalacji:
 
@@ -109,7 +109,7 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
 4.  Dodaj nazwy SPN, aby włączyć uwierzytelnianie Kerberos dla kont usług.
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
+    setspn -S http/mim.contoso.com contoso\svcMIMAppPool
     ```
 
 5.  Upewnij się, że rejestrujesz następujące rekordy "A" DNS w celu rozpoznawania nazw (przy założeniu, że usługa MIM, Portal programu MIM, Resetowanie hasła i witryny sieci Web rejestracji haseł będą hostowane na tym samym komputerze)
