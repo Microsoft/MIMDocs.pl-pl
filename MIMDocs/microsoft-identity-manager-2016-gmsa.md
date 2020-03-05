@@ -1,24 +1,24 @@
 ---
 title: Konwersja usług specyficznych dla programu MIM do gMSA | Microsoft Docs
 description: Temat opisujący podstawowe kroki konfigurowania gMSA.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 49216a2d2077dd1be83f17719e996a20abb61cf8
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64520838"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289517"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konwersja usług specyficznych dla programu MIM do gMSA
 
 W tym przewodniku przedstawiono podstawowe kroki konfigurowania gMSA dla obsługiwanych usług. Proces konwersji do gMSA jest łatwy po wstępnej konfiguracji środowiska.
 
-Wymagana poprawka: \<link do najnowszej KB\>
+Wymagana poprawka: [4.5.26.0 lub nowsza](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Obsługiwane:
 
@@ -142,7 +142,7 @@ Pierwszy krok na kontrolerze domeny systemu Windows
 
     -   Upewnij się, że Zaktualizowano delegowanie gMSA i nazwę SPN
         -   Set-ADServiceAccount-Identity \<konto\>-ServicePrincipalNames \@{Add = "\<SPN\>"}
-        -   Delegacja
+        -   Delegowanie
             -   Set-ADServiceAccount-Identity \<gsmaaccount\>-TrustedForDelegation \$true
         -   Delegowanie ograniczone
             -   \$delspns = "http/MIM", "http/MIM. contoso. com"
@@ -163,7 +163,9 @@ Pierwszy krok na kontrolerze domeny systemu Windows
 4.  Uruchom plik MSI z podwyższonym poziomem uprawnień usługi MIM i wybierz pozycję Zmień.
 
 5.  Na stronie "Konfigurowanie połączenia z serwerem głównym" zaznacz pole wyboru Użyj innego konta dla programu Exchange (dla kont zarządzanych). W tym miejscu będziesz mieć możliwość użycia starego konta, które ma skrzynkę pocztową, lub użyj skrzynki pocztowej w chmurze.
-
+    >[!NOTE]
+    >W przypadku wybrania opcji **Użyj usługi Exchange Online** w celu umożliwienia usłudze MIM przetworzenia odpowiedzi na żądania zatwierdzenia z dodatku programu MIM w programie Outlook należy ustawić klucz rejestru HKLM\SYSTEM\CurrentControlSet\Services\FIMService wartość PollExchangeEnabled na 1 po instalacji.
+    
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
 6.  Na stronie "Konfigurowanie konta usługi MIM" wpisz konto usługi z \$ symbol na końcu. Wpisz również hasło do konta usługi poczty E-mail. Hasło konta usługi powinno być wyłączone.
