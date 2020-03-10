@@ -4,12 +4,12 @@ ms.topic: landing-page
 ms.prod: microsoft-identity-manager
 title: Dokumentacja programu Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: Dowiedz się, jak korzystać z programu Microsoft Identity Manager.
-ms.openlocfilehash: d73275383fef6de6ad3d4697c55cc9f60b2ef7dd
-ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
+ms.openlocfilehash: 3e0e4488c9115533cf4e5fcd7f6a7f8e0d6b56a0
+ms.sourcegitcommit: c23b1ad0af5e781a883e0ff475922da1f2642eaa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77527892"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946379"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Dokumentacja programu Microsoft Identity Manager
 
@@ -41,7 +41,7 @@ Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_learn-about.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -58,7 +58,7 @@ Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_deploy.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -86,7 +86,7 @@ Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -104,7 +104,7 @@ Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
