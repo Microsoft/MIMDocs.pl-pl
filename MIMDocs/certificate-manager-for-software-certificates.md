@@ -4,19 +4,19 @@ description: Informacje o sposobie użycia Menedżera certyfikatów do tworzenia
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e9454643f425a6bd306c2828479129312d5a5d4f
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516635"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042104"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
 Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do rejestrowania i odnawiania certyfikatów oprogramowania. Warto zauważyć, że w pewnym momencie zostanie wyświetlony monit o zezwolenie na operację związaną z certyfikatem, i jest to normalne.
@@ -25,7 +25,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
-2.  Kliknij przycisk **pliku**, a następnie kliknij przycisk **Dodaj/Usuń przystawkę**.
+2.  Kliknij menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**.
 
 3.  Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
 

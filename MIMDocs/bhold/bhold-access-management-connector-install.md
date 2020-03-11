@@ -4,17 +4,17 @@ description: Moduł łącznika pakietu BHOLD obsługuje początkową i ciągłą
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 60886a84c6105e94a2cd3d42f17b86b2d69c8c0a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ae9cc0bb4c63089c6733c06b7b035b2b9566fdd0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516057"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79041867"
 ---
 # <a name="access-management-connector-installation"></a>Instalacja łącznika zarządzania dostępem
 
@@ -22,7 +22,7 @@ Moduł łącznika zarządzania dostępem do pakietu BHOLD Suite obsługuje pocz�
 
 ## <a name="access-management-connector-software-requirements"></a>Wymagania programowe łącznika zarządzania dostępem
 
-Przed zainstalowaniem modułu łącznika zarządzania dostępem należy zainstalować program Microsoft .NET Framework 4. Aby uzyskać więcej informacji na temat .NET Framework 4 i instrukcje dotyczące instalacji, zobacz [stronę główną Microsoft .NET](http://www.microsoft.com/net).
+Przed zainstalowaniem modułu łącznika zarządzania dostępem należy zainstalować program Microsoft .NET Framework 4. Aby uzyskać więcej informacji na temat .NET Framework 4 i instrukcje dotyczące instalacji, zobacz [stronę główną Microsoft .NET](https://www.microsoft.com/net).
 Łącznik zarządzania dostępem należy zainstalować na komputerze z uruchomioną usługą synchronizacji FIM programu MIM.
 
 ## <a name="access-management-connector-setup"></a>Konfiguracja łącznika zarządzania dostępem

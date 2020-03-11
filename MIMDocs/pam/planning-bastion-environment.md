@@ -4,25 +4,25 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518865"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043957"
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 
 Dodanie środowiska bastionu z dedykowanym lasem administracyjnym do usługi Active Directory umożliwia organizacjom łatwe zarządzanie kontami administracyjnymi, stacjami roboczymi i grupami w środowisku mającym silniejsze kontrole zabezpieczeń niż ich istniejące środowisko produkcyjne.
 
-Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Architektura ta pozwala również korzystać z funkcji uwierzytelniania selektywnego w relacji zaufania jako metody ograniczenia możliwości logowania (i ujawnienia poświadczeń) tylko do grupy autoryzowanych hostów. W sytuacjach, w których od lasu produkcyjnego oczekuje się podniesienia poziomu bezpieczeństwa bez zwiększania kosztu i złożoności projektu związanego z całkowitą przebudową infrastruktury, środowisko lasu administracyjnego może zwiększyć bezpieczeństwo środowiska produkcyjnego.
+Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Taka architektura umożliwia również korzystanie z funkcji selektywnego uwierzytelniania zaufania w celu ograniczania logowań (i widoczności poświadczeń) tylko do autoryzowanych hostów. W sytuacjach, w których żądany jest wyższy poziom gwarancji dla lasu produkcyjnego bez ponoszenia kosztów i wprowadzania złożoności pełnego ponownego tworzenia, las administracyjny może zapewnić środowisko, które zwiększa poziom gwarancji środowiska produkcyjnego.
 
 Oprócz dedykowanego lasu administracyjnego można użyć innych technik. Obejmują one ograniczanie widoczności poświadczeń administracyjnych, ograniczanie uprawnień ról użytkowników w tym lesie i zapewnianie, że zadania administracyjne nie są wykonywane na hostach używanych do standardowych działań użytkowników (na przykład korzystania z poczty e-mail i przeglądania sieci Web).
 
@@ -42,7 +42,7 @@ Zgodnie z [modelem warstwy](tier-model-for-partitioning-administrative-privilege
 
 Produkcyjny las *CORP* powinien ufać administracyjnemu lasowi *PRIV*, ale nie odwrotnie. Może to być zaufanie domeny lub zaufanie lasu. Domena lasu administracyjnego nie musi ufać zarządzanym domenom i lasom w celu zarządzania usługą Active Directory, ale dodatkowe aplikacje mogą wymagać dwukierunkowej relacji zaufania, walidacji zabezpieczeń i testowania.
 
-Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Aby uzyskać więcej informacji, zobacz [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Konfigurowanie selektywnych ustawień uwierzytelniania).
+Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Aby uzyskać więcej informacji, zobacz [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) (Konfigurowanie selektywnych ustawień uwierzytelniania).
 
 ## <a name="maintain-logical-separation"></a>Zachowanie separacji logicznej
 
@@ -64,7 +64,7 @@ Aby zapewnić, że na środowisko bastionu nie będą miały wpływu istniejące
 
 Ponieważ administrowanie aplikacjami zostanie przeniesione do środowiska bastionu, rozważ, jak zapewnić wystarczającą dostępność w celu spełnienia wymagań tych aplikacji. Te techniki to m.in.:
 
-- Wdrożenie Usług domenowych Active Directory na wielu komputerach w środowisku bastionu. Co najmniej dwie usługi są niezbędne w celu zapewnienia ciągłego uwierzytelniania nawet wtedy, gdy jeden serwer będzie tymczasowo uruchamiany ponownie w celu wykonania zaplanowanej konserwacji. W celu obsługi większych obciążeń lub zarządzania zasobami i administratorami w wielu regionach geograficznych mogą być wymagane dodatkowe komputery.
+- Wdrożenie usług Active Directory Domain Services na wielu komputerach w środowisku bastionu. Co najmniej dwie usługi są niezbędne w celu zapewnienia ciągłego uwierzytelniania nawet wtedy, gdy jeden serwer będzie tymczasowo uruchamiany ponownie w celu wykonania zaplanowanej konserwacji. W celu obsługi większych obciążeń lub zarządzania zasobami i administratorami w wielu regionach geograficznych mogą być wymagane dodatkowe komputery.
 
 - Przygotowanie kont awaryjnych w istniejącym lesie oraz dedykowany las administracyjny w razie awarii.
 
@@ -76,11 +76,11 @@ Ponieważ administrowanie aplikacjami zostanie przeniesione do środowiska basti
 
 Las administracyjny musi być skonfigurowany z najmniejszymi uprawnieniami na podstawie wymagań dotyczących administracji usługi Active Directory.
 
-- Kontom znajdującym się w lesie administracyjnym, które są używane do zarządzania środowiskiem produkcyjnym, nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani stacji roboczych i domen, które zawiera ten las.
+- Kontom w lesie administracyjnym używanym do administrowania środowiskiem produkcyjnym nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani znajdujących się w nim domen i stacji roboczych.
 
-- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Dodatkowa korzyść polega na zapewnieniu, że członkowie personelu z kontami administratora w środowisku produkcyjnym nie mogą złagodzić ograniczeń swoich kont, a przez to zwiększyć zagrożenia bezpieczeństwa dla organizacji.
+- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Pomaga to także zapewnić, że pracownicy z produkcyjnymi kontami administracyjnymi nie zmniejszą ograniczeń dotyczących własnych kont, co spowoduje zwiększenie ryzyka dla organizacji.
 
-- Las administracyjny powinien być zgodny z konfiguracją Menedżera zgodności zabezpieczeń firmy Microsoft dla domeny, w tym również z rygorystyczną konfiguracją protokołów uwierzytelniania.
+- W przypadku lasu administracyjnego należy stosować konfiguracje Menedżera zgodności zabezpieczeń firmy Microsoft (SCM, Security Compliance Manager) dla domeny, w tym silne konfiguracje protokołów uwierzytelniania.
 
 Podczas tworzenia środowiska bastionu przed zainstalowaniem programu Microsoft Identity Manager należy określić i utworzyć konta, które będą używane na potrzeby administracyjne w ramach tego środowiska. Dotyczy to następujących kont:
 
@@ -96,7 +96,7 @@ Wszystkie hosty, w tym kontrolery domeny, serwery i stacje robocze przyłączone
 
 - Aplikacje wymagane do wykonywania czynności administracyjnych należy wstępnie zainstalować na stacjach roboczych, aby konta ich używające nie musiały należeć do grupy administratorów lokalnych w celu zainstalowania tych aplikacji. Konserwacja kontrolera domeny może być zwykle przeprowadzona przy użyciu protokołu RDP i narzędzi administracji zdalnej serwera.
 
-- Hosty w lesie administracyjnym powinny być skonfigurowane pod kątem automatycznej instalacji aktualizacji zabezpieczeń. Może to powodować ryzyko przerywania operacji konserwacji kontrolera domeny, ale znacząco zmniejsza zagrożenie bezpieczeństwa związane z brakiem poprawek usuwających luki.
+- Na hostach lasu administracyjnego powinny być automatycznie stosowane aktualizacje zabezpieczeń. Mimo że może to spowodować ryzyko przerwania operacji obsługi kontrolera domeny, zapewnia to znaczące zmniejszenie zagrożeń bezpieczeństwa wynikających z luk w zabezpieczeniach, względem których nie zostały zastosowane poprawki.
 
 ### <a name="identify-administrative-hosts"></a>Identyfikowanie hostów administracyjnych
 

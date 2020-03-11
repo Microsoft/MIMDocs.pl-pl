@@ -4,17 +4,17 @@ description: Ten artykuł zawiera dokumenty przestarzałe programu MIM Identity 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: dd023e2152693f56dd9a86dc66d9c1a8ef4ec64e
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 009d0e99e2da445d4df35dc9de81b297a65fe2a3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256584"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044229"
 ---
 # <a name="deprecated-features"></a>Przestarzałe funkcje
 

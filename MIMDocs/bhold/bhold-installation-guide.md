@@ -4,17 +4,17 @@ description: Dokumentacja instalacji programu pakietu BHOLD SP1
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68238902"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042257"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Przewodnik instalacji programu Microsoft pakietu BHOLD Suite SP1 (6,0)
 
@@ -93,7 +93,7 @@ Aby uzyskać więcej informacji o SQL Server najlepszych rozwiązaniach, zobacz 
 ### <a name="trusted-certificates-list-update"></a>Aktualizacja listy zaufanych certyfikatów
 
 System Windows można skonfigurować pod kątem weryfikowania łańcuchów certyfikatów przed rozpoczęciem usługi. W takich systemach nie można uruchomić usługi, jeśli kod wykonywalny usługi został podpisany przy użyciu certyfikatu, który nie znajduje się na liście zaufanych certyfikatów (TCL) serwera. Oprogramowanie Microsoft pakietu BHOLD Suite z dodatkiem SP1 to kod podpisany przy użyciu łańcucha certyfikatów podpisywania kodu, który pochodzi z certyfikatu głównego urzędu certyfikacji firmy Microsoft 2010.
-System Windows można skonfigurować do pobierania certyfikatów głównych od firmy Microsoft przez połączenie internetowe. W odłączonym systemie system Windows Server zawiera jednak tylko te certyfikaty, które były obecne w programie głównym w danym momencie przed zwolnieniem systemu Windows. W wersjach systemu Windows Server starszych niż Windows Server 2010 te certyfikaty nie będą obejmować certyfikatu głównego wymaganego do sprawdzania poprawności łańcucha certyfikatów podpisywania kodu pakietu BHOLD Suite SP1. Jeśli zamierzasz zainstalować jeden lub więcej modułów Microsoft pakietu BHOLD Suite SP1 w systemie, który może nie mieć aktualnych TCL, musisz pobrać i zainstalować pakiet root-Update lub użyć zasady grupy, aby zainstalować pakiet root-Update, przed zainstalowaniem pakietu pakietu BHOLD Suite SP1 elementu. Aby uzyskać więcej informacji, zobacz [Członkowie programu certyfikatów głównych systemu Windows](http://support.microsoft.com/kb/931125).
+System Windows można skonfigurować do pobierania certyfikatów głównych od firmy Microsoft przez połączenie internetowe. W odłączonym systemie system Windows Server zawiera jednak tylko te certyfikaty, które były obecne w programie głównym w danym momencie przed zwolnieniem systemu Windows. W wersjach systemu Windows Server starszych niż Windows Server 2010 te certyfikaty nie będą obejmować certyfikatu głównego wymaganego do sprawdzania poprawności łańcucha certyfikatów podpisywania kodu pakietu BHOLD Suite SP1. Jeśli zamierzasz zainstalować jeden lub więcej modułów Microsoft pakietu BHOLD Suite SP1 w systemie, który może nie mieć aktualnych TCL, musisz pobrać i zainstalować pakiet root-Update lub użyć zasady grupy, aby zainstalować pakiet root-Update, przed zainstalowaniem pakietu pakietu BHOLD Suite SP1 elementu. Aby uzyskać więcej informacji, zobacz [Członkowie programu certyfikatów głównych systemu Windows](https://support.microsoft.com/kb/931125).
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>Instalowanie programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012/2016 — wymagany krok 
 

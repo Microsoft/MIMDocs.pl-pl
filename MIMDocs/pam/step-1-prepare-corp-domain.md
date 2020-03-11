@@ -4,19 +4,19 @@ description: Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościam
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: c21228dad923d80ab63c255c1184b7de04a0ff3d
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518181"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043736"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
@@ -47,7 +47,7 @@ Zainstaluj system Windows Server 2012 R2 lub Windows Server 2016 Technical Previ
 
 ### <a name="add-roles-to-establish-a-domain-controller"></a>Dodawanie ról w celu ustanowienia kontrolera domeny
 
-W tej sekcji dodasz role usług domenowych Active Directory (AD DS), serwera DNS i serwera plików (część sekcji Usługi plików i magazynu) i podwyższysz poziom tego serwera do kontrolera domeny nowego lasu contoso.local.
+W tej sekcji dodasz role usług Active Directory Domain Services (AD DS), serwera DNS i serwera plików (część sekcji Usługi plików i magazynu) i podwyższysz poziom tego serwera do kontrolera domeny nowego lasu contoso.local.
 
 > [!NOTE]  
 > Jeśli masz już domenę do użycia w formie domeny CORP, a domena ta używa systemu Windows Server 2012 R2 lub nowszego jako kontrolera domeny, możesz przejść do kroku [Tworzenie dodatkowych użytkowników i grup demonstracyjnych](#create-additional-users-and-groups-for-demonstration-purposes).
@@ -159,7 +159,7 @@ W tej sekcji skonfigurujesz ustawienia rejestru wymagane do migracji sIDHistory,
    Restart-Computer
    ```
 
-Operacja spowoduje ponowne uruchomienie kontrolera domeny, CORPDC. Aby uzyskać więcej informacji na temat tego ustawienia rejestru, zobacz temat [Sposób rozwiązywania problemów związanych z migracją sIDHistory między lasami przy użyciu narzędzia ADMTv2](http://support.microsoft.com/kb/322970).
+Operacja spowoduje ponowne uruchomienie kontrolera domeny, CORPDC. Aby uzyskać więcej informacji na temat tego ustawienia rejestru, zobacz temat [Sposób rozwiązywania problemów związanych z migracją sIDHistory między lasami przy użyciu narzędzia ADMTv2](https://support.microsoft.com/kb/322970).
 
 ## <a name="prepare-a-corp-workstation-and-resource"></a>Przygotowanie stacji roboczej CORP i zasobów
 

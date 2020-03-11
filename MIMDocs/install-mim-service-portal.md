@@ -4,19 +4,19 @@ description: Pobierz kroki konfigurowania i instalowania usługi i portalu progr
 keywords: ''
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 4604c17d3e58c57f9819aaa036dc12a669aed55d
-ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
+ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78289485"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042444"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
@@ -25,7 +25,7 @@ ms.locfileid: "78289485"
 > [Bazy danych synchronizacji »](install-mim-sync-ad-service.md)
  
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
 > - Hasło — <strong>Pass@word1</strong>
@@ -50,7 +50,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
     ![Obraz konfigurowania połączenia z bazą danych programu MIM](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Na stronie **Konfigurowanie połączenia z serwerem poczty**wprowadź nazwę serwera Exchange Server jako **serwer poczty** lub Użyj **skrzynki pocztowej usługi O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Dalej**.
+7. Na stronie **Konfigurowanie połączenia z serwerem poczty**wprowadź nazwę serwera Exchange Server jako **serwer poczty** lub Użyj **skrzynki pocztowej usługi O365**. Jeśli nie masz skonfigurowanego serwera poczty, użyj ciągu **localhost** jako nazwy serwera poczty i usuń zaznaczenie dwóch najwyższych pól wyboru. Kliknij przycisk **Next** (Dalej).
     >[!NOTE]
     >Program MIM 2016 z dodatkiem SP2 i nowsze: Jeśli używasz kont usług zarządzanych przez grupę, musisz zaznaczyć pole wyboru **Użyj innego użytkownika dla programu Exchange** , nawet jeśli nie planujesz korzystać z programu Exchange.
     

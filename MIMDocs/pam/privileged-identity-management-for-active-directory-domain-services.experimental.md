@@ -4,7 +4,7 @@ description: Usługa Privileged Access Management (PAM) ułatwia organizacjom og
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 03/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,14 +12,14 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
-ms.openlocfilehash: 40ed05c1f77cace74b86dc3a5675855993d4bc56
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: acec45a2843febd3821d9045336098cdeb4ddcf7
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518388"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043940"
 ---
-# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
+# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług Active Directory Domain Services
 
 Usługa Privileged Access Management (PAM) ułatwia organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
 
@@ -43,7 +43,7 @@ Usługa PAM utrudnia osobom atakującym spenetrowanie sieci i uzyskanie dostępu
 
 ## <a name="how-is-pam-set-up"></a>Konfiguracja usługi PAM
 
-Usługa PAM korzysta z zasady administrowania w miarę potrzeb, która jest powiązana z zasadą [wystarczających uprawnień administracyjnych (Just Enough Administration, JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). Technologia JEA jest zawarta w zestawie narzędzi programu Windows PowerShell, który udostępnia zestaw poleceń służących do wykonywania uprzywilejowanych działań oraz punkt końcowy, w którym administratorzy uzyskują autoryzację do uruchamiania tych poleceń. W ramach zasad JEA to administrator decyduje, jakie uprawnienia są wymagane do wykonywania danego zadania. Za każdym razem, gdy zachodzi potrzeba wykonania tego zadania przez kwalifikującego się użytkownika, jest włączane odpowiednie uprawnienie. Uprawnienia wygasają po upływie określonego czasu. Uniemożliwia to złośliwym użytkownikom przechwycenie uprawnień dostępu.
+Usługa PAM korzysta z zasady administrowania w miarę potrzeb, która jest powiązana z zasadą [wystarczających uprawnień administracyjnych (Just Enough Administration, JEA)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). Technologia JEA jest zawarta w zestawie narzędzi programu Windows PowerShell, który udostępnia zestaw poleceń służących do wykonywania uprzywilejowanych działań oraz punkt końcowy, w którym administratorzy uzyskują autoryzację do uruchamiania tych poleceń. W ramach zasad JEA to administrator decyduje, jakie uprawnienia są wymagane do wykonywania danego zadania. Za każdym razem, gdy zachodzi potrzeba wykonania tego zadania przez kwalifikującego się użytkownika, jest włączane odpowiednie uprawnienie. Uprawnienia wygasają po upływie określonego czasu. Uniemożliwia to złośliwym użytkownikom przechwycenie uprawnień dostępu.
 
 Konfiguracja i działanie usługi PAM obejmuje cztery kroki.
 

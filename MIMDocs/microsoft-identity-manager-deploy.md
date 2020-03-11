@@ -4,19 +4,19 @@ description: Pobierz pełną listę kroków związanych z wdrażaniem programu M
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/17/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: 5a80718b038a10bb8d746a86856b87d016783fd6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756173"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043192"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Wdrażanie Microsoft Identity Manager 2016 z dodatkiem SP2
 Artykuły w tej sekcji zawierają instrukcje krok po kroku dotyczące wdrażania programu Microsoft Identity Manager (MIM) 2016 w scenariuszach samoobsługi użytkownika końcowego na serwerze, na którym nie wdrożono jeszcze usługi FIM ani programu MIM.
@@ -40,9 +40,9 @@ Po utworzeniu i skonfigurowaniu domeny należy przygotować firmowy serwer zarz�
 Aby uzyskać więcej informacji na temat obsługiwanych platform, zobacz [obsługiwane platformy dla programu MIM 2016 lub nowszego](microsoft-identity-manager-2016-supported-platforms.md)
 
  Obejmuje to konfigurowanie następujących składników:
-- [Windows Server](prepare-server-ws2016.md)
+- [System Windows Server](prepare-server-ws2016.md)
 - [Program SQL Server](prepare-server-sql2016.md)
-- [SharePoint Server](prepare-server-sharepoint.md)
+- [Serwer programu SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcjonalnie)
 
 ## <a name="finally-install-microsoft-identity-manager-2016-sp2-components"></a>Na koniec: Zainstaluj składniki Microsoft Identity Manager 2016 SP2

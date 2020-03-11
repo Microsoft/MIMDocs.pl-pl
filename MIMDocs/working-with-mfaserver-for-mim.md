@@ -4,17 +4,17 @@ description: Skonfiguruj Serwer Multi-Factor Authentication platformy Azure jako
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 39ebec3002f488077cfda28a5780b0c78c19f363
-ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
+ms.openlocfilehash: 1dd87db01a5c1100c8206d82bedf96a8a5e702ad
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684095"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044314"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Korzystanie z usługi Azure Serwer Multi-Factor Authentication w celu aktywowania PAM lub SSPR
 W poniższym dokumencie opisano sposób konfigurowania serwera usługi Azure MFA jako drugiej warstwy zabezpieczeń, gdy użytkownicy aktywują role w Privileged Access Management lub samoobsługowego resetowania hasła.
@@ -87,9 +87,9 @@ Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/azure/active-directo
 > Aby przywrócić ustawienie Zamień pliku mfasettings. XML na plik kopii zapasowej w kroku 2
 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
--    [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Wprowadzenie do usługi Azure Serwer Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Korzystanie z niestandardowego interfejsu API Multi-Factor Authentication w celu aktywowania usługi PAM lub SSPR](Working-with-custommfaserver-for-mim.md)
 - [Historia wersji programu MIM](./reference/version-history.md)

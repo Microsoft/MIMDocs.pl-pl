@@ -4,17 +4,17 @@ description: Informacje dotyczące wdrażania usługi Privileged Access Manageme
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518517"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044025"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
 
@@ -36,7 +36,7 @@ Dla środowiska laboratorium wymagane są przynajmniej dwie maszyny wirtualne:
 > Jeśli nie ma już domeny „CORP” w środowisku laboratorium, dla tej domeny wymagany jest dodatkowy kontroler. Kontroler domeny „CORP” może obsługiwać system Windows Server 2016 lub Windows Server 2012 R2.
 
 
-Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](privileged-identity-management-for-active-directory-domain-services.md) **z wyjątkiem sytuacji wskazanych poniżej**:
+Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](privileged-identity-management-for-active-directory-domain-services.md)**z wyjątkiem sytuacji wskazanych poniżej**:
 
 - Podczas tworzenia nowej domeny CORP w trakcie wypełniania instrukcji w sekcji [Krok 1 — Przygotowanie kontrolera domeny CORP](step-1-prepare-corp-domain.md) można wybrać opcjonalną konfigurację domeny CORP do działania na poziomie funkcjonalności systemu Windows Server 2016. **Jeśli wybierzesz tę opcję, wprowadź następujące zmiany**:
 
@@ -50,7 +50,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
   - Zmiany opisane w instrukcjach „Konfigurowanie inspekcji” (element nr 8) i „Konfigurowanie ustawień rejestru” (element nr 10) są **zalecane, ale nie wymagane**, gdy kontrolery domen CORP i PRIV działają na poziomie funkcjonalności domeny systemu Windows Server 2016.
 
-- Jeśli zdecydujesz się używać Windows Server 2012 R2 jako systemu operacyjnego dla kontrolera domeny CORP, musisz zainstalować poprawki 2919442, 2919355 [i zaktualizować poprawkę 3155495](http://support.microsoft.com/kb/3156418) na kontrolerze domeny CORP.
+- Jeśli zdecydujesz się używać Windows Server 2012 R2 jako systemu operacyjnego dla kontrolera domeny CORP, musisz zainstalować poprawki 2919442, 2919355 [i zaktualizować poprawkę 3155495](https://support.microsoft.com/kb/3156418) na kontrolerze domeny CORP.
 
 - Wypełnij instrukcje w sekcji [Krok 2 — Przygotowanie kontrolera domeny PRIV](step-2-prepare-priv-domain-controller.md) z wyłączeniem następujących zmian:
 

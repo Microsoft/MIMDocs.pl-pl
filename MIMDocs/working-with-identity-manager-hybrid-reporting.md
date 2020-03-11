@@ -4,18 +4,18 @@ description: Dowiedz się, jak połączyć dane przechowywane lokalnie i w chmur
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: 18e4127b1d854a53734142bb58442627619491ef
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fd0efd3e3d5c42f4b67d0abd42f6dab8254573e5
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517515"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044348"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Współpraca z raportowaniem hybrydowym w programie Identity Manager
 
@@ -56,7 +56,7 @@ Wymagania dotyczące korzystania z funkcji raportowania hybrydowego programu Ide
 |                                      Azure AD Premium                                       |                                                                                                        Raportowanie hybrydowe jest funkcją Azure AD — wersja Premium i wymaga Azure AD — wersja Premium. </br>Aby uzyskać więcej informacji, zobacz [wprowadzenie do Azure AD — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Zapoznaj się z [bezpłatną 30-dniową wersją próbną Azure AD — wersja Premium](https://azure.microsoft.com/trial/get-started-active-directory/).                                                                                                         |
 |                     Musisz być administratorem globalnym usługi Azure AD                     |                                                                   Domyślnie tylko Administratorzy globalni mogą instalować i konfigurować agentów, aby rozpocząć pracę, uzyskiwać dostęp do portalu i wykonywać dowolne operacje na platformie Azure. </br>**Ważne**: konto używane podczas instalowania agentów musi być kontem służbowym. Nie może to być konto Microsoft. Aby uzyskać więcej informacji, zobacz [Rejestrowanie się w usłudze Azure jako organizacja](https://docs.microsoft.com/azure/active-directory/sign-up-organization).                                                                   |
 | Agent hybrydowy programu Identity Manager jest zainstalowany na każdym serwerze usługi programu Identity Manager |                                                                                                                                                                                                       Aby otrzymywać dane i zapewnić możliwości monitorowania i analizy, raportowanie hybrydowe wymaga zainstalowania i skonfigurowania agentów na serwerach kierowanych.  </br>                                                                                                                                                                                                       |
-|                    Łączność wychodząca z punktami końcowymi usługi platformy Azure                     | Podczas instalacji i wykonywania agent musi mieć łączność z punktami końcowymi usługi platformy Azure. Jeśli łączność wychodząca jest blokowana przez zapory, należy się upewnić, że następujące punkty końcowe zostały dodane do listy dozwolonych:<ul><li>\*.blob.core.windows.net </li><li>\*.servicebus.windows.net - Port: 5671 </li><li>\*.adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
+|                    Łączność wychodząca z punktami końcowymi usługi platformy Azure                     | Podczas instalacji i wykonywania agent musi mieć łączność z punktami końcowymi usługi platformy Azure. Jeśli łączność wychodząca jest blokowana przez zapory, należy się upewnić, że następujące punkty końcowe zostały dodane do listy dozwolonych:<ul><li>\*. blob.core.windows.net </li><li>\*. servicebus.windows.net-port: 5671 </li><li>\*. adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
 |                         Łączność wychodząca oparta na adresach IP                         |                                                                                                                                                                                                                      W przypadku filtrowania na podstawie adresów IP na zaporach zapoznaj się z [zakresami adresów IP platformy Azure](https://www.microsoft.com/download/details.aspx?id=41653).                                                                                                                                                                                                                      |
 |                 Inspekcja protokołu SSL dla ruchu wychodzącego jest filtrowana lub wyłączona                 |                                                                                                                                                                                                               Wykonywanie kroku rejestracji agenta lub operacji przekazywania danych może zakończyć się niepowodzeniem, jeśli istnieje Inspekcja SSL lub zakończenie dla ruchu wychodzącego w warstwie sieciowej.                                                                                                                                                                                                                |
 |                      Porty zapory na serwerze, na którym jest uruchomiony Agent programu                       |                                                                                                                                                                                                          Aby można było komunikować się z punktami końcowymi usługi platformy Azure, Agent wymaga otwarcia następujących portów zapory:<ul><li>Port TCP 443</li><li>Port TCP 5671</li></ul>                                                                                                                                                                                                          |
@@ -101,7 +101,7 @@ Po zainstalowaniu agenta raportowania dane z działania programu Identity Manage
 
 3.  Na liście dostępnych katalogów dla subskrypcji wybierz katalog dzierżawy.
 
-4.  Wybierz pozycję **Dzienniki inspekcji**.
+4.  Wybierz pozycję **dzienniki inspekcji**.
 
 5.  Z listy rozwijanej **Kategoria** upewnij się, że wybrano opcję **Usługa MIM** .
 

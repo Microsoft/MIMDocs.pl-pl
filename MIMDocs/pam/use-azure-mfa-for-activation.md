@@ -5,17 +5,17 @@ keywords: ''
 author: billmath
 ms.author: billmath
 ms.reviewer: fimguy
-manager: mtillman
+manager: daveba
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 6c3a2d87037a818a9a8784b0d4a7b86227fcaef4
-ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
+ms.openlocfilehash: 512a1887329f9ec5c93fd69f0ce0b22495ba009c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684061"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043549"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Używanie usługi Azure MFA do aktywacji
 > [!IMPORTANT]
@@ -50,7 +50,7 @@ W tej sekcji skonfigurujesz dostawcę usługi Azure MFA w Microsoft Azure Active
 
 2.  Kliknij przycisk **Nowy** na dole po lewej stronie ekranu.
 
-3.  Kliknij pozycję **Usługi aplikacji > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
+3.  Kliknij pozycję **App Services > Active Directory > Dostawca usługi MFA > Szybkie tworzenie**.
 
 4.  W polu **Nazwa** wprowadź wartość **PAM**, a w polu Model zastosowania wybierz pozycję Za każdego włączonego użytkownika. Jeśli masz już katalog usługi Azure AD, wybierz go. Na koniec kliknij pozycję **Utwórz**.
 
@@ -64,7 +64,7 @@ Wcześniej Wygenerowano plik, który zawiera materiał uwierzytelniania dla usł
 
 1. Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator subskrypcji Azure.
 
-2.  Kliknij pozycję **Active Directory** w menu witryny Azure Portal, a następnie kliknij kartę **Dostawcy usługi MFA**.
+2.  Kliknij pozycję **Active Directory** w menu Portalu Azure, a następnie kliknij kartę **Dostawcy usługi MFA**.
 
 3.  Kliknij dostawcę usługi Azure MFA, który będzie używany na potrzeby funkcji PAM, a następnie kliknij pozycję **Zarządzaj**.
 
@@ -146,7 +146,7 @@ Aby uzyskać więcej informacji na temat połączeń telefonicznych kończących
 
 1.  Otwórz przeglądarkę sieci Web i połącz się z [klasycznym portalem Azure](https://manage.windowsazure.com) jako administrator globalny usługi Azure AD.
 
-2.  Wybierz pozycję **Active Directory** w menu witryny Azure Portal, a następnie wybierz kartę **Dostawcy usługi MFA**.
+2.  Wybierz pozycję **Active Directory** w menu Portalu Azure, a następnie wybierz kartę **Dostawcy usługi MFA**.
 
 3.  Wybierz dostawcę usługi Azure MFA używanego na potrzeby funkcji PAM, a następnie kliknij pozycję **Zarządzaj**.
 

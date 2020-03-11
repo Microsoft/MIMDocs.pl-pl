@@ -4,19 +4,19 @@ description: Pobierz kroki i minimalne wymagania w celu przygotowania systemu Wi
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568031"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044156"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
 

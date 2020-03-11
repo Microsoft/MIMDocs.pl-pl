@@ -4,19 +4,19 @@ description: Wdrożenie usługi PAM inicjowane przez skrypty obejmuje skrypty we
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: d6b0327b39a76799b2943565dd0c3e00f55f745f
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 41c1ff575bafb4c892d0657234554387680b75f1
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518114"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043753"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
 
@@ -33,7 +33,7 @@ Aby użyć funkcji weryfikacji wdrożenia, należy zmodyfikować sekcję <PamVal
 Nazwa komputera klienckiego musi zostać zaktualizowana w tagu <PAMValidationClient/> pliku PAMDeploymentConfig.xml. Pozostałe dane węzła <PAMValidation/> należy edytować tylko wtedy, gdy występują konflikty z istniejącymi użytkownikami/grupami, jako że sprawdzenie poprawności podejmie próbę ich utworzenia.
 Aby przeprowadzić sprawdzenie poprawności, wykonaj następujące kroki:
 
-Krok 1.
+Krok 1.
 
 1. Zaloguj się do kontrolera domeny CORPDC jako administrator domeny CORP.
 2. Uruchom program PowerShell jako administrator.

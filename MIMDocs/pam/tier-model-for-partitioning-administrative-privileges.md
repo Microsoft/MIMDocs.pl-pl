@@ -4,19 +4,19 @@ description: Poznaj model warstwowy, który dzieli system na podstawie podatnoś
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8e7b7217714f0ef74c1d959eb51dac07018d6e77
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517838"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043600"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
@@ -26,7 +26,7 @@ W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesi
 
 Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często wskazywane przez osoby atakujące, ponieważ w przypadku naruszenia zabezpieczeń osoba atakująca ma uprawnienia do łączenia się z innymi serwerami lub aplikacjami w domenie.
 
-Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
+Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](https://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
 
 ## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Zmniejszanie widoczności poświadczeń za pomocą ograniczeń logowania
 

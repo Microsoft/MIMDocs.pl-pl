@@ -4,17 +4,17 @@ description: Przejdź przez proces tworzenia użytkowników w usłudze ADDS przy
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256618"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044178"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
 
@@ -24,7 +24,7 @@ Jednym z podstawowych wymagań dotyczących systemu zarządzania tożsamościami
 
 Ten przewodnik przeprowadzi Cię przez główne bloki konstrukcyjne związane z procesem aprowizacji użytkowników z programu Microsoft® Identity Manager (MIM) 2016 do usług Active Directory® Domain Services (AD DS). Ponadto przewodnik opisuje sposób weryfikacji prawidłowego działania scenariusza, zapewnia sugestie dotyczące zarządzania użytkownikami usługi Active Directory przy użyciu programu MIM 2016 i zawiera listy dodatkowych źródeł informacji.
 
-## <a name="before-you-begin"></a>Zanim rozpoczniesz
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 
 W tej części znajdziesz informacje dotyczące zakresu tego dokumentu. Ogólnie rzecz biorąc, przewodniki „Jak mogę” są kierowane do czytelników, którzy mają już podstawowe doświadczenie z procesem synchronizacji obiektów z programem MIM zgodnie z informacjami zawartymi w powiązanych [przewodnikach wprowadzających](https://go.microsoft.com/FWLink/p/?LinkId=190486).
@@ -239,7 +239,7 @@ Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią
 
 W ramach scenariusza opisanego w tym przewodniku należy skonfigurować zasady aprowizacji zgodnie z poniższym rysunkiem.
 
-![Zasady zastrzegania](media/how-provision-users-adds/image019.png)
+![Zasady aprowizacji](media/how-provision-users-adds/image019.png)
 
 Celem tych zasad aprowizacji jest wprowadzenie grup do zakresu reguły synchronizacji ruchu wychodzącego użytkowników usługi AD. Przenosząc zasób do zakresu reguły synchronizacji, włączasz aparat synchronizacji, aby aprowizować zasób do usług AD DS zgodnie z konfiguracją.
 
@@ -323,9 +323,9 @@ Wymagana reguła MPR to reguła typu Przejście między zestawami i jest wyzwala
 |--------------------------------------|-------------------------------------------------------------|
 | Nazwa                                 | Reguła zasad zarządzania aprowizacją użytkownika usługi AD                 |
 | Description                          |                                                             |
-| Type                                 | Przejście między zestawami                                              |
+| Typ                                 | Przejście między zestawami                                              |
 | Przyznaje uprawnienia                   | Fałsz                                                       |
-| Wyłącz                             | Fałsz                                                       |
+| Wyłączone                             | Fałsz                                                       |
 
 | Definicja przejścia                |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
@@ -334,7 +334,7 @@ Wymagana reguła MPR to reguła typu Przejście między zestawami i jest wyzwala
 
 | Przepływy pracy zasad                     |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Type                                 | Akcja                                                      |
+| Typ                                 | Akcja                                                      |
 | Nazwa wyświetlana                         | Przepływ pracy aprowizacji użytkownika usługi Active Directory                 |
 
 
@@ -357,7 +357,7 @@ W poniższej tabeli zawarto listę profilów przebiegu, które są częścią fa
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Pełny import          |
 | 2                                                                                                             |                                                       | Pełna synchronizacja |
-| 3                                                                                                             |                                                       | Eksportuj               |
+| 3                                                                                                             |                                                       | Eksportowanie               |
 | 4                                                                                                             |                                                       | Import zmian         |
 |                                                                                                               |                                                       |                      |
 | 5                                                                                                             | Fabrikam ADMA                                         | Pełny import          |
@@ -386,13 +386,13 @@ Celem tej sekcji jest przetestowanie faktycznej konfiguracji. Aby przetestować 
 
 Poniższa tabela zawiera listę właściwości przykładowego użytkownika. Utwórz przykładowego użytkownika zgodnie z danymi w poniższej tabeli.
 
-| Atrybut                              | Value                                                          |
+| Atrybut                              | Wartość                                                          |
 |----------------------------------------|----------------------------------------------------------------|
 | Imię                             | Britta                                                         |
 | Nazwisko                              | Simon                                                          |
 | Nazwa wyświetlana                           | Britta Simon                                                   |
 | Nazwa konta                           | BSimon                                                         |
-| Domena                                 | Fabrikam                                                       |
+| Domain                                 | Fabrikam                                                       |
 | Typ pracownika                          | Wykonawca                                                     |
 
 
@@ -499,8 +499,8 @@ Aby upewnić się, że przykładowy użytkownik został aprowizowany do usług A
 
 ![weryfikowanie użytkownika odbywa się w jednostce organizacyjnej FIMObjects](media/how-provision-users-adds/image033.jpg)
 
-<a name="summary"></a>Podsumowanie
-=======
+## <a name="summary"></a>Podsumowanie
+
 
 Celem tego dokumentu jest wprowadzenie do głównych bloków konstrukcyjnych związanych z synchronizacją użytkownika w programie MIM za pomocą usług AD DS. W początkowej fazie testowania należy najpierw zacząć od minimalnych atrybutów wymaganych do zakończenia zadania i dodawać więcej atrybutów do scenariusza, gdy ogólne etapy będą działać zgodnie z oczekiwaniami. Utrzymywanie minimalnej złożoności upraszcza proces rozwiązywania problemów.
 
@@ -512,11 +512,7 @@ Aby uzyskać opis sposobu usuwania tych obiektów ze środowiska testowego, zoba
 W typowym scenariuszu synchronizacji, obejmującym usługi AD DS jako cel synchronizacji, program MIM nie jest autorytatywny dla wszystkich atrybutów obiektu. Na przykład podczas zarządzania obiektami użytkowników w usługach AD DS przy użyciu programu FIM należy jako minimum przekazać atrybuty domeny i objectSID przez agenta zarządzania usług AD DS.
 Atrybuty nazwy konta, domeny i objectSID są wymagane, jeśli chcesz umożliwić użytkownikowi logowanie do portalu programu FIM. Aby uzupełnić te atrybuty z usługi AD DS, wymagana jest dodatkowa reguła synchronizacji ruchu przychodzącego dla obszaru łącznika usług AD DS. W przypadku zarządzania obiektami z wieloma źródłami wartości atrybutów należy upewnić się, że pierwszeństwo przepływu atrybutów zostało skonfigurowane prawidłowo. Jeśli pierwszeństwo przepływu atrybutów nie jest skonfigurowane prawidłowo, aparat synchronizacji zablokuje uzupełnianie wartości atrybutów. Więcej informacji o pierwszeństwie przepływu atrybutów znajduje się w artykule [About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675) (Informacje o pierwszeństwie przepływu atrybutów).
 
-<a name="see-also"></a>Zobacz też
-=========
-
-<a name="other-resources"></a>Inne zasoby
----------------
+## <a name="next-steps"></a>Następne kroki
 
 [Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670) (Korzystanie z programu FIM do włączania lub wyłączania kont w usłudze Active Directory)
 

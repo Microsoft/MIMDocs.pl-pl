@@ -4,19 +4,19 @@ description: Ustanowienie relacji zaufania między lasami PRIV i CORP, dzięki c
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518261"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043651"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
@@ -87,7 +87,7 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
     ```
     Dane wyjściowe powinny przekazać komunikat **Włączanie historii SID dla tego zaufania** lub **Historia SID jest już włączona dla tego zaufania**.
 
-    Dane wyjściowe powinny również wskazywać, że **Filtrowanie SID nie jest włączone dla tego zaufania**. Zobacz [Wyłączanie poddawania filtra SID kwarantannie](http://technet.microsoft.com/library/cc772816.aspx), aby uzyskać więcej informacji.
+    Dane wyjściowe powinny również wskazywać, że **Filtrowanie SID nie jest włączone dla tego zaufania**. Zobacz [Wyłączanie poddawania filtra SID kwarantannie](https://technet.microsoft.com/library/cc772816.aspx), aby uzyskać więcej informacji.
 
 ## <a name="start-the-monitoring-and-component-services"></a>Uruchamianie usług monitorowania i składowych
 

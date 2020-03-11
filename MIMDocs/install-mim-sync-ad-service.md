@@ -4,19 +4,19 @@ description: Korzystając z agentów zarządzania i usługi synchronizacji progr
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329323"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042427"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
 
@@ -113,7 +113,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domena | Eksportowanie | domain |
+    | Domain | Eksportowanie | domain |
     | Poczta e-mail | Eksportowanie | Poczta |
     | Identyfikator pracownika | Eksportowanie | employeeID |
     | EmployeeType | Eksportowanie | employeeType |
@@ -139,22 +139,22 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domena | Eksportowanie | domain |
+    | Domain | Eksportowanie | domain |
     | Poczta e-mail | Eksportowanie | Poczta |
     | MailNickName | Eksportowanie | mailNickName |
     | Element członkowski | Eksportowanie | członek |
     | ObjectSID | Eksportowanie | objectSid |
     | Zakres | Eksportowanie | zakres |
-    | Type | Eksportowanie | typ |
+    | Typ | Eksportowanie | typ |
     | MembershipAddWorkflow | Eksportowanie | membershipAddWorkflow |
     | MembershipLocked | Eksportowanie | membershipLocked |
-    | AccountName | Importowanie | accountName |
-    | DisplayedOwner | Importowanie | displayedOwner |
-    | Nazwa wyświetlana | Importowanie | displayName |
-    | MailNickName | Importowanie | mailNickName |
-    | Element członkowski | Importowanie | członek |
-    | Zakres | Importowanie | zakres |
-    | Type | Importowanie | typ |
+    | AccountName | Importuj | accountName |
+    | DisplayedOwner | Importuj | displayedOwner |
+    | Nazwa wyświetlana | Importuj | displayName |
+    | MailNickName | Importuj | mailNickName |
+    | Element członkowski | Importuj | członek |
+    | Zakres | Importuj | zakres |
+    | Typ | Importuj | typ |
 
 10.  Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
 
@@ -167,7 +167,7 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 2. Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
 
-    - Management agent for (Agent zarządzania dla): Active Directory Domain Services (Usługi domenowe Active Directory)
+    - Management agent for (Agent zarządzania dla): Active Directory Domain Services
     - Name (Nazwa): ADMA
 
 3. Na stronie **Connect to Active Directory Forest** (Połączenie z lasem usługi Active Directory) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej):
@@ -230,7 +230,7 @@ Utwórz profile uruchamiania dla łączników ADMA i MIMMA.
 
 W poniższej tabeli zamieszczono pięć profilów uruchamiania tworzonych dla łącznika menedżera ADMA:
 
-| Nazwa | Type |
+| Nazwa | Typ |
 | ---- | ---- |
 | Profil1 | Pełny import (tylko przemieszczanie) |
 | Profil2 | Pełna synchronizacja |
@@ -262,7 +262,7 @@ Aby utworzyć profile uruchamiania dla łącznika menedżera ADMA:
 
 W poniższej tabeli zamieszczono pięć pasujących profilów uruchamiania dla łącznika MIMMA:
 
-| Nazwa | Type |
+| Nazwa | Typ |
 | -------- | -------- |
 | Profil1 | Pełny import (tylko przemieszczanie) |
 | Profil2 | Pełna synchronizacja |
@@ -321,14 +321,14 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
 7. Na stronie **Inbound Attribute Flow** (Przepływ atrybutów ruchu przychodzącego) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
-    | Reguła przepływu | Źródło | Lokalizacja docelowa |
+    | Reguła przepływu | Obiekt źródłowy | Lokalizacja docelowa |
     |-|-|-|
     |Reguła 1|samAccountName|accountName|
     |Reguła 2|displayName|displayName|
     |Reguła 3|EmployeeType|employeeType|
     |Reguła 4|givenName|firstName|
     |Reguła 5|sn|lastName|
-    |Reguła 6|Menedżer|manager|
+    |Reguła 6|Manager|manager|
     |Reguła 7|objectSid|ObjectSID|
     |Reguła 8|"Contoso"|domain|
 

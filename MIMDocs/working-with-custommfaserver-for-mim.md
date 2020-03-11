@@ -5,16 +5,16 @@ keywords: ''
 author: billmath
 ms.author: billmath
 ms.reviewer: fimguy
-manager: mtillman
+manager: daveba
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 9ce531fb3f6f9c831ecdb716f006f947611871e6
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256601"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044365"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Używanie niestandardowego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli PAM lub w SSPR
 
@@ -156,6 +156,6 @@ Po ponownym uruchomieniu usługi należy użyć SSPR i/lub PAM do zweryfikowania
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Wprowadzenie do usługi Azure Serwer Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Historia wersji programu MIM](./reference/version-history.md)

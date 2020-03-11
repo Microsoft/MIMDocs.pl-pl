@@ -4,19 +4,19 @@ description: Migracja grupy do lasu PRIV, dzięki czemu można będzie nią zarz
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0473ea9e01a44aeb4acbebe01e6e6f989c8581d0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e88407ceb1c7ac99f1746f453b7e4a7a5d296e5a
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517821"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043634"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 

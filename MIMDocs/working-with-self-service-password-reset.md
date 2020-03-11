@@ -4,17 +4,17 @@ description: Dowiedz się, jakie zmiany wprowadzono w funkcji samoobsługowego r
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690694"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044280"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opcje wdrożenia samoobsługowego resetowania hasła
 

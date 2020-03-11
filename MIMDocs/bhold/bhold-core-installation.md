@@ -4,17 +4,17 @@ description: Podstawowy dokument instalacji pakietu pakietu BHOLD Suite
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e4b18d3caa866767524c56ce184e787a190e9390
-ms.sourcegitcommit: 8ba50298cef65e8cc90402282e88410fad86b4d9
+ms.openlocfilehash: c4dfb4184292ba1b5da8c4e3e176d53e6a885ed8
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75187314"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042274"
 ---
 # <a name="bhold-core-installation"></a>Instalacja pakietu BHOLD Core
 
@@ -30,7 +30,7 @@ Moduł pakietu BHOLD Core stanowi podstawę pakietu Microsoft pakietu BHOLD Suit
 
 |          |        |          |
 |----------|--------|----------|
-|**Składnik** |**Minimum** | **Zalecane** |
+|**Składnik** |**Minimalny** | **Rekomendowane** |
 |Procesor | 64-bitowy procesor | Procesor wielordzeniowy 64-bitowy |
 | Pamięć |3 GB | 6 GB lub więcej |
 |Magazyn| dostępne 30 GB |Zależy od rozmiaru wdrożenia |
@@ -70,7 +70,7 @@ Moduł pakietu BHOLD Core musi być w stanie zalogować się do domeny przy uży
 
 3.  W oknie dialogowym **nowy obiekt — Grupa** w polu **Nazwa grupy**wpisz nazwę grupy (pakietu BHOLD default: BHOLDApplicationGroup), a następnie kliknij przycisk **OK**.
 
-4.  Kliknij prawym przyciskiem myszy pozycję **Użytkownicy**, wskaż polecenie **Nowy**, a następnie kliknij pozycję **użytkownik**.
+4.  Kliknij prawym przyciskiem myszy pozycję **Użytkownicy**, wskaż polecenie **Nowy**, a następnie kliknij pozycję **Użytkownik**.
 
 5.  W polu Imię i **nazwisko**wpisz nazwę, która pomoże zidentyfikować konto, na przykład konto usługi pakietu BHOLD Core.
 
@@ -94,9 +94,9 @@ Przed rozpoczęciem instalacji modułu pakietu BHOLD Core należy przygotować s
 
 ### <a name="account-settings"></a>Ustawienia konta
 
-| **Element**                                    | **Opis**                                                                                                                                                                                                                                                                                             | **Wartość**                                                                                                                                                          |
+| **Elementów**                                    | **Opis**                                                                                                                                                                                                                                                                                             | **Wartość**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Używanie dostawcy zabezpieczeń na komputerze/domenie** | Po wybraniu określa, że zabezpieczenia Active Directory Domain Services będą kontrolować dostęp do pakietu BHOLD rdzeń.                                                                                                                                                                                                  | zaznacz pole wyboru. **Ważne:** Instalacja nie powiedzie się, jeśli to pole wyboru nie jest zaznaczone.                                                                 |
+| **Używanie dostawcy zabezpieczeń na komputerze/domenie** | Po wybraniu określa, że zabezpieczenia Active Directory Domain Services będą kontrolować dostęp do pakietu BHOLD rdzeń.                                                                                                                                                                                                  | Zaznacz pole wyboru. **Ważne:** Instalacja nie powiedzie się, jeśli to pole wyboru nie jest zaznaczone.                                                                 |
 | **Domeny**                                  | Określa domenę zawierającą serwer pakietu BHOLD, konto usługi i grupę aplikacji. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (krótkiej), a nie w pełni kwalifikowanej nazwy domeny (FQDN). Na przykład, jeśli nazwa FQDN domeny to fabrikam.com, określ nazwę domeny jako CONTOSO. | W tym miejscu wpisz nazwę domeny:                                                                                                                                        |
 | **Grupa aplikacji**                       | Określa nazwę grupy zabezpieczeń, która została wcześniej utworzona w [wymaganym użytkowniku i grupie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Napisz tutaj nazwę grupy:                                                                                                                                         |
 | **Użytkownik usługi**                            | Określa nazwę logowania konta użytkownika usługi utworzonego wcześniej w [wymaganym użytkowniku i grupie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | W tym miejscu wpisz nazwę konta użytkownika:                                                                                                                                  |
@@ -105,7 +105,7 @@ Przed rozpoczęciem instalacji modułu pakietu BHOLD Core należy przygotować s
 
 ### <a name="database-settings"></a>Ustawienia bazy danych
 
-| **Element**                                       | **Opis**                                                                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Elementów**                                       | **Opis**                                                                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Korzystanie ze zintegrowanych zabezpieczeń**                    | Określa, że uwierzytelnianie systemu Windows jest używane w celu uzyskania dostępu do bazy danych.                                                                                                                                                                                                     | Zaznacz to pole wyboru, jeśli uwierzytelnianie systemu Windows jest używane do nawiązywania połączenia z SQL Server. Usuń zaznaczenie tego pola wyboru, jeśli jest używane uwierzytelnianie SQL Server. Baza danych musi zostać utworzona przed uruchomieniem Instalatora pakietu BHOLD Core, jeśli jest używane uwierzytelnianie SQL Server. **Uwaga:** Jeśli jest używane uwierzytelnianie systemu Windows, użytkownik musi być zalogowany przy użyciu konta z rolą serwera sysadmin na serwerze bazy danych. |
 | Hasło **użytkownika bazy danych** i **bazy danych** | Określa nazwę użytkownika i hasło użytkownika z rolą serwera sysadmin na serwerze bazy danych. Te wartości są dostarczane tylko wtedy, gdy używane jest uwierzytelnianie SQL Server.                                                                                               | Napisz SQL Server nazwę użytkownika tutaj: Napisz SQL Server hasło użytkownika tutaj: **Uwaga:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                  |
@@ -171,7 +171,7 @@ Jeśli nazwa sieci używana do kontaktowania się z witryną sieci Web pakietu B
 > [!IMPORTANT]
 > Jeśli moduł pakietu BHOLD Core jest zainstalowany na tym samym komputerze co Portal programu FIM, należy utworzyć rekordy zasobów DNS (CNAME lub A) o różnych nazwach hostów dla serwerów z systemem pakietu BHOLD Core oraz na serwerze z uruchomionym portalem programu FIM. Dla określonej pary typu usługi/aliasu serwera można określić tylko jedną nazwę SPN, tak aby pakietu BHOLD rdzeń i Portal FIM wymagały oddzielnych nazw SPN, ponieważ zazwyczaj są one uruchamiane na różnych kontach. Setspn polecenie zgłasza błąd, jeśli nazwa SPN została już ustanowiona przy użyciu innego konta.
 
-Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minimalnym wymaganiem do wykonania tej procedury.
+Minimalnym wymaganiem do wykonania tej procedury jest członkostwo w grupie **Administratorzy domeny** lub równoważnej.
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>Aby określić nazwę SPN witryny sieci Web pakietu BHOLD
 
@@ -189,14 +189,14 @@ Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minim
 
 Aby sprawdzić, czy instalacja modułu pakietu BHOLD Core zakończyła się pomyślnie, Otwórz Portal pakietu BHOLD Core i sprawdź atrybuty systemowe. Ponadto, aby upewnić się, że moduł pakietu BHOLD Core funkcjonuje prawidłowo w danym środowisku, można zmodyfikować następujące atrybuty systemu pakietu BHOLD w odpowiedni sposób:
 
-| **Atrybut**                | **Opis**                                                                                                                                                                                                                                                                                                      |
+| **Przypisane**                | **Opis**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nohistory**                | Ustaw wartość Y, jeśli witryna pakietu BHOLD jest uruchomiona w klastrowanej usłudze sieci Web, aby upewnić się, że ostatnio wyświetlane elementy działają prawidłowo. Ustaw wartość N, jeśli witryna sieci Web pakietu BHOLD jest uruchomiona na autonomicznym serwerze IIS.                                                                                                                      |
 | **MoveorgunitToSameorgtype** | Ustaw wartość Y, aby upewnić się, że jednostki organizacyjne (orgunits) można przenieść tylko do orgunits z tym samym typem organizacyjnym co element nadrzędny orgunit. Na przykład uniemożliwia to przeniesienie projektu do orgunit działu orgunit. Ustaw wartość N, aby zezwolić orgunit na umieszczenie w orgunit innego typu. |
 | **Dni między ABA**     | Ustaw na dwucyfrową liczbę całkowitą, aby określić interwał (w dniach) między dwoma uruchomieniami uwierzytelniania opartego na atrybutach (ABA). Na przykład, aby określić, że uruchomienia ABA będą oddzielone przez dwa dni, wpisz 02.                                                                                                                     |
 | **Godzina rozpoczęcia ABA**    | Ustaw na dwucyfrową liczbę całkowitą, aby określić godzinę dnia, o której nastąpi uruchomienie autoryzacji opartej na atrybutach. Na przykład, aby określić, że uruchomienie ABA będzie odbywać się o godzinie 11:00 (23:00), typ 23.                                                                                                             |
 | **Kardynalność systemu**       | Ustaw wartość N, jeśli nie chcesz, aby kontrola kardynalności systemu pakietu BHOLD. Wartość domyślna to Y.                                                                                                                                                                                                                             |
-| **Rejestrowanie**                  | Ustaw wartość N, jeśli nie chcesz, aby zmiany zostały zarejestrowane. Wartość domyślna to Y.                                                                                                                                                                                                                                            |
+| **Rejestrować**                  | Ustaw wartość N, jeśli nie chcesz, aby zmiany zostały zarejestrowane. Wartość domyślna to Y.                                                                                                                                                                                                                                            |
 | **Przetwarzanie SystemQueue**   | Ustaw wartość N, jeśli nie chcesz przetwarzać kolejki systemowej. Nie zmieniaj tej wartości, chyba że zostanie to zlecone przez pomoc techniczną.                                                                                                                                                                                           |
 
 Aby wykonać tę procedurę, użytkownik musi być zalogowany jako członek grupy Administratorzy domeny.

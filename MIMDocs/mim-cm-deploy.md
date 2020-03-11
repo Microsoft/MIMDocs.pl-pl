@@ -4,17 +4,17 @@ description: Zainstaluj Menedżera certyfikatów Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690801"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043039"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Wdrażanie Microsoft Identity Manager Menedżerze certyfikatów 2016 (zarządzanie certyfikatami w usłudze MIM)
 
@@ -98,7 +98,7 @@ Schemat w usłudze AD został teraz rozszerzony do obsługi zarządzanie certyfi
 
 Poniższa tabela zawiera podsumowanie kont i uprawnień wymaganych przez zarządzanie certyfikatami w usłudze MIM. Zarządzanie certyfikatami w usłudze MIM można automatycznie utworzyć następujące konta lub można je utworzyć przed rozpoczęciem instalacji. Rzeczywiste nazwy kont można zmienić. W przypadku tworzenia kont należy rozważyć nadanie nazw kontom użytkowników w taki sposób, aby można było łatwo dopasować nazwę konta użytkownika do jego funkcji.
 
-Użytkownicy:
+Użytkownikowi
 
 ![Diagram](media/mim-cm-deploy/image010.png)
 
@@ -120,7 +120,7 @@ Użytkownicy:
 
 Grupy:
 
-| **Rola**               | **Grupa**         |
+| **Rola**               | **Group**         |
 |------------------------|-------------------|
 | Członkowie pomocy technicznej CM    | SERVERFQDN określa — pomoc techniczna    |
 | Elementy członkowskie Menedżera CM     | SERVERFQDN określa — menedżerowie    |
@@ -233,7 +233,7 @@ Wszystkie trzy z powyższych kont będą mieć podwyższony poziom uprawnień w 
 
 10. Na karcie **rozszerzenia** na liście **rozszerzenia zawarte w tym szablonie** upewnij się, że **zasady aplikacji** są zaznaczone, a następnie kliknij przycisk **Edytuj**.
 
-11. W oknie dialogowym **Edytowanie rozszerzenia zasad aplikacji** wybierz zarówno **System szyfrowania plików** jak i zasady bezpiecznego stosowania **poczty e-mail** . Kliknij przycisk **Usuń**, a następnie kliknij przycisk **OK**.
+11. W oknie dialogowym **Edytowanie rozszerzenia zasad aplikacji** wybierz zarówno **System szyfrowania plików** jak i zasady bezpiecznego stosowania **poczty e-mail** . Kliknij polecenie **Usuń**, a następnie kliknij przycisk **Dodaj**.
 
 12. Na karcie **zabezpieczenia** wykonaj następujące czynności:
 
@@ -484,14 +484,14 @@ Przed zalogowaniem się do CORPCM Dodaj MIMINSTALL do grupy **Administratorzy do
 
 14. Na stronie **Konfigurowanie serwera poczty e-mail, drukowania dokumentu** w polu **Określ nazwę serwera SMTP, który ma być używany do powiadamiania o rejestracji wiadomości E-mail** , a następnie kliknij przycisk **Dalej.**
 
-15. Na stronie **Wszystko gotowe do skonfigurowania** kliknij pozycję **Konfiguruj**.
+15. Na stronie **gotowy do skonfigurowania** kliknij pozycję **Konfiguruj**.
 
 16. W oknie dialogowym **Kreator konfiguracji — ostrzeżenie programu Microsoft Forefront Identity Manager 2010 R2** kliknij przycisk **OK** , aby potwierdzić, że protokół SSL nie jest włączony w katalogu wirtualnym usług IIS.
 
     ![media/image17.png](media/mim-cm-deploy/image032.png)
 
     >[!NOTE] 
-    >Nie klikaj przycisku Zakończ, dopóki nie zakończy się wykonywanie Kreatora konfiguracji. Rejestrowanie dla kreatora można znaleźć tutaj: **%programfiles%\\Microsoft Forefront Identity Management\\2010\\zarządzania certyfikatami\\config.log**
+    >Nie klikaj przycisku Zakończ, dopóki nie zakończy się wykonywanie Kreatora konfiguracji. Rejestrowanie w kreatorze można znaleźć tutaj: **% ProgramFiles%\\Microsoft Forefront Identity Management\\2010\\Management Certificate\\config. log**
 
 17. Kliknij przycisk **Finish** (Zakończ).
 
@@ -552,7 +552,7 @@ W tym kroku będziemy instalować i konfigurować moduły urzędu certyfikacji w
 
 14. W drzewie konsoli rozwiń węzeł **zabezpieczenia**, a następnie kliknij przycisk **logowania**.
 
-15. Kliknij prawym przyciskiem myszy **logowania**, a następnie kliknij przycisk **nowy identyfikator logowania**.
+15. Kliknij prawym przyciskiem myszy pozycję **logowania**, a następnie kliknij pozycję **Nowa nazwa logowania**.
 
 16. Na stronie **Ogólne** w polu **Nazwa logowania** wpisz **contoso\\CORPCA\$** . Wybierz pozycję **uwierzytelnianie systemu Windows**. Domyślna baza danych to **FIMCertificateManagement**.
 
@@ -560,7 +560,7 @@ W tym kroku będziemy instalować i konfigurować moduły urzędu certyfikacji w
 
 18. Kliknij przycisk **OK**.
 
-19. Zamknij **programu Microsoft SQL Server Management Studio**.
+19. Zamknij **Microsoft SQL Server Management Studio**.
 
 ### <a name="install-the-fim-cm-ca-modules-on-the-certification-authority"></a>Instalowanie modułów urzędu certyfikacji programu FIM CM w urzędzie certyfikacji
 
@@ -725,7 +725,7 @@ Pierwsze kroki: **Konfigurowanie uprawnień punktu połączenia z usługą i gru
 
 2. W drzewie konsoli kliknij prawym przyciskiem myszy pozycję **contoso.com**, a następnie kliknij polecenie **Właściwości**.
 
-3. Na **zabezpieczeń** kliknij pozycję **Zaawansowane**.
+3. Na karcie **Zabezpieczenia** kliknij przycisk **Zaawansowane**.
 
 4. W oknie dialogowym **Zaawansowane ustawienia zabezpieczeń dla contoso** kliknij przycisk **Dodaj**.
 
@@ -783,7 +783,7 @@ Pierwsze kroki: **Konfigurowanie uprawnień punktu połączenia z usługą i gru
 
 2. W drzewie konsoli kliknij prawym przyciskiem myszy pozycję **contoso.com**, a następnie kliknij polecenie **Właściwości**.
 
-3. Na **zabezpieczeń** kliknij pozycję **Zaawansowane**.
+3. Na karcie **Zabezpieczenia** kliknij przycisk **Zaawansowane**.
 
 4. W oknie dialogowym **Zaawansowane ustawienia zabezpieczeń dla contoso** kliknij przycisk **Dodaj**.
 

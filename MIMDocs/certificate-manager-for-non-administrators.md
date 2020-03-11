@@ -4,19 +4,19 @@ description: Dowiedz się, jak rejestrować karty inteligentne dla użytkownikó
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516649"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042138"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
 Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyślnie nie może zarejestrować karty inteligentnej na tym komputerze. Poniższa procedura umożliwia obejście tego ograniczenia.
@@ -69,7 +69,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-    2.  Przejdź do pozycji **Administracja** &gt; **Zarządzaj szablonami profilów** i upewnij się, że zaznaczono pole obok utworzonego szablonu profilu, a następnie kliknij pozycję Kopiuj wybrany szablon profilu.
+    2.  Przejdź do obszaru **administracja** &gt; **Zarządzanie szablonami profilów** i upewnij się, że pole wyboru jest zaznaczone obok utworzonego szablonu profilu, a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
 
     3.  Wpisz nazwę szablonu profilu, dodaj tekst „nonAdmin”, a następnie kliknij przycisk **OK**.
 

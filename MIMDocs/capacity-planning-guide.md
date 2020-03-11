@@ -4,19 +4,19 @@ description: Ten przewodnik ułatwia zrozumienie zmiennych, które należy wzią
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b14066543c036eb4ec8a350843743b87902a13a1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73636977"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042121"
 ---
 # <a name="capacity-planning-guide"></a>Przewodnik planowania pojemności
 
@@ -37,7 +37,7 @@ Istnieje wiele czynników, które mogą mieć wpływ na ogólną pojemność i w
 
 Główne czynniki wpływające na pojemność i wydajność wdrożenia programu MIM 2016 zostały omówione w poniższej tabeli:
 
-| Współczynnik projektu | Kwestie do rozważenia |
+| Współczynnik projektu | Uwagi |
 | ------------- | -------------- |
 | Topologia | Dystrybucja usług programu MIM między komputerami w sieci. |
 | Sprzęt | Sprzęt fizyczny (fizyczny lub wirtualny) dla każdego składnika programu MIM, w tym Konfiguracja procesora CPU, pamięci, karty sieciowej i dysku twardego. |

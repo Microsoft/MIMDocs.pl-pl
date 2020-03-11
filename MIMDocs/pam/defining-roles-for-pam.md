@@ -4,19 +4,19 @@ description: Istnieje możliwość określenia, które role uprzywilejowane maj�
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518582"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044042"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
 
@@ -114,7 +114,7 @@ Zamiast grup domyślnych, takich jak Administratorzy domeny, Utwórz nowe grupy 
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania usługą AD.
 
-| Role | Description |
+| Rola | Description |
 | ---- | ---- |
 | Konserwacja domeny/kontrolera domeny | Członkostwo w grupie Domena\administratorzy umożliwia rozwiązywanie problemów i zmienianie systemu operacyjnego kontrolera domeny. Operacje, takie jak podwyższanie poziomu nowego kontrolera domeny do istniejącej domeny w lesie i delegowanie roli usługi AD.
 |Zarządzanie wirtualnymi kontrolerami domeny | Zarządzanie maszynami wirtualnymi kontrolerów domeny za pomocą oprogramowania do zarządzania wirtualizacją. To uprawnienie można przyznać za pośrednictwem pełnej kontroli nad wszystkimi maszynami wirtualnymi w narzędziu do zarządzania lub funkcji kontroli dostępu na podstawie ról. |
@@ -130,7 +130,7 @@ W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do 
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które mają zastosowanie w przypadku ról do zarządzania danymi przechowywanymi w usłudze AD lub korzystania z nich.
 
-| Role | Description |
+| Rola | Description |
 | ---- | ---- |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 1                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 1 w usłudze Active Directory. |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 2                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 2 w usłudze Active Directory. |

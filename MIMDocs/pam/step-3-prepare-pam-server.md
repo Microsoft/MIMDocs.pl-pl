@@ -4,7 +4,7 @@ description: Przygotowanie serwera usługi PAM, który będzie hostować program
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518214"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043668"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 

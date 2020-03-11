@@ -4,19 +4,19 @@ description: Ten artykuł jest częścią serii dotyczącej konfigurowania usłu
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28e8f5c28cd38ad820c6a1f12385dffbd0641ddd
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 102754fc88af32cb9abed40716ba9168a041d58e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518312"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043889"
 ---
 # <a name="configure-pam-using-scripts"></a>Konfiguracja usługi PAM za pomocą skryptów
 
@@ -55,7 +55,7 @@ Przed kontynuowaniem Zaktualizuj plik plik pamdeploymentconfig. XML i umieść z
 | PAMServer  | Administrator lokalny (po przyłączeniu do domeny: administrator MIM)  | .\PAMDeployment.ps1 Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Wybierz opcję menu 6 (PAM Trust Setup (Konfiguracja zaufania usługi PAM)). |
 
-### <a name="validation"></a>Sprawdzanie poprawności
+### <a name="validation"></a>Weryfikacja
 
 |  Maszyna | Do uruchomienia jako   | Polecenia   |
 |---|---|---|
