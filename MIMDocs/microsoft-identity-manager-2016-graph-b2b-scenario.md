@@ -4,17 +4,17 @@ author: billmath
 description: Łącznik Microsoft Graph jest zarządzaniem cyklem życia konta usługi AD użytkownika zewnętrznego. W tym scenariuszu Organizacja odprosiła Gości do swojego katalogu usługi Azure AD i chce udzielić tych Gościom dostępu do lokalnego uwierzytelniania zintegrowanego systemu Windows lub aplikacji opartych na protokole Kerberos.
 keywords: ''
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 2f91a5c24df5475130755574c77b536f57e64d24
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256635"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044246"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Współpraca między firmami (B2B) w usłudze Azure AD z Microsoft Identity Manager (MIM) 2016 z dodatkiem SP1 przy użyciu serwera proxy aplikacji platformy Azure
 ============================================================================================================================
@@ -124,19 +124,19 @@ Na ekranie Wybieranie atrybutów wybierz atrybuty z usługi Azure AD, które bę
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 
-#### <a name="configure-anchors"></a>Konfiguruj zakotwiczenia
+#### <a name="configure-anchors"></a>Skonfiguruj kotwice
 
 Na ekranie konfigurowania zakotwiczenia skonfigurowanie atrybutu zakotwiczenia jest wymaganym krokiem. Domyślnie Użyj atrybutu ID dla mapowania użytkownika.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
-#### <a name="configure-connector-filter"></a>Konfiguruj filtr łącznika
+#### <a name="configure-connector-filter"></a>Konfigurowanie filtru łącznika
 
 Na stronie Konfigurowanie filtru łącznika program MIM umożliwia odfiltrowanie obiektów na podstawie filtru atrybutów. W tym scenariuszu dla B2B celem jest dołączenie tylko do użytkowników z wartością atrybutu `userType`, który jest równy `Guest`, a nie dla użytkowników, które są równe `member`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
-#### <a name="configure-join-and-projection-rules"></a>Konfiguruj reguły dołączania i projekcji
+#### <a name="configure-join-and-projection-rules"></a>Skonfiguruj reguły przyłączania i projekcji
 
 W tym przewodniku przyjęto założenie, że zostanie utworzona reguła synchronizacji.  Ponieważ reguły przyłączania i projekcji są obsługiwane przez regułę synchronizacji, nie jest to konieczne, aby identyfikować sprzężenie i projekcję na samym łączniku. Pozostaw wartość domyślną i kliknij przycisk OK.
 
@@ -243,9 +243,9 @@ Reguły przepływu:
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [sn⇒sn](javascript:void(0);)                                          |
 |                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN ="+ uid +", OU = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
-| **Y**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
-| **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
+| **T**                 |                           | ["CN ="+ uid +", OU = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
+| **T**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
+| **T**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
 ### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Opcjonalna reguła synchronizacji: Importowanie identyfikatora SID obiektów użytkownika gościa B2B w celu zezwolenia na logowanie do programu MIM 
 
@@ -314,6 +314,6 @@ Po skonfigurowaniu programu należy zalogować użytkownika B2B i zobaczyć apli
 
 [Dokumentacja funkcji programu FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Jak zapewnić bezpieczny, zdalny dostęp do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[Jak zapewnić bezpieczny dostęp zdalny do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Pobierz Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
