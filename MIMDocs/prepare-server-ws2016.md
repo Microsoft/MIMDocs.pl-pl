@@ -12,11 +12,11 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79044156"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79382313"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
 
