@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7fb65eec7a42da94c4f27a30e59c09739279e882
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
+ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79043532"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80374291"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
 
@@ -29,7 +29,7 @@ ms.locfileid: "79043532"
 > Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
@@ -132,7 +132,7 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do http://mim.contoso.com/ i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
+4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do `http://mim.contoso.com/` i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
 
     ![Portal programu MIM na http://mim.contoso.com/ obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
