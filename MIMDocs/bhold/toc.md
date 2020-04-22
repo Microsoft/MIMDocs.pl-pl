@@ -19,7 +19,7 @@
 ### [Konfiguracja serwera: Exchange](../prepare-server-exchange.md)
 ### [Instalowanie programu MIM: synchronizacja](../install-mim-sync.md)
 ### [Instalowanie programu MIM: usługa i portal](../install-mim-service-portal.md)
-### [Instalowanie programu MIM: synchronizacja baz danych](../install-mim-sync-ad-service.md)
+### [Instalowanie programu MIM: synchronizowanie baz danych](../install-mim-sync-ad-service.md)
 ## [Uaktualnianie z programu Forefront Identity Manager 2010 R2](../microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [Instalowanie zarządzania certyfikatami programu MIM](../mim-cm-deploy.md)
 ## [Tematy dotyczące instalacji pakietu BHOLD](bhold-installation-guide.md)
