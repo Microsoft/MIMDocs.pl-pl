@@ -5,10 +5,10 @@ ms.prod: microsoft-identity-manager
 title: Dokumentacja programu Microsoft Identity Manager | Dokumentacja firmy Microsoft
 description: Dowiedz się, jak korzystać z programu Microsoft Identity Manager.
 ms.openlocfilehash: 3e0e4488c9115533cf4e5fcd7f6a7f8e0d6b56a0
-ms.sourcegitcommit: c23b1ad0af5e781a883e0ff475922da1f2642eaa
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "78946379"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Dokumentacja programu Microsoft Identity Manager
