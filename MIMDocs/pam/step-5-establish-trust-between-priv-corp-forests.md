@@ -12,17 +12,17 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043651"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Krok 5 — ustanowienie zaufania między lasami PRIV i CORP
 
 > [!div class="step-by-step"]
-> [« Krok 4](step-4-install-mim-components-on-pam-server.md)
-> [Krok 6 »](step-6-transition-group-to-pam.md)
+> [«Krok 4](step-4-install-mim-components-on-pam-server.md)
+> [krok 6»](step-6-transition-group-to-pam.md)
 
 Dla każdej domeny CORP, np. contoso.local, kontrolery domeny PRIV i CONTOSO muszą być związane relacją zaufania. Dzięki temu użytkownicy w domenie PRIV mogą uzyskać dostęp do zasobów w domenie CORP.
 
@@ -40,7 +40,7 @@ Zanim zostanie nawiązana relacja zaufania, każdy kontroler domeny musi zostać
     ```
     Sprawdź, czy dane wyjściowe wskazują rekord serwera nazw dla domeny PRIV z poprawnym adresem IP.
 
-3.  Jeśli kontroler domeny nie może przekierować domeny PRIV, użyj **Menedżera DNS** (znajdującego się w **Start** > **Narzędzia aplikacji** > **DNS**), aby skonfigurować przekierowywanie nazw DNS dla domeny PRIV do adresu IP PRIVDC. Jeśli jest to domena wyższego poziomu (np. contoso.local), rozwiń węzły dla tego kontrolera domeny i jego domeny, np. **CORPDC** > **Strefy wyszukiwania do przodu** > **contoso.local**, a następnie upewnij się, że klucz o nazwie **priv** jest obecny jako typ serwera nazw (NS).
+3.  Jeśli kontroler domeny nie może przekierować domeny PRIV, użyj **Menedżera DNS** (znajdującego się w **Start** > **Narzędzia aplikacji** > **DNS**), aby skonfigurować przekierowywanie nazw DNS dla domeny PRIV do adresu IP PRIVDC. Jeśli jest to domena najwyższej jakości (np. contoso. local), rozwiń węzły dla tego kontrolera domeny i jego domeny, takie > jak **CORPDC** > **strefy wyszukiwania do przodu****contoso. Local**i upewnij się, że klucz o nazwie **priv** jest obecny jako typ serwera nazw (NS).
 
     ![Struktura plików klucza prywatnego — zrzut ekranu](./media/PAM_GS_DNS_Manager.png)
 
@@ -73,14 +73,14 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 1. Zaloguj się do istniejącego kontrolera domeny lasu CORP (CORPDC) jako administrator domeny dla domeny najwyższego poziomu w tym lesie (Contoso\Administrator).  
 2. Uruchom przystawkę **Użytkownicy i komputery usługi Active Directory**.  
 3. Kliknij prawym przyciskiem myszy domenę **contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
-4. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
+4. Na karcie wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
 5. W oknie Wybieranie: Użytkownicy, komputery lub grupy kliknij pozycję **Lokalizacje**, a następnie zmień lokalizację na *priv.contoso.local*.  W polu nazwy obiektu wpisz *Administratorzy domeny*, a następnie kliknij pozycję **Sprawdź nazwy**. Po wyświetleniu okienka wyskakującego wprowadź nazwę użytkownika *priv\administrator* i hasło tego użytkownika.  
-6. Po łańcuchu Administratorzy domeny dodaj wpis „ *; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
+6. Po łańcuchu Administratorzy domeny dodaj wpis „*; MIMMonitor*”. Po podkreśleniu nazw **Administratorzy domeny** i **MIMMonitor** kliknij przycisk **OK**, następnie kliknij przycisk **Dalej**.  
 7. Na liście typowych zadań wybierz pozycję **Odczytywanie wszystkich informacji o użytkowniku**, kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
 8. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
 
 9. Otwórz okno programu PowerShell.
-10. Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Typ:
+10. Użyj polecenia `netdom`, aby upewnić się, że historia SID jest włączona, a filtrowanie SID wyłączone. Wpisz:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -105,5 +105,5 @@ Dla każdego istniejącego lasu włącz dostęp do odczytu do usługi AD dla adm
 W następnym kroku przeniesiesz grupę do systemu PAM.
 
 > [!div class="step-by-step"]
-> [« Krok 4](step-4-install-mim-components-on-pam-server.md)
-> [Krok 6 »](step-6-transition-group-to-pam.md)
+> [«Krok 4](step-4-install-mim-components-on-pam-server.md)
+> [krok 6»](step-6-transition-group-to-pam.md)

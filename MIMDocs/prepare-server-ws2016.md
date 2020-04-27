@@ -12,10 +12,10 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79382313"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
@@ -36,7 +36,7 @@ ms.locfileid: "79382313"
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Przyłączanie do domeny systemu Windows Server 2016
 
@@ -84,7 +84,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
     ![Obraz programu Zasady zabezpieczeń lokalnych](media/MIM-DeployWS3.png)
 
-4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące polecenie w oparciu o rolę `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
+4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące polecenie `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
 
 5. Kliknij przycisk **OK**, aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
 
@@ -106,7 +106,7 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 Przed zainstalowaniem składników programu MIM 2016 SP2 upewnij się, że zainstalowano wszystkie wymagania wstępne dotyczące oprogramowania:
 
-13. Zainstaluj [pakiet C++ redystrybucyjny Visual 2013](https://www.microsoft.com/download/details.aspx?id=40784).
+13. Zainstaluj [pakiety redystrybucyjne Visual C++ 2013](https://www.microsoft.com/download/details.aspx?id=40784).
 
 14. Zainstaluj .NET Framework 4,6.
 

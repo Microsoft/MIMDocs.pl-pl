@@ -12,17 +12,17 @@ ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e88407ceb1c7ac99f1746f453b7e4a7a5d296e5a
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043634"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Krok 6. Przeniesienie grupy do usługi Privileged Access Management
 
 > [!div class="step-by-step"]
-> [« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-> [Krok 7 »](step-7-elevate-user-access.md)
+> [«Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md) 
+>  [krok 7»](step-7-elevate-user-access.md)
 
 Tworzenie kont uprzywilejowanych w lesie PRIV odbywa się przy użyciu poleceń cmdlet programu PowerShell. Te polecenia cmdlet umożliwiają wykonanie następujących działań:
 
@@ -84,5 +84,5 @@ Te polecenia cmdlet należy uruchomić jeden raz dla każdej grupy i dla poszcze
 Jeśli chcesz przekonać się, że prawa dostępu między lasami dla konta administratora działają, przejdź do kolejnego kroku.
 
 > [!div class="step-by-step"]
-> [« Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-> [Krok 7 »](step-7-elevate-user-access.md)
+> [«Krok 5 ](step-5-establish-trust-between-priv-corp-forests.md) 
+>  [krok 7»](step-7-elevate-user-access.md)

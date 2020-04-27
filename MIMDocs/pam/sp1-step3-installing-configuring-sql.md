@@ -12,17 +12,17 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: e9bc0345358a634adb0d7c0bdf9bd0f22ccea27e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043821"
 ---
 # <a name="step-3-configuring-sql"></a>Krok 3 — Konfigurowanie serwera SQL
 
 > [!div class="step-by-step"]
-> [« Krok 2](sp1-step2-configuring-corp-domain.md)
-> [Krok 4 »](sp1-step4-configuring-sharepoint.md)
+> [«Krok 2](sp1-step2-configuring-corp-domain.md)
+> [krok 4»](sp1-step4-configuring-sharepoint.md)
 
 Przed przejściem do kolejnych czynności upewnij się, że używasz programu SQL Server 2012 z dodatkiem SP1 lub nowszym lub programu SQL Server 2014. W przypadku serwerów przyłączonych do domeny należy zalogować się przy użyciu danych konta MIMAdmin; w przypadku innych serwerów należy zalogować się przy użyciu konta administratora lokalnego.
 1. Uruchom program PowerShell jako administrator.
@@ -41,5 +41,5 @@ Przed przejściem do kolejnych czynności upewnij się, że używasz programu SQ
 Po wyświetleniu monitu podaj hasło dla konta usługi MIMAdmin i zezwól na kontynuowanie instalacji. Po wykonaniu tych czynności przejdź do kroku 4.
 
 > [!div class="step-by-step"]
-> [« Krok 2](sp1-step2-configuring-corp-domain.md)
-> [Krok 4 »](sp1-step4-configuring-sharepoint.md)
+> [«Krok 2](sp1-step2-configuring-corp-domain.md)
+> [krok 4»](sp1-step4-configuring-sharepoint.md)

@@ -12,10 +12,10 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042121"
 ---
 # <a name="capacity-planning-guide"></a>Przewodnik planowania pojemności
@@ -26,7 +26,7 @@ Przed rozpoczęciem pracy z programem MIM skorzystaj z tego przewodnika wraz ze 
 
 Jeśli nie znasz jeszcze programu MIM 2016 i jego składników, przed kontynuowaniem zapoznaj się z dodatkowymi informacjami na temat programu [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md).
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Omówienie
 
 Istnieje wiele czynników, które mogą mieć wpływ na ogólną pojemność i wydajność wdrożenia Microsoft Identity Manager:
 
@@ -37,13 +37,13 @@ Istnieje wiele czynników, które mogą mieć wpływ na ogólną pojemność i w
 
 Główne czynniki wpływające na pojemność i wydajność wdrożenia programu MIM 2016 zostały omówione w poniższej tabeli:
 
-| Współczynnik projektu | Uwagi |
+| Współczynnik projektu | Zagadnienia do rozważenia |
 | ------------- | -------------- |
 | Topologia | Dystrybucja usług programu MIM między komputerami w sieci. |
 | Sprzęt | Sprzęt fizyczny (fizyczny lub wirtualny) dla każdego składnika programu MIM, w tym Konfiguracja procesora CPU, pamięci, karty sieciowej i dysku twardego. |
 | Obiekty konfiguracji zasad programu MIM | Liczba i typ obiektów konfiguracji zasad programu MIM, w tym zestawów, reguł zasad zarządzania (MPR) i przepływów pracy. |
-| Skala | Użytkowników, grup, grup obliczeniowych i typów obiektów niestandardowych, które mają być zarządzane przez program MIM 2016. Ponadto należy wziąć pod uwagę złożoność grup dynamicznych oraz uwzględnić zagnieżdżanie grup. |
-| Obciążenie | Częstotliwość używania. Operacje, takie jak nowe tworzenie grup lub użytkowników, resetowanie haseł lub wizyty w portalu na minutę lub godzinę. Należy pamiętać, że obciążenie może się różnić zależnie od godziny, dnia, tygodnia lub roku. Poszczególne składniki można projektować pod kątem obciążenia szczytowego lub średniego. |
+| Skalowanie | Użytkowników, grup, grup obliczeniowych i typów obiektów niestandardowych, które mają być zarządzane przez program MIM 2016. Ponadto należy wziąć pod uwagę złożoność grup dynamicznych oraz uwzględnić zagnieżdżanie grup. |
+| Ładowanie | Częstotliwość używania. Operacje, takie jak nowe tworzenie grup lub użytkowników, resetowanie haseł lub wizyty w portalu na minutę lub godzinę. Należy pamiętać, że obciążenie może się różnić zależnie od godziny, dnia, tygodnia lub roku. Poszczególne składniki można projektować pod kątem obciążenia szczytowego lub średniego. |
 
 ## <a name="hosting-microsoft-identity-manager-components"></a>Hosting składników programu Microsoft Identity Manager
 
@@ -89,7 +89,7 @@ Obiekty konfiguracji zasad programu MIM obejmują reguł MPR, zestawy, przepływ
 
 Konfiguracja zasad programu MIM obejmuje także decyzje dotyczące inicjowania obsługi w danym środowisku. Pamiętaj o uwzględnieniu następujących kwestii:
 
-- Czy obce zasady zabezpieczeń będą aprowizowane w wielu lasach Usług domenowych Active Directory (AD DS)? Działania takie generują więcej przepływów pracy i żądań, co prowadzi do dodatkowego obciążenia systemu.
+- Czy obce zasady zabezpieczeń będą aprowizowane w wielu lasach usług Active Directory Domain Services (AD DS)? Działania takie generują więcej przepływów pracy i żądań, co prowadzi do dodatkowego obciążenia systemu.
 
 - Czy będziesz używać aprowizacji bez kodu? Taka sytuacja wpływa na liczbę oczekiwanych wpisów reguł, jak również na skojarzone żądania i przepływy pracy w systemie.
 

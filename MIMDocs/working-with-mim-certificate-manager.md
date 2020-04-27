@@ -12,10 +12,10 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2adf1152aaf874d0ff0d93079fb4bfbfcf731b60
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044297"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Wdrożenie aplikacji ze sklepu Windows Menedżera certyfikatów programu MIM
@@ -38,9 +38,9 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 2. Otwórz program MMC.
 
-3. Kliknij pozycję **plik &gt; Dodaj/Usuń przystawkę**.
+3. Kliknij **pozycję &gt; plik Dodaj/Usuń przystawkę**.
 
-4. Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
+4. Na liście Dostępne przystawki kliknij pozycję **Szablony certyfikatów** , a następnie kliknij przycisk **Dodaj**.
 
 5. Pozycja **Szablony certyfikatów** znajduje się teraz poniżej pozycji **Główny katalog konsoli** w programie MMC. Kliknij dwukrotnie tę pozycję, aby wyświetlić wszystkie dostępne szablony certyfikatów.
 
@@ -55,7 +55,7 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 9. Na karcie **Obsługiwanie żądań** ustaw dla opcji **Przeznaczenie** wartość **Podpis i szyfrowanie**, a następnie w obszarze **Zrób tak…** zaznacz pole wyboru **Monituj użytkownika podczas rejestrowania**.
 
-10. Na karcie **Kryptografia** w obszarze **Kategoria dostawcy** wybierz pozycje **Dostawca magazynu kluczy i Żądania mogą korzystać z każdego dostawcy dostępnego na komputerze podmiotu**.
+10. Na karcie **Kryptografia** w obszarze **Kategoria dostawcy**wybierz pozycję **dostawca magazynu kluczy i żądania mogą korzystać z każdego dostawcy dostępnego na komputerze podmiotu**.
 
     > [!NOTE]
     > Jeśli szablon jest w wersji 3, dostępna będzie tylko opcja Dostawca magazynu kluczy. Jeśli jej nie widzisz, prawdopodobnie oznacza to, że nie utworzono poprawnie szablonu certyfikatu w odpowiedniej wersji. Wróć do kroku 5 powyżej.
@@ -64,9 +64,9 @@ Tworzenie szablonu certyfikatu dla aplikacji Menedżer certyfikatów przebiega w
 
 12. Kliknij przycisk **OK**, aby zakończyć wprowadzanie zmian i utworzyć nowy szablon. Twój nowy szablon powinien zostać wyświetlony na liście Szablony certyfikatów.
 
-13. Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**.
+13. Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o komputer, którym chcesz zarządzać, wybierz pozycję **komputer lokalny**.
 
-14. W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)** , a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
+14. W lewym okienku programu MMC rozwiń węzeł **urząd certyfikacji (lokalny)** , a następnie rozwiń węzeł urzędu certyfikacji na liście urząd certyfikacji.
 
 15. Kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, a następnie kliknij pozycje **Nowy &gt; Szablon certyfikatu do wystawienia**.
 
@@ -78,7 +78,7 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
 1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-2.  Przejdź do pozycji Administracja &gt; Zarządzanie szablonami profilów. Upewnij się, że pole jest zaznaczone obok **Zarządzanie certyfikatami w usłudze MIM Przykładowy dziennik kart inteligentnych w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
+2.  Przejdź do pozycji &gt; Administracja Zarządzaj szablonami profilów. Upewnij się, że pole jest zaznaczone obok **Zarządzanie certyfikatami w usłudze MIM Przykładowy dziennik kart inteligentnych w szablonie profilu** , a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
 
 3.  Wpisz nazwę szablonu profilu, a następnie kliknij przycisk **OK**.
 
@@ -115,8 +115,8 @@ Podczas tworzenia szablonu profilu ustaw go w celu utworzenia/zniszczenia wirtua
 
    |                     |                                                                                                                                                                                                          |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |      MIMCM URL      |                                              Nazwa FQDN portalu, w którym skonfigurowano Menedżera certyfikatów. Na przykład https://mimcmServerAddress/certificatemanagement                                              |
-   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład <https://adfsServerSame/adfs> </br> Jeśli usługi ADFS nie są używane, należy skonfigurować to ustawienie za pomocą pustego ciągu.  Na przykład ```<ADFS URL=""/>``` |
+   |      MIMCM URL      |                                              Nazwa FQDN portalu, w którym skonfigurowano Menedżera certyfikatów. Na przykład: https://mimcmServerAddress/certificatemanagement                                              |
+   |      ADFS URL       | Jeśli będziesz używać usług AD FS, wstaw odpowiedni adres URL. Na przykład: <https://adfsServerSame/adfs> </br> Jeśli usługi ADFS nie są używane, należy skonfigurować to ustawienie za pomocą pustego ciągu.  Na przykład```<ADFS URL=""/>``` |
    |     PrivacyUrl      |                                         Możesz podać adres URL strony sieci Web z informacjami o tym, co się dzieje z danymi użytkowników zebranymi na potrzeby rejestracji certyfikatu.                                          |
    |     SupportMail     |                                                                           Możesz podać adres e-mail pomocy technicznej.                                                                           |
    | LobComplianceEnable |                                                                     Możesz ustawić wartość true lub false. Domyślnie jest ustawiona wartość true.                                                                      |
@@ -268,4 +268,4 @@ Po skonfigurowaniu aplikacji Menedżer certyfikatów pobierz plik MIMDMModernApp
 ## <a name="next-steps"></a>Następne kroki
 
 - [Konfigurowanie szablonów profilów](https://technet.microsoft.com/library/cc708656)
-- [Zarządzanie aplikacjami karty inteligentnej](https://technet.microsoft.com/library/cc708681)
+- [Zarządzanie aplikacjami kart inteligentnych](https://technet.microsoft.com/library/cc708681)

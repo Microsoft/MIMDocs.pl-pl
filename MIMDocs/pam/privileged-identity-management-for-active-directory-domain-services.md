@@ -14,13 +14,13 @@ ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
 ms.openlocfilehash: 1d00b232d8c7b09fea72e033a51dd590992291c3
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043906"
 ---
-# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług Active Directory Domain Services
+# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
 
 Usługa Privileged Access Management (PAM) to rozwiązanie ułatwiające organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
 
@@ -111,4 +111,4 @@ Taki przepływ pracy jest przeznaczony specjalnie dla kont administracyjnych. Ad
 ## <a name="next-steps"></a>Następne kroki
 
 - [Eliminowanie ataków typu Pass-the-hash (PtH) oraz innych kradzieży poświadczeń, wersji 1 i 2](https://www.microsoft.com/download/details.aspx?id=36036)
-- [Polecenia cmdlet Privileged Access Management](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)
+- [Polecenia cmdlet usługi Privileged Access Management](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)

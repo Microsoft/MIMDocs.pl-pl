@@ -12,10 +12,10 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7df1a4ca7a33aa2a00ac0b2c3ef24056c9720b5b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043243"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Uaktualnienie z programu Forefront Identity Manager 2010 R2
@@ -35,7 +35,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 - Lokalne i środowiskowe wymagania wstępne (SQL Server, Exchange Server, SharePoint Services itp.) skonfigurowane na potrzeby programu FIM 2010 R2.
 
 
-## <a name="preparation"></a>Przygotowanie
+## <a name="preparation"></a>Przygotowywanie
 
 1.  Utwórz kopię zapasową bazy danych usługi programu FIM, bazy danych usługi synchronizacji programu FIM oraz oprogramowania i konfiguracji usługi synchronizacji programu FIM i usługi programu FIM.
 
@@ -109,11 +109,11 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     4.  **Portal resetowania haseł programu MIM:** ta funkcja jest niezbędna do resetowania hasła.
 
-7.  Podaj szczegóły programu SQL Server, który jest używany na potrzeby bazy danych usługi programu FIM. Wybierz opcję ponownego użycia istniejącej bazy danych i zachowania danych. Kliknij przycisk **Dalej**, aby kontynuować.
+7.  Podaj szczegóły programu SQL Server, który jest używany na potrzeby bazy danych usługi programu FIM. Wybierz opcję ponownego użycia istniejącej bazy danych i zachowania danych. Kliknij przycisk **Dalej** , aby kontynuować.
 
 8. Jeśli wybrano opcję ponownego użycia istniejącej bazy danych, zostanie wyświetlone przypomnienie o utworzeniu kopii zapasowej bazy danych.
 
-9. Wprowadź szczegóły serwera poczty. Jeśli serwer poczty znajduje się na bieżącym serwerze, wprowadź wartość „localhost” jako lokalizację serwera poczty. Kliknij przycisk **Dalej**, aby kontynuować.
+9. Wprowadź szczegóły serwera poczty. Jeśli serwer poczty znajduje się na bieżącym serwerze, wprowadź wartość „localhost” jako lokalizację serwera poczty. Kliknij przycisk **Dalej** , aby kontynuować.
 
     ![Obraz przedstawiający konfigurowanie połączenia z serwerem poczty](media/MIM-UpgSP6.png)
 
@@ -133,13 +133,13 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     ![Obraz przedstawiający konfigurowanie portalu i usługi programu MIM](media/MIM-UpgSP10.png)
 
-13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Next** (Dalej).
+13. Podczas instalowania portalu programu MIM podaj adres serwera usługi programu MIM. Kliknij przycisk **Dalej**.
 
-14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Next** (Dalej).
+14. Podczas instalowania portalu programu MIM podaj adres URL zbioru witryn programu SharePoint, w którym jest obecnie hostowany portal programu FIM. Kliknij przycisk **Dalej**.
 
 ## <a name="install-the-mim-password-registration-portal"></a>Instalowanie portalu rejestracji haseł programu MIM
 
-1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Next** (Dalej).
+1. Jeśli instalujesz portal rejestracji haseł programu MIM, podaj żądany adres URL portalu rejestracji haseł. Kliknij przycisk **Dalej**.
 
 2. Skonfiguruj możliwość używania usługi i portalu przez klientów i użytkowników końcowych.
 
@@ -147,7 +147,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     2.  Za pomocą opcji **Udziel uwierzytelnionym użytkownikom dostępu do witryny portalu programu MIM** określ, czy udzielić dostępu uwierzytelnionym użytkownikom.
 
-    3.  Kliknij przycisk **Next** (Dalej).
+    3.  Kliknij przycisk **Dalej**.
 
 3. Podaj szczegóły dostępu i poświadczenia na potrzeby rejestracji haseł programu MIM.
 
@@ -159,7 +159,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Next** (Dalej).
+    4.  Kliknij przycisk **Dalej**.
 
 4. Na następnym ekranie konfiguracji rejestracji haseł programu MIM:
 
@@ -179,7 +179,7 @@ W tym przewodniku założono, że masz już skonfigurowane następujące element
 
     3.  Zaznacz opcję **Otwórz port w zaporze**.
 
-    4.  Kliknij przycisk **Next** (Dalej).
+    4.  Kliknij przycisk **Dalej**.
 
 2. Na następnym ekranie konfiguracji resetowania haseł programu MIM:
 

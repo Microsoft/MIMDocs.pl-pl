@@ -12,10 +12,10 @@ ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 79f9eeabdd9ac9206c4232217c7cbcdf870c3a3a
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043991"
 ---
 # <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
@@ -40,7 +40,7 @@ Następujące oprogramowanie można pobrać z witryny GitHub:
 ## <a name="required-software"></a>Wymagane oprogramowanie
 
 - Windows Server 2012 R2
-- Windows 10 Enterprise
+- Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 lub SQL Server 2014
 
 ## <a name="evaluation-software"></a>Oprogramowanie próbne
@@ -52,9 +52,9 @@ Jeśli nie masz licencji dla systemu Windows, programu SQL Server lub systemu Wi
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
 
-### <a name="microsoft-download-center"></a>Microsoft Download Center (Centrum pobierania Microsoft)
+### <a name="microsoft-download-center"></a>Centrum pobierania Microsoft
 
-- [Program SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
+- [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
 - [SharePoint Foundation 2013 SP1 i jego wymagania wstępne](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## <a name="hardware-requirements"></a>Wymagania sprzętowe

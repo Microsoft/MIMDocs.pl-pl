@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: c4dfb4184292ba1b5da8c4e3e176d53e6a885ed8
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042274"
 ---
 # <a name="bhold-core-installation"></a>Instalacja pakietu BHOLD Core
@@ -30,9 +30,9 @@ Moduł pakietu BHOLD Core stanowi podstawę pakietu Microsoft pakietu BHOLD Suit
 
 |          |        |          |
 |----------|--------|----------|
-|**Składnik** |**Minimalny** | **Rekomendowane** |
+|**Składnik** |**Minimalne** | **Zalecane** |
 |Procesor | 64-bitowy procesor | Procesor wielordzeniowy 64-bitowy |
-| Pamięć |3 GB | 6 GB lub więcej |
+| Memory (Pamięć) |3 GB | 6 GB lub więcej |
 |Magazyn| dostępne 30 GB |Zależy od rozmiaru wdrożenia |
 |Karta sieciowa| połączenie 100 MB z serwerem SQL i programem Forefront Identity Manager (FIM) | 1Gbps połączenie z serwerem SQL i programem FIM|
 
@@ -70,7 +70,7 @@ Moduł pakietu BHOLD Core musi być w stanie zalogować się do domeny przy uży
 
 3.  W oknie dialogowym **nowy obiekt — Grupa** w polu **Nazwa grupy**wpisz nazwę grupy (pakietu BHOLD default: BHOLDApplicationGroup), a następnie kliknij przycisk **OK**.
 
-4.  Kliknij prawym przyciskiem myszy pozycję **Użytkownicy**, wskaż polecenie **Nowy**, a następnie kliknij pozycję **Użytkownik**.
+4.  Kliknij prawym przyciskiem myszy pozycję **Użytkownicy**, wskaż polecenie **Nowy**, a następnie kliknij pozycję **użytkownik**.
 
 5.  W polu Imię i **nazwisko**wpisz nazwę, która pomoże zidentyfikować konto, na przykład konto usługi pakietu BHOLD Core.
 
@@ -94,22 +94,22 @@ Przed rozpoczęciem instalacji modułu pakietu BHOLD Core należy przygotować s
 
 ### <a name="account-settings"></a>Ustawienia konta
 
-| **Elementów**                                    | **Opis**                                                                                                                                                                                                                                                                                             | **Wartość**                                                                                                                                                          |
+| **Element**                                    | **Opis**                                                                                                                                                                                                                                                                                             | **Wartościami**                                                                                                                                                          |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Używanie dostawcy zabezpieczeń na komputerze/domenie** | Po wybraniu określa, że zabezpieczenia Active Directory Domain Services będą kontrolować dostęp do pakietu BHOLD rdzeń.                                                                                                                                                                                                  | Zaznacz pole wyboru. **Ważne:** Instalacja nie powiedzie się, jeśli to pole wyboru nie jest zaznaczone.                                                                 |
-| **Domeny**                                  | Określa domenę zawierającą serwer pakietu BHOLD, konto usługi i grupę aplikacji. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (krótkiej), a nie w pełni kwalifikowanej nazwy domeny (FQDN). Na przykład, jeśli nazwa FQDN domeny to fabrikam.com, określ nazwę domeny jako CONTOSO. | W tym miejscu wpisz nazwę domeny:                                                                                                                                        |
+| **Używanie dostawcy zabezpieczeń na komputerze/domenie** | Po wybraniu określa, że zabezpieczenia Active Directory Domain Services będą kontrolować dostęp do pakietu BHOLD rdzeń.                                                                                                                                                                                                  | zaznacz pole wyboru. **Ważne:** Instalacja nie powiedzie się, jeśli to pole wyboru nie jest zaznaczone.                                                                 |
+| **Domain**                                  | Określa domenę zawierającą serwer pakietu BHOLD, konto usługi i grupę aplikacji. **Ważne:** Określ nazwę domeny przy użyciu nazwy NetBIOS (krótkiej), a nie w pełni kwalifikowanej nazwy domeny (FQDN). Na przykład, jeśli nazwa FQDN domeny to fabrikam.com, określ nazwę domeny jako CONTOSO. | W tym miejscu wpisz nazwę domeny:                                                                                                                                        |
 | **Grupa aplikacji**                       | Określa nazwę grupy zabezpieczeń, która została wcześniej utworzona w [wymaganym użytkowniku i grupie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                                  | Napisz tutaj nazwę grupy:                                                                                                                                         |
 | **Użytkownik usługi**                            | Określa nazwę logowania konta użytkownika usługi utworzonego wcześniej w [wymaganym użytkowniku i grupie](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug).                                                                                                                      | W tym miejscu wpisz nazwę konta użytkownika:                                                                                                                                  |
 | **Hasło**                                | Określa hasło konta użytkownika usługi pakietu BHOLD Core.                                                                                                                                                                                                                                              | Napisz hasło tutaj: **Ważne:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji.                                                                |
-| **Adres IP/port witryny sieci Web**                         | Określa adres IP i numer portu witryny sieci Web, która ma zostać utworzona na serwerze intranetowym. Zmień wartość domyślną (\*) tylko wtedy, gdy nie będziesz używać tego samego adresu IP, który jest domyślną witryną sieci Web. Zmień numer portu na dostępny port tylko wtedy, gdy port domyślny (5151) jest już w użyciu.             | Jeśli w domyślnej witrynie sieci Web jest używany niedomyślny adres IP, Zapisz go tutaj: Jeśli domyślny numer portu jest już używany, Zapisz numer portu witryny sieci Web pakietu BHOLD tutaj: |
+| **Adres IP/port witryny sieci Web**                         | Określa adres IP i numer portu witryny sieci Web, która ma zostać utworzona na serwerze intranetowym. Zmień wartość domyślną (\*) tylko wtedy, gdy nie użyjesz tego samego adresu IP jako domyślnej witryny sieci Web. Zmień numer portu na dostępny port tylko wtedy, gdy port domyślny (5151) jest już w użyciu.             | Jeśli w domyślnej witrynie sieci Web jest używany niedomyślny adres IP, Zapisz go tutaj: Jeśli domyślny numer portu jest już używany, Zapisz numer portu witryny sieci Web pakietu BHOLD tutaj: |
 
 ### <a name="database-settings"></a>Ustawienia bazy danych
 
-| **Elementów**                                       | **Opis**                                                                                                                                                                                                                                                           | **Wartość**                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Element**                                       | **Opis**                                                                                                                                                                                                                                                           | **Wartościami**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Korzystanie ze zintegrowanych zabezpieczeń**                    | Określa, że uwierzytelnianie systemu Windows jest używane w celu uzyskania dostępu do bazy danych.                                                                                                                                                                                                     | Zaznacz to pole wyboru, jeśli uwierzytelnianie systemu Windows jest używane do nawiązywania połączenia z SQL Server. Usuń zaznaczenie tego pola wyboru, jeśli jest używane uwierzytelnianie SQL Server. Baza danych musi zostać utworzona przed uruchomieniem Instalatora pakietu BHOLD Core, jeśli jest używane uwierzytelnianie SQL Server. **Uwaga:** Jeśli jest używane uwierzytelnianie systemu Windows, użytkownik musi być zalogowany przy użyciu konta z rolą serwera sysadmin na serwerze bazy danych. |
 | Hasło **użytkownika bazy danych** i **bazy danych** | Określa nazwę użytkownika i hasło użytkownika z rolą serwera sysadmin na serwerze bazy danych. Te wartości są dostarczane tylko wtedy, gdy używane jest uwierzytelnianie SQL Server.                                                                                               | Napisz SQL Server nazwę użytkownika tutaj: Napisz SQL Server hasło użytkownika tutaj: **Uwaga:** Pamiętaj, aby zachować to hasło w ukrytej, bezpiecznej lokalizacji.                                                                                                                                                                                                                                                  |
-| Nazwa **serwera bazy danych** i **bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwę bazy danych (domyślnie: B1), którą utworzy Instalator pakietu BHOLD Core. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, Określ wystąpienie serwera bazy danych w formularzu *\<server\>* \\ *\<wystąpienia\>* . | W tym miejscu wpisz nazwę serwera (lub serwera i wystąpienia): w tym miejscu wpisz nazwę bazy danych:                                                                                                                                                                                                                                                                                                                   |
+| Nazwa **serwera bazy danych** i **bazy danych**   | Określa nazwę NetBIOS serwera bazy danych i nazwę bazy danych (domyślnie: B1), którą utworzy Instalator pakietu BHOLD Core. Jeśli nie używasz domyślnego wystąpienia serwera bazy danych, Określ wystąpienie serwera bazy danych w\\*\<wystąpieniu\>* * \<serwera\>* programu. | W tym miejscu wpisz nazwę serwera (lub serwera i wystąpienia): w tym miejscu wpisz nazwę bazy danych:                                                                                                                                                                                                                                                                                                                   |
 | **Wprowadź ograniczenia dla użytkownika bazy danych**    | Nieaktualne.                                                                                                                                                                                                                                                                 | Nie zmieniaj wartości domyślnej                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -118,9 +118,9 @@ Przed rozpoczęciem instalacji modułu pakietu BHOLD Core należy przygotować s
 
 Aby zainstalować moduł pakietu BHOLD Core, zaloguj się jako członek grupy Administratorzy domeny, pobierz następujący plik i uruchom go jako administrator na serwerze, na którym zamierzasz zainstalować moduł pakietu BHOLD Core w: 
 
-- BholdCore *\<wersja\>* \_Release. msi
+- BholdCore * \<wersja\>*\_pliku MSI
 
-Zastąp *\<version\>wersją* wersji pakietu BHOLD Core, którą instalujesz.
+Zastąp * \<wersję\> * numerem wersji pakietu BHOLD Core, którą instalujesz.
 
 Aby uruchomić plik programu jako administrator, kliknij plik prawym przyciskiem myszy, a następnie kliknij polecenie **Uruchom jako administrator**.
 
@@ -156,7 +156,7 @@ Aby zapewnić prawidłowe działanie usług IIS z modułem pakietu BHOLD Core, n
 
 **Aby włączyć obsługę aplikacji 32-bitowych dla puli aplikacji pakietu BHOLD Core**
 
-1.  Aby otworzyć Menedżera Internet Information Services, kliknij przycisk **Start**, wskaż polecenie **Narzędzia administracyjne**, a następnie kliknij polecenie **Menedżer Internet Information Services (IIS)** .
+1.  Aby otworzyć Menedżera Internet Information Services, kliknij przycisk **Start**, wskaż polecenie **Narzędzia administracyjne**, a następnie kliknij polecenie **Menedżer Internet Information Services (IIS)**.
 
 2.  W drzewie konsoli rozwiń nazwę serwera, a następnie kliknij pozycję **Pule aplikacji**.
 
@@ -171,17 +171,17 @@ Jeśli nazwa sieci używana do kontaktowania się z witryną sieci Web pakietu B
 > [!IMPORTANT]
 > Jeśli moduł pakietu BHOLD Core jest zainstalowany na tym samym komputerze co Portal programu FIM, należy utworzyć rekordy zasobów DNS (CNAME lub A) o różnych nazwach hostów dla serwerów z systemem pakietu BHOLD Core oraz na serwerze z uruchomionym portalem programu FIM. Dla określonej pary typu usługi/aliasu serwera można określić tylko jedną nazwę SPN, tak aby pakietu BHOLD rdzeń i Portal FIM wymagały oddzielnych nazw SPN, ponieważ zazwyczaj są one uruchamiane na różnych kontach. Setspn polecenie zgłasza błąd, jeśli nazwa SPN została już ustanowiona przy użyciu innego konta.
 
-Minimalnym wymaganiem do wykonania tej procedury jest członkostwo w grupie **Administratorzy domeny** lub równoważnej.
+Członkostwo w grupie **Administratorzy domeny**, albo równoważnej, jest minimalnym wymaganiem do wykonania tej procedury.
 
 #### <a name="to-establish-the-spn-of-the-bhold-website"></a>Aby określić nazwę SPN witryny sieci Web pakietu BHOLD
 
 1.  Na Active Directory Domain Services kontrolerze domeny kliknij przycisk **Start**, kliknij pozycję **Wszystkie programy**, kliknij pozycję **akcesoria**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia**, a następnie kliknij polecenie **Uruchom jako administrator**.
 
-2.  W wierszu polecenia wpisz następujące polecenie, a następnie naciśnij klawisz ENTER: Setspn – S HTTP/ *\<networkalias\> \<domain\>* \\ *\<AccountName\>* , gdzie:
+2.  W wierszu polecenia wpisz następujące polecenie, a następnie naciśnij klawisz ENTER: Setspn – S http/ * \<networkalias\> \<\> domena* \\ * \<\> AccountName* , gdzie:
 
-    -   *\<networkalias\>* to adres używany przez klientów do kontaktowania się z witryną sieci Web pakietu BHOLD
+    -   networkalias to adres używany przez klientów do kontaktowania się z witryną sieci Web pakietu BHOLD * \<\> *
 
-    -   *\<domeny\>* \\ *\<AccountName\>* to domena i nazwa użytkownika konta usługi pakietu BHOLD Core utworzonego podczas instalacji pakietu BHOLD Core.
+    -   *\<Nazwa\>*\\*konta\> domeny\<* jest domeną i nazwą użytkownika konta usługi pakietu BHOLD Core utworzonego podczas instalacji pakietu BHOLD Core.
 
 3.  Powtórz poprzedni krok dla wszystkich innych nazw używanych przez klientów do kontaktowania się z witryną sieci Web pakietu BHOLD, na przykład aliasów CNAME, nazwy zawierające w pełni kwalifikowaną nazwę domeny lub nazwy, które zawierają nazwę NetBIOS (krótką).
 
@@ -189,14 +189,14 @@ Minimalnym wymaganiem do wykonania tej procedury jest członkostwo w grupie **Ad
 
 Aby sprawdzić, czy instalacja modułu pakietu BHOLD Core zakończyła się pomyślnie, Otwórz Portal pakietu BHOLD Core i sprawdź atrybuty systemowe. Ponadto, aby upewnić się, że moduł pakietu BHOLD Core funkcjonuje prawidłowo w danym środowisku, można zmodyfikować następujące atrybuty systemu pakietu BHOLD w odpowiedni sposób:
 
-| **Przypisane**                | **Opis**                                                                                                                                                                                                                                                                                                      |
+| **Atrybut**                | **Opis**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nohistory**                | Ustaw wartość Y, jeśli witryna pakietu BHOLD jest uruchomiona w klastrowanej usłudze sieci Web, aby upewnić się, że ostatnio wyświetlane elementy działają prawidłowo. Ustaw wartość N, jeśli witryna sieci Web pakietu BHOLD jest uruchomiona na autonomicznym serwerze IIS.                                                                                                                      |
 | **MoveorgunitToSameorgtype** | Ustaw wartość Y, aby upewnić się, że jednostki organizacyjne (orgunits) można przenieść tylko do orgunits z tym samym typem organizacyjnym co element nadrzędny orgunit. Na przykład uniemożliwia to przeniesienie projektu do orgunit działu orgunit. Ustaw wartość N, aby zezwolić orgunit na umieszczenie w orgunit innego typu. |
 | **Dni między ABA**     | Ustaw na dwucyfrową liczbę całkowitą, aby określić interwał (w dniach) między dwoma uruchomieniami uwierzytelniania opartego na atrybutach (ABA). Na przykład, aby określić, że uruchomienia ABA będą oddzielone przez dwa dni, wpisz 02.                                                                                                                     |
 | **Godzina rozpoczęcia ABA**    | Ustaw na dwucyfrową liczbę całkowitą, aby określić godzinę dnia, o której nastąpi uruchomienie autoryzacji opartej na atrybutach. Na przykład, aby określić, że uruchomienie ABA będzie odbywać się o godzinie 11:00 (23:00), typ 23.                                                                                                             |
 | **Kardynalność systemu**       | Ustaw wartość N, jeśli nie chcesz, aby kontrola kardynalności systemu pakietu BHOLD. Wartość domyślna to Y.                                                                                                                                                                                                                             |
-| **Rejestrować**                  | Ustaw wartość N, jeśli nie chcesz, aby zmiany zostały zarejestrowane. Wartość domyślna to Y.                                                                                                                                                                                                                                            |
+| **Rejestrowanie**                  | Ustaw wartość N, jeśli nie chcesz, aby zmiany zostały zarejestrowane. Wartość domyślna to Y.                                                                                                                                                                                                                                            |
 | **Przetwarzanie SystemQueue**   | Ustaw wartość N, jeśli nie chcesz przetwarzać kolejki systemowej. Nie zmieniaj tej wartości, chyba że zostanie to zlecone przez pomoc techniczną.                                                                                                                                                                                           |
 
 Aby wykonać tę procedurę, użytkownik musi być zalogowany jako członek grupy Administratorzy domeny.
@@ -205,7 +205,7 @@ Aby wykonać tę procedurę, użytkownik musi być zalogowany jako członek grup
 
 1.  Kliknij przycisk **Start**, kliknij pozycję **Wszystkie programy**, a następnie kliknij pozycję **Internet Explorer**.
 
-2.  W polu Adres wpisz, gdzie *\<server\>* jest nazwą serwera witryny sieci Web pakietu bhold i *\<port\>* jest numerem portu powiązanym z witryną sieci Web.
+2.  W polu Adres wpisz, gdzie * \<serwer\> * jest nazwą serwera witryny sieci Web pakietu BHOLD, a * \<port\> * jest numerem portu powiązanym z witryną sieci Web.
 
 3.  Kliknij pozycję **Strona główna**, kliknij pozycję **wartości**, a następnie kliknij przycisk **Modyfikuj**.
 

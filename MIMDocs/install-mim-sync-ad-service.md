@@ -12,10 +12,10 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042427"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalacja programu MIM 2016: synchronizowanie usług Active Directory i MIM
@@ -27,7 +27,7 @@ ms.locfileid: "79042427"
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **nazwa_serwera_mim**
 > - Nazwa domeny — **contoso**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 Domyślnie żadne łączniki usługi synchronizacji programu MIM (Sync) nie są skonfigurowane.  Typowym pierwszym krokiem jest użycie usługi synchronizacji programu MIM do wypełniania bazy danych usługi MIM informacjami z istniejących kont usługi Active Directory. W tym celu używana jest aplikacja usługi synchronizacji programu MIM.
 
@@ -45,7 +45,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
 2.  Aby otworzyć Kreatora tworzenia agenta zarządzania, przejdź do strony **agenci zarządzania** , a następnie w menu **Akcje** kliknij polecenie **Utwórz**.
 
-3.  Na stronie **Create Management Agent** (Tworzenie agenta zarządzania) skonfiguruj następujące ustawienia, a następnie kliknij przycisk **Next** (Dalej).
+3.  Na stronie **Tworzenie agenta zarządzania** podaj poniższe ustawienia, a następnie kliknij przycisk **dalej**.
 
     -   Management agent for (Agent zarządzania dla): FIM Service management agent (agent zarządzania usługi FIM)
 
@@ -56,7 +56,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
     -   Database (Baza danych): FIMService
 
-    -   Adres podstawowy usługi MIM: http://localhost:5725
+    -   Adres podstawowy usługi programu MIM:http://localhost:5725
 
     -   Authentication mode (Tryb uwierzytelniania): Windows integrated authentication (zintegrowane uwierzytelnianie systemu Windows)
 
@@ -74,7 +74,7 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
 
     -   Grupa
 
-    -   Person
+    -   Person (Osoba)
 
     -   SynchronizationRule
 
@@ -113,9 +113,9 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
-    | Poczta e-mail | Eksportowanie | Poczta |
-    | Identyfikator pracownika | Eksportowanie | employeeID |
+    | Domain | Eksportowanie | domena |
+    | Poczta e-mail | Eksportowanie | mail (poczta) |
+    | EmployeeID | Eksportowanie | employeeID |
     | EmployeeType | Eksportowanie | employeeType |
     | FirstName | Eksportowanie | firstName |
     | LastName | Eksportowanie | lastName |
@@ -139,22 +139,22 @@ Podczas konfigurowania agenta zarządzania programu MIM należy określić konto
     |-|-|-|
     | AccountName | Eksportowanie | accountName |
     | Nazwa wyświetlana | Eksportowanie | displayName |
-    | Domain | Eksportowanie | domain |
-    | Poczta e-mail | Eksportowanie | Poczta |
+    | Domain | Eksportowanie | domena |
+    | Poczta e-mail | Eksportowanie | mail (poczta) |
     | MailNickName | Eksportowanie | mailNickName |
-    | Element członkowski | Eksportowanie | członek |
+    | Członek | Eksportowanie | członek |
     | ObjectSID | Eksportowanie | objectSid |
-    | Zakres | Eksportowanie | zakres |
-    | Typ | Eksportowanie | typ |
+    | Zakres | Eksportowanie | scope |
+    | Typ | Eksportowanie | type |
     | MembershipAddWorkflow | Eksportowanie | membershipAddWorkflow |
     | MembershipLocked | Eksportowanie | membershipLocked |
-    | AccountName | Importuj | accountName |
-    | DisplayedOwner | Importuj | displayedOwner |
-    | Nazwa wyświetlana | Importuj | displayName |
-    | MailNickName | Importuj | mailNickName |
-    | Element członkowski | Importuj | członek |
-    | Zakres | Importuj | zakres |
-    | Typ | Importuj | typ |
+    | AccountName | Import | accountName |
+    | DisplayedOwner | Import | displayedOwner |
+    | Nazwa wyświetlana | Import | displayName |
+    | MailNickName | Import | mailNickName |
+    | Członek | Import | członek |
+    | Zakres | Import | scope |
+    | Typ | Import | type |
 
 10.  Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
 
@@ -217,7 +217,7 @@ Agent zarządzania usługi Active Directory jest łącznikiem dla usług domenow
 
 10. Na stronie **Configure Attribute Flow** (Konfigurowanie przepływu atrybutów) kliknij przycisk **Next** (Dalej).
 
-11. Na stronie **Configure Deprovisioning** (Konfigurowanie anulowania zastrzeżenia) kliknij przycisk **Next** (Dalej).
+11. Na stronie **Konfigurowanie anulowania** aprowizacji kliknij przycisk **dalej**.
 
 12. Na stronie **Configure Extensions** (Konfigurowanie rozszerzeń) kliknij przycisk **Finish** (Zakończ).
 
@@ -240,7 +240,7 @@ W poniższej tabeli zamieszczono pięć profilów uruchamiania tworzonych dla ł
 
 Aby utworzyć profile uruchamiania dla łącznika menedżera ADMA:
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
+1. Otwórz Synchronization Service Manager a następnie w menu **Tools (narzędzia** ) kliknij pozycję **Management Agents (agenci zarządzania**).
 
 2. Na liście **Management Agents** (Agenci zarządzania) wybierz pozycję **ADMA**.
 
@@ -272,7 +272,7 @@ W poniższej tabeli zamieszczono pięć pasujących profilów uruchamiania dla �
 
 Aby utworzyć profile uruchamiania dla łącznika menedżera MIMMA:
 
-1. Otwórz menedżera usługi synchronizacji i w menu **Tools** (Narzędzia) kliknij polecenie **Management Agents** (Agenci zarządzania).
+1. Otwórz Synchronization Service Manager a następnie w menu **Tools (narzędzia** ) kliknij pozycję **Management Agents (agenci zarządzania**).
 
 2. Z listy **Management Agents** (Agenci zarządzania) wybierz pozycję **MIMMA**.
 
@@ -321,16 +321,16 @@ Aby utworzyć regułę synchronizacji ruchu przychodzącego użytkowników usłu
 
 7. Na stronie **Inbound Attribute Flow** (Przepływ atrybutów ruchu przychodzącego) wprowadź następujące informacje, a następnie kliknij przycisk **Next** (Dalej):
 
-    | Reguła przepływu | Obiekt źródłowy | Lokalizacja docelowa |
+    | Reguła przepływu | Element źródłowy | Element docelowy |
     |-|-|-|
     |Reguła 1|samAccountName|accountName|
     |Reguła 2|displayName|displayName|
     |Reguła 3|EmployeeType|employeeType|
     |Reguła 4|givenName|firstName|
     |Reguła 5|sn|lastName|
-    |Reguła 6|Manager|manager|
+    |Reguła 6|Menedżer|manager|
     |Reguła 7|objectSid|ObjectSID|
-    |Reguła 8|"Contoso"|domain|
+    |Reguła 8|"Contoso"|domena|
 
     Dla każdego wiersza w tej tabeli wykonaj następujące czynności:
 

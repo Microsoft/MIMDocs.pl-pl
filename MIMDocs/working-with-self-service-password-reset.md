@@ -10,15 +10,15 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044280"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opcje wdrożenia samoobsługowego resetowania hasła
 
-W przypadku nowych klientów, którzy mają [licencję na Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), zalecamy korzystanie z funkcji samoobsługowego [resetowania haseł usługi Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks) w celu zapewnienia środowiska użytkownika końcowego.  Funkcja samoobsługowego resetowania haseł w usłudze Azure AD umożliwia użytkownikowi zresetowanie własnego hasła oraz obsługę wielu takich samych funkcji, jak program MIM, w tym alternatywnej poczty e-mail i pytania & bram.  W przypadku wdrażania funkcji samoobsługowego resetowania hasła w usłudze Azure AD Azure AD Connect obsługuje [zapisywanie nowych haseł do AD DS](/azure/active-directory/authentication/concept-sspr-writeback), a [Usługa powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md) programu MIM może służyć do przekazywania haseł do innych systemów, takich jak serwer katalogowy innego dostawcy.  Wdrażanie programu MIM do [zarządzania hasłami](infrastructure/mim2016-password-management.md) nie wymaga wdrożenia usługi MIM ani samoobsługowego resetowania hasła lub rejestracji w programie MIM.  Zamiast tego można wykonać następujące czynności:
+W przypadku nowych klientów, którzy mają [licencję na Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), zalecamy korzystanie z funkcji samoobsługowego [resetowania haseł usługi Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks) w celu zapewnienia środowiska użytkownika końcowego.  Funkcja samoobsługowego resetowania haseł w usłudze Azure AD umożliwia użytkownikowi zresetowanie własnego hasła oraz obsługę wielu takich samych funkcji, jak program MIM, w tym alternatywnej poczty e-mail i pytania&bram.  W przypadku wdrażania funkcji samoobsługowego resetowania hasła w usłudze Azure AD Azure AD Connect obsługuje [zapisywanie nowych haseł do AD DS](/azure/active-directory/authentication/concept-sspr-writeback), a [Usługa powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md) programu MIM może służyć do przekazywania haseł do innych systemów, takich jak serwer katalogowy innego dostawcy.  Wdrażanie programu MIM do [zarządzania hasłami](infrastructure/mim2016-password-management.md) nie wymaga wdrożenia usługi MIM ani samoobsługowego resetowania hasła lub rejestracji w programie MIM.  Zamiast tego można wykonać następujące czynności:
 
 - Najpierw, jeśli trzeba będzie wysyłać hasła do katalogów innych niż Azure AD i AD DS, wdrożyć program MIM Sync z łącznikami, aby Active Directory Domain Services i wszystkie dodatkowe systemy docelowe, skonfigurować program MIM do [zarządzania hasłami](infrastructure/mim2016-password-management.md) i wdrożyć [usługę powiadamiania o zmianie hasła](deploying-mim-password-change-notification-service-on-domain-controller.md).
 - Następnie, jeśli chcesz wysyłać hasła do katalogów innych niż usługa Azure AD, skonfiguruj Azure AD Connect [zapisywania nowych haseł, aby AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
@@ -81,7 +81,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 1.  Utwórz [dostawcę usługi MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2. Otwórz przypadek pomocy technicznej i zażądaj bezpośredniego zestawu SDK dla C#ASP.NET 2,0. Zestaw SDK zostanie udostępniony tylko bieżącym użytkownikom programu MIM z uwierzytelnianiem MFA, ponieważ zestaw Direct SDK został uznany za przestarzały. Nowi klienci powinni przyjąć następną wersję programu MIM, która będzie integrowana z serwerem usługi MFA.
+2. Otwórz przypadek pomocy technicznej i zażądaj bezpośredniego zestawu SDK dla ASP.net 2,0 C#. Zestaw SDK zostanie udostępniony tylko bieżącym użytkownikom programu MIM z uwierzytelnianiem MFA, ponieważ zestaw Direct SDK został uznany za przestarzały. Nowi klienci powinni przyjąć następną wersję programu MIM, która będzie integrowana z serwerem usługi MFA.
 
 3. Skopiuj wynikowy plik ZIP do każdego systemu, w którym jest zainstalowana usługa MIM.  Należy pamiętać, że plik ZIP zawiera klucz używany do uwierzytelniania w usłudze Azure MFA.
 
@@ -93,7 +93,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 3. Korzystając z Eksploratora Windows, przejdź do folderu **\pf\certs** pliku ZIP pobranego w poprzedniej sekcji, a następnie skopiuj plik **cert_key.p12** do nowego katalogu.
 
-4.  W pliku zip zestawu SDK w folderze **\pf** otwórz plik **pf_auth.cs**.
+4.  W pliku zip zestawu SDK, w folderze **\pf**otwórz plik **pf_auth. cs**.
 
 5.  Znajdź trzy następujące parametry: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
 
@@ -123,7 +123,7 @@ W następnej sekcji zostanie skonfigurowany dostawca usługi Azure MFA w usłudz
 
 3.  Kliknij kartę **Działania**, a następnie przewiń w dół do pozycji **Dodaj działanie**.
 
-4.  Wybierz pozycję **Phone Gate** lub **One-Time Password SMS Gate**, kliknij przycisk **Wybierz**, a następnie kliknij przycisk **OK**.
+4.  Wybierz kolejno pozycje **telefon** lub Brama **SMS hasło** , a następnie kliknij **pozycję Wybierz** , a następnie przycisk **OK**.
 
 Uwaga: Jeśli korzystasz z serwera usługi Azure MFA lub innego dostawcy, który generuje hasło jednorazowe, upewnij się, że pole Długość skonfigurowane powyżej ma taką samą długość jak wygenerowane przez dostawcę usługi MFA.  Ta długość musi wynosić 6 dla serwera usługi Azure MFA.  Serwer usługi Azure MFA generuje również swój własny tekst komunikatu, aby wiadomość SMS z tekstem jest ignorowana.
 

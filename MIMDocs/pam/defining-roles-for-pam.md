@@ -12,10 +12,10 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044042"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
@@ -114,7 +114,7 @@ Zamiast grup domyślnych, takich jak Administratorzy domeny, Utwórz nowe grupy 
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania usługą AD.
 
-| Rola | Description |
+| Rola | Opis |
 | ---- | ---- |
 | Konserwacja domeny/kontrolera domeny | Członkostwo w grupie Domena\administratorzy umożliwia rozwiązywanie problemów i zmienianie systemu operacyjnego kontrolera domeny. Operacje, takie jak podwyższanie poziomu nowego kontrolera domeny do istniejącej domeny w lesie i delegowanie roli usługi AD.
 |Zarządzanie wirtualnymi kontrolerami domeny | Zarządzanie maszynami wirtualnymi kontrolerów domeny za pomocą oprogramowania do zarządzania wirtualizacją. To uprawnienie można przyznać za pośrednictwem pełnej kontroli nad wszystkimi maszynami wirtualnymi w narzędziu do zarządzania lub funkcji kontroli dostępu na podstawie ról. |
@@ -130,7 +130,7 @@ W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do 
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które mają zastosowanie w przypadku ról do zarządzania danymi przechowywanymi w usłudze AD lub korzystania z nich.
 
-| Rola | Description |
+| Rola | Opis |
 | ---- | ---- |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 1                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 1 w usłudze Active Directory. |
 | Modyfikowanie administracyjnej jednostki organizacyjnej warstwy 2                 | Modyfikowanie jednostek organizacyjnych zawierających obiekty administracyjne warstwy 2 w usłudze Active Directory. |
@@ -207,5 +207,5 @@ Role dla użytkowników innych niż użytkownicy administracyjni i role na potrz
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Zabezpieczanie uprzywilejowanego dostępu do materiału referencyjnego](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Zabezpieczanie dostępu uprzywilejowanego — materiały referencyjne](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
 - [Używanie usługi Azure MFA do aktywacji](use-azure-mfa-for-activation.md)

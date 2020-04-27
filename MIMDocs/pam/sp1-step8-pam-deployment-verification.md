@@ -12,17 +12,17 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 41c1ff575bafb4c892d0657234554387680b75f1
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043753"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Krok 8 — Weryfikacja wdrożenia usługi PAM
 
 > [!div class="step-by-step"]
-> [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-> [Dodatek »](sp1-pam-deployment-addendum.md)
+> [«Uzupełnienie krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)
 
 Pakiet wdrożeniowy zawiera skrypty weryfikacji, które umożliwiają wykonanie scenariusza PAM w celu potwierdzenia prawidłowego działania wdrożenia usługi PAM.
 Aby użyć funkcji weryfikacji wdrożenia, należy zmodyfikować sekcję <PamValidation/> pliku PAMDeploymentConfig.xml.
@@ -43,7 +43,7 @@ Krok 1.
 
 Spowoduje to utworzenie wymaganych grup i użytkowników potrzebnych do przeprowadzenia weryfikacji.
 
-Krok 2:
+Krok 2.
 
 1. Zaloguj się na serwerze PAM jako MIMAdmin.
 2. Uruchom program PowerShell jako administrator.
@@ -64,7 +64,7 @@ Krok 3:
 
 W tym kroku zostanie wyświetlony monit o poświadczenia konta CORPAdmin. Po ich podaniu następuje dodanie wymaganych użytkowników do grup „Użytkownicy pulpitu zdalnego” i „Użytkownicy zarządzania zdalnego”.
 Na komputerze klienckim CORP użyj następujących poleceń do otwarcia programu PowerShell jako użytkownik PRIV, który ma zostać poddany procedurze weryfikacji. </br></br>
-**Runas/u:<PRIV domain>\PRIV.pamRequestor PowerShell. exe**  </br></br>
+**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 W oknie programu PowerShell wpisz polecenie:
 
 1. cd $env:SYSTEMDRIVE\PAM
@@ -77,5 +77,5 @@ W oknie programu PowerShell wpisz polecenie:
   Skrypt wykorzystuje ustawienie domyślne (11 minut) czasu ważności żądania.
 
 > [!div class="step-by-step"]
-> [« Krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-> [Dodatek »](sp1-pam-deployment-addendum.md)
+> [«Uzupełnienie krok 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)

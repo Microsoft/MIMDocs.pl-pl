@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044178"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Jak aprowizować użytkowników do usług AD DS
@@ -24,12 +24,12 @@ Jednym z podstawowych wymagań dotyczących systemu zarządzania tożsamościami
 
 Ten przewodnik przeprowadzi Cię przez główne bloki konstrukcyjne związane z procesem aprowizacji użytkowników z programu Microsoft® Identity Manager (MIM) 2016 do usług Active Directory® Domain Services (AD DS). Ponadto przewodnik opisuje sposób weryfikacji prawidłowego działania scenariusza, zapewnia sugestie dotyczące zarządzania użytkownikami usługi Active Directory przy użyciu programu MIM 2016 i zawiera listy dodatkowych źródeł informacji.
 
-## <a name="before-you-begin"></a>Przed rozpoczęciem
+## <a name="before-you-begin"></a>Zanim rozpoczniesz
 
 
 W tej części znajdziesz informacje dotyczące zakresu tego dokumentu. Ogólnie rzecz biorąc, przewodniki „Jak mogę” są kierowane do czytelników, którzy mają już podstawowe doświadczenie z procesem synchronizacji obiektów z programem MIM zgodnie z informacjami zawartymi w powiązanych [przewodnikach wprowadzających](https://go.microsoft.com/FWLink/p/?LinkId=190486).
 
-### <a name="audience"></a>Odbiorcy
+### <a name="audience"></a>Grupy odbiorców
 
 
 Ten przewodnik jest przeznaczony dla profesjonalistów z dziedziny IT, którzy mają już podstawową wiedzę o tym, jak działa proces synchronizacji MIM, zainteresowanych uzyskaniem bezpośredniego doświadczenia i obszerniejszych informacji koncepcyjnych związanych z konkretnymi scenariuszami.
@@ -113,7 +113,7 @@ W poniższej tabeli zawarto listę składników, które stanowią część scena
 
 Scenariusz opisany w tym przewodniku składa się z bloków konstrukcyjnych pokazanych na poniższym rysunku.
 
-![Kroki w scenariuszu](media/how-provision-users-adds/image013.png)
+![Etapy scenariusza](media/how-provision-users-adds/image013.png)
 
 
 ## <a name="configuring-the-external-systems"></a>Konfiguracja systemów zewnętrznych
@@ -194,7 +194,7 @@ W poniższej tabeli zawarto listę najważniejszych ustawień właściwych dla s
 | Strona projektanta agenta zarządzania | Konfiguracja |
 |------------|------------------------------------|
 | Utwórz agenta zarządzania | 1. **agent zarządzania dla:** agent zarządzania usługą FIM Service <br/> 2. **Nazwa** Fabrikam FIMMA |
-| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> &#183;**Adres podstawowy usługi FIM:** http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
+| Łączenie z bazą danych     | Użyj następujących ustawień: <br/> &#183; **Serwer:** localhost <br/> &#183; **Baza danych:** FIMService <br/> **Adres podstawowy usługi &#183; FIM:**http://localhost:5725 <br/> <br/> Podaj informacje o koncie utworzonym dla tego agenta zarządzania |
 | Wybierz typy obiektów                                     | Poza już wybranymi typami obiektów wybierz **osobę**.   |
 | Skonfiguruj mapowania typów obiektów                          | Poza już istniejącymi mapowaniami typów obiektów dodaj mapowanie dla osoby **Typ obiektu źródła danych** do osoby typu obiektu **Metaverse**. |
 | Konfiguruj przepływ atrybutów                                | Poza już istniejącymi mapowaniami przepływu atrybutów dodaj następujące mapowania przepływu atrybutów: <br/><br/> ![Przepływ atrybutów](media/how-provision-users-adds/image018.jpg) |
@@ -231,7 +231,7 @@ Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią
 > 
 > 
 > [!Important]
->  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Możesz to zrobić, uruchamiając skrypt przy użyciu programu Windows PowerShell, aby włączyć obsługę administracyjną (https://go.microsoft.com/FWLink/p/?LinkId=189660).
+>  Upewnij się, że aprowizacja jest włączona w Twoim środowisku. Można to zrobić, uruchamiając skrypt przy użyciu programu Windows PowerShell w celu włączenia aprowizacji (https://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurowanie usługi FIM Service
@@ -239,11 +239,11 @@ Utwórz profile przebiegu dla każdego agenta zarządzania zgodnie z poprzednią
 
 W ramach scenariusza opisanego w tym przewodniku należy skonfigurować zasady aprowizacji zgodnie z poniższym rysunkiem.
 
-![Zasady aprowizacji](media/how-provision-users-adds/image019.png)
+![Zasady zastrzegania](media/how-provision-users-adds/image019.png)
 
 Celem tych zasad aprowizacji jest wprowadzenie grup do zakresu reguły synchronizacji ruchu wychodzącego użytkowników usługi AD. Przenosząc zasób do zakresu reguły synchronizacji, włączasz aparat synchronizacji, aby aprowizować zasób do usług AD DS zgodnie z konfiguracją.
 
-Aby skonfigurować usługę FIM, przejdź do® programu Windows Internet Explorer, aby http://localhost/identitymanagement. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](https://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
+Aby skonfigurować usługę FIM, przejdź do http://localhost/identitymanagementprogramu Windows Internet Explorer®. Na stronie portalu MIM przejdź do powiązanych stron w sekcji Administracja, aby utworzyć zasady aprowizacji. Aby sprawdzić konfigurację, należy uruchomić skrypt opisany w artykule [Using Windows PowerShell to document your provisioning policy configuration](https://go.microsoft.com/FWLink/p/?LinkId=189661) (Korzystanie z programu Windows PowerShell do udokumentowania konfiguracji zasad aprowizacji).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Krok 6. Tworzenie reguły synchronizacji
 
@@ -252,9 +252,9 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 | Konfiguracja reguły synchronizacji                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
 | Nazwa                                                                                                       | Reguła synchronizacji ruchu wychodzącego użytkowników usługi Active Directory                         |                                                          
-| Description                                                                                               |                                                                             |                                                           
+| Opis                                                                                               |                                                                             |                                                           
 | Pierwszeństwo                                                                                                | 2                                                                           |                                                           
-| Kierunek przepływu danych   | Wychodzące             |       
+| Kierunek przepływu danych   | Wychodzący             |       
 | Zależność       |         |                                         
 
 
@@ -266,9 +266,9 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 
 
-| Relationship ||
+| Relacja ||
 |------------|---------|
-| Utwórz zasób w systemie zewnętrznym                                                                         | Prawda                                                                        |                                                           
+| Utwórz zasób w systemie zewnętrznym                                                                         | True                                                                        |                                                           
 | Włącz anulowanie aprowizacji                                                                                      | Fałsz                                                                       |                                                           
 
 | Kryteria relacji                                                                                      | |
@@ -278,18 +278,18 @@ W poniższych tabelach przedstawiono konfigurację wymaganej reguły synchroniza
 
 | Początkowe przepływy atrybutów wychodzących        | |                                                             |
 |-------------------|---------------------- |---------------|
-| Zezwalaj na wartości null                 | Lokalizacja docelowa                                                                 | Obiekt źródłowy                                                    |
-| fałsz                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
-| fałsz                       | userAccountControl                                                          | **Stała:** 512                                         |
-| fałsz                                                                     | unicodePwd                    | Stała: P\@\$\$W0rd                                    |
+| Zezwalaj na wartości null                 | Element docelowy                                                                 | Element źródłowy                                                    |
+| false                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
+| false                       | userAccountControl                                                          | **Stała:** 512                                         |
+| false                                                                     | unicodePwd                    | Stała: P\@\$\$W0rd                                    |
 
 | Trwałe przepływy atrybutów wychodzących  |                                                                     |                                                           |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Zezwalaj na wartości null                                                                                                | Lokalizacja docelowa                                                                 | Obiekt źródłowy                                                    |
-| fałsz                                                                                                      | sAMAccountName                                                              | accountName                                               |
-| fałsz                                                                                                      | displayName                                                                 | displayName                                               |
-| fałsz                                                                                                      | givenName                                                                   | firstName                                                 |
-| fałsz                                                                                                      | sn                                                                          | lastName                                                  |
+| Zezwalaj na wartości null                                                                                                | Element docelowy                                                                 | Element źródłowy                                                    |
+| false                                                                                                      | sAMAccountName                                                              | accountName                                               |
+| false                                                                                                      | displayName                                                                 | displayName                                               |
+| false                                                                                                      | givenName                                                                   | firstName                                                 |
+| false                                                                                                      | sn                                                                          | lastName                                                  |
 
 
 
@@ -303,7 +303,7 @@ Celem przepływu pracy aprowizacji AD jest dodanie reguły synchronizacji aprowi
 | Konfiguracja przepływu pracy               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
 | Nazwa                                 | Przepływ pracy aprowizacji użytkownika usługi Active Directory                     |
-| Description                          |                                                                 |
+| Opis                          |                                                                 |
 | Typ przepływu pracy                        | Akcja                                                          |
 | Uruchom podczas aktualizacji zasad                 | Fałsz                                                           |
 
@@ -322,10 +322,10 @@ Wymagana reguła MPR to reguła typu Przejście między zestawami i jest wyzwala
 | Konfiguracja reguły MPR                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
 | Nazwa                                 | Reguła zasad zarządzania aprowizacją użytkownika usługi AD                 |
-| Description                          |                                                             |
+| Opis                          |                                                             |
 | Typ                                 | Przejście między zestawami                                              |
 | Przyznaje uprawnienia                   | Fałsz                                                       |
-| Wyłączone                             | Fałsz                                                       |
+| Disabled (Wyłączony)                             | Fałsz                                                       |
 
 | Definicja przejścia                |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
@@ -353,7 +353,7 @@ Cele fazy inicjowania są następujące:
 
 W poniższej tabeli zawarto listę profilów przebiegu, które są częścią fazy inicjowania.  Uruchom profile przebiegu zgodnie z poniższą tabelą.
 
-| Uruchom                                                                                                           | Agent zarządzania                                      | Profil przebiegu          |
+| Run                                                                                                           | Agent zarządzania                                      | Profil przebiegu          |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | 1                                                                                                             | Fabrikam FIMMA                                        | Pełny import          |
 | 2                                                                                                             |                                                       | Pełna synchronizacja |
@@ -393,7 +393,7 @@ Poniższa tabela zawiera listę właściwości przykładowego użytkownika. Utw�
 | Nazwa wyświetlana                           | Britta Simon                                                   |
 | Nazwa konta                           | BSimon                                                         |
 | Domain                                 | Fabrikam                                                       |
-| Typ pracownika                          | Wykonawca                                                     |
+| Typ pracownika                          | Contractor                                                     |
 
 
 

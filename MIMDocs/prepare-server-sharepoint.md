@@ -12,10 +12,10 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
-ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80374291"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Konfigurowanie serwera zarządzania tożsamościami: SharePoint
@@ -29,13 +29,13 @@ ms.locfileid: "80374291"
 > Procedura instalacji programu SharePoint Server 2019 nie różni się od procedury instalacji programu SharePoint Server 2016, **z wyjątkiem** jednego dodatkowego kroku, który należy podjąć w celu odblokowania plików ASHX używanych przez portal programu MIM.
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Zainstaluj **program SharePoint 2016**
@@ -132,9 +132,9 @@ Wykonaj kroki określone w **Kreatorze konfiguracji produktów SharePoint**, aby
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do `http://mim.contoso.com/` i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
+4. Na serwerze zarządzania tożsamościami Otwórz nową kartę przeglądarki sieci Web, przejdź do strony `http://mim.contoso.com/` i zaloguj się jako *contoso\miminstall*.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie *MIM Portal*.
 
-    ![Portal programu MIM na http://mim.contoso.com/ obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
+    ![Portal programu MIM http://mim.contoso.com/ na obrazie](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Skopiuj adres URL, a następnie w przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do **karty Zabezpieczenia**, wybierz opcję **Lokalny intranet** i kliknij opcję **Witryny**.
 

@@ -12,17 +12,17 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 8e4371c8d3caac06f7200d8439b30b7aa978a336
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042461"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalacja usługi synchronizacji programu MIM 2016
 
 > [!div class="step-by-step"]
-> [« Exchange Server](prepare-server-exchange.md)
-> [Portal i usługa programu MIM »](install-mim-service-portal.md)
+> [«Usługa MIM programu Exchange Server](prepare-server-exchange.md)
+> [i Portal»](install-mim-service-portal.md)
  
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -31,7 +31,7 @@ ms.locfileid: "79042461"
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy najpierw skonfigurować pakiet instalacyjny.
 
@@ -59,7 +59,7 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
    1.  SQL Server znajduje się w lokalizacji: **maszyna zdalna** o nazwie **corpsql.contoso.com**.
 
-   2.  Wystąpienie SQL Server to: **wystąpienie domyślne**
+   2.  Wystąpienie programu SQL Server: **Wystąpienie domyślne**.
 
    ![Obraz łączenia z bazą danych](media/install-mim-sync/MIM_Install3.png)
 
@@ -69,12 +69,12 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
 
    1. Konto usługi: *MIMSync*
 
-   2. Hasło: <em>Pass@word1</em>
+   2. Hasło<em>Pass@word1</em>
 
    3. Domena konta usługi lub nazwa komputera lokalnego: *contoso*
 
     >[!NOTE]
-    >Program MIM 2016 SP2 i nowsze: dla kont usług zarządzanych przez grupę upewnij się, że **$** znak znajduje się na końcu nazwy konta usługi, np. MIMSync $, i pozostaw pole hasła puste.
+    >MIM 2016 SP2 i nowszych: dla kont usług zarządzanych przez grupę upewnij się **$** , że znak znajduje się na końcu nazwy konta usługi, np. MIMSync $, i pozostaw pole hasła puste.
 
     ![Obraz konta usługi](media/install-mim-sync/MIM_Install4.png)
 
@@ -109,5 +109,5 @@ Aby zainstalować składniki programu Microsoft Identity Manager 2016, należy n
     5. Aby zmiany członkostwa w grupach zostały uwzględnione, musisz wylogować się i zalogować ponownie. Kliknij przycisk **Tak**, aby się wylogować.
 
 > [!div class="step-by-step"]  
-> [« Exchange Server](prepare-server-exchange.md)
-> [Portal i usługa programu MIM »](install-mim-service-portal.md)
+> [«Usługa MIM programu Exchange Server](prepare-server-exchange.md)
+> [i Portal»](install-mim-service-portal.md)

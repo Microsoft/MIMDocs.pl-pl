@@ -12,10 +12,10 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7f2d78b487e3c20fbd656aad37b67a6382b67df0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044331"
 ---
 # <a name="topology-considerations"></a>Kwestie dotyczące topologii
@@ -37,7 +37,7 @@ Podczas projektowania topologii wdrożenia musisz znać funkcje wszystkich skła
 
 W poniższej tabeli przedstawiono opcje hostingu dla poszczególnych składników programu MIM. Składniki mogą być hostowane na tym samym komputerze lub mogą zostać rozproszone między wiele serwerów i klastrów.
 
-| | Portal programu MIM | Usługa MIM | Usługa synchronizacji programu MIM | Serwer SQL |
+| | Portal programu MIM | Usługa MIM | Usługa synchronizacji programu MIM | SQL Server |
 | --- | --- | --- | --- | --- |
 | Ten sam komputer | Tak | Tak | Tak | Tak |
 | Osobny serwer | Tak | Tak | Tak | Tak |
@@ -64,6 +64,6 @@ Tak jak w przypadku standardowej topologii wielowarstwowej można zwiększyć wy
 
 Komputery z zainstalowanym programem SQL Server hostujące usługę synchronizacji programu MIM i bazę danych usługi MIM mają znaczący wpływ na ogólną wydajność wdrażania programu MIM. Dlatego należy postępować zgodnie z zaleceniami w dokumentacji programu SQL Server dotyczącymi optymalizacji wydajności bazy danych. Więcej informacji można znaleźć w następujących dokumentach:
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik planowania pojemności programu Forefront Identity Manager (FIM) 2010](https://www.microsoft.com/en-us/download/details.aspx?id=7437) zawiera bardziej szczegółowe informacje na temat wyników testów kompilacji i wydajności.

@@ -8,10 +8,10 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042172"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Rejestrowanie dynamiczne usługi MIM z dodatkiem SP1 (4.4.1436.0)
@@ -54,10 +54,10 @@ Aby wyświetlić ślad, można użyć [narzędzia Podgląd śledzenia usług](ht
 W kompilacji 4.5. x. x Zaktualizowaliśmy funkcję rejestrowania, aby określić domyślny poziom rejestrowania to **"Warning" (ostrzeżenie**). Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" są dodawane przed rozszerzeniem). Pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy plik przekracza maksymalny rozmiar, Usługa uruchamia zapis w innym pliku. Jeśli istnieje inny plik, zostanie on nadpisany. Domyślny maksymalny rozmiar pliku to 1 GB. Aby zmienić domyślny maksymalny rozmiar, należy dodać parametr **"maxOutputFileSizeKB"** z wartością maksymalnego rozmiaru pliku w kilobajtach do odbiornika (Zobacz przykład poniżej) i ponownie uruchomić usługę programu MIM. Gdy usługa zostanie uruchomiona, dołącza dzienniki w nowszej pliku (w przypadku przekroczenia limitu miejsca zastępuje najstarszy plik). 
 
 > [!NOTE] 
-> Gdy rozmiar pliku sprawdzania usługi zostanie zapisany przed zapisaniem wiadomości, rozmiar pliku może być większy niż maksymalny rozmiar jednego komunikatu. Domyślnie rozmiar dzienników może wynosić około 6 GB (trzy > detektory z dwoma plikami dla jednego rozmiaru GB).
+> Gdy rozmiar pliku sprawdzania usługi zostanie zapisany przed zapisaniem wiadomości, rozmiar pliku może być większy niż maksymalny rozmiar jednego komunikatu. Domyślnie rozmiar dzienników może wynosić około 6 GB (trzy >detektory z dwoma plikami dla jednego rozmiaru GB).
 
 > [!NOTE] 
-> Konto usługi powinno mieć uprawnienia do zapisu w > katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" >. W przypadku, gdy konto usługi nie ma takich uprawnień, pliki > nie zostaną utworzone.
+> Konto usługi powinno mieć uprawnienia do zapisu w > katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" >. W przypadku, gdy konto usługi nie ma takich uprawnień, pliki >nie zostaną utworzone.
 
 Przykład ustawiania maksymalnego rozmiaru pliku na 200 MB (200 * 1024 KB) dla plików svclog i 100 MB * (100 * 1024 KB) dla plików txt
 

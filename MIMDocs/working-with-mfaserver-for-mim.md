@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 1dd87db01a5c1100c8206d82bedf96a8a5e702ad
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044314"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Korzystanie z usługi Azure Serwer Multi-Factor Authentication w celu aktywowania PAM lub SSPR
@@ -41,7 +41,7 @@ Aby można było korzystać z usługi Azure Serwer Multi-Factor Authentication z
 
 ### <a name="step-1-download-azure-multi-factor-authentication-server-from-the-azure-portal"></a>Krok 1. Pobieranie Serwer Multi-Factor Authentication platformy Azure z poziomu witryny Azure Portal 
 Zaloguj się do [Azure Portal](https://portal.azure.com/) i Pobierz serwer usługi Azure MFA.
-![działa mfaserver-for-mim_downloadmfa](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_downloadmfa.PNG)
+![Praca z mfaserver-for-mim_downloadmfa](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_downloadmfa.PNG)
 
 ### <a name="step-2-generate-activation-credentials"></a>Krok 2. Generowanie poświadczeń aktywacji
 Użyj linku **Generuj poświadczenia aktywacji, aby zainicjować korzystanie** z poświadczeń aktywacji. Po wygenerowaniu Zapisz do późniejszego użycia.
@@ -50,18 +50,18 @@ Użyj linku **Generuj poświadczenia aktywacji, aby zainicjować korzystanie** z
 Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) go.  Twoje poświadczenia aktywacji będą wymagane. 
 
 ### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Krok 4. Tworzenie aplikacji sieci Web usług IIS, która będzie hostować zestaw SDK
-1. Otwórz Menedżera usług IIS ![działające z-mfaserver-for-mim_iis.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG) PNG
-2.  Utwórz nowe wywołanie witryny sieci Web "MIM MFASDK", połącz je do pustego katalogu ![działające z-mfaserver-for-mim_sdkweb.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG) PNG
-3. Otwórz konsolę Multi-Factor Authentication i kliknij zestaw SDK usługi sieci Web ![działające z-mfaserver-for-mim_sdkinstall.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG) PNG
+1. Otwórz Menedżera ![usług IIS pracuję z mfaserver-for-mim_iis. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
+2.  Utwórz nowe wywołanie witryny sieci Web "MIM MFASDK", połącz je z pustym katalogiem ![działającym z-mfaserver-for-mim_sdkweb. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG)
+3. Otwórz konsolę Multi-Factor Authentication i kliknij pozycję zestaw SDK ![usługi sieci Web działające w systemie-mfaserver-for-mim_sdkinstall. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG)
 4. Po kliknięciu kreatora w obszarze Konfiguracja wybierz pozycję "MIM MFASDK" i pulę aplikacji
 
 > [!NOTE] 
-> Kreator będzie wymagał utworzenia grupy administratorów. Więcej informacji można znaleźć w dokumentacji usługi Azure > > MFA Azure Serwer Multi-Factor Authentication.
+> Kreator będzie wymagał utworzenia grupy administratorów. Więcej informacji można znaleźć w dokumentacji usługi Azure > > MFA na platformie Azure Serwer Multi-Factor Authentication.
 
-5. Następnie musimy zaimportować konto usługi MIM otwarte Multi-Factor Authentication konsoli wybierz "Użytkownicy" a. Kliknij pozycję "Importuj z Active Directory" b. Przejdź do konta usługi alias "contoso\mimservice" c. Kliknij przycisk "Importuj" i "Zamknij" ![działające z-mfaserver-for-mim_importmimserviceaccount.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) PNG 
-6. Edytuj konto usługi programu MIM, aby włączyć w konsoli Multi-Factor Authentication ![pracy z mfaserver-for-mim_enableserviceaccount.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG) PNG
-7. Zaktualizuj uwierzytelnianie usług IIS w witrynie sieci Web "MIM MFASDK". Najpierw wyłączymy "Uwierzytelnianie anonimowe", a następnie Włącz uwierzytelnianie systemu Windows "![działa-z-mfaserver-for-mim_iisconfig.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG) PNG
-8. Ostatni krok: Dodaj konto usługi programu MIM do "PhoneFactor administratorów" ![działające z-mfaserver-for-mim_addservicetomfaadmin.](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG) PNG
+5. Następnie musimy zaimportować konto usługi MIM otwarte Multi-Factor Authentication konsoli wybierz "Użytkownicy" a. Kliknij pozycję "Importuj z Active Directory" b. Przejdź do konta usługi alias "contoso\mimservice" c. Kliknij pozycję "Importuj" i "Zamknij ![" działa-WITH-mfaserver-for-mim_importmimserviceaccount. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) 
+6. Edytuj konto usługi programu MIM, aby włączyć w konsoli ![Multi-Factor Authentication działającej z mfaserver-for-mim_enableserviceaccount. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
+7. Zaktualizuj uwierzytelnianie usług IIS w witrynie sieci Web "MIM MFASDK". Najpierw wyłączymy "Uwierzytelnianie anonimowe", a następnie Włącz uwierzytelnianie ![systemu Windows "działa-WITH-mfaserver-for-mim_iisconfig. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
+8. Ostatni krok: Dodaj konto usługi programu MIM do "PhoneFactor administratorów" ![działające z-mfaserver-for-mim_addservicetomfaadmin. Format](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
 
 ## <a name="configuring-the-mim-service-for-azure-multi-factor-authentication-server"></a>Konfigurowanie usługi MIM dla platformy Azure Serwer Multi-Factor Authentication 
 
@@ -71,9 +71,9 @@ Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/azure/active-directo
 
 ### <a name="step-3-update-the-following-lines"></a>Krok 3. aktualizowanie następujących wierszy
 1. Usuń/Wyczyść następujące wiersze pozycji konfiguracji <br>
-< LICENSE_KEY > </LICENSE_KEY ><br>
-< GROUP_KEY > </GROUP_KEY ><br>
-< CERT_PASSWORD > </CERT_PASSWORD ><br>
+<LICENSE_KEY></LICENSE_KEY><br>
+<GROUP_KEY></GROUP_KEY><br>
+<CERT_PASSWORD></CERT_PASSWORD><br>
 <CertFilePath></CertFilePath><br>
 
 2. Zaktualizuj lub Dodaj następujące wiersze do poniższego polecenia, aby pliku mfasettings. XML <br>
@@ -87,9 +87,9 @@ Po pobraniu serwera [Zainstaluj](https://docs.microsoft.com/azure/active-directo
 > Aby przywrócić ustawienie Zamień pliku mfasettings. XML na plik kopii zapasowej w kroku 2
 
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
--    [Wprowadzenie do usługi Azure Serwer Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Korzystanie z niestandardowego interfejsu API Multi-Factor Authentication w celu aktywowania usługi PAM lub SSPR](Working-with-custommfaserver-for-mim.md)
 - [Historia wersji programu MIM](./reference/version-history.md)

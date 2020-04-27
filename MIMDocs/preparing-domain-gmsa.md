@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 32b346dd9cf99b617edfaca953389cba30d6681c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043515"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Skonfiguruj domenę dla scenariusza kont usług zarządzanych przez grupę (gMSA)
@@ -28,7 +28,7 @@ ms.locfileid: "79043515"
 
 Program Microsoft Identity Manager (MIM) współpracuje z Twoją domeną usługi Active Directory (AD). Usługa AD powinna już być zainstalowana, a w środowisku musi istnieć kontroler dla domeny, którą możesz administrować.  W tym artykule opisano sposób konfigurowania kont usług zarządzanych przez grupę w tej domenie do użycia przez program MIM.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Omówienie
 
 Konta usług zarządzane przez grupę eliminują konieczność okresowego zmieniania haseł kont usług. W wersji programu MIM 2016 SP2 następujące składniki programu MIM mogą mieć skonfigurowane konta gMSA do użycia podczas procesu instalacji:
 
@@ -67,7 +67,7 @@ Wszystkie składniki wdrożenia programu MIM muszą mieć własną tożsamość 
 > - Nazwa serwera usługi programu MIM — **mimservice**
 > - Nazwa serwera synchronizacji programu MIM — **mimsync**
 > - Nazwa SQL Server — **SQL**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 1. Zaloguj się do kontrolera domeny jako administrator domeny (*np. Contoso\Administrator*).
 
@@ -129,7 +129,7 @@ Jeśli istnieje już klucz główny dla domeny (Użyj polecenie **Get-KdsRootKey
     ```PowerShell
     Add-KDSRootKey –EffectiveImmediately
     ```
-    *– EffectiveImmediately* może wymagać opóźnienia do \~10 godzin, ponieważ będzie musiał replikować do wszystkich kontrolerów domeny. To opóźnienie miało około 1 godzinę w przypadku dwóch kontrolerów domeny.
+    *– EffectiveImmediately* może wymagać opóźnienia nawet \~10 godzin, ponieważ będzie potrzebna replikacja do wszystkich kontrolerów domeny. To opóźnienie miało około 1 godzinę w przypadku dwóch kontrolerów domeny.
 
     ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
@@ -144,7 +144,7 @@ Jeśli istnieje już klucz główny dla domeny (Użyj polecenie **Get-KdsRootKey
 Upewnij się, że wszystkie konta komputerów, na których jest zainstalowane oprogramowanie MIM, są już przyłączone do domeny.  Następnie wykonaj te kroki w programie PowerShell jako administrator domeny.
 
 7.  Utwórz grupę *MIMSync_Servers* i Dodaj do niej wszystkie serwery synchronizacji programu MIM.
-    Wpisz następujące, aby utworzyć nową grupę usługi AD dla serwerów synchronizacji programu MIM. Następnie Dodaj serwer synchronizacji programu MIM Active Directory konta komputera, np. *contoso\MIMSync $* , do tej grupy.
+    Wpisz następujące, aby utworzyć nową grupę usługi AD dla serwerów synchronizacji programu MIM. Następnie Dodaj serwer synchronizacji programu MIM Active Directory konta komputera, np. *contoso\MIMSync $*, do tej grupy.
 
     ```PowerShell
     New-ADGroup –name MIMSync_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMSync_Servers
@@ -175,7 +175,7 @@ Upewnij się, że wszystkie konta komputerów, na których jest zainstalowane op
 
 - Użyj konta usługi zarządzanego przez grupę usługi synchronizacji programu MIM i nie twórz oddzielnego konta
 
-    Możesz pominąć tworzenie konta usługi agenta zarządzania usługą programu MIM. W takim przypadku należy użyć nazwy gMSA usługi synchronizacji programu MIM, np. *contoso\MIMSyncGMSAsvc $* , zamiast konta w programie MIM podczas instalacji usługi MIM. Później w obszarze Konfiguracja agenta zarządzania usługą MIM Włącz opcję *Użyj konta MIMSync* .
+    Możesz pominąć tworzenie konta usługi agenta zarządzania usługą programu MIM. W takim przypadku należy użyć nazwy gMSA usługi synchronizacji programu MIM, np. *contoso\MIMSyncGMSAsvc $*, zamiast konta w programie MIM podczas instalacji usługi MIM. Później w obszarze Konfiguracja agenta zarządzania usługą MIM Włącz opcję *Użyj konta MIMSync* .
 
     Nie włączaj "Odmowa logowania z sieci" dla usługi synchronizacji programu MIM gMSA, ponieważ uprawnienie "Zezwalaj na logowanie do sieci" w programie MIM jest wymagane.
 
@@ -197,7 +197,7 @@ Upewnij się, że wszystkie konta komputerów, na których jest zainstalowane op
 
 Kontynuuj korzystanie z programu PowerShell jako administrator domeny.
    
-12. Utwórz grupę *MIMService_Servers* i Dodaj do niej wszystkie serwery usługi programu MIM.  Wpisz następujące polecenie programu PowerShell, aby utworzyć nową grupę usługi AD dla serwerów usługi programu MIM i dodać serwer usługi MIM Active Directory konto komputera, np. *contoso\MIMPortal $* , w tej grupie.
+12. Utwórz grupę *MIMService_Servers* i Dodaj do niej wszystkie serwery usługi programu MIM.  Wpisz następujące polecenie programu PowerShell, aby utworzyć nową grupę usługi AD dla serwerów usługi programu MIM i dodać serwer usługi MIM Active Directory konto komputera, np. *contoso\MIMPortal $*, w tej grupie.
 
     ```PowerShell
     New-ADGroup –name MIMService_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMService_Servers
@@ -240,7 +240,7 @@ W przypadku konfigurowania usługi PAM programu MIM, postępując zgodnie z tymi
 
 ## <a name="specifying-a-gmsa-when-installing-mim"></a>Określanie gMSA podczas instalowania programu MIM
 
-Jako ogólna zasada, w większości przypadków podczas korzystania z Instalatora programu MIM, aby określić, że chcesz użyć gMSA zamiast zwykłego konta, Dołącz znak dolara do nazwy gMSA, np. **contoso\MIMSyncGMSAsvc $** , i pozostaw pole hasła puste. Jedynym wyjątkiem jest narzędzie *miisactivate. exe* , które akceptuje nazwę gMSA bez znaku dolara.
+Jako ogólna zasada, w większości przypadków podczas korzystania z Instalatora programu MIM, aby określić, że chcesz użyć gMSA zamiast zwykłego konta, Dołącz znak dolara do nazwy gMSA, np. **contoso\MIMSyncGMSAsvc $**, i pozostaw pole hasła puste. Jedynym wyjątkiem jest narzędzie *miisactivate. exe* , które akceptuje nazwę gMSA bez znaku dolara.
 <br/>
 
 > [!div class="step-by-step"]

@@ -17,10 +17,10 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f6e43abea8b58ccff7fa376b266a91cb138f5aa9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044393"
 ---
 # <a name="connect-to-your-directories"></a>Łączenie z katalogami
@@ -35,7 +35,7 @@ W tym artykule opisano łączniki, które są uwzględnione & obsługiwane w pro
 
 | Nazwa | Obsługiwane wersje połączonych źródeł danych & linki techniczne |
 | ---- | ----------------------------------------------- |
-| Usługi domenowe Active Directory | Active Directory w systemie Windows Server 2012 — 2019 |
+| Active Directory Domain Services | Active Directory w systemie Windows Server 2012 — 2019 |
 | Usługi LDS Active Directory (ADLDS) | Usługi LDS Active Directory (ADLDS) |
 | Globalna lista adresów usługi Active Directory | Active Directory listy adresów globalnych — Exchange 2013 — 2019 |
 | Extensible Connectivity 2.0 | Wszystkie źródła danych oparte na wywołaniu lub pliku |
@@ -43,23 +43,23 @@ W tym artykule opisano łączniki, które są uwzględnione & obsługiwane w pro
 | IBM DB2 Universal Database | IBM DB2 w wersji 9,5 lub 9,7; IBM DB2 OLEDB v 9,5 FP5 lub 9,7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Program Novell eDirectory wersje 8.7.3, 8.8.5 i 8.8.6 |
-| Oracle Database | Program Oracle Database 10g lub 11g, klient 64-bitowy |
+| Baza danych Oracle | Program Oracle Database 10g lub 11g, klient 64-bitowy |
 | Microsoft SQL Server | SQL Server 2012 – 2017 |
 | Serwery katalogowe firmy Oracle (wcześniej Sun i Netscape) | Programy Sun Directory Server 6.x, 7.x i Oracle 11 |
 | [Łącznik programu Windows PowerShell](https://msdn.microsoft.com/library/dn640417.aspx) | Program Windows PowerShell 2.0 lub nowszy |
 | [Łącznik Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niezalecane w przypadku nowych wdrożeń) |
-| [Ogólny łącznik LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Serwer LDAP v3 (zgodny ze standardem RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
+| [Ogólny łącznik LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Serwer LDAP w wersji 3 (zgodny ze specyfikacją RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
 | [Ogólny łącznik SQL](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Łącznik jest obsługiwany ze wszystkimi 64-bitowymi sterownikami ODBC](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
 | [Łącznik programu Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Program Lotus Notes w wersji 8,5. x, wersja 9.0. x |
 | [Łącznik usług SharePoint UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013-2019 z aplikacją usługi profilu użytkownika (UPA) |
 | [Łącznik usług sieci Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5,0 lub 6,0; Oracle PeopleSoft 9,1; Oracle eBusiness 12,1 i inne interfejsy API protokołu SOAP i REST](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
-| [Plik tekstowy pary atrybut-wartość](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Pliki tekstowe z parami atrybut-wartość |
+| [Plik tekstowy z parami atrybut-wartość](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Pliki tekstowe z parami atrybut-wartość |
 | [Rozdzielany plik tekstowy](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Rozdzielane pliki tekstowe |
-| [Język znacznika oznaczania usług katalogowych (DSML)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
-| [Plik tekstowy o stałej szerokości](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Pliki tekstowe stałej szerokości |
+| [Directory Services Mark-up Language (DSML)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
+| [Plik tekstowy stałej szerokości](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Pliki tekstowe stałej szerokości |
 | [Format wymiany danych LDAP (LDIF)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | Format wymiany danych LDAP (LDIF) |
 | [Łącznik Microsoft Graph](microsoft-identity-manager-2016-connector-graph.md) | Microsoft Graph |
 
-## <a name="related-topics"></a>Tematy pokrewne
+## <a name="related-topics"></a>Powiązane tematy
 
 [Agenci zarządzania w programie FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

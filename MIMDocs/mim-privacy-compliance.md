@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
 ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044110"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Obsługa danych Microsoft Identity Manager 
@@ -46,8 +46,8 @@ Jeśli nie masz pewności, że źródło uprawnień można śledzić przy użyci
 - Aby przeprowadzić przegląd lub przeszukać dane obiektów użytkownika
     - Otwórz klienta usługi synchronizacji
         - Za pomocą projektanta Metaverse można zobaczyć Importy i pierwszeństwo przepływu atrybutów.
-![MIM — Ochrona prywatności — compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Użycie wyszukiwania Metaverse umożliwia wyszukanie dowolnego obiektu i atrybutu w bazie danych ![MIM-compliance_2. PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
+        - Użycie wyszukiwania Metaverse umożliwia wyszukanie dowolnego obiektu i atrybutu w bazie danych ![MIM-privacy-COMPLIANCE_2. png](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 Po znalezieniu obiektu, kliknięcie obiektu spowoduje otwarcie strony profilu użytkownika. Szczegóły obiektu udostępniają kompleksowe szczegóły dotyczące obiektu, jego atrybutów, ostatniej modyfikacji i źródła uprawnień oraz powiązane źródło danych pochodzące z konfiguracji agenta zarządzania poniżej.
 
@@ -132,7 +132,7 @@ Użytkownicy w usłudze zarządzania certyfikatami to wszystkie odbicia z usług
 ## <a name="deleting-personal-data"></a>Usuwanie danych osobowych
 
 >[!Note] 
-> Ten artykuł zawiera wskazówki dotyczące sposobów usuwania danych osobowych z Microsoft Identity Manager i można ich użyć do obsługi zobowiązań w ramach Rodo. Jeśli szukasz ogólnych informacji na temat rozporządzenia RODO, zobacz [sekcję RODO w Portalu zaufania usług](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Ten artykuł zawiera wskazówki dotyczące sposobów usuwania danych osobowych z Microsoft Identity Manager i można ich użyć do obsługi zobowiązań w ramach Rodo. Jeśli szukasz ogólnych informacji o Rodo, zobacz [sekcję Rodo w portalu zaufania usługi](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 Dane w programie MIM są synchronizowane i zawsze aktualizowane ze swojego połączonego źródła danych. Po usunięciu obiektu w miejscu docelowym dane obiektu w programie MIM mogą być utrzymywane do celów badania zabezpieczeń. Usuwanie obiektu jest konfigurowane dla reguł źródła danych lub rozszerzenia reguły (kod) i/lub usuwania obiektów.
 
@@ -155,7 +155,7 @@ Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfiguracj�
 Pakietu BHOLD jak większość systemów podłączonych do usługi synchronizacji można skonfigurować do usuwania po usunięciu obiektu źródłowego, takiego jak HR. Ta konfiguracja jest konfigurowana w agencie zarządzania. i kontrolowane przez reguły usuwania obiektów zgodnie z opisem w obszarze funkcje usługi synchronizacji.
 
 Innym rozwiązaniem jest usunięcie obiektu użytkownika bezpośrednio z interfejsu użytkownika pakietu BHOLD Core. W zależności od konfiguracji może to potrwać, ale Uwaga logika aprowizacji może odtworzyć tego użytkownika, jeśli nie zostanie usunięty ze źródła.
-![MIM-privacy-zgodność-bholdr.](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG) PNG
+![MIM-privacy-zgodność-bholdr. Format](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### <a name="certificate-management"></a>Zarządzanie certyfikatami

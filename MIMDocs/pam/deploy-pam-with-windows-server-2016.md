@@ -10,21 +10,21 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044025"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
 
 
-W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”.  W przypadku skonfigurowania tego scenariusza bilet protokołu Kerberos użytkownika będzie ograniczony czasowo do pozostałego czasu aktywacji roli. 
+W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”. Po skonfigurowaniu tego scenariusza bilet protokołu Kerberos użytkownika zostanie ograniczony w czasie do pozostałego czasu aktywacji roli. 
 
 > [!Note]
 > Z tą wersją programu MIM nie można używać wersji przeglądowych systemu Windows Server 2016 wcześniejszych od wersji Technical Preview 5.
 
-## <a name="preparation"></a>Przygotowanie
+## <a name="preparation"></a>Przygotowywanie
 
 Dla środowiska laboratorium wymagane są przynajmniej dwie maszyny wirtualne:
 
@@ -83,7 +83,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
     d. Kliknij prawym przyciskiem myszy pozycję „CN=Konfiguracja podmiotu zabezpieczeń w tle” i kliknij pozycję Właściwości. Gdy zostanie wyświetlone okno dialogowe Właściwości, przejdź na kartę zabezpieczeń.
 
-    e. Kliknij przycisk Dodaj. Określ konta jako „MIMService” oraz innych administratorów MIM, którzy później wykonają polecenie New-PAMGroup w celu utworzenia dodatkowych grup usługi PAM. Dla każdego użytkownika na liście dozwolonych uprawnień dodaj uprawnienia „Zapisywanie”, „Tworzenie wszystkich obiektów podrzędnych” i „Usuwanie wszystkich obiektów podrzędnych”. Dodaj uprawnienia.
+    e. Kliknij pozycję Add (Dodaj). Określ konta jako „MIMService” oraz innych administratorów MIM, którzy później wykonają polecenie New-PAMGroup w celu utworzenia dodatkowych grup usługi PAM. Dla każdego użytkownika na liście dozwolonych uprawnień dodaj uprawnienia „Zapisywanie”, „Tworzenie wszystkich obiektów podrzędnych” i „Usuwanie wszystkich obiektów podrzędnych”. Dodaj uprawnienia.
 
     f. Zmień na zaawansowane ustawienia zabezpieczeń. W wierszu zezwalającym na dostęp MIMService kliknij przycisk Edytuj. Zmień ustawienie „Dotyczy” na „tego obiektu i wszystkich obiektów podrzędnych”. Zaktualizuj to ustawienie uprawnień i zamknij okno dialogowe zabezpieczeń.
 
@@ -143,6 +143,6 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
 ## <a name="more-information"></a>Więcej informacji
 
-- [Privileged Access Management for Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) (Usługa Privileged Access Management dla usług Active Directory Domain Services)
-- [Configure the MIM environment for Privileged Access Management](configuring-mim-environment-for-pam.md) (Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management)
-- [Konfiguracja usługi PAM za pomocą skryptów](sp1-pam-configure-using-scripts.md)
+- [Usługa Privileged Access Management dla usług domenowych Active Directory](privileged-identity-management-for-active-directory-domain-services.md)
+- [Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management](configuring-mim-environment-for-pam.md)
+- [Konfigurowanie usługi PAM przy użyciu skryptów](sp1-pam-configure-using-scripts.md)

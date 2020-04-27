@@ -1,5 +1,5 @@
 ---
-title: Co to jest raportowanie hybrydowe w usłudze Azure AD? | Dokumentacja firmy Microsoft
+title: Co to jest raportowanie hybrydowe w usłudze Azure AD? | Microsoft Docs
 description: Raporty dotyczące działań inspekcji hybrydowej w programie Azure Active Directory umożliwiają wyświetlanie zdarzeń poddawanych inspekcji zarówno w chmurze, jak i lokalnie.
 keywords: ''
 author: billmath
@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
 ms.openlocfilehash: 6f4f2aea998fc5682d1fb21d77e4d4f1c582d770
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042155"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Raportowanie inspekcji hybrydowej zarządzania tożsamościami w Azure Active Directory
@@ -41,9 +41,9 @@ Raportowanie hybrydowe jest następujące:
 5. Azure Portal pobiera dane raportowania inspekcji i wyświetla je w oknie raportowanie inspekcji platformy Azure.
 
 ## <a name="next-steps"></a>Następne kroki
-Dowiedz się więcej na następujące tematy:
+Dowiedz się więcej o usługach:
 - [Praca z raportowaniem hybrydowym programu Identity Manager](working-with-identity-manager-hybrid-reporting.md)
-- [Raporty dotyczące inspekcji w portalu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- [Raporty dotyczące inspekcji w portalu usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
 - [Raportowanie zasad przechowywania](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
 - [Integracja dzienników Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
 - [Interfejs API raportowania Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

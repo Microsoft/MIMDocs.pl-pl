@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042257"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Przewodnik instalacji programu Microsoft pakietu BHOLD Suite SP1 (6,0)
@@ -40,7 +40,7 @@ W tym dokumencie wyjaśniono, jak zaplanować wdrożenie pakietu BHOLD w celu sp
 
 W tym dokumencie przyjęto założenie, że masz podstawową wiedzę na temat sposobu instalowania oprogramowania na komputerach serwerów. Założono również, że masz podstawową wiedzę na temat Active Directory® usługi domenowe, Microsoft Identity Manager z dodatkiem SP1 (FIM) i Microsoft SQL Server 2012. Opis sposobu konfigurowania i konfigurowania technologii zależnych, takich jak AD DS i FIM, znajduje się poza zakresem tej dokumentacji. Informacje o funkcjach wykonywanych przez moduły Microsoft pakietu BHOLD można znaleźć [w podręczniku Microsoft pakietu BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
-## <a name="audience"></a>Odbiorcy
+## <a name="audience"></a>Grupy odbiorców
 
 Ten dokument jest przeznaczony dla planistów IT, architektów systemów, decyzji technologicznych, konsultantów, planisty infrastruktury i personelu IT, którzy planują wdrożenie pakietu Microsoft pakietu BHOLD Suite.
 
@@ -93,13 +93,13 @@ Aby uzyskać więcej informacji o SQL Server najlepszych rozwiązaniach, zobacz 
 ### <a name="trusted-certificates-list-update"></a>Aktualizacja listy zaufanych certyfikatów
 
 System Windows można skonfigurować pod kątem weryfikowania łańcuchów certyfikatów przed rozpoczęciem usługi. W takich systemach nie można uruchomić usługi, jeśli kod wykonywalny usługi został podpisany przy użyciu certyfikatu, który nie znajduje się na liście zaufanych certyfikatów (TCL) serwera. Oprogramowanie Microsoft pakietu BHOLD Suite z dodatkiem SP1 to kod podpisany przy użyciu łańcucha certyfikatów podpisywania kodu, który pochodzi z certyfikatu głównego urzędu certyfikacji firmy Microsoft 2010.
-System Windows można skonfigurować do pobierania certyfikatów głównych od firmy Microsoft przez połączenie internetowe. W odłączonym systemie system Windows Server zawiera jednak tylko te certyfikaty, które były obecne w programie głównym w danym momencie przed zwolnieniem systemu Windows. W wersjach systemu Windows Server starszych niż Windows Server 2010 te certyfikaty nie będą obejmować certyfikatu głównego wymaganego do sprawdzania poprawności łańcucha certyfikatów podpisywania kodu pakietu BHOLD Suite SP1. Jeśli zamierzasz zainstalować jeden lub więcej modułów Microsoft pakietu BHOLD Suite SP1 w systemie, który może nie mieć aktualnych TCL, musisz pobrać i zainstalować pakiet root-Update lub użyć zasady grupy, aby zainstalować pakiet root-Update, przed zainstalowaniem pakietu pakietu BHOLD Suite SP1 elementu. Aby uzyskać więcej informacji, zobacz [Członkowie programu certyfikatów głównych systemu Windows](https://support.microsoft.com/kb/931125).
+System Windows można skonfigurować do pobierania certyfikatów głównych od firmy Microsoft przez połączenie internetowe. W odłączonym systemie system Windows Server zawiera jednak tylko te certyfikaty, które były obecne w programie głównym w danym momencie przed zwolnieniem systemu Windows. W wersjach systemu Windows Server starszych niż Windows Server 2010 te certyfikaty nie będą obejmować certyfikatu głównego wymaganego do sprawdzania poprawności łańcucha certyfikatów podpisywania kodu pakietu BHOLD Suite SP1. Jeśli zamierzasz zainstalować jeden lub więcej modułów Microsoft pakietu BHOLD Suite SP1 w systemie, który może nie mieć aktualnych TCL, przed zainstalowaniem modułu pakietu BHOLD Suite SP1 należy pobrać i zainstalować pakiet root-Update lub użyć zasady grupy. Aby uzyskać więcej informacji, zobacz [Członkowie programu certyfikatów głównych systemu Windows](https://support.microsoft.com/kb/931125).
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>Instalowanie programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012/2016 — wymagany krok 
 
 ![PAKIETU BHOLD instalacji usług IIS](media/bhold-installation-guide/iis-install-bhold.png)
 
-W przypadku instalowania programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016 strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost. config znajdującego się w ```C:\Windows\System32\inetsrv\config```. W sekcji ```<globalModules>``` Dodaj ```preCondition="bitness64``` do pozycji rozpoczynającej się ```<add name="SPNativeRequestModule"``` tak, aby odczytał się w następujący sposób:
+W przypadku instalowania programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016 strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost. config znajdującego się ```C:\Windows\System32\inetsrv\config```w temacie. W ```<globalModules>``` sekcji Dodaj ```preCondition="bitness64``` do wpisu, który rozpoczyna się ```<add name="SPNativeRequestModule"``` w następujący sposób:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 

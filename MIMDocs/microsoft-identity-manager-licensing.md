@@ -12,10 +12,10 @@ ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
 ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043022"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016 Licencjonowanie i pobieranie
@@ -51,12 +51,12 @@ W przypadku uruchamiania nowej instalacji należy pobrać pliki instalacyjne dla
 |----------|-----------|---------------------   |-------------------|----------|--------------|
 |Synchronizacja| Usługa synchronizacji (w tym Łącznik do usługi AD) | Tak | `Synchronization Service` | |
 | Synchronizacja | PCNS | Nie | `Password Change Notification Service` |  Do zainstalowania na kontrolerach domeny |
-| Synchronizacja | Łączniki dla protokołów LDAP, SQL, Web Services, PowerShell, Lotus Domino, Graph | Nie | Brak | Dystrybuowane za pośrednictwem Centrum pobierania |
+| Synchronizacja | Łączniki dla protokołów LDAP, SQL, Web Services, PowerShell, Lotus Domino, Graph | Nie | Nie dotyczy | Dystrybuowane za pośrednictwem Centrum pobierania |
 | Privileged Access Management (Ochrona systemu Windows i usługi Active Directory platformy Microsoft Azure przy użyciu programu Privileged Access Management) | Usługa MIM | Tak | `Service and Portal` | |
 | Samoobsługa | Usługa MIM, Portal programu MIM | Tak | `Service and Portal` | |
 | Samoobsługa | Dodatki i rozszerzenia | Nie | `Add-ins and extensions` | Do zainstalowania na komputerach użytkowników końcowych |
 | Samoobsługa | Raportowanie SCSM | Nie | `Data Warehouse Support Scripts` | |
-| Samoobsługa | Agent raportowania hybrydowego | Nie | Brak | Dystrybuowane za pośrednictwem Centrum pobierania |
+| Samoobsługa | Agent raportowania hybrydowego | Nie | Nie dotyczy | Dystrybuowane za pośrednictwem Centrum pobierania |
 | Samoobsługa | Pakiety językowe | Nie | `LANGUAGE Packs` | |
 | Zarządzanie certyfikatami | CM | Tak | `Certificate Management` | |
 | Zarządzanie certyfikatami | Klient zbiorczy CM | Nie | `CM Bulk Client` | |

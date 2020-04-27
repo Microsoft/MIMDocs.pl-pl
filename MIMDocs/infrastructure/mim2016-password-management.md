@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: b28c9623e3a05168adafc19c43634d686dc7e8e2
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042410"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Zarządzanie hasłami za pomocą programu Microsoft Identity Manager 2016
@@ -45,7 +45,7 @@ Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym 
 
 | Zarządzanie hasłami jest obsługiwane domyślnie w ramach agentów zarządzania na potrzeby: | Dzięki użyciu rozszerzenia haseł zarządzanie hasłami jest również obsługiwane w ramach agentów zarządzania dla następujących zasobów: |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Usługi domenowe                                                          | Pliki tekstowe z parami atrybut-wartość                                                                    |
+| Usługa Active Directory                                                          | Pliki tekstowe z parami atrybut-wartość                                                                    |
 | Usługi LDS Active Directory (ADLDS)                   | Rozdzielane pliki tekstowe                                                                               |
 | IBM Directory Server                                                      | Directory Services Markup Language (DSML)                                                          |
 | Lotus Notes                                                               | Extensible Connectivity                                                                            |
@@ -53,7 +53,7 @@ Biblioteka DLL rozszerzenia haseł platformy .NET jest wywoływana przy każdym 
 | Serwery katalogowe firmy Sun i Netscape                                        | IBM DB2 Universal Database                                                                         |
 |                                                                           | Format wymiany danych LDAP (LDIF)                                                                |
 |                                                                           | Microsoft SQL Server                                                                               |
-|                                                                           | Oracle Database                                                                                    |
+|                                                                           | Baza danych Oracle                                                                                    |
 
 ## <a name="password-synchronization"></a>Synchronizacja haseł
 
@@ -67,7 +67,7 @@ Usługa PCNS jest uruchamiana na każdym kontrolerze domeny usługi Active Direc
 
 Składniki biorące udział w procesie synchronizacji haseł to:
 
--   **Usługa powiadamiania o zmianie hasła (Pcnssvc.exe)** — usługa powiadamiania o zmianie hasła jest uruchamiana na kontrolerze domeny i jest odpowiedzialna za odbieranie powiadomień o zmianie haseł z lokalnego filtru haseł, kolejkowanie tych powiadomień na potrzeby docelowego serwera z uruchomionym programem MIM oraz używanie usługi RPC do dostarczania powiadomień. Usługa szyfruje hasło i zapewnia, że hasło pozostanie bezpieczne, dopóki nie zostanie pomyślnie dostarczone na serwer docelowy, na którym działa program MIM.
+-   **Usługa powiadamiania o zmianie hasła (Pcnssvc.exe)**— usługa powiadamiania o zmianie hasła jest uruchamiana na kontrolerze domeny i jest odpowiedzialna za odbieranie powiadomień o zmianie haseł z lokalnego filtru haseł, kolejkowanie tych powiadomień na potrzeby docelowego serwera z uruchomionym programem MIM oraz używanie usługi RPC do dostarczania powiadomień. Usługa szyfruje hasło i zapewnia, że hasło pozostanie bezpieczne, dopóki nie zostanie pomyślnie dostarczone na serwer docelowy, na którym działa program MIM.
 
 -   **Nazwa jednostki usługi (SPN, Service Principal Name)** — nazwa SPN to właściwość w ramach obiektu konta w usłudze Active Directory, która jest używana przez protokół Kerberos do wzajemnego uwierzytelnienia usługi PCNS i elementu docelowego. Nazwa SPN służy do zapewnienia, że usługa PCNS jest uwierzytelniana na odpowiednim serwerze, na którym działa program MIM, a żadna inna usługa nie będzie otrzymywać powiadomień o zmianie haseł. Nazwa SPN jest tworzona i przypisywana za pomocą narzędzia setspn.exe. Aby uzyskać więcej informacji o konfigurowaniu nazwy SPN, zobacz Using Password Synchronization (Korzystanie z synchronizacji haseł).
 
@@ -148,7 +148,7 @@ Idealna sytuacja ma miejsce, gdy użytkownik zmieni hasło, a zmiana zostanie zs
 
 Niektóre błędy są na tyle poważne, że żadna liczba ponownych prób nie spowoduje pomyślnego uruchomienia operacji. W takich przypadkach zostanie zarejestrowane zdarzenie błędu, a proces zostanie zatrzymany. Następujące zdarzenia nie są ponawiane:
 
-| Zdarzenie | Ważność    | Description                                                                                                                                                            |
+| Wydarzenie | Ważność    | Opis                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informacje | Operacja ustawienia synchronizacji haseł nie została wykonana, ponieważ sygnatura czasowa jest nieaktualna.                                                                      |
 | 6921  | Error       | Operacja ustawienia synchronizacji haseł nie została przetworzona, ponieważ zarządzanie hasłami nie jest włączone dla docelowego agenta zarządzania.                                |

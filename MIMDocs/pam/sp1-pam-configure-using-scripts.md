@@ -12,10 +12,10 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 102754fc88af32cb9abed40716ba9168a041d58e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043889"
 ---
 # <a name="configure-pam-using-scripts"></a>Konfiguracja usługi PAM za pomocą skryptów
@@ -43,7 +43,7 @@ kroki:
 
 Przed kontynuowaniem Zaktualizuj plik plik pamdeploymentconfig. XML i umieść zaktualizowaną kopię na wszystkich komputerach.
 
-### <a name="setup"></a>Setup
+### <a name="setup"></a>Konfigurowanie
 
 |Maszyna   | Do uruchomienia jako   |Polecenia   |
 |---|---|---|
@@ -55,7 +55,7 @@ Przed kontynuowaniem Zaktualizuj plik plik pamdeploymentconfig. XML i umieść z
 | PAMServer  | Administrator lokalny (po przyłączeniu do domeny: administrator MIM)  | .\PAMDeployment.ps1 Wybierz opcję menu 5 (MIM PAM Setup (Konfiguracja usługi PAM programu MIM)).   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Wybierz opcję menu 6 (PAM Trust Setup (Konfiguracja zaufania usługi PAM)). |
 
-### <a name="validation"></a>Weryfikacja
+### <a name="validation"></a>Walidacja
 
 |  Maszyna | Do uruchomienia jako   | Polecenia   |
 |---|---|---|

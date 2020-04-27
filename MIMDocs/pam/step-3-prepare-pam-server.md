@@ -13,17 +13,17 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043668"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 
 > [!div class="step-by-step"]
-> [« Krok 2](step-2-prepare-priv-domain-controller.md)
-> [Krok 4 »](step-4-install-mim-components-on-pam-server.md)
+> [«Krok 2](step-2-prepare-priv-domain-controller.md)
+> [krok 4»](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Instalowanie systemu Windows Server 2012 R2
 
@@ -66,19 +66,19 @@ Dodaj role Serwer sieci Web (IIS) i Serwer aplikacji, funkcje platformy .NET Fra
 
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 
-1.  Uruchom program **Zasady zabezpieczeń lokalnych**.   
-2.  Przejdź do lokalizacji **Zasady lokalne** > **Przypisywanie praw użytkownika**.  
+1.  Uruchom program **zasad zabezpieczeń lokalnych** .   
+2.  Przejdź do **zasad** > lokalnych**Przypisywanie praw użytkownika**.  
 3.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie w trybie usługi** i wybierz polecenie **Właściwości**.  
 4.  Kliknij przycisk **Dodaj użytkownika lub grupę** i w nazwach użytkowników i grup wpisz *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*. Kliknij opcję **Sprawdź nazwy** i kliknij przycisk **OK**.  
 
 5.  Kliknij przycisk **OK**, aby zamknąć okno Właściwości.
 6.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmowa dostępu do tego komputera z sieci** i wybierz polecenie **Właściwości**.  
 7.  Kliknij przycisk **Dodaj użytkownika lub grupę** i w nazwach użytkowników i grup wpisz *priv\mimmonitor; priv\MIMService; priv\mimcomponent*, a następnie kliknij przycisk **OK**.  
-8.  Kliknij przycisk **OK**, aby zamknąć okno właściwości.
+8.  Kliknij przycisk **OK** , aby zamknąć okno właściwości.
 
 9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmowa logowania lokalnego** i wybierz polecenie **Właściwości**.  
 10. Kliknij przycisk **Dodaj użytkownika lub grupę** i w nazwach użytkowników i grup wpisz *priv\mimmonitor; priv\MIMService; priv\mimcomponent*, a następnie kliknij przycisk **OK**.  
-11. Kliknij przycisk **OK**, aby zamknąć okno właściwości.  
+11. Kliknij przycisk **OK** , aby zamknąć okno właściwości.  
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.  
 
 13. Otwórz Panel sterowania i przejdź do **kont użytkowników**.
@@ -136,18 +136,18 @@ Po zainstalowaniu wymagań wstępnych programu SharePoint zainstaluj program Sha
 1.  Kliknij prawym przyciskiem myszy program PowerShell i wybierz opcję **Uruchom jako administrator**.  
 2.  Przejdź do katalogu, do którego rozpakowano program SharePoint.  
 3.  Wpisz polecenie `.\setup.exe`.  
-4.  Wybierz typ **kompletnego serwera**.  
+4.  Wybierz typ **kompletnego serwera** .  
 5.  Po zakończeniu instalacji uruchom kreatora.  
 
 ### <a name="configure-sharepoint"></a>Konfiguracja programu SharePoint
 
 Uruchom kreatora konfiguracji produktów SharePoint, aby skonfigurować program SharePoint.
 
-1.  Na karcie Połącz z farmą serwerów zmień ustawienia, aby **utworzyć nową farmę serwerów**.  
+1.  Na karcie Połącz z farmą serwerów Zmień, aby **utworzyć nową farmę serwerów**.  
 2.  Określ serwer **PAMSRV** jako serwer bazy danych dla bazy danych konfiguracji oraz **PRIV\SharePoint** jako konto dostępu do bazy danych używane przez program SharePoint.  
 3.  Określ hasło jako hasło zabezpieczeń farmy (nie będzie już używane w dalszej części tego przewodnika).  
 4.  Teraz zaakceptuj pozostałe domyślne ustawienia kreatora konfiguracji programu SharePoint, aby utworzyć farmę z jednym serwerem.    
-5.  Po zakończeniu przez kreatora konfiguracji zadania konfiguracji o numerze 10 z 10 kliknij przycisk **Zakończ**. Zostanie otwarta przeglądarka sieci Web.  
+5.  Gdy Kreator konfiguracji ukończy zadanie konfiguracji o wartości 10 z 10, kliknij przycisk **Zakończ** . zostanie otwarta przeglądarka sieci Web.  
 6.  W menu podręcznym przeglądarki Internet Explorer przeprowadź uwierzytelnianie jako administrator domeny (PRIV\MIMAdmin), aby kontynuować.  
 7.  Uruchom kreator w aplikacji internetowej, aby skonfigurować farmę programu SharePoint.  
 8.  Wybierz opcję użycia istniejącego konta zarządzanego (PRIV\SharePoint), usuń zaznaczenie pola wyboru, aby wyłączyć wszelkie dodatkowe usługi, a następnie kliknij przycisk **Dalej**.  
@@ -186,7 +186,7 @@ Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplika
 
     Upewnij się, że zmienna **CompatibilityLevel** jest ustawiona na wartość *14*. Jeśli zmienna zwraca wartość *15*, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
 
-2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Operacja wyłączy stan wyświetlania po stronie serwera SharePoint i zadanie programu SharePoint **Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)** .
+2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Operacja wyłączy stan wyświetlania po stronie serwera SharePoint i zadanie programu SharePoint **Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)**.
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -216,5 +216,5 @@ Przy użyciu opcji **Usługi** (znajdującej się w narzędziach administracyjny
 W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 
 > [!div class="step-by-step"]
-> [« Krok 2](step-2-prepare-priv-domain-controller.md)
-> [Krok 4 »](step-4-install-mim-components-on-pam-server.md)
+> [«Krok 2](step-2-prepare-priv-domain-controller.md)
+> [krok 4»](step-4-install-mim-components-on-pam-server.md)

@@ -12,17 +12,17 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043957"
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 
 Dodanie środowiska bastionu z dedykowanym lasem administracyjnym do usługi Active Directory umożliwia organizacjom łatwe zarządzanie kontami administracyjnymi, stacjami roboczymi i grupami w środowisku mającym silniejsze kontrole zabezpieczeń niż ich istniejące środowisko produkcyjne.
 
-Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Taka architektura umożliwia również korzystanie z funkcji selektywnego uwierzytelniania zaufania w celu ograniczania logowań (i widoczności poświadczeń) tylko do autoryzowanych hostów. W sytuacjach, w których żądany jest wyższy poziom gwarancji dla lasu produkcyjnego bez ponoszenia kosztów i wprowadzania złożoności pełnego ponownego tworzenia, las administracyjny może zapewnić środowisko, które zwiększa poziom gwarancji środowiska produkcyjnego.
+Taka architektura umożliwia stosowanie szeregu kontroli, których nie można wykonać w architekturze pojedynczego lasu lub są w niej trudne do skonfigurowania. Obejmuje to aprowizację kont jako standardowych nieuprzywilejowanych użytkowników w lesie administracyjnym, które są wysoce uprzywilejowane w środowisku produkcyjnym, co w większym stopniu zapewnia techniczne wymuszanie ładu. Architektura ta pozwala również korzystać z funkcji uwierzytelniania selektywnego w relacji zaufania jako metody ograniczenia możliwości logowania (i ujawnienia poświadczeń) tylko do grupy autoryzowanych hostów. W sytuacjach, w których od lasu produkcyjnego oczekuje się podniesienia poziomu bezpieczeństwa bez zwiększania kosztu i złożoności projektu związanego z całkowitą przebudową infrastruktury, środowisko lasu administracyjnego może zwiększyć bezpieczeństwo środowiska produkcyjnego.
 
 Oprócz dedykowanego lasu administracyjnego można użyć innych technik. Obejmują one ograniczanie widoczności poświadczeń administracyjnych, ograniczanie uprawnień ról użytkowników w tym lesie i zapewnianie, że zadania administracyjne nie są wykonywane na hostach używanych do standardowych działań użytkowników (na przykład korzystania z poczty e-mail i przeglądania sieci Web).
 
@@ -42,7 +42,7 @@ Zgodnie z [modelem warstwy](tier-model-for-partitioning-administrative-privilege
 
 Produkcyjny las *CORP* powinien ufać administracyjnemu lasowi *PRIV*, ale nie odwrotnie. Może to być zaufanie domeny lub zaufanie lasu. Domena lasu administracyjnego nie musi ufać zarządzanym domenom i lasom w celu zarządzania usługą Active Directory, ale dodatkowe aplikacje mogą wymagać dwukierunkowej relacji zaufania, walidacji zabezpieczeń i testowania.
 
-Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Aby uzyskać więcej informacji, zobacz [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) (Konfigurowanie selektywnych ustawień uwierzytelniania).
+Należy korzystać z uwierzytelniania selektywnego w celu zapewnienia, że konta w lesie administracyjnym używają tylko odpowiednich hostów produkcyjnych. Do obsługi kontrolerów domeny i delegowania uprawnień w usłudze Active Directory zwykle wymaga to przyznania prawa „Zezwolono na logowanie” dla kontrolerów domeny wyznaczonym kontom administracyjnym warstwy 0 w lesie administracyjnym. Zobacz [Konfigurowanie ustawień uwierzytelniania selektywnego](https://technet.microsoft.com/library/cc816580.aspx) , aby uzyskać więcej informacji.
 
 ## <a name="maintain-logical-separation"></a>Zachowanie separacji logicznej
 
@@ -64,7 +64,7 @@ Aby zapewnić, że na środowisko bastionu nie będą miały wpływu istniejące
 
 Ponieważ administrowanie aplikacjami zostanie przeniesione do środowiska bastionu, rozważ, jak zapewnić wystarczającą dostępność w celu spełnienia wymagań tych aplikacji. Te techniki to m.in.:
 
-- Wdrożenie usług Active Directory Domain Services na wielu komputerach w środowisku bastionu. Co najmniej dwie usługi są niezbędne w celu zapewnienia ciągłego uwierzytelniania nawet wtedy, gdy jeden serwer będzie tymczasowo uruchamiany ponownie w celu wykonania zaplanowanej konserwacji. W celu obsługi większych obciążeń lub zarządzania zasobami i administratorami w wielu regionach geograficznych mogą być wymagane dodatkowe komputery.
+- Wdrożenie Usług domenowych Active Directory na wielu komputerach w środowisku bastionu. Co najmniej dwie usługi są niezbędne w celu zapewnienia ciągłego uwierzytelniania nawet wtedy, gdy jeden serwer będzie tymczasowo uruchamiany ponownie w celu wykonania zaplanowanej konserwacji. W celu obsługi większych obciążeń lub zarządzania zasobami i administratorami w wielu regionach geograficznych mogą być wymagane dodatkowe komputery.
 
 - Przygotowanie kont awaryjnych w istniejącym lesie oraz dedykowany las administracyjny w razie awarii.
 
@@ -76,11 +76,11 @@ Ponieważ administrowanie aplikacjami zostanie przeniesione do środowiska basti
 
 Las administracyjny musi być skonfigurowany z najmniejszymi uprawnieniami na podstawie wymagań dotyczących administracji usługi Active Directory.
 
-- Kontom w lesie administracyjnym używanym do administrowania środowiskiem produkcyjnym nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani znajdujących się w nim domen i stacji roboczych.
+- Kontom znajdującym się w lesie administracyjnym, które są używane do zarządzania środowiskiem produkcyjnym, nie należy przyznawać uprawnień administracyjnych do lasu administracyjnego ani stacji roboczych i domen, które zawiera ten las.
 
-- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Pomaga to także zapewnić, że pracownicy z produkcyjnymi kontami administracyjnymi nie zmniejszą ograniczeń dotyczących własnych kont, co spowoduje zwiększenie ryzyka dla organizacji.
+- Uprawnienia administracyjne dotyczące lasu administracyjnego powinny być ściśle kontrolowane przez proces w trybie offline, aby ograniczyć możliwość wymazania dzienników inspekcji przez osobę atakującą lub złośliwe oprogramowanie. Dodatkowa korzyść polega na zapewnieniu, że członkowie personelu z kontami administratora w środowisku produkcyjnym nie mogą złagodzić ograniczeń swoich kont, a przez to zwiększyć zagrożenia bezpieczeństwa dla organizacji.
 
-- W przypadku lasu administracyjnego należy stosować konfiguracje Menedżera zgodności zabezpieczeń firmy Microsoft (SCM, Security Compliance Manager) dla domeny, w tym silne konfiguracje protokołów uwierzytelniania.
+- Las administracyjny powinien być zgodny z konfiguracją Menedżera zgodności zabezpieczeń firmy Microsoft dla domeny, w tym również z rygorystyczną konfiguracją protokołów uwierzytelniania.
 
 Podczas tworzenia środowiska bastionu przed zainstalowaniem programu Microsoft Identity Manager należy określić i utworzyć konta, które będą używane na potrzeby administracyjne w ramach tego środowiska. Dotyczy to następujących kont:
 
@@ -96,7 +96,7 @@ Wszystkie hosty, w tym kontrolery domeny, serwery i stacje robocze przyłączone
 
 - Aplikacje wymagane do wykonywania czynności administracyjnych należy wstępnie zainstalować na stacjach roboczych, aby konta ich używające nie musiały należeć do grupy administratorów lokalnych w celu zainstalowania tych aplikacji. Konserwacja kontrolera domeny może być zwykle przeprowadzona przy użyciu protokołu RDP i narzędzi administracji zdalnej serwera.
 
-- Na hostach lasu administracyjnego powinny być automatycznie stosowane aktualizacje zabezpieczeń. Mimo że może to spowodować ryzyko przerwania operacji obsługi kontrolera domeny, zapewnia to znaczące zmniejszenie zagrożeń bezpieczeństwa wynikających z luk w zabezpieczeniach, względem których nie zostały zastosowane poprawki.
+- Hosty w lesie administracyjnym powinny być skonfigurowane pod kątem automatycznej instalacji aktualizacji zabezpieczeń. Może to powodować ryzyko przerywania operacji konserwacji kontrolera domeny, ale znacząco zmniejsza zagrożenie bezpieczeństwa związane z brakiem poprawek usuwających luki.
 
 ### <a name="identify-administrative-hosts"></a>Identyfikowanie hostów administracyjnych
 
@@ -118,23 +118,23 @@ Mimo niedogodności mogą być wymagane oddzielne stacje robocze ze wzmocnionymi
 
 - **Zweryfikowanie wszystkich nośników w kompilacji jako czystych**, aby ograniczyć ryzyko ze strony złośliwego oprogramowania zainstalowanego w obrazie głównym lub wstrzykniętego do pliku instalacyjnego podczas pobierania lub przechowywania.
 
-- **Plany bazowe zabezpieczeń** powinny być używane jako konfiguracja początkowa. Menedżer zgodności zabezpieczeń firmy Microsoft (SCM, Security Compliance Manager) może ułatwić skonfigurowanie planów bazowych na hostach administracyjnych.
+- **Linie bazowe zabezpieczeń** powinny być używane jako konfiguracje uruchamiania. Menedżer zgodności zabezpieczeń firmy Microsoft (SCM, Security Compliance Manager) może ułatwić skonfigurowanie planów bazowych na hostach administracyjnych.
 
-- **Bezpieczny rozruch**, aby ograniczyć ryzyko ze strony podejmowanych przez osoby atakujące lub złośliwe oprogramowanie próby załadowania niepodpisanego kodu do procesu rozruchu.
+- **Bezpieczny rozruch** w celu wyeliminowania problemów z osobami atakującymi lub złośliwym oprogramowaniem próbujących załadować niepodpisany kod do procesu rozruchu.
 
 - **Ograniczenie oprogramowania**, aby zapewnić, że na hostach administracyjnych uruchamiane jest tylko autoryzowane oprogramowanie. Do wykonania tego zadania klienci mogą użyć funkcji AppLocker z listą dozwolonych autoryzowanych aplikacji, aby łatwiej zapobiec uruchamianiu złośliwego oprogramowania i nieobsługiwanych aplikacji.
 
-- **Pełne szyfrowanie woluminu**, aby ograniczyć straty związane z fizyczną utratą komputerów, takich jak laptopy administracyjne używane zdalnie.
+- **Pełne szyfrowanie woluminów** w celu ograniczenia fizycznej utraty komputerów, takich jak laptopy administracyjne używane zdalnie.
 
 - **Ograniczenia portów USB** w celu ochrony przed infekcją fizyczną.
 
-- **Izolacja sieci** w celu ochrony przed atakami sieciowymi oraz przypadkowymi działaniami administracyjnymi. Zapory hostów powinny blokować wszystkie połączenia przychodzące z wyjątkiem tych jawnie wymaganych i blokować cały zbędny ruch wychodzący do Internetu.
+- **Izolacja sieci** chroniąca przed atakami sieciowymi i nieumyślne akcje administracyjne. Zapory hostów powinny blokować wszystkie połączenia przychodzące z wyjątkiem tych jawnie wymaganych i blokować cały zbędny ruch wychodzący do Internetu.
 
-- **Oprogramowanie chroniące przed złośliwym kodem** do ochrony przed znanym złośliwym oprogramowaniem i znanymi zagrożeniami.
+- Ochrona przed **złośliwym oprogramowaniem** w celu ochrony przed znanymi zagrożeniami i złośliwym oprogramowaniem.
 
 - **Środki ograniczające ryzyko ze strony programów wykorzystujących luki**, aby chronić przed nieznanymi zagrożeniami i programami wykorzystującymi luki, w tym zestaw narzędzi Enhanced Mitigation Experience Toolkit (EMET).
 
-- **Analiza obszaru narażonego na ataki**, aby uniemożliwić wykorzystanie nowych metod ataku w systemie Windows podczas instalacji nowego oprogramowania. Narzędzia takie jak Attack Surface Analyzer (ASA) ułatwiają ocenę ustawień konfiguracyjnych hosta i identyfikację metod ataków, które stały się dostępne po wprowadzeniu zmian w oprogramowaniu lub konfiguracji.
+- **Analiza obszaru ataków** pozwala uniknąć wprowadzenia nowych wektorów ataków do systemu Windows podczas instalacji nowego oprogramowania. Narzędzia takie jak Attack Surface Analyzer (ASA) ułatwiają ocenę ustawień konfiguracyjnych hosta i identyfikację metod ataków, które stały się dostępne po wprowadzeniu zmian w oprogramowaniu lub konfiguracji.
 
 - **Uprawnienia administracyjne** nie powinny być nadawane użytkownikom na ich komputerach lokalnych.
 
@@ -164,7 +164,7 @@ Istnieje siedem wymagań dotyczących włączania zarządzania dla istniejącej 
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. Grupa zabezpieczeń w domenie lokalnej
 
-W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$* . Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
+W istniejącej domenie musi znajdować się grupa, której nazwa jest nazwą domeny NetBIOS, po której następują trzy znaki dolara ($), np. *CONTOSO$$$*. Zakres grupy musi mieć wartość *Lokalny w domenie*, a typ grupy musi mieć wartość *Zabezpieczenia*. Dzięki temu grupy mogą być tworzone w dedykowanym lesie administracyjnym z tym samym identyfikatorem zabezpieczeń co grupy w tej domenie. Utwórz tę grupę za pomocą następującego polecenia programu PowerShell wykonanego przez administratora istniejącej domeny i uruchomionego na stacji roboczej przyłączonej do istniejącej domeny:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
@@ -174,15 +174,15 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmować inspekcję sukcesów i niepowodzeń dla zarządzania kontem inspekcji i dostępu do usługi katalogowej inspekcji. Może to zostać przeprowadzone za pomocą konsoli zarządzania zasadami grupy przez administratora istniejącej domeny i uruchomione na stacji roboczej przyłączonej do istniejącej domeny:
 
-3. Wybierz kolejno pozycje **Start** > **Narzędzia administracyjne** > **Zarządzanie zasadami grupy**.
+3. Przejdź do **menu Start** > **Narzędzia** > administracyjne**zasady grupy zarządzanie**.
 
-4. Wybierz pozycję **Las: contoso.local** > **Domeny** > **contoso.local** > **Kontrolery domeny** > **Domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
+4. Przejdź do **lasu: contoso. Local** > **domen** > **contoso. Local** > kontrolery**domeny** > **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
 
     ![Domyślne zasady kontrolerów domeny — zrzut ekranu](media/pam-group-policy-management.jpg)
 
 5. Kliknij prawym przyciskiem myszy pozycję **Domyślne zasady kontrolerów domeny** i wybierz polecenie **Edytuj**. Zostanie wyświetlone nowe okno.
 
-6. W oknie Edytor zarządzania zasadami grupy w drzewie Domyślne zasady kontrolerów domeny wybierz pozycję **Konfiguracja komputera** > **Zasady** > **Ustawienia systemu Windows** > **Ustawienia zabezpieczeń** > **Zasady lokalne** > **Zasady inspekcji**.
+6. W oknie Edytor zarządzania zasadami grupy w obszarze domyślne drzewo zasad kontrolerów domeny Przejdź do pozycji **Konfiguracja** > **zasady** > **Ustawienia** > systemu Windows ustawienia**zabezpieczeń** > **zasady** > lokalne zasady**inspekcji**.
 
     ![Edytor zarządzania zasadami grupy — zrzut ekranu](media/pam-group-policy-management-editor.jpg)
 

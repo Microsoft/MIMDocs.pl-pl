@@ -9,10 +9,10 @@ ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: b2b63f4490b5f53f5a2d683d5130b3ac1e74dc04
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044093"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 Aktualności i aktualizacje
@@ -48,7 +48,7 @@ MIM 2016 z dodatkiem Service Pack 2 to pakiet zbiorczy poprawek dla programu MIM
 
 
 
-## <a name="related-topics"></a>Tematy pokrewne
+## <a name="related-topics"></a>Powiązane tematy
 
 Dowiedz się więcej na temat scenariuszy dodanych w programie MIM 2016 i starszych wersjach [programu Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
 

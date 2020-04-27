@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043005"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
@@ -30,7 +30,7 @@ Konfiguracja serwera usługi SQL (Structured Query Language) ma kluczowe znaczen
 
 -   [Optimizing tempdb Performance](http://go.microsoft.com/fwlink/?LinkID=188267) (Optymalizacja wydajności bazy danych tempdb)
 
--   [SQL Server Best Practices Article](http://go.microsoft.com/fwlink/?LinkID=188268) (Najlepsze rozwiązania dotyczące programu SQL Server)
+-   [Najlepsze rozwiązania dotyczące programu SQL Server](http://go.microsoft.com/fwlink/?LinkID=188268)
 
 -   [Reorganizing and Rebuilding Indexes](http://go.microsoft.com/fwlink/?LinkID=188269) (Reorganizacja i ponowne tworzenie indeksów)
 
@@ -74,7 +74,7 @@ W zależności od ilości pamięci dostępnej na serwerze SQL oraz tego, czy ser
 
 2. Wybierz opcję Nowe zapytanie.
 
-3. Uruchom następujące zapytanie:
+3. Uruchom zapytanie:
 
    ```SQL
    USE master
@@ -222,7 +222,7 @@ W zależności od scenariuszy może to obejmować tworzenie dodatkowych zestawó
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Krok 5. Ponowne skonfigurowanie usługi SQL w celu przywrócenia poprzednich ustawień
 
-Pamiętaj, aby zmienić ustawienia usługi SQL na jej normalne ustawienia. Obejmuje to następujące działania:
+Pamiętaj, aby zmienić ustawienia usługi SQL na jej normalne ustawienia. Obejmuje to:
 
 -   Włączenie wyszukiwania pełnotekstowego
 
@@ -314,7 +314,7 @@ Aby zaimplementować protokół SSL:
 
 7.  Zapisz plik w dowolnej lokalizacji. Musisz mieć dostęp do tej lokalizacji w kolejnych krokach.
 
-8.  Przejdź do pliku https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
+8.  Przejdź do https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
 
 9.  Kliknij opcję Żądaj nowego certyfikatu.
 
@@ -356,7 +356,7 @@ Aby zaimplementować protokół SSL:
 
 28. Kliknij pozycję Operacje, a następnie kliknij opcję Mapowania dostępu alternatywnego.
 
-29. Kliknij pozycję http://servername.
+29. Kliknij pozycję http://servername (Dalej).
 
 30. Zmień http://servername na https://servername, a następnie kliknij przycisk OK.
 
@@ -494,11 +494,11 @@ Warunki negatywne to warunki członkostwa, które korzystają z następujących 
 
 Należy zminimalizować użycie warunków opartych na wielowartościowych atrybutach odwołania, ponieważ duża liczba tych zestawów może mieć wpływ na wydajność operacji na atrybucie użytym w warunku członkostwa.
 
-### <a name="password-reset"></a>Resetowanie haseł
+### <a name="password-reset"></a>Resetowanie hasła
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Komputery typu kiosk używane do resetowania haseł powinny ustawiać zabezpieczenia lokalne w celu czyszczenia pliku stronicowania pamięci wirtualnej
 
-W przypadku wdrażania resetowania haseł programu MIM na stacji roboczej, która ma być kioskiem, zaleca się włączenie ustawienia zasad zabezpieczeń lokalnych "zamknięcie: Wyczyść plik stronicowania pamięci wirtualnej" w celu zapewnienia, że poufne informacje z pamięci procesu nie będą dostępne dla nieautoryzowani użytkownicy.
+Podczas wdrażania resetowania haseł programu MIM na stacji roboczej, która ma być kioskiem, zaleca się włączenie ustawienia zasad zabezpieczeń lokalnych "zamknięcie: Wyczyść plik stronicowania pamięci wirtualnej" w celu zapewnienia, że poufne informacje z pamięci procesu nie będą dostępne dla nieautoryzowanych użytkowników.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Użytkownicy powinni zawsze rejestrować się w celu resetowania haseł na komputerze, na którym są zalogowani
 
@@ -546,11 +546,11 @@ Istnieje 13 podstawowych atrybutów przypisanych do wszystkich typów zasobów. 
 
 -   CreatedTime
 
--   Creator
+-   Kreator
 
 -   DeletedTime
 
--   Description
+-   Opis
 
 -   DetectedRulesList • DisplayName
 
@@ -558,7 +558,7 @@ Istnieje 13 podstawowych atrybutów przypisanych do wszystkich typów zasobów. 
 
 -   ExpirationTime
 
--   Locale
+-   Ustawienia regionalne
 
 -   MVObjectID
 

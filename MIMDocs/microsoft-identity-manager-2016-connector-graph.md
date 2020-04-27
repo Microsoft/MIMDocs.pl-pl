@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044263"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Łącznik Microsoft Identity Manager dla Microsoft Graph
@@ -50,7 +50,7 @@ Aby dowiedzieć się, jak skonfigurować program MIM Sync do automatycznego twor
 
 ![](media/microsoft-identity-manager-2016-ma-graph/724d3fc33b4c405ab7eb9126e7fe831f.png)
 
-Rysunek 1. Rejestracja nowej aplikacji
+Rysunek 1. Rejestrowanie nowej aplikacji
 
 2.  W Azure Portal Otwórz utworzoną aplikację i Zapisz identyfikator aplikacji jako identyfikator klienta, który ma być używany później na stronie o łączności:
 
@@ -58,7 +58,7 @@ Rysunek 1. Rejestracja nowej aplikacji
 
 Rysunek 2. Identyfikator aplikacji
 
-3.  Wygeneruj nowy klucz tajny klienta, otwierając wszystkie ustawienia — klucze\>. Ustaw Opis klucza i wybierz potrzebny czas trwania. Zapisz zmiany. Wartość wpisu tajnego nie będzie dostępna po opuszczeniu strony.
+3.  Generuj nowy klucz tajny klienta, otwierając wszystkie\> ustawienia-klucze. Ustaw Opis klucza i wybierz potrzebny czas trwania. Zapisz zmiany. Wartość wpisu tajnego nie będzie dostępna po opuszczeniu strony.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
 
@@ -75,7 +75,7 @@ Do aplikacji należy dodać następujące uprawnienia, aby umożliwić korzystan
 | Operacja z obiektem | Wymagane uprawnienie                                                                  | Typ uprawnienia |
 |-----------------------|--------------------------------------------------------------------------------------|-----------------|
 | Importuj grupę          | `Group.Read.All` lub `Group.ReadWrite.All`                                                | Aplikacja     |
-| Importuj użytkownika           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` lub `Directory.ReadWrite.All` | Aplikacja     |
+| Importuj użytkownika           | `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` lub`Directory.ReadWrite.All` | Aplikacja     |
 
 Więcej informacji o wymaganych uprawnieniach można znaleźć [tutaj](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
 
@@ -98,8 +98,8 @@ Więcej informacji o wymaganych uprawnieniach można znaleźć [tutaj](https://d
 
 
 
-9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **łączniki** i **Utwórz**.
-Wybierz pozycję **Graph (Microsoft)**  , Utwórz łącznik i nadaj mu nazwę opisową.
+9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **Łączniki** i **Utwórz**.
+Wybierz pozycję **Graph (Microsoft)** , Utwórz łącznik i nadaj mu nazwę opisową.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -151,9 +151,9 @@ Lista typów atrybutów, które są obsługiwane:
 
 -   `Edm.String`
 
--   `Edm.DateTimeOffset` (ciąg w przestrzeni łącznika)
+-   `Edm.DateTimeOffset`(ciąg w przestrzeni łącznika)
 
--   `microsoft.graph.directoryObject` (odwołanie w obszarze łącznika do dowolnego z obsługiwanych obiektów)
+-   `microsoft.graph.directoryObject`(odwołanie w obszarze łącznika do dowolnego z obsługiwanych obiektów)
 
 -   `microsoft.graph.contact`
 
@@ -178,9 +178,9 @@ Podczas eksportowania zostanie zażądany nowy token dostępu dla każdego obiek
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
 
-**Włącz dzienniki**
+**Włączanie dzienników**
 
-W przypadku problemów z programem Graph dzienniki mogą być używane do lokalizowania problemu. Dlatego ślady mogą być włączone w taki [sam sposób jak w przypadku łączników generycznych](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Lub po prostu dodając następujące elementy do `miiserver.exe.config` (wewnątrz sekcji `system.diagnostics/sources`):
+W przypadku problemów z programem Graph dzienniki mogą być używane do lokalizowania problemu. Dlatego ślady mogą być włączone w taki [sam sposób jak w przypadku łączników generycznych](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Lub po prostu dodając następujący do `miiserver.exe.config` (sekcja `system.diagnostics/sources` wewnątrz):
 
 ```
 \<source name="ConnectorsLog" switchValue="Verbose"\>
@@ -200,7 +200,7 @@ DateTime, Timestamp, Call stack" /\>
 \</source\>
 ```
 >[!NOTE]
->Jeśli włączono opcję "Uruchom ten agent zarządzania w osobnym procesie", zamiast `miiserver.exe.config`należy użyć `dllhost.exe.config`.
+>Jeśli włączono opcję "Uruchom ten agent zarządzania w osobnym procesie", `dllhost.exe.config` należy go użyć zamiast. `miiserver.exe.config`
 
 **Błąd wygaśnięcia tokenu dostępu**
 
@@ -216,11 +216,11 @@ Przykład korzystania z [publicznej wersji zapoznawczej modułu programu Azure A
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
-New-AzureADPolicy-Definition \@("{" TokenLifetimePolicy ": {" Version ": 1, **" AccessTokenLifetime ":" 5:00:00 "** }}")-DisplayName "OrganizationDefaultPolicyScenario"-IsOrganizationDefault \$True-Type "TokenLifetimePolicy"
+New-AzureADPolicy-Definition \@("{" TokenLifetimePolicy ": {" Version ": 1, **" AccessTokenLifetime ":" 5:00:00 "**}}")-DisplayName "OrganizationDefaultPolicyScenario"-IsOrganizationDefault \$True-Type "TokenLifetimePolicy"
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Eksplorator grafów, doskonały do rozwiązywania problemów z wywołaniem HTTP]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Zasady przechowywania wersji, pomocy technicznej i zmiany dotyczącej podziału dla Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Pobierz łącznik usługi Microsoft Identity Manager dla Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
-[MIM B2B zakończenie wdrożenia]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
+- [Pobierz łącznik usługi Microsoft Identity Manager dla](http://go.microsoft.com/fwlink/?LinkId=717495)
+[wdrożenia usługi Microsoft Graph MIM B2B na zakończenie wdrażania]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)

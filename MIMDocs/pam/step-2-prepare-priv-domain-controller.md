@@ -12,17 +12,17 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043702"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Krok 2. Przygotowywanie pierwszego kontrolera domeny PRIV
 
 > [!div class="step-by-step"]
-> [« Krok 1](step-1-prepare-corp-domain.md)
-> [Krok 3 »](step-3-prepare-pam-server.md)
+> [«Krok 1](step-1-prepare-corp-domain.md)
+> [krok 3»](step-3-prepare-pam-server.md)
 
 W tym kroku opisano tworzenie nowej domeny w celu udostępnienia środowiska bastionu na potrzeby uwierzytelniania administratorów.  W tym lesie będzie potrzebny co najmniej jeden kontroler domeny i jeden serwer członkowski. Serwer członkowski zostanie skonfigurowany w następnym kroku.
 
@@ -34,11 +34,11 @@ W tej sekcji zostanie skonfigurowana maszyna wirtualna pełniąca funkcję kontr
 
 Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows Server 2012 R2, aby utworzyć komputer o nazwie „PRIVDC”.
 
-1. Wybierz opcję wykonania niestandardowej instalacji (nie uaktualnienia) systemu Windows Server. W przypadku instalacji należy określić **Windows server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64**; _nie wybieraj opcji_ **centrum danych ani Server Core**.
+1. Wybierz opcję wykonania niestandardowej instalacji (nie uaktualnienia) systemu Windows Server. Podczas instalacji wybierz opcję **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64**. _Nie wybieraj opcji instalacji _ **Data Center ani Server Core**.
 
 2. Przeczytaj i zaakceptuj postanowienia licencyjne.
 
-3. Ponieważ dysk będzie pusty, wybierz opcję **Niestandardowa: tylko zainstaluj system Windows** i użyj niezainicjowanego miejsca na dysku.
+3. Ponieważ dysk będzie pusty, wybierz opcję **niestandardowa: tylko Zainstaluj system Windows** i użyj niezainicjowanego miejsca na dysku.
 
 4. Po zainstalowaniu wersji systemu operacyjnego zaloguj się na nowym komputerze jako nowy administrator. Za pomocą Panelu sterowania ustaw nazwę komputera na *PRIVDC*, przypisz mu statyczny adres IP w sieci wirtualnej i skonfiguruj serwer DNS, ustawiając go na serwer DNS kontrolera domeny zainstalowanego w poprzednim kroku. Wymaga to ponownego uruchomienia serwera.
 
@@ -46,7 +46,7 @@ Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj
 
 ### <a name="add-roles"></a>Dodawanie ról
 
-Dodaj role Usługi domenowe w usłudze Active Directory (AD DS) i Serwer DNS.
+Dodaj role Active Directory Domain Services (AD DS) i Serwer DNS.
 
 1. Uruchom program PowerShell jako administrator.
 
@@ -165,25 +165,25 @@ Skonfigurowanie inspekcji pozwoli określić konfigurację usługi PAM między l
 
 1. Sprawdź, czy zalogowano się jako administrator domeny (PRIV\\Administrator).
 
-2. Wybierz kolejno pozycje **Start** > **Narzędzia administracyjne** > **Zarządzanie zasadami grupy**.
+2. Przejdź do **menu Start** > **Narzędzia** > administracyjne**zasady grupy zarządzanie**.
 
-3. Wybierz kolejno pozycje **Las: priv.contoso.local** > **Domeny** > **priv.contoso.local** > **Kontrolery domeny** > **Domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat ostrzegawczy.
+3. Przejdź do **lasu: priv. contoso. Local** > **Domains** > domeny**priv. contoso. Local** > kontrolery**domeny** > **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat ostrzegawczy.
 
 4. Kliknij prawym przyciskiem myszy pozycję **Domyślne zasady kontrolerów domeny** i wybierz polecenie **Edytuj**.
 
-5. W drzewie konsoli Edytor zarządzania zasadami grupy wybierz kolejno pozycje **Konfiguracja komputera** > **Zasady** > **Ustawienia systemu Windows** > **Ustawienia zabezpieczeń** > **Zasady lokalne** > **Zasady inspekcji**.
+5. W drzewie konsoli Edytor zarządzania zasadami grupy przejdź do ustawień **Konfiguracja** > komputera**zasady** > **systemu Windows Ustawienia** > **zabezpieczeń** > zasady**lokalne** > zasady**inspekcji**.
 
 6. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Przeprowadź inspekcję zarządzania kontami**, a następnie wybierz polecenie **Właściwości**. Kliknij pozycję **Definiuj następujące ustawienia zasad**, zaznacz pole wyboru **Sukces**, zaznacz pole wyboru **Niepowodzenie**, kliknij przycisk **Zastosuj**, a następnie kliknij przycisk **OK**.
 
 7. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Przeprowadź inspekcję dostępu do usługi katalogowej**, a następnie wybierz polecenie **Właściwości**. Kliknij pozycję **Definiuj następujące ustawienia zasad**, zaznacz pole wyboru **Sukces**, zaznacz pole wyboru **Niepowodzenie**, kliknij przycisk **Zastosuj**, a następnie kliknij przycisk **OK**.
 
-8. Wybierz kolejno pozycje **Konfiguracja komputera** > **Zasady** > **Ustawienia systemu Windows** > **Ustawienia zabezpieczeń** > **Zasady konta** > **Zasady protokołu Kerberos**.
+8. Przejdź do **ustawień konfiguracja** > **komputera zasady** > **Ustawienia** > systemu Windows ustawienia**zabezpieczeń** > zasady**konta** > zasad**protokołu Kerberos**.
 
 9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Maksymalny okres istnienia biletu użytkownika** i wybierz polecenie **Właściwości**. Kliknij pozycję **Definiuj następujące ustawienia zasad**, ustaw liczbę godzin na *1*, kliknij przycisk **Zastosuj**, a następnie kliknij przycisk **OK**. Zwróć uwagę na to, że inne ustawienia wyświetlane w tym oknie również się zmienią.
 
 10. W oknie Zarządzanie zasadami grupy wybierz pozycję **Domyślne zasady domeny**, kliknij prawym przyciskiem myszy i wybierz polecenie **Edytuj**.
 
-11. Rozwiń kolejno węzły **Konfiguracja komputera** > **Zasady** > **Ustawienia systemu Windows** > **Ustawienia zabezpieczeń** > **Zasady lokalne** i wybierz pozycję **Przypisywanie praw użytkownika**.
+11. Rozwiń kolejno pozycje **Konfiguracja** > **komputera zasady** > **Ustawienia** > systemu Windows**Ustawienia** > zabezpieczeń**Zasady lokalne** i wybierz pozycję **Przypisywanie praw użytkownika**.
 
 12. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmowa logowania w trybie wsadowym** i wybierz polecenie **Właściwości**.
 
@@ -245,12 +245,12 @@ Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następuj�
 
 1. Uruchom przystawkę **Użytkownicy i komputery usługi Active Directory**.
 2. Kliknij prawym przyciskiem myszy domenę **priv.contoso.local** i wybierz polecenie **Deleguj kontrolę**.
-3. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.
+3. Na karcie wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.
 4. W oknie Wybieranie: Użytkownicy, komputery lub grupy wpisz *mimcomponent; mimmonitor; mimservice* i kliknij pozycję **Sprawdź nazwy**. Gdy nazwy zostaną podkreślone, kliknij kolejno przyciski **OK** i **Dalej**.
 5. Na liście typowych zadań wybierz pozycje **Tworzenie i usuwanie kont użytkowników oraz zarządzanie nimi** i **Modyfikowanie członkostwa w grupie**, a następnie kliknij kolejno pozycje **Dalej** i **Zakończ**.
 
 6. Ponownie kliknij prawym przyciskiem myszy domenę **priv.contoso.local** i wybierz polecenie **Deleguj kontrolę**.
-7. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
+7. Na karcie wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
 8. W oknie Wybieranie: Użytkownicy, komputery lub grupy wpisz *MIMAdmin* i kliknij pozycję **Sprawdź nazwy**. Gdy nazwy zostaną podkreślone, kliknij kolejno przyciski **OK** i **Dalej**.
 9. Wybierz **zadanie niestandardowe** i zastosuj je do **tego folderu** z **uprawnieniami ogólnymi**.
 10. Na liście uprawnień wybierz następujące pozycje:
@@ -263,8 +263,8 @@ Zaloguj się na komputerze PRIVDC jako administrator domeny i wykonaj następuj�
     - **Migrowanie historii SID** Kliknij przycisk **dalej** , a następnie **Zakończ**.
 
 11. Ponownie kliknij prawym przyciskiem myszy domenę **priv.contoso.local** i wybierz polecenie **Deleguj kontrolę**.  
-12. Na karcie Wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
-13. W oknie Wybieranie: Użytkownicy, komputery lub grupy wpisz *MIMAdmin* i kliknij pozycję **Sprawdź nazwy**. Gdy nazwy zostaną podkreślone, kliknij kolejno przyciski **OK** i **Dalej**.  
+12. Na karcie wybrani użytkownicy i grupy kliknij przycisk **Dodaj**.  
+13. W oknie Wybieranie: Użytkownicy, komputery lub grupy wpisz *MIMAdmin* i kliknij pozycję **Sprawdź nazwy**. Gdy nazwy są podkreślone, kliknij przycisk **OK**, a następnie **dalej**.  
 14. Wybierz **zadanie niestandardowe**, zastosuj je do **tego folderu** i kliknij pozycję **tylko obiekty użytkownika**.    
 15. Na liście uprawnień wybierz pozycje **Zmienianie hasła** i **Resetowanie hasła**. Kliknij przycisk **Dalej**, a następnie kliknij przycisk **Zakończ**.  
 16. Zamknij stronę Użytkownicy i komputery usługi Active Directory.
@@ -289,7 +289,7 @@ Jeśli nie masz jeszcze stacji roboczej służącej do wykonywania konserwacji z
 
 ### <a name="install-windows-81-or-windows-10-enterprise"></a>Instalowanie systemu Windows 8.1 lub Windows 10 Enterprise
 
-Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *„PRIVWKSTN”* .
+Na innej nowej maszynie wirtualnej bez zainstalowanego oprogramowania zainstaluj system Windows 8.1 Enterprise lub Windows 10 Enterprise, aby utworzyć komputer o nazwie *„PRIVWKSTN”*.
 
 1. Użyj ustawień ekspresowych podczas instalacji.
 
@@ -304,5 +304,5 @@ Więcej szczegółów zawiera temat [securing privileged access workstations](ht
 W następnym kroku zostanie przygotowany serwer usługi PAM.
 
 > [!div class="step-by-step"]
-> [« Krok 1](step-1-prepare-corp-domain.md)
-> [Krok 3 »](step-3-prepare-pam-server.md)
+> [«Krok 1](step-1-prepare-corp-domain.md)
+> [krok 3»](step-3-prepare-pam-server.md)

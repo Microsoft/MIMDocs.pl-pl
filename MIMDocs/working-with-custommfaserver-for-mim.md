@@ -10,10 +10,10 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044365"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Używanie niestandardowego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli PAM lub w SSPR
@@ -45,13 +45,13 @@ Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://www.microsoft.co
 
 Biblioteka DLL musi zawierać klasę, która implementuje trzy metody:
 
-- `InitiateCall`: usługa MIM wywoła tę metodę. Usługa przekazuje numer telefonu i identyfikator żądania jako parametry.  Metoda musi zwracać `PhoneCallStatus` wartość `Pending`, `Success` lub `Failed`.
-- `GetCallStatus`: Jeśli starsze wywołanie `initiateCall` zwróciło `Pending`, usługa MIM wywoła tę metodę. Ta metoda zwraca również wartość `PhoneCallStatus` `Pending`, `Success` lub `Failed`.
-- `GetFailureMessage`: Jeśli poprzednie wywołanie `InitiateCall` lub `GetCallStatus` zwróciło `Failed`, usługa MIM wywoła tę metodę. Ta metoda zwraca komunikat diagnostyczny.
+- `InitiateCall`: Usługa MIM wywoła tę metodę. Usługa przekazuje numer telefonu i identyfikator żądania jako parametry.  `PhoneCallStatus` Metoda musi zwracać `Pending`wartość `Success` lub. `Failed`
+- `GetCallStatus`: W przypadku `initiateCall` zwrócenia `Pending`WCZEŚNIEJSZEgo wywołania usługa MIM wywoła tę metodę. `PhoneCallStatus` Ta metoda zwraca również `Pending`wartość `Success` lub. `Failed`
+- `GetFailureMessage`: W przypadku wcześniejszego wywołania `InitiateCall` lub `GetCallStatus` zwrócenia `Failed`usługa MIM wywoła tę metodę. Ta metoda zwraca komunikat diagnostyczny.
 
-Implementacje tych metod muszą być bezpieczne wątkowo, a ponadto implementacja `GetCallStatus` i `GetFailureMessage` nie może przyjąć, że zostaną wywołane przez ten sam wątek, który jest wcześniejszym wywołaniem do `InitiateCall`.
+Implementacje tych metod muszą być bezpieczne wątkowo, a ponadto implementacja `GetCallStatus` i `GetFailureMessage` nie może przyjąć, że będą wywoływane przez ten sam wątek, który jest wcześniejszym wywołaniem do. `InitiateCall`
 
-Zapisz bibliotekę DLL w katalogu `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\`.
+Zapisz bibliotekę DLL w `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` katalogu.
 
 Przykładowy kod, który można skompilować przy użyciu programu Visual Studio 2010 lub nowszego.
 
@@ -156,6 +156,6 @@ Po ponownym uruchomieniu usługi należy użyć SSPR i/lub PAM do zweryfikowania
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wprowadzenie do usługi Azure Serwer Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Wprowadzenie do serwera Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Co to jest platforma Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Historia wersji programu MIM](./reference/version-history.md)

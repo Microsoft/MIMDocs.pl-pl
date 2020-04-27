@@ -12,10 +12,10 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042104"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Tworzenie certyfikatów oprogramowania przy użyciu Menedżera certyfikatów
@@ -25,7 +25,7 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
 1.  Utwórz szablon dla certyfikatu, którego będziesz żądać dla wirtualnej karty inteligentnej. Otwórz program MMC.
 
-2.  Kliknij menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**.
+2.  Kliknij pozycję **plik**, a następnie kliknij pozycję **Dodaj/Usuń przystawkę**.
 
 3.  Na liście dostępnych przystawek kliknij pozycję **Szablony certyfikatów**, a następnie kliknij przycisk **Dodaj**.
 
@@ -63,9 +63,9 @@ Uprawnienia administratora i wirtualna karta inteligentna nie są niezbędne do 
 
     6.  Kliknij przycisk **OK**, aby zakończyć wprowadzanie zmian i utworzyć nowy szablon. Twój nowy szablon powinien zostać wyświetlony na liście Szablony certyfikatów.
 
-    7.  Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o określenie komputera, którym chcesz zarządzać, wybierz pozycję **Komputer lokalny**.
+    7.  Wybierz menu **Plik**, a następnie kliknij polecenie **Dodaj/Usuń przystawkę**, aby dodać przystawkę Urząd certyfikacji do konsoli programu MMC. Po wyświetleniu monitu o komputer, którym chcesz zarządzać, wybierz pozycję **komputer lokalny**.
 
-    8.  W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)** , a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
+    8.  W lewym okienku programu MMC rozwiń węzeł **Urząd certyfikacji (lokalny)**, a następnie rozwiń węzeł urzędu certyfikacji (CA) na liście Urząd certyfikacji.
 
     9. Kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, kliknij polecenie **Nowy**, a następnie kliknij pozycję **Szablon certyfikatu do wystawienia**.
 

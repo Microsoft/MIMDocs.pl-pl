@@ -12,16 +12,16 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 4e24ac1b3f3f3d46aa5f67175dc4c4b8778bdb21
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043855"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Krok 1 — Konfigurowanie domeny PRIV
 
 > [!div class="step-by-step"]
-> [Krok 2 »](sp1-step2-configuring-corp-domain.md)
+> [Krok 2»](sp1-step2-configuring-corp-domain.md)
 
 1. Zaloguj się do kontrolera domeny PRIVDC jako administrator.
    * W przypadku środowiska PRIVOnly należy zalogować się do kontrolera domeny CORPDC.
@@ -42,4 +42,4 @@ Skopiuj plik SIDs.txt, który został wygenerowany w folderze $env:SYSTEMDRIVE\P
 Po zakończeniu działania skryptu zostanie wyświetlony monit o ponowne uruchomienie maszyny, dzięki czemu zmiany zaczną obowiązywać.
 
 > [!div class="step-by-step"]
-> [Krok 2 »](sp1-step2-configuring-corp-domain.md)
+> [Krok 2»](sp1-step2-configuring-corp-domain.md)

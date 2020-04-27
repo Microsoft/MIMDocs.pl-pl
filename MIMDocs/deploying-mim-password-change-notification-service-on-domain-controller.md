@@ -12,10 +12,10 @@ ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f195a6db259bf0fefabcd05c8890ca65c9624314
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79041968"
 ---
 # <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Wdrażanie usługi powiadamiania o zmianie hasła w programie MIM na kontrolerze domeny
@@ -23,7 +23,7 @@ ms.locfileid: "79041968"
 ## <a name="install-the-password-change-notification-service"></a>Instalowanie usługi powiadamiania o zmianie hasła
 Usługa powiadamiania o zmianie hasła (PCNS), instalowana na kontrolerach domeny, umożliwia synchronizowanie haseł przez program MIM z innymi systemami, takimi jak serwer katalogowy innego dostawcy. Aby synchronizować hasła, należy zainstalować usługę PCNS na każdym serwerze kontrolera domeny.
 
-1.  Zaloguj się jako administrator domeny na serwerze z systemem Windows Server i z rolą Usługi domenowe Active Directory.
+1.  Zaloguj się jako administrator domeny na serwerze z systemem Windows Server i z rolą Active Directory Domain Services.
 
 2.  Skopiuj folder instalacyjny usługi powiadamiania o zmianie hasła na komputer.
 

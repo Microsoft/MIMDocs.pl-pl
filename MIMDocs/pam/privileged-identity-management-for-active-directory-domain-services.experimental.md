@@ -1,5 +1,5 @@
 ---
-title: Co to jest usługa PAM dla usług ADDS? | Dokumentacja firmy Microsoft
+title: Co to jest usługa PAM dla usług ADDS? | Microsoft Docs
 description: Usługa Privileged Access Management (PAM) ułatwia organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
 keywords: ''
 author: billmath
@@ -13,13 +13,13 @@ ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
 ms.openlocfilehash: acec45a2843febd3821d9045336098cdeb4ddcf7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043940"
 ---
-# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług Active Directory Domain Services
+# <a name="privileged-access-management-for-active-directory-domain-services"></a>Usługa Privileged Access Management dla usług domenowych Active Directory
 
 Usługa Privileged Access Management (PAM) ułatwia organizacjom ograniczenie dostępu uprzywilejowanego w istniejącym środowisku usługi Active Directory.
 

@@ -8,10 +8,10 @@ ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044212"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Konwertowanie usług specyficznych dla Microsoft Identity Manager na korzystanie z kont usług zarządzanych przez grupę
@@ -48,7 +48,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
     - Klucze główne są używane przez usługę dystrybucji kluczy (KDS) do generowania haseł i innych informacji na kontrolerach domeny.
     - Utwórz klucz główny tylko raz dla każdej domeny, jeśli jest to konieczne.  
     - Uwzględnij `Add-KDSRootKey –EffectiveImmediately`. "– EffectiveImmediately" oznacza, że replikacja klucza głównego do wszystkich kontrolerów domeny może potrwać do 10 godzin. Replikacja do dwóch kontrolerów domeny może potrwać około 1 godzinę. 
-    ![ciąg "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
+    ![Ciąg "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Akcje do uruchomienia na kontrolerze domena usługi Active Directory
 
@@ -74,7 +74,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 1. W Synchronization Service Manager wykonaj kopię zapasową klucza szyfrowania. Zostanie ona zażądana z instalacją trybu zmiany. Wykonaj następujące czynności:
 
-    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji.  **zestawu kluczy eksportu** jest już zaznaczony domyślnie.
+    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji.   **Zestaw kluczy eksportu**jest już zaznaczony domyślnie.
 
     b. Wybierz pozycję **Dalej**. 
     
@@ -96,17 +96,17 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 1. Po zainstalowaniu poprawki Zatrzymaj usługę synchronizacji programu FIM, wykonując następujące czynności:
 
-   a. W panelu sterowania wybierz **programy i funkcje** > **Microsoft Identity Manager**.  
+   a. W panelu sterowania wybierz pozycję **programy i funkcje** > **Microsoft Identity Manager**.  
    b. Na stronie **usługa synchronizacji** wybierz pozycję **Zmień** > **dalej**.  
    c. W oknie **Opcje konserwacji** wybierz pozycję **Konfiguruj**.
 
    ![Okno Opcje konserwacji](media/dc98c011bec13a33b229a0e792b78404.png)
 
-   d. W oknie **Konfigurowanie usługi synchronizacji Microsoft Identity Manager** Wyczyść wartość domyślną w polu **konto usługi** , a następnie wprowadź **MIMSyncGMSA $** . Pamiętaj, aby dołączyć symbol znaku dolara ($), jak pokazano na poniższej ilustracji. Pozostaw puste pole **hasła** .
+   d. W oknie **Konfigurowanie usługi synchronizacji Microsoft Identity Manager** Wyczyść wartość domyślną w polu **konto usługi** , a następnie wprowadź **MIMSyncGMSA $**. Pamiętaj, aby dołączyć symbol znaku dolara ($), jak pokazano na poniższej ilustracji. Pozostaw puste pole **hasła** .
 
    ![Okno Konfigurowanie usługi synchronizacji Microsoft Identity Manager](media/38df9369bf13e1c3066a49ed20e09041.png)
 
-   e. Wybierz pozycję **dalej** > **dalej** > **Zainstaluj**.  
+   e. Wybierz kolejno pozycje **dalej** > **dalej** > **Zainstaluj**.  
    f. Przywróć zestaw kluczy z pliku *miiskeys. bin* , który został zapisany wcześniej.
 
    ![Opcja przywracania konfiguracji zestawu kluczy](media/44cd474323584feb6d8b48b80cfceb9b.png)

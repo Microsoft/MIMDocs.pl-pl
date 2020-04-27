@@ -13,17 +13,17 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043685"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
 > [!div class="step-by-step"]
-> [« Krok 3](step-3-prepare-pam-server.md)
-> [Krok 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Krok 3](step-3-prepare-pam-server.md)
+> [krok 5»](step-5-establish-trust-between-priv-corp-forests.md)
 
 Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainstalować portal i usługę programu MIM oraz przykładową aplikację internetową portalu.
 
@@ -53,7 +53,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
    - Nazwa konta usługi: *MIMService*  
    - Hasło konta usługi: <em>Pass@word1</em> (lub hasło utworzone w kroku 2)  
    - Domena konta usługi: *PRIV*  
-   - Konto e-mail usługi: <em>MIMService@priv.contoso.local</em>  
+   - Konto E-mail usługi:<em>MIMService@priv.contoso.local</em>  
 
 6. Zaakceptuj ustawienia domyślne dla nazwy hosta serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *PRIV\MIMMA*. Zostanie wyświetlony komunikat ostrzegawczy z informacją, że usługa synchronizacji programu MIM nie istnieje. Nie stanowi to problemu, ponieważ nie jest ona używana w tym scenariuszu.
 
@@ -76,7 +76,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
     ![Zrzut ekranu przedstawiający poświadczenia konta puli aplikacji](./media/PAM_GS_Configure_Component_Service.png)
 
-    Może zostać wyświetlone ostrzeżenie informujące o tym, że konto usługi nie jest zabezpieczone w bieżącej konfiguracji. To normalne.
+    Może zostać wyświetlone ostrzeżenie informujące o tym, że konto usługi nie jest zabezpieczone w bieżącej konfiguracji. Nie przejmuj się tym.
 
 13. Skonfiguruj usługę składnika usługi PAM programu MIM:
     - Nazwa konta usługi: *MIMComponent*
@@ -100,15 +100,15 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
-2. Uruchom program Internet Explorer i Połącz się z portalem programu MIM na http://pamsrv.priv.contoso.local:82/identitymanagement. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
+2. Uruchom program Internet Explorer i Połącz się z portalem http://pamsrv.priv.contoso.local:82/identitymanagementprogramu MIM w systemie. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
 
 3. W razie potrzeby zaloguj się w programie Internet Explorer jako PRIV\Administrator.
 
-4. W programie Internet Explorer otwórz okno **Opcje internetowe**, wyświetl kartę **Zabezpieczenia** i dodaj witrynę do strefy **Lokalny intranet**, jeśli nie została jeszcze tam dodana. Zamknij okno dialogowe Opcje internetowe.
+4. W programie Internet Explorer Otwórz **Opcje internetowe**, przejdź do karty **zabezpieczenia** i Dodaj witrynę do **strefy Lokalny intranet** , jeśli jeszcze jej nie ma. Zamknij okno dialogowe Opcje internetowe.
 
 5. Korzystając z programu Internet Explorer, w portalu programu MIM kliknij pozycję **Reguły zasad zarządzania**.
 
-6. Wyszukaj regułę zasad zarządzania **Zarządzanie użytkownikami: użytkownicy mogą odczytywać atrybuty we własnym zakresie**.
+6. Wyszukaj zasadę zasad zarządzania **Zarządzanie użytkownikami: użytkownicy mogą odczytywać atrybuty własnych**.
 
 7. Wybierz tę regułę zasad zarządzania, anulując zaznaczenie pola **Zasady są wyłączone**, kliknij przycisk **OK**, a następnie kliknij przycisk **Prześlij**.
 
@@ -121,7 +121,7 @@ Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726
 3.  Sprawdź, czy są wyświetlane te dwie reguły:  
     - Usługa Forefront Identity Manager (STS)
     - Forefront Identity Manager (usługa sieci Web)  
-4.  Kliknij kolejno pozycje **Nowa reguła** > **Port** > **TCP** i wpisz numery portów lokalnych *8086* i *8090*. W kreatorze zaakceptuj ustawienia domyślne, nadaj regule nazwę, a następnie kliknij przycisk **Zakończ**.  
+4.  Kliknij pozycję **Nowa reguła** > **port** > **TCP**, a następnie wpisz określone porty lokalne *8086* i *8090*. W kreatorze zaakceptuj ustawienia domyślne, nadaj regule nazwę, a następnie kliknij przycisk **Zakończ**.  
 5.  Ukończ działanie kreatora i zamknij aplikację Zapora systemu Windows.
 
 6.  Otwórz **Panel sterowania**.  
@@ -143,7 +143,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Skonfiguruj przykładową aplikację internetową pod kątem przekierowywania użytkowników do interfejsu API REST usługi PAM programu MIM. Za pomocą edytora tekstów, takiego jak Notatnik, edytuj plik **C:\Program Files\Microsoft Forefront Identity Manager\2010\privileged Access Access Management REST API\web.config**. W sekcji **< System. WebServer >** Dodaj następujące wiersze:
+4. Skonfiguruj przykładową aplikację internetową pod kątem przekierowywania użytkowników do interfejsu API REST usługi PAM programu MIM. Za pomocą edytora tekstów, takiego jak Notatnik, edytuj plik **C:\Program Files\Microsoft Forefront Identity Manager\2010\privileged Access Access Management REST API\web.config**. W sekcji **<system. WebServer>** Dodaj następujące wiersze:
 
    ```XML
    <httpProtocol>
@@ -155,7 +155,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    </httpProtocol>
    ```
 
-5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** na *http://pamsrv.priv.contoso.local:8086/api/pamresources/* .
+5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** na *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
 6. Uruchom ponownie usługę IIS przy użyciu następującego polecenia, aby te zmiany zaczęły obowiązywać.
 
@@ -163,7 +163,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    iisreset
    ```
 
-7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci Web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, Uwierzytelnij w razie potrzeby i upewnij się, że występuje pobieranie.
+7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/witryny sieci Web, Uwierzytelnij się w razie potrzeby i upewnij się, że występuje pobieranie.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
 
@@ -186,5 +186,5 @@ Po zakończeniu instalacji uruchom ponownie komputer CORPWKSTN, aby ukończyć r
 W następnym kroku zostanie ustanowiona relacja zaufania między lasami PRIV i CORP.
 
 > [!div class="step-by-step"]
-> [« Krok 3](step-3-prepare-pam-server.md)
-> [Krok 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Krok 3](step-3-prepare-pam-server.md)
+> [krok 5»](step-5-establish-trust-between-priv-corp-forests.md)

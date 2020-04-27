@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79381509"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Współpraca między firmami (B2B) w usłudze Azure AD z Microsoft Identity Manager (MIM) 2016 z dodatkiem SP1 przy użyciu serwera proxy aplikacji platformy Azure
@@ -36,7 +36,7 @@ Kilka założeń w konfiguracji B2B przy użyciu programu MIM i usługi Azure se
 
 -   Opublikowano już co najmniej jedną aplikację, która polega na zintegrowanym uwierzytelnianiu systemu Windows lub poszczególnych kontach usługi AD za pośrednictwem aplikacja usługi Azure AD proxy
 
--   Zaprosiłeś lub zapraszasz co najmniej jednego gościa, co spowodowało utworzenie co najmniej jednego użytkownika w usłudze Azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
+-   Zaprosiłeś lub zapraszasz co najmniej jednego gościa, co spowodowało utworzenie co najmniej jednego użytkownika w usłudze Azure AD<https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
 
 
 
@@ -44,7 +44,7 @@ Kilka założeń w konfiguracji B2B przy użyciu programu MIM i usługi Azure se
 
 Ten przewodnik kompiluje się w następującym scenariuszu:
 
-Środki farmaceutyczne contoso współdziałają z Trey Research Inc. jako część ich działu R & D. Pracownicy naukowo-badawczy Trey muszą uzyskać dostęp do aplikacji do raportowania badań dostarczonych przez środki farmaceutyczne firmy Contoso.
+Środki farmaceutyczne contoso współdziałają z Trey Research Inc. jako część ich działu R&D. Pracownicy naukowo-badawczy Trey muszą uzyskać dostęp do aplikacji do raportowania badań dostarczonych przez środki farmaceutyczne firmy Contoso.
 
 -   Środki farmaceutyczne firmy Contoso znajdują się w własnej dzierżawie, aby można było skonfigurować domenę niestandardową.
 
@@ -68,7 +68,7 @@ Więcej informacji można znaleźć w temacie [Azure AD Connect Sync: Configure 
 
 
 Uwaga: przed utworzeniem w programie MIM zsynchronizuj agenta zarządzania dla łącznika grafu, upewnij się, że został on sprawdzony w celu wdrożenia [łącznika grafu](microsoft-identity-manager-2016-connector-graph.md)i utworzenia aplikacji z identyfikatorem klienta i wpisem tajnym.
-Upewnij się, że aplikacja została autoryzowana dla co najmniej jednego z następujących uprawnień: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` lub `Directory.ReadWrite.All`. 
+Upewnij się, że aplikacja została autoryzowana dla co najmniej jednego z następujących `User.Read.All`uprawnień `User.ReadWrite.All`: `Directory.Read.All` , `Directory.ReadWrite.All`, lub. 
 
 ## <a name="create-the-new-management-agent"></a>Utwórz nowego agenta zarządzania
 
@@ -124,19 +124,19 @@ Na ekranie Wybieranie atrybutów wybierz atrybuty z usługi Azure AD, które bę
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 
-#### <a name="configure-anchors"></a>Skonfiguruj kotwice
+#### <a name="configure-anchors"></a>Konfiguruj zakotwiczenia
 
 Na ekranie konfigurowania zakotwiczenia skonfigurowanie atrybutu zakotwiczenia jest wymaganym krokiem. Domyślnie Użyj atrybutu ID dla mapowania użytkownika.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
-#### <a name="configure-connector-filter"></a>Konfigurowanie filtru łącznika
+#### <a name="configure-connector-filter"></a>Konfiguruj filtr łącznika
 
-Na stronie Konfigurowanie filtru łącznika program MIM umożliwia odfiltrowanie obiektów na podstawie filtru atrybutów. W tym scenariuszu dla B2B celem jest dołączenie tylko do użytkowników z wartością atrybutu `userType`, który jest równy `Guest`, a nie dla użytkowników, które są równe `member`.
+Na stronie Konfigurowanie filtru łącznika program MIM umożliwia odfiltrowanie obiektów na podstawie filtru atrybutów. W tym scenariuszu dla modelu B2B celem jest tylko przyłączenie użytkowników do wartości `userType` atrybutu, która jest równa `Guest`, a nie dla użytkowników, którzy mają równą `member`wartość.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
-#### <a name="configure-join-and-projection-rules"></a>Skonfiguruj reguły przyłączania i projekcji
+#### <a name="configure-join-and-projection-rules"></a>Konfiguruj reguły dołączania i projekcji
 
 W tym przewodniku przyjęto założenie, że zostanie utworzona reguła synchronizacji.  Ponieważ reguły przyłączania i projekcji są obsługiwane przez regułę synchronizacji, nie jest to konieczne, aby identyfikować sprzężenie i projekcję na samym łączniku. Pozostaw wartość domyślną i kliknij przycisk OK.
 
@@ -195,7 +195,7 @@ w poniższych krokach rozpocznie się mapowanie konta gościa B2B i przepływu a
 
 W następnych krokach będzie wymagane dodanie minimalnej konfiguracji do usługi FIM i ma.
 
-Więcej szczegółów można znaleźć tutaj dla konfiguracji <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> — jak zapewnić użytkownikom możliwość AD DS
+Więcej szczegółów można znaleźć tutaj dla konfiguracji <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> — jak zapewnić użytkownikom AD DS
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Reguła synchronizacji: zaimportuj użytkownika-gościa do funkcji MV usługi synchronizacji z Azure Active Directory<br>
 
@@ -209,24 +209,24 @@ W kroku kryteria relacji wybierz opcję "Utwórz zasób w programie FIM".
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-Skonfiguruj następujące przychodzące reguły przepływu atrybutów.  Pamiętaj, aby wypełnić `accountName`, `userPrincipalName` i `uid` atrybutów, ponieważ zostaną one użyte w dalszej części tego scenariusza:
+Skonfiguruj następujące przychodzące reguły przepływu atrybutów.  Pamiętaj `accountName`, aby wypełnić atrybuty i `userPrincipalName` `uid` , ponieważ zostaną one użyte w dalszej części tego scenariusza:
 
 | **Tylko przepływ początkowy** | **Użyj jako testu istnienia** | **Flow (wartość źródłowa ⇒ atrybut FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
-|                       |                           | [Lewej (identyfikator, 20) ⇒accountName](javascript:void(0);)                        |
-|                       |                           | [id⇒uid](javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-|                       |                           | [id⇒cn](javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
+|                       |                           | [displayName ⇒ displayName] (JavaScript: void (0);)                        |
+|                       |                           | [Left (ID, 20) ⇒ AccountName] (JavaScript: void (0);)                        |
+|                       |                           | [ID ⇒ UID] (JavaScript: void (0);)                                         |
+|                       |                           | [UserType ⇒ EmployeeType] (JavaScript: void (0);)                          |
+|                       |                           | [podaną ⇒Name] (JavaScript: void (0);)                            |
+|                       |                           | [nazwisko ⇒ SN] (JavaScript: void (0);)                                     |
+|                       |                           | [userPrincipalName ⇒ userPrincipalName] (JavaScript: void (0);)            |
+|                       |                           | [ID ⇒ CN] (JavaScript: void (0);)                                          |
+|                       |                           | [poczta ⇒ poczty] (JavaScript: void (0);)                                      |
+|                       |                           | [mobilePhone⇒mobilePhone] (JavaScript: void (0);)                        |
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Reguła synchronizacji: Utwórz konto użytkownika-gościa do Active Directory 
 
-Ta reguła synchronizacji służy do tworzenia użytkownika w Active Directory.  Upewnij się, że przepływ dla `dn` musi umieścić użytkownika w jednostce organizacyjnej, która została wykluczona z Azure AD Connect.  Ponadto zaktualizuj przepływ pod kątem `unicodePwd` w celu spełnienia zasad haseł usługi AD — użytkownik nie musi znać hasła.  Zwróć uwagę na wartość `262656` dla `userAccountControl` koduje flagi `SMARTCARD_REQUIRED` i `NORMAL_ACCOUNT`.
+Ta reguła synchronizacji służy do tworzenia użytkownika w Active Directory.  Upewnij się, że przepływ `dn` musi umieścić użytkownika w jednostce organizacyjnej, która została wykluczona z Azure AD Connect.  Ponadto zaktualizuj przepływ dla `unicodePwd` programu w celu spełnienia zasad haseł usługi AD — użytkownik nie musi znać hasła.  Zwróć uwagę na to `262656` , `userAccountControl` że wartość dla kodowania `SMARTCARD_REQUIRED` Flags i `NORMAL_ACCOUNT`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -238,20 +238,20 @@ Reguły przepływu:
 
 | **Tylko przepływ początkowy** | **Użyj jako testu istnienia** | **Flow (atrybut docelowy ⇒ wartości programu FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [sn⇒sn](javascript:void(0);)                                          |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **T**                 |                           | ["CN ="+ uid +", OU = B2BGuest, DC = contoso, DC = com" ⇒dn](javascript:void(0);) |
-| **T**                 |                           | [RandomNum (0,999) + userPrincipalName⇒unicodePwd](javascript:void(0);)  |
-| **T**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
+|                       |                           | [AccountName ⇒ sAMAccountName] (JavaScript: void (0);)                     |
+|                       |                           | [podaną ⇒Name] (JavaScript: void (0);)                            |
+|                       |                           | [poczta ⇒ poczty] (JavaScript: void (0);)                                      |
+|                       |                           | [SN ⇒ SN] (JavaScript: void (0);)                                          |
+|                       |                           | [userPrincipalName ⇒ userPrincipalName] (JavaScript: void (0);)            |
+| **Tak**                 |                           | ["CN =" + UID + ", OU = B2BGuest, DC = contoso, DC = com" ⇒ DN] (JavaScript: void (0);) |
+| **Tak**                 |                           | [RandomNum (0999) + userPrincipalName ⇒ unicodePwd] (JavaScript: void (0);)  |
+| **Tak**                 |                           | [262656 ⇒ kontroli konta użytkownika] (JavaScript: void (0);)                      |
 
 ### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Opcjonalna reguła synchronizacji: Importowanie identyfikatora SID obiektów użytkownika gościa B2B w celu zezwolenia na logowanie do programu MIM 
 
-Ta reguła synchronizacji ruchu przychodzącego umożliwia uzyskanie atrybutu SID użytkownika z Active Directory z powrotem do programu MIM, dzięki czemu użytkownik może uzyskać dostęp do portalu MIM.  Portal programu MIM wymaga, aby użytkownik miał atrybuty `samAccountName`, `domain` i `objectSid` wypełnione w bazie danych usługi MIM.
+Ta reguła synchronizacji ruchu przychodzącego umożliwia uzyskanie atrybutu SID użytkownika z Active Directory z powrotem do programu MIM, dzięki czemu użytkownik może uzyskać dostęp do portalu MIM.  Portal programu MIM wymaga, aby użytkownik miał atrybuty `samAccountName` `domain` i `objectSid` wypełnił w bazie danych usługi MIM.
 
-Skonfiguruj źródłowy system zewnętrzny jako `ADMA`, ponieważ atrybut `objectSid` zostanie automatycznie ustawiony przez usługi AD podczas tworzenia użytkownika przez program MIM.
+Skonfiguruj źródłowy system zewnętrzny jako `ADMA`, ponieważ `objectSid` atrybut zostanie automatycznie ustawiony przez usługi AD podczas tworzenia użytkownika przez program MIM.
  
 Należy pamiętać, że w przypadku skonfigurowania użytkowników do utworzenia w usłudze MIM upewnij się, że nie są one w zakresie żadnych zestawów przeznaczonych dla reguł zasad zarządzania SSPRą pracowników.  Może zajść potrzeba zmiany definicji zestawu, aby wykluczyć użytkowników, którzy zostali utworzeni przez przepływ B2B. 
 
@@ -267,24 +267,24 @@ Należy pamiętać, że w przypadku skonfigurowania użytkowników do utworzenia
 
 | **Tylko przepływ początkowy** | **Użyj jako testu istnienia** | **Flow (wartość źródłowa ⇒ atrybut FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
-|                       |                           | ["CONTOSO" ⇒domain](javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
+|                       |                           | [sAMAccountName ⇒ AccountName] (JavaScript: void (0);)                     |
+|                       |                           | ["CONTOSO" ⇒ domena] (JavaScript: void (0);)                            |
+|                       |                           | [objectSid ⇒ objectSid] (JavaScript: void (0);)                                      |
 
 
 ## <a name="run-the-synchronization-rules"></a>Uruchamianie reguł synchronizacji
 
 Następnie Zapraszamy użytkownika, a następnie uruchamiasz reguły synchronizacji agenta zarządzania w następującej kolejności:
 
--   Pełny import i synchronizacja na `MIMMA` agenta zarządzania.  Dzięki temu synchronizacja programu MIM ma skonfigurowane najnowsze reguły synchronizacji.
+-   Pełny import i synchronizacja agenta `MIMMA` zarządzania.  Dzięki temu synchronizacja programu MIM ma skonfigurowane najnowsze reguły synchronizacji.
 
--   Pełny import i synchronizacja na `ADMA` agenta zarządzania.  Zapewnia to spójność programu MIM i Active Directory.  W tym momencie nie będą jeszcze oczekujące eksporty dla Gości.
+-   Pełny import i synchronizacja agenta `ADMA` zarządzania.  Zapewnia to spójność programu MIM i Active Directory.  W tym momencie nie będą jeszcze oczekujące eksporty dla Gości.
 
--   Pełny import i synchronizacja na agencie zarządzania grafem B2B.  Spowoduje to napełnienie użytkownikom-Gościom funkcji Metaverse.  W tym momencie co najmniej jedno konto będzie oczekuje na eksport dla `ADMA`.  Jeśli nie ma oczekujących eksportów, sprawdź, czy użytkownicy-Goście zostali zaimportowani do obszaru łącznika i czy reguły zostały skonfigurowane pod kątem kont usługi AD.
+-   Pełny import i synchronizacja na agencie zarządzania grafem B2B.  Spowoduje to napełnienie użytkownikom-Gościom funkcji Metaverse.  W tym momencie co najmniej jedno konto będzie oczekujące na `ADMA`eksport.  Jeśli nie ma oczekujących eksportów, sprawdź, czy użytkownicy-Goście zostali zaimportowani do obszaru łącznika i czy reguły zostały skonfigurowane pod kątem kont usługi AD.
 
--   Eksportowanie, importowanie różnicowe i synchronizacja na `ADMA` agenta zarządzania.  Jeśli eksporty nie powiodły się, sprawdź konfigurację reguły i ustal, czy istnieją jakieś wymagania schematu. 
+-   Eksportowanie, importowanie różnicowe i synchronizacja w agencie `ADMA` zarządzania.  Jeśli eksporty nie powiodły się, sprawdź konfigurację reguły i ustal, czy istnieją jakieś wymagania schematu. 
 
--   Eksportowanie, importowanie różnicowe i synchronizacja na `MIMMA` agenta zarządzania.  Po zakończeniu tego procesu nie powinno już istnieć żadne oczekujące eksporty.
+-   Eksportowanie, importowanie różnicowe i synchronizacja w agencie `MIMMA` zarządzania.  Po zakończeniu tego procesu nie powinno już istnieć żadne oczekujące eksporty.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
@@ -314,6 +314,6 @@ Po skonfigurowaniu programu należy zalogować użytkownika B2B i zobaczyć apli
 
 [Dokumentacja funkcji programu FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Jak zapewnić bezpieczny dostęp zdalny do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[Jak zapewnić bezpieczny, zdalny dostęp do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Pobierz Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)

@@ -12,17 +12,17 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: cfb49dd3a15fd115021ab58605d5aeee4d73a5c7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043719"
 ---
 # <a name="step-7-set-up-sid-historysid-filtering"></a>Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
 
 > [!div class="step-by-step"]
-> [« Krok 6](sp1-step6-setup-pam-trust.md)
-> [Krok 8 »](sp1-step8-pam-deployment-verification.md)
+> [«Krok 6](sp1-step6-setup-pam-trust.md)
+> [krok 8»](sp1-step8-pam-deployment-verification.md)
 
 **Ten krok nie jest wymagany dla środowiska PRIVOnly**. Zaloguj się na serwerze PAMServer przy użyciu konta MIMAdmin.
 
@@ -39,5 +39,5 @@ Historia SID: </br></br>
 „Włączanie historii SID dla tego zaufania” lub „Historia identyfikatorów SID jest już włączona dla tego zaufania”.
 
 > [!div class="step-by-step"]
-> [« Krok 6](sp1-step6-setup-pam-trust.md)
-> [Krok 8 »](sp1-step8-pam-deployment-verification.md)
+> [«Krok 6](sp1-step6-setup-pam-trust.md)
+> [krok 8»](sp1-step8-pam-deployment-verification.md)

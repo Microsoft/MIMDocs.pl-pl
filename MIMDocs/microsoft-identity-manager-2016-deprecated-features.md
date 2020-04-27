@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 009d0e99e2da445d4df35dc9de81b297a65fe2a3
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044229"
 ---
 # <a name="deprecated-features"></a>Przestarzałe funkcje
@@ -33,7 +33,7 @@ Firma Microsoft nie zaleca klientom uruchamiania nowych wdrożeń składników M
 
 | **Kategoria**                | **Przestarzała funkcja**              | **Zastąpienie i komentarz**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
-| Agenci zarządzania | \* * Zarządzanie certyfikatami usługi FIM | Agent zarządzania certyfikatami usługi FIM został usunięty w programie MIM 2016.                                                             |
+| Agenci zarządzania | * * Zarządzanie certyfikatami usługi FIM | Agent zarządzania certyfikatami usługi FIM został usunięty w programie MIM 2016.                                                             |
 
 ## <a name="service-and-portal"></a>Usługa i portal
 
@@ -65,11 +65,11 @@ Firma Microsoft nie zaleca klientom uruchamiania nowych wdrożeń składników M
 | Przepływy atrybutów      | "Nie odwołują atrybutów"                            | Ta funkcja nie zostanie zastąpiona. Atrybuty zawsze będą odwoływane, co jest najlepszym rozwiązaniem.  |
 | Rozszerzenie reguł      | Uruchamianie funkcji Metaverse i ma rozszerzenie reguł | Ta funkcja nie zostanie zastąpiona. Reguły Metaverse i przepływu atrybutów będą uruchamiane w tym samym procesie co aparat synchronizacji.       |
 | Rozszerzenie reguł      | Właściwości transakcji                                | Ta funkcja nie zostanie zastąpiona. Należy unikać przekazywania danych między przychodzącymi, aprowizacji i synchronizacją wychodzącą przy użyciu tej klasy narzędzi.  |
-| Rozszerzenie reguł      | ExchangeUtils: Create55, metody\*                     | Metody tworzenia obiektów dla serwerów z programem Exchange 5,5 zostaną usunięte.        |
-| Interfejs            | Mms_Metaverse                                        | Wszyscy członkowie klasy ClmUtils zostaną usunięci w następnej wersji.   |
+| Rozszerzenie reguł      | ExchangeUtils: Create55\* metody                     | Metody tworzenia obiektów dla serwerów z programem Exchange 5,5 zostaną usunięte.        |
+| Interface            | Mms_Metaverse                                        | Wszyscy członkowie klasy ClmUtils zostaną usunięci w następnej wersji.   |
 
 ## <a name="next-steps"></a>Następne kroki
-Dowiedz się więcej na następujące tematy:
+Dowiedz się więcej o usługach:
 
 - Program Microsoft Identity Manager jest nadal ściśle związany ze swoim poprzednikiem, programem Forefront Identity Manager. Jeśli nadal korzystasz z programu FIM lub chcesz zapoznać się z dodatkową dokumentacją, zobacz [plan dokumentacji programu FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
 - [Zagadnienia dotyczące topologii dotyczące wdrażania programu MIM](topology-considerations.md) W tym artykule wprowadzono wiele topologii wdrożenia, które można rozważyć w celu zaimplementowania.

@@ -12,15 +12,15 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043974"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu
 
-W tym artykule omówiono zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w przypadku wdrażania usług Active Directory Domain Services (AD DS) i programu Microsoft Identity Manager 2016 (MIM) na potrzeby funkcji zarządzania dostępem uprzywilejowanym (Privileged Access Management, PAM).
+W tym artykule omówiono zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w przypadku wdrażania Usług domenowych Active Directory (AD DS) i programu Microsoft Identity Manager 2016 (MIM) na potrzeby funkcji zarządzania dostępem uprzywilejowanym (Privileged Access Management, PAM).
 
 Przedsiębiorstwa skupiają się na wysokiej dostępności i odzyskiwaniu po awarii w przypadku obciążeń w systemie Windows Server, programie SQL Server i usłudze Active Directory. Ważna jest jednak również dostępność środowiska bastionu funkcji PAM. Środowisko bastionu to kluczowy element infrastruktury informatycznej przedsiębiorstwa, ponieważ użytkownicy wchodzą w interakcje z jego składnikami w celu przyjmowania ról administracyjnych. Aby uzyskać więcej ogólnych informacji na temat wysokiej dostępności, możesz pobrać oficjalny dokument [Microsoft High Availability Overview](https://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc).
 
@@ -36,12 +36,12 @@ Zakres uwzględnionych funkcji ma wpływ na całkowity koszt wdrożenia i obsłu
 
 | **Funkcja lasu bastionu** | **Względny priorytet podczas odzyskiwania** | **Środki zaradcze w przypadku niedostępności funkcji** |
 | --------------------------- | --------------------- | -------------- |
-| Tworzenie relacji zaufania         | Niski | Zaczekać na przywrócenie środowiska bastionu |
-| Migracja użytkowników i grup   | Niski | Zaczekać na przywrócenie środowiska bastionu |
-| Administracja programu MIM          | Niski | Zaczekać na przywrócenie środowiska bastionu |
-| Aktywacja ról uprzywilejowanych  | Średni | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
-| Zarządzanie zasobami         | Wysoki | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
-| Monitorowanie użytkowników i grup w istniejącym lesie | Niski | Zaczekać na przywrócenie środowiska bastionu |
+| Tworzenie relacji zaufania         | Małe | Zaczekać na przywrócenie środowiska bastionu |
+| Migracja użytkowników i grup   | Małe | Zaczekać na przywrócenie środowiska bastionu |
+| Administracja programu MIM          | Małe | Zaczekać na przywrócenie środowiska bastionu |
+| Aktywacja ról uprzywilejowanych  | Medium | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
+| Zarządzanie zasobami         | Wysoka | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
+| Monitorowanie użytkowników i grup w istniejącym lesie | Małe | Zaczekać na przywrócenie środowiska bastionu |
 
 Teraz omówimy kolejno poszczególne funkcje lasu bastionu.
 
@@ -81,15 +81,15 @@ Program MIM zawiera również usługę monitorowania PAM, regularnie sprawdzają
 
 Na potrzeby monitorowania kontrolery domen w istniejącym lesie oraz składniki MIM i AD w środowisku bastionu muszą być w trybie online.  
 
-## <a name="deployment-options"></a>Opcje wdrażania
+## <a name="deployment-options"></a>Opcje wdrożenia
 
 Sekcja [Omówienie środowiska](environment-overview.md) przedstawia podstawową topologię umożliwiającą zapoznanie się z technologią — nie jest ona przeznaczona do zapewniania wysokiej dostępności. W tej sekcji opisano sposób rozszerzenia tej topologii w celu zapewnienia wysokiej dostępności, zarówno w przypadku organizacji mających jedną lokację, jak i tych mających większą liczbę istniejących lokacji.
 
-### <a name="networking"></a>Obsługa sieci
+### <a name="networking"></a>Networking
 
 Ruch sieciowy pomiędzy komputerami w środowisku bastionu powinien być oddzielony od istniejących sieci, na przykład poprzez użycie innej sieci fizycznej lub wirtualnej.  W zależności od występujących zagrożeń dla środowiska bastionu może być konieczne także zastosowanie niezależnych fizycznych połączeń pomiędzy tymi komputerami.  Niektóre technologie klastra trybu failover są związane z dodatkowymi wymaganiami dotyczącymi interfejsów sieciowych.
 
-Komputery hostujące Usługi domenowe Active Directory i komputery hostujące usługi MIM w środowisku bastionu wymagają dwukierunkowej łączności z zasobami w istniejącym lesie na potrzeby następujących operacji:
+Komputery hostujące usługi Active Directory Domain Services i komputery hostujące usługi MIM w środowisku bastionu wymagają dwukierunkowej łączności z zasobami w istniejącym lesie na potrzeby następujących operacji:
 
 - uwierzytelnianie użytkowników przez kontrolery domen w lesie PRIV;
 - żądanie aktywacji przez użytkowników;
@@ -106,7 +106,7 @@ Organizacja może wybrać funkcje w środowisku bastionu wymagające wysokiej do
 - Wysoka dostępność dla programu SQL Server z klastrami trybu failover wymaga co najmniej dwóch serwerów obsługujących program SQL Server, które nie mogą jednocześnie być kontrolerami domeny.
 - Usługa MIM nie powinna być zainstalowana na kontrolerze domeny, aby zminimalizować narażenie poszczególnych serwerów na ataki.
 
-Minimalna topologia zapewniająca wysoką dostępność dla wszystkich funkcji w środowisku bastionu obejmuje co najmniej cztery serwery i magazyn udostępniony. Dwa z tych serwerów należy skonfigurować jako kontrolery domen obsługujące usługi domenowe Active Directory. Dwa pozostałe serwery można skonfigurować jako klaster trybu failover obsługujący program SQL Server i usługę MIM.
+Minimalna topologia zapewniająca wysoką dostępność dla wszystkich funkcji w środowisku bastionu obejmuje co najmniej cztery serwery i magazyn udostępniony. Dwa z tych serwerów należy skonfigurować jako kontrolery domen obsługujące usługi Active Directory Domain Services. Dwa pozostałe serwery można skonfigurować jako klaster trybu failover obsługujący program SQL Server i usługę MIM.
 
 Ponadto typowe wdrożenie środowiska bastionu obejmuje również uprzywilejowaną administracyjną stację roboczą umożliwiającą zarządzanie tymi serwerami oraz składnik monitorujący.
 
@@ -150,7 +150,7 @@ Niektóre organizacje przewidują również utworzenie środowiska bastionu odr�
 
 - W celu ochrony przed atakami pochodzącymi z istniejących domen należy oddzielić administrację środowiska bastionu od kont administracyjnych istniejącej domeny.
 - Środowisko bastionu wymaga połączenia protokołu TCP/IP z kontrolerami domeny w istniejącej domenie.  Lista portów znajduje się w artykule [Konfigurowanie zapory na potrzeby domen i zaufania](https://support.microsoft.com/kb/179442).
-- Zwirtualizowane wdrożenie Usług domenowych Active Directory wymaga określonych funkcji platformy wirtualizacji, zgodnie z opisem w artykule [Wdrażanie i konfigurowanie zwirtualizowanego kontrolera domeny](https://technet.microsoft.com/library/jj574223.aspx).
+- Zwirtualizowane wdrożenie usług Active Directory Domain Services wymaga określonych funkcji platformy wirtualizacji, zgodnie z opisem w artykule [Wdrażanie i konfigurowanie zwirtualizowanego kontrolera domeny](https://technet.microsoft.com/library/jj574223.aspx).
 - Wdrożenie z wysoką dostępnością programu SQL Server dla usługi MIM wymaga specjalnej konfiguracji magazynu, zgodnie z opisem w sekcji [Magazyn bazy danych programu SQL Server](#sql-server-database-storage) poniżej.  Nie wszyscy dostawcy hostingu mogą aktualnie oferować hosting systemu Windows Server z konfiguracjami dysków spełniającymi wymagania klastra trybu failover dla programu SQL Server.
 
 ## <a name="deployment-preparation-and-recovery-procedures"></a>Przygotowanie do wdrożenia i procedury odzyskiwania
@@ -167,9 +167,9 @@ Serwery w środowisku bastionu będą połączone z domeną i zależne od usług
 
 ### <a name="bastion-environment-active-directory"></a>Usługa Active Directory środowiska bastionu
 
-Usługi domenowe Active Directory systemu Windows Server obejmują natywną obsługę wysokiej dostępności i odzyskiwania po awarii.
+Usługi Active Directory Domain Services systemu Windows Server obejmują natywną obsługę wysokiej dostępności i odzyskiwania po awarii.
 
-#### <a name="preparation"></a>Przygotowanie
+#### <a name="preparation"></a>Przygotowywanie
 
 Typowe wdrożenie produkcyjne zarządzania dostępem uprzywilejowanym obejmuje co najmniej dwa kontrolery domeny w środowisku bastionu. Instrukcje konfigurowania pierwszego kontrolera domeny w środowisku bastionu zawiera krok 2 artykułu dotyczącego wdrażania, [Przygotowanie kontrolera domeny PRIV](step-2-prepare-priv-domain-controller.md).
 
@@ -192,13 +192,13 @@ Zaleca się również sprawdzenie ustawień DNS na komputerach połączonych ze 
 
 Wdrożenie wysokiej dostępności wymaga zastosowania klastrów trybu failover dla programu SQL Server, a wystąpienia klastrów trybu failover dla programu SQL Server wymagają współdzielenia przez wszystkie węzły magazynu zawierającego bazę danych i dzienniki. Magazyn udostępniony mogą stanowić dyski klastra trybu failover systemu Windows Server, dyski w sieci SAN lub udziały plików na serwerze SMB.  Należy pamiętać, że elementy te muszą być przeznaczone wyłącznie dla środowiska bastionu. Udostępnianie magazynu z innymi obciążeniami poza środowisko bastionu nie jest zalecane, ponieważ może zagrozić integralności środowiska bastionu.
 
-### <a name="sql-server"></a>Serwer SQL
+### <a name="sql-server"></a>SQL Server
 
 Usługa MIM wymaga wdrożenia programu SQL Server w środowisku bastionu.   Na potrzeby wysokiej dostępności program SQL można wdrożyć przy użyciu wystąpienia klastra trybu failover. W odróżnieniu od wystąpień autonomicznych, w przypadku wystąpienia klastra trybu failover wysoka dostępność programu SQL Server jest chroniona przez występowanie nadmiarowych węzłów w wystąpieniu klastra trybu failover. W przypadku awarii lub zaplanowanego uaktualnienia własność grupy zasobów jest przenoszona do innego węzła klastra trybu failover systemu Windows Server.
 
 Jeśli wymagana jest obsługa odzyskiwania po awarii, ale nie wysokiej dostępności, zamiast klastra trybu failover można użyć metody wysyłania dziennika, replikacji transakcji, replikacji migawek lub dublowania bazy danych.   
 
-#### <a name="preparation"></a>Przygotowanie
+#### <a name="preparation"></a>Przygotowywanie
 
 Instalacja programu SQL Server w środowisku bastionu musi być niezależna od jakichkolwiek istniejących instalacji programu SQL Server w lasach CORP.  Ponadto zaleca się wdrożenie programu SQL Server na serwerze dedykowanym, odrębnym od kontrolera domeny.
 Aby uzyskać więcej informacji, zobacz następujący przewodnik programu SQL Server: [Wystąpienia klastra trybu failover funkcji AlwaysOn](https://msdn.microsoft.com/library/ms189134.aspx).
@@ -212,7 +212,7 @@ Jeśli program SQL Server uległ awarii lub utracono połączenie między progra
 ### <a name="mim-service"></a>Usługa MIM
 Usługa MIM jest wymagana do przetwarzania żądań aktywacji.  Aby umożliwić wyłączenie komputera hostującego usługę MIM na potrzeby konserwacji przy jednoczesnej kontynuacji odbierania żądań aktywacji, można wdrożyć większą liczbę komputerów usługi MIM.  Należy zwrócić uwagę, że usługa MIM nie uczestniczy w operacjach protokołu Kerberos po dodaniu użytkownika do grupy.  
 
-#### <a name="preparation"></a>Przygotowanie
+#### <a name="preparation"></a>Przygotowywanie
 Zalecane jest wdrożenie usługi MIM na większej liczbie serwerów połączonych z domeną PRIV.
 Planując wdrożenie wysokiej dostępności, zobacz następującą dokumentację systemu Windows Server: [Wymagania sprzętowe klastra trybu failover i opcje magazynu](https://technet.microsoft.com/library/jj612869.aspx) oraz [Tworzenie klastra trybu failover w systemie Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx).
 
@@ -235,7 +235,7 @@ Wystąpienie przepływu pracy może zostać zrealizowane wyłącznie przez serwe
 
 Instalator usługi i portalu MIM zawiera również dodatkowe składniki PAM — moduły programu PowerShell i dwie usługi.
 
-#### <a name="preparation"></a>Przygotowanie
+#### <a name="preparation"></a>Przygotowywanie
 
 Składniki PAM należy zainstalować na wszystkich komputerach w środowisku bastionu, na których jest instalowana usługa MIM.  Nie można ich dodać później.
 

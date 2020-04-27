@@ -12,10 +12,10 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042138"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
@@ -49,7 +49,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     4.  Edytuj plik o nazwie AppxManifest.xml.
 
-    5.  W elemencie &lt;Identity&gt; zmodyfikuj wartość atrybutu wydawcy na temat certyfikatu podpisywania, np. "CN = ABCD"
+    5.  W elemencie &lt;Identity&gt; zmodyfikuj wartość atrybutu wydawcy w temacie certyfikatu podpisywania, np. "CN = abcd"
 
         Podmiot w tym elemencie powinien być taki sam jak podmiot w certyfikacie podpisywania używanym do podpisania aplikacji.
 
@@ -69,7 +69,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     1.  Zaloguj się do portalu zarządzania certyfikatami jako użytkownik z uprawnieniami administracyjnymi.
 
-    2.  Przejdź do obszaru **administracja** &gt; **Zarządzanie szablonami profilów** i upewnij się, że pole wyboru jest zaznaczone obok utworzonego szablonu profilu, a następnie kliknij przycisk Kopiuj wybrany szablon profilu.
+    2.  Przejdź do pozycji **Administracja** &gt; **Zarządzaj szablonami profilów** i upewnij się, że zaznaczono pole obok utworzonego szablonu profilu, a następnie kliknij pozycję Kopiuj wybrany szablon profilu.
 
     3.  Wpisz nazwę szablonu profilu, dodaj tekst „nonAdmin”, a następnie kliknij przycisk **OK**.
 

@@ -12,10 +12,10 @@ ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2ca9131a6c4f38ed559618d662848b74e1bffe66
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043498"
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2016-or-2017"></a>Konfigurowanie serwera zarządzania tożsamościami: SQL Server 2016 lub 2017
@@ -34,7 +34,7 @@ ms.locfileid: "79043498"
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
-> - Hasło — <strong>Pass@word1</strong>
+> - Hasło<strong>Pass@word1</strong>
 
 > [!IMPORTANT]
 > Program MIM 2016 SP2 obsługuje odbiorniki grupy dostępności funkcji SQL AlwaysOn (AoAG) z opcją *RegisterAllProvidersIP* ustawioną na 0, co oznacza, że SQL Server tryb failover między podsieciami nie jest obecnie obsługiwany.
