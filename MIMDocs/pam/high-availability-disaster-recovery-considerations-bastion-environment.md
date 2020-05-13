@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 2153fdb0559a78bcc82ca6901ee7cb0cabc01f23
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043974"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280103"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Zagadnienia związane z wysoką dostępnością i odzyskiwaniem po awarii w środowisku bastionu
 
@@ -40,7 +40,7 @@ Zakres uwzględnionych funkcji ma wpływ na całkowity koszt wdrożenia i obsłu
 | Migracja użytkowników i grup   | Małe | Zaczekać na przywrócenie środowiska bastionu |
 | Administracja programu MIM          | Małe | Zaczekać na przywrócenie środowiska bastionu |
 | Aktywacja ról uprzywilejowanych  | Medium | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
-| Zarządzanie zasobami         | Wysoka | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
+| Zarządzanie zasobami         | Wysoki | Dedykowane konta z kartą inteligentną umożliwiające ręczne dodawanie użytkowników do grup administracyjnych |
 | Monitorowanie użytkowników i grup w istniejącym lesie | Małe | Zaczekać na przywrócenie środowiska bastionu |
 
 Teraz omówimy kolejno poszczególne funkcje lasu bastionu.
@@ -53,7 +53,7 @@ Na potrzeby tworzenia relacji zaufania kontrolery domen w istniejącym lesie ora
 
 ### <a name="user-and-group-migration"></a>Migracja użytkowników i grup
 
-Po utworzeniu relacji zaufania można utworzyć w środowisku bastionu kopie grup oraz konta użytkowników dla członków grup oraz osób zatwierdzających. Umożliwi to tym użytkownikom aktywację ról uprzywilejowanych i ponowne uzyskanie członkostwa w grupach.
+Po utworzeniu relacji zaufania można utworzyć w środowisku bastionu kopie grup oraz konta użytkowników dla członków grup oraz osób zatwierdzających. Dzięki temu użytkownicy mogą aktywować role uprzywilejowane i odzyskać obowiązujące członkostwa w grupach.
 
 Na potrzeby migracji użytkowników i grup kontrolery domen w istniejącym lesie oraz składniki MIM i AD w środowisku bastionu muszą być w trybie online.   Jeśli kontrolery domen w istniejącym lesie są niedostępne, nie można dodawać kolejnych użytkowników i grup do środowiska bastionu, ale nie ma to wpływu na istniejących użytkowników i istniejące grupy. Jeśli w czasie migracji nastąpi awaria któregokolwiek ze składników, administrator może przeprowadzić jedną ponowną próbę po rozwiązaniu problemu.
 
@@ -77,7 +77,7 @@ Na potrzeby zarządzania zasobami kontroler domeny w domenie zasobu oraz kontrol
 
 ### <a name="monitoring-of-users-and-groups-in-the-existing-forest"></a>Monitorowanie użytkowników i grup w istniejącym lesie
 
-Program MIM zawiera również usługę monitorowania PAM, regularnie sprawdzającą użytkowników i grupy w istniejących domenach i wprowadzającą odpowiednie zmiany w bazie danych programu MIM i w usłudze AD.  Usługa ta nie musi być w trybie online na potrzeby aktywacji ról ani zarządzania zasobami.
+Program MIM zawiera również usługę monitorowania PAM, która regularnie sprawdza użytkowników i grupy w istniejących domenach i odpowiednio aktualizuje bazę danych programu MIM i usługę AD.  Usługa ta nie musi być w trybie online na potrzeby aktywacji ról ani zarządzania zasobami.
 
 Na potrzeby monitorowania kontrolery domen w istniejącym lesie oraz składniki MIM i AD w środowisku bastionu muszą być w trybie online.  
 
@@ -95,7 +95,7 @@ Komputery hostujące usługi Active Directory Domain Services i komputery hostuj
 - żądanie aktywacji przez użytkowników;
 - generowanie dla użytkowników biletów protokołu Kerberos, których mogą używać zasoby w istniejącym lesie;
 - monitorowanie domen w istniejącym lesie przez program MIM;
-- wysyłanie wiadomości e-mail przez program MIM za pośrednictwem serwerów znajdujących się w istniejącym lesie.
+- Wyślij wiadomość e-mail za pośrednictwem programu MIM do serwerów poczty znajdujących się w istniejącym lesie.
 
 ### <a name="minimal-high-availability-topologies"></a>Minimalne topologie na potrzeby wysokiej dostępności
 
@@ -169,7 +169,7 @@ Serwery w środowisku bastionu będą połączone z domeną i zależne od usług
 
 Usługi Active Directory Domain Services systemu Windows Server obejmują natywną obsługę wysokiej dostępności i odzyskiwania po awarii.
 
-#### <a name="preparation"></a>Przygotowywanie
+#### <a name="preparation"></a>Przygotowanie
 
 Typowe wdrożenie produkcyjne zarządzania dostępem uprzywilejowanym obejmuje co najmniej dwa kontrolery domeny w środowisku bastionu. Instrukcje konfigurowania pierwszego kontrolera domeny w środowisku bastionu zawiera krok 2 artykułu dotyczącego wdrażania, [Przygotowanie kontrolera domeny PRIV](step-2-prepare-priv-domain-controller.md).
 
@@ -182,7 +182,7 @@ Procedurę dodawania kolejnego kontrolera domeny zawiera artykuł [Instalowanie 
 
 Po awarii, przed ponownym uruchomieniem pozostałych serwerów, upewnij się, że w środowisku bastionu jest dostępny co najmniej jeden kontroler domeny.
 
-W obrębie domeny usługa Active Directory rozdziela role FSMO między kontrolerami domeny, zgodnie z opisem w artykule [Jak działają wzorce operacji](https://technet.microsoft.com/library/cc780487.aspx).  Jeśli kontroler domeny uległ awarii, może być konieczne przeniesienie [ról kontrolera domeny](https://technet.microsoft.com/library/cc786438.aspx) przypisanych do tego kontrolera domeny.
+W obrębie domeny usługa Active Directory rozdziela role FSMO między kontrolerami domeny, zgodnie z opisem w artykule [Jak działają wzorce operacji](https://technet.microsoft.com/library/cc780487.aspx).  Jeśli kontroler domeny zakończył się niepowodzeniem, może być konieczne przetransferowanie co najmniej jednej roli kontrolera domeny, do której przypisano ten kontroler domeny.
 
 Po ustaleniu, że kontroler domeny nie zostanie przywrócony do środowiska produkcyjnego, pamiętaj o sprawdzeniu, czy były do niego przypisane jakiekolwiek role, i zmianie przypisania tych ról stosownie do potrzeb. Instrukcje znajdują się w artykule [Wyświetlanie aktualnych przypisań ról wzorca operacji](https://technet.microsoft.com/library/cc816893.aspx) i powiązanych artykułach.
 
@@ -198,7 +198,7 @@ Usługa MIM wymaga wdrożenia programu SQL Server w środowisku bastionu.   Na p
 
 Jeśli wymagana jest obsługa odzyskiwania po awarii, ale nie wysokiej dostępności, zamiast klastra trybu failover można użyć metody wysyłania dziennika, replikacji transakcji, replikacji migawek lub dublowania bazy danych.   
 
-#### <a name="preparation"></a>Przygotowywanie
+#### <a name="preparation"></a>Przygotowanie
 
 Instalacja programu SQL Server w środowisku bastionu musi być niezależna od jakichkolwiek istniejących instalacji programu SQL Server w lasach CORP.  Ponadto zaleca się wdrożenie programu SQL Server na serwerze dedykowanym, odrębnym od kontrolera domeny.
 Aby uzyskać więcej informacji, zobacz następujący przewodnik programu SQL Server: [Wystąpienia klastra trybu failover funkcji AlwaysOn](https://msdn.microsoft.com/library/ms189134.aspx).
@@ -212,9 +212,9 @@ Jeśli program SQL Server uległ awarii lub utracono połączenie między progra
 ### <a name="mim-service"></a>Usługa MIM
 Usługa MIM jest wymagana do przetwarzania żądań aktywacji.  Aby umożliwić wyłączenie komputera hostującego usługę MIM na potrzeby konserwacji przy jednoczesnej kontynuacji odbierania żądań aktywacji, można wdrożyć większą liczbę komputerów usługi MIM.  Należy zwrócić uwagę, że usługa MIM nie uczestniczy w operacjach protokołu Kerberos po dodaniu użytkownika do grupy.  
 
-#### <a name="preparation"></a>Przygotowywanie
+#### <a name="preparation"></a>Przygotowanie
 Zalecane jest wdrożenie usługi MIM na większej liczbie serwerów połączonych z domeną PRIV.
-Planując wdrożenie wysokiej dostępności, zobacz następującą dokumentację systemu Windows Server: [Wymagania sprzętowe klastra trybu failover i opcje magazynu](https://technet.microsoft.com/library/jj612869.aspx) oraz [Tworzenie klastra trybu failover w systemie Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx).
+Planując wdrożenie wysokiej dostępności, zobacz następującą dokumentację systemu Windows Server: [Wymagania sprzętowe klastra trybu failover i opcje magazynu](https://technet.microsoft.com/library/jj612869.aspx) oraz [Tworzenie klastra trybu failover w systemie Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763).
 
 W przypadku wdrożenia produkcyjnego na wielu serwerach możesz użyć funkcji równoważenia obciążenia sieciowego (NLB, Network Load Balancing) w celu rozłożenia obciążenia związanego z przetwarzaniem.  Zalecane jest także utworzenie jednego aliasu (na przykład rekordów A lub CNAME) w celu przedstawienia użytkownikowi jednej, wspólnej nazwy.
 
@@ -235,7 +235,7 @@ Wystąpienie przepływu pracy może zostać zrealizowane wyłącznie przez serwe
 
 Instalator usługi i portalu MIM zawiera również dodatkowe składniki PAM — moduły programu PowerShell i dwie usługi.
 
-#### <a name="preparation"></a>Przygotowywanie
+#### <a name="preparation"></a>Przygotowanie
 
 Składniki PAM należy zainstalować na wszystkich komputerach w środowisku bastionu, na których jest instalowana usługa MIM.  Nie można ich dodać później.
 

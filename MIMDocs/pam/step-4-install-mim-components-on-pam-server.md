@@ -12,18 +12,18 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 070e85177a28c3091834cafd2e61611aa9043ea8
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043685"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280018"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
 > [!div class="step-by-step"]
-> [«Krok 3](step-3-prepare-pam-server.md)
-> [krok 5»](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Krok 3](step-3-prepare-pam-server.md) 
+>  [Krok 5»](step-5-establish-trust-between-priv-corp-forests.md)
 
 Na serwerze PAMSRV zaloguj się jako użytkownik PRIV\Administrator, aby zainstalować portal i usługę programu MIM oraz przykładową aplikację internetową portalu.
 
@@ -59,7 +59,7 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
 
 7. Ustaw wartość *PAMSRV* jako adres serwera usługi programu MIM.
 
-8. Ustaw *http://pamsrv.priv.contoso.local:82* jako adres URL zbioru witryn programu SharePoint.
+8. Ustaw `http://pamsrv.priv.contoso.local:82` jako adres URL zbioru witryn programu SharePoint.
 
 9. Pozostaw puste pole adresu URL portalu rejestracji.
 
@@ -100,7 +100,7 @@ Po zakończeniu instalacji serwer zostanie ponownie uruchomiony. Nastąpi sprawd
 
 1. Po ponownym uruchomieniu serwera PAMSRV zaloguj się jako PRIV\Administrator.
 
-2. Uruchom program Internet Explorer i Połącz się z portalem http://pamsrv.priv.contoso.local:82/identitymanagementprogramu MIM w systemie. Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
+2. Uruchom program Internet Explorer i Połącz się z portalem programu MIM w systemie `http://pamsrv.priv.contoso.local:82/identitymanagement` . Podczas pierwszego znajdowania strony może nastąpić krótkie opóźnienie.
 
 3. W razie potrzeby zaloguj się w programie Internet Explorer jako PRIV\Administrator.
 
@@ -121,7 +121,7 @@ Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726
 3.  Sprawdź, czy są wyświetlane te dwie reguły:  
     - Usługa Forefront Identity Manager (STS)
     - Forefront Identity Manager (usługa sieci Web)  
-4.  Kliknij pozycję **Nowa reguła** > **port** > **TCP**, a następnie wpisz określone porty lokalne *8086* i *8090*. W kreatorze zaakceptuj ustawienia domyślne, nadaj regule nazwę, a następnie kliknij przycisk **Zakończ**.  
+4.  Kliknij pozycję **Nowa reguła**  >  **port**  >  **TCP**, a następnie wpisz określone porty lokalne *8086* i *8090*. W kreatorze zaakceptuj ustawienia domyślne, nadaj regule nazwę, a następnie kliknij przycisk **Zakończ**.  
 5.  Ukończ działanie kreatora i zamknij aplikację Zapora systemu Windows.
 
 6.  Otwórz **Panel sterowania**.  
@@ -155,7 +155,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    </httpProtocol>
    ```
 
-5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** na *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Skonfiguruj przykładową aplikację internetową. Użyj edytora tekstu, takiego jak Notatnik, do zmodyfikowania pliku **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Ustaw wartość **pamRespApiUrl** na `http://pamsrv.priv.contoso.local:8086/api/pamresources/` .
 
 6. Uruchom ponownie usługę IIS przy użyciu następującego polecenia, aby te zmiany zaczęły obowiązywać.
 
@@ -163,7 +163,7 @@ W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja inte
    iisreset
    ```
 
-7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/witryny sieci Web, Uwierzytelnij się w razie potrzeby i upewnij się, że występuje pobieranie.
+7. (Opcjonalnie) Sprawdź, czy użytkownik może się uwierzytelnić w interfejsie API REST. Na serwerze PAMSRV otwórz przeglądarkę sieci Web jako administrator.  Przejdź do adresu URL witryny sieci Web `http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/` , Uwierzytelnij się w razie potrzeby i upewnij się, że występuje pobieranie.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalowanie poleceń cmdlet obiektu żądającego usługi PAM programu MIM
 
@@ -179,12 +179,12 @@ Zainstaluj polecenia cmdlet obiektu żądającego usługi PAM programu MIM na st
 
 5.  W ustawieniach niestandardowych wybierz opcję instalacji **klienta usługi PAM**. Nie wybieraj opcji instalacji **dodatku programu MIM dla programu Outlook** ani **rozszerzeń hasła i uwierzytelniania programu MIM**.
 
-6.  Jako adres serwera usługi PAM podaj nazwę hosta serwera PRIV programu MIM — *pamsrv.priv.contoso.local*.
+6.  W polu adres serwera PAM Określ nazwę hosta serwera PRIV programu MIM `pamsrv.priv.contoso.local` .
 
 Po zakończeniu instalacji uruchom ponownie komputer CORPWKSTN, aby ukończyć rejestrację nowego modułu programu PowerShell.
 
 W następnym kroku zostanie ustanowiona relacja zaufania między lasami PRIV i CORP.
 
 > [!div class="step-by-step"]
-> [«Krok 3](step-3-prepare-pam-server.md)
-> [krok 5»](step-5-establish-trust-between-priv-corp-forests.md)
+> [«Krok 3](step-3-prepare-pam-server.md) 
+>  [Krok 5»](step-5-establish-trust-between-priv-corp-forests.md)

@@ -8,12 +8,12 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043617"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279967"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
@@ -90,9 +90,9 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
     ```
 
 3. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno przeglądarki sieci Web.
-4. Przejdź do http://pamsrv.priv.contoso.local:8090 strony sieci Web z portalu przykładowego i upewnij się, że jest ona widoczna.
-5. W programie Internet Explorer wybierz pozycję **Narzędzia** > **Opcje internetowe** i kliknij kartę **zabezpieczenia** .
-6. Kliknij pozycję**Lokacje** >  >  **strefy Lokalny intranet****Zaawansowane** , a następnie Dodaj witrynę sieci Web do strefy.
+4. Przejdź do `http://pamsrv.priv.contoso.local:8090` strony sieci Web z portalu przykładowego i upewnij się, że jest ona widoczna.
+5. W programie Internet Explorer wybierz pozycję **Narzędzia**  >  **Opcje internetowe** i kliknij kartę **zabezpieczenia** .
+6. Kliknij pozycję Lokacje **strefy Lokalny intranet**  >  **Sites**  >  **Zaawansowane** , a następnie Dodaj witrynę sieci Web do strefy.
 7. Zamknij okno dialogowe **Opcje internetowe**.
 8. Na karcie po lewej stronie kliknij przycisk **Aktywuj**. Wybierz **rolę PAM**, a następnie kliknij przycisk **Aktywuj**.
 

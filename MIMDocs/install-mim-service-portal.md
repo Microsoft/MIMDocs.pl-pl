@@ -11,18 +11,18 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: a85a8eeaf999c193a3e2bbd3f2cdf75cef65e574
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042444"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280001"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalacja programu MIM 2016: usługa i portal programu MIM
 
 > [!div class="step-by-step"]
-> [«Usługa](install-mim-sync.md)
-> synchronizacji programu mim —[synchronizowanie baz danych»](install-mim-sync-ad-service.md)
+> [«Usługa](install-mim-sync.md) 
+>  synchronizacji programu MIM [Synchronizuj bazy danych»](install-mim-sync-ad-service.md)
  
 > [!NOTE]
 > W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
@@ -63,7 +63,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 9. Określ nazwę konta usługi, które ma być używane (np. *usługa_MIM*), hasło konta usługi (np. <em>Pass@word1</em>), domenę konta usługi (np. *contoso*) i konto e-mail usługi (np. *contoso*).
     >[!NOTE]
-    >Program MIM 2016 z dodatkiem SP2 lub nowszy: Jeśli używasz kont usług zarządzanych przez grupę, musisz upewnić się **$** , że znak jest na końcu nazwy konta usługi, np. MIMService $, i pozostaw puste pole hasło do konta usługi.
+    >Program MIM 2016 z dodatkiem SP2 lub nowszy: Jeśli używasz kont usług zarządzanych przez grupę, musisz upewnić się, że **$** znak jest na końcu nazwy konta usługi, np. MIMService $, i pozostaw puste pole hasło do konta usługi.
 
     ![Obraz przedstawiający konfigurowanie konta usługi programu MIM](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -99,7 +99,7 @@ Jeśli pakiet instalacyjny programu MIM nie został skonfigurowany w ostatnim kr
 
 ## <a name="configure-mim-password-reset-portal"></a>Konfigurowanie portalu resetowania haseł programu MIM
 
-1. W polu Nazwa konta usługi dla rejestracji SSPR ustaw wartość *wartość contoso\mimsspr jako* i hasło na <em>Pass@word1</em>.
+1. W polu Nazwa konta usługi dla rejestracji SSPR ustaw wartość *wartość contoso\mimsspr jako* i hasło na <em>Pass@word1</em> .
 
 2. Określ *PasswordReset.contoso.com* jako nazwę hosta dla portalu resetowania haseł programu MIM i Ustaw port na **80**. Włącz opcję **Otwórz port w zaporze**.
 
@@ -115,7 +115,7 @@ Gdy wszystkie definicje przedinstalacyjne będą gotowe, kliknij przycisk **Zain
 
 Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 
-1. Uruchom program Internet Explorer i Połącz się z portalem *http://mim.contoso.com/identitymanagement*programu MIM w systemie. Należy zauważyć, że podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
+1. Uruchom program Internet Explorer i Połącz się z portalem programu MIM w systemie `http://mim.contoso.com/identitymanagement` . Należy zauważyć, że podczas pierwszej wizyty na tej stronie może wystąpić krótkie opóźnienie.
     - W razie potrzeby należy uwierzytelnić się jako *contoso\miminstall* w programie Internet Explorer.
 
 2. W programie Internet Explorer otwórz okno **Opcje internetowe**, wyświetl kartę **Zabezpieczenia** i dodaj witrynę do strefy **Lokalny intranet**, jeśli nie została jeszcze tam dodana.  Zamknij okno dialogowe **Opcje internetowe**.
@@ -153,5 +153,5 @@ Po zakończeniu instalacji sprawdź, czy portal programu MIM jest aktywny.
 > Opcjonalnie: na tym etapie można zainstalować dodatki i rozszerzenia programu MIM.
  
 > [!div class="step-by-step"]  
-> [«Usługa](install-mim-sync.md)
-> synchronizacji programu mim —[synchronizowanie baz danych»](install-mim-sync-ad-service.md)
+> [«Usługa](install-mim-sync.md) 
+>  synchronizacji programu MIM [Synchronizuj bazy danych»](install-mim-sync-ad-service.md)

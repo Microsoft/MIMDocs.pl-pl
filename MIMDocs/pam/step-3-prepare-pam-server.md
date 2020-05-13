@@ -12,18 +12,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 3098816d07603384a28db47c0bc60ac92a340e8f
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043668"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279984"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Krok 3 — Przygotowanie serwera PAM
 
 > [!div class="step-by-step"]
-> [«Krok 2](step-2-prepare-priv-domain-controller.md)
-> [krok 4»](step-4-install-mim-components-on-pam-server.md)
+> [«Krok 2](step-2-prepare-priv-domain-controller.md) 
+>  [Krok 4»](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Instalowanie systemu Windows Server 2012 R2
 
@@ -67,7 +67,7 @@ Dodaj role Serwer sieci Web (IIS) i Serwer aplikacji, funkcje platformy .NET Fra
 Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo utworzonych kont jako usług.
 
 1.  Uruchom program **zasad zabezpieczeń lokalnych** .   
-2.  Przejdź do **zasad** > lokalnych**Przypisywanie praw użytkownika**.  
+2.  Przejdź do **zasad lokalnych**  >  **Przypisywanie praw użytkownika**.  
 3.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie w trybie usługi** i wybierz polecenie **Właściwości**.  
 4.  Kliknij przycisk **Dodaj użytkownika lub grupę** i w nazwach użytkowników i grup wpisz *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*. Kliknij opcję **Sprawdź nazwy** i kliknij przycisk **OK**.  
 
@@ -186,7 +186,7 @@ Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplika
 
     Upewnij się, że zmienna **CompatibilityLevel** jest ustawiona na wartość *14*. Jeśli zmienna zwraca wartość *15*, kolekcja witryn nie została utworzona dla wersji 2010 środowiska. Usuń kolekcję witryn i utwórz ją ponownie.
 
-2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Operacja wyłączy stan wyświetlania po stronie serwera SharePoint i zadanie programu SharePoint **Zadanie analizy kondycji (godzinowo, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)**.
+2.  Uruchom następujące polecenia programu PowerShell w **powłoce zarządzania programu SharePoint 2013**. Spowoduje to wyłączenie stanu wyświetlania po stronie serwera programu SharePoint oraz **zadania analizy kondycji zadania programu SharePoint (co godzinę, czasomierz Microsoft SharePoint Foundation, wszystkie serwery)**.
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -204,7 +204,7 @@ Następnie utwórz kolekcję witryn programu SharePoint skojarzoną z tą aplika
 ## <a name="set-the-website-as-the-local-intranet"></a>Ustawianie witryny jako lokalnego intranetu
 
 1. Uruchom przeglądarkę Internet Explorer i otwórz nową kartę przeglądarki sieci Web
-2. Przejdź do http://pamsrv.priv.contoso.local:82/ i zaloguj się jako PRIV\MIMAdmin.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie „MIM Portal”.  
+2. Przejdź do `http://pamsrv.priv.contoso.local:82/` i zaloguj się jako PRIV\MIMAdmin.  Zostanie wyświetlona pusta witryna programu SharePoint o nazwie „MIM Portal”.  
 3. W przeglądarce Internet Explorer otwórz **Opcje internetowe**, przejdź do karty **Zabezpieczenia**, wybierz opcję **Lokalny intranet** i dodaj adres URL `http://pamsrv.priv.contoso.local:82/`.
 
 Jeśli logowanie nie powiedzie się, nazwy SPN Kerberos utworzone wcześniej w [Kroku 2](step-2-prepare-priv-domain-controller.md) mogą wymagać aktualizacji.
@@ -216,5 +216,5 @@ Przy użyciu opcji **Usługi** (znajdującej się w narzędziach administracyjny
 W Kroku 4 rozpoczniesz instalowanie składników programu MIM na serwerze PAM.
 
 > [!div class="step-by-step"]
-> [«Krok 2](step-2-prepare-priv-domain-controller.md)
-> [krok 4»](step-4-install-mim-components-on-pam-server.md)
+> [«Krok 2](step-2-prepare-priv-domain-controller.md) 
+>  [Krok 4»](step-4-install-mim-components-on-pam-server.md)

@@ -9,12 +9,12 @@ manager: daveba
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 284345d79cda8d60d055a642d047e28e63ea20cb
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044365"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279950"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Używanie niestandardowego dostawcy Multi-Factor Authentication za pośrednictwem interfejsu API podczas aktywacji roli PAM lub w SSPR
 
@@ -39,17 +39,17 @@ Aby można było używać niestandardowego interfejsu API dostawcy Multi-Factor 
 
 ### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Krok 1. upewnienie się, że usługa MIM jest w wersji 4.5.202.0 lub nowszej
 
-Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) lub nowszą wersję.
+Pobierz i zainstaluj poprawkę programu MIM [4.5.202.0](https://support.microsoft.com/help/4346632/hotfix-rollup-package-build-4-5-202-0-is-available-for-microsoft) lub nowszą wersję.
 
 ### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Krok 2. Tworzenie biblioteki DLL implementującej interfejs IPhoneServiceProvider
 
 Biblioteka DLL musi zawierać klasę, która implementuje trzy metody:
 
-- `InitiateCall`: Usługa MIM wywoła tę metodę. Usługa przekazuje numer telefonu i identyfikator żądania jako parametry.  `PhoneCallStatus` Metoda musi zwracać `Pending`wartość `Success` lub. `Failed`
-- `GetCallStatus`: W przypadku `initiateCall` zwrócenia `Pending`WCZEŚNIEJSZEgo wywołania usługa MIM wywoła tę metodę. `PhoneCallStatus` Ta metoda zwraca również `Pending`wartość `Success` lub. `Failed`
-- `GetFailureMessage`: W przypadku wcześniejszego wywołania `InitiateCall` lub `GetCallStatus` zwrócenia `Failed`usługa MIM wywoła tę metodę. Ta metoda zwraca komunikat diagnostyczny.
+- `InitiateCall`: Usługa MIM wywoła tę metodę. Usługa przekazuje numer telefonu i identyfikator żądania jako parametry.  Metoda musi zwracać `PhoneCallStatus` wartość `Pending` `Success` lub `Failed` .
+- `GetCallStatus`: W przypadku zwrócenia wcześniejszego `initiateCall` wywołania `Pending` Usługa MIM wywoła tę metodę. Ta metoda zwraca również `PhoneCallStatus` wartość `Pending` `Success` lub `Failed` .
+- `GetFailureMessage`: W przypadku wcześniejszego wywołania `InitiateCall` lub `GetCallStatus` ZWRÓCENIA `Failed` Usługa MIM wywoła tę metodę. Ta metoda zwraca komunikat diagnostyczny.
 
-Implementacje tych metod muszą być bezpieczne wątkowo, a ponadto implementacja `GetCallStatus` i `GetFailureMessage` nie może przyjąć, że będą wywoływane przez ten sam wątek, który jest wcześniejszym wywołaniem do. `InitiateCall`
+Implementacje tych metod muszą być bezpieczne wątkowo, a ponadto implementacja `GetCallStatus` i `GetFailureMessage` nie może przyjąć, że będą wywoływane przez ten sam wątek, który jest wcześniejszym wywołaniem do `InitiateCall` .
 
 Zapisz bibliotekę DLL w `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` katalogu.
 
