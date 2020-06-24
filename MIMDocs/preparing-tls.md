@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f8d0be0cb9ffa0f32415f11b407954cb0c985024
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 4e208e2f42c206ae50febefb6a8206dc3823e084
+ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043447"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133536"
 ---
 # <a name="planning-mim-2016-sp2-in-tls-12-or-fips-mode-environments"></a>Planowanie programu MIM 2016 z dodatkiem SP2 w środowiskach TLS 1,2 lub w trybie FIPS
 
@@ -32,12 +32,15 @@ W przypadku instalowania programu MIM 2016 z dodatkiem SP2 w środowisku zabloko
 - Aby ustanowić bezpieczne połączenie TLS 1,2 z programem SQL Server, usługą synchronizacji programu MIM i wbudowanym agentem zarządzania SQL wymaga [SQL Native Client 11.0.7001.0](https://www.microsoft.com/download/details.aspx?id=50402) lub nowszego.
 
 ## <a name="mim-service"></a>Usługa MIM
+   >[!NOTE]
+   >Instalacja nienadzorowana programu MIM 2016 SP2 nie powiedzie się tylko w środowisku TLS 1,2. Zainstaluj usługę programu MIM w trybie interaktywnym lub, w przypadku instalacji nienadzorowanej, upewnij się, że protokół TLS 1,1 jest włączony. Po zakończeniu instalacji nienadzorowanej należy wymusić użycie protokołu TLS 1,2 w razie konieczności.
+
 - Certyfikaty z podpisem własnym nie mogą być używane przez usługę MIM tylko w środowisku TLS 1,2. W przypadku instalowania usługi MIM wybierz certyfikat zgodny ze standardem szyfrowania wystawiony przez zaufany urząd certyfikacji.
 - Instalator usługi programu MIM dodatkowo wymaga [sterownika OLE DB dla SQL Server w wersji 18,2](https://www.microsoft.com/download/details.aspx?id=56730) lub nowszej.
 
 ## <a name="fips-mode-considerations"></a>Zagadnienia dotyczące trybu FIPS
 
-W przypadku instalowania usługi MIM na serwerze z włączoną obsługą trybu FIPS należy wyłączyć weryfikację zasad FIPS, aby zezwolić na wykonywanie przepływów pracy usługi MIM. W tym celu należy dodać *enforceFIPSPolicy Enabled = false* do sekcji *środowiska uruchomieniowego* pliku *Microsoft. ResourceManagement. Service. exe. config* między sekcjami *środowiska uruchomieniowego* i *zestawubinding* , jak przedstawiono poniżej:
+W przypadku instalowania usługi MIM na serwerze z włączoną obsługą trybu FIPS należy wyłączyć weryfikację zasad FIPS, aby zezwolić na wykonywanie przepływów pracy usługi MIM. Aby to zrobić, należy dodać element *enforceFIPSPolicy Enabled = false* do sekcji *środowiska uruchomieniowego* pliku *Microsoft.ResourceManagement.Service.exe.config* między sekcjami *środowiska uruchomieniowego* i *zestawubinding* , jak pokazano poniżej:
 
 ```XML
 <runtime>

@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Dokumentacja Microsoft Identity Manager
+summary: Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania firmy Microsoft do zarządzania tożsamościami i dostępem oraz w bezproblemowy sposób integruje różne lokalne magazyny uwierzytelniania, takie jak Active Directory, LDAP czy Oracle, i inne aplikacje z usługą Azure Active Directory. Zapewnia dzięki temu spójny sposób korzystania z lokalnych aplikacji LOB i rozwiązań SaaS.
+metadata:
+  title: Dokumentacja Microsoft Identity Manager
+  description: Dowiedz się, jak korzystać z programu Microsoft Identity Manager.
+  ms.topic: landing-page
+  ms.date: 06/09/2020
+  ms.openlocfilehash: 7d8aec6e750d60e6d654de94d99f566f3e55872a
+  ms.sourcegitcommit: aad5dbabd5e42db9ad11d96a2f6fde6173d9ce0a
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 06/17/2020
+  ms.locfileid: "84880092"
+landingContent:
+- title: Omówienie Microsoft Identity Manager
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Nowości w programie Microsoft Identity Manager 2016 z dodatkiem Service Pack 1
+      url: reference/version-history.md
+  - linkListType: overview
+    links:
+    - text: Więcej informacji o programie Microsoft Identity Manager
+      url: microsoft-identity-manager-2016.md
+  - linkListType: deploy
+    links:
+    - text: Wdrażanie programu Microsoft Identity Manager 2016
+      url: microsoft-identity-manager-deploy.md
+- title: Dokumentacja
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem
+      url: /microsoft-identity-manager/reference/privileged-access-management-rest-api-reference
+    - text: Dokumentacja interfejsu API REST zarządzania certyfikatami
+      url: /microsoft-identity-manager/reference/certificate-management-rest-api-reference
+    - text: Blog zespołu pomocy ds. zarządzanie tożsamościami i dostępem
+      url: https://blogs.technet.microsoft.com/iamsupport/
+- title: Rozwiązania
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Zarządzanie dostępem w dużej skali
+      url: /enterprise-mobility-security/solutions/manage-access-at-scale
+- title: Cykl życia programu Forefront Identity Manager (FIM)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Uaktualnij do wersji Microsoft Identity Manager 2016 (wsparcie podstawowe dla programu FIM zostało zakończone 10/10/2017)
+      url: microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md
+    - text: Informacje o cyklu życia programu FIM
+      url: https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)

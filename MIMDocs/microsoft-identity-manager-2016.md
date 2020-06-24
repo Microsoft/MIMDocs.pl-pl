@@ -8,12 +8,12 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: b2b63f4490b5f53f5a2d683d5130b3ac1e74dc04
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
+ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044093"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133553"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 Aktualności i aktualizacje
 
@@ -32,6 +32,9 @@ Firma Microsoft regularnie dostarcza aktualizacje do programu MIM, w tym usprawn
 ## <a name="updates-in-mim-2016-sp2"></a>Aktualizacje w programie MIM 2016 z dodatkiem SP2
 
 MIM 2016 z dodatkiem Service Pack 2 to pakiet zbiorczy poprawek dla programu MIM 2016 z dodatkiem SP1. Wprowadzono tu również opcję konfigurowania kont usług zarządzanych przez grupę dla usługi synchronizacji programu MIM i usługi MIM oraz umożliwiają wdrażanie programu MIM przy użyciu innego zaktualizowanego oprogramowania platformy. Więcej szczegółów można znaleźć w historii wersji programu [MIM 2016](./reference/version-history.md)
+
+### <a name="support-update-for-azure-active-directory-premium-customers"></a>Aktualizacja wsparcia dla klientów Azure Active Directory — wersja Premium
+W przypadku klientów korzystających z Azure AD — wersja Premium Standardowa pomoc techniczna jest dostępna od 2020 czerwca, kontynuowana po 2021 stycznia. Aby uzyskać więcej informacji, zobacz [proces pomocy technicznej usługi Azure AD](support-update-for-azure-active-directory-premium-customers.md).
 
 ### <a name="major-new-and-updated-scenarios"></a>Najważniejsze nowe i zaktualizowane scenariusze
 
