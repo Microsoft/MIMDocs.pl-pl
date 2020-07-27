@@ -1,6 +1,6 @@
 ---
 title: Obsługa danych Microsoft Identity Manager | Microsoft Docs
-description: Zrozumienie Microsoft Identity Manager obsługi danych w celu ułatwiającą i raportowania danych w środowisku, podejmowanie działań w danym systemie w oparciu o funkcje operacyjne i wymagania.
+description: Zrozumienie Microsoft Identity Manager obsługi danych w celu identyfikowania i raportowania danych w środowisku, podejmowanie działań w danym systemie na podstawie funkcji operacyjnych i wymagań.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b89f7561869e154ed5639835d1233e19e356ee76
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044110"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176748"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Obsługa danych Microsoft Identity Manager 
 
@@ -46,12 +46,12 @@ Jeśli nie masz pewności, że źródło uprawnień można śledzić przy użyci
 - Aby przeprowadzić przegląd lub przeszukać dane obiektów użytkownika
     - Otwórz klienta usługi synchronizacji
         - Za pomocą projektanta Metaverse można zobaczyć Importy i pierwszeństwo przepływu atrybutów.
-![MIM-privacy-compliance_1. PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
-        - Użycie wyszukiwania Metaverse umożliwia wyszukanie dowolnego obiektu i atrybutu w bazie danych ![MIM-privacy-COMPLIANCE_2. png](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+![mim-privacy-compliance_1.PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
+        - Użycie wyszukiwania Metaverse umożliwia wyszukanie dowolnego obiektu i atrybutu w bazie danych ![mim-privacy-compliance_2.PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 Po znalezieniu obiektu, kliknięcie obiektu spowoduje otwarcie strony profilu użytkownika. Szczegóły obiektu udostępniają kompleksowe szczegóły dotyczące obiektu, jego atrybutów, ostatniej modyfikacji i źródła uprawnień oraz powiązane źródło danych pochodzące z konfiguracji agenta zarządzania poniżej.
 
-![MIM — zgodność z ochroną prywatności. Format](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
+![mim-privacy-compliance.PNG](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
 
 ### <a name="service-and-portal--pam"></a>Usługa i Portal/PAM
 Jeśli masz wystąpienie usługi i portalu lub zainstalowano moduł PAM z możliwością wyszukiwania użytkowników, jest on ważny. 
@@ -110,7 +110,7 @@ Dane osobowe dotyczące użytkowników lub obiektów w rozwiązaniach programu M
 
 W celu wykonywania operacji zarządzania administratorzy muszą być częścią operacji synchronizacji lub administratora zdefiniowanego w [tym miejscu](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
-Aktualizowanie danych odbywa się przez definiowanie reguł ze źródła urzędu. Konsola zarządzania pomaga identyfikować Źródło urzędu, aby zaktualizować je do źródła. Inną opcją jest utworzenie reguły synchronizacji lub przedziału reguły w celu kontrolowania aktualizacji danych, jeśli źródło takie jak dane HR nadal musi pozostać. Są to avialible obsługiwane opcje.
+Aktualizowanie danych odbywa się przez definiowanie reguł ze źródła urzędu. Konsola zarządzania pomaga identyfikować Źródło urzędu, aby zaktualizować je do źródła. Inną opcją jest utworzenie reguły synchronizacji lub przedziału reguły w celu kontrolowania aktualizacji danych, jeśli źródło takie jak dane HR nadal musi pozostać. Są dostępne opcje obsługiwane.
 
 Aby uzyskać więcej informacji na temat różnych sposobów aktualizowania atrybutów, zobacz poniżej. 
 
@@ -147,7 +147,7 @@ Usługa synchronizacji na wiele sposobów obsługi danych lub usuwania danych w 
 
 Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfigurację przechowywania zasobów systemowych. Oznacza to, że usługa zostanie usunięta, nie tylko Zażądaj danych, ale również dla każdego obiektu, który musi zostać wyczyszczony z systemu. Po wystąpieniu tego procesu wszystkie dane połączone z tym obiektem zostaną usunięte. obejmuje to wszystkie dane rejestracji SSPR. Spowoduje to odtworzenie powyższej konfiguracji usuwania obiektów. Mamy jedną tabelę przechowującą identyfikator GUID obiektów. Aby zmniejszyć całkowity rozmiar tabeli w 4.4.1459 kompilacji, dodaliśmy proces o nazwie FIM_DeleteExpiredSystemObjectsJob szczegóły tego procesu można znaleźć [tutaj](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
-![MIM-privacy-zgodność-srrc. Format](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
+![mim-privacy-compliance-srrc.PNG](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
 
 ### <a name="bhold"></a>BHOLD
@@ -155,13 +155,13 @@ Zalecane jest, aby usługa & Portal zachowywać domyślne 30-dniowe konfiguracj�
 Pakietu BHOLD jak większość systemów podłączonych do usługi synchronizacji można skonfigurować do usuwania po usunięciu obiektu źródłowego, takiego jak HR. Ta konfiguracja jest konfigurowana w agencie zarządzania. i kontrolowane przez reguły usuwania obiektów zgodnie z opisem w obszarze funkcje usługi synchronizacji.
 
 Innym rozwiązaniem jest usunięcie obiektu użytkownika bezpośrednio z interfejsu użytkownika pakietu BHOLD Core. W zależności od konfiguracji może to potrwać, ale Uwaga logika aprowizacji może odtworzyć tego użytkownika, jeśli nie zostanie usunięty ze źródła.
-![MIM-privacy-zgodność-bholdr. Format](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+![mim-privacy-compliance-bholdr.PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### <a name="certificate-management"></a>Zarządzanie certyfikatami
 Aby usunąć użytkownika z programu CM, Usuń użytkownika z usługi Active Directory.
 
-Zarządzanie certyfikatami w taki sposób, aby przechowywać identyfikator UID profilu z usług certyfikatów przy użyciu konta sAMAccountName domeny. Po usunięciu użytkownika z usługi AD pamięć podręczna użytkownika jest obecna tylko dla certyfikatów, przełącz zostały zarejestrowane. Nie zalecamy usuwania wszystkiego w bazie danych, ponieważ może to spowodować całkowite szkody dla działania środowiska.
+Zarządzanie certyfikatami w taki sposób, aby przechowywać identyfikator UID profilu z usług certyfikatów przy użyciu konta sAMAccountName domeny. Po usunięciu użytkownika z usługi AD pamięć podręczna użytkownika jest obecna tylko dla certyfikatów, które zostały zarejestrowane. Nie zalecamy usuwania wszystkiego w bazie danych, ponieważ może to spowodować całkowite szkody dla działania środowiska.
 
 ## <a name="opt-out-of-telemetry"></a>Wycofaj dane telemetryczne
 Poprzednie kompilacje FIM/MIM używane do zbierania danych telemetrycznych anonimowe o każdym wdrożeniu i przesyłają te dane za pośrednictwem protokołu HTTPS do serwerów firmy Microsoft. Te dane były używane przez firmę Microsoft, aby pomóc w ulepszaniu przyszłych wersji programu FIM/MIM w przeszłości.
@@ -171,11 +171,11 @@ Poprzednie kompilacje FIM/MIM używane do zbierania danych telemetrycznych anoni
 
 Aby wyłączyć zbieranie danych w poprzedniej wersji, uruchom tryb zmiany i usuń zaznaczenie następującego monitu:
 
-![MIM-privacy-zgodność-CEIP. Format](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
+![mim-privacy-compliance-ceip.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
 lub Edytuj rejestr i ustaw wartość 0: (składnik) CEIP HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 
-![MIM-privacy-zgodność-ceip2. Format](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
+![mim-privacy-compliance-ceip2.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Następne kroki 
 - [Wskazówki dotyczące prywatności związanych z programem SQL](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
