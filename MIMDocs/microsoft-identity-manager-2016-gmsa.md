@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044212"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176765"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Konwertowanie usług specyficznych dla Microsoft Identity Manager na korzystanie z kont usług zarządzanych przez grupę
 
@@ -47,7 +47,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
     - Klucze główne są używane przez usługę dystrybucji kluczy (KDS) do generowania haseł i innych informacji na kontrolerach domeny.
     - Utwórz klucz główny tylko raz dla każdej domeny, jeśli jest to konieczne.  
-    - Uwzględnij `Add-KDSRootKey –EffectiveImmediately`. "– EffectiveImmediately" oznacza, że replikacja klucza głównego do wszystkich kontrolerów domeny może potrwać do 10 godzin. Replikacja do dwóch kontrolerów domeny może potrwać około 1 godzinę. 
+    - Uwzględnij `Add-KDSRootKey –EffectiveImmediately` . "– EffectiveImmediately" oznacza, że replikacja klucza głównego do wszystkich kontrolerów domeny może potrwać do 10 godzin. Replikacja do dwóch kontrolerów domeny może potrwać około 1 godzinę. 
     ![Ciąg "– EffectiveImmediately"](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Akcje do uruchomienia na kontrolerze domena usługi Active Directory
@@ -74,7 +74,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 1. W Synchronization Service Manager wykonaj kopię zapasową klucza szyfrowania. Zostanie ona zażądana z instalacją trybu zmiany. Wykonaj następujące czynności:
 
-    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji.   **Zestaw kluczy eksportu**jest już zaznaczony domyślnie.
+    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji. **Zestaw kluczy eksportu**   jest już zaznaczony domyślnie.
 
     b. Wybierz pozycję **Dalej**. 
     
@@ -96,8 +96,8 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 1. Po zainstalowaniu poprawki Zatrzymaj usługę synchronizacji programu FIM, wykonując następujące czynności:
 
-   a. W panelu sterowania wybierz pozycję **programy i funkcje** > **Microsoft Identity Manager**.  
-   b. Na stronie **usługa synchronizacji** wybierz pozycję **Zmień** > **dalej**.  
+   a. W panelu sterowania wybierz pozycję **programy i funkcje**  >  **Microsoft Identity Manager**.  
+   b. Na stronie **usługa synchronizacji** wybierz pozycję **Zmień**  >  **dalej**.  
    c. W oknie **Opcje konserwacji** wybierz pozycję **Konfiguruj**.
 
    ![Okno Opcje konserwacji](media/dc98c011bec13a33b229a0e792b78404.png)
@@ -106,7 +106,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
    ![Okno Konfigurowanie usługi synchronizacji Microsoft Identity Manager](media/38df9369bf13e1c3066a49ed20e09041.png)
 
-   e. Wybierz kolejno pozycje **dalej** > **dalej** > **Zainstaluj**.  
+   e. Wybierz kolejno pozycje **dalej**  >  **dalej**  >  **Zainstaluj**.  
    f. Przywróć zestaw kluczy z pliku *miiskeys. bin* , który został zapisany wcześniej.
 
    ![Opcja przywracania konfiguracji zestawu kluczy](media/44cd474323584feb6d8b48b80cfceb9b.png)
@@ -141,7 +141,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
     ![Okno Active Directory Użytkownicy i komputery](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Znany problem w systemie Windows Server 2012 R2 polega na tym, że usługi korzystające z konta zarządzanego zawieszają się po ponownym uruchomieniu serwera, ponieważ usługa dystrybucji kluczy firmy Microsoft nie jest uruchomiona po uruchomieniu systemu Windows. Aby obejść ten problem, należy uruchomić następujące polecenie: 
+    > Znany problem w systemie Windows Server 2012 R2 polega na tym, że usługi korzystające z zarządzanego konta przestają odpowiadać po ponownym uruchomieniu serwera, ponieważ usługa dystrybucji kluczy firmy Microsoft nie jest uruchomiona po uruchomieniu systemu Windows. Aby obejść ten problem, należy uruchomić następujące polecenie: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
