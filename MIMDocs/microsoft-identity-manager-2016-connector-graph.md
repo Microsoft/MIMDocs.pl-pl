@@ -1,20 +1,20 @@
 ---
 title: Łącznik Microsoft Identity Manager dla Microsoft Graph | Microsoft Docs
-author: fimguy
 description: Łącznik Microsoft Identity Manager dla Microsoft Graph włącza Zarządzanie cyklem życia konta usługi AD użytkownika zewnętrznego. W tym scenariuszu Organizacja odprosiła Gości do swojego katalogu usługi Azure AD i chce udzielić tych Gościom dostępu do lokalnego uwierzytelniania zintegrowanego systemu Windows lub aplikacji opartych na protokole Kerberos.
 keywords: ''
+author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
+ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044263"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168358"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Łącznik Microsoft Identity Manager dla Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "79044263"
 ## <a name="summary"></a>Podsumowanie 
 
 
-[Łącznik Microsoft Identity Manager dla Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) umożliwia wykonywanie dodatkowych scenariuszy integracji dla klientów Azure AD — wersja Premium.  Powierzchnie IT w ramach dodatkowych obiektów usługi synchronizacji programu MIM uzyskanych z [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) V1 i beta.
+[Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) umożliwia wykonywanie dodatkowych scenariuszy integracji dla klientów Azure AD — wersja Premium.  Powierzchnie IT w ramach dodatkowych obiektów usługi synchronizacji programu MIM uzyskanych z [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/)   V1 i beta.
 
 ## <a name="scenarios-covered"></a>Omówione scenariusze
 
@@ -37,7 +37,7 @@ Aby dowiedzieć się, jak skonfigurować program MIM Sync do automatycznego twor
 ### <a name="other-identity-management-scenarios"></a>Inne scenariusze zarządzania tożsamościami
 
 
-Łącznik może służyć do innych scenariuszy związanych z zarządzaniem tożsamościami, w tym do tworzenia, odczytywania, aktualizowania i usuwania obiektów użytkowników, grup i kontaktów w usłudze Azure AD poza synchronizacją użytkowników i grup w usłudze Azure AD. Gdy oceniasz potencjalne scenariusze, weź pod uwagę: ten łącznik nie może być obsługiwany w scenariuszu, co spowodowałoby nakładanie się przepływu danych, rzeczywiste lub potencjalne skutki synchronizacji ze wdrożeniem Azure AD Connect.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) jest zalecanym podejściem do integrowania katalogów lokalnych z usługą Azure AD przez synchronizowanie użytkowników i grup z katalogów lokalnych z usługą Azure AD.  Azure AD Connect ma wiele funkcji synchronizacji i umożliwia wykonywanie takich scenariuszy jak hasło i zapisywanie zwrotne urządzeń, co nie jest możliwe w przypadku obiektów utworzonych przez program MIM. Jeśli dane są wprowadzane do AD DS, na przykład upewnij się, że są wyłączone z Azure AD Connect próba dopasowania tych obiektów z powrotem do katalogu usługi Azure AD.  Nie można używać tego łącznika do wprowadzania zmian w obiektach usługi Azure AD, które zostały utworzone przez Azure AD Connect.
+Łącznik może służyć do innych scenariuszy związanych z zarządzaniem tożsamościami, w tym do tworzenia, odczytywania, aktualizowania i usuwania obiektów użytkowników, grup i kontaktów w usłudze Azure AD poza synchronizacją użytkowników i grup w usłudze Azure AD. Gdy oceniasz potencjalne scenariusze, weź pod uwagę: ten łącznik nie może być obsługiwany w scenariuszu, co spowodowałoby nakładanie się przepływu danych, rzeczywiste lub potencjalne skutki synchronizacji ze wdrożeniem Azure AD Connect.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)   jest zalecanym podejściem do integrowania katalogów lokalnych z usługą Azure AD przez synchronizowanie użytkowników i grup z katalogów lokalnych z usługą Azure AD.  Azure AD Connect ma wiele funkcji synchronizacji i umożliwia wykonywanie takich scenariuszy jak hasło i zapisywanie zwrotne urządzeń, co nie jest możliwe w przypadku obiektów utworzonych przez program MIM. Jeśli dane są wprowadzane do AD DS, na przykład upewnij się, że są wyłączone z Azure AD Connect próba dopasowania tych obiektów z powrotem do katalogu usługi Azure AD.  Nie można używać tego łącznika do wprowadzania zmian w obiektach usługi Azure AD, które zostały utworzone przez Azure AD Connect.
 
 
 
@@ -58,7 +58,7 @@ Rysunek 1. Rejestrowanie nowej aplikacji
 
 Rysunek 2. Identyfikator aplikacji
 
-3.  Generuj nowy klucz tajny klienta, otwierając wszystkie\> ustawienia-klucze. Ustaw Opis klucza i wybierz potrzebny czas trwania. Zapisz zmiany. Wartość wpisu tajnego nie będzie dostępna po opuszczeniu strony.
+3.  Generuj nowy klucz tajny klienta, otwierając wszystkie ustawienia- \> klucze. Ustaw Opis klucza i wybierz potrzebny czas trwania. Zapisz zmiany. Wartość wpisu tajnego nie będzie dostępna po opuszczeniu strony.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
 
@@ -98,8 +98,8 @@ Więcej informacji o wymaganych uprawnieniach można znaleźć [tutaj](https://d
 
 
 
-9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **Łączniki** i **Utwórz**.
-Wybierz pozycję **Graph (Microsoft)** , Utwórz łącznik i nadaj mu nazwę opisową.
+9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **Łączniki**   i **Utwórz**.
+Wybierz pozycję **Graph (Microsoft)**   , Utwórz łącznik i nadaj mu nazwę opisową.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -159,13 +159,13 @@ Lista typów atrybutów, które są obsługiwane:
 
 Atrybuty wielowartościowe (kolekcja) są również obsługiwane dla dowolnego typu z powyższej listy.
 
-Łącznik używa atrybutu "`id`" dla zakotwiczenia i nazwy wyróżniającej dla wszystkich obiektów.  W związku z tym zmiana nazwy nie jest konieczna, ponieważ interfejs API programu Graph nie zezwala obiektowi na zmianę atrybutu "ID".
+Łącznik używa `id` atrybutu "" dla zakotwiczenia i nazwy wyróżniającej dla wszystkich obiektów.  W związku z tym zmiana nazwy nie jest konieczna, ponieważ interfejs API programu Graph nie zezwala obiektowi na zmianę atrybutu "ID".
 
 
 ## <a name="access-token-lifetime"></a>Okres istnienia tokenu dostępu
 
 
-Aplikacja grafu wymaga tokenu dostępu do uzyskiwania dostępu do interfejs API programu Graph. Łącznik zażąda nowego tokenu dostępu dla każdej iteracji importu (zależą od rozmiaru strony). Przykład:
+Aplikacja grafu wymaga tokenu dostępu do uzyskiwania dostępu do interfejs API programu Graph. Łącznik zażąda nowego tokenu dostępu dla każdej iteracji importu (zależą od rozmiaru strony). Na przykład:
 
 -   Usługa Azure AD zawiera 10000 obiektów
 
@@ -180,7 +180,7 @@ Podczas eksportowania zostanie zażądany nowy token dostępu dla każdego obiek
 
 **Włączanie dzienników**
 
-W przypadku problemów z programem Graph dzienniki mogą być używane do lokalizowania problemu. Dlatego ślady mogą być włączone w taki [sam sposób jak w przypadku łączników generycznych](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Lub po prostu dodając następujący do `miiserver.exe.config` (sekcja `system.diagnostics/sources` wewnątrz):
+W przypadku problemów z programem Graph dzienniki mogą być używane do lokalizowania problemu. Dlatego ślady mogą być włączone w taki [sam sposób jak w przypadku łączników generycznych](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Lub po prostu dodając następujący do `miiserver.exe.config` ( `system.diagnostics/sources` sekcja wewnątrz):
 
 ```
 \<source name="ConnectorsLog" switchValue="Verbose"\>
@@ -200,7 +200,7 @@ DateTime, Timestamp, Call stack" /\>
 \</source\>
 ```
 >[!NOTE]
->Jeśli włączono opcję "Uruchom ten agent zarządzania w osobnym procesie", `dllhost.exe.config` należy go użyć zamiast. `miiserver.exe.config`
+>Jeśli włączono opcję "Uruchom ten agent zarządzania w osobnym procesie", `dllhost.exe.config` należy go użyć zamiast `miiserver.exe.config` .
 
 **Błąd wygaśnięcia tokenu dostępu**
 
@@ -208,7 +208,7 @@ DateTime, Timestamp, Call stack" /\>
 
 ![](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
 
-Rysunek 7. "Token dostępu wygasł." Error
+Rysunek 7. "Token dostępu wygasł." Błąd
 
 Przyczyną tego problemu może być konfiguracja okresu istnienia tokenu dostępu po stronie platformy Azure. Domyślnie token dostępu wygasa po 1 godzinie. Aby zwiększyć czas wygaśnięcia, zobacz [ten artykuł](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
@@ -216,11 +216,11 @@ Przykład korzystania z [publicznej wersji zapoznawczej modułu programu Azure A
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
-New-AzureADPolicy-Definition \@("{" TokenLifetimePolicy ": {" Version ": 1, **" AccessTokenLifetime ":" 5:00:00 "**}}")-DisplayName "OrganizationDefaultPolicyScenario"-IsOrganizationDefault \$True-Type "TokenLifetimePolicy"
+New-AzureADPolicy-Definition \@ ("{" TokenLifetimePolicy ": {" Version ": 1, **" AccessTokenLifetime ":" 5:00:00 "**}}")-DisplayName "OrganizationDefaultPolicyScenario"-IsOrganizationDefault \$ True-Type "TokenLifetimePolicy"
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Eksplorator grafów, doskonały do rozwiązywania problemów z wywołaniem HTTP]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Zasady przechowywania wersji, pomocy technicznej i zmiany dotyczącej podziału dla Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Pobierz łącznik usługi Microsoft Identity Manager dla](http://go.microsoft.com/fwlink/?LinkId=717495)
-[wdrożenia usługi Microsoft Graph MIM B2B na zakończenie wdrażania]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
+- [Pobierz łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) 
+ [Kompleksowe wdrożenie programu MIM B2B]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
