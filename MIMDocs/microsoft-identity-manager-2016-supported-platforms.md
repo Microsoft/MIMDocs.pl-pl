@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 04e96f3c8eb71041dccb173f2a1dc7dbba46ef01
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: 4ef6c5aa5ba3814ab20dff445729da4acf96ecf7
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970400"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 
@@ -46,7 +46,7 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | **Portale resetowanie hasła i rejestracji w programie MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 z dodatkiem R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Przeglądarka sieci Web | Wszystkie główne obsługiwane przeglądarki |
 | **Dodatki i rozszerzenia programu MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Integracja z programem Outlook (opcjonalnie) | Outlook 2010 (w systemie Windows, z wyjątkiem kliknięcia do uruchomienia)<br/>Outlook 2013 (w systemie Windows, z wyjątkiem kliknięcia do uruchomienia) <br/> Outlook 2016 (w systemie Windows 10, z wyjątkiem kliknięcia do uruchomienia) *<br/>Office 365 Outlook (w systemie Windows 10, w tym kliknij przycisk-Uruchom) * * |
+| | Integracja z programem Outlook (opcjonalnie) | Outlook 2010 (w systemie Windows, z wyjątkiem kliknięcia do uruchomienia)<br/>Outlook 2013 (w systemie Windows, z wyjątkiem kliknięcia do uruchomienia) <br/> Outlook 2016 (w systemie Windows 10, z wyjątkiem kliknięcia do uruchomienia) *<br/>Program Outlook dla Microsoft 365 (w systemie Windows 10, w tym kliknięcie przycisku do uruchomienia) * * |
 | | Polecenia cmdlet obiektu żądającego programu PowerShell PAM (opcjonalnie) | Windows 8.1<br/>Windows 10 |
 | **Zarządzanie certyfikatami programu MIM** (integracja serwera i urzędu certyfikacji) | Server systemu Windows | Windows Server 2008 R2 z dodatkiem SP1 (NR)<br/>Windows Server 2012 z dodatkiem R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Urząd certyfikacji | Windows Server 2008 R2 z dodatkiem SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 z dodatkiem R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |

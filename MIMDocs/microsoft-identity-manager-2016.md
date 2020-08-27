@@ -8,19 +8,19 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
-ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
+ms.openlocfilehash: 66cb97afa69decfde8df9f3c78f15c48abd7982b
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133553"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970383"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Microsoft Identity Manager 2016 Aktualności i aktualizacje
 
 Microsoft Identity Manager (MIM) 2016 korzysta z funkcji zarządzania tożsamościami i dostępem w programie Forefront Identity Manager. Podobnie jak jego poprzednik, program MIM ułatwia zarządzanie użytkownikami, poświadczeniami, zasadami i dostępem w organizacji.  Ponadto program MIM 2016 zapewnia obsługę hybrydową, funkcje zarządzania dostępem uprzywilejowanym i obsługę nowych platform.
 
 
-W programie MIM organizacja może uprościć zarządzanie cyklem życia tożsamości za pomocą zautomatyzowanych przepływów pracy, reguł biznesowych i łatwej integracji z platformami heterogenicznymi w centrum danych. Program MIM umożliwia organizacjom posiadanie odpowiednich użytkowników i praw dostępu do Active Directory lokalnych aplikacji, a następnie Azure AD Connect mogą być dostępne w usłudze Azure AD dla pakietu Office 365 i aplikacji hostowanych w chmurze. Typowe scenariusze programu MIM obejmują:
+W programie MIM organizacja może uprościć zarządzanie cyklem życia tożsamości za pomocą zautomatyzowanych przepływów pracy, reguł biznesowych i łatwej integracji z platformami heterogenicznymi w centrum danych. Program MIM umożliwia organizacjom posiadanie odpowiednich użytkowników i praw dostępu do Active Directory lokalnych aplikacji, a następnie Azure AD Connect mogą być dostępne w usłudze Azure AD dla aplikacji Microsoft 365 i hostowanych w chmurze. Typowe scenariusze programu MIM obejmują:
  - Automatyczne Inicjowanie obsługi tożsamości i grup na podstawie zasad firmy i aprowizacji opartej na przepływie pracy
  - Integracja zawartości katalogów z systemami kadr i innymi źródłami urzędu
  - Synchronizowanie tożsamości między katalogami, bazami danych i aplikacjami lokalnymi za poorednictwem wspólnych interfejsów API i protokołów, łączników dostarczonych przez firmę Microsoft i łączników dostarczonych przez partnerów

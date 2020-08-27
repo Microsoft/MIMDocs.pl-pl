@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b7b0dd73e5a87f338dc8cd91e61ee6a19c84068a
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043022"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970366"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016 Licencjonowanie i pobieranie
 
@@ -30,7 +30,7 @@ Microsoft Identity Manager 2016 jest licencjonowana na poszczególnych użytkown
 
 Microsoft Identity Manager 2016 jest dołączony do Azure Active Directory — wersja Premium (P1 i P2), który jest częścią Enterprise Mobility + Security.
 
-Azure AD — wersja Premium jest dostępna za pomocą usługi [Microsoft Umowa Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), [programu licencjonowania zbiorowego Open](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)i programu [dostawców rozwiązań w chmurze](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Subskrybenci platformy Azure i pakietu Office 365 mogą również kupować Azure Active Directory — wersja Premium P1 i P2 w trybie online.  Więcej informacji można znaleźć pod adresem [Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD — wersja Premium jest dostępna za pomocą usługi [Microsoft Umowa Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), [programu licencjonowania zbiorowego Open](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)i programu [dostawców rozwiązań w chmurze](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) . Subskrybenci platformy Azure i Microsoft 365 mogą również kupować Azure Active Directory — wersja Premium P1 i P2 w trybie online.  Więcej informacji można znaleźć pod adresem [Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>Licencje CAL programu MIM
 
@@ -103,13 +103,13 @@ Mogą być również odpowiednie następujące pliki do pobrania:
 
 - [Agent raportowania hybrydowego programu MIM](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Łącznik ogólny LDAP, ogólny łącznik SQL, łącznik wykresu, łącznik programu Lotus Domino, łącznik programu PowerShell, łącznik usług sieci Web](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Łącznik ogólny LDAP, ogólny łącznik SQL, łącznik wykresu, łącznik programu Lotus Domino, łącznik programu PowerShell, łącznik usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Łącznik dla magazynu profilów użytkowników programu SharePoint](https://www.microsoft.com/download/details.aspx?id=41164)
 
 - Jeśli nie masz jeszcze domeny Active Directory i konfigurujemy scenariusz PAM na potrzeby eksperymentowania, zobacz [Skrypty wdrażania usługi PAM w programie MIM 2016 z dodatkiem SP1](sp1-deployment-scripts.md).
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 - Dowiedz się więcej na temat scenariuszy dostarczonych w [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md).
 - Zapoznaj się z [przewodnikiem planowania pojemności](capacity-planning-guide.md).
