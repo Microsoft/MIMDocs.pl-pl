@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: c426dff583ca51ca77bcb18fe024bf38698e3530
+ms.sourcegitcommit: 3ff309115a0f3de114e3dff4eb3927dd7b01df4d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168358"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570769"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Łącznik Microsoft Identity Manager dla Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "88168358"
 ## <a name="summary"></a>Podsumowanie 
 
 
-[Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) umożliwia wykonywanie dodatkowych scenariuszy integracji dla klientów Azure AD — wersja Premium.  Powierzchnie IT w ramach dodatkowych obiektów usługi synchronizacji programu MIM uzyskanych z [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/)   V1 i beta.
+[Łącznik Microsoft Identity Manager dla Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) umożliwia wykonywanie dodatkowych scenariuszy integracji dla klientów Azure AD — wersja Premium.  Powierzchnie IT w ramach dodatkowych obiektów usługi synchronizacji programu MIM uzyskanych z [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) V1 i beta.
 
 ## <a name="scenarios-covered"></a>Omówione scenariusze
 
@@ -37,7 +37,7 @@ Aby dowiedzieć się, jak skonfigurować program MIM Sync do automatycznego twor
 ### <a name="other-identity-management-scenarios"></a>Inne scenariusze zarządzania tożsamościami
 
 
-Łącznik może służyć do innych scenariuszy związanych z zarządzaniem tożsamościami, w tym do tworzenia, odczytywania, aktualizowania i usuwania obiektów użytkowników, grup i kontaktów w usłudze Azure AD poza synchronizacją użytkowników i grup w usłudze Azure AD. Gdy oceniasz potencjalne scenariusze, weź pod uwagę: ten łącznik nie może być obsługiwany w scenariuszu, co spowodowałoby nakładanie się przepływu danych, rzeczywiste lub potencjalne skutki synchronizacji ze wdrożeniem Azure AD Connect.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)   jest zalecanym podejściem do integrowania katalogów lokalnych z usługą Azure AD przez synchronizowanie użytkowników i grup z katalogów lokalnych z usługą Azure AD.  Azure AD Connect ma wiele funkcji synchronizacji i umożliwia wykonywanie takich scenariuszy jak hasło i zapisywanie zwrotne urządzeń, co nie jest możliwe w przypadku obiektów utworzonych przez program MIM. Jeśli dane są wprowadzane do AD DS, na przykład upewnij się, że są wyłączone z Azure AD Connect próba dopasowania tych obiektów z powrotem do katalogu usługi Azure AD.  Nie można używać tego łącznika do wprowadzania zmian w obiektach usługi Azure AD, które zostały utworzone przez Azure AD Connect.
+Łącznik może służyć do innych scenariuszy związanych z zarządzaniem tożsamościami, w tym do tworzenia, odczytywania, aktualizowania i usuwania obiektów użytkowników, grup i kontaktów w usłudze Azure AD poza synchronizacją użytkowników i grup w usłudze Azure AD. Gdy oceniasz potencjalne scenariusze, weź pod uwagę: ten łącznik nie może być obsługiwany w scenariuszu, co spowodowałoby nakładanie się przepływu danych, rzeczywiste lub potencjalne skutki synchronizacji ze wdrożeniem Azure AD Connect.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) jest zalecanym podejściem do integrowania katalogów lokalnych z usługą Azure AD przez synchronizowanie użytkowników i grup z katalogów lokalnych z usługą Azure AD.  Azure AD Connect ma wiele funkcji synchronizacji i umożliwia wykonywanie takich scenariuszy jak hasło i zapisywanie zwrotne urządzeń, co nie jest możliwe w przypadku obiektów utworzonych przez program MIM. Jeśli dane są wprowadzane do AD DS, na przykład upewnij się, że są wyłączone z Azure AD Connect próba dopasowania tych obiektów z powrotem do katalogu usługi Azure AD.  Nie można używać tego łącznika do wprowadzania zmian w obiektach usługi Azure AD, które zostały utworzone przez Azure AD Connect.
 
 
 
@@ -75,7 +75,7 @@ Do aplikacji należy dodać następujące uprawnienia, aby umożliwić korzystan
 | Operacja z obiektem | Wymagane uprawnienie                                                                  | Typ uprawnienia |
 |-----------------------|--------------------------------------------------------------------------------------|-----------------|
 | Importuj grupę          | `Group.Read.All` lub `Group.ReadWrite.All`                                                | Aplikacja     |
-| Importuj użytkownika           | `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` lub`Directory.ReadWrite.All` | Aplikacja     |
+| Importuj użytkownika           | `User.Read.All`, `User.ReadWrite.All` `Directory.Read.All` lub `Directory.ReadWrite.All` | Aplikacja     |
 
 Więcej informacji o wymaganych uprawnieniach można znaleźć [tutaj](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
 
@@ -98,8 +98,8 @@ Więcej informacji o wymaganych uprawnieniach można znaleźć [tutaj](https://d
 
 
 
-9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **Łączniki**   i **Utwórz**.
-Wybierz pozycję **Graph (Microsoft)**   , Utwórz łącznik i nadaj mu nazwę opisową.
+9.  W interfejsie użytkownika Synchronization Service Manager wybierz pozycję **Łączniki** i **Utwórz**.
+Wybierz pozycję **Graph (Microsoft)**, Utwórz łącznik i nadaj mu nazwę opisową.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -138,7 +138,7 @@ Strona parametrów globalnych zawiera następujące ustawienia:
 
     -   Eksportuj (Dodawanie, aktualizowanie, usuwanie)
 
--   Grupa
+-   Group (Grupa)
 
     -   Import pełny/Delta
 
@@ -151,9 +151,9 @@ Lista typów atrybutów, które są obsługiwane:
 
 -   `Edm.String`
 
--   `Edm.DateTimeOffset`(ciąg w przestrzeni łącznika)
+-   `Edm.DateTimeOffset` (ciąg w przestrzeni łącznika)
 
--   `microsoft.graph.directoryObject`(odwołanie w obszarze łącznika do dowolnego z obsługiwanych obiektów)
+-   `microsoft.graph.directoryObject` (odwołanie w obszarze łącznika do dowolnego z obsługiwanych obiektów)
 
 -   `microsoft.graph.contact`
 
