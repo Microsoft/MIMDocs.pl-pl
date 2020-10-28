@@ -16,13 +16,13 @@ ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
 ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79044394"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "92761009"
 ---
-# <a name="generic-ldap-connector-technical-reference"></a>Informacje techniczne dotyczące ogólnego łącznika LDAP
+# <a name="generic-ldap-connector-technical-reference"></a>Dokumentacja techniczna ogólnego łącznika LDAP
 W tym artykule opisano ogólny łącznik LDAP. Artykuł dotyczy następujących produktów:
 
 * Microsoft Identity Manager 2016 (programie MIM2016)
@@ -32,7 +32,7 @@ W tym artykule opisano ogólny łącznik LDAP. Artykuł dotyczy następujących 
 W przypadku programie MIM2016 i FIM2010R2 łącznik jest dostępny do pobrania z [Centrum pobierania Microsoft](http://go.microsoft.com/fwlink/?LinkId=717495).
 
 W przypadku odwoływania się do specyfikacji IETF RFC w tym dokumencie jest używany format (RFC [numer RFC]/[sekcja w dokumencie RFC]), na przykład (RFC 4512/4.3).
-Więcej informacji można znaleźć na [https://tools.ietf.org/](https://tools.ietf.org/). W lewym panelu wprowadź numer RFC w oknie dialogowym **pobieranie dokumentu** i przetestuj go, aby upewnić się, że jest on prawidłowy.
+Więcej informacji można znaleźć pod adresem [https://tools.ietf.org/](https://tools.ietf.org/) . W lewym panelu wprowadź numer RFC w oknie dialogowym **pobieranie dokumentu** i przetestuj go, aby upewnić się, że jest on prawidłowy.
 
 ## <a name="overview-of-the-generic-ldap-connector"></a>Omówienie łącznika ogólnego LDAP
 Ogólny łącznik LDAP umożliwia integrację usługi synchronizacji z serwerem LDAP v3.
@@ -43,7 +43,7 @@ W celu nawiązania połączenia z katalogami testuje się przy użyciu konta gł
 
 Z perspektywy wysokiego poziomu następujące funkcje są obsługiwane przez bieżącą wersję łącznika:
 
-| Funkcja | Obsługa |
+| Cechy | Pomoc techniczna |
 | --- | --- |
 | Połączone źródło danych |Łącznik jest obsługiwany przez wszystkie serwery LDAP v3 (zgodne ze standardem RFC 4510). Został przetestowany z następującymi: <li>Microsoft Usługi LDS Active Directory (AD LDS)</li><li>Wykaz globalny Microsoft Active Directory (AD GC)</li><li>Serwer katalogowy 389</li><li>Serwer usługi Apache</li><li>IBM Tivoli DS</li><li>Katalog isode</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Otwórz DJ</li><li>Otwórz usługi DS</li><li>Otwórz katalog LDAP (openldap.org)</li><li>Oracle (wcześniej Sun) Directory Server Enterprise Edition</li><li>Serwer katalogu wirtualnego RadiantOne (VDS)</li><li>Serwer Sun z jednym katalogiem</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>W przypadku większości scenariuszy należy użyć wbudowanego łącznika Active Directory, a niektóre funkcje mogą nie być obsługiwane</li></ul>**Ważne znane katalogi lub funkcje nie są obsługiwane:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Usługa powiadamiania o zmianie hasła (PCNS)</li><li>Inicjowanie obsługi administracyjnej programu Exchange</li><li>Usuwanie aktywnych urządzeń synchronizacji</li><li>Obsługa nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenariusze |<li>Zarządzanie cyklem życia obiektów</li><li>Zarządzanie grupami</li><li>Zarządzanie hasłami</li> |
@@ -114,12 +114,12 @@ W przypadku LDAPs należy użyć protokołu SSL 3,0 lub TLS. Protokół SSL 2,0 
 
 ### <a name="required-controls-and-features"></a>Wymagane kontrolki i funkcje
 Aby łącznik działał prawidłowo, muszą być dostępne następujące kontrolki/funkcje LDAP na serwerze LDAP:  
-Filtry "`1.3.6.1.4.1.4203.1.5.3` true/false"
+`1.3.6.1.4.1.4203.1.5.3` Filtry true/false
 
-Filtr prawda/fałsz jest często nieraportowany jako obsługiwany przez katalogi LDAP i może być wyświetlany na **stronie globalnej** w obszarze **obowiązkowe funkcje nie zostały znalezione**. Służy do tworzenia **lub** filtrowania kwerend LDAP, na przykład podczas importowania wielu typów obiektów. Jeśli można zaimportować więcej niż jeden typ obiektu, serwer LDAP obsługuje tę funkcję.
+Filtr prawda/fałsz jest często nieraportowany jako obsługiwany przez katalogi LDAP i może być wyświetlany na **stronie globalnej** w obszarze **obowiązkowe funkcje nie zostały znalezione** . Służy do tworzenia **lub** filtrowania kwerend LDAP, na przykład podczas importowania wielu typów obiektów. Jeśli można zaimportować więcej niż jeden typ obiektu, serwer LDAP obsługuje tę funkcję.
 
 W przypadku korzystania z katalogu, w którym unikatowym identyfikatorem jest zakotwiczenie, należy również udostępnić następujące informacje (Aby uzyskać więcej informacji, zobacz sekcję [Konfigurowanie kotwic](#configure-anchors) ):  
-`1.3.6.1.4.1.4203.1.5.1` wszystkie atrybuty operacyjne
+`1.3.6.1.4.1.4203.1.5.1` Wszystkie atrybuty operacyjne
 
 Jeśli katalog zawiera więcej obiektów niż można dopasować do katalogu, zaleca się używanie stronicowania. Aby stronicowanie działało, potrzebna jest jedna z następujących opcji:
 
@@ -141,10 +141,10 @@ ShowDeletedControl jest używana tylko z metodą import Delta USNChanged, aby mo
 ### <a name="delta-import"></a>Import zmian
 Import Delta jest dostępny tylko po wykryciu katalogu obsługi. Obecnie są używane następujące metody:
 
-* Accesslog LDAP. Zobacz [rejestrowanie http://www.openldap.org/doc/admin24/overlays.html#Access](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
-* Dziennik zmian LDAP. Zobacz [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
-* TimeStamp. W przypadku usługi Novell/NetIQ eDirectory łącznik używa ostatniej daty/godziny do uzyskania utworzonych i zaktualizowanych obiektów. Firma Novell/NetIQ eDirectory nie zapewnia równoważnej metody do pobierania usuniętych obiektów. Tej opcji można również użyć, jeśli na serwerze LDAP nie jest aktywna żadna inna metoda importowania różnicowego. Ta opcja nie umożliwia importowania usuniętych obiektów.
-* USNChanged. Zobacz: [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
+* Accesslog LDAP. Zobacz [ http://www.openldap.org/doc/admin24/overlays.html#Access Rejestrowanie](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
+* Dziennik zmian LDAP. Wyświetlania [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
+* Znacznik czasu. W przypadku usługi Novell/NetIQ eDirectory łącznik używa ostatniej daty/godziny do uzyskania utworzonych i zaktualizowanych obiektów. Firma Novell/NetIQ eDirectory nie zapewnia równoważnej metody do pobierania usuniętych obiektów. Tej opcji można również użyć, jeśli na serwerze LDAP nie jest aktywna żadna inna metoda importowania różnicowego. Ta opcja nie umożliwia importowania usuniętych obiektów.
+* USNChanged. Wyświetlania [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
 
 ### <a name="not-supported"></a>Nieobsługiwane
 Następujące funkcje LDAP nie są obsługiwane:
@@ -152,9 +152,9 @@ Następujące funkcje LDAP nie są obsługiwane:
 * Odwołania LDAP między serwerami (RFC 4511/4.1.10)
 
 ## <a name="create-a-new-connector"></a>Utwórz nowy łącznik
-Aby utworzyć ogólny łącznik LDAP, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz**. Wybierz łącznik **Generic LDAP (Microsoft)** .
+Aby utworzyć ogólny łącznik LDAP, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz** . Wybierz łącznik **Generic LDAP (Microsoft)** .
 
-![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
+![Połączenie](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
 
 ### <a name="connectivity"></a>Łączność
 Na stronie łączność należy określić informacje dotyczące hosta, portu i powiązania. W zależności od tego, które powiązanie zostało zaznaczone, dodatkowe informacje mogą być podane w poniższych sekcjach.
@@ -193,7 +193,7 @@ Pola wyboru **obsługiwane kontrolki** kontrolują zachowanie niektórych operac
 * Jeśli wszystkie trzy opcje (pagedResultsControl, VLVControl i SortControl) są niewybrane, łącznik importuje wszystkie obiekty w jednej operacji, co może się nie powieść, jeśli jest to duży katalog.
 * ShowDeletedControl jest używana tylko wtedy, gdy metoda importu różnicowego to USNChanged.
 
-Nazwa DN dziennika zmian jest kontekstem nazewnictwa używanym przez dziennik zmian różnicowych, na przykład **CN = dziennik**zmian. Ta wartość musi być określona, aby można było importować przyrostowo.
+Nazwa DN dziennika zmian jest kontekstem nazewnictwa używanym przez dziennik zmian różnicowych, na przykład **CN = dziennik** zmian. Ta wartość musi być określona, aby można było importować przyrostowo.
 
 Poniżej znajduje się lista domyślnych dzienników zmian DNs:
 
@@ -204,7 +204,7 @@ Poniżej znajduje się lista domyślnych dzienników zmian DNs:
 | Katalog 389 |Dziennik zmian. Wartość domyślna do użycia: **CN = dziennika zmian** |
 | IBM Tivoli DS |Dziennik zmian. Wartość domyślna do użycia: **CN = dziennika zmian** |
 | Katalog isode |Dziennik zmian. Wartość domyślna do użycia: **CN = dziennika zmian** |
-| Novell/NetIQ eDirectory |Niedostępne. TimeStamp. Łącznik używa daty/godziny ostatniej aktualizacji w celu uzyskania dodanych i zaktualizowanych rekordów. |
+| Novell/NetIQ eDirectory |Niedostępne. Znacznik czasu. Łącznik używa daty/godziny ostatniej aktualizacji w celu uzyskania dodanych i zaktualizowanych rekordów. |
 | Otwórz DJ/DS |Dziennik zmian.  Wartość domyślna do użycia: **CN = dziennika zmian** |
 | Otwórz katalog LDAP |Dziennik dostępu. Wartość domyślna do użycia: **CN = accesslog** |
 | DSEE firmy Oracle |Dziennik zmian. Wartość domyślna do użycia: **CN = dziennika zmian** |
@@ -221,7 +221,7 @@ Ta strona służy do mapowania składnika nazwy wyróżniającej, na przykład j
 
 ![Hierarchia aprowizacji](./media/microsoft-identity-manager-2016-connector-genericldap/provisioninghierarchy.png)
 
-Konfigurując hierarchię aprowizacji, można skonfigurować łącznik tak, aby automatycznie utworzył strukturę w razie potrzeby. Na przykład jeśli istnieje przestrzeń nazw DC = contoso, DC = com i nowy obiekt CN = Jan, OU = Seattle, c = US, DC = contoso, DC = com jest inicjowany, łącznik może utworzyć obiekt typu kraj dla Stanów Zjednoczonych i organizationalUnit dla Seattle, jeśli te nie są jeszcze obecne w katalogu.
+Konfigurując hierarchię aprowizacji, można skonfigurować łącznik tak, aby automatycznie utworzył strukturę w razie potrzeby. Na przykład jeśli istnieje przestrzeń nazw DC = contoso, DC = com i nowy obiekt CN = Jan, OU = Seattle, c = US, DC = contoso, DC = com jest inicjowany, łącznik może utworzyć obiekt typu kraj dla Stanów Zjednoczonych i organizationalUnit dla Seattle, jeśli te nie znajdują się jeszcze w katalogu.
 
 ### <a name="configure-partitions-and-hierarchies"></a>Konfiguruj partycje i hierarchie
 Na stronie partycje i hierarchie zaznacz wszystkie przestrzenie nazw z obiektami, które mają zostać zaimportowane i wyeksportowane.
@@ -239,10 +239,10 @@ Podczas wykonywania wyszukiwania odbywa się to we wszystkich kontenerach w part
 
 ![Przeszukaj tylko wybrane kontenery](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 
-### <a name="configure-anchors"></a>Skonfiguruj kotwice
+### <a name="configure-anchors"></a>Konfiguruj zakotwiczenia
 Ta strona ma zawsze wstępnie skonfigurowaną wartość i nie można jej zmienić. Jeśli dostawca serwera został zidentyfikowany, zakotwiczenie może zostać zapełnione z niezmiennym atrybutem, na przykład identyfikator GUID obiektu. Jeśli nie został on wykryty lub wiadomo, że nie ma atrybutu niezmiennego, łącznik używa nazwy DN (nazwa wyróżniająca) jako zakotwiczenia.
 
-![kotwice](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
+![Kotwice](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
 
 
 Poniżej znajduje się lista serwerów LDAP i używanych kotwic:
@@ -254,7 +254,7 @@ Poniżej znajduje się lista serwerów LDAP i używanych kotwic:
 | Katalog Apache |dn |
 | IBM Tivoli DS |dn |
 | Katalog isode |dn |
-| Novell/NetIQ eDirectory |Identyfikator GUID |
+| Novell/NetIQ eDirectory |GUID |
 | Otwórz DJ/DS |dn |
 | Otwórz katalog LDAP |dn |
 | ODSEE firmy Oracle |dn |
