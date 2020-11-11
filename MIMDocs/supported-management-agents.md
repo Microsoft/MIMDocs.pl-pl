@@ -12,26 +12,26 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/2/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 157fd8d2a6b4296899f90c661e12ba6e19743d0f
-ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.openlocfilehash: b691fb5dd324a4202ab3f0f02344c5b43102c63a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174539"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492484"
 ---
 # <a name="connect-to-your-directories"></a>Łączenie z katalogami
 
-Łączniki łączą określone połączone źródła danych z programem Microsoft Identity Manager SP1 (MIM). Łącznik przenosi dane z połączonego źródła danych do usługi MIM. Jeśli dane w usłudze MIM zostaną zmodyfikowane, łącznik może także wyeksportować dane do połączonego źródła danych, aby zapewnić jego synchronizację z usługą MIM. Ogólnie dla każdego połączonego katalogu istnieje co najmniej jeden łącznik.
+Łączniki łączą określone połączone źródła danych z usługą Microsoft Identity Manager (MIM). Łącznik przenosi dane z połączonego źródła danych do usługi MIM. Jeśli dane w usłudze MIM zostaną zmodyfikowane, łącznik może także wyeksportować dane do połączonego źródła danych, aby zapewnić jego synchronizację z usługą MIM. Ogólnie dla każdego połączonego katalogu istnieje co najmniej jeden łącznik.
 
 W programie Forefront Identity Manager łączniki były znane jako agenci zarządzania. Ta nazwa jest nadal używana w niektórych artykułach i częściach produktu, lecz obie nazwy odnoszą się do tego samego pojęcia.
 
 W tym artykule opisano łączniki, które są uwzględnione & obsługiwane w programie MIM, ale łącznik rozszerzalnej łączności 2,0 umożliwia łączenie się z jeszcze większą liczbą źródeł danych. Niektórzy partnerzy utworzyli własne łączniki w ten sposób. Pełna lista jest dostępna w wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (Program FIM 2010: agenci zarządzania parterów).
 
-## <a name="supported-connectors-in-mim-2016-sp1"></a>Obsługiwane łączniki w programie MIM 2016 z dodatkiem SP1
+## <a name="supported-connectors-in-mim-2016-sp2"></a>Obsługiwane łączniki w programie MIM 2016 z dodatkiem SP2
 
 | Nazwa łącznika | Obsługiwane wersje połączonych źródeł danych & linki techniczne |
 | ---- | ----------------------------------------------- |
@@ -47,9 +47,9 @@ W tym artykule opisano łączniki, które są uwzględnione & obsługiwane w pro
 | Microsoft SQL Server | SQL Server 2012 – 2017 <br/> Korzystanie z ogólnego łącznika SQL dla nowszych wersji lub SQL Azure|
 | Serwery katalogowe firmy Oracle (wcześniej Sun i Netscape) | Programy Sun Directory Server 6.x, 7.x i Oracle 11<br/> Użyj ogólnego łącznika LDAP dla nowszych wersji |
 | [Łącznik programu Windows PowerShell](https://msdn.microsoft.com/library/dn640417.aspx) | Program Windows PowerShell 2.0 lub nowszy |
-| [Łącznik Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niezalecane w przypadku nowych wdrożeń) |
-| [Ogólny łącznik LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Serwer LDAP w wersji 3 (zgodny ze specyfikacją RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
-| [Ogólny łącznik SQL](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Łącznik jest obsługiwany ze wszystkimi 64-bitowymi sterownikami ODBC](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
+| [Łącznik Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (niezalecane w przypadku nowych wdrożeń, użyj synchronizacji Azure AD Connect, Azure AD Connect aprowizacji w chmurze lub łącznika Graf) |
+| [Ogólny łącznik LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Serwer LDAP v3 (zgodny ze standardem RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector), w tym serwer katalogowy 389, serwer Apache Directory, IBM Tivoli DS, isode Directory, NetIQ eDirectory, Novell eDirectory, Open DJ, Open DS, Open LDAP, Oracle Directory Server Enterprise Edition, RadiantOne Virtual Directory Server, Sun jeden serwer katalogu |
+| [Ogólny łącznik SQL](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Łącznik jest obsługiwany ze wszystkimi 64-bitowymi sterownikami ODBC](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) , takimi jak Microsoft SQL Server & SQL Azure, IBM DB2 10. x, IBM DB2 9. x, oracle 10 & 11g, oracle 12c & 18C, MySQL 5. x|
 | [Łącznik programu Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Program Lotus Notes w wersji 8,5. x, wersja 9.0. x |
 | [Łącznik usług SharePoint UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013-2019 z aplikacją usługi profilu użytkownika (UPA) |
 | [Łącznik usług sieci Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5,0 lub 6,0; Oracle PeopleSoft 9,1; Oracle eBusiness 12,1 i inne interfejsy API protokołu SOAP i REST](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |

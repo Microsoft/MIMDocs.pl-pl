@@ -9,12 +9,12 @@ ms.date: 10/18/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fa4e5ade14c1a3df94b868d149472c1b42d1c59c
-ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
+ms.openlocfilehash: 530229a3e5217955e974021ba42870f415e66033
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "92761033"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492518"
 ---
 # <a name="identity-manager-version-release-history"></a>Historia wersji programu Identity Manager
 
@@ -26,6 +26,14 @@ Zespół Microsoft Identity Manager regularnie publikuje aktualizacje. Ten artyk
 >Historię wersji składników Microsoft pakietu BHOLD Suite można znaleźć w obszarze historia wersji [modułów pakietu BHOLD](version-bhold-history.md).
 >
 >Historię wersji ogólnych usług LDAP, ogólnych SQL, Web Services, PowerShell, Graph i Lotus Domino można znaleźć na stronie [historia wersji łącznika](microsoft-identity-manager-2016-connector-version-history.md).  
+
+## <a name="mim-version-463550"></a>4.6.355.0 wersja programu MIM
+- Stan: 6 listopada 2020
+- [Pobieranie poprawki](https://www.microsoft.com/download/details.aspx?id=102301)
+- [Artykuł KB 4585922](https://support.microsoft.com/help/4585922)
+
+Ta poprawka zawiera aktualizacje dla składników Menedżer synchronizacji programu MIM, usługa MIM i Portal programu MIM, a także zawiera zbiorcze aktualizacje składników programu MIM z poprzednich poprawek dla programu MIM 2016 SP2.
+
 
 ## <a name="mim-version-462630"></a>4.6.263.0 wersja programu MIM
 - Stan: 7 sierpnia 2020
@@ -241,7 +249,7 @@ W programie MIM w wersji 4.4.1749.0 zostały rozwiązane następujące problemy.
 - Atrybut msidmPhoneGatePhoneNumber bez kodu kraju nie używa wartości DefaultCountryCode w MFASettings.xml.
 - Zestawy członkostw można aktualizować dynamicznie bez konieczności polegania na FIM_TemporalEventsJob.
 - Reguły synchronizacji nie obsługują tworzenia reguł przepływu atrybutów dla atrybutów, których nazwy zawierają skrót lub symbol funta (#).
-  
+  
 #### <a name="privilege-access-management"></a>Zarządzanie dostępem do uprawnień 
 
 - New-PAMDomainConfiguration polecenie cmdlet programu PowerShell ustawia nieprawidłową wartość dla konfiguracji zaufania domeny, co spowodowało błąd (nie można przetworzyć tego nieznanego parametru żądania).
@@ -249,9 +257,9 @@ W programie MIM w wersji 4.4.1749.0 zostały rozwiązane następujące problemy.
 #### <a name="microsoft-identity-portal"></a>Portal tożsamości firmy Microsoft
 
 - Wyjątek jest wyświetlany na ekranie głównym portal zarządzania tożsamości i pojawia się również przycisk Zamknij.
-- Przyciski są nieprawidłowo wyświetlane w oknie usuwania elementu.Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome. 
-- Przycisk wyszukiwania nakłada się na przycisk wyboru zasobów w oknie działania zatwierdzania w przepływie pracy autoryzacji. Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome. 
-- W menu podręcznym właściwości grupy obszar przycisku nakłada się na kontrolki nawigacji ListView w kontrolce Usuń członków.Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome.
+- Przyciski są nieprawidłowo wyświetlane w oknie usuwania elementu.  Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome. 
+- Przycisk wyszukiwania nakłada się na przycisk wyboru zasobów w oknie działania zatwierdzania w przepływie pracy autoryzacji. Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome. 
+- W menu podręcznym właściwości grupy obszar przycisku nakłada się na kontrolki nawigacji ListView w kontrolce Usuń członków.  Ten problem wystąpił w programie Internet Explorer, Firefox i Chrome.
 - Wiele elementów interfejsu użytkownika nie jest wyświetlanych prawidłowo. Następujące elementy zostały naprawione:
 
     - Strzałki w górę i w dół w niektórych arkuszach właściwości.
@@ -263,21 +271,21 @@ W programie MIM w wersji 4.4.1749.0 zostały rozwiązane następujące problemy.
 - Na ekranie zarządzania obiektami (na przykład grupy dystrybucji), jeśli wybrano wiele obiektów przy użyciu pola wyboru, a obiekty mają długie nazwy wyświetlane. Teraz okno dialogowe zmienia rozmiar w pionie, tak aby formant nie rozciągał się poza końcem ekranu przeglądarki.
 - W celu zarządzania obiektami lub ekranu listy (takich jak grupy dystrybucyjne) kontrolka wybrane elementy może przesunąć ekran w górę, aby znajdował się bezpośrednio w ostatnim obiekcie wymienionym na liście tabeli.
 - Konstruktor filtrów (na przykład wyszukiwanie zaawansowane) w przeglądarce Safari nie działa.
-- okna dialogowe portalu, w których są wyświetlane wartości atrybutów, krótsze słowa są dystrybuowane w całej komórce z dużą ilością białych znaków, a nie są wyrównane do lewej. 
+- okna dialogowe portalu, w których są wyświetlane wartości atrybutów, krótsze słowa są dystrybuowane w całej komórce z dużą ilością białych znaków, a nie są wyrównane do lewej. 
 - W niektórych wersjach przeglądarki wybrane elementy nie są aktualizowane, gdy zaznaczenie elementu zostanie zmienione.
-- Karty okna dialogowego i kopiowania do schowka wyróżniają się podczas przejścia do programu przy użyciu klawisza Tab.  
-- W programie Internet Explorer 10, gdy oglądasz Wyświetlanie siatki obiektów (takich jak grupy dystrybucyjne), zamiast wyświetlania w środku okna dialogowego znajduje się część "Znajdź grupy dystrybucji, których chcesz użyć w powyższym polu wyszukiwania".  
+- Karty okna dialogowego i kopiowania do schowka wyróżniają się podczas przejścia do programu przy użyciu klawisza Tab.  
+- W programie Internet Explorer 10, gdy oglądasz Wyświetlanie siatki obiektów (takich jak grupy dystrybucyjne), zamiast wyświetlania w środku okna dialogowego znajduje się część "Znajdź grupy dystrybucji, których chcesz użyć w powyższym polu wyszukiwania".  
 - Po zainstalowaniu aktualizacji w portalu programu MIM wyświetlanie portalu w programie Internet Explorer kończy się niepowodzeniem.
-- Gdy używasz wyszukiwania zaawansowanego w przeglądarce Firefox, naciśnięcie klawisza ENTER w polu wartość atrybutu zwraca błąd.  
+- Gdy używasz wyszukiwania zaawansowanego w przeglądarce Firefox, naciśnięcie klawisza ENTER w polu wartość atrybutu zwraca błąd.  
 
 #### <a name="certificate-management"></a>Zarządzanie certyfikatami
 
 - Nadawca żądania (Menedżer certyfikatów) nie może porzucić żądania, które zostało zduplikowane lub zapomniane przez użytkownika, który ma uprawnienia do wykonywania.
 - Podczas próby odnowienia wirtualnej karty inteligentnej modułu TPM z nowoczesnej aplikacji zwracany jest wyjątek zabroniony.
-- Podczas niektórych działań kart inteligentnych istniejące połączenia z bazą danych CertificateManagement są nieoczekiwanie otwarte.  
+- Podczas niektórych działań kart inteligentnych istniejące połączenia z bazą danych CertificateManagement są nieoczekiwanie otwarte.  
 - Jeśli instalacja aktualizacji do zarządzania certyfikatami programu MIM (CM) zostanie podjęta przed uruchomieniem Kreatora konfiguracji zarządzanie certyfikatami w usłudze MIM, aktualizacja kończy się niepowodzeniem z wyjątkiem, który wydaje się niezwiązany z problemem.
-- W Kreatorze konfiguracji zarządzanie certyfikatami w usłudze MIM są wyświetlane nieprawidłowe informacje o wersji produktu, a logo nie jest wyświetlane poprawnie.  
-- Eksportowane dane raportu zarządzania certyfikatami programu MIM różnią się od danych raportu.Dane kolumny nie zawsze pasują do nagłówków kolumn.
+- W Kreatorze konfiguracji zarządzanie certyfikatami w usłudze MIM są wyświetlane nieprawidłowe informacje o wersji produktu, a logo nie jest wyświetlane poprawnie.  
+- Eksportowane dane raportu zarządzania certyfikatami programu MIM różnią się od danych raportu.  Dane kolumny nie zawsze pasują do nagłówków kolumn.
 
 ## <a name="version-4416420"></a>4.4.1642.0 wersja
 

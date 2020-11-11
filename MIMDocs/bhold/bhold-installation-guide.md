@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 848bdbb793de97eb9512de93febd939bb45a52d3
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042257"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492297"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Przewodnik instalacji programu Microsoft pakietu BHOLD Suite SP1 (6,0)
 
@@ -30,7 +30,7 @@ Microsoft® pakietu BHOLD Suite Service Pack 1 (SP1) to zbiór aplikacji, które
 
 
 > [!NOTE]
-> **Dotyczy**: Microsoft Identity Manager 2016 z dodatkiem SP1
+> **Dotyczy** : Microsoft Identity Manager 2016 z dodatkiem SP1 lub nowszym
 
 ## <a name="what-this-document-covers"></a>Co obejmuje ten dokument
 
@@ -38,7 +38,7 @@ W tym dokumencie wyjaśniono, jak zaplanować wdrożenie pakietu BHOLD w celu sp
 
 ## <a name="pre-requisite-knowledge"></a>Wiedza o wymaganiach wstępnych
 
-W tym dokumencie przyjęto założenie, że masz podstawową wiedzę na temat sposobu instalowania oprogramowania na komputerach serwerów. Założono również, że masz podstawową wiedzę na temat Active Directory® usługi domenowe, Microsoft Identity Manager z dodatkiem SP1 (FIM) i Microsoft SQL Server 2012. Opis sposobu konfigurowania i konfigurowania technologii zależnych, takich jak AD DS i FIM, znajduje się poza zakresem tej dokumentacji. Informacje o funkcjach wykonywanych przez moduły Microsoft pakietu BHOLD można znaleźć [w podręczniku Microsoft pakietu BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+W tym dokumencie przyjęto założenie, że masz podstawową wiedzę na temat sposobu instalowania oprogramowania na komputerach serwerów. Założono również, że masz podstawową wiedzę na temat Active Directory® usługi domenowe, Forefront lub Microsoft Identity Manager (FIM) i Microsoft SQL Server 2012 bazy danych. Opis sposobu konfigurowania i konfigurowania technologii zależnych, takich jak AD DS i FIM, znajduje się poza zakresem tej dokumentacji. Informacje o funkcjach wykonywanych przez moduły Microsoft pakietu BHOLD można znaleźć [w podręczniku Microsoft pakietu BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## <a name="audience"></a>Grupy odbiorców
 
@@ -99,7 +99,7 @@ System Windows można skonfigurować do pobierania certyfikatów głównych od f
 
 ![PAKIETU BHOLD instalacji usług IIS](media/bhold-installation-guide/iis-install-bhold.png)
 
-W przypadku instalowania programu pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016 strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost. config znajdującego się ```C:\Windows\System32\inetsrv\config```w temacie. W ```<globalModules>``` sekcji Dodaj ```preCondition="bitness64``` do wpisu, który rozpoczyna się ```<add name="SPNativeRequestModule"``` w następujący sposób:
+Jeśli instalujesz pakiet pakietu BHOLD Suite SP1 w systemie Windows Server 2012 lub 2016, strony sieci Web pakietu BHOLD nie będą dostępne do czasu modyfikacji pliku applicationHost.config znajdującego się w temacie ```C:\Windows\System32\inetsrv\config``` . W ```<globalModules>``` sekcji Dodaj ```preCondition="bitness64``` do wpisu, który rozpoczyna się w ```<add name="SPNativeRequestModule"``` następujący sposób:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 

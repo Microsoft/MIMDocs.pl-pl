@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 9a2dd84e121217772a8831653b2e4790436c32ec
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92760997"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492450"
 ---
 # <a name="certificate-management-rest-api-service-details"></a>Szczegóły usługi interfejsu API REST zarządzania certyfikatami
 W poniższych sekcjach opisano szczegółowe informacje o interfejsie API REST zarządzania certyfikatami w programie Microsoft Identity Manager (MIM).
@@ -42,7 +42,7 @@ Wywołania interfejsu API REST zarządzanie certyfikatami w usłudze MIM są obs
 ## <a name="http-request-and-response-headers"></a>Nagłówki żądań i odpowiedzi HTTP
 Żądania HTTP wysyłane do interfejsu API powinny zawierać następujące nagłówki (Ta lista nie jest wyczerpująca):
 
-Header | Opis
+Nagłówek | Opis
 -------|------------
 Autoryzacja | Wymagane. Zawartość zależy od metody uwierzytelniania. Metoda jest konfigurowalna i może opierać się na zintegrowanym uwierzytelnianiu systemu Windows (WIA) lub Active Directory Federation Services (AD FS).
 Content-Type | Wymagane, jeśli żądanie ma treść. Musi być `application/json` .
@@ -52,7 +52,7 @@ Plików | Plik cookie sesji. Może być wymagana w zależności od metody uwierz
 
 Odpowiedzi HTTP zawierają następujące nagłówki (Ta lista nie jest wyczerpująca):
 
-Header | Opis
+Nagłówek | Opis
 -------|------------
 Content-Type | Interfejs API zawsze zwraca wartość `application/json` .
 Długość zawartości | Długość treści żądania (jeśli jest obecna) w bajtach.

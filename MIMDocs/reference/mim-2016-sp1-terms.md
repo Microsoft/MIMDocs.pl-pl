@@ -11,16 +11,16 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: afe167cdcd6ca548ef34e802f5606bee6ba5b31e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6e6af5be6c091be74c7162ef9c960c89a3302ba2
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760900"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492569"
 ---
 # <a name="microsoft-identity-manager-2016-sp1-terminology"></a>Microsoft Identity Manager 2016 z dodatkiem SP1
 
-Ten dokument zawiera kompleksową listę warunków, do których odwołuje się Microsoft Identity Manager 2016 z dodatkiem SP1.
+Ten dokument zawiera kompleksową listę warunków, do których odwołuje się Microsoft Identity Manager 2016 SP1 i nowszych.
 
 ## <a name="a"></a>A
 
@@ -189,11 +189,11 @@ odłączony **Filtr** : obiekt w obszarze łącznika, który nie może być sprz
 
 **brama blokady** : działanie przepływu pracy w fazie uwierzytelniania przetwarzania żądania w celu zablokowania użytkownikowi, który nie powiódł się uwierzytelnić. Zobacz również wpis "blokada" i "Brama pytań i odpowiedzi".
 
-**próg blokady** : jest to liczba całkowita, która określa, ile razy użytkownik może zakończyć pracę, zanim zostanie zablokowany przez czas trwania blokady.Ustawienie domyślne to 3. Dolny limit to 0, a górny limit to 99.
+**próg blokady** : jest to liczba całkowita, która określa, ile razy użytkownik może zakończyć pracę, zanim zostanie zablokowany przez czas trwania blokady. Ustawienie domyślne to 3. Dolny limit to 0, a górny limit to 99.
 
-**czas trwania blokady** : jest to liczba całkowita, która określa czas trwania w minutach, przez który użytkownik jest zablokowany, po osiągnięciu progu blokady.Ustawienie domyślne to 15 minut.Dolny limit dla tego ustawienia wynosi 1, a górny limit to 9999.Górny limit umożliwia administratorowi ustawienie górnego limitu na więcej niż jeden dzień.
+**czas trwania blokady** : jest to liczba całkowita, która określa czas trwania w minutach, przez który użytkownik jest zablokowany, po osiągnięciu progu blokady.  Ustawienie domyślne to 15 minut.  Dolny limit dla tego ustawienia wynosi 1, a górny limit to 9999. Górny limit umożliwia administratorowi ustawienie górnego limitu na więcej niż jeden dzień.
 
-**Liczba progów blokady przed trwałą blokadą** : jest to kontrolka liczb całkowitych, która umożliwia administratorowi skonfigurowanie wartości liczbowej dla liczby przypadków, w których użytkownik może osiągnąć próg blokady, zanim zostanie trwale zablokowany.  Stała blokada oznacza, że użytkownik musi zostać odblokowany przez administratora systemu. Domyślnie jest to wartość 3.Zakresem tego ustawienia jest z zakresu od 1 do 99.
+**Liczba progów blokady przed trwałą blokadą** : jest to kontrolka liczb całkowitych, która umożliwia administratorowi skonfigurowanie wartości liczbowej dla liczby przypadków, w których użytkownik może osiągnąć próg blokady, zanim zostanie trwale zablokowany.  Stała blokada oznacza, że użytkownik musi zostać odblokowany przez administratora systemu. Domyślnie jest to wartość 3. Zakresem tego ustawienia jest z zakresu od 1 do 99.
 <br/>
 
 ## <a name="m"></a>M
@@ -499,7 +499,7 @@ odłączony **Filtr** : obiekt w obszarze łącznika, który nie może być sprz
 
 **odblokowana Grupa** : Grupa, w której można zmienić członkostwo grupy przez użytkowników innych niż właściciel grupy.
 
-**Grupa uniwersalna** : Grupa z zakresem uniwersalnym jest grupą Active Directory, która może zawierać członków z określonego lasu. Do grupy uniwersalnej można przypisać uprawnienia w dowolnej domenie lub lesie. Listy dystrybucyjne mają zwykle zakres uniwersalny.Grupa zabezpieczeń z zakresem uniwersalnym może zabezpieczać zasoby w tym samym lesie.
+**Grupa uniwersalna** : Grupa z zakresem uniwersalnym jest grupą Active Directory, która może zawierać członków z określonego lasu. Do grupy uniwersalnej można przypisać uprawnienia w dowolnej domenie lub lesie. Listy dystrybucyjne mają zwykle zakres uniwersalny.  Grupa zabezpieczeń z zakresem uniwersalnym może zabezpieczać zasoby w tym samym lesie.
 
 **żądanie aktualizacji** : żądanie zmiany atrybutów zasobu.
 

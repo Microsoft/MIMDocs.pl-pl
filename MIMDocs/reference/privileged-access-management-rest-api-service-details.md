@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 00a2f4d9c44747d50139655d368e42b11fbd388c
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92760985"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492433"
 ---
 # <a name="pam-rest-api-service-details"></a>Szczegóły usługi interfejsu API REST PAM
 W poniższych sekcjach omówiono szczegółowe informacje o interfejsie API REST usługi Microsoft Identity Manager (MIM) Privileged Access Management (PAM).
@@ -26,7 +26,7 @@ W poniższych sekcjach omówiono szczegółowe informacje o interfejsie API REST
 
 Żądania HTTP wysyłane do interfejsu API powinny zawierać następujące nagłówki (Ta lista nie jest wyczerpująca):
 
-Header | Opis
+Nagłówek | Opis
 -------|------------
 Autoryzacja | Wymagane. Zawartość zależy od metody uwierzytelniania, która jest konfigurowalna i może opierać się na użyciu usługi WIA (uwierzytelnianie zintegrowane systemu Windows) lub usług AD FS.
 Content-Type | Wymagane, jeśli żądanie ma treść. Musi być ustawiony na `application/json` .
@@ -37,7 +37,7 @@ Plików | Plik cookie sesji. Może być wymagana w zależności od metody uwierz
 
 Odpowiedzi HTTP powinny zawierać następujące nagłówki (Ta lista nie jest wyczerpująca):
 
-Header | Opis
+Nagłówek | Opis
 -------|------------
 Content-Type | Interfejs API zawsze zwraca wartość `application/json` .
 Długość zawartości | Długość treści żądania (jeśli jest obecna) w bajtach.
@@ -89,7 +89,7 @@ Kod stanu HTTP | Opis
 
 Filtry mogą określać dowolne właściwości żądań PAM, ról PAM. lub oczekujące żądania PAM. Na przykład: *ExpirationTime* , *DisplayName* lub jakakolwiek inna prawidłowa właściwość żądania PAM, roli PAM lub oczekującego żądania.
 
-Interfejs API obsługuje następujące operatory w wyrażeniach filtru: *and* , *EQUAL* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* i *LessThanOrEqual* . 
+Interfejs API obsługuje następujące operatory w wyrażeniach filtru: *and* , *EQUAL* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* i *LessThanOrEqual*. 
 
 Następujące przykładowe żądania obejmują filtry:
 

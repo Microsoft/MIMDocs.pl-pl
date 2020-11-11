@@ -12,17 +12,17 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79382313"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492416"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Konfigurowanie serwera zarządzania tożsamościami: Windows Server 2016 lub 2019
 
 > [!div class="step-by-step"]
-> [«Przygotowywanie domeny](preparing-domain.md)
-> [SQL Server»](prepare-server-sql2016.md)
+> [«Przygotowywanie domeny](preparing-domain.md) 
+>  [SQL Server»](prepare-server-sql2016.md)
 > 
 
 > [!NOTE]
@@ -30,13 +30,13 @@ ms.locfileid: "79382313"
 
 
 > [!NOTE]
-> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Przykład:
+> W tym przewodniku zastosowano przykładowe nazwy i wartości dotyczące firmy o nazwie Contoso. Należy je zastąpić własnymi danymi. Na przykład:
 > - Nazwa kontrolera domeny — **corpdc**
 > - Nazwa domeny — **contoso**
 > - Nazwa serwera usługi programu MIM — **corpservice**
 > - Nazwa serwera synchronizacji programu MIM — **corpsync**
 > - Nazwa SQL Server — **corpsql**
-> - Hasło<strong>Pass@word1</strong>
+> - Hasło <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Przyłączanie do domeny systemu Windows Server 2016
 
@@ -59,7 +59,7 @@ Zacznij od maszyny z systemem Windows Server 2016 z co najmniej 8 12GB pamięci 
 
     Po upływie maksymalnie minuty proces zostanie zakończony i zostanie wyświetlony komunikat „Pomyślnie ukończono aktualizowanie zasad komputera”.
 
-6. Dodaj role **Serwer sieci Web (IIS)** i **Serwer aplikacji**, funkcje platformy **.NET Framework** 3.5, 4.0 i 4.5 oraz **moduł usługi Active Directory dla środowiska Windows PowerShell**.
+6. Dodaj role **Serwer sieci Web (IIS)** i **Serwer aplikacji** , funkcje platformy **.NET Framework** 3.5, 4.0 i 4.5 oraz **moduł usługi Active Directory dla środowiska Windows PowerShell**.
 
     ![Obraz funkcji programu PowerShell](media/MIM-DeployWS2.png)
 
@@ -80,25 +80,25 @@ Skonfiguruj zasady zabezpieczeń serwera w celu zezwalania na uruchamianie nowo 
 
 2. Przejdź do lokalizacji **Zasady lokalne > Przypisywanie praw użytkownika**.
 
-3. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie jako usługa**, a następnie wybierz pozycję **Właściwości**.
+3. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Logowanie jako usługa** , a następnie wybierz pozycję **Właściwości**.
 
     ![Obraz programu Zasady zabezpieczeń lokalnych](media/MIM-DeployWS3.png)
 
-4. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz następujące polecenie `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, kliknij przycisk **Sprawdź nazwy**, a następnie kliknij przycisk **OK**.
+4. Kliknij pozycję **Dodaj użytkownika lub grupę** , a następnie w polu tekstowym wpisz następujące `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR` polecenie, kliknij przycisk **Sprawdź nazwy** , a następnie kliknij przycisk **OK**.
 
-5. Kliknij przycisk **OK**, aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
+5. Kliknij przycisk **OK** , aby zamknąć okno **Logowanie w trybie usługi: właściwości**.
 
-6.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmów dostępu do tego komputera z sieci**, a następnie wybierz polecenie **Właściwości**. >
+6.  W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Odmów dostępu do tego komputera z sieci** , a następnie wybierz polecenie **Właściwości**. >
 
-7. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
+7. Kliknij pozycję **Dodaj użytkownika lub grupę** , a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 
-8. Kliknij przycisk **OK**, aby zamknąć okno **Odmowa dostępu do tego komputera z sieci: właściwości**.
+8. Kliknij przycisk **OK** , aby zamknąć okno **Odmowa dostępu do tego komputera z sieci: właściwości**.
 
-9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **odmowa logowania lokalnego**i wybierz polecenie **Właściwości**.
+9. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **odmowa logowania lokalnego** i wybierz polecenie **Właściwości**.
 
-10. Kliknij pozycję **Dodaj użytkownika lub grupę**, a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
+10. Kliknij pozycję **Dodaj użytkownika lub grupę** , a następnie w polu tekstowym wpisz `contoso\MIMSync; contoso\MIMService` i kliknij przycisk **OK**.
 
-11. Kliknij przycisk **OK**, aby zamknąć okno **Odmowa logowania lokalnego: właściwości**.
+11. Kliknij przycisk **OK** , aby zamknąć okno **Odmowa logowania lokalnego: właściwości**.
 
 12. Zamknij okno programu Zasady zabezpieczeń lokalnych.
 
@@ -129,5 +129,5 @@ Przed zainstalowaniem składników programu MIM 2016 SP2 upewnij się, że zains
     ```
 
 > [!div class="step-by-step"]  
-> [«Przygotowywanie domeny](preparing-domain.md)
-> [SQL Server»](prepare-server-sql2016.md)
+> [«Przygotowywanie domeny](preparing-domain.md) 
+>  [SQL Server»](prepare-server-sql2016.md)

@@ -5,23 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/19/2019
+ms.date: 11/2/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f1f8fb9f443bcafb720b1fd0e9880c93a9772c22
-ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.openlocfilehash: b4737be2036e40f431b26d522678f135aa267d22
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174550"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492382"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Platformy obsługiwane przez program MIM 2016
 
-W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczone gwiazdką * są obsługiwane tylko w wersji programu MIM 2016 z dodatkiem Service Pack 1. Wersje oznaczone gwiazdką * * są obsługiwane tylko w programie MIM 2016 z dodatkiem Service Pack 2 lub nowszym. Wersje oznaczone jako "NR" niezalecane są obsługiwane, ale nie są zalecane w przypadku uruchamiania nowego wdrożenia tej platformy dla programu MIM.
+W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika programu Microsoft Identity Manager 2016. Wersje oznaczone gwiazdką * są obsługiwane tylko w programie MIM 2016 z dodatkiem Service Pack 1, Service Pack 2 lub nowszym. Wersje oznaczone gwiazdką * * są obsługiwane tylko w programie MIM 2016 z dodatkiem Service Pack 2 lub nowszym. Wersje oznaczone jako "NR" niezalecane są obsługiwane, ale nie są zalecane w przypadku uruchamiania nowego wdrożenia tej platformy dla programu MIM.
 
 
 | **Składnik programu MIM** | **Platforma** | **Wersja** |
@@ -32,7 +32,7 @@ W tej tabeli podano obsługiwane platformy i wersje dla każdego składnika prog
 | | Active Directory do obsługi administracyjnej użytkowników, PCNS i synchronizacji z użytkownikami (opcjonalnie)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 z dodatkiem R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | | Exchange na potrzeby aprowizacji skrzynek pocztowych i synchronizacji usługi GAL (opcjonalnie)|Exchange Server 2013 SP1<br/>Exchange Server 2016*<br/>Program Exchange Server 2019 * * |
 | | Środowisko programistyczne (opcjonalnie) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
-| | Dodatkowy system połączony (opcjonalnie) | Active Directory Domain Services<br/>Usługa Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 lub nowsza wersja<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> SharePoint Server 2019 * * <br/> Inne produkty innych firm |
+| | Dodatkowy system połączony (opcjonalnie) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 lub nowsza wersja<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> SharePoint Server 2019 * * <br/> Inne produkty innych firm |
 | **Usługa i portal MIM** | Windows Server | Windows Server 2008 R2 z dodatkiem SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 z dodatkiem R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 * * |
 | |Scenariusz PAM: system Windows Server | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * <br/> Windows Server 2019 * *|
 | |Scenariusz usługi PAM: Active Directory lasu PAM środowiska bastionu | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * <br/> Windows Server 2019 * * |

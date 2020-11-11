@@ -7,14 +7,14 @@ manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 6cf0914b196673bb2e99d6d679fad46833c58b00
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042172"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492263"
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Rejestrowanie dynamiczne usługi MIM z dodatkiem SP1 (4.4.1436.0)
+# <a name="mim-2016-sp1-4414360--service-dynamic-logging"></a>Rejestrowanie dynamiczne usługi programu MIM 2016 z dodatkiem SP1 (4.4.1436.0)
 
 W wersji 4.4.1436.0 wprowadziliśmy nową możliwość rejestrowania. Dzięki niej administrator i inżynierowie pomocy technicznej mogą włączyć rejestrowanie bez konieczności ponownego uruchamiania usługi zarządzania.
 
@@ -31,7 +31,7 @@ Poziomy rejestrowania dynamicznego można znaleźć [tutaj](https://msdn.microso
 - Krytyczne = w przypadku domyślnego poziomu usługi są zapisywane tylko zdarzenia krytyczne
 - Zaktualizuj wiersz 8 (dynamicLogging mode="true" loggingLevel="Critical") przy użyciu preferowanej wartości rejestrowania
 
-Konfiguracja rejestrowania dynamicznego znajdująca się w wierszu 266: Microsoft. ResourceManagement. Service. exe. config
+Konfiguracja rejestrowania dynamicznego znajdująca się w wierszu 266: Microsoft.ResourceManagement.Service.exe.config
 
 ![Wyróżnione sekcje zawierają wiersze z różnymi dostępnymi obszarami rejestrowania](media/mim-service-dynamic-logging/screen02.png)
 
@@ -51,7 +51,7 @@ Aby wyświetlić ślad, można użyć [narzędzia Podgląd śledzenia usług](ht
 
 ## <a name="updates-build-45xx-or-greater"></a>Aktualizacje: kompilacja 4.5. x. x lub większa
 
-W kompilacji 4.5. x. x Zaktualizowaliśmy funkcję rejestrowania, aby określić domyślny poziom rejestrowania to **"Warning" (ostrzeżenie**). Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" są dodawane przed rozszerzeniem). Pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy plik przekracza maksymalny rozmiar, Usługa uruchamia zapis w innym pliku. Jeśli istnieje inny plik, zostanie on nadpisany. Domyślny maksymalny rozmiar pliku to 1 GB. Aby zmienić domyślny maksymalny rozmiar, należy dodać parametr **"maxOutputFileSizeKB"** z wartością maksymalnego rozmiaru pliku w kilobajtach do odbiornika (Zobacz przykład poniżej) i ponownie uruchomić usługę programu MIM. Gdy usługa zostanie uruchomiona, dołącza dzienniki w nowszej pliku (w przypadku przekroczenia limitu miejsca zastępuje najstarszy plik). 
+W kompilacji 4.5. x. x Zaktualizowaliśmy funkcję rejestrowania, aby określić domyślny poziom rejestrowania to **"Warning" (ostrzeżenie** ). Usługa zapisuje komunikaty w dwóch plikach (indeksy "00" i "01" są dodawane przed rozszerzeniem). Pliki znajdują się w katalogu "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Gdy plik przekracza maksymalny rozmiar, Usługa uruchamia zapis w innym pliku. Jeśli istnieje inny plik, zostanie on nadpisany. Domyślny maksymalny rozmiar pliku to 1 GB. Aby zmienić domyślny maksymalny rozmiar, należy dodać parametr **"maxOutputFileSizeKB"** z wartością maksymalnego rozmiaru pliku w kilobajtach do odbiornika (Zobacz przykład poniżej) i ponownie uruchomić usługę programu MIM. Gdy usługa zostanie uruchomiona, dołącza dzienniki w nowszej pliku (w przypadku przekroczenia limitu miejsca zastępuje najstarszy plik). 
 
 > [!NOTE] 
 > Gdy rozmiar pliku sprawdzania usługi zostanie zapisany przed zapisaniem wiadomości, rozmiar pliku może być większy niż maksymalny rozmiar jednego komunikatu. Domyślnie rozmiar dzienników może wynosić około 6 GB (trzy >detektory z dwoma plikami dla jednego rozmiaru GB).

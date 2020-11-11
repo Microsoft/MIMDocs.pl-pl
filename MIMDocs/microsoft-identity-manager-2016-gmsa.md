@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
-ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
+ms.openlocfilehash: 50e5da9c7e3ed7df8edb8dbc315708df5ac5250a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87176765"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492552"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Konwertowanie usług specyficznych dla Microsoft Identity Manager na korzystanie z kont usług zarządzanych przez grupę
 
@@ -52,7 +52,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 ## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Akcje do uruchomienia na kontrolerze domena usługi Active Directory
 
-1.  Utwórz grupę o nazwie *MIMSync_Servers*i Dodaj do niej wszystkie serwery synchronizacji.
+1.  Utwórz grupę o nazwie *MIMSync_Servers* i Dodaj do niej wszystkie serwery synchronizacji.
 
     ![Utwórz grupę MIMSync_Servers](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
@@ -74,21 +74,21 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 
 1. W Synchronization Service Manager wykonaj kopię zapasową klucza szyfrowania. Zostanie ona zażądana z instalacją trybu zmiany. Wykonaj następujące czynności:
 
-    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji. **Zestaw kluczy eksportu**   jest już zaznaczony domyślnie.
+    a. Na serwerze, na którym zainstalowano Synchronization Service Manager, należy poszukać narzędzia do zarządzania kluczami usługi synchronizacji. **Zestaw kluczy eksportu** jest już zaznaczony domyślnie.
 
-    b. Wybierz pozycję **Dalej**. 
+    b. Wybierz opcję **Dalej**. 
     
     c. W wierszu polecenia wprowadź i sprawdź informacje o koncie usługi synchronizacji Microsoft Identity Manager lub Forefront Identity Manager (FIM):
 
-    -   **Nazwa konta**: nazwa konta usługi synchronizacji, która jest używana podczas początkowej instalacji.  
-    -   **Password (hasło**): hasło konta usługi synchronizacji.  
-    -   **Domena**: domena, do której należy konto usługi synchronizacji.
+    -   **Nazwa konta** : nazwa konta usługi synchronizacji, która jest używana podczas początkowej instalacji.  
+    -   **Password (hasło** ): hasło konta usługi synchronizacji.  
+    -   **Domena** : domena, do której należy konto usługi synchronizacji.
 
-    d. Wybierz pozycję **Dalej**.
+    d. Wybierz opcję **Dalej**.
 
-    W przypadku pomyślnego wprowadzenia informacji o koncie można zmienić miejsce docelowe lub wyeksportować lokalizację pliku kopii zapasowej klucza szyfrowania. Domyślnie lokalizacją pliku eksportu jest *C:\Windows\system32\miiskeys-1.bin*.
+    W przypadku pomyślnego wprowadzenia informacji o koncie można zmienić miejsce docelowe lub wyeksportować lokalizację pliku kopii zapasowej klucza szyfrowania. Domyślnie lokalizacją pliku eksportu jest *C:\Windows\system32\miiskeys-1.bin*.
 
-1. Zainstaluj program Microsoft Identity Manager SP1, który można znaleźć w witrynie Volume Licensing Service Center lub witryny pliki do pobrania w witrynie MSDN. Po zakończeniu instalacji Zapisz zestaw kluczy *miiskeys. bin*.
+1. Zainstaluj program Microsoft Identity Manager 2016 z dodatkiem SP1 lub nowszą wersją, którą można znaleźć w witrynie Volume Licensing Service Center lub witryny pliki do pobrania w witrynie MSDN. Po zakończeniu instalacji Zapisz zestaw kluczy *miiskeys. bin*.
 
    ![Okno postępu instalacji usługi synchronizacji Microsoft Identity Manager](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
@@ -141,7 +141,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
     ![Okno Active Directory Użytkownicy i komputery](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Znany problem w systemie Windows Server 2012 R2 polega na tym, że usługi korzystające z zarządzanego konta przestają odpowiadać po ponownym uruchomieniu serwera, ponieważ usługa dystrybucji kluczy firmy Microsoft nie jest uruchomiona po uruchomieniu systemu Windows. Aby obejść ten problem, należy uruchomić następujące polecenie: 
+    > Znany problem w systemie Windows Server 2012 R2 polega na tym, że usługi korzystające z zarządzanego konta przestają odpowiadać po ponownym uruchomieniu serwera, ponieważ usługa dystrybucji kluczy firmy Microsoft nie jest uruchomiona po uruchomieniu systemu Windows. Aby obejść ten problem, należy uruchomić następujące polecenie: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
@@ -191,7 +191,7 @@ Ten artykuł zawiera Przewodnik konfigurowania obsługiwanych Microsoft Identity
 1.  Ukończ instalację.
 
     > [!NOTE]
-    > Podczas instalacji w ścieżce rejestru tworzone są dwa nowe klucze **HKEY_LOCAL_MACHINE \Software\microsoft\forefront Identity Manager\2010\Service** do przechowywania szyfrowanego hasła programu Exchange. Jeden wpis jest przeznaczony dla *ExchangeOnline*, a drugi to *ExchangeOnPremise*. W przypadku jednego z wpisów wartość w kolumnie **dane** powinna być pusta.
+    > Podczas instalacji w ścieżce rejestru są tworzone dwa nowe klucze **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service** do przechowywania szyfrowanego hasła programu Exchange. Jeden wpis jest przeznaczony dla *ExchangeOnline* , a drugi to *ExchangeOnPremise*. W przypadku jednego z wpisów wartość w kolumnie **dane** powinna być pusta.
 
     > ![Edytor rejestru](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 

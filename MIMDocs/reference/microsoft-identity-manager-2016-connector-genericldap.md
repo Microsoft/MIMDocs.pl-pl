@@ -16,11 +16,11 @@ ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
 ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92761009"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492501"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Dokumentacja techniczna ogólnego łącznika LDAP
 W tym artykule opisano ogólny łącznik LDAP. Artykuł dotyczy następujących produktów:
@@ -43,7 +43,7 @@ W celu nawiązania połączenia z katalogami testuje się przy użyciu konta gł
 
 Z perspektywy wysokiego poziomu następujące funkcje są obsługiwane przez bieżącą wersję łącznika:
 
-| Cechy | Pomoc techniczna |
+| Obiekt feature | Pomoc techniczna |
 | --- | --- |
 | Połączone źródło danych |Łącznik jest obsługiwany przez wszystkie serwery LDAP v3 (zgodne ze standardem RFC 4510). Został przetestowany z następującymi: <li>Microsoft Usługi LDS Active Directory (AD LDS)</li><li>Wykaz globalny Microsoft Active Directory (AD GC)</li><li>Serwer katalogowy 389</li><li>Serwer usługi Apache</li><li>IBM Tivoli DS</li><li>Katalog isode</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Otwórz DJ</li><li>Otwórz usługi DS</li><li>Otwórz katalog LDAP (openldap.org)</li><li>Oracle (wcześniej Sun) Directory Server Enterprise Edition</li><li>Serwer katalogu wirtualnego RadiantOne (VDS)</li><li>Serwer Sun z jednym katalogiem</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>W przypadku większości scenariuszy należy użyć wbudowanego łącznika Active Directory, a niektóre funkcje mogą nie być obsługiwane</li></ul>**Ważne znane katalogi lub funkcje nie są obsługiwane:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Usługa powiadamiania o zmianie hasła (PCNS)</li><li>Inicjowanie obsługi administracyjnej programu Exchange</li><li>Usuwanie aktywnych urządzeń synchronizacji</li><li>Obsługa nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenariusze |<li>Zarządzanie cyklem życia obiektów</li><li>Zarządzanie grupami</li><li>Zarządzanie hasłami</li> |
@@ -116,7 +116,7 @@ W przypadku LDAPs należy użyć protokołu SSL 3,0 lub TLS. Protokół SSL 2,0 
 Aby łącznik działał prawidłowo, muszą być dostępne następujące kontrolki/funkcje LDAP na serwerze LDAP:  
 `1.3.6.1.4.1.4203.1.5.3` Filtry true/false
 
-Filtr prawda/fałsz jest często nieraportowany jako obsługiwany przez katalogi LDAP i może być wyświetlany na **stronie globalnej** w obszarze **obowiązkowe funkcje nie zostały znalezione** . Służy do tworzenia **lub** filtrowania kwerend LDAP, na przykład podczas importowania wielu typów obiektów. Jeśli można zaimportować więcej niż jeden typ obiektu, serwer LDAP obsługuje tę funkcję.
+Filtr prawda/fałsz jest często nieraportowany jako obsługiwany przez katalogi LDAP i może być wyświetlany na **stronie globalnej** w obszarze **obowiązkowe funkcje nie zostały znalezione**. Służy do tworzenia **lub** filtrowania kwerend LDAP, na przykład podczas importowania wielu typów obiektów. Jeśli można zaimportować więcej niż jeden typ obiektu, serwer LDAP obsługuje tę funkcję.
 
 W przypadku korzystania z katalogu, w którym unikatowym identyfikatorem jest zakotwiczenie, należy również udostępnić następujące informacje (Aby uzyskać więcej informacji, zobacz sekcję [Konfigurowanie kotwic](#configure-anchors) ):  
 `1.3.6.1.4.1.4203.1.5.1` Wszystkie atrybuty operacyjne
@@ -152,7 +152,7 @@ Następujące funkcje LDAP nie są obsługiwane:
 * Odwołania LDAP między serwerami (RFC 4511/4.1.10)
 
 ## <a name="create-a-new-connector"></a>Utwórz nowy łącznik
-Aby utworzyć ogólny łącznik LDAP, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz** . Wybierz łącznik **Generic LDAP (Microsoft)** .
+Aby utworzyć ogólny łącznik LDAP, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz**. Wybierz łącznik **Generic LDAP (Microsoft)** .
 
 ![Połączenie](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
 
