@@ -4,7 +4,7 @@ description: W tym temacie wymieniono wszystkie wersje łączników dla programu
 services: active-directory
 documentationcenter: ''
 author: EugeneSergeev
-manager: daveba
+manager: aashiman
 editor: ''
 reviewer: markwahl-msft
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/11/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3062058bc53a75c66959803ebb5b33849c11868b
-ms.sourcegitcommit: babd0299472aa7e8c8d9af1b464bf4e91318aed8
+ms.openlocfilehash: ba69b18f3712384da79095d625eb9008a07b741e
+ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "92761057"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94532124"
 ---
 # <a name="connector-version-release-history"></a>Historia wersji łącznika
 
@@ -44,6 +44,17 @@ Powiązane linki:
 * Dokumentacja dotycząca [łącznika programu PowerShell](microsoft-identity-manager-2016-connector-powershell.md)
 * Dokumentacja dotycząca [łącznika programu Lotus Domino](microsoft-identity-manager-2016-connector-domino.md)
 * Dokumentacja dotycząca [łącznika magazynu profilu użytkownika programu SharePoint](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113460-november-2020"></a>1.1.1346.0 (listopad 2020)
+### <a name="fixed-issues"></a>Naprawione problemy
+- Łącznik grafu
+  - Rozwiązano problem związany z uszkodzeniem pamięci podręcznej łącznika lokalnego powodującym błędy przebiegu importu różnicowego
+  - Rozwiązano problem ze zduplikowanymi wpisami zgłoszonymi przez łącznik podczas pełnego przebiegu importu powodującego błędy odnajdywania
+  - Rozwiązano problem z nieprawidłowym importem złożonych typów danych, np. *employeeOrgData*
+- Ogólny łącznik SQL
+  - Rozwiązano problem z niepowodzeniem uwierzytelniania SQL Native ze względu na Właściwość parametrów połączenia DSN *TrustedConnection* ustawiona na *wartość false* . 
+- Ogólny łącznik LDAP
+  - Rozwiązano problem polegający na tym, że przetwarzanie wpisów *OpenLDAP* *accessLog* w przypadku importu różnicowego powoduje nieprawidłowe zmiany członkostwa w grupie i inne błędy
 
 ## <a name="1113020-september-2020"></a>1.1.1302.0 (2020 września)
 ### <a name="fixed-issues"></a>Naprawione problemy
@@ -68,7 +79,7 @@ Powiązane linki:
   > Jeśli używasz zaproszenia gościa w kompilacji 1.1.1170.0 łącznika, zaktualizuj reguły synchronizacji, korzystając z następującej logiki:
 
   - Przepływy wychodzące
-    - Użytkownik jest zapraszany podczas eksportowania tworzenia użytkownika, a eksport obejmuje atrybut *poczty* , ale nie *Atrybut userPrincipalName* .  Jeśli jest *dostarczany, zostanie* utworzony użytkownik, a nie zaproszenie
+    - Użytkownik jest zapraszany podczas eksportowania tworzenia użytkownika, a eksport obejmuje atrybut *poczty* , ale nie *Atrybut userPrincipalName*.  Jeśli jest *dostarczany, zostanie* utworzony użytkownik, a nie zaproszenie
     - Atrybut *UserType* definiuje tylko, czy użytkownik stanie się *członkiem* , czy *gościem* (domyślnie *, jeśli nie* jest ustawiony)
   - Przepływy przychodzące
     - Wartości atrybutów *userPrincipalName* dla użytkowników zewnętrznych są renderowane jako "AS-IS"
@@ -311,7 +322,7 @@ Wydanie: 2017 marca
 ### <a name="enhancements"></a>Ulepszenia 
 
 * Ogólne SQL:</br>
-  **Objawy scenariusza:**   Jest to dobrze znane ograniczenie dotyczące łącznika SQL, w którym dozwolony jest tylko odwołanie do jednego typu obiektu i wymaganie krzyżowego odwołania z elementami członkowskimi. </br>
+  **Objawy scenariusza:**  Jest to dobrze znane ograniczenie dotyczące łącznika SQL, w którym dozwolony jest tylko odwołanie do jednego typu obiektu i wymaganie krzyżowego odwołania z elementami członkowskimi. </br>
   **Opis rozwiązania:** W kroku przetwarzania dla odwołań została wybrana opcja "*", wszystkie kombinacje typów obiektów zostaną zwrócone z powrotem do aparatu synchronizacji.
 
 > [!Important]
@@ -404,7 +415,7 @@ Przed marcem 2016 łączniki zostały wydane jako tematy pomocy technicznej.
 
 * [KB3008178](https://support.microsoft.com/kb/3008178) -1.0.0419, 2014 września
 
-**PowerShell**
+**Program PowerShell**
 
 * [KB3008179](https://support.microsoft.com/kb/3008179) -1.0.0419, 2014 września
 
