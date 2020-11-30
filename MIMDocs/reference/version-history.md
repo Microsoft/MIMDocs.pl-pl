@@ -15,12 +15,12 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.topic: reference
-ms.openlocfilehash: 424381cca56223e80403bad9f858c33362bb819d
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 59a853c03cd24d89ffa2e89550de51d372c6391d
+ms.sourcegitcommit: 7d7fdb47352282c2d98bf09274707a18fd1a22dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532141"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96321985"
 ---
 # <a name="identity-manager-version-release-history"></a>Historia wersji programu Identity Manager
 
@@ -33,12 +33,18 @@ Zespół Microsoft Identity Manager regularnie publikuje aktualizacje. Ten artyk
 >
 >Historię wersji ogólnych usług LDAP, ogólnych SQL, Web Services, PowerShell, Graph i Lotus Domino można znaleźć na stronie [historia wersji łącznika](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## <a name="mim-version-463550"></a>4.6.355.0 wersja programu MIM
-- Stan: 6 listopada 2020
+## <a name="mim-version-463590"></a>4.6.359.0 wersja programu MIM
+- Stan: 29 listopada 2020
 - [Pobieranie poprawki](https://www.microsoft.com/download/details.aspx?id=102301)
 - [Artykuł KB 4585922](https://support.microsoft.com/help/4585922)
 
 Ta poprawka zawiera aktualizacje dla składników Menedżer synchronizacji programu MIM, usługa MIM i Portal programu MIM, a także zawiera zbiorcze aktualizacje składników programu MIM z poprzednich poprawek dla programu MIM 2016 SP2.
+Zastępuje 4.6.355.0 kompilacji, aby rozwiązać problemy z wydajnością usługi programu MIM.
+
+## <a name="mim-version-463550"></a>4.6.355.0 wersja programu MIM
+- Stan: 6 listopada 2020
+
+Zastąpione przez 4.6.359.0
 
 
 ## <a name="mim-version-462630"></a>4.6.263.0 wersja programu MIM
