@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: d6cd6c88992dc3c7dc80cd93d21907319ece0136
+ms.sourcegitcommit: 2bbb6815b7dfae877eec966c1dc40ea8da847d62
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043957"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96522153"
 ---
 # <a name="planning-a-bastion-environment"></a>Planowanie środowiska bastionu
 
@@ -122,7 +122,7 @@ Mimo niedogodności mogą być wymagane oddzielne stacje robocze ze wzmocnionymi
 
 - **Bezpieczny rozruch** w celu wyeliminowania problemów z osobami atakującymi lub złośliwym oprogramowaniem próbujących załadować niepodpisany kod do procesu rozruchu.
 
-- **Ograniczenie oprogramowania**, aby zapewnić, że na hostach administracyjnych uruchamiane jest tylko autoryzowane oprogramowanie. Do wykonania tego zadania klienci mogą użyć funkcji AppLocker z listą dozwolonych autoryzowanych aplikacji, aby łatwiej zapobiec uruchamianiu złośliwego oprogramowania i nieobsługiwanych aplikacji.
+- **Ograniczenie oprogramowania**, aby zapewnić, że na hostach administracyjnych uruchamiane jest tylko autoryzowane oprogramowanie. Klienci mogą używać funkcji AppLocker dla tego zadania z zatwierdzoną listą autoryzowanych aplikacji, aby zapobiec wykonywaniu złośliwego oprogramowania i nieobsługiwanym aplikacjom.
 
 - **Pełne szyfrowanie woluminów** w celu ograniczenia fizycznej utraty komputerów, takich jak laptopy administracyjne używane zdalnie.
 
@@ -174,15 +174,15 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 Ustawienia zasad grupy na kontrolerze domeny na potrzeby inspekcji muszą obejmować inspekcję sukcesów i niepowodzeń dla zarządzania kontem inspekcji i dostępu do usługi katalogowej inspekcji. Może to zostać przeprowadzone za pomocą konsoli zarządzania zasadami grupy przez administratora istniejącej domeny i uruchomione na stacji roboczej przyłączonej do istniejącej domeny:
 
-3. Przejdź do **menu Start** > **Narzędzia** > administracyjne**zasady grupy zarządzanie**.
+3. Przejdź do **Start**  >  **menu Start Narzędzia administracyjne**  >  **zasady grupy zarządzanie**.
 
-4. Przejdź do **lasu: contoso. Local** > **domen** > **contoso. Local** > kontrolery**domeny** > **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
+4. Przejdź do **lasu: contoso. Local**  >  **domen**  >  **contoso. Local** kontrolery  >  **domeny**  >  **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
 
     ![Domyślne zasady kontrolerów domeny — zrzut ekranu](media/pam-group-policy-management.jpg)
 
 5. Kliknij prawym przyciskiem myszy pozycję **Domyślne zasady kontrolerów domeny** i wybierz polecenie **Edytuj**. Zostanie wyświetlone nowe okno.
 
-6. W oknie Edytor zarządzania zasadami grupy w obszarze domyślne drzewo zasad kontrolerów domeny Przejdź do pozycji **Konfiguracja** > **zasady** > **Ustawienia** > systemu Windows ustawienia**zabezpieczeń** > **zasady** > lokalne zasady**inspekcji**.
+6. W oknie Edytor zarządzania zasadami grupy w obszarze domyślne drzewo zasad kontrolerów domeny Przejdź do pozycji **Konfiguracja komputera**  >  **zasady**  >  **Ustawienia systemu Windows** ustawienia  >  **zabezpieczeń**  >  **Zasady lokalne** zasady  >  **inspekcji**.
 
     ![Edytor zarządzania zasadami grupy — zrzut ekranu](media/pam-group-policy-management-editor.jpg)
 
