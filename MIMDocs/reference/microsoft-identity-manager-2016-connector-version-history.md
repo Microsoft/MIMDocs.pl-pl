@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/2020
+ms.date: 12/31/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba69b18f3712384da79095d625eb9008a07b741e
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 84eae9e65a2ea65c210e026ccafa58d95c434539
+ms.sourcegitcommit: 36752980300a51a0b30442ea23b9934eb8b5c752
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532124"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97835316"
 ---
 # <a name="connector-version-release-history"></a>Historia wersji łącznika
 
@@ -44,6 +44,11 @@ Powiązane linki:
 * Dokumentacja dotycząca [łącznika programu PowerShell](microsoft-identity-manager-2016-connector-powershell.md)
 * Dokumentacja dotycząca [łącznika programu Lotus Domino](microsoft-identity-manager-2016-connector-domino.md)
 * Dokumentacja dotycząca [łącznika magazynu profilu użytkownika programu SharePoint](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113470-december-2020"></a>1.1.1347.0 (grudzień 2020)
+### <a name="fixed-issues"></a>Naprawione problemy
+- Łącznik grafu
+  - Rozwiązano problem polegający na tym, że łącznik niepoprawnie wysyła zaproszenia B2B podczas tworzenia grupy z włączoną obsługą poczty lub kontaktu
 
 ## <a name="1113460-november-2020"></a>1.1.1346.0 (listopad 2020)
 ### <a name="fixed-issues"></a>Naprawione problemy
@@ -91,7 +96,7 @@ Powiązane linki:
 - Łącznik programu Lotus Notes
    - Grupy z notatek pomocniczych książki adresowe nie są już usuwane przez proces *AdminP* . Operacja usuwania bezpośredniego jest używana teraz
 - Ogólny łącznik LDAP
-   - Naprawiono usterkę z atrybutami operacji katalogu LDAP, np. *pwdUpdateTime* , niewidocznymi w schemacie
+   - Naprawiono usterkę z atrybutami operacji katalogu LDAP, np. *pwdUpdateTime*, niewidocznymi w schemacie
 ### <a name="enhancements"></a>Ulepszenia 
 - Łącznik grafu   
    - Nazwy UPN zewnętrznych użytkowników-Gości nie są już renderowane jako "AS-IS", zamiast tego są wyświetlane w obszarze łącznika, aby wyglądały jak wiadomości e-mail
@@ -101,10 +106,10 @@ Powiązane linki:
    - Przyznawanie uprawnień do zapraszania Gości do aplikacji usługi Azure AD skojarzonej z łącznikiem grafu
    - Ukończ sekcję konfiguracji łącznika w przypadku zapraszania użytkowników zewnętrznych: Ustaw adres URL przekierowania zaproszenia (obowiązkowy) i zdecyduj, czy wysyłać wiadomości e-mail z zaproszeniem
    - Ustaw obowiązkowe atrybuty w regule synchronizacji danych wychodzących:
-     - "Gość" => *UserType* (tylko przepływ początkowy)
-     - zewnętrzny adres e-mail => *userPrincipalName*
-     - CustomExpression ("CN =" + csObjectID + ", OBJECT = User") => *DN* (tylko początkowy przepływ)
-     - csObjectID = *identyfikator* >(tylko początkowy przepływ)
+     - "Gość" =>*UserType* (tylko przepływ początkowy)
+     - zewnętrzny adres e-mail =>*userPrincipalName*
+     - CustomExpression ("CN =" + csObjectID + ", OBJECT = User") =>*DN* (tylko początkowy przepływ)
+     - csObjectID = *identyfikator*>(tylko początkowy przepływ)
 
 ## <a name="1111300-february-2020"></a>1.1.1130.0 (luty 2020)
 ### <a name="fixed-issues"></a>Naprawione problemy
@@ -433,7 +438,7 @@ Przed marcem 2016 łączniki zostały wydane jako tematy pomocy technicznej.
 > [!NOTE]
 > Podczas aktualizowania Microsoft Identity Manager lub AADConnect przy użyciu dowolnego z łączników ECMA2. 
 
-Przed uaktualnieniem należy odświeżyć definicję łącznika w celu dopasowania lub pojawić się następujący błąd w dzienniku zdarzeń aplikacji Rozpocznij, aby zgłosić komunikat o IDENTYFIKATORze 6947: "wersja zestawu w konfiguracji łącznika usługi AAD (" X.X.XXX. X ") jest wcześniejsza niż wersja rzeczywista (" X.X.XXX. X ") elementu" C:\Program Files\Microsoft Azure AD Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll ".
+Przed uaktualnieniem należy odświeżyć definicję łącznika w celu dopasowania lub w 6947 dzienniku zdarzeń aplikacji zostanie wyświetlony następujący błąd: "wersja zestawu w konfiguracji łącznika usługi AAD (" X. X. XXX. X ") jest wcześniejsza niż wersja rzeczywista (" X. X. XXX. X ") elementu" C:\Program Files\Microsoft Azure AD Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll ".
 
 Aby odświeżyć definicję:
 * Otwórz właściwości wystąpienia łącznika
