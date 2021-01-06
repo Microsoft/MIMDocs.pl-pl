@@ -5,25 +5,29 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/14/2017
+ms.date: 10/1/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 1ff755aef697b92206745426e7820526db0666d3
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 4e3c247370c6c78e7814d894e9f0a6166d2e397a
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760961"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927612"
 ---
 # <a name="bhold-modules-version-release-history"></a>Historia wersji modułów pakietu BHOLD
 
 Zespół Microsoft Identity Manager regularnie zwalnia aktualizacje wymienione w historii [wersji](version-history.md) . Ten artykuł pomaga śledzić wersje, które zostały wydane dla pakietu BHOLD, podskładnikowi Microsoft Identity Manager. Następnie możesz zdecydować, czy należy zaktualizować do najnowszej wersji.
 
+## <a name="version-60620"></a>6.0.62.0 wersja
+
+- Stan: październik 2018
+- [Pobieranie](https://www.microsoft.com/download/details.aspx?id=55950)
+
 ## <a name="version-60360"></a>6.0.36.0 wersja
 
 - Stan: 7 września 2017
-- [Pobieranie](https://www.microsoft.com/en-us/download/details.aspx?id=55950)
 
 ### <a name="enhancements"></a>Ulepszenia  
 PAKIETU BHOLD wersja 6.0.36.0 obejmuje następujące udoskonalenia:
@@ -43,7 +47,7 @@ Następujące problemy zostały rozwiązane w programie pakietu BHOLD w wersji 6
 
 #### <a name="access-management-connector"></a>Łącznik zarządzania dostępem
 
-- nie dotyczy
+- n/d
 
 #### <a name="bhold-integration-module"></a>Moduł integracji pakietu BHOLD
 
@@ -56,11 +60,11 @@ Następujące problemy zostały rozwiązane w programie pakietu BHOLD w wersji 6
 
 #### <a name="bhold-analytics"></a>Analiza pakietu BHOLD
 
-- nie dotyczy
+- n/d
 
 #### <a name="bhold-attestation"></a>Zaświadczanie pakietu BHOLD
 
-- nie dotyczy
+- n/d
 
 #### <a name="bhold-reporting"></a>Raportowanie pakietu BHOLD
 

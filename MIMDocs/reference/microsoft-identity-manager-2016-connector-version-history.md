@@ -17,12 +17,12 @@ ms.date: 12/31/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 84eae9e65a2ea65c210e026ccafa58d95c434539
-ms.sourcegitcommit: 36752980300a51a0b30442ea23b9934eb8b5c752
+ms.openlocfilehash: f0b61059f9010523fa4f7b6a6ced987e5ab2dc49
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97835316"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927697"
 ---
 # <a name="connector-version-release-history"></a>Historia wersji łącznika
 
@@ -32,7 +32,7 @@ ms.locfileid: "97835316"
 > Ten temat dotyczy głównie tylko łączników usługi FIM i MIM. O ile nie zostanie jawnie wywołana poniżej, te łączniki nie są obsługiwane na potrzeby instalacji na Azure AD Connect. Wydane łączniki są preinstalowane na Azure AD Connect podczas uaktualniania do określonej kompilacji.
 
 
-W tym temacie wymieniono wszystkie wersje pakietu łączników ogólnych, które zostały wydane niezależnie od programu MIM.  Aby zapoznać się z listą łączników, które są obsługiwane w programie MIM, zobacz [obsługiwane łączniki w programie mim 2016 z dodatkiem SP1](../supported-management-agents.md).  Niektórzy partnerzy utworzyli własne łączniki w ten sposób, a pełna lista jest dostępna w witrynie wiki [FIM 2010 i MIM 2016: agenci zarządzania z partnerów](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+W tym temacie wymieniono wszystkie wersje pakietu łączników ogólnych, które zostały wydane niezależnie od programu MIM.  Aby uzyskać listę łączników, które są obsługiwane w programie MIM, zobacz [obsługiwane łączniki w programie mim 2016 SP2](../supported-management-agents.md).  Niektórzy partnerzy utworzyli własne łączniki w ten sposób, a pełna lista jest dostępna w witrynie wiki [FIM 2010 i MIM 2016: agenci zarządzania z partnerów](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
 
 Powiązane linki:
@@ -464,4 +464,8 @@ Więcej informacji na temat tego łącznika można znaleźć w [pakiecie zbiorcz
 
 ## <a name="next-steps"></a>Następne kroki
 
-Dowiedz się więcej na temat dokumentacji [ogólnych łączników LDAP](microsoft-identity-manager-2016-connector-genericldap.md) Dowiedz się więcej na temat dokumentacji ogólnych informacji o ŁĄCZNIKu[SQL](microsoft-identity-manager-2016-connector-genericsql.md) . więcej informacji na temat dokumentacji łącznika [usług sieci Web](microsoft-identity-manager-2016-ma-ws.md) znajdziesz w dokumentacji dotyczącej łącznika programu [PowerShell](microsoft-identity-manager-2016-connector-powershell.md) . więcej informacji na temat dokumentacji dotyczącej łącznika [programu Lotus Domino](microsoft-identity-manager-2016-connector-domino.md)
+Dowiedz się więcej na temat dokumentacji [ogólnych łączników LDAP](microsoft-identity-manager-2016-connector-genericldap.md) .
+Dowiedz się więcej na temat ogólnej dokumentacji dotyczącej[łącznika SQL](microsoft-identity-manager-2016-connector-genericsql.md) .
+Dowiedz się więcej na temat dokumentacji dotyczącej [łącznika usług sieci Web](microsoft-identity-manager-2016-ma-ws.md) .
+Dowiedz się więcej na temat dokumentacji dotyczącej [łącznika programu PowerShell](microsoft-identity-manager-2016-connector-powershell.md) .
+Dowiedz się więcej na temat dokumentacji dotyczącej [łącznika programu Lotus Domino](microsoft-identity-manager-2016-connector-domino.md) .
