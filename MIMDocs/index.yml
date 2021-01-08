@@ -1,24 +1,26 @@
 ### YamlMime:Landing
-title: Dokumentacja Microsoft Identity Manager
-summary: Program Microsoft Identity Manager 2016 łączy w jedną całość rozwiązania firmy Microsoft do zarządzania tożsamościami i dostępem oraz w bezproblemowy sposób integruje różne lokalne magazyny uwierzytelniania, takie jak Active Directory, LDAP czy Oracle, i inne aplikacje z usługą Azure Active Directory. Zapewnia dzięki temu spójny sposób korzystania z lokalnych aplikacji LOB i rozwiązań SaaS.
+title: Dokumentacja programu Microsoft Identity Manager
+summary: Program Microsoft Identity Manager 2016 rozszerza możliwości usługi Microsoft Azure Active Directory w zakresie zarządzania tożsamościami i dostępem.  Umożliwia spójną obsługę tożsamości użytkowników, zapewniając bezproblemową integrację wielu lokalnych systemów autoryzacji i magazynów uwierzytelniania, takich jak Active Directory, SAP czy Oracle, a także innych systemów LDAP i SQL. W połączeniu z usługami Active Directory, Azure AD Connect i Azure Active Directory pozwala także na jednolitą obsługę logowania w aplikacjach lokalnych i SaaS.
 metadata:
-  title: Dokumentacja Microsoft Identity Manager
+  title: Dokumentacja programu Microsoft Identity Manager
   description: Dowiedz się, jak korzystać z programu Microsoft Identity Manager.
   ms.topic: landing-page
-  ms.date: 06/09/2020
-  ms.openlocfilehash: 7d8aec6e750d60e6d654de94d99f566f3e55872a
-  ms.sourcegitcommit: aad5dbabd5e42db9ad11d96a2f6fde6173d9ce0a
-  ms.translationtype: MT
+  ms.date: 01/05/2021
+  ms.openlocfilehash: 0903e680e760b390485e3846879ffee4f7993b30
+  ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+  ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 06/17/2020
-  ms.locfileid: "84880092"
+  ms.lasthandoff: 01/08/2021
+  ms.locfileid: "98010440"
 landingContent:
-- title: Omówienie Microsoft Identity Manager
+- title: Omówienie programu Microsoft Identity Manager
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Nowości w programie Microsoft Identity Manager 2016 z dodatkiem Service Pack 1
+    - text: Nowości w programie Microsoft Identity Manager 2016 z dodatkiem Service Pack 2
       url: reference/version-history.md
+    - text: Aktualizacja wsparcia dla klientów usługi Azure AD — wersja Premium
+      url: support-update-for-azure-active-directory-premium-customers.md
   - linkListType: overview
     links:
     - text: Więcej informacji o programie Microsoft Identity Manager
@@ -29,8 +31,16 @@ landingContent:
       url: microsoft-identity-manager-deploy.md
 - title: Dokumentacja
   linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Historia wersji programu MIM
+      url: reference/version-history.md
+    - text: Historia wersji łączników
+      url: reference/microsoft-identity-manager-2016-connector-version-history.md
   - linkListType: reference
     links:
+    - text: Dokumentacja poleceń cmdlet środowiska PowerShell
+      url: /powershell/microsoft-identity-manager/overview
     - text: Dokumentacja interfejsu API REST zarządzania uprzywilejowanym dostępem
       url: /microsoft-identity-manager/reference/privileged-access-management-rest-api-reference
     - text: Dokumentacja interfejsu API REST zarządzania certyfikatami
@@ -41,13 +51,13 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Zarządzanie dostępem w dużej skali
-      url: /enterprise-mobility-security/solutions/manage-access-at-scale
-- title: Cykl życia programu Forefront Identity Manager (FIM)
+    - text: Azure Active Directory
+      url: /azure/active-directory/
+    - text: Konfigurowanie łącznika programu Graph dla programu MIM na potrzeby scenariusza B2B
+      url: microsoft-identity-manager-2016-graph-b2b-scenario.md
+- title: Cykl życia dodatku Forefront Identity Manager (FIM)
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Uaktualnij do wersji Microsoft Identity Manager 2016 (wsparcie podstawowe dla programu FIM zostało zakończone 10/10/2017)
+    - text: Uaktualnanie do programu Microsoft Identity Manager 2016
       url: microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md
-    - text: Informacje o cyklu życia programu FIM
-      url: https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
