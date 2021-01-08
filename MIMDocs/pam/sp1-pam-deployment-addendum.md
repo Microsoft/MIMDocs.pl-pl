@@ -11,24 +11,24 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 34a4fbc2ada0c54cabb128af5ca90e2e89e06517
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 79b3547564fd5dd7874ffc53a7df50cb50ad3d49
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043872"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010680"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Dodatek do skryptów wdrażania usługi PAM:
 
 ## <a name="addendum-1-setting-up-the-priv-domain"></a>Dodatek 1 — Konfigurowanie domeny PRIV
 
-Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby podać szczegóły lasu PRIV. Zaktualizuj wartości DNSName, NetbiosName, nazwę kontrolera domeny, ścieżkę bazy danych/dziennika i ścieżkę SYSVOL. Zaktualizuj także wartości DomainMode i ForestMode. Jeśli testujesz system Windows Server Technical Preview 5, ustaw dla opcji DomainMode i ForestMode wartość WinThreshold.
+Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby podać szczegóły lasu PRIV. Zaktualizuj DNSName, NetBiosName, nazwę kontrolera domeny, ścieżkę bazy danych/dziennika & ścieżka folderu SYSVOL. Zaktualizuj także wartości DomainMode i ForestMode. Jeśli używasz systemu Windows Server 2016 lub nowszego, ustaw wartość DomainMode & ForestMode na system Windows Server 2016 (WinThreshold).
 
-1. Zaloguj się do kontrolera domeny PRIV jako administrator.
+1. Zaloguj się do kontrolera domeny PRIV jako administrator
 2. Uruchom program PowerShell jako administrator.
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
-5. Wybierz opcję menu 9 (Priv Forest setup (Konfigurowanie lasu Priv)).
+5. Wybierz opcję menu 9 (Konfiguracja lasu PRIV)
 
 
 Kontroler domeny zostanie automatycznie ponownie uruchomiony po zakończeniu. Hasło administratora trybu przywracania usług katalogu (DSRM) musi spełniać następujące kryteria:
@@ -40,9 +40,9 @@ Kontroler domeny zostanie automatycznie ponownie uruchomiony po zakończeniu. Ha
 
 ## <a name="addendum-2-setting-up-the-corp-domain"></a>Dodatek 2 — Konfigurowanie domeny CORP
 
-Jeśli dopiero rozpoczynasz korzystanie z programu PAM i chcesz skonfigurować środowisko testowe, korzystając ze skryptu możesz także skonfigurować domenę CORP. Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby dodać szczegóły lasu CORP. Zaktualizuj wartości DNSName, NetbiosName, nazwę kontrolera domeny DC, ścieżkę bazy danych/dziennika i ścieżkę SYSVOL. Wymagany jest co najmniej poziom funkcjonalny systemu Windows Server 2012 R2.
+Jeśli dopiero zaczynasz pracę z usługą PAM i chcesz skonfigurować środowisko testowe, skrypt umożliwia również konfigurację domeny CORP. Po rozpakowaniu skompresowanego pliku do folderu $env:SYSTEMDRIVE\PAM dokonaj edycji pliku PAMDeploymentConfig.xml, aby dodać szczegóły lasu CORP. Zaktualizuj nazwę DNSName, NetBiosName, DC, Database/log i Path folderu SYSVOL. Wymagany jest co najmniej poziom funkcjonalny systemu Windows Server 2012 R2.
 
-1. Zaloguj się do kontrolera domeny CORP jako administrator.
+1. Zaloguj się do kontrolera domeny CORP jako administrator
 2. Uruchom program PowerShell jako administrator.
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
@@ -70,4 +70,4 @@ Przejdź do kroku 8 opisanego powyżej.
 
 ## <a name="addendum-4-if-something-goes-wrong"></a>Dodatek 4 — Postępowanie w razie wystąpienia błędu
 
-Wszystkie dzienniki skryptu są zapisywane w folderze %AppData%\MIMPAMInstall. Skompresuj folder do pliku zip i wyślij go pocztą e-mail do [mim2016@microsoft.com](mailto:mim2016@microsoft.com) programu wraz ze szczegółami operacji i błędu.
+Wszystkie dzienniki skryptu są zapisywane w folderze %AppData%\MIMPAMInstall. W razie konieczności, Kompresuj folder do pliku zip wraz ze szczegółami operacji i błędu.

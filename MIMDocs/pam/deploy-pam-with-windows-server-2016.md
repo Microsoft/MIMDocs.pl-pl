@@ -9,28 +9,25 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: c02904d7acb5c56e8b1e7f7a267b8d54c0a58d7a
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044025"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010561"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Wdrażanie usługi PAM programu MIM w systemie Windows Server 2016
 
 
-W tym scenariuszu program MIM 2016 SP1 może korzystać z funkcji systemu Windows Server 2016 w roli kontrolera domeny dla lasu „PRIV”. Po skonfigurowaniu tego scenariusza bilet protokołu Kerberos użytkownika zostanie ograniczony w czasie do pozostałego czasu aktywacji roli. 
+Ten scenariusz włącza program MIM 2016 SP2 dla scenariusza PAM przy użyciu funkcji systemu Windows Server 2016 lub nowszego jako kontroler domeny dla lasu "PRIV".  Po skonfigurowaniu tego scenariusza bilet protokołu Kerberos użytkownika zostanie ograniczony w czasie do pozostałego czasu aktywacji roli.
 
-> [!Note]
-> Z tą wersją programu MIM nie można używać wersji przeglądowych systemu Windows Server 2016 wcześniejszych od wersji Technical Preview 5.
-
-## <a name="preparation"></a>Przygotowywanie
+## <a name="preparation"></a>Przygotowanie
 
 Dla środowiska laboratorium wymagane są przynajmniej dwie maszyny wirtualne:
 
--   Maszyna wirtualna jest hostem dla kontrolera domeny PRIV z uruchomionym systemem Windows Server 2016
+-   Maszyna wirtualna hostuje kontroler domeny PRIV z systemem Windows Server 2016 lub nowszym
 
--   Maszyna wirtualna jest hostem dla usługi MIM z uruchomionym systemem Windows Server 2016 (zalecane) lub Windows Server 2012 R2
+-   Maszyna wirtualna hostuje usługę MIM z systemem Windows Server 2016 lub nowszym (zalecane) lub Windows Server 2012 R2
 
 > [!NOTE]
 > Jeśli nie ma już domeny „CORP” w środowisku laboratorium, dla tej domeny wymagany jest dodatkowy kontroler. Kontroler domeny „CORP” może obsługiwać system Windows Server 2016 lub Windows Server 2012 R2.
@@ -75,7 +72,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
   - Po skonfigurowaniu delegowania i przed ponownym uruchomieniem serwera autoryzuj administratorów programu MIM oraz konto usługi programu MIM do tworzenia i aktualizowania podmiotów zabezpieczeń w tle.
 
-    a. Uruchom okno programu Powershell i wpisz polecenie ADSIEdit.
+    a. Uruchom okno programu PowerShell i wpisz polecenie ADSIEdit.
 
     b. Otwórz menu Akcje i kliknij pozycję „Połącz z”. W ramach ustawienia punktu połączenia zmień kontekst nazewnictwa „Domyślny kontekst nazewnictwa” na wartość „Konfiguracja” i kliknij przycisk OK.
 
@@ -87,7 +84,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
     f. Zmień na zaawansowane ustawienia zabezpieczeń. W wierszu zezwalającym na dostęp MIMService kliknij przycisk Edytuj. Zmień ustawienie „Dotyczy” na „tego obiektu i wszystkich obiektów podrzędnych”. Zaktualizuj to ustawienie uprawnień i zamknij okno dialogowe zabezpieczeń.
 
-    g. Zamknij Edytor interfejsu ADSI.
+    przykład Zamknij Edytor interfejsu ADSI.
 
   - Po skonfigurowaniu delegowania i przed ponownym uruchomieniem serwera autoryzuj administratorów programu MIM do tworzenia i aktualizowania zasad uwierzytelniania.
 
@@ -125,7 +122,7 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
 - Wypełnij instrukcje w sekcji [Krok 5 — Ustanowienie zaufania](step-5-establish-trust-between-priv-corp-forests.md) i wprowadź te zmiany:
 
-  - Podczas ustanawiania zaufania jednokierunkowego wykonaj tylko pierwsze dwa polecenia programu PowerShell (get-credential i New-PAMTrust), **nie wykonuj polecenia New-PAMDomainConfiguration**.
+  - Podczas ustanawiania jednokierunkowej relacji zaufania należy wykonać tylko dwa pierwsze polecenia programu PowerShell (Get-Credential i New-PAMTrust), **nie należy wykonywać polecenia New-PAMDomainConfiguration**.
 
   - Po ustanowieniu zaufania zaloguj się do kontrolera domeny PRIV jako PRIV\\Administrator, uruchom program PowerShell i wpisz następujące polecenia:
     ```
@@ -145,4 +142,4 @@ Wykonaj instalację zgodnie z opisem w artykule [Przewodnik z wprowadzeniem](pri
 
 - [Usługa Privileged Access Management dla usług domenowych Active Directory](privileged-identity-management-for-active-directory-domain-services.md)
 - [Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management](configuring-mim-environment-for-pam.md)
-- [Konfigurowanie usługi PAM przy użyciu skryptów](sp1-pam-configure-using-scripts.md)
+- [Konfiguracja usługi PAM za pomocą skryptów](sp1-pam-configure-using-scripts.md)

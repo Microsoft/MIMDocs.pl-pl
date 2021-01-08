@@ -5,21 +5,22 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/31/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c758bd924c6f7272a44567c2e9dc919215cdd273
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: ca306e7521bbdc2200663889becd91b1ae952d5a
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044008"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010663"
 ---
-# <a name="environment-overview"></a>Omówienie środowiska
+# <a name="mim-pam-test-lab-environment-overview"></a>Omówienie środowiska laboratorium testowego PAM programu MIM
 
+Aby skonfigurować laboratorium testowe modułu PAM programu MIM, można zainstalować oprogramowanie na maszynach wirtualnych.
 Usługa Privileged Access Management działa na maszynach wirtualnych z oddzielnymi dyskami, które są ze sobą połączone za pomocą współużytkowanej sieci. Na tych maszynach wirtualnych może działać system Windows 8.1, Windows Server 2012 R2 lub inne platformy systemu operacyjnego.
 
 ![Serwery PAM: relacje i obsługiwane platformy — diagram](media/pam-test-lab-architecture.png)

@@ -1,6 +1,6 @@
 ---
 title: Wdrożenie usługi PAM — krok 1 — domena CORP | Dokumentacja firmy Microsoft
-description: Przygotowanie domeny CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane za pomocą programu Privileged Identity Manager
+description: Przygotuj domenę CORP z istniejącymi lub nowymi tożsamościami, które mają być zarządzane przez Microsoft Identity Manager
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c21228dad923d80ab63c255c1184b7de04a0ff3d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 4c9c5736d0215d0423eb989dc5a194a0a00c3c50
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043736"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010434"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Krok 1 — Przygotowanie hosta i domeny CORP
 
@@ -33,9 +33,9 @@ Niniejsza sekcja opisuje sposób skonfigurowania kontrolera domeny dla domeny CO
 
 ### <a name="install-windows-server"></a>Instalacja systemu Windows Server
 
-Zainstaluj system Windows Server 2012 R2 lub Windows Server 2016 Technical Preview 4 (lub nowszy) na maszynie wirtualnej, aby utworzyć komputer o nazwie *CORPDC*.
+Zainstaluj system Windows Server 2012 R2 lub nowszy na maszynie wirtualnej, aby utworzyć komputer o nazwie *CORPDC*.
 
-1. Wybierz **Windows Server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64** lub **Windows Server 2016 Technical Preview (serwer ze środowiskiem pulpitu)**.
+1. Wybierz pozycję **Windows server 2012 R2 Standard (serwer z graficznym interfejsem użytkownika) x64** lub **Windows Server 2016 (serwer ze środowiska pulpitu)**.
 
 2. Przeczytaj i zaakceptuj postanowienia licencyjne.
 
@@ -123,13 +123,13 @@ Musisz włączyć inspekcję w istniejących lasach, aby ustalić konfigurację 
 
 Dla każdej domeny zaloguj się do kontrolera domeny jako administrator domeny i wykonaj następujące czynności:
 
-1. Przejdź do menu **Start** > **Narzędzia administracyjne** (lub, w systemie Windows Server 2016, **Narzędzia administracyjne systemu Windows**) i uruchom **zasady grupy zarządzania**.
+1. Przejdź do menu **Start**  >  **Narzędzia administracyjne** (lub, w systemie Windows Server 2016, **Narzędzia administracyjne systemu Windows**) i uruchom **zasady grupy zarządzania**.
 
-2. Przejdź do zasad kontrolerów domeny dla tej domeny.  Jeśli utworzono nową domenę dla contoso. Local, przejdź do **lasu: contoso. Local** > **Domains** > domen**contoso. Local** > kontrolery**domeny** > **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
+2. Przejdź do zasad kontrolerów domeny dla tej domeny.  Jeśli utworzono nową domenę dla contoso. Local, przejdź do **lasu: contoso. Local**  >  **domen**  >  **contoso. Local** kontrolery  >  **domeny**  >  **domyślne zasady kontrolerów domeny**. Zostanie wyświetlony komunikat informacyjny.
 
 3. Kliknij prawym przyciskiem myszy pozycję **Domyślne zasady kontrolerów domeny** i wybierz polecenie **Edytuj**. Zostanie wyświetlone nowe okno.
 
-4. W oknie Edytor zarządzania zasadami grupy w obszarze domyślne drzewo zasad kontrolerów domeny Przejdź do pozycji **Konfiguracja** > **zasady** > **Ustawienia** > systemu Windows ustawienia**zabezpieczeń** > **zasady** > lokalne zasady**inspekcji**.
+4. W oknie Edytor zarządzania zasadami grupy w obszarze domyślne drzewo zasad kontrolerów domeny Przejdź do pozycji **Konfiguracja komputera**  >  **zasady**  >  **Ustawienia systemu Windows** ustawienia  >  **zabezpieczeń**  >  **Zasady lokalne** zasady  >  **inspekcji**.
 
 5. W okienku szczegółów kliknij prawym przyciskiem myszy pozycję **Przeprowadź inspekcję zarządzania kontami**, a następnie wybierz polecenie **Właściwości**. Wybierz pozycję **Definiuj następujące ustawienia zasad**, zaznacz pole wyboru obok pozycji **Powodzenie**, zaznacz pole wyboru obok pozycji **Niepowodzenie**, kliknij przycisk **Zastosuj**, a następnie kliknij przycisk **OK**.
 

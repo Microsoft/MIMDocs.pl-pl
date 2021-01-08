@@ -5,28 +5,31 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/30/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 25bf28731f14331da386ae9f59b041c8c9ee33a1
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043600"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010579"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Model warstwy partycjonowania uprawnień administracyjnych
 
-W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesieniem uprawnień przez oddzielenie działań wymagających wysokich uprawnień od stref wysokiego ryzyka. Użycie tego modelu pozwala uzyskać komfortowe środowisko użytkownika przy zapewnieniu zgodności z zasadami zabezpieczeń i najlepszymi rozwiązaniami.
+W tym artykule opisano model zabezpieczeń zapewniający ochronę przed podniesieniem uprawnień przez oddzielenie działań wymagających wysokich uprawnień od stref wysokiego ryzyka.
+
+> [!IMPORTANT]
+> Model w tym artykule jest przeznaczony tylko dla izolowanych środowisk Active Directory przy użyciu usługi PAM programu MIM.  W przypadku środowisk hybrydowych zapoznaj się ze wskazówkami w [modelu dostępu przedsiębiorstwa](/security/compass/privileged-access-access-model).
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Podniesienie uprawnień w lasach usługi Active Directory
 
 Konta użytkowników, usług lub aplikacji, które mają przyznane stałe uprawnienia administracyjne do lasów usługi Active Directory (AD) systemu Windows Server, znacznie zwiększają poziom ryzyka dla misji i celów biznesowych organizacji. Te konta są często wskazywane przez osoby atakujące, ponieważ w przypadku naruszenia zabezpieczeń osoba atakująca ma uprawnienia do łączenia się z innymi serwerami lub aplikacjami w domenie.
 
-Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie. Więcej informacji na temat tego modelu zawiera artykuł [Securing privileged access reference material](https://aka.ms/tiermodel) (Materiały referencyjne dotyczące zabezpieczania uprzywilejowanego dostępu).
+Model warstwy pozwala podzielić uprawnienia administracyjne na podstawie zarządzanych zasobów. Administratorzy sprawujący kontrolę nad stacjami roboczymi użytkowników zostają oddzieleni od osób, które zajmują się aplikacjami lub zarządzają tożsamościami w przedsiębiorstwie.
 
 ## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Zmniejszanie widoczności poświadczeń za pomocą ograniczeń logowania
 
@@ -38,7 +41,7 @@ Zmniejszenie ryzyka kradzieży poświadczeń dla kont z uprawnieniami administra
 
 Następny krok obejmuje zaimplementowanie ograniczeń logowania oraz wdrożenie procesów i praktyk, które spełniają wymagania modelu warstwy. Najlepszym rozwiązaniem jest ograniczenie poświadczeń do najniższych uprawnień wymaganych dla danej roli w każdej warstwie.
 
-Należy wymusić ograniczenia logowania, tak aby konta z wysokim poziomem uprawnień nie miały dostępu do mniej bezpiecznych zasobów. Przykład:
+Należy wymusić ograniczenia logowania, tak aby konta z wysokim poziomem uprawnień nie miały dostępu do mniej bezpiecznych zasobów. Na przykład:
 
 - Administratorzy domeny (warstwa 0) nie mogą logować się do serwerów przedsiębiorstwa (warstwa 1) i stacji roboczych standardowych użytkowników (warstwa 2).
 - Administratorzy serwerów (warstwa 1) nie mogą logować się do stacji roboczych standardowych użytkowników (warstwa 2).
@@ -60,4 +63,4 @@ Aby wymusić ograniczenia logowania, można użyć następujących rozwiązań:
 ## <a name="next-steps"></a>Następne kroki
 
 - W artykule [Planning a bastion environment](planning-bastion-environment.md) (Planowanie środowiska bastionu) opisano dodawanie dedykowanego lasu administracyjnego dla programu Microsoft Identity Manager w celu ustanowienia kont administracyjnych.
-- [Stacje robocze dostępu instrukcja uprzywilejowana](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) zapewniają dedykowany system operacyjny dla poufnych zadań, które są chronione przed atakami internetowymi i nosicielami zagrożeń.
+- [Zabezpieczanie urządzeń](/security/compass/concept-azure-managed-workstation) zapewnia dedykowany system operacyjny dla poufnych zadań, które są chronione przed atakami internetowymi i nosicielami zagrożeń.

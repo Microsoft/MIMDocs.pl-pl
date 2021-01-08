@@ -1,6 +1,6 @@
 ---
 title: Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
-description: To jest krok 7 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Ten krok obejmuje konfigurowanie historii/filtrowania identyfikatorów SID.
+description: Krok 7 konfigurowania Microsoft Identity Manager przy użyciu skryptów. Ten krok obejmuje konfigurowanie historii/filtrowania identyfikatorów SID.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,22 +11,22 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: cfb49dd3a15fd115021ab58605d5aeee4d73a5c7
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: c09649bbecfb4608391fef1cda3d8da87ded888b
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043719"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010646"
 ---
-# <a name="step-7-set-up-sid-historysid-filtering"></a>Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
+# <a name="step-7-setup-sid-historysid-filtering"></a>Krok 7 — Konfigurowanie historii/filtrowania identyfikatorów SID
 
 > [!div class="step-by-step"]
-> [«Krok 6](sp1-step6-setup-pam-trust.md)
-> [krok 8»](sp1-step8-pam-deployment-verification.md)
+> [«Krok 6](sp1-step6-setup-pam-trust.md) 
+>  [Krok 8»](sp1-step8-pam-deployment-verification.md)
 
-**Ten krok nie jest wymagany dla środowiska PRIVOnly**. Zaloguj się na serwerze PAMServer przy użyciu konta MIMAdmin.
+**Następujące polecenia nie są wymagane w przypadku środowiska tylko priv** Zaloguj się do serwerze pamserver przy użyciu konta MIMAdmin.
 
-1. Zaloguj się do kontrolera domeny CORP jako administrator.
+1. Zaloguj się do kontrolera domeny CORP jako administrator
 2. Uruchom program PowerShell jako administrator.
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -39,5 +39,5 @@ Historia SID: </br></br>
 „Włączanie historii SID dla tego zaufania” lub „Historia identyfikatorów SID jest już włączona dla tego zaufania”.
 
 > [!div class="step-by-step"]
-> [«Krok 6](sp1-step6-setup-pam-trust.md)
-> [krok 8»](sp1-step8-pam-deployment-verification.md)
+> [«Krok 6](sp1-step6-setup-pam-trust.md) 
+>  [Krok 8»](sp1-step8-pam-deployment-verification.md)

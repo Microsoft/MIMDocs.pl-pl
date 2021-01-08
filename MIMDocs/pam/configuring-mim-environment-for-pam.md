@@ -11,18 +11,18 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e80786bc6d59eb5f8acc7ef7999ebc52ddc84d7b
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 64ed3184ee38102f488c61bf0b41bc0fec34b049
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044059"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010611"
 ---
 # <a name="configure-the-mim-environment-for-privileged-access-management"></a>Konfigurowanie środowiska programu MIM na potrzeby usługi Privileged Access Management
 
 Proces konfigurowania środowiska pod kątem dostępu między lasami, instalowania i konfigurowania usługi Active Directory i programu Microsoft Identity Manager oraz demonstrowania żądania dostępu just in time obejmuje siedem kroków.
 
-Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć środowisko testowe. W przypadku stosowania funkcji PAM w istniejącym środowisku można użyć własnych kontrolerów domeny lub kont użytkowników zamiast tworzyć nowe zgodne z przykładami.
+Te kroki zostały przedstawione, aby można było zacząć od zera i utworzyć środowisko testowe. Jeśli używasz usługi PAM w istniejącym środowisku, możesz użyć własnych kontrolerów domeny lub kont użytkowników dla domeny *contoso* , zamiast tworzyć nowe w celu dopasowania do przykładów.
 
 1. Przygotowanie serwera *CORPDC* do działania jako kontroler domeny i stacji roboczej *CORPWKSTN* do działania jako członkowskiej stacji roboczej.
 

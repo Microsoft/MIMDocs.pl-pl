@@ -1,6 +1,6 @@
 ---
 title: Krok 5 — Instalowanie/konfigurowanie usługi PAM
-description: Jest to krok 5 konfigurowania programu Privileged Identity Manager za pomocą skryptów. Obejmuje on kroki wdrażania na serwerze usługi PAM.
+description: Jest to krok 5 konfigurowania Microsoft Identity Manager przy użyciu skryptów i obejmuje kroki wdrażania na serwerze PAM.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,18 +11,18 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 58a70336af4f79d87d6175aa99dc79fc81aa62dd
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 01fe9cd7704674f408e0b9b5a27673989d0eaecf
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043787"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010594"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Krok 5 — Instalowanie/konfigurowanie usługi PAM
 
 > [!div class="step-by-step"]
-> [«Krok 4](sp1-step4-configuring-sharepoint.md)
-> [krok 6»](sp1-step6-setup-pam-trust.md)
+> [«Krok 4](sp1-step4-configuring-sharepoint.md) 
+>  [Krok 6»](sp1-step6-setup-pam-trust.md)
 
 W przypadku serwera PAMServer przyłączonego do domeny należy zalogować się jako MIMAdmin; w przypadku innego serwera należy zalogować się jako administrator lokalny.
 1. Uruchom program PowerShell jako administrator.
@@ -44,5 +44,5 @@ Po ponownym uruchomieniu serwera PAMServer ponownie zaloguj się do komputera pr
    Po zakończeniu instalacji nastąpi ponowne uruchomienie komputera.
 
 > [!div class="step-by-step"]
-> [«Krok 4](sp1-step4-configuring-sharepoint.md)
-> [krok 6»](sp1-step6-setup-pam-trust.md)
+> [«Krok 4](sp1-step4-configuring-sharepoint.md) 
+>  [Krok 6»](sp1-step6-setup-pam-trust.md)

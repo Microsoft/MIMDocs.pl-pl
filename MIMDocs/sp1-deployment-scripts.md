@@ -1,6 +1,6 @@
 ---
-title: Skrypty wdrażania usługi PAM w programie MIM2016 SP1
-description: Ta strona należy do serii artykułów na temat konfigurowania programu Privileged Identity Manager za pomocą skryptów. Zawiera listę założeń dotyczących środowiska.
+title: Skrypty wdrażania PAM programu MIM
+description: Ta strona jest częścią serii artykułów dotyczących konfigurowania Microsoft Identity Manager przy użyciu skryptów. Zawiera listę założeń dotyczących środowiska.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,16 +11,16 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: eeee6473f7471d4c961a4f4d3113d1af73ddaffe
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: e7eea2c72df3ca9893acc5f6989afa9c488f384e
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044416"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010459"
 ---
-# <a name="mim2016-sp1-pam-deployment-scripts"></a>Skrypty wdrażania usługi PAM w programie MIM2016 SP1
+# <a name="mim-pam-deployment-scripts"></a>Skrypty wdrażania PAM programu MIM
 
-W tym dodatku Service Pack wprowadziliśmy szereg skryptów wdrażania w celu ułatwienia wdrażania usługi PAM. Skrypty te są dostępne w centrum pobierania. Przed podjęciem próby użycia skryptów ważne jest, aby upewnić się, że spełniasz poniższe wymagania:
+W programie MIM 2016 z dodatkiem Service Pack 1 wprowadzono zestaw skryptów wdrażania, które ułatwiają wdrażanie usługi PAM. Te skrypty są dostępne w centrum pobierania. Przed podjęciem próby użycia skryptów należy upewnić się, że spełniasz poniższe wymagania:
 
 1. System operacyjny na wszystkich serwerach ma co najmniej system Windows Server 2012 R2.
 2. Usługa DNS musi być skonfigurowana w taki sposób, aby umożliwiała rozpoznawanie nazw między kontrolerami domeny i serwerami składników.
