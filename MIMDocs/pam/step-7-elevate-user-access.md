@@ -8,17 +8,17 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
-ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
+ms.openlocfilehash: 0d7e9a1111e41008a989ff2bfd52c9d79debf104
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83279967"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104041"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Krok 7 — podniesienie uprawnień dostępu użytkownika
 
 > [!div class="step-by-step"]
-> [«Krok 6](step-6-transition-group-to-pam.md)
+> [«Krok 6 ](step-6-transition-group-to-pam.md)
 
 
 Ten krok pokazuje, że użytkownik może zażądać dostępu do roli przy użyciu programu MIM.
@@ -36,10 +36,10 @@ Bez uprawnień o podwyższonym poziomie Jen nie może uzyskać dostępu do uprzy
 ## <a name="request-privileged-access-from-mim"></a>Zażądaj uprzywilejowanego dostępu z programu MIM.
 
 > [!NOTE]
-> Zaleca się, aby stacja robocza była uprzywilejowaną stacją roboczą (dostępem UPRZYWILEJOWANYM).  Aby uzyskać więcej informacji, zobacz [dostępem uprzywilejowanym](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+> Zaleca się, aby stacja robocza była uprzywilejowaną stacją roboczą (dostępem UPRZYWILEJOWANYM).  Aby uzyskać więcej informacji, zobacz [Zabezpieczanie urządzeń](/security/compass/privileged-access-devices).
 
 1. W witrynie PRIVWKSTN Zaloguj się jako PRIV\priv.jen.
-2. Kliknij przycisk **Start**, **Uruchom**polecenie i wprowadź **PowerShell. exe**.
+2. Kliknij przycisk **Start**, **Uruchom** polecenie i wprowadź **PowerShell.exe**.
 3. Wpisz następujące polecenie.
 
     ```cmd
@@ -92,7 +92,7 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 3. Po wyświetleniu monitu wpisz hasło do konta PRIV.Jen. Pojawi się nowe okno przeglądarki sieci Web.
 4. Przejdź do `http://pamsrv.priv.contoso.local:8090` strony sieci Web z portalu przykładowego i upewnij się, że jest ona widoczna.
 5. W programie Internet Explorer wybierz pozycję **Narzędzia**  >  **Opcje internetowe** i kliknij kartę **zabezpieczenia** .
-6. Kliknij pozycję Lokacje **strefy Lokalny intranet**  >  **Sites**  >  **Zaawansowane** , a następnie Dodaj witrynę sieci Web do strefy.
+6. Kliknij pozycję Lokacje **strefy Lokalny intranet**  >    >  **Zaawansowane** , a następnie Dodaj witrynę sieci Web do strefy.
 7. Zamknij okno dialogowe **Opcje internetowe**.
 8. Na karcie po lewej stronie kliknij przycisk **Aktywuj**. Wybierz **rolę PAM**, a następnie kliknij przycisk **Aktywuj**.
 
@@ -104,4 +104,4 @@ Aktywuj poprzez żądanie uprzywilejowanego dostępu za pośrednictwem przykład
 Po wykonaniu kroków w tym przewodniku zrealizujesz demonstracyjny scenariusz zarządzania uprzywilejowanym dostępem, w którym przywileje użytkowników zostają podwyższone na określony czas, dzięki czemu użytkownicy mogą uzyskać dostęp do zabezpieczonych zasobów przy użyciu oddzielnego uprzywilejowanego konta. Zaraz po wygaśnięciu sesji podnoszącej poziom przywilejów uprzywilejowane konto nie będzie w stanie uzyskać dostępu do zabezpieczonych zasobów. Koordynacją decyzji dotyczącej tego, które grupy zabezpieczeń będą reprezentować role uprzywilejowane, zajmuje się administrator PAM. Po zakończeniu migracji uprawnień do systemu zarządzania uprzywilejowanym dostępem dostęp, który wcześniej był możliwy przy użyciu oryginalnego konta użytkownika, staje się możliwy wyłącznie poprzez zalogowanie za pomocą specjalnego uprzywilejowanego konta i jest udzielany na żądanie. W związku z tym członkostwa w grupach o wysokich poziomach przywilejów obowiązują tylko przez ograniczony czas.
 
 > [!div class="step-by-step"]
-> [«Krok 6](step-6-transition-group-to-pam.md)
+> [«Krok 6 ](step-6-transition-group-to-pam.md)

@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b54a8eeaaa76db1c1bfe6b234028e0396210ecf7
-ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
+ms.openlocfilehash: 417f26b123aec7e8ab1b8cf254e0771f799dcb9d
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280086"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103973"
 ---
 # <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
 
@@ -39,8 +39,8 @@ Następujące oprogramowanie można pobrać z witryny GitHub:
 
 ## <a name="required-software"></a>Wymagane oprogramowanie
 
-- Windows Server 2012 R2
-- Windows 10 Enterprise
+- Windows Server 2012 z dodatkiem R2
+- Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 lub SQL Server 2014
 
 ## <a name="evaluation-software"></a>Oprogramowanie próbne
@@ -49,8 +49,8 @@ Jeśli nie masz licencji dla systemu Windows, programu SQL Server lub systemu Wi
 
 ### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
 
-- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
+- System Windows Server 2012 R2 lub nowszy
+- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
 
 ### <a name="microsoft-download-center"></a>Centrum pobierania Microsoft
 
@@ -71,9 +71,9 @@ Dla stacji roboczej CORPWKSTN:
 
 Dla kontrolera domeny PRIVDC:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- [Windows Server 2012 z dodatkiem R2](https://technet.microsoft.com/library/dn303418.aspx)
 
 Dla serwera PAMSRV:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- [Windows Server 2012 z dodatkiem R2](https://technet.microsoft.com/library/dn303418.aspx)
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) lub [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

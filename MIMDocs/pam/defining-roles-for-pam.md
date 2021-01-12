@@ -11,16 +11,20 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 11ac22be4425ef0b0a67f64c092d1e848ff7ad72
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044042"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104092"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definiowanie ról na potrzeby funkcji Privileged Access Management
 
 Za pomocą funkcji Privileged Access Management (PAM) można przypisać użytkowników do uprzywilejowanych ról, które mogą oni aktywować w razie potrzeby dla dostępu just in time. Te role są definiowane ręcznie i ustanawiane w środowisku bastionu. W tym artykule przedstawiono proces podejmowania decyzji o tym, które role mają być zarządzane za pomocą funkcji Privileged Access Management, oraz sposób definiowania ich przy użyciu odpowiednich uprawnień i ograniczeń.
+
+> [!IMPORTANT]
+> Model w tym artykule jest przeznaczony tylko dla izolowanych środowisk Active Directory przy użyciu usługi PAM programu MIM.  W przypadku środowisk hybrydowych zapoznaj się ze wskazówkami w [modelu dostępu przedsiębiorstwa](/security/compass/privileged-access-access-model).
+
 
 Najprostszym sposobem definiowania ról funkcji Privileged Access Management jest skompilowanie wszystkich informacji w arkuszu kalkulacyjnym. Utwórz listę ról i użyj kolumn do określenia wymagań i uprawnień ładu.
 
@@ -42,7 +46,7 @@ Rozpocznij od zidentyfikowania wszystkich ról, które mają być zarządzane za
 
 Aby znaleźć odpowiednie role, rozważ każdą aplikację w zakresie zarządzania:
 
-- Czy aplikacja znajduje się w [warstwie 0, warstwa 1 czy 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Czy aplikacja znajduje się w warstwie 0, 1 czy 2?
 - Jakie uprawnienia wpływają na poufność, integralność lub dostępność aplikacji?
 - Czy aplikacja ma zależności od innych składników systemu? Na przykład czy ma zależności od baz danych, sieci, infrastruktury zabezpieczeń, wirtualizacji czy platformy hostingu?
 
@@ -96,8 +100,6 @@ W niektórych przypadkach użytkownik może zostać trwale przypisany do roli. W
 
 - Konto użytkownika w lesie administracyjnym z kartą inteligentną lub wirtualną kartą inteligentną (na przykład konto z kartą inteligentną w trybie offline potrzebną do rzadkich zadań konserwacji).
 
-W przypadku organizacji niepokojących się o potencjalną kradzież poświadczeń lub ich nieuprawnione użycie, przewodnik [Using Azure MFA for activation](use-azure-mfa-for-activation.md) (Używanie usługi Azure MFA do aktywacji) zawiera instrukcje dotyczące sposobu konfigurowania programu MIM w taki sposób, aby wymagane było dodatkowe sprawdzanie poza pasmem w momencie aktywowania roli.
-
 ## <a name="delegate-active-directory-permissions"></a>Delegowanie uprawnień usługi Active Directory
 
 System Windows Server podczas tworzenia nowych domen automatycznie tworzy grupy domyślne, takie jak „Administratorzy domeny”. Te grupy ułatwiają rozpoczęcie pracy i mogą być przydatne dla mniejszych organizacji. W przypadku większych organizacji lub tych, które wymagają większej izolacji uprawnień administracyjnych, należy opróżnić te grupy i zastąpić je grupami, które zapewniają szczegółowe uprawnienia.
@@ -110,7 +112,7 @@ Jednym z ograniczeń grupy Administratorzy domeny jest to, że jej członkami ni
 
 Zamiast grup domyślnych, takich jak Administratorzy domeny, Utwórz nowe grupy zabezpieczeń, które udostępniają tylko niezbędne uprawnienia. Następnie należy użyć programu MIM do dynamicznego dostarczania kont administratorów do tych członkostw w grupie.
 
-### <a name="service-management-permissions"></a>Uprawnienia zarządzania usługami
+### <a name="service-management-permissions"></a>Uprawnienia do zarządzania usługami
 
 W poniższej tabeli przedstawiono przykłady uprawnień, które warto dodać do ról służących do zarządzania usługą AD.
 
@@ -170,7 +172,7 @@ Role odpowiednie do zarządzania kontami i zasobami lasu produkcyjnego warstwy 0
 - Administratorzy magazynu
 - Administratorzy ochrony przed złośliwym oprogramowaniem dla serwerów warstwy 0
 - Administratorzy programu SCCM dla warstwy 0
-- Administratorzy programu SCOM dla warstwy 0
+- Administratorzy System Center Operations Manager dla warstwy 0 Operations Manager
 - Administratorzy kopii zapasowych dla warstwy 0
 - Użytkownicy kontrolerów poza pasmem i kontrolerów zarządzania płytą główną (w przypadku maszyny KVM lub zarządzania lights-out) połączonych z hostami warstwy 0
 
@@ -183,7 +185,7 @@ Role na potrzeby zarządzania serwerami i tworzenia ich kopii zapasowych w warst
 - Konto skanera zabezpieczeń
 - Administratorzy ochrony przed złośliwym oprogramowaniem dla serwerów warstwy 1
 - Administratorzy programu SCCM dla warstwy 1
-- Administratorzy programu SCOM dla warstwy 1
+- Administratorzy System Center Operations Manager dla warstwy 1 Operations Manager
 - Administratorzy kopii zapasowych dla serwerów warstwy 1
 - Użytkownicy kontrolerów poza pasmem i kontrolerów zarządzania płytą główną (w przypadku maszyny KVM lub zarządzania lights-out) połączonych z hostami warstwy 1
 
@@ -207,5 +209,5 @@ Role dla użytkowników innych niż użytkownicy administracyjni i role na potrz
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Zabezpieczanie dostępu uprzywilejowanego — materiały referencyjne](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
-- [Używanie usługi Azure MFA do aktywacji](use-azure-mfa-for-activation.md)
+- [Model dostępu przedsiębiorstwa](/security/compass/privileged-access-access-model)
+
