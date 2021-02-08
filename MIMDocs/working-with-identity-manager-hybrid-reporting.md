@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: fd0efd3e3d5c42f4b67d0abd42f6dab8254573e5
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 0b0a3adcf1651f6a431eec02488e0ab75347b3ca
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044348"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835578"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Współpraca z raportowaniem hybrydowym w programie Identity Manager
 
@@ -37,7 +37,7 @@ Pierwsze trzy Microsoft Identity Manager raporty dostępne w usłudze Azure Acti
 > [!NOTE]
 > * Raporty obecnie zawierają dane dla maksymalnie jednego miesiąca działania.
 > * Poprzedni Agent raportowania hybrydowego musi zostać odinstalowany.
-> * Aby odinstalować raporty hybrydowe, Odinstaluj agenta agenta mimreportingagent. msi.
+> * Aby odinstalować raporty hybrydowe, Odinstaluj agenta MIMreportingAgent.msi.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -60,7 +60,7 @@ Wymagania dotyczące korzystania z funkcji raportowania hybrydowego programu Ide
 |                         Łączność wychodząca oparta na adresach IP                         |                                                                                                                                                                                                                      W przypadku filtrowania na podstawie adresów IP na zaporach zapoznaj się z [zakresami adresów IP platformy Azure](https://www.microsoft.com/download/details.aspx?id=41653).                                                                                                                                                                                                                      |
 |                 Inspekcja protokołu SSL dla ruchu wychodzącego jest filtrowana lub wyłączona                 |                                                                                                                                                                                                               Wykonywanie kroku rejestracji agenta lub operacji przekazywania danych może zakończyć się niepowodzeniem, jeśli istnieje Inspekcja SSL lub zakończenie dla ruchu wychodzącego w warstwie sieciowej.                                                                                                                                                                                                                |
 |                      Porty zapory na serwerze, na którym jest uruchomiony Agent programu                       |                                                                                                                                                                                                          Aby można było komunikować się z punktami końcowymi usługi platformy Azure, Agent wymaga otwarcia następujących portów zapory:<ul><li>Port TCP 443</li><li>Port TCP 5671</li></ul>                                                                                                                                                                                                          |
-|          Zezwalaj na niektóre witryny sieci Web w przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer           |                                                                                W przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer na serwerze, na którym zainstalowano agenta, muszą być dozwolone następujące witryny sieci Web:<ul><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li><li><https://login.windows.net></li><li>Serwer federacyjny dla organizacji zaufany według Azure Active Directory (na przykład <https://sts.contoso.com>).</li></ul>                                                                                |
+|          Zezwalaj na niektóre witryny sieci Web w przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer           |                                                                                W przypadku włączenia zwiększonych zabezpieczeń programu Internet Explorer na serwerze, na którym zainstalowano agenta, muszą być dozwolone następujące witryny sieci Web:<ul><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li><li><https://login.windows.net></li><li>Serwer federacyjny dla organizacji zaufany według Azure Active Directory (na przykład <https://sts.contoso.com> ).</li></ul>                                                                                |
 
 </BR>
 
@@ -79,7 +79,7 @@ Po zainstalowaniu agenta raportowania dane z działania programu Identity Manage
 
 3.  Zainstaluj agenta raportowania, wykonując następujące czynności:
 
-    a.  Pobierz [plik MIMHReportingAgentSetup. exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) dla serwera usługi programu Identity Manager.
+    a.  Pobierz [ plikMIMHReportingAgentSetup.exe](https://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) dla serwera usługi programu Identity Manager.
 
     b.  Uruchom polecenie `MIMHReportingAgentSetup.exe`. 
 
@@ -112,9 +112,9 @@ Po zainstalowaniu agenta raportowania dane z działania programu Identity Manage
 Jeśli chcesz zatrzymać przekazywanie danych inspekcji raportowania z programu Identity Manager do usługi Azure AD, Odinstaluj agenta raportowania hybrydowego. Użyj narzędzia Dodaj lub usuń programy systemu Windows, aby odinstalować raportowanie hybrydowe programu Identity Manager.
 
 ## <a name="windows-events-used-for-hybrid-reporting"></a>Zdarzenia systemu Windows używane na potrzeby raportowania hybrydowego
-Zdarzenia generowane przez program Identity Manager są przechowywane w dzienniku zdarzeń systemu Windows. Zdarzenia w **Podgląd zdarzeń** można wyświetlić, wybierając pozycję >  **Dzienniki aplikacji i usług****Dziennik żądań programu Identity Manager**. Każde żądanie programu Identity Manager jest eksportowane jako zdarzenie w dzienniku zdarzeń systemu Windows w strukturze JSON. Możesz wyeksportować wynik do systemu informacji o zabezpieczeniach i zarządzania zdarzeniami (SIEM).
+Zdarzenia generowane przez program Identity Manager są przechowywane w dzienniku zdarzeń systemu Windows. Zdarzenia w **Podgląd zdarzeń** można wyświetlić, wybierając pozycję **Dzienniki aplikacji i usług**  >  **Dziennik żądań programu Identity Manager**. Każde żądanie programu Identity Manager jest eksportowane jako zdarzenie w dzienniku zdarzeń systemu Windows w strukturze JSON. Możesz wyeksportować wynik do systemu informacji o zabezpieczeniach i zarządzania zdarzeniami (SIEM).
 
-|Typ zdarzenia|ID|Szczegóły zdarzenia|
+|Typ zdarzenia|ID (Identyfikator)|Szczegóły zdarzenia|
 |--------------|------|-----------------|
 |Informacje|4121|Dane zdarzenia programu Identity Manager, które obejmują wszystkie dane żądania.|
-|Informacje|4137|Rozszerzenie zdarzenia 4121 programu Identity Manager w przypadku zbyt dużej ilości danych dla jednego zdarzenia. Nagłówek w tym zdarzeniu jest wyświetlany w następującym formacie: `"Request: <GUID> , message <xxx> out of <xxx>`.|
+|Informacje|4137|Rozszerzenie zdarzenia 4121 programu Identity Manager w przypadku zbyt dużej ilości danych dla jednego zdarzenia. Nagłówek w tym zdarzeniu jest wyświetlany w następującym formacie: `"Request: <GUID> , message <xxx> out of <xxx>` .|

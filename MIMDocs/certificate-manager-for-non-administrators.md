@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: c6e4e03524983944ee25343c24fa8247d770af27
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042138"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835664"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Rejestrowanie kart inteligentnych dla użytkowników innych niż administratorzy
 Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyślnie nie może zarejestrować karty inteligentnej na tym komputerze. Poniższa procedura umożliwia obejście tego ograniczenia.
@@ -25,7 +25,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
 1.  **Rozpakowanie pliku appx**
 
-    Uzyskaj certyfikat podpisywania. Wykonaj kroki [podpisywania aplikacji systemu Windows 8 za pomocą wewnętrznej infrastruktury kluczy publicznych](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Przerwij po wyświetleniu okna „Podpisywanie aplikacji”. Nadaj nazwę eksportowanemu plikowi pfx. Wyeksportuj również do pliku cer, a następnie zaimportuj go do klienta przy użyciu pliku cer nowego certyfikatu podpisywania.
+    Uzyskaj certyfikat podpisywania. Wykonaj kroki [podpisywania aplikacji systemu Windows 8 za pomocą wewnętrznej infrastruktury kluczy publicznych](https://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Przerwij po wyświetleniu okna „Podpisywanie aplikacji”. Nadaj nazwę eksportowanemu plikowi pfx. Wyeksportuj również do pliku cer, a następnie zaimportuj go do klienta przy użyciu pliku cer nowego certyfikatu podpisywania.
 
     Uruchom poniższe polecenia, aby rozpakować plik appx:
 
@@ -49,7 +49,7 @@ Jeśli użytkownik nie jest administratorem lokalnym na swoim komputerze, domyś
 
     4.  Edytuj plik o nazwie AppxManifest.xml.
 
-    5.  W elemencie &lt;Identity&gt; zmodyfikuj wartość atrybutu wydawcy w temacie certyfikatu podpisywania, np. "CN = abcd"
+    5.  W &lt; elemencie Identity &gt; zmodyfikuj wartość atrybutu wydawcy w temacie certyfikatu podpisywania, np. "CN = abcd"
 
         Podmiot w tym elemencie powinien być taki sam jak podmiot w certyfikacie podpisywania używanym do podpisania aplikacji.
 

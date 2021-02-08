@@ -12,12 +12,12 @@ ms.assetid: e05ec898-06cd-4c17-a4f4-8f3545af0f14
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ab320457c5d676cc381306e83f685fe288dc7ef9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 62811bd5d225f981ded6a6439584c2b7730251c1
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760403"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835595"
 ---
 # <a name="get-smart-card-authentication-response"></a>Pobierz odpowiedź uwierzytelniania karty inteligentnej
 Pobiera odpowiedź na wyzwanie uwierzytelniania podstawowego dostawcy usług kryptograficznych (CSP).
@@ -36,7 +36,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/auth
 Parametr | Opis
 ---------|------------
 reqid | Wymagane. Identyfikator żądania, który jest specyficzny dla programu Microsoft Identity Manager (MIM) zarządzania certyfikatami (CM).
-scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. SCID jest uzyskiwany z obiektu [Microsoft. CLM. Shared. SmartCards. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. SCID jest uzyskiwany z obiektu [Microsoft. CLM. Shared. SmartCards. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Parametry zapytania
 
@@ -48,7 +48,7 @@ Sprawdz | Wymagane. Zakodowany ciąg Base-64 reprezentujący wyzwanie, które je
 zróżnicowanego | Wymagane. Flaga logiczna określająca, czy klucz administratora karty inteligentnej był zróżnicowany.
 
 ### <a name="request-headers"></a>Nagłówki żądań
-W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST* .
+W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST*.
 
 ### <a name="request-body"></a>Treść żądania
 Brak.
@@ -66,7 +66,7 @@ Kod  |Opis
 500 | Błąd wewnętrzny
 
 ### <a name="response-headers"></a>Nagłówki odpowiedzi
-W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST* .
+W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST*.
 
 ### <a name="response-body"></a>Treść odpowiedzi
 Po sukcesie zwraca obiekt BLOB typu Byte reprezentujący odpowiedź na żądanie.
@@ -88,6 +88,6 @@ HTTP/1.1 200 OK
 "F0Zudm4wPLY="
 ```       
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Microsoft.Clm.Provision.ExecuteOperations. GetBaseCspResponse — Metoda](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.getbasecspresponse.aspx)
