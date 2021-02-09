@@ -14,12 +14,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
 ms.author: billmath
-ms.openlocfilehash: a26d7f0fdc157f3f4dd8d3fedadaf7d63bac89c9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 0dcba300f70756dbfa7a29011a37839247e6bf8a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760558"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835934"
 ---
 # <a name="windows-powershell-connector-technical-reference"></a>Dokumentacja techniczna łącznika programu Windows PowerShell
 W tym artykule opisano łącznik programu Windows PowerShell. Artykuł dotyczy następujących produktów:
@@ -28,7 +28,7 @@ W tym artykule opisano łącznik programu Windows PowerShell. Artykuł dotyczy n
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * Należy użyć poprawki 4.1.3671.0 lub nowszej [KB3092178](https://support.microsoft.com/kb/3092178).
 
-W przypadku programie MIM2016 i FIM2010R2 łącznik jest dostępny do pobrania z [Centrum pobierania Microsoft](http://go.microsoft.com/fwlink/?LinkId=717495).
+W przypadku programie MIM2016 i FIM2010R2 łącznik jest dostępny do pobrania z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 ## <a name="overview-of-the-powershell-connector"></a>Omówienie łącznika programu PowerShell
 Łącznik programu PowerShell umożliwia integrację usługi synchronizacji z systemami zewnętrznymi oferującymi interfejsy API oparte na programie Windows PowerShell. Łącznik udostępnia mostek między funkcjami platformy zarządzania łącznością rozszerzoną (ECMA2) opartą na wywołaniach i programu Windows PowerShell. Aby uzyskać więcej informacji na temat struktury ECMA, zobacz [Informacje o programie Extensible 2,2 Connectivity Management Agent](https://msdn.microsoft.com/library/windows/desktop/hh859557.aspx).
@@ -47,7 +47,7 @@ Aby utworzyć łącznik programu Windows PowerShell w usłudze synchronizacji, n
 
 Łącznik programu Windows PowerShell jest przeznaczony do przechowywania każdego skryptu w bazie danych usługi synchronizacji. Chociaż istnieje możliwość uruchamiania skryptów przechowywanych w systemie plików, łatwiej jest wstawiać treść każdego skryptu bezpośrednio do konfiguracji łącznika.
 
-Aby utworzyć łącznik programu PowerShell, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz** . Wybierz łącznik **programu PowerShell (Microsoft)** .
+Aby utworzyć łącznik programu PowerShell, w obszarze **usługa synchronizacji** wybierz pozycję **agent zarządzania** i **Utwórz**. Wybierz łącznik **programu PowerShell (Microsoft)** .
 
 ![Utwórz łącznik](./media/microsoft-identity-manager-2016-connector-powershell/createconnector.png)
 
@@ -170,7 +170,7 @@ Skrypt odnajdywania hierarchii otrzymuje następujące parametry z łącznika:
 
 Skrypt musi zwrócić pojedynczy podrzędny obiekt HierarchyNode lub listę [T] podrzędnych obiektów HierarchyNode do potoku.
 
-#### <a name="import"></a>Importuj
+#### <a name="import"></a>Import
 Łączniki obsługujące operacje importowania muszą implementować trzy skrypty.
 
 **Rozpocznij Importowanie**  
@@ -187,7 +187,7 @@ Skrypt BEGIN import otrzymuje następujące parametry z łącznika:
 
 Skrypt musi zwrócić pojedynczy obiekt [OpenImportConnectionResults][oicres] do potoku, na przykład: `Write-Output (New-Object Microsoft.MetadirectoryServices.OpenImportConnectionResults)`
 
-**Importuj dane**  
+**Importowanie danych**  
 Skrypt importowania danych jest wywoływany przez łącznik do momentu, gdy skrypt nie wskazuje, że nie ma więcej danych do zaimportowania. Łącznik programu Windows PowerShell ma rozmiar strony 9 999 obiektów. Jeśli skrypt zwróci więcej niż 9 999 obiektów do zaimportowania, należy obsłużyć stronicowanie. Łącznik uwidacznia niestandardową Właściwość danych, której można użyć do przechowywania znaku wodnego, tak aby za każdym razem, gdy skrypt danych importu został wywołany, skrypt wznawia Importowanie obiektów, w których został pozostawiony.
 
 Skrypt Importuj dane otrzymuje następujące parametry z łącznika:
@@ -271,12 +271,12 @@ Skrypt hasła odbiera następujące parametry z łącznika:
 | --- | --- | --- |
 | ConfigParameters |[[String][keyk], [ConfigParameter][cp]] |Tabela parametrów konfiguracji łącznika. |
 | Poświadczenie |[PSCredential][pscred] |Zawiera wszystkie poświadczenia wprowadzone przez administratora na karcie łączność. |
-| Partycja |[Podzielić][part] |Partycja katalogu, w której znajduje się CSEntry. |
+| Partycja |[Partycja][part] |Partycja katalogu, w której znajduje się CSEntry. |
 | CSEntry |[CSEntry][cse] |Wpis miejsca na łączniku dla obiektu, który otrzymał zmianę lub zresetowanie hasła. |
-| OperationType |String |Wskazuje, czy operacja jest resetowana ( **SetPassword** ), czy zmiana ( **ChangePassword** ). |
-| PasswordOptions |[PasswordOptions][pwdopt] |Flagi określające zachowanie dotyczące resetowania hasła. Ten parametr jest dostępny tylko wtedy, gdy OperationType jest **SetPassword** . |
-| OldPassword |String |Wypełniono przy użyciu starego hasła dla zmiany hasła. Ten parametr jest dostępny tylko wtedy, gdy OperationType jest **ChangePassword** . |
-| NoweHasło |String |Wypełniane nowym hasłem obiektu, który powinien zostać ustawiony przez skrypt. |
+| OperationType |Ciąg |Wskazuje, czy operacja jest resetowana (**SetPassword**), czy zmiana (**ChangePassword**). |
+| PasswordOptions |[PasswordOptions][pwdopt] |Flagi określające zachowanie dotyczące resetowania hasła. Ten parametr jest dostępny tylko wtedy, gdy OperationType jest **SetPassword**. |
+| OldPassword |Ciąg |Wypełniono przy użyciu starego hasła dla zmiany hasła. Ten parametr jest dostępny tylko wtedy, gdy OperationType jest **ChangePassword**. |
+| NoweHasło |Ciąg |Wypełniane nowym hasłem obiektu, który powinien zostać ustawiony przez skrypt. |
 
 Skrypt hasła nie powinien zwracać żadnych wyników do potoku programu Windows PowerShell. W przypadku wystąpienia błędu w skrypcie hasła skrypt powinien zgłosić jeden z następujących wyjątków, aby poinformować usługę synchronizacji o problemie:
 
@@ -312,7 +312,7 @@ Dostęp do odczytu do następujących folderów systemu plików:
 Zastąp nazwę łącznika programu Windows PowerShell symbolem zastępczym {Connectorname}.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
-* Aby uzyskać informacje na temat włączania rejestrowania w celu rozwiązywania problemów z łącznikiem, zobacz [jak włączyć śledzenie ETW dla łączników](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Aby uzyskać informacje na temat włączania rejestrowania w celu rozwiązywania problemów z łącznikiem, zobacz [jak włączyć śledzenie ETW dla łączników](https://go.microsoft.com/fwlink/?LinkId=335731).
 
 <!--Reference style links - using these makes the source content way more readable than using inline links-->
 [cpp]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.configparameterpage.aspx
@@ -343,4 +343,4 @@ Zastąp nazwę łącznika programu Windows PowerShell symbolem zastępczym {Conn
 [pwdex1]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordpolicyviolationexception.aspx
 [pwdex2]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordillformedexception.aspx
 [pwdex3]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordextensionexception.aspx
-[samp]: http://go.microsoft.com/fwlink/?LinkId=394291
+[samp]: https://go.microsoft.com/fwlink/?LinkId=394291

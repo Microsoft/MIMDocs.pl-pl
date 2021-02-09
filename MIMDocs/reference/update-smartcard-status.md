@@ -12,12 +12,12 @@ ms.assetid: 598dace3-c6f2-447a-9301-c0b63ee38276
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fe6d59377ef3218fde0df99365506ef9ec143a6f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 2c49c86fd57d363bec0eb2fd6d1fbe9ee261ee7a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760972"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835915"
 ---
 # <a name="update-smart-card-status"></a>Aktualizuj stan karty inteligentnej
 Aktualizuje stan karty inteligentnej.
@@ -36,10 +36,10 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}
 Parametr | Opis
 ---------|------------
 reqid | Wymagane. Identyfikator żądania, który jest specyficzny dla programu Microsoft Identity Manager (MIM) zarządzania certyfikatami (CM).
-scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. Wartość odnosi się do pola "UUID" w obiekcie [Microsoft. CLM. Shared. SmartCards. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. Wartość odnosi się do pola "UUID" w obiekcie [Microsoft. CLM. Shared. SmartCards. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="request-headers"></a>Nagłówki żądań
-W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST* .
+W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST*.
 
 ### <a name="request-body"></a>Treść żądania
 Treść żądania zawiera następujące właściwości:
@@ -61,10 +61,10 @@ Kod  |Opis
 500 | Błąd wewnętrzny
 
 ### <a name="response-headers"></a>Nagłówki odpowiedzi
-W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST* .
+W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST*.
 
 ### <a name="response-body"></a>Treść odpowiedzi
-Po sukcesie zwraca obiekt JSON-Serialized [Microsoft. CLM. Shared. SmartCards. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) o następujących właściwościach:
+Po sukcesie zwraca obiekt JSON-Serialized [Microsoft. CLM. Shared. SmartCards. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) o następujących właściwościach:
 
 Nazwa | Opis
 -----|-----------
@@ -113,6 +113,6 @@ HTTP/1.1 200 OK
 }
 ```       
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Microsoft. CLM. Shared. SmartCards. SmartCard — Klasa](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

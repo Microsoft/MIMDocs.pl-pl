@@ -12,12 +12,12 @@ ms.assetid: 68beeec1-8350-4e0e-946f-d94606e1e756
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6668ac823607436c2472a076f7c5ea2d9c727b04
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 5e21cd92496fd31ec12044f3b69599bf96bef62a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760402"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835613"
 ---
 # <a name="get-smart-card-diversified-admin-key"></a>Uzyskiwanie klucza administratora o zróżnicowanej karcie inteligentnej
 Pobiera zróżnicowany klucz administratora dla określonej karty inteligentnej.
@@ -39,7 +39,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/dive
 Parametr | Opis
 ---------|------------
 reqid | Wymagane. Identyfikator żądania, który jest specyficzny dla programu Microsoft Identity Manager (MIM) zarządzania certyfikatami (CM).
-scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. SCID jest uzyskiwany z obiektu [Microsoft. CLM. Shared. SmartCards. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+scid | Wymagane. Identyfikator karty inteligentnej, który jest specyficzny dla zarządzanie certyfikatami w usłudze MIM. SCID jest uzyskiwany z obiektu [Microsoft. CLM. Shared. SmartCards. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Parametry zapytania
 
@@ -49,7 +49,7 @@ ATR | Opcjonalny. Ciąg odpowiedzi na Resetowanie karty inteligentnej (ATR).
 cardid | Wymagane. Identyfikator karty.
 
 ### <a name="request-headers"></a>Nagłówki żądań
-W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST* .
+W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST*.
 
 ### <a name="request-body"></a>Treść żądania
 Brak.
@@ -68,7 +68,7 @@ Kod  |Opis
 
 
 ### <a name="response-headers"></a>Nagłówki odpowiedzi
-W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST* .
+W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST*.
 
 ### <a name="response-body"></a>Treść odpowiedzi
 Po pomyślnym zwraca wartość typu Byte obiektu BLOB reprezentującą zróżnicowany klucz administratora.
@@ -90,6 +90,6 @@ HTTP/1.1 200 OK
 "mBVA+HopB/gc+6FuKsQqx+OX01hK1WQI"
 ```       
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Microsoft. CLM. RequestOperations. issmartcard — Metoda (String, String, Request)](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)
