@@ -15,12 +15,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
-ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.openlocfilehash: 5b19b4fd9d45797fcc6b02091386a27aec3c0abf
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492501"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835727"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Dokumentacja techniczna ogólnego łącznika LDAP
 W tym artykule opisano ogólny łącznik LDAP. Artykuł dotyczy następujących produktów:
@@ -29,7 +29,7 @@ W tym artykule opisano ogólny łącznik LDAP. Artykuł dotyczy następujących 
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * Należy użyć poprawki 4.1.3671.0 lub nowszej [KB3092178](https://support.microsoft.com/kb/3092178).
 
-W przypadku programie MIM2016 i FIM2010R2 łącznik jest dostępny do pobrania z [Centrum pobierania Microsoft](http://go.microsoft.com/fwlink/?LinkId=717495).
+W przypadku programie MIM2016 i FIM2010R2 łącznik jest dostępny do pobrania z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 W przypadku odwoływania się do specyfikacji IETF RFC w tym dokumencie jest używany format (RFC [numer RFC]/[sekcja w dokumencie RFC]), na przykład (RFC 4512/4.3).
 Więcej informacji można znaleźć pod adresem [https://tools.ietf.org/](https://tools.ietf.org/) . W lewym panelu wprowadź numer RFC w oknie dialogowym **pobieranie dokumentu** i przetestuj go, aby upewnić się, że jest on prawidłowy.
@@ -43,7 +43,7 @@ W celu nawiązania połączenia z katalogami testuje się przy użyciu konta gł
 
 Z perspektywy wysokiego poziomu następujące funkcje są obsługiwane przez bieżącą wersję łącznika:
 
-| Obiekt feature | Pomoc techniczna |
+| Cecha | Pomoc techniczna |
 | --- | --- |
 | Połączone źródło danych |Łącznik jest obsługiwany przez wszystkie serwery LDAP v3 (zgodne ze standardem RFC 4510). Został przetestowany z następującymi: <li>Microsoft Usługi LDS Active Directory (AD LDS)</li><li>Wykaz globalny Microsoft Active Directory (AD GC)</li><li>Serwer katalogowy 389</li><li>Serwer usługi Apache</li><li>IBM Tivoli DS</li><li>Katalog isode</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Otwórz DJ</li><li>Otwórz usługi DS</li><li>Otwórz katalog LDAP (openldap.org)</li><li>Oracle (wcześniej Sun) Directory Server Enterprise Edition</li><li>Serwer katalogu wirtualnego RadiantOne (VDS)</li><li>Serwer Sun z jednym katalogiem</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>W przypadku większości scenariuszy należy użyć wbudowanego łącznika Active Directory, a niektóre funkcje mogą nie być obsługiwane</li></ul>**Ważne znane katalogi lub funkcje nie są obsługiwane:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Usługa powiadamiania o zmianie hasła (PCNS)</li><li>Inicjowanie obsługi administracyjnej programu Exchange</li><li>Usuwanie aktywnych urządzeń synchronizacji</li><li>Obsługa nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenariusze |<li>Zarządzanie cyklem życia obiektów</li><li>Zarządzanie grupami</li><li>Zarządzanie hasłami</li> |
@@ -272,4 +272,4 @@ W przypadku programu Novell eDirectory import Delta nie wykrywa żadnych usunię
 W przypadku katalogów z dziennikiem zmian różnicowych, który jest oparty na dacie i godzinie, zdecydowanie zaleca się uruchomienie pełnego importu w regularnych odstępach czasu. Ten proces umożliwia aparatowi synchronizacji znalezienie i rozróżnienie między serwerem LDAP a aktualną przestrzenią łącznika.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
-* Aby uzyskać informacje na temat włączania rejestrowania w celu rozwiązywania problemów z łącznikiem, zobacz [jak włączyć śledzenie ETW dla łączników](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Aby uzyskać informacje na temat włączania rejestrowania w celu rozwiązywania problemów z łącznikiem, zobacz [jak włączyć śledzenie ETW dla łączników](https://go.microsoft.com/fwlink/?LinkId=335731).

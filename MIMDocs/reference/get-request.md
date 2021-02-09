@@ -12,12 +12,12 @@ ms.assetid: dcacf36c-0670-44d7-9f40-388667235271
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ad660c562b457890ea75d33325ada8d0f63feb8f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 1bc42eb0fb1e54a3425586350ae5ad20495534c5
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760642"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835709"
 ---
 # <a name="get-request"></a>Pobierz żądanie
 Pobiera co najmniej jedno określone żądanie zarządzania certyfikatami Microsoft Identity Manager (MIM).
@@ -41,11 +41,11 @@ identyfikator| Opcjonalny. Identyfikator GUID żądania do pobrania.
 
 Właściwość| Opis
 ---------|--------
-targetuser| Opcjonalny. Użytkownik docelowy żądania. Jeśli nie określono elementu docelowego, wszystkie żądania, niezależnie od użytkownika docelowego są zwracane. <br/><br/>**Uwaga** : obecnie jest obsługiwana tylko wartość "Current".
+targetuser| Opcjonalny. Użytkownik docelowy żądania. Jeśli nie określono elementu docelowego, wszystkie żądania, niezależnie od użytkownika docelowego są zwracane. <br/><br/>**Uwaga**: obecnie jest obsługiwana tylko wartość "Current".
 status| Opcjonalny. Wskazuje stan żądania do pobrania. Możliwymi typami stanu są "zatwierdzone", "anulowane", "ukończone", "odmowa", "" Executing "," "nie powiodło się," "Brak" i "oczekujące". <br/>Jeśli stan nie zostanie określony, wszystkie żądania, niezależnie od stanu są zwracane.
 
 ### <a name="request-headers"></a>Nagłówki żądań
-W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST* .
+W przypadku typowych nagłówków żądań zapoznaj się z [nagłówkami żądanie HTTP i odpowiedzi](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w obszarze *Szczegóły usługi interfejsu API REST*.
 
 ### <a name="request-body"></a>Treść żądania
 Brak.
@@ -63,7 +63,7 @@ Kod  |Opis
 500 | Błąd wewnętrzny
 
 ### <a name="response-headers"></a>Nagłówki odpowiedzi
-W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST* .
+W przypadku typowych nagłówków odpowiedzi zobacz [nagłówki żądań i odpowiedzi HTTP](certificate-management-rest-api-service-details.md#http-request-and-response-headers) w *szczegółach usługi interfejsu API REST*.
 
 ### <a name="response-body"></a>Treść odpowiedzi
 Po pomyślnym zwraca jeden lub więcej obiektów [żądania](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx) o następujących właściwościach:
@@ -174,8 +174,8 @@ HTTP/1.1 200 OK
 }
 ```     
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Microsoft. CLM. prowizja. FindOperations. FindRequest — Metoda](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
-- [Wyliczenie Microsoft. CLM. Shared. RequestPermission](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Microsoft. CLM. prowizja. FindOperations. FindRequest — Metoda](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Wyliczenie Microsoft. CLM. Shared. RequestPermission](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
 - [Microsoft. CLM. Shared. Requests. Request — Klasa](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

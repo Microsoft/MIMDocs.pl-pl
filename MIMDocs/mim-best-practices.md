@@ -9,12 +9,12 @@ ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 71ac80f10fd01e7c784ec1462a9383295e5f8ddb
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043005"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835871"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Najlepsze rozwiązania dotyczące programu Microsoft Identity Manager 2016
 
@@ -26,17 +26,17 @@ W tym temacie opisano najlepsze rozwiązania dotyczące wdrażania i obsługi pr
 
 Konfiguracja serwera usługi SQL (Structured Query Language) ma kluczowe znaczenie dla optymalnej wydajności systemu. Osiągnięcie optymalnej wydajności programu MIM w dużych wdrożeniach zależy od stosowania najlepszych rozwiązań dla serwera z uruchomioną usługą SQL. Aby uzyskać więcej informacji, zobacz następujące tematy dotyczące najlepszych rozwiązań dla usługi SQL:
 
--   [Storage Top 10 Best Practices](http://go.microsoft.com/fwlink/?LinkID=183663) (10 najlepszych rozwiązań dotyczących magazynu)
+-   [Storage Top 10 Best Practices](https://go.microsoft.com/fwlink/?LinkID=183663) (10 najlepszych rozwiązań dotyczących magazynu)
 
--   [Optimizing tempdb Performance](http://go.microsoft.com/fwlink/?LinkID=188267) (Optymalizacja wydajności bazy danych tempdb)
+-   [Optimizing tempdb Performance](https://go.microsoft.com/fwlink/?LinkID=188267) (Optymalizacja wydajności bazy danych tempdb)
 
--   [Najlepsze rozwiązania dotyczące programu SQL Server](http://go.microsoft.com/fwlink/?LinkID=188268)
+-   [Najlepsze rozwiązania dotyczące programu SQL Server](https://go.microsoft.com/fwlink/?LinkID=188268)
 
--   [Reorganizing and Rebuilding Indexes](http://go.microsoft.com/fwlink/?LinkID=188269) (Reorganizacja i ponowne tworzenie indeksów)
+-   [Reorganizing and Rebuilding Indexes](https://go.microsoft.com/fwlink/?LinkID=188269) (Reorganizacja i ponowne tworzenie indeksów)
 
 ### <a name="presize-data-and-log-files"></a>Ustawianie wstępnego rozmiaru plików danych i plików dziennika
 
-Nie należy polegać na automatycznym zwiększaniu. Zamiast tego należy ręcznie zarządzać wzrostem tych plików. Można pozostawić opcję automatycznego zwiększania ze względów bezpieczeństwa, ale należy aktywnie zarządzać wzrostem plików danych. Przykładowe rozmiary bazy danych programu MIM można znaleźć w dokumencie [FIM Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkID=185246) (Przewodnik planowania pojemności programu FIM).
+Nie należy polegać na automatycznym zwiększaniu. Zamiast tego należy ręcznie zarządzać wzrostem tych plików. Można pozostawić opcję automatycznego zwiększania ze względów bezpieczeństwa, ale należy aktywnie zarządzać wzrostem plików danych. Przykładowe rozmiary bazy danych programu MIM można znaleźć w dokumencie [FIM Capacity Planning Guide](https://go.microsoft.com/fwlink/?LinkID=185246) (Przewodnik planowania pojemności programu FIM).
 
 ### <a name="to-presize-sql-data-and-log-files"></a>Aby ustawić wstępne rozmiary plików danych i dziennika usługi SQL
 
@@ -64,7 +64,7 @@ W celu uzyskania optymalnej wydajności zaleca się utworzenie jednego pliku dan
 
 ### <a name="ensure-adequate-space-for-log-files"></a>Zapewnianie wystarczającej ilości miejsca dla plików dziennika
 
-Ważne jest zrozumienie wymagań dyskowych modelu odzyskiwania. Tryb odzyskiwania prostego może być odpowiedni podczas początkowego ładowania systemu, aby ograniczyć użycie miejsca na dysku, ale dane utworzone po najnowszej kopii zapasowej są narażone na utratę danych. W przypadku korzystania z trybu odzyskiwania pełnego konieczne jest zarządzanie użyciem dysku przez tworzenie kopii zapasowych, co obejmuje częste wykonywanie kopii zapasowych dziennika transakcji, aby zapobiec wysokiemu użyciu miejsca na dysku. Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370).
+Ważne jest zrozumienie wymagań dyskowych modelu odzyskiwania. Tryb odzyskiwania prostego może być odpowiedni podczas początkowego ładowania systemu, aby ograniczyć użycie miejsca na dysku, ale dane utworzone po najnowszej kopii zapasowej są narażone na utratę danych. W przypadku korzystania z trybu odzyskiwania pełnego konieczne jest zarządzanie użyciem dysku przez tworzenie kopii zapasowych, co obejmuje częste wykonywanie kopii zapasowych dziennika transakcji, aby zapobiec wysokiemu użyciu miejsca na dysku. Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](https://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### <a name="limit-sql-server-memory"></a>Ograniczanie pamięci serwera SQL
 
@@ -74,7 +74,7 @@ W zależności od ilości pamięci dostępnej na serwerze SQL oraz tego, czy ser
 
 2. Wybierz opcję Nowe zapytanie.
 
-3. Uruchom zapytanie:
+3. Uruchom poniższe zapytanie:
 
    ```SQL
    USE master
@@ -112,7 +112,7 @@ Ogólnie rzecz biorąc, należy skontaktować się z administratorem bazy danych
 - Jeśli nie zaplanowano wykonywania przyrostowych kopii zapasowych dzienników, należy ustawić dla bazy danych tryb odzyskiwania prostego. 
 - Przed wdrożeniem strategii tworzenia kopii zapasowych upewnij się, że rozumiesz konsekwencje różnych modeli odzyskiwania. Zapoznaj się z wymaganiami dotyczącymi miejsca na dysku dla tych modeli. Model odzyskiwania pełnego wymaga częstego wykonywania kopii zapasowych dziennika w celu uniknięcia wysokiego użycia miejsca na dysku. 
 
-Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370) i [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM 2010).
+Aby uzyskać więcej informacji, zobacz [Modele odzyskiwania — omówienie](https://go.microsoft.com/fwlink/?LinkID=185370) i [FIM 2010 Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM 2010).
 
 ## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Utwórz konto administratora kopii zapasowej dla usługi FIM po instalacji
 
@@ -135,11 +135,11 @@ Poniżej przedstawiono najlepsze rozwiązania dotyczące konfigurowania programu
 
 3.  Zaznacz pole wyboru **Wymagaj uwierzytelnienia od wszystkich nadawców**.
 
-Aby uzyskać więcej informacji, zobacz artykuł [Configure Message Delivery Restrictions](http://go.microsoft.com/fwlink/?LinkID=183625) (Konfigurowanie ograniczeń dostarczania wiadomości).
+Aby uzyskać więcej informacji, zobacz artykuł [Configure Message Delivery Restrictions](https://go.microsoft.com/fwlink/?LinkID=183625) (Konfigurowanie ograniczeń dostarczania wiadomości).
 
--   Konto usługi należy skonfigurować tak, aby odrzucało wiadomości o rozmiarze przekraczającym 1 MB. Zastosuj najlepsze rozwiązanie, aby [skonfigurować limity rozmiaru wiadomości](http://go.microsoft.com/fwlink/?LinkID=183626) dla skrzynki pocztowej lub folderu publicznego z włączoną obsługą poczty.
+-   Konto usługi należy skonfigurować tak, aby odrzucało wiadomości o rozmiarze przekraczającym 1 MB. Zastosuj najlepsze rozwiązanie, aby [skonfigurować limity rozmiaru wiadomości](https://go.microsoft.com/fwlink/?LinkID=183626) dla skrzynki pocztowej lub folderu publicznego z włączoną obsługą poczty.
 
--   Konto usługi należy skonfigurować tak, aby miało przydział magazynowania skrzynki pocztowej wynoszący 5 GB. W celu uzyskania optymalnych wyników należy zastosować najlepsze rozwiązania wymienione w artykule [Configure Storage Quotas for a Mailbox](http://go.microsoft.com/fwlink/?LinkID=156929) (Konfigurowanie limitów przydziału magazynowania dla skrzynki pocztowej).
+-   Konto usługi należy skonfigurować tak, aby miało przydział magazynowania skrzynki pocztowej wynoszący 5 GB. W celu uzyskania optymalnych wyników należy zastosować najlepsze rozwiązania wymienione w artykule [Configure Storage Quotas for a Mailbox](https://go.microsoft.com/fwlink/?LinkID=156929) (Konfigurowanie limitów przydziału magazynowania dla skrzynki pocztowej).
 
 ## <a name="mim-portal"></a>Portal programu MIM
 
@@ -169,7 +169,7 @@ Zaleca się wyłączenie indeksowania programu Microsoft Office SharePoint®. Br
 W tej sekcji przedstawiono serię kroków w celu zwiększenia wydajności początkowego ładowania danych z systemu zewnętrznego do programu MIM. Ważne jest, aby zrozumieć, że wiele z tych kroków jest wykonywanych tylko podczas początkowej populacji systemu. Należy je zresetować po zakończeniu ładowania. Jest to jednorazowa operacja, a nie ciągła synchronizacja.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat synchronizowania użytkowników między programami MIM i Active Directory Domain Services (AD DS), zobacz [Jak mogę synchronizować użytkowników z Active Directory do FIM](http://go.microsoft.com/fwlink/?LinkID=188277) w dokumentacji programu FIM.
+> Aby uzyskać więcej informacji na temat synchronizowania użytkowników między programami MIM i Active Directory Domain Services (AD DS), zobacz [Jak mogę synchronizować użytkowników z Active Directory do FIM](https://go.microsoft.com/fwlink/?LinkID=188277) w dokumentacji programu FIM.
 > 
 > [!IMPORTANT]
 > Upewnij się, że zastosowane zostały najlepsze rozwiązania opisane w sekcji „Konfiguracja usługi SQL” w niniejszym przewodniku. 
@@ -191,7 +191,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
 > [!IMPORTANT]
-> Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](http://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
+> Niewdrożenie tych procedur może spowodować wysokie użycie miejsca na dysku i doprowadzić do jego wyczerpania. Dodatkowe informacje na ten temat można znaleźć w artykule [Modele odzyskiwania — omówienie](https://go.microsoft.com/fwlink/?LinkID=185370). Dodatkowe informacje zawiera przewodnik [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM).
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Krok 2. Zastosowanie minimalnej niezbędnej konfiguracji programu MIM podczas procesu ładowania
 
@@ -222,7 +222,7 @@ W zależności od scenariuszy może to obejmować tworzenie dodatkowych zestawó
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Krok 5. Ponowne skonfigurowanie usługi SQL w celu przywrócenia poprzednich ustawień
 
-Pamiętaj, aby zmienić ustawienia usługi SQL na jej normalne ustawienia. Obejmuje to:
+Pamiętaj, aby zmienić ustawienia usługi SQL na jej normalne ustawienia. Obejmuje to następujące działania:
 
 -   Włączenie wyszukiwania pełnotekstowego
 
@@ -236,7 +236,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = AUTO
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 ```
 
-Jeśli musisz przełączyć się do trybu odzyskiwania prostego, upewnij się, że harmonogram tworzenia kopii zapasowych został ponownie skonfigurowany zgodnie z zasadami tworzenia kopii zapasowych w organizacji. Dodatkowe szczegóły harmonogramów tworzenia kopii zapasowych programu FIM są dostępne w przewodniku [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM2010).
+Jeśli musisz przełączyć się do trybu odzyskiwania prostego, upewnij się, że harmonogram tworzenia kopii zapasowych został ponownie skonfigurowany zgodnie z zasadami tworzenia kopii zapasowych w organizacji. Dodatkowe szczegóły harmonogramów tworzenia kopii zapasowych programu FIM są dostępne w przewodniku [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864) (Przewodnik tworzenia kopii zapasowych i przywracania danych programu FIM2010).
 
 ## <a name="configuration-migration"></a>Migracja konfiguracji
 
@@ -314,7 +314,7 @@ Aby zaimplementować protokół SSL:
 
 7.  Zapisz plik w dowolnej lokalizacji. Musisz mieć dostęp do tej lokalizacji w kolejnych krokach.
 
-8.  Przejdź do https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
+8.  Przejdź na stronę https://servername/certsrv. Zastąp element nazwa_serwera nazwą serwera wystawiającego certyfikat.
 
 9.  Kliknij opcję Żądaj nowego certyfikatu.
 
@@ -356,9 +356,9 @@ Aby zaimplementować protokół SSL:
 
 28. Kliknij pozycję Operacje, a następnie kliknij opcję Mapowania dostępu alternatywnego.
 
-29. Kliknij pozycję http://servername (Dalej).
+29. Kliknij pozycję https://servername (Dalej).
 
-30. Zmień http://servername na https://servername, a następnie kliknij przycisk OK.
+30. Zmień https://servername na https://servername , a następnie kliknij przycisk OK.
 
 31. Kliknij przycisk Start, kliknij pozycję Uruchom, wpisz polecenie iisreset, a następnie kliknij przycisk OK.
 
@@ -394,7 +394,8 @@ Program MIM udostępnia dwa typy reguł MPR: żądania i przejścia między zest
   - Stosowane, kiedy zasób wchodzi do skojarzonego zestawu lub go opuszcza.
   - Zakres ograniczony do elementów członkowskich zestawu.
 
->[UWAGA] Aby uzyskać więcej informacji, zobacz [Projektowanie reguł dotyczących zasad firmowych](http://go.microsoft.com/fwlink/?LinkID=183691).
+> [!NOTE]
+> Aby uzyskać więcej informacji, zobacz [projektowanie reguł dotyczących zasad firmowych](https://go.microsoft.com/fwlink/?LinkID=183691).
 
 #### <a name="only-enable-mprs-as-necessary"></a>Reguły MPR należy włączać tylko w razie potrzeby
 
@@ -514,7 +515,7 @@ Jeśli ten klucz rejestru jest ustawiony na wartość true, użytkownik najprawd
 
 Istnieje możliwość rejestrowania haseł w postaci zwykłego tekstu podczas włączania śledzenia diagnostycznego poziomu usługi w usłudze Windows
 
-Communication Foundation (WCF). Ta opcja nie jest domyślnie włączona i odradza się włączanie jej w środowiskach produkcyjnych. Te hasła są widoczne jako elementy zwykłego tekstu w obrębie zaszyfrowanego komunikatu protokołu SOAP (Simple Object Access Protocol), kiedy użytkownik rejestruje się w celu resetowania haseł. Aby uzyskać więcej informacji, zobacz [Konfigurowanie rejestrowania komunikatów](http://go.microsoft.com/fwlink/?LinkID=168572).
+Communication Foundation (WCF). Ta opcja nie jest domyślnie włączona i odradza się włączanie jej w środowiskach produkcyjnych. Te hasła są widoczne jako elementy zwykłego tekstu w obrębie zaszyfrowanego komunikatu protokołu SOAP (Simple Object Access Protocol), kiedy użytkownik rejestruje się w celu resetowania haseł. Aby uzyskać więcej informacji, zobacz [Konfigurowanie rejestrowania komunikatów](https://go.microsoft.com/fwlink/?LinkID=168572).
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Nie należy mapować przepływu pracy autoryzacji na proces resetowania hasła
 
@@ -532,7 +533,7 @@ Podczas dodawania, usuwania lub zmiany kolejności działań uwierzytelniania w 
 
 #### <a name="consider-adding-a-privacy-disclaimer-to-the-user-profile-page"></a>Należy rozważyć dodanie zastrzeżenia dotyczącego prywatności do strony profilu użytkownika
 
-W programie MIM domyślnie niektóre informacje o profilu użytkownika mogą być widoczne dla innych użytkowników. Jako informację dla użytkowników administratorzy powinni rozważyć dodanie niestandardowego tekstu spójnego z zasadami firmy do strony profilu użytkownika. Aby uzyskać więcej informacji na temat dodawania niestandardowego tekstu do strony portalu programu MIM, zobacz artykuł [Introduction to Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848) (Wprowadzenie do konfigurowania i dostosowywania portalu programu FIM).
+W programie MIM domyślnie niektóre informacje o profilu użytkownika mogą być widoczne dla innych użytkowników. Jako informację dla użytkowników administratorzy powinni rozważyć dodanie niestandardowego tekstu spójnego z zasadami firmy do strony profilu użytkownika. Aby uzyskać więcej informacji na temat dodawania niestandardowego tekstu do strony portalu programu MIM, zobacz artykuł [Introduction to Configuring and Customizing the FIM Portal](https://go.microsoft.com/fwlink/?LinkID=165848) (Wprowadzenie do konfigurowania i dostosowywania portalu programu FIM).
 
 ### <a name="schema"></a>Schemat
 
@@ -558,7 +559,7 @@ Istnieje 13 podstawowych atrybutów przypisanych do wszystkich typów zasobów. 
 
 -   ExpirationTime
 
--   Ustawienia regionalne
+-   Regionalne
 
 -   MVObjectID
 
@@ -633,6 +634,6 @@ Celem programu MIM jest przetwarzanie żądań, które mogą być inicjowane prz
 Aby uzyskać dodatkowe informacje, zobacz temat informacje o [partycjach usługi FIM](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
 
 ## <a name="next-steps"></a>Następne kroki
-- [Przewodnik tworzenia kopii zapasowych i przywracania usługi FIM](http://go.microsoft.com/fwlink/?LinkID=165864)
-- [Jak mogę zsynchronizować użytkowników z Active Directory do programu FIM](http://go.microsoft.com/fwlink/?LinkID=188277) 
-- [Omówienie modelu odzyskiwania](http://go.microsoft.com/fwlink/?LinkID=185370).
+- [Przewodnik tworzenia kopii zapasowych i przywracania usługi FIM](https://go.microsoft.com/fwlink/?LinkID=165864)
+- [Jak mogę zsynchronizować użytkowników z Active Directory do programu FIM](https://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Omówienie modelu odzyskiwania](https://go.microsoft.com/fwlink/?LinkID=185370).

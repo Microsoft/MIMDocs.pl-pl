@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e0c00972983d964a489d7c76e06e271bdf91b79e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 9b1a65d6604f434d3619ad7964caa8ce202092a0
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760841"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835958"
 ---
 # <a name="web-service-connector-workflow-guide-for-a-rest-api-sample"></a>Przewodnik przepływu pracy łącznika usługi sieci Web dla przykładu interfejsu API REST
 
@@ -54,12 +54,12 @@ Poniższe kroki pokazują, jak utworzyć nowy projekt dla źródła danych w nar
 
    ![Narzędzie konfiguracji usługi sieci Web](media/microsoft-identity-manager-2016-ma-ws-restgeneric/web-service-configuration-tool.png)
 
-2. Wybierz pozycję **plik**  >  **Nowy**  >  **projekt REST** .
+2. Wybierz pozycję **plik**  >  **Nowy**  >  **projekt REST**.
 
    ![Utwórz nowy projekt REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/new-project.png)
    <!-- Image shows SOAP project selected, not REST project -->
 
-3. Po lewej stronie wybierz pozycję **projekt REST** , a następnie wybierz pozycję **Dodaj** .
+3. Po lewej stronie wybierz pozycję **projekt REST** , a następnie wybierz pozycję **Dodaj**.
 
    ![Wybierz projekt REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-project.png)
 
@@ -76,9 +76,9 @@ Poniższe kroki pokazują, jak utworzyć nowy projekt dla źródła danych w nar
     
    ![Przykładowe wartości dla usługi REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/restsample.png)
 
-   Ustaw **tryb zabezpieczeń** na _Brak_ . Ustaw **adres** na przykładowy serwer JSON, który jest hostowany na platformie Azure.
+   Ustaw **tryb zabezpieczeń** na _Brak_. Ustaw **adres** na przykładowy serwer JSON, który jest hostowany na platformie Azure.
 
-5. Wybierz przycisk **OK** . Projekt REST wymieniony w narzędziu konfiguracji usług sieci Web.
+5. Wybierz przycisk **OK**. Projekt REST wymieniony w narzędziu konfiguracji usług sieci Web.
 
    ![Projekt REST w narzędziu konfiguracji usług sieci Web](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-discovery.png)
 
@@ -86,13 +86,13 @@ Poniższe kroki pokazują, jak utworzyć nowy projekt dla źródła danych w nar
 
    1. Rozwiń **projekt REST** i wybierz usługę _RESTSAMPLE_ .
 
-   2. Wybierz pozycję **Dodaj** . Zostanie wyświetlony monit o dodanie dwóch wartości:
+   2. Wybierz pozycję **Dodaj**. Zostanie wyświetlony monit o dodanie dwóch wartości:
    
       ![Wprowadź wartości dla usługi REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-service-highlights.png)
       
-      1. Wprowadź **nazwę** . Ten krok jest oznaczony jako 3 na zrzutie ekranu.
-      2. Wprowadź **adres** . Ten krok jest oznaczony jako 4 na zrzucie ekranu.
-      3. Wybierz przycisk **OK** . Zasób REST jest dodawany do opisu usługi _RESTSAMPLE_ .
+      1. Wprowadź **nazwę**. Ten krok jest oznaczony jako 3 na zrzutie ekranu.
+      2. Wprowadź **adres**. Ten krok jest oznaczony jako 4 na zrzucie ekranu.
+      3. Wybierz przycisk **OK**. Zasób REST jest dodawany do opisu usługi _RESTSAMPLE_ .
 
 7. W polu **zasoby** wybierz właśnie dodany zasób Rest. Dodaj następującą metodę:
 
@@ -105,7 +105,7 @@ Poniższe kroki pokazują, jak utworzyć nowy projekt dla źródła danych w nar
 
    ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-samples.png)
 
-10. Wybierz pozycję **Zapisz** . Zapisz projekt w `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
+10. Wybierz pozycję **Zapisz**. Zapisz projekt w `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
 
 >[!NOTE]
 >Po zapisaniu projektu zostanie wygenerowany plik WsConfig. Plik konfiguracji zawiera wiele plików, które są zdefiniowane wcześniej w przeglądzie usługi sieci Web.
@@ -158,7 +158,7 @@ Następnym krokiem jest skonfigurowanie przepływów pracy dla typu obiektu. Pli
 - Testuj połączenie: Skonfiguruj przepływ pracy, aby sprawdzić, czy połączenie z serwerem źródła danych zostało pomyślnie ustanowione.
 
 >[!NOTE]
->Można skonfigurować te przepływy pracy dla projektu lub pobrać domyślny projekt z [Centrum pobierania Microsoft](http://www.microsoft.com/download/details.aspx?id=29944).
+>Można skonfigurować te przepływy pracy dla projektu lub pobrać domyślny projekt z [Centrum pobierania Microsoft](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### <a name="workflow-designer"></a>Projektant przepływów pracy
@@ -168,33 +168,33 @@ Projektant przepływu pracy otwiera obszar roboczy, aby skonfigurować przepływ
 
 Projektant przepływu pracy składa się z następujących elementów interfejsu użytkownika:
 
-   - **Węzły w lewym okienku** : te ułatwienia umożliwiają wybranie projektu, który ma zostać zaprojektowany.
+   - **Węzły w lewym okienku**: te ułatwienia umożliwiają wybranie projektu, który ma zostać zaprojektowany.
 
-   - **Centralna Projektant przepływu pracy** : w tym miejscu można usunąć działania związane z konfigurowaniem przepływów pracy. Aby wykonać różne operacje programu MIM (eksportowanie, importowanie, zarządzanie hasłami), można użyć standardowych i niestandardowych działań przepływu pracy w programie .NET Workflow Framework 4. Narzędzie konfiguracji usługi sieci Web używa standardowych i niestandardowych działań przepływu pracy. Aby uzyskać więcej informacji o działaniach standardowych, zobacz [Korzystanie z projektantów działań](http://msdn.microsoft.com/library/ee829528.aspx).
+   - **Centralna Projektant przepływu pracy**: w tym miejscu można usunąć działania związane z konfigurowaniem przepływów pracy. Aby wykonać różne operacje programu MIM (eksportowanie, importowanie, zarządzanie hasłami), można użyć standardowych i niestandardowych działań przepływu pracy w programie .NET Workflow Framework 4. Narzędzie konfiguracji usługi sieci Web używa standardowych i niestandardowych działań przepływu pracy. Aby uzyskać więcej informacji o działaniach standardowych, zobacz [Korzystanie z projektantów działań](https://msdn.microsoft.com/library/ee829528.aspx).
 
       - W środkowym Projektant przepływu pracy czerwony okrąg z wykrzyknikiem obok dowolnego działania wskazuje, że operacja została porzucona i nie jest zdefiniowana prawidłowo i całkowicie. Umieść kursor nad czerwonym kółkiem, aby sprawdzić dokładny błąd. Po poprawnym zdefiniowaniu działania czerwony okrąg zmieni się na żółty znacznik informacji.
       
       - W Projektant przepływu pracy centralnym żółty trójkątny znacznik informacji obok dowolnego działania wskazuje, że działanie jest zdefiniowane, ale istnieje więcej możliwości wykonania działania. Umieść kursor na żółtym trójkącie, aby zobaczyć więcej informacji.
 
-   - **Przybornik** : pakiety wszystkich narzędzi, w tym działania systemowe i niestandardowe oraz wstępnie zdefiniowane instrukcje, aby zaprojektować przepływ pracy. Aby uzyskać więcej informacji, zobacz [Przybornik](http://msdn.microsoft.com/library/aa480213.aspx).
+   - **Przybornik**: pakiety wszystkich narzędzi, w tym działania systemowe i niestandardowe oraz wstępnie zdefiniowane instrukcje, aby zaprojektować przepływ pracy. Aby uzyskać więcej informacji, zobacz [Przybornik](https://msdn.microsoft.com/library/aa480213.aspx).
    
-   - **Sekcje przybornika** : Przybornik zawiera następujące sekcje i kategorie:
+   - **Sekcje przybornika**: Przybornik zawiera następujące sekcje i kategorie:
    
-      - **Opis** : nagłówek przybornika. Jedna karta uzyskuje dostęp do przybornika i właściwości wybranego działania przepływu pracy. 
+      - **Opis**: nagłówek przybornika. Jedna karta uzyskuje dostęp do przybornika i właściwości wybranego działania przepływu pracy. 
 
-      - **Importowanie przepływu pracy** : niestandardowe działania w celu skonfigurowania przepływów pracy importu.
+      - **Importowanie przepływu pracy**: niestandardowe działania w celu skonfigurowania przepływów pracy importu.
       
-      - **Eksportuj przepływ pracy** : niestandardowe działania w celu skonfigurowania przepływów pracy eksportowania.
+      - **Eksportuj przepływ pracy**: niestandardowe działania w celu skonfigurowania przepływów pracy eksportowania.
       
-      - **Typowy** : działania niestandardowe w celu skonfigurowania dowolnego przepływu pracy.
+      - **Typowy**: działania niestandardowe w celu skonfigurowania dowolnego przepływu pracy.
       
-      - **Debuguj** : działania systemowego przepływu pracy do debugowania zdefiniowane w przepływie pracy 4. Te działania umożliwiają śledzenie problemów dla przepływu pracy.
+      - **Debuguj**: działania systemowego przepływu pracy do debugowania zdefiniowane w przepływie pracy 4. Te działania umożliwiają śledzenie problemów dla przepływu pracy.
       
-      - **Instrukcje** : działania przepływu pracy w systemie zdefiniowane w przepływie pracy 4. Aby uzyskać więcej informacji, zobacz [Korzystanie z projektantów działań](http://msdn.microsoft.com/library/ee829528.aspx).
+      - **Instrukcje**: działania przepływu pracy w systemie zdefiniowane w przepływie pracy 4. Aby uzyskać więcej informacji, zobacz [Korzystanie z projektantów działań](https://msdn.microsoft.com/library/ee829528.aspx).
 
-   - **Właściwości** : na karcie właściwości są wyświetlane właściwości określonego działania przepływu pracy, które zostało usunięte w obszarze projektanta i wybrane. Na rysunku po lewej stronie są wyświetlane właściwości działania **przypisywania** . Dla każdego działania właściwości różnią się i są używane podczas konfigurowania niestandardowego przepływu pracy. Na tej karcie można zdefiniować atrybuty wybranego narzędzia, które zostało porzucone w centralnym Projektancie przepływu pracy. Aby uzyskać więcej informacji, zobacz [Właściwości](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Właściwości**: na karcie właściwości są wyświetlane właściwości określonego działania przepływu pracy, które zostało usunięte w obszarze projektanta i wybrane. Na rysunku po lewej stronie są wyświetlane właściwości działania **przypisywania** . Dla każdego działania właściwości różnią się i są używane podczas konfigurowania niestandardowego przepływu pracy. Na tej karcie można zdefiniować atrybuty wybranego narzędzia, które zostało porzucone w centralnym Projektancie przepływu pracy. Aby uzyskać więcej informacji, zobacz [Właściwości](https://msdn.microsoft.com/library/ee342461.aspx).
 
-   - **Pasek zadań:** Pasek zadań zawiera trzy elementy: **zmienne** , **argumenty** i **Importy** . Te elementy są używane razem z działaniami przepływu pracy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do programu developer Windows Workflow Foundation (WF) w programie .NET 4](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Pasek zadań:** Pasek zadań zawiera trzy elementy: **zmienne**, **argumenty** i **Importy**. Te elementy są używane razem z działaniami przepływu pracy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do programu developer Windows Workflow Foundation (WF) w programie .NET 4](https://msdn.microsoft.com/library/ee342461.aspx).
 
 
 
@@ -216,7 +216,7 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla interf
    
     ![Działanie sekwencji](media/microsoft-identity-manager-2016-ma-ws-restgeneric/imports.png)
 
-3. Aby dodać zmienną, Znajdź pozycję **Utwórz zmienną** . Wpisz _wsResponse_ w polu **Nazwa** , wybierz listę rozwijaną **Typ zmiennej** , a następnie wybierz pozycję **Przeglądaj w poszukiwaniu typów** . Zostanie wyświetlone okno dialogowe. Wybierz **wygenerowaną**  >  **GETALL**  >  **odpowiedź** GetAll. Nie zaznaczaj **zakresu** i wartości **domyślnych** . Alternatywnie możesz ustawić te wartości przy użyciu widoku **Właściwości** .
+3. Aby dodać zmienną, Znajdź pozycję **Utwórz zmienną**. Wpisz _wsResponse_ w polu **Nazwa**, wybierz listę rozwijaną **Typ zmiennej** , a następnie wybierz pozycję **Przeglądaj w poszukiwaniu typów**. Zostanie wyświetlone okno dialogowe. Wybierz **wygenerowaną**  >    >  **odpowiedź** GetAll. Nie zaznaczaj **zakresu** i wartości **domyślnych** . Alternatywnie możesz ustawić te wartości przy użyciu widoku **Właściwości** .
 
    ![Domyślna odpowiedź](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list.png)
 
@@ -228,15 +228,15 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla interf
 
    Aby użyć operacji usługi sieci Web, ustaw następujące właściwości:
    
-      - **Nazwa usługi** : Wprowadź nazwę usługi sieci Web.
-      - **Nazwa punktu końcowego** : Określ nazwę punktu końcowego dla wybranej usługi.
-      - **Nazwa operacji** : Określ odpowiednią operację dla usługi.
-      - **Argument** : Wybierz **argumenty** . W następnym oknie dialogowym Przypisz wartości argumentów, jak pokazano na poniższym rysunku:
+      - **Nazwa usługi**: Wprowadź nazwę usługi sieci Web.
+      - **Nazwa punktu końcowego**: Określ nazwę punktu końcowego dla wybranej usługi.
+      - **Nazwa operacji**: Określ odpowiednią operację dla usługi.
+      - **Argument**: Wybierz **argumenty**. W następnym oknie dialogowym Przypisz wartości argumentów, jak pokazano na poniższym rysunku:
       
          ![Przypisz argumenty](media/microsoft-identity-manager-2016-ma-ws-restgeneric/get-all.png)
 
          >[!IMPORTANT]
-         >Nie zmieniaj **nazwy** , **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
+         >Nie zmieniaj **nazwy**, **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
 
 6. Dodaj działanie **foreach** tuż poniżej **WebServiceCallActivity.** To działanie służy do iteracji wszystkich atrybutów (kotwic i niekotwiczenia) typu obiektu. Przeciągnięcie tego działania na powierzchnię Projektant przepływu pracy powoduje automatyczne wyliczenie wszystkich nazw atrybutów dla obiektu. Ustaw wymagane wartości zgodnie z poniższym ekranem:
 
@@ -246,11 +246,11 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla interf
 
    ![Plik konfiguracji](media/microsoft-identity-manager-2016-ma-ws-restgeneric/config-files.png)
 
-8. Określ publiczną przestrzeń nazw dla _EmployeeList_ :
+8. Określ publiczną przestrzeń nazw dla _EmployeeList_:
 
     ![Kod listy pracowników](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list-code.png)
 
-    Następnie Dodaj ten zwrot do przepływu pracy **foreach** :
+    Następnie Dodaj ten zwrot do przepływu pracy **foreach**:
 
     ![Dodaj listę pracowników do przepływu pracy ForEach](media/microsoft-identity-manager-2016-ma-ws-restgeneric/foreach-employee-list.png)
 

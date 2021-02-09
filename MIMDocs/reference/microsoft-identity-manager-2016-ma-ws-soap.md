@@ -9,12 +9,12 @@ ms.date: 11/30/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 54f9eb08ce8c400aac5c66467a797bcd3cb097a0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 455988722b3aeb9e29b00696342e1800e9ad82c7
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92760852"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835975"
 ---
 # <a name="web-service-connector-workflow-guide-for-soap"></a>Przewodnik przepływu pracy łącznika usługi sieci Web dla protokołu SOAP
 
@@ -24,18 +24,18 @@ W tym artykule opisano sposób tworzenia nowego projektu dla źródła danych w 
 
     ![Narzędzie konfiguracji usługi sieci Web](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-configuration-tool-01.png)
 
-2.  Wybierz pozycję **projekt protokołu SOAP** , a następnie wybierz pozycję **Dodaj** .
+2.  Wybierz pozycję **projekt protokołu SOAP** , a następnie wybierz pozycję **Dodaj**.
 
     ![Projekt protokołu SOAP](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-configuration-tool-02.png)
 
-3.  Na następnej stronie podaj następujące informacje, a następnie wybierz pozycję **dalej** :
+3.  Na następnej stronie podaj następujące informacje, a następnie wybierz pozycję **dalej**:
 
     - Nowa nazwa usługi sieci Web
     - Adres (ścieżka WSDL) do pobrania uwidocznionych usług, punktów końcowych i operacji
     - Przestrzeń nazw
     - Tryb zabezpieczeń (typ uwierzytelniania)
   
-4.  W tym przykładzie zostanie wyświetlona strona **poświadczenia** z wymaganiami dotyczącymi *podstawowego* trybu zabezpieczeń (tryb, który został wybrany w poprzednim kroku). Jeśli dla trybu zabezpieczeń określono wartość "none", zostanie wyświetlona strona poświadczeń. Wybierz pozycję **Dalej** .
+4.  W tym przykładzie zostanie wyświetlona strona **poświadczenia** z wymaganiami dotyczącymi *podstawowego* trybu zabezpieczeń (tryb, który został wybrany w poprzednim kroku). Jeśli dla trybu zabezpieczeń określono wartość "none", zostanie wyświetlona strona poświadczeń. Wybierz opcję **Dalej**.
 
     ![Ekran usługi SOAP z nazwą użytkownika i hasłem](media/microsoft-identity-manager-2016-ma-ws-soap/soap-service.png)
 
@@ -43,7 +43,7 @@ W tym artykule opisano sposób tworzenia nowego projektu dla źródła danych w 
 
     ![ekran postępu pobierania usługi sieci Web](media/microsoft-identity-manager-2016-ma-ws-soap/web-service-progress.png)
 
-6.  Po przeprowadzeniu odnajdywania program wyświetla listę znalezionych punktów końcowych i operacji. Wybierz pozycję **Zakończ** .
+6.  Po przeprowadzeniu odnajdywania program wyświetla listę znalezionych punktów końcowych i operacji. Wybierz pozycję **Zakończ**.
 
     ![Wykryto punkty końcowe usługi SOAP i operacje](media/microsoft-identity-manager-2016-ma-ws-soap/soap-service-endpoints.png)
 
@@ -59,7 +59,7 @@ W tym artykule opisano sposób tworzenia nowego projektu dla źródła danych w 
 
     ![Rozwinięte punkty końcowe](media/microsoft-identity-manager-2016-ma-ws-soap/get-employee-byid.png)
 
-10. Następnym krokiem jest zdefiniowanie schematu przestrzeni łącznika, który jest osiągany przez utworzenie typu obiektu i zdefiniowanie ich typów obiektów. Wybierz pozycję **typy obiektów** , a następnie wybierz pozycję **Dodaj** . W nowym oknie Dodaj nowy typ obiektu i podaj nazwę. Wybierz przycisk **OK** .
+10. Następnym krokiem jest zdefiniowanie schematu przestrzeni łącznika, który jest osiągany przez utworzenie typu obiektu i zdefiniowanie ich typów obiektów. Wybierz pozycję **typy obiektów** , a następnie wybierz pozycję **Dodaj**. W nowym oknie Dodaj nowy typ obiektu i podaj nazwę. Wybierz przycisk **OK**.
 
     ![Definiowanie typu obiektu](media/microsoft-identity-manager-2016-ma-ws-soap/object-types.png)
 
@@ -67,7 +67,7 @@ W tym artykule opisano sposób tworzenia nowego projektu dla źródła danych w 
 
     ![Wyświetlanie nowo utworzonego typu obiektu](media/microsoft-identity-manager-2016-ma-ws-soap/object-type-employee.png)
 
-12. Prawe okienko odpowiadające typowi obiektu umożliwia zachowanie atrybutów i ich właściwości dla wybranego typu obiektu. Wybierz pozycję **Dodaj** . Nowe okno zostanie otwarte w celu dodania atrybutów:
+12. Prawe okienko odpowiadające typowi obiektu umożliwia zachowanie atrybutów i ich właściwości dla wybranego typu obiektu. Wybierz pozycję **Dodaj**. Nowe okno zostanie otwarte w celu dodania atrybutów:
 
     ![Atrybut i typ danych](media/microsoft-identity-manager-2016-ma-ws-soap/object-type-firstname.png)
 
@@ -105,7 +105,7 @@ Następnym krokiem jest skonfigurowanie przepływów pracy dla typu obiektu. Pli
 - Testuj połączenie: Skonfiguruj przepływ pracy, aby sprawdzić, czy połączenie z serwerem źródła danych zostało pomyślnie ustanowione.
 
 >[!NOTE]
->Można skonfigurować te przepływy pracy dla projektu lub pobrać domyślny projekt z [Centrum pobierania Microsoft](http://www.microsoft.com/download/details.aspx?id=29944).
+>Można skonfigurować te przepływy pracy dla projektu lub pobrać domyślny projekt z [Centrum pobierania Microsoft](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### <a name="workflow-designer"></a>Projektant przepływów pracy
@@ -115,33 +115,33 @@ Projektant przepływu pracy otwiera obszar roboczy, aby skonfigurować przepływ
 
 Projektant przepływu pracy składa się z następujących elementów interfejsu użytkownika:
 
-   - **Węzły w lewym okienku** : te ułatwienia umożliwiają wybranie projektu, który ma zostać zaprojektowany.
+   - **Węzły w lewym okienku**: te ułatwienia umożliwiają wybranie projektu, który ma zostać zaprojektowany.
 
-   - **Centralna Projektant przepływu pracy** : w tym miejscu można usunąć działania związane z konfigurowaniem przepływów pracy. Aby wykonać różne operacje programu MIM (eksportowanie, importowanie, zarządzanie hasłami), można użyć standardowych i niestandardowych działań przepływu pracy w programie .NET Workflow Framework 4. Narzędzie konfiguracji usługi sieci Web używa standardowych i niestandardowych działań przepływu pracy. Aby uzyskać więcej informacji o działaniach standardowych, zobacz [Korzystanie z projektantów działań](http://msdn.microsoft.com/library/ee829528.aspx).
+   - **Centralna Projektant przepływu pracy**: w tym miejscu można usunąć działania związane z konfigurowaniem przepływów pracy. Aby wykonać różne operacje programu MIM (eksportowanie, importowanie, zarządzanie hasłami), można użyć standardowych i niestandardowych działań przepływu pracy w programie .NET Workflow Framework 4. Narzędzie konfiguracji usługi sieci Web używa standardowych i niestandardowych działań przepływu pracy. Aby uzyskać więcej informacji o działaniach standardowych, zobacz [Korzystanie z projektantów działań](https://msdn.microsoft.com/library/ee829528.aspx).
 
       - W środkowym Projektant przepływu pracy czerwony okrąg z wykrzyknikiem obok dowolnego działania wskazuje, że operacja została porzucona i nie jest zdefiniowana prawidłowo i całkowicie. Umieść kursor nad czerwonym kółkiem, aby sprawdzić dokładny błąd. Po poprawnym zdefiniowaniu działania czerwony okrąg zmieni się na żółty znacznik informacji.
       
       - W Projektant przepływu pracy centralnym żółty trójkątny znacznik informacji obok dowolnego działania wskazuje, że działanie jest zdefiniowane, ale istnieje więcej możliwości wykonania działania. Umieść kursor na żółtym trójkącie, aby zobaczyć więcej informacji.
 
-   - **Przybornik** : pakiety wszystkich narzędzi, w tym działania systemowe i niestandardowe oraz wstępnie zdefiniowane instrukcje, aby zaprojektować przepływ pracy. Aby uzyskać więcej informacji, zobacz [Przybornik](http://msdn.microsoft.com/library/aa480213.aspx).
+   - **Przybornik**: pakiety wszystkich narzędzi, w tym działania systemowe i niestandardowe oraz wstępnie zdefiniowane instrukcje, aby zaprojektować przepływ pracy. Aby uzyskać więcej informacji, zobacz [Przybornik](https://msdn.microsoft.com/library/aa480213.aspx).
    
-   - **Sekcje przybornika** : Przybornik zawiera następujące sekcje i kategorie:
+   - **Sekcje przybornika**: Przybornik zawiera następujące sekcje i kategorie:
    
-      - **Opis** : nagłówek przybornika. Jedna karta uzyskuje dostęp do przybornika i właściwości wybranego działania przepływu pracy. 
+      - **Opis**: nagłówek przybornika. Jedna karta uzyskuje dostęp do przybornika i właściwości wybranego działania przepływu pracy. 
 
-      - **Importowanie przepływu pracy** : niestandardowe działania w celu skonfigurowania przepływów pracy importu.
+      - **Importowanie przepływu pracy**: niestandardowe działania w celu skonfigurowania przepływów pracy importu.
       
-      - **Eksportuj przepływ pracy** : niestandardowe działania w celu skonfigurowania przepływów pracy eksportowania.
+      - **Eksportuj przepływ pracy**: niestandardowe działania w celu skonfigurowania przepływów pracy eksportowania.
       
-      - **Typowy** : działania niestandardowe w celu skonfigurowania dowolnego przepływu pracy.
+      - **Typowy**: działania niestandardowe w celu skonfigurowania dowolnego przepływu pracy.
       
-      - **Debuguj** : działania systemowego przepływu pracy do debugowania zdefiniowane w przepływie pracy 4. Te działania umożliwiają śledzenie problemów dla przepływu pracy.
+      - **Debuguj**: działania systemowego przepływu pracy do debugowania zdefiniowane w przepływie pracy 4. Te działania umożliwiają śledzenie problemów dla przepływu pracy.
       
-      - **Instrukcje** : działania przepływu pracy w systemie zdefiniowane w przepływie pracy 4. Aby uzyskać więcej informacji, zobacz [Korzystanie z projektantów działań](http://msdn.microsoft.com/library/ee829528.aspx).            
+      - **Instrukcje**: działania przepływu pracy w systemie zdefiniowane w przepływie pracy 4. Aby uzyskać więcej informacji, zobacz [Korzystanie z projektantów działań](https://msdn.microsoft.com/library/ee829528.aspx).            
 
-   - **Właściwości** : na karcie właściwości są wyświetlane właściwości określonego działania przepływu pracy, które zostało usunięte w obszarze projektanta i wybrane. Na rysunku po lewej stronie są wyświetlane właściwości działania **przypisywania** . Dla każdego działania właściwości różnią się i są używane podczas konfigurowania niestandardowego przepływu pracy. Na tej karcie można zdefiniować atrybuty wybranego narzędzia, które zostało porzucone w centralnym Projektancie przepływu pracy. Aby uzyskać więcej informacji, zobacz [Właściwości](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Właściwości**: na karcie właściwości są wyświetlane właściwości określonego działania przepływu pracy, które zostało usunięte w obszarze projektanta i wybrane. Na rysunku po lewej stronie są wyświetlane właściwości działania **przypisywania** . Dla każdego działania właściwości różnią się i są używane podczas konfigurowania niestandardowego przepływu pracy. Na tej karcie można zdefiniować atrybuty wybranego narzędzia, które zostało porzucone w centralnym Projektancie przepływu pracy. Aby uzyskać więcej informacji, zobacz [Właściwości](https://msdn.microsoft.com/library/ee342461.aspx).
 
-   - **Pasek zadań:** Pasek zadań zawiera trzy elementy: **zmienne** , **argumenty** i **Importy** . Te elementy są używane razem z działaniami przepływu pracy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do programu developer Windows Workflow Foundation (WF) w programie .NET 4](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Pasek zadań:** Pasek zadań zawiera trzy elementy: **zmienne**, **argumenty** i **Importy**. Te elementy są używane razem z działaniami przepływu pracy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do programu developer Windows Workflow Foundation (WF) w programie .NET 4](https://msdn.microsoft.com/library/ee342461.aspx).
 
 
 <h2 id="full-import-workflows">Konfigurowanie pełnego przepływu pracy w narzędziu konfiguracji usługi sieci Web</h2>
@@ -162,7 +162,7 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla protok
    
     ![Działanie sekwencji](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
 
-3. Aby dodać zmienną, Znajdź pozycję **Utwórz zmienną** . Wpisz _wsResponse_ w polu **Nazwa** , wybierz listę rozwijaną **Typ zmiennej** , a następnie wybierz pozycję **Przeglądaj w poszukiwaniu typów** . Zostanie wyświetlone okno dialogowe. Wybierz **wygenerowaną**  >  **domyślną**  >  **odpowiedź** . Nie zaznaczaj **zakresu** i wartości **domyślnych** . Alternatywnie możesz ustawić te wartości przy użyciu widoku **Właściwości** .
+3. Aby dodać zmienną, Znajdź pozycję **Utwórz zmienną**. Wpisz _wsResponse_ w polu **Nazwa**, wybierz listę rozwijaną **Typ zmiennej** , a następnie wybierz pozycję **Przeglądaj w poszukiwaniu typów**. Zostanie wyświetlone okno dialogowe. Wybierz **wygenerowaną**  >  **domyślną**  >  **odpowiedź**. Nie zaznaczaj **zakresu** i wartości **domyślnych** . Alternatywnie możesz ustawić te wartości przy użyciu widoku **Właściwości** .
 
    ![Domyślna odpowiedź](media/microsoft-identity-manager-2016-ma-ws-soap/default-response.png)
 
@@ -180,15 +180,15 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla protok
 
    Aby użyć operacji usługi sieci Web, ustaw następujące właściwości:
    
-      - **Nazwa usługi** : Wprowadź nazwę usługi sieci Web.
-      - **Nazwa punktu końcowego** : Określ nazwę punktu końcowego dla wybranej usługi.
-      - **Nazwa operacji** : Określ odpowiednią operację dla usługi.
-      - **Argument** : Wybierz **argumenty** . W następnym oknie dialogowym Przypisz wartości argumentów, jak pokazano na poniższym rysunku:
+      - **Nazwa usługi**: Wprowadź nazwę usługi sieci Web.
+      - **Nazwa punktu końcowego**: Określ nazwę punktu końcowego dla wybranej usługi.
+      - **Nazwa operacji**: Określ odpowiednią operację dla usługi.
+      - **Argument**: Wybierz **argumenty**. W następnym oknie dialogowym Przypisz wartości argumentów, jak pokazano na poniższym rysunku:
       
          ![Przypisz argumenty](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
          >[!IMPORTANT]
-         >Nie zmieniaj **nazwy** , **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
+         >Nie zmieniaj **nazwy**, **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
 
 7. Dodaj działanie **foreach** tuż poniżej **WebServiceCallActivity.** To działanie służy do iteracji wszystkich atrybutów (kotwic i niekotwiczenia) typu obiektu. Przeciągnięcie tego działania na powierzchnię Projektant przepływu pracy powoduje automatyczne wyliczenie wszystkich nazw atrybutów dla obiektu. Ustaw wymagane wartości zgodnie z poniższym ekranem:
 
@@ -198,7 +198,7 @@ Poniższe kroki pokazują, jak skonfigurować pełne przepływy pracy dla protok
 
     ![Działanie tworzenia zakresu zmian wpisów CS](media/microsoft-identity-manager-2016-ma-ws-soap/createcsentrychangescope.png)
 
-9.  Ustaw wartość wyrażenia DN jako `‘string.Concat ("Employee",item.EmployeeID)’` . Ustaw **AnchorValue** dla _IDPracownika_ na **"Convert. ToString (Item. IDPracownika) '** . Ustaw wartość **ObjectTypeName** jako _pracownika_ . Po wprowadzeniu tych zmian zobaczysz następujący ekran:
+9.  Ustaw wartość wyrażenia DN jako `‘string.Concat ("Employee",item.EmployeeID)’` . Ustaw **AnchorValue** dla _IDPracownika_ na **"Convert. ToString (Item. IDPracownika) '**. Ustaw wartość **ObjectTypeName** jako _pracownika_. Po wprowadzeniu tych zmian zobaczysz następujący ekran:
 
     ![Pobierz identyfikator pracownika](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
@@ -245,11 +245,11 @@ W poniższych sekcjach pokazano, jak wyeksportować przepływy pracy za pomocą 
 <h3 id="attribute-change-anchor">Dodaj przepływy pracy</h3>
 Dodaj przepływy pracy eksportowania, wykonując następujące kroki w narzędziu konfiguracji usługi sieci Web.
 
-1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Dodaj** . **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz następujące ekrany.
+1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Dodaj**. **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz następujące ekrany.
 
     ![Dodaj](media/microsoft-identity-manager-2016-ma-ws-soap/add.png)
 
-2. Dodawanie działania **sekwencji** . Przeciągnij projektanta działania **sekwencji** z **przybornika** i upuść go na powierzchnię Projektant przepływu pracy systemu Windows. Działanie [sekwencji](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) zawiera uporządkowaną kolekcję działań podrzędnych wykonywanych w określonej kolejności. Wybierz pozycję **Utwórz zmienną** . Przypisz wartości do zmiennych, które będą używane dla logiki.
+2. Dodawanie działania **sekwencji** . Przeciągnij projektanta działania **sekwencji** z **przybornika** i upuść go na powierzchnię Projektant przepływu pracy systemu Windows. Działanie [sekwencji](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) zawiera uporządkowaną kolekcję działań podrzędnych wykonywanych w określonej kolejności. Wybierz pozycję **Utwórz zmienną**. Przypisz wartości do zmiennych, które będą używane dla logiki.
 
     ![Eksportowanie](media/microsoft-identity-manager-2016-ma-ws-soap/export-add.png)
 
@@ -262,7 +262,7 @@ Dodaj przepływy pracy eksportowania, wykonując następujące kroki w narzędzi
 
     ![Ustaw właściwości działania ForEach](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
 
-5. Ustaw wartość **DisplayName jako właściwość** **\< kotwicy \> foreach**
+5. Ustawianie wartości **DisplayName** jako **ForEach \<AnchorAttribute\>**
 
    ![Ustaw nazwę wyświetlaną](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
 
@@ -278,7 +278,7 @@ Dodaj przepływy pracy eksportowania, wykonując następujące kroki w narzędzi
 
    ![Dodaj wyrażenie](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
 
-9. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **IDPracownika** . Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** .
+9. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **IDPracownika**. Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** .
 
     ![Dodaj nową wielkość liter i przypisz ją do sekwencji](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
 
@@ -298,20 +298,20 @@ Dodaj przepływy pracy eksportowania, wykonując następujące kroki w narzędzi
 
     ![Dodaj wyrażenie dla działania Switch](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-expression.png)
 
-14. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **FirstName** . Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** . Przypisz właściwości **do** i **wartość** dla działania **przypisywania** .
+14. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **FirstName**. Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** . Przypisz właściwości **do** i **wartość** dla działania **przypisywania** .
 
     ![Dodaj nowy przypadek dla sekwencji](media/microsoft-identity-manager-2016-ma-ws-soap/switch-firstname.png)
 
-15. Dodaj wartości wymaganych atrybutów, takich jak **LastName** , **email** i tak dalej. 
+15. Dodaj wartości wymaganych atrybutów, takich jak **LastName**, **email** i tak dalej. 
 
     ![Dodawanie wartości wymaganych atrybutów](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
 
-16. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów** .
+16. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów**.
 
     ![Dodawanie działania usługi sieci Web i ustawianie wartości](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
 
     >[!IMPORTANT]
-    >Nie zmieniaj **nazwy** , **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
+    >Nie zmieniaj **nazwy**, **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *wsResponse* jest ustawiona.
 
 17.  Na koniec Dodaj działanie **if** , aby sprawdzić odpowiedzi, które są zwracane z operacji usługi sieci Web.
 
@@ -325,11 +325,11 @@ Zapisz ten projekt w lokalizacji `%FIM_INSTALL_FOLDER%\Synchronization Service\E
 ### <a name="delete-workflows"></a>Usuń przepływy pracy
 Usuń przepływy pracy eksportowania, wykonując następujące kroki w narzędziu konfiguracji usługi sieci Web.
 
-1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Usuń** . **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz następujące ekrany.
+1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Usuń**. **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz następujące ekrany.
 
    ![Eksportuj przepływy pracy usuwania](media/microsoft-identity-manager-2016-ma-ws-soap/export-delete.png)
 
-2. Dodawanie działania **sekwencji** . Wybierz pozycję **Utwórz zmienną** . Przypisz wartości do zmiennych, które będą używane dla logiki.
+2. Dodawanie działania **sekwencji** . Wybierz pozycję **Utwórz zmienną**. Przypisz wartości do zmiennych, które będą używane dla logiki.
 
    ![Dodawanie działania sekwencji](media/microsoft-identity-manager-2016-ma-ws-soap/sequence-variables.png)
 
@@ -358,7 +358,7 @@ Usuń przepływy pracy eksportowania, wykonując następujące kroki w narzędzi
 
    ![Dodaj wyrażenie](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
 
-9. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **IDPracownika** . Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** .
+9. Wybierz pozycję **Dodaj nową wielkość liter** i wprowadź wartość dla **IDPracownika**. Przeciągnij działanie **sekwencji** i w ramach niego Dodaj działanie **Assign** .
 
    ![Dodaj nową wielkość liter i przypisz ją do sekwencji](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-default.png)
 
@@ -366,12 +366,12 @@ Usuń przepływy pracy eksportowania, wykonując następujące kroki w narzędzi
 
     ![Przypisywanie właściwości do i wartości](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-attribute-flow.png)
 
-11. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów** .
+11. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów**.
 
     ![Dodawanie działania usługi sieci Web i ustawianie wartości](media/microsoft-identity-manager-2016-ma-ws-soap/delete-employee.png)
 
     >[!IMPORTANT]
-    >Nie zmieniaj **nazwy** , **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *IDPracownika* jest ustawiona.
+    >Nie zmieniaj **nazwy**, **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na rysunku, wartość *IDPracownika* jest ustawiona.
 
 12. Na koniec Dodaj działanie **if** , aby sprawdzić odpowiedzi zwrócone przez operację usługi sieci Web.
 
@@ -387,26 +387,26 @@ Zapisz ten projekt w lokalizacji `%FIM_INSTALL_FOLDER%\Synchronization Service\E
 ### <a name="replace-workflows"></a>Zastąp przepływy pracy
 Zastąp eksport przepływów pracy, wykonując następujące kroki w narzędziu konfiguracji usługi sieci Web.
 
-1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Zamień** . **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz poniższy ekran.
+1. Wybierz przepływ pracy eksportowania do skonfigurowania. W obszarze **Eksportuj** wybierz pozycję **Zamień**. **Argumenty** i **Importy** są już zdefiniowane i są specyficzne dla działań. Aby uzyskać informacje, zobacz poniższy ekran.
 
    ![Zastępowanie przepływu pracy](media/microsoft-identity-manager-2016-ma-ws-soap/replace.png)
 
 2. Dodawanie działania **sekwencji** .
 
-3. Przeciągnij działanie **foreach** dla **\<> zakotwiczania.**
+3. Przeciągnij działanie **foreach** dla **\<AnchorAttribute> .**
 
-4. Dodaj kolejną **aktywność \<>foreach AttributeChange** , aby przypisać wartości niezakotwiczone.
+4. Dodaj kolejną **aktywność \<AttributeChange> foreach** , aby przypisać wartości niezakotwiczone.
 
 5. Na koniec ekran wygląda tak, jak na poniższym rysunku. Instrukcje dotyczące konfigurowania tego działania znajdują się w sekcji dotyczącej <a href="#attribute-change-anchor">dodawania przepływów pracy eksportowania</a>.
 
    ![Instrukcja ForEach z działaniem Switch i atrybutem kotwicy](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
 
-6. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów** .
+6. W obszarze **wspólne** przeciągnij **WebServiceCallActivity** i ustaw **wartości** dla jej **argumentów**.
 
    ![Dodawanie działania usługi sieci Web i ustawianie wartości](media/microsoft-identity-manager-2016-ma-ws-soap/wsresponse.png)
 
    >[!IMPORTANT]
-   >Nie zmieniaj **nazwy** , **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na tym rysunku, wartość *Pracownik* jest ustawiony.
+   >Nie zmieniaj **nazwy**, **kierunku** ani **typu** dla argumentu przy użyciu tego okna dialogowego. Jeśli dowolna z tych wartości ulegnie zmianie, działanie jest nieprawidłowe. Ustaw tylko **wartość** argumentu. Jak pokazano na tym rysunku, wartość *Pracownik* jest ustawiony.
 
 7. Na koniec Dodaj działanie **if** , aby sprawdzić odpowiedzi, które są zwracane z operacji usługi sieci Web.
 
@@ -442,13 +442,13 @@ W polu tekstowym Napisz komunikat, który ma być widoczny w miejscu docelowym s
 
 Aby użyć działania **WriteLine** , ustaw następujące właściwości. Właściwości są widoczne po wybraniu działania w Projektant przepływu pracy i wyświetleniu **Właściwości** działania.
 
-- **Poziom dziennika** : określa ilość zawartości do zapisania w wartości dziennika. Możliwe wartości są następujące:
+- **Poziom dziennika**: określa ilość zawartości do zapisania w wartości dziennika. Możliwe wartości są następujące:
 
     - Wysoki: Zapisz komunikat **LogText** w pliku dziennika, Jeśli ważność dziennika jest ustawiona na wartość wysoki.
     - Pełne: Zapisz komunikat **LogText** w pliku dziennika, Jeśli ważność dziennika ma wartość verbose.
     - Wyłączone: nie zapisuj w pliku dziennika.
-- **LogText** : określa zawartość tekstową do zapisu w dzienniku.
-- **Tag** : dodaje tag do tekstu w celu zidentyfikowania typu zawartości, która jest zapisywana w dzienniku. Możliwe wartości to: Error, Trace lub Warning.
+- **LogText**: określa zawartość tekstową do zapisu w dzienniku.
+- **Tag**: dodaje tag do tekstu w celu zidentyfikowania typu zawartości, która jest zapisywana w dzienniku. Możliwe wartości to: Error, Trace lub Warning.
 
 <!-- log severity is not defined in this document -->
 
