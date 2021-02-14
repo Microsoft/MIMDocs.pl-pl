@@ -5,25 +5,25 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/06/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 417f26b123aec7e8ab1b8cf254e0771f799dcb9d
-ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
+ms.openlocfilehash: 8d3c266c78df21c6ddb24f62618621c55820bd6f
+ms.sourcegitcommit: 0e2b4b47a8050737c78e3b0ad088358e5de7e929
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98103973"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100395456"
 ---
 # <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
 
-Usługa Privileged Access Management nie ma wymagań sprzętowych poza wymaganiami jej bazowych platform oprogramowania. Po prostu upewnij się, że masz wystarczającą ilość pamięci lub miejsca na dysku i łączność sieciową.
+Privileged Access Management nie ma wymagań sprzętowych wykraczających poza te wymagania dotyczące podstawowych platform oprogramowania. Po prostu upewnij się, że masz wystarczającą ilość pamięci lub miejsca na dysku i łączność sieciową.
 
 > [!IMPORTANT]
-> Ten artykuł zawiera minimalne wymagania dla wdrożenia podstawowego. Nie jest przeznaczona do zademonstrowania wydajności, skalowalności ani wysokiej dostępności. Nie reprezentuje ona zalecanej topologii wdrażania dla dużych przedsiębiorstw lub środowisk produkcyjnych.
+> Ten artykuł zawiera minimalne wymagania dotyczące podstawowego wdrożenia w sieci izolowanej. Nie ma na celu prezentowania wydajności, skalowalności ani wysokiej dostępności oraz nie przedstawia zalecanej topologii wdrożenia dla dużych firm i środowisk produkcyjnych.  Jeśli Active Directory jest częścią środowiska połączonego z Internetem, zapoznaj się z tematem " [Zabezpieczanie uprzywilejowanych](/security/compass/overview) wskazówek dotyczących dostępu", aby uzyskać więcej informacji na temat lokalizacji do uruchomienia.
 
 ## <a name="installing-from-software-packages"></a>Instalowanie z pakietów oprogramowania
 
@@ -33,29 +33,15 @@ Następujące oprogramowanie można pobrać z witryny TechNet Evaluation Center 
   - Portal i usługa: zawiera instalator usługi MIM i portalu MIM oraz scenariusza PAM
   - Dodatki i rozszerzenia: zawiera instalator poleceń cmdlet środowiska PowerShell obiektu żądającego
 
-Następujące oprogramowanie można pobrać z witryny GitHub:
+Następujące opcjonalne oprogramowanie można pobrać z witryny GitHub:
 
 - [PAMSamplePortal](https://github.com/Azure/identity-management-samples): zawiera przykładową aplikację sieci Web dla interfejsu API REST
 
 ## <a name="required-software"></a>Wymagane oprogramowanie
 
-- Windows Server 2012 z dodatkiem R2
+- Windows Server 2016
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 lub SQL Server 2014
-
-## <a name="evaluation-software"></a>Oprogramowanie próbne
-
-Jeśli nie masz licencji dla systemu Windows, programu SQL Server lub systemu Windows Server, możesz pobrać wersje próbne.
-
-### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
-
-- System Windows Server 2012 R2 lub nowszy
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
-
-### <a name="microsoft-download-center"></a>Centrum pobierania Microsoft
-
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)  
-- [SharePoint Foundation 2013 SP1 i jego wymagania wstępne](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## <a name="hardware-requirements"></a>Wymagania sprzętowe
 
@@ -71,9 +57,9 @@ Dla stacji roboczej CORPWKSTN:
 
 Dla kontrolera domeny PRIVDC:
 
-- [Windows Server 2012 z dodatkiem R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 
 Dla serwera PAMSRV:
 
-- [Windows Server 2012 z dodatkiem R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) lub [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

@@ -5,19 +5,19 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 070e85177a28c3091834cafd2e61611aa9043ea8
-ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
+ms.openlocfilehash: 8f81f592beff9ab952d1a42760e06a4f622316e8
+ms.sourcegitcommit: 0e2b4b47a8050737c78e3b0ad088358e5de7e929
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280018"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100395473"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Krok 4. Instalowanie składników programu MIM na stacji roboczej i serwerze usługi PAM
 
@@ -53,9 +53,9 @@ Postępuj zgodnie z wytycznymi instalatora i ukończ instalację.
    - Nazwa konta usługi: *MIMService*  
    - Hasło konta usługi: <em>Pass@word1</em> (lub hasło utworzone w kroku 2)  
    - Domena konta usługi: *PRIV*  
-   - Konto E-mail usługi:<em>MIMService@priv.contoso.local</em>  
+   - Konto E-mail usługi: <em>MIMService@priv.contoso.local</em>  
 
-6. Zaakceptuj ustawienia domyślne dla nazwy hosta serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *PRIV\MIMMA*. Zostanie wyświetlony komunikat ostrzegawczy z informacją, że usługa synchronizacji programu MIM nie istnieje. Nie stanowi to problemu, ponieważ nie jest ona używana w tym scenariuszu.
+6. Zaakceptuj ustawienia domyślne dla nazwy hosta serwera synchronizacji i określ konto agenta zarządzania programu MIM jako *PRIV\MIMMA*. Zostanie wyświetlony komunikat ostrzegawczy z informacją, że usługa synchronizacji programu MIM nie istnieje. To ostrzeżenie jest prawidłowe, ponieważ usługa synchronizacji programu MIM nie jest używana w tym scenariuszu.
 
 7. Ustaw wartość *PAMSRV* jako adres serwera usługi programu MIM.
 
@@ -125,19 +125,19 @@ Zapora powinna zezwalać na połączenia przychodzące na portach TCP 5725, 5726
 5.  Ukończ działanie kreatora i zamknij aplikację Zapora systemu Windows.
 
 6.  Otwórz **Panel sterowania**.  
-7.  W obszarze Sieć i Internet wybierz pozycję **Wyświetl stan sieci i zadania**.  
-8.  Sprawdź, czy jest wyświetlana aktywna sieć priv.contoso.local i sieć domeny.  
+7.  W obszarze Sieć i Internet wybierz pozycję **Wyświetl stan sieci i zadania**.
+8.  Sprawdź, czy istnieje aktywna sieć, która jest wymieniona jako priv. contoso. Local i Sieć domeny.
 9. Zamknij **Panel sterowania**.
 
-## <a name="set-up-the-sample-web-application"></a>Konfigurowanie przykładowej aplikacji internetowej
+## <a name="optional-set-up-the-sample-web-application"></a>Opcjonalnie: Skonfiguruj przykładową aplikację sieci Web
 
-W tej sekcji zostanie zainstalowana i skonfigurowana przykładowa aplikacja internetowa dla interfejsu API REST usługi PAM programu MIM.
+W tej sekcji można zainstalować i skonfigurować przykładową aplikację sieci Web dla interfejsu API REST usługi PAM programu MIM.  Ten składnik jest wymagany tylko wtedy, gdy chcesz dowiedzieć się, jak używać interfejsu API REST usługi PAM programu MIM. Jeśli zamierzasz używać programu PowerShell do żądania i zatwierdzania dostępu, przejdź do następnej sekcji, aby zainstalować polecenia cmdlet obiektu żądającego modułu PAM programu MIM.
 
 1. Z archiwum przykładowej aplikacji internetowej wyodrębnij [przykłady dotyczące programu Identity Management](https://github.com/Azure/identity-management-samples) jako plik zip.
 
 2. Rozpakuj zawartość folderu **identity-management-samples-master\Privileged-Access-Management-Portal\src** do nowego folderu **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3. W usłudze IIS utwórz nową witrynę sieci Web o nazwie Przykładowy portal usługi Privileged Access Management programu MIM. Wybierz port 8090 i ścieżkę fizyczną C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal.  Można to zrobić za pomocą następującego polecenia programu PowerShell:
+3. W usłudze IIS utwórz nową witrynę sieci Web o nazwie Przykładowy portal usługi Privileged Access Management programu MIM. Wybierz port 8090 i ścieżkę fizyczną C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal.  Tę witrynę można utworzyć za pomocą następującego polecenia programu PowerShell:
 
    ```PowerShell
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
